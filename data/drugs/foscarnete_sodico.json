@@ -1,0 +1,369 @@
+{
+  "id": "foscarnete_sodico",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "foscarnete_sodico"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Foscarnete sodico 24 mg/mL - injecao IV",
+    "class": "Antiviral pirofosfato",
+    "pharmacologicClass": "Inibidor direto de DNA polimerases virais",
+    "mechanism": "Inibe seletivamente o sitio de ligacao do pirofosfato em DNA polimerases virais; nao requer fosforilacao por timidina quinase.",
+    "pharmacodynamics": "Ativo contra CMV e HSV resistente a aciclovir; quela cations divalentes e pode causar alteracoes eletroliticas/convulsoes.",
+    "pharmacokinetics": "Eliminacao renal; todas as doses devem ser individualizadas pela funcao renal.",
+    "indications": "Retinite por CMV em pacientes com AIDS; HSV mucocutaneo resistente a aciclovir em imunocomprometidos. Outros usos CMV/HSV nao estabelecidos no rotulo.",
+    "commercialNames": "FOSCAVIR e genericos EUA.",
+    "presentation": "Solucao IV pronta, 24 mg/mL.",
+    "presentations": "24 mg/mL em frascos/bolsas conforme fabricante.",
+    "dose": "CMV retinite inducao: 90 mg/kg IV q12h em 1,5-2 h OU 60 mg/kg q8h em >=1 h por 2-3 semanas. HSV resistente: 40 mg/kg q8-12h em >=1 h por 2-3 semanas ou ate cicatrizar. Manutencao CMV: 90-120 mg/kg/dia IV em 2 h, ajustado renalmente.",
+    "pediatricDose": "Seguranca/eficacia pediatrica nao estabelecidas no rotulo para usos rotulados; AUTOMATIZACAO=BLOQUEADA.",
+    "renalDose": "Ajuste obrigatorio por funcao renal para todas as doses; usar tabela do rotulo conforme CrCl. Nao automatizar sem tabela completa validada.",
+    "hepaticDose": "Sem algoritmo principal de ajuste; eliminacao e renal.",
+    "commonAdverseEffects": "Nausea, anemia, febre, cefaleia e alteracoes eletroliticas.",
+    "dangerousAdverseEffects": "Nefrotoxicidade grave, convulsoes por Ca/Mg/K alterados, QT/arrítmias e ulceracoes genitais por eliminacao urinaria local.",
+    "adverseEffects": "Hipocalcemia, hipomagnesemia, hipocalemia e hiper/hipofosfatemia podem ocorrer.",
+    "contraindications": "Hipersensibilidade clinicamente significativa a foscarnete.",
+    "interactions": "Outros nefrotoxicos e fármacos que alteram eletrólitos/QT aumentam risco.",
+    "monitoring": "Creatinina/CrCl frequentes, Ca/Mg/K/fosfato, ECG quando risco e resposta virologica/clinica.",
+    "administration": "Somente IV com bomba de infusao; hidratar antes e durante tratamento se clinicamente possivel.",
+    "preparation": "Solucao 24 mg/mL. Para acesso periferico, alguns rotulos exigem diluicao; seguir produto selecionado.",
+    "infusionProtocol": "Nao exceder taxas/tempos do rotulo: 40/60 mg/kg em >=1 h; 90 mg/kg em 1,5-2 h; manutencao em 2 h.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Uso rotulado e restrito a imunocomprometidos nos cenarios descritos; renal e principal determinante de dose.",
+    "patientEducation": "Tratamento exige hidratacao, exames frequentes e bomba de infusao; relatar parestesias, convulsoes, palpitações e reducao de urina.",
+    "clinicalPearls": "Foscarnete nao requer ativacao por timidina quinase, por isso pode tratar HSV resistente a aciclovir; toxicidade renal/eletrolitica e limitante.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEFROTOXICIDADE_BOXED; ELETRÓLITOS; CONVULSAO; BOMBA_INFUSAO; RENAL_AJUSTE_OBRIGATORIO.",
+    "alerts": "Toda dose deve ser individualizada por funcao renal. Pediatria e outros usos CMV/HSV bloqueados pelo rotulo.",
+    "references": [
+      "DailyMed/NLM EUA - Foscarnet sodium injection, updated 25-06-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b03cbb8e-f555-4ed3-854e-dd962604f144"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b03cbb8e-f555-4ed3-854e-dd962604f144"
+  },
+  "es": {
+    "name": "Foscarnet sodico 24 mg/mL - inyeccion IV",
+    "class": "Antiviral pirofosfato",
+    "pharmacologicClass": "Inhibidor directo de DNA polimerasas virales",
+    "mechanism": "Inhibe selectivamente sitio de union de pirofosfato en DNA polimerasas virales; no requiere fosforilacion por timidina quinasa.",
+    "pharmacodynamics": "Activo contra CMV y HSV resistente a aciclovir; quelata cationes divalentes y puede causar alteraciones electroliticas/convulsiones.",
+    "pharmacokinetics": "Eliminacion renal; todas las dosis deben individualizarse por funcion renal.",
+    "indications": "Retinitis por CMV en pacientes con SIDA; HSV mucocutaneo resistente a aciclovir en inmunocomprometidos. Otros usos CMV/HSV no establecidos en el rotulo.",
+    "commercialNames": "FOSCAVIR y genericos EE.UU.",
+    "presentation": "Solucion IV lista, 24 mg/mL.",
+    "presentations": "24 mg/mL en viales/bolsas segun fabricante.",
+    "dose": "Retinitis CMV induccion: 90 mg/kg IV q12h en 1,5-2 h O 60 mg/kg q8h en >=1 h por 2-3 semanas. HSV resistente: 40 mg/kg q8-12h en >=1 h por 2-3 semanas o hasta cicatrizar. Mantenimiento CMV: 90-120 mg/kg/dia IV en 2 h, ajustado renalmente.",
+    "pediatricDose": "Seguridad/eficacia pediatrica no establecidas en rotulo para usos rotulados; AUTOMATIZACION=BLOQUEADA.",
+    "renalDose": "Ajuste obligatorio por funcion renal para todas las dosis; usar tabla del rotulo segun CrCl. No automatizar sin tabla completa validada.",
+    "hepaticDose": "Sin algoritmo principal de ajuste; eliminacion es renal.",
+    "commonAdverseEffects": "Nausea, anemia, fiebre, cefalea y alteraciones electroliticas.",
+    "dangerousAdverseEffects": "Nefrotoxicidad grave, convulsiones por Ca/Mg/K alterados, QT/arritmias y ulceraciones genitales por eliminacion urinaria local.",
+    "adverseEffects": "Pueden ocurrir hipocalcemia, hipomagnesemia, hipopotasemia e hiper/hipofosfatemia.",
+    "contraindications": "Hipersensibilidad clinicamente significativa a foscarnet.",
+    "interactions": "Otros nefrotoxicos y farmacos que alteran electrolitos/QT aumentan riesgo.",
+    "monitoring": "Creatinina/CrCl frecuentes, Ca/Mg/K/fosfato, ECG con riesgo y respuesta virologica/clinica.",
+    "administration": "Solo IV con bomba de infusion; hidratar antes y durante tratamiento si clinicamente posible.",
+    "preparation": "Solucion 24 mg/mL. Para acceso periferico, algunos rotulos exigen dilucion; seguir producto seleccionado.",
+    "infusionProtocol": "No exceder tasas/tiempos del rotulo: 40/60 mg/kg en >=1 h; 90 mg/kg en 1,5-2 h; mantenimiento en 2 h.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Uso rotulado se restringe a inmunocomprometidos en escenarios descritos; renal es principal determinante de dosis.",
+    "patientEducation": "Tratamiento exige hidratacion, pruebas frecuentes y bomba de infusion; comunicar parestesias, convulsiones, palpitaciones y disminucion de orina.",
+    "clinicalPearls": "Foscarnet no requiere activacion por timidina quinasa, por eso puede tratar HSV resistente a aciclovir; toxicidad renal/electrolitica es limitante.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEFROTOXICIDAD_BOXED; ELECTROLITOS; CONVULSION; BOMBA_INFUSION; AJUSTE_RENAL_OBLIGATORIO.",
+    "alerts": "Toda dosis debe individualizarse por funcion renal. Pediatria y otros usos CMV/HSV bloqueados por rotulo.",
+    "references": [
+      "DailyMed/NLM EUA - Foscarnet sodium injection, updated 25-06-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b03cbb8e-f555-4ed3-854e-dd962604f144"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b03cbb8e-f555-4ed3-854e-dd962604f144"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Foscarnete sodico 24 mg/mL - injecao IV",
+    "es": "Foscarnet sodico 24 mg/mL - inyeccion IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "foscarnete_sodico.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "foscarnete_sodico",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Foscarnet 24 mg/mL IV - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "AJUSTE_RENAL_OBRIGATORIO",
+        "CALCULO_PEDIATRICO_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

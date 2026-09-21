@@ -1,0 +1,169 @@
+{
+  "id": "paracetamol_codeina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "paracetamol_codeina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Paracetamol + fosfato de codeina",
+    "class": "Analgesico combinado: analgesico nao opioide + opioide.",
+    "pharmacologicClass": "Paracetamol/acetaminofeno + agonista opioide (codeina, pro-farmaco parcial de morfina via CYP2D6).",
+    "mechanism": "Paracetamol exerce analgesia/antipirese por mecanismos centrais; codeina atua em receptores opioides e parte de seu efeito depende da conversao CYP2D6 para morfina.",
+    "pharmacodynamics": "Analgesia combinada com risco dose-dependente de sedacao e depressao respiratoria pela codeina; excesso de paracetamol causa hepatotoxicidade.",
+    "pharmacokinetics": "Codeina: absorcao GI rapida, ligacao proteica 7-25%; 70-80% glucuronidacao para C6G, 5-10% O-desmetilacao CYP2D6 para morfina e ~10% CYP3A4 para norcodeina. Variacao CYP2D6 altera exposicao a morfina.",
+    "indications": "Dor leve a moderada quando um analgesico opioide e apropriado e alternativas sao inadequadas, conforme rotulo.",
+    "commercialNames": "Produto DailyMed consultado e generico; marcas BR/AR nao validadas neste lote.",
+    "presentation": "Comprimido oral.",
+    "presentations": "Combinacoes rotuladas: paracetamol 300 mg + fosfato de codeina 15 mg, 30 mg ou 60 mg por comprimido.",
+    "dose": "Primeiro opioide: paracetamol 300-600 mg + codeina 30-60 mg a cada 4 h se necessario, na menor dose eficaz. Regimes usuais: 300/15 mg ou 300/30 mg, 1-2 comprimidos a cada 4 h; 300/60 mg, 1 comprimido a cada 4 h. Maximos do rotulo em 24 h: codeina 360 mg e paracetamol 4.000 mg.",
+    "pediatricDose": "Seguranca/eficacia abaixo de 18 anos nao estabelecidas no rotulo. Contraindicado <12 anos e <18 anos apos tonsilectomia/adenoidectomia; evitar 12-18 anos com fatores de risco para depressao respiratoria. Nao automatizar dose pediatrica.",
+    "renalDose": "O rotulo consultado nao fornece algoritmo numerico simples por ClCr para esta combinacao; individualizar e monitorar em disfuncao renal.",
+    "hepaticDose": "Nao ha algoritmo numerico unico de ajuste; o limite total de paracetamol e critico e hepatopatia aumenta risco. Evitar somar outros produtos com paracetamol.",
+    "commonAdverseEffects": "Constipacao, nausea, sonolencia, vomitos, cansaco, cefaleia, tontura e dor abdominal.",
+    "dangerousAdverseEffects": "Depressao respiratoria fatal, overdose, sedacao profunda/coma com depressores do SNC, hepatotoxicidade por paracetamol, sindrome serotoninergica, hipotensao e reacoes de hipersensibilidade.",
+    "adverseEffects": "Prurido, constipacao, nauseas/vomitos, tontura e sedacao sao tipicos de opioide; uso prolongado pode causar dependencia fisica e transtorno por uso de opioides.",
+    "contraindications": "Criancas <12 anos; <18 anos apos tonsilectomia/adenoidectomia; depressao respiratoria significativa; asma brônquica aguda/grave sem monitorizacao; obstrucao GI/ileo paralitico; hipersensibilidade; uso de IMAO ou dentro de 14 dias.",
+    "interactions": "Benzodiazepinicos, alcool e outros depressores SNC aumentam sedacao/depressao respiratoria. Inibidores/indutores CYP3A4 e inibidores CYP2D6 podem alterar exposicao/efeito da codeina; farmacos serotoninergicos aumentam risco de sindrome serotoninergica; IMAO sao contraindicados.",
+    "monitoring": "Monitorar frequencia respiratoria, sedacao, controle da dor, constipacao, sinais de uso problematico/dependencia, exposicao total diaria a paracetamol e funcao hepatica quando indicada.",
+    "administration": "Via oral; usar menor dose eficaz pelo menor tempo. Nao duplicar produtos com paracetamol nem associar alcool.",
+    "preparation": "NAO APLICAVEL COMPROVADO para comprimido oral.",
+    "infusionProtocol": "NAO APLICAVEL COMPROVADO para comprimido oral.",
+    "pregnancy": "Usar somente se beneficio potencial justificar o risco; uso prolongado de opioide na gestacao pode causar sindrome de abstinencia neonatal.",
+    "lactation": "Amamentacao nao recomendada durante tratamento devido a codeina/morfina no leite e risco de sedacao/depressao respiratoria e morte no lactente, especialmente com metabolizadores ultrarrapidos CYP2D6.",
+    "specialPopulations": "Metabolizadores CYP2D6 ultrarrapidos tem risco aumentado de toxicidade por morfina; adolescentes com apneia do sono, obesidade, doenca pulmonar/neuromuscular ou outros depressores respiratorios tem risco maior.",
+    "patientEducation": "Nao exceder 4 g/dia de paracetamol de todas as fontes. Nao dirigir ate saber o efeito. Guardar com seguranca. Procurar emergencia por respiracao lenta, sonolencia extrema ou overdose; discutir acesso a naloxona conforme risco/contexto.",
+    "clinicalPearls": "O maximo diario precisa respeitar simultaneamente dois tetos: codeina 360 mg e paracetamol 4.000 mg; o numero de comprimidos depende da forca.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO: depressao respiratoria, interacoes com depressores SNC/CYP, hepatotoxicidade por paracetamol e uso pediatrico inseguro.",
+    "alerts": "Escopo regulatorio EUA; nao assumir que as mesmas forcas estao registradas em BR/AR. Pediatria automatizada bloqueada.",
+    "references": [
+      "DailyMed - Acetaminophen and Codeine Phosphate tablets, USP | Current version Jan 23 2026; label revised 12/2025 | EUA; comprimidos orais 300 mg acetaminophen + 15/30/60 mg codeine phosphate | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=297dc9ff-e34f-434b-b1a4-4c995a5bac8b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=297dc9ff-e34f-434b-b1a4-4c995a5bac8b"
+  },
+  "es": {
+    "name": "Paracetamol/acetaminofen + fosfato de codeina",
+    "class": "Analgesico combinado: analgesico no opioide + opioide.",
+    "pharmacologicClass": "Paracetamol/acetaminofen + agonista opioide (codeina, profarmaco parcial de morfina via CYP2D6).",
+    "mechanism": "Paracetamol ejerce analgesia/antipiresis por mecanismos centrales; codeina actua en receptores opioides y parte de su efecto depende de conversion CYP2D6 a morfina.",
+    "pharmacodynamics": "Analgesia combinada con riesgo dosis-dependiente de sedacion y depresion respiratoria por codeina; exceso de paracetamol causa hepatotoxicidad.",
+    "pharmacokinetics": "Codeina: absorcion GI rapida, union proteica 7-25%; 70-80% glucuronidacion a C6G, 5-10% O-desmetilacion CYP2D6 a morfina y ~10% CYP3A4 a norcodeina. Variacion CYP2D6 modifica exposicion a morfina.",
+    "indications": "Dolor leve a moderado cuando un analgesico opioide es apropiado y las alternativas son inadecuadas, segun prospecto.",
+    "commercialNames": "El producto DailyMed consultado es generico; no se validaron marcas BR/AR en este lote.",
+    "presentation": "Comprimido oral.",
+    "presentations": "Combinaciones rotuladas: paracetamol 300 mg + fosfato de codeina 15 mg, 30 mg o 60 mg por comprimido.",
+    "dose": "Primer opioide: paracetamol 300-600 mg + codeina 30-60 mg cada 4 h si es necesario, a la menor dosis eficaz. Regimenes usuales: 300/15 mg o 300/30 mg, 1-2 comprimidos cada 4 h; 300/60 mg, 1 comprimido cada 4 h. Maximos del prospecto en 24 h: codeina 360 mg y paracetamol 4.000 mg.",
+    "pediatricDose": "Seguridad/eficacia por debajo de 18 anos no establecidas en el prospecto. Contraindicado <12 anos y <18 anos tras tonsilectomia/adenoidectomia; evitar 12-18 anos con factores de riesgo de depresion respiratoria. No automatizar dosis pediatrica.",
+    "renalDose": "El prospecto consultado no proporciona algoritmo numerico simple por CrCl para esta combinacion; individualizar y monitorizar en disfuncion renal.",
+    "hepaticDose": "No hay algoritmo numerico unico de ajuste; el limite total de paracetamol es critico y la hepatopatia aumenta riesgo. Evitar sumar otros productos con paracetamol.",
+    "commonAdverseEffects": "Estrenimiento, nausea, somnolencia, vomitos, cansancio, cefalea, mareo y dolor abdominal.",
+    "dangerousAdverseEffects": "Depresion respiratoria fatal, sobredosis, sedacion profunda/coma con depresores SNC, hepatotoxicidad por paracetamol, sindrome serotoninergico, hipotension y reacciones de hipersensibilidad.",
+    "adverseEffects": "Prurito, estrenimiento, nauseas/vomitos, mareo y sedacion son tipicos de opioide; uso prolongado puede causar dependencia fisica y trastorno por uso de opioides.",
+    "contraindications": "Ninos <12 anos; <18 anos tras tonsilectomia/adenoidectomia; depresion respiratoria significativa; asma bronquial aguda/grave sin monitorizacion; obstruccion GI/ileo paralitico; hipersensibilidad; uso de IMAO o dentro de 14 dias.",
+    "interactions": "Benzodiazepinas, alcohol y otros depresores SNC aumentan sedacion/depresion respiratoria. Inhibidores/inductores CYP3A4 e inhibidores CYP2D6 pueden alterar exposicion/efecto de codeina; farmacos serotoninergicos aumentan riesgo de sindrome serotoninergico; IMAO estan contraindicados.",
+    "monitoring": "Monitorizar frecuencia respiratoria, sedacion, control del dolor, estrenimiento, signos de uso problematico/dependencia, exposicion total diaria a paracetamol y funcion hepatica cuando corresponda.",
+    "administration": "Via oral; usar la menor dosis eficaz por el menor tiempo. No duplicar productos con paracetamol ni asociar alcohol.",
+    "preparation": "NO APLICA COMPROBADO para comprimido oral.",
+    "infusionProtocol": "NO APLICA COMPROBADO para comprimido oral.",
+    "pregnancy": "Usar solo si beneficio potencial justifica el riesgo; uso prolongado de opioide en embarazo puede causar sindrome de abstinencia neonatal.",
+    "lactation": "Lactancia no recomendada durante tratamiento por codeina/morfina en leche y riesgo de sedacion/depresion respiratoria y muerte en lactante, especialmente metabolizadores ultrarrapidos CYP2D6.",
+    "specialPopulations": "Metabolizadores ultrarrapidos CYP2D6 tienen mayor riesgo de toxicidad por morfina; adolescentes con apnea del sueno, obesidad, enfermedad pulmonar/neuromuscular u otros depresores respiratorios tienen mayor riesgo.",
+    "patientEducation": "No exceder 4 g/dia de paracetamol de todas las fuentes. No conducir hasta conocer el efecto. Guardar de forma segura. Buscar emergencia por respiracion lenta, somnolencia extrema o sobredosis; discutir acceso a naloxona segun riesgo/contexto.",
+    "clinicalPearls": "El maximo diario debe respetar simultaneamente dos techos: codeina 360 mg y paracetamol 4.000 mg; el numero de comprimidos depende de la concentracion.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO: depresion respiratoria, interacciones con depresores SNC/CYP, hepatotoxicidad por paracetamol y uso pediatrico inseguro.",
+    "alerts": "Alcance regulatorio EE. UU.; no asumir que las mismas concentraciones estan registradas en BR/AR. Pediatria automatizada bloqueada.",
+    "references": [
+      "DailyMed - Acetaminophen and Codeine Phosphate tablets, USP | Current version Jan 23 2026; label revised 12/2025 | EUA; comprimidos orais 300 mg acetaminophen + 15/30/60 mg codeine phosphate | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=297dc9ff-e34f-434b-b1a4-4c995a5bac8b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=297dc9ff-e34f-434b-b1a4-4c995a5bac8b"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Paracetamol + fosfato de codeina",
+    "es": "Paracetamol/acetaminofen + fosfato de codeina"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "paracetamol_codeina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "085",
+    "approvedSha256": "8ee4db1d2a5c3a97223198b106132acd8df5c5de54a95dcba8a517bbb758c4ac",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "a288bfc705796a7577ab0df49a3882f7d6cf4560019cd4a4f613540bf2d2aa9f",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_085_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": "085",
+      "review_result": "APROVADO INTEGRALMENTE",
+      "items": [
+        {
+          "id": "bromoprida",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "butilbrometo_de_escopolamina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "cetorolaco_sublingual",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "clonixinato_de_lisina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "paracetamol_codeina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "dexketoprofeno",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "diclofenaco_im",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "dimenidrinato",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "dipirona_iv",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "butilbrometo_de_escopolamina_dipirona",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        }
+      ]
+    },
+    "packageRecordMetadata": {
+      "ID": "paracetamol_codeina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. NEW_ENTRY_NO_LEGACY_BASELINE. Revisao medica: Dra Eugenia Marques, 20-09-2026. Resultado: APROVADO INTEGRALMENTE. Excecoes: nenhuma informada. Integracao tecnica/publicacao nao executadas neste pacote; handoff destinado ao Codex."
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

@@ -27765,87 +27765,361 @@ Object.keys(gold).forEach(function(id){
 ;(function(){var db=window.ANTIMICROBIANOS_DRUGS_DB;if(!db||!db["delamanida"])throw new Error("GOLD33_MISSING_CANONICAL:delamanida");db["delamanida"].mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "023",
     "requiredFieldCount": 33,
-    "approvedSha256": "ddd43232bffb6d2fdf6447f4d98a9bfbf2223ee2bd963eb5420620e5362f6de6",
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
-    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "delamanida",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Deltyba - UE 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "PESO_MENOR_10_BLOQUEADO",
+        "QT_MONITORACAO_OBRIGATORIA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/antimicrobianos.js",
+      "sourceField": "delamanida.mcGoldClinicalV1",
+      "lote": "023",
+      "requiredFields": 33,
+      "approvedSha256": "ddd43232bffb6d2fdf6447f4d98a9bfbf2223ee2bd963eb5420620e5362f6de6",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+      "ownerPublicationAuthorization": "mission10-owner-confirmed"
+    }
   },
   "pt": {
-    "name": "Delamanida",
-    "class": "Antituberculoso nitroimidazólico",
-    "pharmacologicClass": "Inibe síntese de ácidos micólicos de M. tuberculosis",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Comprimidos 50 mg e dispersíveis 25 mg em jurisdições selecionadas.",
-    "presentations": "Comprimidos 50 mg e dispersíveis 25 mg em jurisdições selecionadas.",
-    "mechanism": "Inibe síntese de ácidos micólicos de M. tuberculosis. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Metabolismo principalmente por albumina; metabólitos prolongam QT.",
-    "indications": "Componente de esquema combinado para TB pulmonar resistente quando não se pode compor regime eficaz de outro modo; uso por programa especializado.",
-    "dose": "Adultos: 100 mg VO 2x/dia com alimento por 24 semanas no esquema autorizado; regimes devem seguir programa TB vigente.",
-    "pediatricDose": "≥10 kg: dose por peso e formulação conforme tabela EMA/OMS; não extrapolar. AUTOMATABLE=NO.",
-    "renalDose": "Sem ajuste leve/moderado; não recomendado em grave por dados limitados.",
-    "hepaticDose": "Não recomendado em hepatopatia moderada/grave.",
-    "commonAdverseEffects": "Náusea, vômito, tontura.",
-    "dangerousAdverseEffects": "QT/torsades, hepatotoxicidade e falha/resistência por esquema inadequado.",
-    "adverseEffects": "Náusea, vômito, tontura. Graves: QT/torsades, hepatotoxicidade e falha/resistência por esquema inadequado.",
-    "contraindications": "Hipersensibilidade; albumina muito baixa aumenta risco de QT.",
-    "interactions": "Outros prolongadores de QT, CYP3A4 fortes, bedaquilina/clofazimina exigem plano ECG.",
-    "monitoring": "ECG/QTc, K/Mg/Ca, albumina, fígado, cultura e adesão.",
-    "administration": "VO com alimento, como parte de combinação supervisionada.",
-    "preparation": "Comprimido dispersível conforme instruções; não intercambiar sem tabela.",
-    "infusionProtocol": "Não aplicável.",
-    "pregnancy": "Evitar se possível; dados limitados.",
-    "lactation": "Dados insuficientes; evitar.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
-    "alerts": "QT/torsades, hepatotoxicidade e falha/resistência por esquema inadequado. Regime bloqueado fora de programa TB; exige peso, resistência, esquema completo, ECG/QTc, eletrólitos, albumina, fígado e interações.",
+    "name": "Delamanida - Deltyba 25 mg dispersivel / 50 mg revestido",
+    "class": "Antimicobacteriano para TB multirresistente",
+    "pharmacologicClass": "Nitro-dihidro-imidazooxazol antimicobacteriano",
+    "mechanism": "Bloqueia a sintese de acidos metoxi-micolico e ceto-micolico essenciais da parede de M. tuberculosis.",
+    "pharmacodynamics": "Ativo contra M. tuberculosis em esquema combinado; risco de prolongamento QT exige ECG/eletrólitos.",
+    "pharmacokinetics": "Metabolismo envolve albumina e CYP3A4; hipoalbuminemia e interacoes podem aumentar risco de QT via metabolitos.",
+    "indications": "Parte de esquema combinado apropriado para TB pulmonar MDR em pacientes >=10 kg quando esquema efetivo nao pode ser composto por resistencia/tolerabilidade.",
+    "commercialNames": "Deltyba, UE.",
+    "presentation": "Comprimido dispersivel 25 mg e comprimido revestido 50 mg.",
+    "presentations": "25 mg dispersivel para 10-<30 kg; 50 mg revestido para >=30 kg conforme SmPC.",
+    "dose": "Adultos e >=50 kg: 100 mg 2x/dia por 24 semanas, com alimento, sempre em combinacao apropriada.",
+    "pediatricDose": "10-<20 kg: 25 mg 2x/dia; 20-<30 kg: 50 mg de manha +25 mg a noite; 30-<50 kg: 50 mg 2x/dia; >=50 kg: 100 mg 2x/dia. Duracao 24 semanas.",
+    "renalDose": "Sem ajuste rotineiro documentado para comprometimento leve/moderado; dados limitados em grave. Nao automatizar sem SmPC completo.",
+    "hepaticDose": "Uso em comprometimento hepatica moderado-grave nao deve ser inferido sem SmPC completo; manter bloqueio automatico.",
+    "commonAdverseEffects": "Nausea, vomitos, cefaleia, insonia, tontura, gastrite e diminuicao do apetite.",
+    "dangerousAdverseEffects": "Prolongamento QT e torsades em pacientes de risco; risco aumenta com hipoalbuminemia e interacoes.",
+    "adverseEffects": "Palpitacoes, alteracoes ECG e sintomas GI podem ocorrer.",
+    "contraindications": "Albumina <2,8 g/dL e uso de certos fortes indutores de CYP3A4; hipersensibilidade conforme SmPC.",
+    "interactions": "Evitar fortes indutores CYP3A4; fortes inibidores podem aumentar metabolito associado a QT. Cautela com outros fármacos que prolongam QT.",
+    "monitoring": "ECG antes e mensalmente; eletrólitos e albumina. QTcF >500 ms: nao iniciar ou suspender conforme SmPC.",
+    "administration": "Tomar durante ou logo apos refeicao; preferivel terapia diretamente observada. Sempre combinar com outros antituberculosos ativos.",
+    "preparation": "Dispersivel 25 mg para menores pesos; revestido 50 mg para >=30 kg. Nao intercambiar sem regra de peso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Peso <10 kg fora da indicacao do produto. Hipoalbuminemia/QT exigem monitorizacao intensiva.",
+    "patientEducation": "Tomar com alimento e completar o esquema combinado; relatar sincope/palpitacoes e evitar medicamentos novos sem revisar QT/interacoes.",
+    "clinicalPearls": "O esquema pediatrico e por peso e formulacao; 20-<30 kg usa dose assimetrica 50 mg manha/25 mg noite.",
+    "guidelineRecommendations": "EMA 2026 exige uso como parte de esquema combinado e consideracao de guias oficiais para MDR-TB.",
+    "safetyFlags": "QT; ALBUMINA_2_8; CYP3A4; MDR_TB_COMBINACAO; PESO_MIN_10KG.",
+    "alerts": "Nao usar isoladamente. Peso <10 kg bloqueado. QTcF >500 ms bloqueia inicio/continuacao.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/EPAR/deltyba",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.who.int/teams/global-tuberculosis-programme"
+      "EMA - Deltyba EPAR, product information updated 18-03-2026. https://www.ema.europa.eu/en/medicines/human/EPAR/deltyba"
     ],
     "ref": "https://www.ema.europa.eu/en/medicines/human/EPAR/deltyba"
   },
   "es": {
-    "name": "Delamanid",
-    "class": "Antituberculoso nitroimidazólico",
-    "pharmacologicClass": "Inhibe síntesis de ácidos micólicos de M. tuberculosis",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Comprimidos 50 mg y dispersables 25 mg en jurisdicciones seleccionadas.",
-    "presentations": "Comprimidos 50 mg y dispersables 25 mg en jurisdicciones seleccionadas.",
-    "mechanism": "Inhibe síntesis de ácidos micólicos de M. tuberculosis. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Metabolismo principalmente por albúmina; metabolitos prolongan QT.",
-    "indications": "Componente de esquema combinado para TB pulmonar resistente cuando no puede componerse régimen eficaz de otro modo; uso por programa especializado.",
-    "dose": "Adultos: 100 mg VO 2 veces/día con comida por 24 semanas en esquema autorizado; regímenes deben seguir programa TB vigente.",
-    "pediatricDose": "≥10 kg: dosis por peso y formulación según tabla EMA/OMS; no extrapolar. AUTOMATABLE=NO.",
-    "renalDose": "Sin ajuste leve/moderado; no recomendado en grave por datos limitados.",
-    "hepaticDose": "No recomendado en hepatopatía moderada/grave.",
-    "commonAdverseEffects": "Náusea, vómito, mareo.",
-    "dangerousAdverseEffects": "QT/torsades, hepatotoxicidad y fracaso/resistencia por esquema inadecuado.",
-    "adverseEffects": "Náusea, vómito, mareo. Graves: QT/torsades, hepatotoxicidad y fracaso/resistencia por esquema inadecuado.",
-    "contraindications": "Hipersensibilidad; albúmina muy baja aumenta riesgo de QT.",
-    "interactions": "Otros prolongadores de QT, CYP3A4 fuertes, bedaquilina/clofazimina requieren plan ECG.",
-    "monitoring": "ECG/QTc, K/Mg/Ca, albúmina, hígado, cultivo y adherencia.",
-    "administration": "VO con comida, como parte de combinación supervisada.",
-    "preparation": "Comprimido dispersable según instrucciones; no intercambiar sin tabla.",
-    "infusionProtocol": "No aplicable.",
-    "pregnancy": "Evitar si es posible; datos limitados.",
-    "lactation": "Datos insuficientes; evitar.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
-    "alerts": "QT/torsades, hepatotoxicidad y fracaso/resistencia por esquema inadecuado. Regime bloqueado fora de programa TB; exige peso, resistência, esquema completo, ECG/QTc, eletrólitos, albumina, fígado e interações.",
+    "name": "Delamanid - Deltyba 25 mg dispersable / 50 mg recubierto",
+    "class": "Antimicobacteriano para TB multirresistente",
+    "pharmacologicClass": "Nitro-dihidro-imidazooxazol antimicobacteriano",
+    "mechanism": "Bloquea sintesis de acidos metoxi-micolico y ceto-micolico esenciales de pared de M. tuberculosis.",
+    "pharmacodynamics": "Activo contra M. tuberculosis en regimen combinado; riesgo de prolongacion QT exige ECG/electrolitos.",
+    "pharmacokinetics": "Metabolismo incluye albumina y CYP3A4; hipoalbuminemia e interacciones pueden aumentar riesgo de QT via metabolitos.",
+    "indications": "Parte de regimen combinado apropiado para TB pulmonar MDR en pacientes >=10 kg cuando no puede componerse regimen eficaz por resistencia/tolerabilidad.",
+    "commercialNames": "Deltyba, UE.",
+    "presentation": "Comprimido dispersable 25 mg y comprimido recubierto 50 mg.",
+    "presentations": "25 mg dispersable para 10-<30 kg; 50 mg recubierto para >=30 kg segun SmPC.",
+    "dose": "Adultos y >=50 kg: 100 mg 2 veces/dia por 24 semanas, con comida, siempre en combinacion apropiada.",
+    "pediatricDose": "10-<20 kg: 25 mg 2 veces/dia; 20-<30 kg: 50 mg por la manana +25 mg por la noche; 30-<50 kg: 50 mg 2 veces/dia; >=50 kg: 100 mg 2 veces/dia. Duracion 24 semanas.",
+    "renalDose": "Sin ajuste rutinario documentado para compromiso leve/moderado; datos limitados en grave. No automatizar sin SmPC completo.",
+    "hepaticDose": "Uso en compromiso hepatico moderado-grave no debe inferirse sin SmPC completo; mantener bloqueo automatico.",
+    "commonAdverseEffects": "Nausea, vomitos, cefalea, insomnio, mareo, gastritis y disminucion del apetito.",
+    "dangerousAdverseEffects": "Prolongacion QT y torsades en pacientes de riesgo; riesgo aumenta con hipoalbuminemia e interacciones.",
+    "adverseEffects": "Pueden ocurrir palpitaciones, alteraciones ECG y sintomas GI.",
+    "contraindications": "Albumina <2,8 g/dL y uso de ciertos inductores potentes de CYP3A4; hipersensibilidad segun SmPC.",
+    "interactions": "Evitar inductores potentes CYP3A4; inhibidores potentes pueden aumentar metabolito asociado a QT. Precaucion con otros farmacos que prolongan QT.",
+    "monitoring": "ECG antes y mensualmente; electrolitos y albumina. QTcF >500 ms: no iniciar o suspender segun SmPC.",
+    "administration": "Tomar durante o inmediatamente despues de comida; preferible terapia directamente observada. Siempre combinar con otros antituberculosos activos.",
+    "preparation": "Dispersable 25 mg para pesos menores; recubierto 50 mg para >=30 kg. No intercambiar sin regla de peso.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Peso <10 kg fuera de indicacion del producto. Hipoalbuminemia/QT requieren vigilancia intensiva.",
+    "patientEducation": "Tomar con comida y completar regimen combinado; comunicar sincope/palpitaciones y evitar medicamentos nuevos sin revisar QT/interacciones.",
+    "clinicalPearls": "La pauta pediatrica es por peso y formulacion; 20-<30 kg usa dosis asimetrica 50 mg manana/25 mg noche.",
+    "guidelineRecommendations": "EMA 2026 exige uso como parte de regimen combinado y considerar guias oficiales para MDR-TB.",
+    "safetyFlags": "QT; ALBUMINA_2_8; CYP3A4; MDR_TB_COMBINACION; PESO_MIN_10KG.",
+    "alerts": "No usar solo. Peso <10 kg bloqueado. QTcF >500 ms bloquea inicio/continuacion.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://www.ema.europa.eu/en/medicines/human/EPAR/deltyba",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.who.int/teams/global-tuberculosis-programme"
+      "EMA - Deltyba EPAR, product information updated 18-03-2026. https://www.ema.europa.eu/en/medicines/human/EPAR/deltyba"
     ],
     "ref": "https://www.ema.europa.eu/en/medicines/human/EPAR/deltyba"
   }

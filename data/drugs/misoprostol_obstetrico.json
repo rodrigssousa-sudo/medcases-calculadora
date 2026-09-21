@@ -1,0 +1,307 @@
+{
+  "id": "misoprostol_obstetrico",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "misoprostol_obstetrico"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Misoprostol — uso obstétrico",
+    "class": "Análogo de prostaglandina E1",
+    "pharmacologicClass": "Uterotônico e agente de amadurecimento cervical",
+    "mechanism": "Liga-se a receptores de prostaglandina, promovendo contração uterina e amadurecimento cervical; também reduz secreção gástrica.",
+    "pharmacodynamics": "Efeito uterotônico depende de dose, via, idade gestacional e contexto; risco de taquissistolia e hiperestimulação aumenta com uso inadequado.",
+    "pharmacokinetics": "Absorção oral rápida; misoprostol é desesterificado ao ácido ativo. Tmax ~12 min e meia-vida terminal 20–40 min após via oral em voluntários.",
+    "indications": "Indução do trabalho de parto em útero não cicatrizado; prevenção/tratamento de PPH conforme guideline; outros usos obstétrico-ginecológicos exigem regime próprio.",
+    "commercialNames": "CYTOTEC é produto de referência para comprimidos; uso obstétrico em muitos cenários é guideline-based/off-label conforme jurisdição.",
+    "presentation": "Comprimidos; vias obstétricas incluem oral, vaginal, sublingual/bucal conforme indicação e guideline.",
+    "presentations": "Comprimidos de 100/200 mcg existem em rotulagens; fracionamento para 25 mcg exige protocolo/farmácia seguros e apresentação adequada.",
+    "dose": "Indução do parto, útero não cicatrizado: oral 25 mcg a cada 2 h ou vaginal 25 mcg a cada 6 h. PPH tratamento quando IV oxitocina indisponível/não responde: 800 mcg sublingual. Regimes não são intercambiáveis.",
+    "pediatricDose": "Não aplicável como pediatria; é uso materno.",
+    "renalDose": "Nenhum ajuste renal obstétrico universal validado neste dossiê.",
+    "hepaticDose": "Nenhum ajuste hepático obstétrico universal validado neste dossiê.",
+    "commonAdverseEffects": "Calafrios, febre, náuseas, vômitos, diarreia, dor abdominal.",
+    "dangerousAdverseEffects": "Taquissistolia/hipertonia, sofrimento fetal, ruptura uterina; hipertermia importante em doses altas para PPH.",
+    "adverseEffects": "Cefaleia, tontura e cólicas podem ocorrer.",
+    "contraindications": "Para indução do parto: WHO não recomenda em mulheres com cesariana prévia; hipersensibilidade ao fármaco. Outras contraindicações dependem da indicação e via.",
+    "interactions": "Ocitocina e outros uterotônicos podem somar efeito; evitar sobreposição não protocolizada.",
+    "monitoring": "Para indução: monitorar atividade uterina e FCF imediatamente após administração; para PPH monitorar sangramento, temperatura e hemodinâmica.",
+    "administration": "Via depende da indicação; não trocar oral/vaginal/sublingual sem regra explícita.",
+    "preparation": "Fracionamento para 25 mcg deve ser institucionalmente validado; não improvisar corte/diluição.",
+    "infusionProtocol": "Não aplicável como infusão.",
+    "pregnancy": "Uso intencional em obstetrícia sob indicação; risco uterino/fetal depende de idade gestacional, cicatriz uterina e dose.",
+    "lactation": "Dados de lactação geralmente não impedem uso pós-parto de dose única, mas este dossiê não substitui protocolo local.",
+    "specialPopulations": "Cesariana prévia é bloqueio para indução com misoprostol no guideline WHO; PPH é cenário diferente.",
+    "patientEducation": "Explicar indicação e via específicas; febre/calafrios são frequentes em PPH com dose alta; procurar equipe diante de dor intensa ou sangramento persistente.",
+    "clinicalPearls": "O maior risco é usar a dose certa na indicação errada: 25 mcg para indução e 800 mcg SL para PPH não podem ser fundidos.",
+    "guidelineRecommendations": "WHO 2025 mantém 25 mcg oral 2/2 h ou vaginal 6/6 h para indução em útero não cicatrizado; WHO PPH 2025 aceita 800 mcg SL quando IV oxitocina é indisponível/não responde.",
+    "safetyFlags": "ALTO RISCO DE ERRO POR INDICAÇÃO/VIA/DOSE; cesariana prévia bloqueia indução.",
+    "alerts": "Automação deve exigir seleção explícita de indicação, via, cicatriz uterina e regime; não oferecer dose genérica.",
+    "references": [
+      "1. WHO 2025 maternal health recommendations — induction of labour. https://www.ncbi.nlm.nih.gov/books/NBK615641/",
+      "2. WHO 2025 PPH guideline — treatment with sublingual misoprostol 800 mcg when IV oxytocin unavailable/nonresponsive. https://www.ncbi.nlm.nih.gov/books/NBK619233/",
+      "3. DailyMed — CYTOTEC misoprostol, updated 2026-05-22; PK/reference product, obstetric regimens are guideline-based/off-label in US label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab12da7-5731-4e06-bf1c-bc3f2e711f12"
+    ],
+    "ref": "https://www.ncbi.nlm.nih.gov/books/NBK615641/"
+  },
+  "es": {
+    "name": "Misoprostol — uso obstétrico",
+    "class": "Análogo de prostaglandina E1",
+    "pharmacologicClass": "Uterotónico y agente de maduración cervical",
+    "mechanism": "Se une a receptores de prostaglandina, promoviendo contracción uterina y maduración cervical; también reduce secreción gástrica.",
+    "pharmacodynamics": "Efecto uterotónico depende de dosis, vía, edad gestacional y contexto; riesgo de taquisistolia e hiperestimulación aumenta con uso inadecuado.",
+    "pharmacokinetics": "Absorción oral rápida; misoprostol se desesterifica al ácido activo. Tmax ~12 min y semivida terminal 20–40 min tras vía oral en voluntarios.",
+    "indications": "Inducción del trabajo de parto en útero no cicatrizado; prevención/tratamiento de HPP según guía; otros usos obstétrico-ginecológicos requieren régimen propio.",
+    "commercialNames": "CYTOTEC es producto de referencia para comprimidos; uso obstétrico en muchos escenarios es guideline-based/off-label según jurisdicción.",
+    "presentation": "Comprimidos; vías obstétricas incluyen oral, vaginal, sublingual/bucal según indicación y guía.",
+    "presentations": "Existen comprimidos de 100/200 mcg; fraccionamiento para 25 mcg exige protocolo/farmacia seguros y presentación adecuada.",
+    "dose": "Inducción del parto, útero no cicatrizado: oral 25 mcg cada 2 h o vaginal 25 mcg cada 6 h. Tratamiento HPP cuando oxitocina IV no está disponible/no responde: 800 mcg sublingual. Los regímenes no son intercambiables.",
+    "pediatricDose": "No aplica como pediatría; es uso materno.",
+    "renalDose": "No se validó ajuste renal obstétrico universal en este dossier.",
+    "hepaticDose": "No se validó ajuste hepático obstétrico universal en este dossier.",
+    "commonAdverseEffects": "Escalofríos, fiebre, náuseas, vómitos, diarrea, dolor abdominal.",
+    "dangerousAdverseEffects": "Taquisistolia/hipertonía, sufrimiento fetal, rotura uterina; hipertermia importante con dosis altas para HPP.",
+    "adverseEffects": "Cefalea, mareo y cólicos pueden ocurrir.",
+    "contraindications": "Para inducción del parto: WHO no recomienda en mujeres con cesárea previa; hipersensibilidad. Otras contraindicaciones dependen de indicación y vía.",
+    "interactions": "Oxitocina y otros uterotónicos pueden sumar efecto; evitar superposición no protocolizada.",
+    "monitoring": "Para inducción: monitorizar actividad uterina y FCF inmediatamente tras administración; para HPP monitorizar sangrado, temperatura y hemodinamia.",
+    "administration": "La vía depende de la indicación; no intercambiar oral/vaginal/sublingual sin regla explícita.",
+    "preparation": "Fraccionamiento a 25 mcg debe estar validado institucionalmente; no improvisar corte/dilución.",
+    "infusionProtocol": "No aplica como infusión.",
+    "pregnancy": "Uso intencional en obstetricia bajo indicación; riesgo uterino/fetal depende de edad gestacional, cicatriz uterina y dosis.",
+    "lactation": "Datos de lactancia generalmente no impiden uso posparto de dosis única, pero este dossier no sustituye protocolo local.",
+    "specialPopulations": "Cesárea previa es bloqueo para inducción con misoprostol en guía WHO; HPP es escenario diferente.",
+    "patientEducation": "Explicar indicación y vía específicas; fiebre/escalofríos son frecuentes en HPP con dosis alta; avisar por dolor intenso o sangrado persistente.",
+    "clinicalPearls": "El mayor riesgo es usar la dosis correcta en la indicación equivocada: 25 mcg para inducción y 800 mcg SL para HPP no pueden fusionarse.",
+    "guidelineRecommendations": "WHO 2025 mantiene 25 mcg oral cada 2 h o vaginal cada 6 h para inducción en útero no cicatrizado; WHO HPP 2025 acepta 800 mcg SL cuando oxitocina IV no está disponible/no responde.",
+    "safetyFlags": "ALTO RIESGO DE ERROR POR INDICACIÓN/VÍA/DOSIS; cesárea previa bloquea inducción.",
+    "alerts": "Automatización debe exigir selección explícita de indicación, vía, cicatriz uterina y régimen; no ofrecer dosis genérica.",
+    "references": [
+      "1. WHO 2025 maternal health recommendations — induction of labour. https://www.ncbi.nlm.nih.gov/books/NBK615641/",
+      "2. WHO 2025 PPH guideline — treatment with sublingual misoprostol 800 mcg when IV oxytocin unavailable/nonresponsive. https://www.ncbi.nlm.nih.gov/books/NBK619233/",
+      "3. DailyMed — CYTOTEC misoprostol, updated 2026-05-22; PK/reference product, obstetric regimens are guideline-based/off-label in US label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab12da7-5731-4e06-bf1c-bc3f2e711f12"
+    ],
+    "ref": "https://www.ncbi.nlm.nih.gov/books/NBK615641/"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Misoprostol — uso obstétrico",
+    "es": "Misoprostol — uso obstétrico"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "misoprostol_obstetrico.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "090",
+    "approvedSha256": "cc1a50a5fa87ad8cc952c4af59d79dc0cc9d2d7d66e7cdcea68fa7a68f663ae0",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "20a4514dbc8536b90ed88eb365c43cef5d8decdc58c8d360a090dec452b6dd0b",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_090_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "betametasona_obstetricia",
+        "bloqueios_clinicos_reais": [
+          "CONVERSAO_ML_BLOQUEADA_ATE_CONFIRMAR_FORMULACAO_E_CONCENTRACAO",
+          "USO_FORA_CRITERIOS_WHO_24_34_SEMANAS_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade e apresentação específicas AR/BR não confirmadas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ergometrina",
+        "bloqueios_clinicos_reais": [
+          "HIPERTENSAO_GRAVE_PREECLAMPSIA_ECLAMPSIA_BLOQUEIAM_USO",
+          "IV_RAPIDA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Registro/apresentação AR/BR não confirmados."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "labetalol_iv",
+        "bloqueios_clinicos_reais": [
+          "ASMA_BRONCOESPASMO_BLOQUEIAM_USO",
+          "BRADICARDIA_BLOQUEIO_AV_CHOQUE_IC_DESCOMPENSADA_BLOQUEIAM_USO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação específica AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "misoprostol_obstetrico",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_SEM_INDICACAO_VIA_E_CICATRIZ_UTERINA",
+          "INDUCAO_COM_CESARIANA_PREVIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentações obstétricas específicas AR/BR não confirmadas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "nifedipina_retard",
+        "bloqueios_clinicos_reais": [
+          "FORMULACAO_ER_NAO_PODE_SER_USADA_COMO_IR_DE_URGENCIA",
+          "USO_SUBLINGUAL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Marca/apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ocitocina_iv",
+        "bloqueios_clinicos_reais": [
+          "MOTOR_DEVE_SEPARAR_IU_DE_mU_MIN",
+          "BOLUS_IV_RAPIDO_BLOQUEADO",
+          "INDUCAO_SEM_MONITORIZACAO_CONTINUA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "sulfato_de_magnesio_obstetricia",
+        "bloqueios_clinicos_reais": [
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "CONVERSAO_ML_BLOQUEADA_SE_CONCENTRACAO_NAO_CONFIRMADA",
+          "USO_PROLONGADO_MAIOR_5_7_DIAS_EXIGE_ALERTA_FETAL_NEONATAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Regime de neuroproteção varia entre protocolos; médico deve validar contexto."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "terbutalina_iv",
+        "bloqueios_clinicos_reais": [
+          "DURACAO_MAIOR_48H_BLOQUEADA",
+          "CARDIOPATIA_RISCO_CARDIACO_IMPORTANTE_BLOQUEIAM_TOCOLISE",
+          "USO_SEM_MONITORIZACAO_MATERNO_FETAL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade/formulação IV obstétrica AR/BR não confirmada; WHO prefere nifedipina."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "colagenase",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA",
+          "VIA_NAO_TOPICA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade AR/BR não confirmada; futura entrada colagenase_pomada marcada como possível duplicata."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "lidocaina_gel",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_SEM_DOSE_TOTAL_DE_LIDOCAINA_E_INDICACAO",
+          "VIA_OCULAR_E_INJETAVEL_BLOQUEADAS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "misoprostol_obstetrico",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; aprovado integralmente, sem excecoes. Bloqueios granulares e pendencias documentadas permanecem preservados. Integracao tecnica/publicacao nao executadas.",
+      "PROVENIENCIA": {
+        "baseline_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "nome_recebido": "misoprostol_obstetrico",
+        "data": "20-09-2026"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "id": "enalapril_maleato",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "enalapril_maleato"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Maleato de enalapril comprimido",
+    "class": "Anti-hipertensivo; IECA",
+    "pharmacologicClass": "Pró-fármaco inibidor da ECA, convertido a enalaprilato",
+    "mechanism": "Enalaprilato inibe ECA, reduzindo angiotensina II e aldosterona.",
+    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode reduzir pós-carga na insuficiência cardíaca.",
+    "pharmacokinetics": "VO; enalapril é hidrolisado a enalaprilato. Efeito anti-hipertensivo inicia em cerca de 1 h e pico em 4–6 h; enalaprilato é dializável.",
+    "indications": "Rótulo EUA: hipertensão e insuficiência cardíaca; também prevenção/tratamento em contextos específicos de disfunção ventricular esquerda conforme bula.",
+    "commercialNames": "Fonte: enalapril maleate tablets genérico EUA; marcas BR/AR não verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "Forças usuais no rótulo: 2,5; 5; 10 e 20 mg.",
+    "dose": "Hipertensão, sem diurético: 5 mg VO 1x/dia inicialmente; faixa usual 10–40 mg/dia em 1 ou 2 tomadas. Se diurético não puder ser suspenso, rótulo usa 2,5 mg inicial sob supervisão.",
+    "pediatricDose": "Hipertensão pediátrica: inicial 0,08 mg/kg 1x/dia, máximo inicial 5 mg; doses >0,58 mg/kg ou >40 mg/dia não foram estudadas. Não recomendado em neonatos nem em GFR <30 mL/min/1,73 m². AUTOMATABLE=NO até validação de idade, peso, GFR e formulação.",
+    "renalDose": "ClCr >30 mL/min: dose usual; ClCr <=30: primeira dose 2,5 mg/dia; pacientes em diálise: 2,5 mg nos dias de diálise, com ajustes posteriores conforme resposta.",
+    "hepaticDose": "Sem algoritmo de ajuste numérico rotineiro no rótulo; há alerta raro de insuficiência hepática associada a IECA.",
+    "commonAdverseEffects": "Tosse, tontura, cefaleia, fadiga e hipotensão podem ocorrer.",
+    "dangerousAdverseEffects": "Angioedema, hipercalemia, insuficiência renal, hipotensão grave e toxicidade fetal.",
+    "adverseEffects": "Alterações de creatinina/BUN, rash e raras alterações hematológicas/hepáticas.",
+    "contraindications": "Hipersensibilidade/angioedema relacionado a IECA; restrições com aliscireno em diabetes conforme rótulo.",
+    "interactions": "Potássio/poupadores de potássio: hipercalemia; diuréticos: hipotensão inicial; AINEs: menor efeito e piora renal; dupla inibição do SRAA aumenta risco.",
+    "monitoring": "PA, creatinina/eGFR, potássio, sinais de angioedema; em insuficiência cardíaca acompanhar função renal e volume.",
+    "administration": "VO; pode ser administrado em 1 ou 2 tomadas conforme dose/indicação.",
+    "preparation": "Comprimido pronto para uso. O rótulo contém fórmula extemporânea de suspensão 1 mg/mL, mas esta ficha é de comprimido e não habilita preparo automático dessa suspensão.",
+    "infusionProtocol": "NÃO APLICÁVEL ao comprimido oral.",
+    "pregnancy": "BOXED WARNING de toxicidade fetal; interromper ao detectar gestação.",
+    "lactation": "Enalapril/enalaprilato podem aparecer no leite; avaliar uso conforme idade do lactente e necessidade materna.",
+    "specialPopulations": "Pacientes depletados de volume/sódio têm maior risco de hipotensão inicial; neonatos e pediátricos com GFR <30 não são recomendados.",
+    "patientEducation": "Comunicar gestação imediatamente; reconhecer angioedema; evitar potássio sem orientação; monitorar tontura/hipotensão.",
+    "clinicalPearls": "Pediatria tem dose inicial por kg documentada, mas o rótulo limita a população e não valida automaticamente qualquer formulação ou GFR.",
+    "guidelineRecommendations": "A escolha de IECA e metas de PA devem seguir diretriz atual e comorbidades; esta ficha preserva a posologia regulatória sem transformá-la em preferência universal.",
+    "safetyFlags": "IECA; TOXICIDADE_FETAL; ANGIOEDEMA; HIPERCALEMIA; AJUSTE_RENAL.",
+    "alerts": "Pediatria e renal exigem seleção correta de idade/GFR antes de cálculo.",
+    "references": [
+      "DailyMed/NLM EUA — Enalapril Maleate tablets, updated 10-07-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee8633b-9d9e-453d-8c6b-8b13c94d2f58",
+      "ESC — 2024 Guidelines. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee8633b-9d9e-453d-8c6b-8b13c94d2f58"
+  },
+  "es": {
+    "name": "Maleato de enalapril comprimido",
+    "class": "Antihipertensivo; IECA",
+    "pharmacologicClass": "Profármaco inhibidor de la ECA, convertido a enalaprilato",
+    "mechanism": "Enalaprilato inhibe ECA, reduciendo angiotensina II y aldosterona.",
+    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede reducir poscarga en insuficiencia cardiaca.",
+    "pharmacokinetics": "VO; enalapril se hidroliza a enalaprilato. El efecto antihipertensivo comienza alrededor de 1 h y alcanza pico en 4–6 h; enalaprilato es dializable.",
+    "indications": "Rótulo EE.UU.: hipertensión e insuficiencia cardiaca; también prevención/tratamiento en contextos específicos de disfunción ventricular izquierda según ficha.",
+    "commercialNames": "Fuente: enalapril maleate tablets genérico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "Potencias usuales del rótulo: 2,5; 5; 10 y 20 mg.",
+    "dose": "Hipertensión, sin diurético: 5 mg VO una vez/día inicialmente; rango usual 10–40 mg/día en 1 o 2 tomas. Si no puede suspenderse diurético, el rótulo usa 2,5 mg inicial bajo supervisión.",
+    "pediatricDose": "Hipertensión pediátrica: inicial 0,08 mg/kg una vez/día, máximo inicial 5 mg; dosis >0,58 mg/kg o >40 mg/día no estudiadas. No recomendado en neonatos ni con GFR <30 mL/min/1,73 m². AUTOMATABLE=NO hasta validar edad, peso, GFR y formulación.",
+    "renalDose": "CrCl >30 mL/min: dosis usual; CrCl <=30: primera dosis 2,5 mg/día; pacientes en diálisis: 2,5 mg en días de diálisis, con ajustes posteriores según respuesta.",
+    "hepaticDose": "Sin algoritmo numérico rutinario en el rótulo; existe advertencia rara de insuficiencia hepática asociada a IECA.",
+    "commonAdverseEffects": "Pueden ocurrir tos, mareo, cefalea, fatiga e hipotensión.",
+    "dangerousAdverseEffects": "Angioedema, hiperpotasemia, insuficiencia renal, hipotensión grave y toxicidad fetal.",
+    "adverseEffects": "Alteraciones de creatinina/BUN, exantema y raras alteraciones hematológicas/hepáticas.",
+    "contraindications": "Hipersensibilidad/angioedema relacionado con IECA; restricciones con aliskireno en diabetes según rótulo.",
+    "interactions": "Potasio/ahorradores: hiperpotasemia; diuréticos: hipotensión inicial; AINEs: menor efecto y deterioro renal; doble bloqueo del SRAA aumenta riesgo.",
+    "monitoring": "PA, creatinina/eGFR, potasio, signos de angioedema; en insuficiencia cardiaca vigilar función renal y volumen.",
+    "administration": "VO; puede administrarse en 1 o 2 tomas según dosis/indicación.",
+    "preparation": "Comprimido listo para usar. El rótulo contiene fórmula extemporánea de suspensión 1 mg/mL, pero esta ficha es de comprimido y no habilita preparación automática de esa suspensión.",
+    "infusionProtocol": "NO APLICA al comprimido oral.",
+    "pregnancy": "BOXED WARNING de toxicidad fetal; suspender al detectar embarazo.",
+    "lactation": "Enalapril/enalaprilato pueden aparecer en leche; valorar uso según edad del lactante y necesidad materna.",
+    "specialPopulations": "Pacientes depletados de volumen/sodio tienen mayor riesgo de hipotensión inicial; neonatos y pediátricos con GFR <30 no están recomendados.",
+    "patientEducation": "Comunicar embarazo inmediatamente; reconocer angioedema; evitar potasio sin indicación; vigilar mareo/hipotensión.",
+    "clinicalPearls": "Pediatría tiene dosis inicial por kg documentada, pero el rótulo limita población y no valida automáticamente cualquier formulación o GFR.",
+    "guidelineRecommendations": "La elección de IECA y metas de PA deben seguir guía actual y comorbilidades; esta ficha preserva la posología regulatoria sin convertirla en preferencia universal.",
+    "safetyFlags": "IECA; TOXICIDAD_FETAL; ANGIOEDEMA; HIPERPOTASEMIA; AJUSTE_RENAL.",
+    "alerts": "Pediatría y renal requieren selección correcta de edad/GFR antes del cálculo.",
+    "references": [
+      "DailyMed/NLM EUA — Enalapril Maleate tablets, updated 10-07-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee8633b-9d9e-453d-8c6b-8b13c94d2f58",
+      "ESC — 2024 Guidelines. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee8633b-9d9e-453d-8c6b-8b13c94d2f58"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Maleato de enalapril comprimido",
+    "es": "Maleato de enalapril comprimido"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "enalapril_maleato.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "096",
+    "approvedSha256": "1b2e49b951778cdba13c6bcb9d2dd30f3fb6f3f05735ada3e9bad3d5a7a8ed59",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "71a860690e5d5fc81d91b6cbc6094f9dec5c294e9f50c9d58175ff7d930772f9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_096_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "diazepam_retal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "midazolam_intranasal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_12_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenobarbital_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CONVERSAO_GOTAS_BLOQUEADA",
+          "APRESENTACAO_LOCAL_GOTAS_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar bula/produto local que realmente use conta-gotas antes de qualquer cálculo de volume ou gotas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril_sublingual",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "enalapril_maleato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroclorotiazida_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_COMPRIMIDO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "losartana_potassica",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "anlodipino_besilato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "atenolol_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "FORMULACAO_IV_FORA_DO_ESCOPO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "enalapril_maleato",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado. Bloqueios e restricoes granulares permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "096",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "096",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

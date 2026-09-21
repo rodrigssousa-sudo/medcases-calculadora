@@ -1,0 +1,383 @@
+{
+  "id": "dexclorfeniramina_gotas",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "dexclorfeniramina_gotas"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Maleato de dexclorfeniramina - gotas",
+    "class": "Anti-histamínico sedativo",
+    "pharmacologicClass": "Antagonista/inverso H1 de primeira geração",
+    "mechanism": "Compete com histamina nos receptores H1, reduzindo manifestações alérgicas; possui efeitos anticolinérgicos e sedativos.",
+    "pharmacodynamics": "Reduz prurido, espirros, rinorreia e urticária; sedação decorre de penetração no SNC.",
+    "pharmacokinetics": "",
+    "indications": "Alergia, prurido, rinite alérgica, urticária, picadas de inseto, conjuntivite alérgica, dermatite atópica e eczemas alérgicos conforme produto.",
+    "commercialNames": "Produto-fonte atual: Polaramine Gotas (Hypera).",
+    "presentation": "Solução oral em gotas.",
+    "presentations": "2,8 mg/mL; 28 gotas/mL; cada gota = 0,1 mg; frasco 20 mL.",
+    "dose": "Adultos e >12 anos: 20 gotas (2 mg) 3-4x/dia; máximo 120 gotas/dia = 12 mg/dia.",
+    "pediatricDose": "2-6 anos: 5 gotas ou 1 gota/2 kg por dose, 3x/dia; máximo 30 gotas/dia = 3 mg/dia. 6-12 anos: 10 gotas ou 1 gota/2 kg por dose, 3x/dia; máximo 60 gotas/dia = 6 mg/dia. <2 anos: contraindicado. AUTOMATABLE=YES somente para 2,8 mg/mL, 28 gotas/mL, respeitando máximos.",
+    "renalDose": "Sem algoritmo numérico de ajuste na fonte atual.",
+    "hepaticDose": "Sem algoritmo numérico de ajuste na fonte atual.",
+    "commonAdverseEffects": "Sonolência leve a moderada.",
+    "dangerousAdverseEffects": "Choque anafilático e discrasias sanguíneas graves são raros; sedação pode comprometer direção/operação de máquinas.",
+    "adverseEffects": "Hipotensão, cefaleia, taquicardia/palpitação, boca seca, constipação, náusea, visão borrada e retenção urinária podem ocorrer.",
+    "contraindications": "Hipersensibilidade; prematuros/recém-nascidos; uso com inibidores da monoaminoxidase; apresentações aqui descritas são contraindicadas <2 anos.",
+    "interactions": "Álcool e outros depressores do SNC potencializam sedação; IMAO pode intensificar efeitos anticolinérgicos/anti-histamínicos.",
+    "monitoring": "Sedação, resposta alérgica e efeitos anticolinérgicos; cautela em glaucoma, retenção urinária e doença cardiovascular.",
+    "administration": "VO; utilizar o gotejador do produto. Cada gota = 0,1 mg somente no produto 2,8 mg/mL/28 gotas por mL documentado.",
+    "preparation": "Solução pronta para uso.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar somente após avaliação profissional de benefício-risco.",
+    "lactation": "Avaliar risco de sedação/efeitos anticolinérgicos no lactente e possível redução da lactação; decisão individual.",
+    "specialPopulations": "Idosos são mais suscetíveis a sedação, tontura, hipotensão e efeitos anticolinérgicos.",
+    "patientEducation": "Pode causar sonolência; evitar álcool e dirigir até conhecer a resposta. Não combinar com outros anti-histamínicos sedativos sem orientação.",
+    "clinicalPearls": "Xarope/solução e gotas têm concentrações diferentes; nunca converter mL em gotas entre apresentações.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SEDACAO; ANTICOLINERGICO; IMAO; <2_ANOS_CONTRAINDICADO; FORMULACAO_ESPECIFICA.",
+    "alerts": "Não confundir com solução/xarope 0,4 mg/mL. Conversão gotas-mg é produto-específica.",
+    "references": [
+      "Hypera/BR - Polaramine Gotas, posologia atual e apresentação comercial. https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-gotas",
+      "Polaramine Gotas - bula do produto: 2,8 mg/mL, 28 gotas/mL, 0,1 mg/gota (cópia pública de bula do produto consultada)."
+    ],
+    "ref": "https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-gotas"
+  },
+  "es": {
+    "name": "Maleato de dexclorfeniramina - gotas",
+    "class": "Antihistamínico sedante",
+    "pharmacologicClass": "Antagonista/inverso H1 de primera generación",
+    "mechanism": "Compite con histamina en receptores H1, reduciendo manifestaciones alérgicas; posee efectos anticolinérgicos y sedantes.",
+    "pharmacodynamics": "Reduce prurito, estornudos, rinorrea y urticaria; la sedación deriva de penetración al SNC.",
+    "pharmacokinetics": "",
+    "indications": "Alergia, prurito, rinitis alérgica, urticaria, picaduras de insecto, conjuntivitis alérgica, dermatitis atópica y eczemas alérgicos según producto.",
+    "commercialNames": "Producto fuente actual: Polaramine Gotas (Hypera).",
+    "presentation": "Solución oral en gotas.",
+    "presentations": "2,8 mg/mL; 28 gotas/mL; cada gota = 0,1 mg; frasco 20 mL.",
+    "dose": "Adultos y >12 años: 20 gotas (2 mg) 3-4 veces/día; máximo 120 gotas/día = 12 mg/día.",
+    "pediatricDose": "2-6 años: 5 gotas o 1 gota/2 kg por dosis, 3 veces/día; máximo 30 gotas/día = 3 mg/día. 6-12 años: 10 gotas o 1 gota/2 kg por dosis, 3 veces/día; máximo 60 gotas/día = 6 mg/día. <2 años: contraindicado. AUTOMATABLE=YES solo para 2,8 mg/mL, 28 gotas/mL, respetando máximos.",
+    "renalDose": "Sin algoritmo numérico de ajuste en la fuente actual.",
+    "hepaticDose": "Sin algoritmo numérico de ajuste en la fuente actual.",
+    "commonAdverseEffects": "Somnolencia leve a moderada.",
+    "dangerousAdverseEffects": "Shock anafiláctico y discrasias sanguíneas graves son raros; la sedación puede comprometer conducción/maquinaria.",
+    "adverseEffects": "Pueden ocurrir hipotensión, cefalea, taquicardia/palpitaciones, boca seca, constipación, náusea, visión borrosa y retención urinaria.",
+    "contraindications": "Hipersensibilidad; prematuros/recién nacidos; uso con inhibidores de monoaminooxidasa; las presentaciones aquí descritas están contraindicadas <2 años.",
+    "interactions": "Alcohol y otros depresores SNC potencian sedación; IMAO puede intensificar efectos anticolinérgicos/antihistamínicos.",
+    "monitoring": "Sedación, respuesta alérgica y efectos anticolinérgicos; precaución en glaucoma, retención urinaria y enfermedad cardiovascular.",
+    "administration": "VO; usar el gotero del producto. Cada gota = 0,1 mg solo en el producto 2,8 mg/mL/28 gotas por mL documentado.",
+    "preparation": "Solución lista para usar.",
+    "infusionProtocol": "No aplica.",
+    "pregnancy": "Usar solo tras evaluación profesional beneficio-riesgo.",
+    "lactation": "Evaluar riesgo de sedación/efectos anticolinérgicos en lactante y posible reducción de lactancia; decisión individual.",
+    "specialPopulations": "Mayores son más susceptibles a sedación, mareo, hipotensión y efectos anticolinérgicos.",
+    "patientEducation": "Puede causar somnolencia; evitar alcohol y conducir hasta conocer respuesta. No combinar con otros antihistamínicos sedantes sin orientación.",
+    "clinicalPearls": "Jarabe/solución y gotas tienen concentraciones diferentes; nunca convertir mL a gotas entre presentaciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SEDACION; ANTICOLINERGICO; IMAO; <2_ANOS_CONTRAINDICADO; FORMULACION_ESPECIFICA.",
+    "alerts": "No confundir con solución/jarabe 0,4 mg/mL. Conversión gotas-mg específica del producto.",
+    "references": [
+      "Hypera/BR - Polaramine Gotas, posologia atual e apresentação comercial. https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-gotas",
+      "Polaramine Gotas - bula do produto: 2,8 mg/mL, 28 gotas/mL, 0,1 mg/gota (cópia pública de bula do produto consultada)."
+    ],
+    "ref": "https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-gotas"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Maleato de dexclorfeniramina - gotas",
+    "es": "Maleato de dexclorfeniramina - gotas"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "dexclorfeniramina_gotas.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "094",
+    "approvedSha256": "3da6ff849b7b2ebe0cd1e631ab92a30692ab207108f99b19ac32cc3bdb9494ce",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "77ce8b5dd5c6dfe5d2fd5feac41818614cca1df731023dd4c839c1fe8059629d",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_094_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": 94,
+      "medicamentos": [
+        {
+          "id": "fluticasona_spray_nasal",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "ondansetrona_solucao_oral",
+          "bloqueios_clinicos": [
+            "USO_PEDIATRICO_FORA_DA_QUIMIOTERAPIA_MODERADA_NAO_AUTOMATIZAR",
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "bromoprida_gotas",
+          "bloqueios_clinicos": [
+            "CALCULO_PEDIATRICO_BLOQUEADO",
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "simeticona_emulsao",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "racecadotrila_granulado",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "sais_para_reidratacao_oral",
+          "bloqueios_clinicos": [
+            "PREPARACAO_AUTOMATICA_BLOQUEADA_SEM_PRODUTO",
+            "CALCULO_VOLUME_BLOQUEADO_SEM_AVALIACAO_CLINICA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "zinco_solucao_oral",
+          "bloqueios_clinicos": [
+            "CONVERSAO_ML_BLOQUEADA",
+            "CONCENTRACAO_AUTOMATICA_BLOQUEADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_0_4MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_gotas",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "loratadina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_1MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        }
+      ],
+      "reconciliacao_canonica": [
+        {
+          "nome_recebido": "cloreto_de_sodio_3_porcento",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Via/formulacao ausente: 3% pode representar solução para inalação, solução nasal 30 mg/mL ou outras soluções.",
+          "dado_faltante": "via + forma farmacêutica + produto/apresentação",
+          "impacto": "Não é seguro pesquisar/atribuir dose, preparo ou administração sob um ID único sem definir escopo."
+        },
+        {
+          "nome_recebido": "dimeticona_gotas",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Documentação brasileira consultada usa a denominação histórica dimeticona para produto cujo princípio ativo declarado é simeticona 75 mg/mL; sobreposição canônica com simeticona_emulsao.",
+          "dado_faltante": "decisão canônica: alias versus registro independente; produto/força específicos",
+          "impacto": "Risco de duplicar o mesmo princípio ativo e manter dois esquemas em gotas incompatíveis."
+        }
+      ],
+      "nota": "Aprovação clínica não transforma pendências/restrições granulares em autorização de cálculo ou publicação."
+    },
+    "packageRecordMetadata": {
+      "ID": "dexclorfeniramina_gotas",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques. Aprovação integral, sem exceções informadas. Preservar bloqueios clínicos granulares e restrições documentadas. Integração técnica e publicação continuam separadas.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "dexclorfeniramina_gotas",
+        "nome_recebido": "Maleato de dexclorfeniramina - gotas",
+        "fontes_consultadas": [
+          "Hypera/BR - Polaramine Gotas, posologia atual e apresentação comercial. https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-gotas",
+          "Polaramine Gotas - bula do produto: 2,8 mg/mL, 28 gotas/mL, 0,1 mg/gota (cópia pública de bula do produto consultada)."
+        ],
+        "hashes_artefatos": "ver GOLD33_NOVA_LISTA_LOTE_094_PROVENIENCIA.json (sidecar externo; evita hash autorreferencial)"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+      ],
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "HOMOLOGADA",
+        "homologacao_dados": "SIM",
+        "integracao_tecnica": "NAO_INICIADA",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO_MEDICA": {
+        "medico_revisor": "Dra Eugenia Marques",
+        "data_revisao": "20-09-2026",
+        "resultado": "APROVADO INTEGRALMENTE",
+        "arquivo_revisado": "094",
+        "excecoes_informadas": 0,
+        "alteracoes_clinicas_pos_parecer": 0,
+        "sha256_candidato_json_revisado": "8ff753377c9d7d30b5adbdfcba23fa290816f3eae9d311320abcb7a3ad76c0ad",
+        "sha256_pdf_revisado": "cf8d1b9142c5a10ce5dedcf349bad841410940be6f65b34fa8c865cdd56ab001"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

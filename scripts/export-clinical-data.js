@@ -1761,6 +1761,20 @@ const PACIENTE_RENAL = {
 ================================================================ */
 const DB_MODULES = [
   {
+    file: 'gold33_novo_093.js',
+    globalVar: 'GOLD33_NOVO_093_DRUGS_DB',
+    type: 'object',
+    label: 'Gold33 Novo 093',
+    privateReferenceOnly: true,
+  },
+  {
+    file: 'gold33_nova_lista.js',
+    globalVar: 'GOLD33_NOVA_LISTA_DRUGS_DB',
+    type: 'object',
+    label: 'Gold33 Nova Lista',
+    privateReferenceOnly: true,
+  },
+  {
     file: 'alergia_imunologia.js',
     globalVar: 'ALERGIA_IMUNOLOGIA_DRUGS_DB',
     type: 'object',

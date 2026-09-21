@@ -1,0 +1,384 @@
+{
+  "id": "sais_para_reidratacao_oral",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "sais_para_reidratacao_oral"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Sais para reidratação oral (SRO) - baixa osmolaridade",
+    "class": "Solução de reposição hidroeletrolítica oral",
+    "pharmacologicClass": "Mistura glicose-eletrólitos para terapia de reidratação oral",
+    "mechanism": "A glicose facilita a absorção intestinal de sódio e água pelo cotransporte sódio-glicose; potássio e citrato repõem perdas e ajudam a corrigir déficit eletrolítico/ácido-base.",
+    "pharmacodynamics": "Restaura volume e eletrólitos por via enteral; a formulação de baixa osmolaridade reduz vômitos e necessidade de fluidos IV em comparação com a fórmula antiga em várias populações.",
+    "pharmacokinetics": "Não se aplica como um único fármaco sistêmico; os componentes seguem fisiologia de absorção intestinal de água, glicose e eletrólitos.",
+    "indications": "Prevenção e tratamento de desidratação por diarreia, por via oral quando clinicamente apropriado.",
+    "commercialNames": "Formulação WHO/UNICEF não proprietária; marcas locais não verificadas nesta ficha.",
+    "presentation": "Pó/sais para dissolução em volume definido de água potável.",
+    "presentations": "Formulação WHO de baixa osmolaridade por 1 L: NaCl 2,6 g; glicose anidra 13,5 g; KCl 1,5 g; citrato trissódico di-hidratado 2,9 g; Na 75 mmol/L, glicose 75 mmol/L, K 20 mmol/L, Cl 65 mmol/L, citrato 10 mmol/L; osmolaridade 245 mOsm/L.",
+    "dose": "O volume é guiado pelo grau de desidratação e perdas contínuas, não por um teto farmacológico único. Usar protocolos clínicos de reidratação e reavaliar sinais de choque/desidratação.",
+    "pediatricDose": "OMS recomenda SRO de baixa osmolaridade em crianças até 10 anos com diarreia aquosa aguda e desidratação. A quantidade/velocidade deve seguir avaliação clínica e protocolo por grau de desidratação; AUTOMATABLE=NO sem peso, estado clínico e produto/volume de reconstituição.",
+    "renalDose": "Não há ajuste numérico universal; doença renal/oligúria altera risco de sódio/potássio e exige avaliação individual.",
+    "hepaticDose": "Não há ajuste numérico universal documentado.",
+    "commonAdverseEffects": "Vômito pode ocorrer; erros de diluição podem causar concentração inadequada de sódio/glicose.",
+    "dangerousAdverseEffects": "Hipernatremia/hiponatremia e distúrbios eletrolíticos podem ocorrer com formulação/preparo incorretos ou em pacientes de alto risco.",
+    "adverseEffects": "Distensão/náusea podem ocorrer durante administração; piora clínica exige reavaliação.",
+    "contraindications": "Não há uma contraindicação farmacológica única para a fórmula; choque, íleo, alteração de consciência ou incapacidade de hidratar por via oral podem exigir via IV/avaliação hospitalar.",
+    "interactions": "Não são relevantes interações medicamentosas clássicas; considerar balanço de sódio/potássio em pacientes com terapias que alteram eletrólitos.",
+    "monitoring": "Estado mental, perfusão, sede, diurese, peso quando disponível, frequência de perdas, vômitos e eletrólitos em casos graves/complexos.",
+    "administration": "VO em pequenos volumes frequentes conforme tolerância e protocolo. Manter alimentação/amamentação conforme orientação clínica.",
+    "preparation": "Dissolver o conteúdo do sachê EXATAMENTE no volume de água indicado pelo fabricante. Para a fórmula WHO descrita, a composição é por 1 L. Não concentrar, diluir excessivamente nem adicionar açúcar/sal.",
+    "infusionProtocol": "Não aplicável; terapia é oral. Choque/desidratação grave pode exigir fluidoterapia IV por protocolo separado.",
+    "pregnancy": "Pode ser usada para reidratação quando indicada; necessidade e volume devem ser individualizados.",
+    "lactation": "Compatível com manutenção do aleitamento; não interromper amamentação por rotina durante diarreia infantil.",
+    "specialPopulations": "Crianças pequenas, idosos, doença renal e desidratação grave exigem avaliação mais frequente.",
+    "patientEducation": "Usar água segura e volume exato; descartar conforme orientação do produto; procurar atendimento por letargia, incapacidade de beber, vômitos persistentes, sangue nas fezes ou piora da desidratação.",
+    "clinicalPearls": "O erro mais perigoso é reconstituir o sachê no volume errado. O campo não deve gerar volume automático sem identificar o produto e a quantidade de água prescrita no rótulo.",
+    "guidelineRecommendations": "OMS 2024/2025: em crianças até 10 anos com diarreia aquosa aguda e desidratação, recomenda solução de reidratação oral de baixa osmolaridade (recomendação forte; certeza moderada).",
+    "safetyFlags": "PREPARACAO_VOLUME_EXATO; ELETRÓLITOS; SINAIS_DE_CHOQUE; AUTOMACAO_BLOQUEADA_SEM_PRODUTO.",
+    "alerts": "PREPARACAO_AUTOMATICA=BLOQUEADA até identificar o sachê e o volume de reconstituição. A fórmula WHO é padrão técnico, não prova de marca local.",
+    "references": [
+      "WHO/UNICEF - Oral rehydration salts: production of the new ORS, baixa osmolaridade 245 mOsm/L. https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+      "WHO - Guideline on management of pneumonia and diarrhoea in children up to 10 years, publicação 2024/2025. https://www.who.int/publications/i/item/9789240103412"
+    ],
+    "ref": "https://www.who.int/publications/i/item/9789240103412"
+  },
+  "es": {
+    "name": "Sales de rehidratación oral (SRO) - baja osmolaridad",
+    "class": "Solución de reposición hidroelectrolítica oral",
+    "pharmacologicClass": "Mezcla glucosa-electrolitos para terapia de rehidratación oral",
+    "mechanism": "La glucosa facilita absorción intestinal de sodio y agua mediante cotransporte sodio-glucosa; potasio y citrato reponen pérdidas y ayudan a corregir déficit electrolítico/ácido-base.",
+    "pharmacodynamics": "Restaura volumen y electrolitos por vía enteral; la fórmula de baja osmolaridad reduce vómitos y necesidad de fluidos IV frente a la fórmula antigua en varias poblaciones.",
+    "pharmacokinetics": "No aplica como un único fármaco sistémico; los componentes siguen fisiología de absorción intestinal de agua, glucosa y electrolitos.",
+    "indications": "Prevención y tratamiento de deshidratación por diarrea, por vía oral cuando sea clínicamente apropiado.",
+    "commercialNames": "Formulación OMS/UNICEF no propietaria; marcas locales no verificadas en esta ficha.",
+    "presentation": "Polvo/sales para disolver en un volumen definido de agua potable.",
+    "presentations": "Formulación OMS de baja osmolaridad por 1 L: NaCl 2,6 g; glucosa anhidra 13,5 g; KCl 1,5 g; citrato trisódico dihidratado 2,9 g; Na 75 mmol/L, glucosa 75 mmol/L, K 20 mmol/L, Cl 65 mmol/L, citrato 10 mmol/L; osmolaridad 245 mOsm/L.",
+    "dose": "El volumen se guía por grado de deshidratación y pérdidas continuas, no por un techo farmacológico único. Usar protocolos clínicos de rehidratación y reevaluar signos de shock/deshidratación.",
+    "pediatricDose": "OMS recomienda SRO de baja osmolaridad en niños hasta 10 años con diarrea acuosa aguda y deshidratación. Cantidad/velocidad según evaluación clínica y protocolo por grado de deshidratación; AUTOMATABLE=NO sin peso, estado clínico y producto/volumen de reconstitución.",
+    "renalDose": "No hay ajuste numérico universal; enfermedad renal/oliguria modifica riesgo de sodio/potasio y exige evaluación individual.",
+    "hepaticDose": "No hay ajuste numérico universal documentado.",
+    "commonAdverseEffects": "Puede ocurrir vómito; errores de dilución pueden causar concentración inadecuada de sodio/glucosa.",
+    "dangerousAdverseEffects": "Hipernatremia/hiponatremia y trastornos electrolíticos pueden ocurrir por formulación/preparación incorrecta o en pacientes de alto riesgo.",
+    "adverseEffects": "Distensión/náusea pueden ocurrir durante la administración; el empeoramiento clínico requiere reevaluación.",
+    "contraindications": "No existe una contraindicación farmacológica única de la fórmula; shock, íleo, alteración de conciencia o incapacidad para hidratar por vía oral pueden requerir vía IV/evaluación hospitalaria.",
+    "interactions": "No son relevantes interacciones farmacológicas clásicas; considerar balance de sodio/potasio con terapias que alteran electrolitos.",
+    "monitoring": "Estado mental, perfusión, sed, diuresis, peso cuando disponible, frecuencia de pérdidas, vómitos y electrolitos en casos graves/complejos.",
+    "administration": "VO en pequeños volúmenes frecuentes según tolerancia y protocolo. Mantener alimentación/lactancia según orientación clínica.",
+    "preparation": "Disolver el sobre EXACTAMENTE en el volumen de agua indicado por el fabricante. Para la fórmula OMS descrita, la composición es por 1 L. No concentrar, diluir en exceso ni agregar azúcar/sal.",
+    "infusionProtocol": "No aplica; terapia oral. Shock/deshidratación grave puede requerir fluidoterapia IV por protocolo separado.",
+    "pregnancy": "Puede usarse para rehidratación cuando esté indicada; necesidad y volumen deben individualizarse.",
+    "lactation": "Compatible con mantener lactancia; no suspenderla de rutina durante diarrea infantil.",
+    "specialPopulations": "Niños pequeños, mayores, enfermedad renal y deshidratación grave requieren evaluación más frecuente.",
+    "patientEducation": "Usar agua segura y volumen exacto; desechar según producto; consultar por letargia, incapacidad para beber, vómitos persistentes, sangre en heces o empeoramiento de deshidratación.",
+    "clinicalPearls": "El error más peligroso es reconstituir el sobre en volumen incorrecto. El campo no debe generar volumen automático sin identificar producto y cantidad de agua indicada.",
+    "guidelineRecommendations": "OMS 2024/2025: en niños hasta 10 años con diarrea acuosa aguda y deshidratación, recomienda solución de rehidratación oral de baja osmolaridad (recomendación fuerte; certeza moderada).",
+    "safetyFlags": "PREPARACION_VOLUMEN_EXACTO; ELECTROLITOS; SIGNOS_DE_SHOCK; AUTOMATIZACION_BLOQUEADA_SIN_PRODUCTO.",
+    "alerts": "PREPARACION_AUTOMATICA=BLOQUEADA hasta identificar sobre y volumen de reconstitución. La fórmula OMS es estándar técnico, no prueba de marca local.",
+    "references": [
+      "WHO/UNICEF - Oral rehydration salts: production of the new ORS, baixa osmolaridade 245 mOsm/L. https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+      "WHO - Guideline on management of pneumonia and diarrhoea in children up to 10 years, publicação 2024/2025. https://www.who.int/publications/i/item/9789240103412"
+    ],
+    "ref": "https://www.who.int/publications/i/item/9789240103412"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Sais para reidratação oral (SRO) - baixa osmolaridade",
+    "es": "Sales de rehidratación oral (SRO) - baja osmolaridad"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "sais_para_reidratacao_oral.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "094",
+    "approvedSha256": "3da6ff849b7b2ebe0cd1e631ab92a30692ab207108f99b19ac32cc3bdb9494ce",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "77ce8b5dd5c6dfe5d2fd5feac41818614cca1df731023dd4c839c1fe8059629d",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_094_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": 94,
+      "medicamentos": [
+        {
+          "id": "fluticasona_spray_nasal",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "ondansetrona_solucao_oral",
+          "bloqueios_clinicos": [
+            "USO_PEDIATRICO_FORA_DA_QUIMIOTERAPIA_MODERADA_NAO_AUTOMATIZAR",
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "bromoprida_gotas",
+          "bloqueios_clinicos": [
+            "CALCULO_PEDIATRICO_BLOQUEADO",
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "simeticona_emulsao",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "racecadotrila_granulado",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "sais_para_reidratacao_oral",
+          "bloqueios_clinicos": [
+            "PREPARACAO_AUTOMATICA_BLOQUEADA_SEM_PRODUTO",
+            "CALCULO_VOLUME_BLOQUEADO_SEM_AVALIACAO_CLINICA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "zinco_solucao_oral",
+          "bloqueios_clinicos": [
+            "CONVERSAO_ML_BLOQUEADA",
+            "CONCENTRACAO_AUTOMATICA_BLOQUEADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_0_4MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_gotas",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "loratadina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_1MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        }
+      ],
+      "reconciliacao_canonica": [
+        {
+          "nome_recebido": "cloreto_de_sodio_3_porcento",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Via/formulacao ausente: 3% pode representar solução para inalação, solução nasal 30 mg/mL ou outras soluções.",
+          "dado_faltante": "via + forma farmacêutica + produto/apresentação",
+          "impacto": "Não é seguro pesquisar/atribuir dose, preparo ou administração sob um ID único sem definir escopo."
+        },
+        {
+          "nome_recebido": "dimeticona_gotas",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Documentação brasileira consultada usa a denominação histórica dimeticona para produto cujo princípio ativo declarado é simeticona 75 mg/mL; sobreposição canônica com simeticona_emulsao.",
+          "dado_faltante": "decisão canônica: alias versus registro independente; produto/força específicos",
+          "impacto": "Risco de duplicar o mesmo princípio ativo e manter dois esquemas em gotas incompatíveis."
+        }
+      ],
+      "nota": "Aprovação clínica não transforma pendências/restrições granulares em autorização de cálculo ou publicação."
+    },
+    "packageRecordMetadata": {
+      "ID": "sais_para_reidratacao_oral",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques. Aprovação integral, sem exceções informadas. Preservar bloqueios clínicos granulares e restrições documentadas. Integração técnica e publicação continuam separadas.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "sais_para_reidratacao_oral",
+        "nome_recebido": "Sais para reidratação oral (SRO) - baixa osmolaridade",
+        "fontes_consultadas": [
+          "WHO/UNICEF - Oral rehydration salts: production of the new ORS, baixa osmolaridade 245 mOsm/L. https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+          "WHO - Guideline on management of pneumonia and diarrhoea in children up to 10 years, publicação 2024/2025. https://www.who.int/publications/i/item/9789240103412"
+        ],
+        "hashes_artefatos": "ver GOLD33_NOVA_LISTA_LOTE_094_PROVENIENCIA.json (sidecar externo; evita hash autorreferencial)"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "PREPARACAO_AUTOMATICA_BLOQUEADA_SEM_PRODUTO",
+        "CALCULO_VOLUME_BLOQUEADO_SEM_AVALIACAO_CLINICA"
+      ],
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "HOMOLOGADA",
+        "homologacao_dados": "SIM",
+        "integracao_tecnica": "NAO_INICIADA",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO_MEDICA": {
+        "medico_revisor": "Dra Eugenia Marques",
+        "data_revisao": "20-09-2026",
+        "resultado": "APROVADO INTEGRALMENTE",
+        "arquivo_revisado": "094",
+        "excecoes_informadas": 0,
+        "alteracoes_clinicas_pos_parecer": 0,
+        "sha256_candidato_json_revisado": "8ff753377c9d7d30b5adbdfcba23fa290816f3eae9d311320abcb7a3ad76c0ad",
+        "sha256_pdf_revisado": "cf8d1b9142c5a10ce5dedcf349bad841410940be6f65b34fa8c865cdd56ab001"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

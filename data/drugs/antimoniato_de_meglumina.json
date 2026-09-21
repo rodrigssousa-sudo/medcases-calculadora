@@ -1,0 +1,362 @@
+{
+  "id": "antimoniato_de_meglumina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "antimoniato_de_meglumina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Antimoniato de meglumina - injecao; escopo cutaneo WHO EMRO",
+    "class": "Antileishmanial antimonial pentavalente",
+    "pharmacologicClass": "Composto de antimonio pentavalente (Sb5+)",
+    "mechanism": "Mecanismo antileishmanial nao esta completamente definido; o esquema e expresso pela quantidade de antimonio pentavalente, nao apenas pelo volume do produto.",
+    "pharmacodynamics": "Atividade contra Leishmania depende de especie, forma clinica, regiao e resposta do hospedeiro; toxicidade cardiaca, pancreatica, hepatica e renal limita o uso sistemico.",
+    "pharmacokinetics": "WHO EMRO descreve farmacocinetica de Sb5+ semelhante por via IV e IM; a conversao de volume depende da concentracao real de Sb5+ do produto.",
+    "indications": "Escopo documentado: leishmaniose cutanea em cenarios WHO EMRO que exigem terapia antimonial local ou sistemica. Este candidato NAO valida tratamento universal de leishmaniose visceral ou PKDL.",
+    "commercialNames": "Glucantime e citado em manual WHO EMRO antigo; disponibilidade/registro BR/AR nao foram confirmados nesta execucao.",
+    "presentation": "Solucao injetavel; manual WHO EMRO descreve ampola de 5 mL com 405 mg de Sb5+, equivalente a 81 mg de Sb5+/mL, para o produto referido.",
+    "presentations": "A apresentacao e concentracao devem ser confirmadas pelo produto/local. NAO converter automaticamente mL sem confirmar mg de Sb5+/mL.",
+    "dose": "Leishmaniose cutanea sistemica, WHO EMRO atual: antimonial pentavalente 20 mg Sb5+/kg/dia por 21 dias em situacao clinica selecionada. Tratamento intralesional: 1-5 mL, 2x/semana por 3-4 semanas em situacoes selecionadas. Estes esquemas NAO devem ser extrapolados para leishmaniose visceral/PKDL ou outra regiao.",
+    "pediatricDose": "WHO EMRO usa o mesmo alvo de 20 mg Sb5+/kg/dia no esquema sistemico por peso; AUTOMATABLE=NO ate confirmar produto, concentracao Sb5+, especie/forma clinica, regiao e via.",
+    "renalDose": "Nao ha algoritmo numerico universal validado neste candidato; disfuncao renal aumenta preocupacao de toxicidade e exige avaliacao especializada.",
+    "hepaticDose": "Nao ha algoritmo numerico universal validado neste candidato; hepatotoxicidade requer monitorizacao e avaliacao especializada.",
+    "commonAdverseEffects": "Anorexia, nausea, vomitos, mal-estar, mialgia, cefaleia e letargia sao descritos em documentos WHO.",
+    "dangerousAdverseEffects": "Alteracoes ECG/QT, pancreatite, disfuncao hepatica/renal e toxicidade relacionada ao antimonio podem exigir suspensao.",
+    "adverseEffects": "Dor no local IM, trombose/dor IV e elevacao de enzimas hepaticas podem ocorrer.",
+    "contraindications": "NAO DOCUMENTADO com seguranca para um produto/jurisdicao especificos neste candidato; consultar bula local antes de uso.",
+    "interactions": "NAO DOCUMENTADO com profundidade suficiente neste candidato; evitar combinar toxicidades cardiacas/hepaticas/pancreaticas sem avaliacao.",
+    "monitoring": "ECG, eletrólitos, funcao renal/hepatica e enzimas pancreaticas conforme protocolo; resposta parasitologica/clinica depende da forma de leishmaniose.",
+    "administration": "WHO EMRO descreve via IM ou IV para uso sistemico e intralesional em casos selecionados; a escolha depende do contexto e do produto.",
+    "preparation": "Confirmar concentracao do produto em mg de Sb5+/mL antes de calcular volume. O manual regional citado descreve 81 mg Sb5+/mL.",
+    "infusionProtocol": "Documento WHO antigo descreve injecao IV lenta; nao foi validado protocolo universal moderno de diluicao/velocidade para todas as marcas. AUTOMACAO_IV=BLOQUEADA.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Imunossupressao, diabetes descompensado, especie de Leishmania e regiao alteram a estrategia terapeutica; nao usar um esquema unico.",
+    "patientEducation": "Tratamento deve ser realizado por programa/servico com experiencia em leishmaniose e monitorizacao de toxicidade; procurar atendimento por palpitações, sincope, dor abdominal intensa ou ictericia.",
+    "clinicalPearls": "Dose deve ser calculada em mg de Sb5+, nao em 'mg de antimoniato' sem conversao. O WHO atualizou em 2026 as recomendacoes de leishmaniose visceral/PKDL, portanto o esquema cutaneo regional nao e universal.",
+    "guidelineRecommendations": "WHO 2026 publicou atualizacao especifica para leishmaniose visceral e PKDL em Africa Oriental e Sudeste Asiatico; este candidato nao substitui essas recomendacoes e fica restrito ao escopo cutaneo EMRO.",
+    "safetyFlags": "SB5_CONCENTRACAO_PRODUTO_ESPECIFICA; QT; PANCREAS; RENAL_HEPATICO; REGIAO_FORMA_CLINICA_OBRIGATORIAS.",
+    "alerts": "AUTOMACAO_BLOQUEADA ate confirmar pais, marca, concentracao em Sb5+, forma clinica, especie/regiao e via.",
+    "references": [
+      "WHO EMRO - Summary of clinical scenarios and treatment of cutaneous leishmaniasis. https://www.emro.who.int/ar/neglected-tropical-diseases/information-resources-leishmaniasis/clinical-signs-and-treatment.html",
+      "WHO EMRO - Manual for case management of cutaneous leishmaniasis; product example 81 mg Sb5+/mL. https://www.emro.who.int/images/stories/zoonoses/manual_leishmaniasis_edited_mb_draft_for_web_1_5_13.pdf",
+      "WHO - 29 Jul 2026 update for visceral and post-kala-azar dermal leishmaniasis. https://www.who.int/news/item/29-07-2026-who-updates-treatment-guidelines-on-visceral-and-post-kala-azar-dermal-leishmaniasis"
+    ],
+    "ref": "https://www.emro.who.int/ar/neglected-tropical-diseases/information-resources-leishmaniasis/clinical-signs-and-treatment.html"
+  },
+  "es": {
+    "name": "Antimoniato de meglumina - inyeccion; alcance cutaneo WHO EMRO",
+    "class": "Antileishmanial antimonial pentavalente",
+    "pharmacologicClass": "Compuesto de antimonio pentavalente (Sb5+)",
+    "mechanism": "El mecanismo antileishmanial no esta completamente definido; la pauta se expresa por cantidad de antimonio pentavalente, no solo por volumen del producto.",
+    "pharmacodynamics": "La actividad contra Leishmania depende de especie, forma clinica, region y respuesta del huesped; toxicidad cardiaca, pancreatica, hepatica y renal limita uso sistemico.",
+    "pharmacokinetics": "WHO EMRO describe farmacocinetica de Sb5+ similar por via IV e IM; la conversion de volumen depende de la concentracion real de Sb5+ del producto.",
+    "indications": "Alcance documentado: leishmaniasis cutanea en escenarios WHO EMRO que requieren terapia antimonial local o sistemica. Este candidato NO valida tratamiento universal de leishmaniasis visceral ni PKDL.",
+    "commercialNames": "Glucantime se cita en manual WHO EMRO antiguo; disponibilidad/registro BR/AR no fueron confirmados en esta ejecucion.",
+    "presentation": "Solucion inyectable; manual WHO EMRO describe ampolla de 5 mL con 405 mg de Sb5+, equivalente a 81 mg de Sb5+/mL, para el producto referido.",
+    "presentations": "La presentacion y concentracion deben confirmarse por producto/local. NO convertir automaticamente mL sin confirmar mg de Sb5+/mL.",
+    "dose": "Leishmaniasis cutanea sistemica, WHO EMRO actual: antimonial pentavalente 20 mg Sb5+/kg/dia por 21 dias en situacion clinica seleccionada. Tratamiento intralesional: 1-5 mL, 2 veces/semana por 3-4 semanas en situaciones seleccionadas. Estas pautas NO deben extrapolarse a leishmaniasis visceral/PKDL ni otra region.",
+    "pediatricDose": "WHO EMRO usa el mismo objetivo de 20 mg Sb5+/kg/dia en pauta sistemica por peso; AUTOMATABLE=NO hasta confirmar producto, concentracion Sb5+, especie/forma clinica, region y via.",
+    "renalDose": "No hay algoritmo numerico universal validado en este candidato; disfuncion renal aumenta preocupacion por toxicidad y exige evaluacion especializada.",
+    "hepaticDose": "No hay algoritmo numerico universal validado en este candidato; hepatotoxicidad requiere monitorizacion y evaluacion especializada.",
+    "commonAdverseEffects": "Anorexia, nausea, vomitos, malestar, mialgia, cefalea y letargia se describen en documentos WHO.",
+    "dangerousAdverseEffects": "Alteraciones ECG/QT, pancreatitis, disfuncion hepatica/renal y toxicidad relacionada con antimonio pueden exigir suspension.",
+    "adverseEffects": "Pueden ocurrir dolor local IM, trombosis/dolor IV y elevacion de enzimas hepaticas.",
+    "contraindications": "NO DOCUMENTADO con seguridad para producto/jurisdiccion especificos en este candidato; consultar ficha local antes de uso.",
+    "interactions": "NO DOCUMENTADO con profundidad suficiente en este candidato; evitar combinar toxicidades cardiacas/hepaticas/pancreaticas sin evaluacion.",
+    "monitoring": "ECG, electrolitos, funcion renal/hepatica y enzimas pancreaticas segun protocolo; respuesta parasitologica/clinica depende de la forma de leishmaniasis.",
+    "administration": "WHO EMRO describe via IM o IV para uso sistemico e intralesional en casos seleccionados; la eleccion depende del contexto y del producto.",
+    "preparation": "Confirmar concentracion del producto en mg de Sb5+/mL antes de calcular volumen. El manual regional citado describe 81 mg Sb5+/mL.",
+    "infusionProtocol": "Documento WHO antiguo describe inyeccion IV lenta; no se valido protocolo universal moderno de dilucion/velocidad para todas las marcas. AUTOMATIZACION_IV=BLOQUEADA.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Inmunosupresion, diabetes descompensada, especie de Leishmania y region cambian estrategia terapeutica; no usar una pauta unica.",
+    "patientEducation": "Tratamiento debe realizarse por programa/servicio con experiencia en leishmaniasis y monitorizacion de toxicidad; consultar por palpitaciones, sincope, dolor abdominal intenso o ictericia.",
+    "clinicalPearls": "La dosis debe calcularse en mg de Sb5+, no en 'mg de antimoniato' sin conversion. WHO actualizo en 2026 recomendaciones de leishmaniasis visceral/PKDL, por lo que la pauta cutanea regional no es universal.",
+    "guidelineRecommendations": "WHO 2026 publico actualizacion especifica para leishmaniasis visceral y PKDL en Africa Oriental y Sudeste Asiatico; este candidato no sustituye esas recomendaciones y queda restringido al alcance cutaneo EMRO.",
+    "safetyFlags": "SB5_CONCENTRACION_PRODUCTO_ESPECIFICA; QT; PANCREAS; RENAL_HEPATICO; REGION_FORMA_CLINICA_OBLIGATORIAS.",
+    "alerts": "AUTOMATIZACION_BLOQUEADA hasta confirmar pais, marca, concentracion en Sb5+, forma clinica, especie/region y via.",
+    "references": [
+      "WHO EMRO - Summary of clinical scenarios and treatment of cutaneous leishmaniasis. https://www.emro.who.int/ar/neglected-tropical-diseases/information-resources-leishmaniasis/clinical-signs-and-treatment.html",
+      "WHO EMRO - Manual for case management of cutaneous leishmaniasis; product example 81 mg Sb5+/mL. https://www.emro.who.int/images/stories/zoonoses/manual_leishmaniasis_edited_mb_draft_for_web_1_5_13.pdf",
+      "WHO - 29 Jul 2026 update for visceral and post-kala-azar dermal leishmaniasis. https://www.who.int/news/item/29-07-2026-who-updates-treatment-guidelines-on-visceral-and-post-kala-azar-dermal-leishmaniasis"
+    ],
+    "ref": "https://www.emro.who.int/ar/neglected-tropical-diseases/information-resources-leishmaniasis/clinical-signs-and-treatment.html"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Antimoniato de meglumina - injecao; escopo cutaneo WHO EMRO",
+    "es": "Antimoniato de meglumina - inyeccion; alcance cutaneo WHO EMRO"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "antimoniato_de_meglumina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "100",
+    "approvedSha256": "0570f083fc313d61727d1e5380c90e3280966a497e8006cf58d5d82eec68ef31",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "e0c21a75ecd6485bdc812e20b898fa2ccd11738d322cde54688d8637a852a4d9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_100_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "antimoniato_de_meglumina",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO",
+          "CONCENTRACAO_SB5_DEVE_SER_CONFIRMADA",
+          "ESCOPO_VISCERAL_PKDL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "artemeter_lumefantrina",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "PROFILAXIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "baloxavir_marboxil",
+        "bloqueios_clinicos": [
+          "FORMULACAO_PESO_OBRIGATORIOS",
+          "IDADE_MENOR_5_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "benznidazol",
+        "bloqueios_clinicos": [
+          "DOSE_ADULTO_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA_PESO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "bezlotoxumabe",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_1_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "CHF_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "capreomicina",
+        "bloqueios_clinicos": [
+          "ATIVACAO_CLINICA_BLOQUEADA",
+          "CALCULO_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cicloserina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "TDM_RECOMENDADO_EM_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cidofovir",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "USOS_OFF_LABEL_BLOQUEADOS",
+          "RENAL_LIMIARES_OBRIGATORIOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clofazimina",
+        "bloqueios_clinicos": [
+          "ESCOPO_LEPRA_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA_ATE_TABELA_WHO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cloroquina",
+        "bloqueios_clinicos": [
+          "MALARIA_COMPLICADA_BLOQUEADA",
+          "REGIAO_RESISTENTE_BLOQUEADA",
+          "SAL_BASE_CONVERSAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "antimoniato_de_meglumina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Leishmaniose cutanea - WHO EMRO; produto/concentracao devem ser confirmados",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_AUTOMATICO_BLOQUEADO",
+        "CONCENTRACAO_SB5_DEVE_SER_CONFIRMADA",
+        "ESCOPO_VISCERAL_PKDL_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "100",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "100",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

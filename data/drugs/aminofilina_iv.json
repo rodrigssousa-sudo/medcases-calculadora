@@ -1,0 +1,350 @@
+{
+  "id": "aminofilina_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "aminofilina_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Aminofilina 25 mg/mL IV",
+    "class": "Metilxantina broncodilatadora",
+    "pharmacologicClass": "Complexo de teofilina/etilenodiamina; fonte de teofilina",
+    "mechanism": "Efeitos da teofilina incluem inibicao de fosfodiesterases e antagonismo de adenosina; janela terapeutica estreita.",
+    "pharmacodynamics": "Broncodilatacao com toxicidade progressiva em concentracoes elevadas; arritmias e convulsoes podem ser fatais.",
+    "pharmacokinetics": "Aminofilina e aproximadamente 79% teofilina anidra em peso. Depuracao varia muito por idade, tabagismo, febre, insuficiencia cardiaca/hepatica e interacoes.",
+    "indications": "Broncodilatacao aguda em contextos selecionados quando teofilina IV e clinicamente indicada; uso atual exige TDM e avaliacao individual.",
+    "commercialNames": "Aminophylline Injection USP, Hospira, EUA.",
+    "presentation": "Solucao IV.",
+    "presentations": "25 mg/mL aminofilina di-hidratada = 19,7 mg/mL teofilina anidra; 250 mg/10 mL e 500 mg/20 mL.",
+    "dose": "Se sem teofilina nas ultimas 24 h: carga 5,7 mg/kg aminofilina IV em 30 min (peso ideal), visando ~10 mcg/mL. Adulto nao fumante: exemplo de manutencao 0,5 mg/kg/h aminofilina apos carga, ajustada por nivel. AUTOMATIZACAO=NO sem TDM/contexto.",
+    "pediatricDose": "1-9 anos: exemplo rotulado apos carga 5,7 mg/kg = infusao 1,0 mg/kg/h aminofilina; outros grupos etarios tem taxas diferentes. Exige TDM e tabela completa; AUTOMATIZACAO=BLOQUEADA.",
+    "renalDose": "Insuficiencia renal isolada geralmente altera menos a depuracao de teofilina que hepatopatia, mas o ajuste deve ser por nivel/clinica.",
+    "hepaticDose": "Hepatopatia e insuficiencia cardiaca reduzem depuracao; o rotulo limita taxa inicial quando nao ha TDM frequente. AUTOMATIZACAO=BLOQUEADA.",
+    "commonAdverseEffects": "Nausea, vomitos, cefaleia, tremor, insonia e taquicardia.",
+    "dangerousAdverseEffects": "Arritmias graves, hipotensao e convulsoes, especialmente em concentracoes elevadas.",
+    "adverseEffects": "Palpitacoes, diurese e irritabilidade podem ocorrer.",
+    "contraindications": "Hipersensibilidade a xantinas/componentes; demais restricoes dependem do contexto clinico.",
+    "interactions": "Cimetidina, macrolideos, fluoroquinolonas e varios fármacos podem reduzir depuracao; tabagismo e alguns indutores aumentam depuracao.",
+    "monitoring": "Teofilina serica apos carga e durante infusao; FC/ritmo, sintomas neurologicos/GI e fatores que alteram depuracao.",
+    "administration": "Somente IV lenta/infusao. Peso em mg/kg deve usar peso ideal em obesidade conforme rotulo.",
+    "preparation": "Solucao 25 mg/mL; pode ser administrada lentamente ou diluida para infusao conforme protocolo.",
+    "infusionProtocol": "Carga rotulada em 30 min; manutencao continua ajustada por TDM. Nao exceder taxas empiricas sem niveis.",
+    "pregnancy": "Usar apenas se beneficio justificar risco; teofilina atravessa placenta.",
+    "lactation": "Teofilina passa ao leite e pode causar irritabilidade/taquicardia no lactente.",
+    "specialPopulations": "Idade, tabagismo, febre, insuficiencia cardiaca e hepatopatia alteram fortemente a depuracao.",
+    "patientEducation": "Uso hospitalar com exames de nivel; relatar palpitações, vomitos persistentes, tremor intenso ou sintomas neurologicos.",
+    "clinicalPearls": "Sempre distinguir mg de aminofilina de mg de teofilina; 25 mg/mL aminofilina equivalem a 19,7 mg/mL teofilina anidra.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "JANELA_TERAPEUTICA_ESTREITA; TDM; CONVULSAO; ARRITMIA; AMINOFILINA_VS_TEOFILINA.",
+    "alerts": "Nao dar carga se teofilina recente sem nivel serico. Automacao de manutencao bloqueada sem TDM/tabela completa.",
+    "references": [
+      "DailyMed/NLM EUA - Aminophylline Injection USP 25 mg/mL, updated 22-05-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9a663ef3-881f-48bd-2689-3713b24545c2"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9a663ef3-881f-48bd-2689-3713b24545c2"
+  },
+  "es": {
+    "name": "Aminofilina 25 mg/mL IV",
+    "class": "Metilxantina broncodilatadora",
+    "pharmacologicClass": "Complejo de teofilina/etilendiamina; fuente de teofilina",
+    "mechanism": "Efectos de teofilina incluyen inhibicion de fosfodiesterasas y antagonismo de adenosina; ventana terapeutica estrecha.",
+    "pharmacodynamics": "Broncodilatacion con toxicidad progresiva a concentraciones altas; arritmias y convulsiones pueden ser fatales.",
+    "pharmacokinetics": "Aminofilina es aproximadamente 79% teofilina anhidra en peso. Aclaramiento varia mucho por edad, tabaquismo, fiebre, insuficiencia cardiaca/hepatica e interacciones.",
+    "indications": "Broncodilatacion aguda en contextos seleccionados cuando teofilina IV esta clinicamente indicada; uso actual exige TDM y evaluacion individual.",
+    "commercialNames": "Aminophylline Injection USP, Hospira, EE.UU.",
+    "presentation": "Solucion IV.",
+    "presentations": "25 mg/mL aminofilina dihidratada = 19,7 mg/mL teofilina anhidra; 250 mg/10 mL y 500 mg/20 mL.",
+    "dose": "Si no recibio teofilina en ultimas 24 h: carga 5,7 mg/kg aminofilina IV en 30 min (peso ideal), buscando ~10 mcg/mL. Adulto no fumador: ejemplo de mantenimiento 0,5 mg/kg/h aminofilina tras carga, ajustada por nivel. AUTOMATIZACION=NO sin TDM/contexto.",
+    "pediatricDose": "1-9 anos: ejemplo rotulado tras carga 5,7 mg/kg = infusion 1,0 mg/kg/h aminofilina; otros grupos etarios tienen tasas distintas. Exige TDM y tabla completa; AUTOMATIZACION=BLOQUEADA.",
+    "renalDose": "Insuficiencia renal aislada suele alterar menos el aclaramiento de teofilina que hepatopatia, pero ajuste debe basarse en nivel/clinica.",
+    "hepaticDose": "Hepatopatia e insuficiencia cardiaca reducen aclaramiento; rotulo limita tasa inicial cuando no hay TDM frecuente. AUTOMATIZACION=BLOQUEADA.",
+    "commonAdverseEffects": "Nausea, vomitos, cefalea, temblor, insomnio y taquicardia.",
+    "dangerousAdverseEffects": "Arritmias graves, hipotension y convulsiones, especialmente con concentraciones elevadas.",
+    "adverseEffects": "Pueden ocurrir palpitaciones, diuresis e irritabilidad.",
+    "contraindications": "Hipersensibilidad a xantinas/componentes; demas restricciones dependen del contexto clinico.",
+    "interactions": "Cimetidina, macrolidos, fluoroquinolonas y varios farmacos pueden reducir aclaramiento; tabaquismo y algunos inductores aumentan aclaramiento.",
+    "monitoring": "Teofilina serica tras carga y durante infusion; FC/ritmo, sintomas neurologicos/GI y factores que alteran aclaramiento.",
+    "administration": "Solo IV lenta/infusion. Peso para mg/kg debe usar peso ideal en obesidad segun rotulo.",
+    "preparation": "Solucion 25 mg/mL; puede administrarse lentamente o diluida para infusion segun protocolo.",
+    "infusionProtocol": "Carga rotulada en 30 min; mantenimiento continuo ajustado por TDM. No exceder tasas empiricas sin niveles.",
+    "pregnancy": "Usar solo si beneficio justifica riesgo; teofilina atraviesa placenta.",
+    "lactation": "Teofilina pasa a leche y puede causar irritabilidad/taquicardia en lactante.",
+    "specialPopulations": "Edad, tabaquismo, fiebre, insuficiencia cardiaca y hepatopatia alteran fuertemente aclaramiento.",
+    "patientEducation": "Uso hospitalario con niveles; comunicar palpitaciones, vomitos persistentes, temblor intenso o sintomas neurologicos.",
+    "clinicalPearls": "Siempre distinguir mg de aminofilina de mg de teofilina; 25 mg/mL aminofilina equivalen a 19,7 mg/mL teofilina anhidra.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "VENTANA_TERAPEUTICA_ESTRECHA; TDM; CONVULSION; ARRITMIA; AMINOFILINA_VS_TEOFILINA.",
+    "alerts": "No dar carga si teofilina reciente sin nivel serico. Automatizacion de mantenimiento bloqueada sin TDM/tabla completa.",
+    "references": [
+      "DailyMed/NLM EUA - Aminophylline Injection USP 25 mg/mL, updated 22-05-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9a663ef3-881f-48bd-2689-3713b24545c2"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9a663ef3-881f-48bd-2689-3713b24545c2"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Aminofilina 25 mg/mL IV",
+    "es": "Aminofilina 25 mg/mL IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "aminofilina_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "103",
+    "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "adrenalina_autoinjetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PRODUTO_ESPECIFICO_AUVIQ",
+          "PESO_MENOR_7_5_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "aminofilina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TDM_OBRIGATORIO",
+          "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "betametasona_injetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA",
+          "INDICACAO_ROTA_OBRIGATORIAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "brometo_de_ipratropio_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIA_NAO_INALATORIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "dexametasona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AUTOMACAO_EXIGE_INDICACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenoterol_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "DOSE_ATUAL_NAO_VERIFICADA",
+          "VIA_AUTOMATICA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "BULA_PRIMARIA_ATUAL_PENDENTE"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidrocortisona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metilprednisolona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "prometazina_im",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "IDADE_MENOR_2_CONTRAINDICADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "salbutamol_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+          "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "aminofilina_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Aminofilina 25 mg/mL IV - EUA 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "TDM_OBRIGATORIO",
+        "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "103",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "103",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_087_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

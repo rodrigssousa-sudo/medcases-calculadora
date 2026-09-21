@@ -1,0 +1,169 @@
+{
+  "id": "paclitaxel",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "paclitaxel"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Paclitaxel convencional IV",
+    "class": "Antineoplasico taxano; agente estabilizador de microtubulos.",
+    "pharmacologicClass": "Taxano antimicrotubular.",
+    "mechanism": "Promove a montagem de microtubulos a partir de dimeros de tubulina e estabiliza os microtubulos contra despolimerizacao, alterando a dinamica mitotica e outras funcoes celulares dependentes de microtubulos.",
+    "pharmacodynamics": "Citotoxicidade e mielossupressao/neuropatia sao relacionadas a exposição e esquema de infusão. Reações de hipersensibilidade sao ligadas tambem ao veiculo polyoxyl 35 castor oil e exigem premedicacao.",
+    "pharmacokinetics": "Farmacocinética não linear em parte da faixa estudada; metabolização principalmente hepática (CYP2C8/CYP3A4) e eliminação predominantemente não renal. Disfuncao hepática pode aumentar toxicidade e exige tabela especifica por bilirrubina/transaminases e duracao da infusão.",
+    "indications": "Cancer de ovario, câncer de mama, carcinoma pulmonar não pequenas celulas e sarcoma de Kaposi associado a AIDS, nos cenarios rotulados.",
+    "commercialNames": "Rotulo consultado e generico Teva. Não foram validadas marcas BR/AR.",
+    "presentation": "Concentrado injetavel para infusão IV convencional.",
+    "presentations": "Solucao 6 mg/mL no produto consultado; contem polyoxyl 35 castor oil e alcool desidratado. Não corresponde a paclitaxel ligado a albumina.",
+    "dose": "Ovario 1a linha: 175 mg/m2 IV em 3 h seguido de cisplatina 75 mg/m2, ou 135 mg/m2 IV em 24 h seguido de cisplatina 75 mg/m2, a cada 3 semanas. Ovario previamente tratado: 135 ou 175 mg/m2 IV em 3 h a cada 3 semanas. Mama adjuvante linfonodo positivo: 175 mg/m2 IV em 3 h a cada 3 semanas por 4 cursos apos quimioterapia com doxorrubicina. Outros cenarios (mama metastática, NSCLC, Kaposi) possuem esquemas proprios no PI.",
+    "pediatricDose": "Seguranca e eficacia não estabelecidas em pediatria. Estudo pediátrico com doses muito altas apresentou toxicidade do SNC possivelmente relacionada ao etanol do veiculo; não usar esses dados como posologia.",
+    "renalDose": "",
+    "hepaticDose": "Ajuste depende de duracao da infusão, transaminases e bilirrubina. Exemplo 3 h: bilirrubina <=1,25xULN e transaminases <10xULN: 175 mg/m2; bilirrubina 1,26-2xULN: 135 mg/m2; 2,01-5xULN: 90 mg/m2; transaminases >=10xULN ou bilirrubina >5xULN: não recomendado. Para 24 h a tabela e diferente e deve ser aplicada separadamente.",
+    "commonAdverseEffects": "Mielossupressao/neutropenia, neuropatia periferica, alopecia, artralgia/mialgia, nausea/vomitos e reações de hipersensibilidade sao frequentes e esquema-dependentes.",
+    "dangerousAdverseEffects": "Reações de hipersensibilidade grave/anafilaxia apesar de premedicacao; neutropenia grave/infeccao; neuropatia grave; alterações de conducao cardíaca; hepatotoxicidade e necrose/fibrose por extravasamento.",
+    "adverseEffects": "Hipotensao/bradicardia, mucosite, diarreia, astenia, rash, alterações ungueais e reações no local de injecao podem ocorrer.",
+    "contraindications": "Hipersensibilidade previa a paclitaxel ou a medicamentos formulados com polyoxyl 35 castor oil. Não usar em tumores solidos com neutrofilos basais <1.500/mm3 ou Kaposi com <1.000/mm3.",
+    "interactions": "A sequência com cisplatina importa: administrar paclitaxel antes da cisplatina. Inibidores/indutores de CYP2C8/CYP3A4 podem alterar exposição; revisar concomitantes.",
+    "monitoring": "Hemograma antes de cada ciclo e durante conforme protocolo; neuropatia, hipersensibilidade durante infusão, sinais vitais, função hepática e sitio IV. Monitorização cardíaca se houver alteração de conducao significativa.",
+    "administration": "Somente IV por infusão, apos premedicacao para hipersensibilidade. Usar equipo adequado e filtro em linha com membrana <=0,22 micra. Evitar contato do concentrado não diluido com PVC plastificado.",
+    "preparation": "Diluir em NaCl 0,9%, dextrose 5%, dextrose 5%/NaCl 0,9% ou dextrose 5% em Ringer para concentração final 0,3-1,2 mg/mL. Usar recipientes/equipos sem PVC plastificado quando indicado pelo PI.",
+    "infusionProtocol": "Duracao depende do esquema: 3 h ou 24 h em varios cenarios rotulados. Todos os pacientes devem receber premedicacao anti-hipersensibilidade; o PI exemplifica dexametasona + anti-H1 + anti-H2. Não transpor o esquema de premedicacao sem validar disponibilidade/protocolo local.",
+    "pregnancy": "Pode causar dano fetal; orientar evitar gravidez durante terapia e seguir aconselhamento reprodutivo do PI.",
+    "lactation": "O PI recomenda interromper a amamentacao durante tratamento com paclitaxel convencional.",
+    "specialPopulations": "Idosos tiveram maior frequência de mielossupressao/neuropatia ou eventos cardiovasculares em alguns estudos. Hepatopatia exige tabela por bilirrubina/transaminases e duracao de infusão.",
+    "patientEducation": "Comunicar dispneia/urticaria durante infusão, febre, neuropatia progressiva, dor/edema no local IV ou sinais de infeccao. Explicar que a formulacao contem alcool e veiculo especifico.",
+    "clinicalPearls": "Paclitaxel convencional e paclitaxel ligado a albumina NÃO sao intercambiaveis. A hepatopatia exige tabela diferente para 3 h versus 24 h.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO: reação de hipersensibilidade, solvente com polyoxyl/alcool, neutropenia, neuropatia, erro de formulacao. CALCULO PEDIATRICO BLOQUEADO.",
+    "alerts": "Escopo exclusivo paclitaxel convencional 6 mg/mL IV. Não usar para formulacao albumin-bound/nab-paclitaxel.",
+    "references": [
+      "DailyMed - Paclitaxel Injection USP - full prescribing information | Effective 11/07/2026 | EUA; paclitaxel convencional 6 mg/mL com polyoxyl 35 castor oil e alcool; nao albumina-bound | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fbd32bd2-9685-41cb-bee2-730a45526b65"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fbd32bd2-9685-41cb-bee2-730a45526b65"
+  },
+  "es": {
+    "name": "Paclitaxel convencional IV",
+    "class": "Antineoplasico taxano; agente estabilizador de microtubulos.",
+    "pharmacologicClass": "Taxano antimicrotubular.",
+    "mechanism": "Promueve el ensamblaje de microtubulos a partir de dimeros de tubulina y estabiliza los microtubulos frente a la despolimerizacion, alterando la dinamica mitotica y otras funciones celulares dependientes de microtubulos.",
+    "pharmacodynamics": "Citotoxicidad y mielosupresion/neuropatia se relacionan con exposición y esquema de infusión. Las reacciones de hipersensibilidad también se relacionan con el vehiculo polyoxyl 35 castor oil y requieren premedicacion.",
+    "pharmacokinetics": "Farmacocinética parcialmente no lineal en el rango estudiado; metabolismo principalmente hepático (CYP2C8/CYP3A4) y eliminación predominantemente no renal. La disfuncion hepática puede aumentar toxicidad y exige tabla especifica según bilirrubina/transaminasas y duracion de infusión.",
+    "indications": "Cancer de ovario, cáncer de mama, carcinoma pulmonar no microcitico y sarcoma de Kaposi asociado a SIDA, en los escenarios rotulados.",
+    "commercialNames": "El prospecto consultado es generico Teva. No se validaron marcas AR/BR.",
+    "presentation": "Concentrado inyectable para infusión IV convencional.",
+    "presentations": "Solución 6 mg/mL en el producto consultado; contiene polyoxyl 35 castor oil y alcohol deshidratado. No corresponde a paclitaxel unido a albumina.",
+    "dose": "Ovario 1a linea: 175 mg/m2 IV en 3 h seguido de cisplatino 75 mg/m2, o 135 mg/m2 IV en 24 h seguido de cisplatino 75 mg/m2, cada 3 semanas. Ovario previamente tratado: 135 o 175 mg/m2 IV en 3 h cada 3 semanas. Mama adyuvante ganglio positivo: 175 mg/m2 IV en 3 h cada 3 semanas por 4 cursos tras quimioterapia con doxorrubicina. Otros escenarios (mama metastasico, CPNM, Kaposi) tienen esquemas propios en el PI.",
+    "pediatricDose": "Seguridad y eficacia no establecidas en pediatria. Un estudio pediátrico con dosis muy altas presento toxicidad del SNC posiblemente relacionada con el etanol del vehiculo; no usar esos datos como posologia.",
+    "renalDose": "",
+    "hepaticDose": "El ajuste depende de duracion de infusión, transaminasas y bilirrubina. Ejemplo 3 h: bilirrubina <=1,25xLSN y transaminasas <10xLSN: 175 mg/m2; bilirrubina 1,26-2xLSN: 135 mg/m2; 2,01-5xLSN: 90 mg/m2; transaminasas >=10xLSN o bilirrubina >5xLSN: no recomendado. Para 24 h la tabla es diferente y debe aplicarse por separado.",
+    "commonAdverseEffects": "Mielosupresion/neutropenia, neuropatia periferica, alopecia, artralgia/mialgia, nauseas/vomitos y reacciones de hipersensibilidad son frecuentes y dependen del esquema.",
+    "dangerousAdverseEffects": "Reacciones de hipersensibilidad grave/anafilaxia pese a premedicacion; neutropenia grave/infeccion; neuropatia grave; trastornos de conduccion cardíaca; hepatotoxicidad y necrosis/fibrosis por extravasacion.",
+    "adverseEffects": "Pueden ocurrir hipotension/bradicardia, mucositis, diarrea, astenia, rash, cambios ungueales y reacciones en el sitio de inyeccion.",
+    "contraindications": "Hipersensibilidad previa a paclitaxel o a fármacos formulados con polyoxyl 35 castor oil. No usar en tumores solidos con neutrofilos basales <1.500/mm3 o Kaposi con <1.000/mm3.",
+    "interactions": "La secuencia con cisplatino importa: administrar paclitaxel antes del cisplatino. Inhibidores/inductores de CYP2C8/CYP3A4 pueden alterar exposición; revisar concomitantes.",
+    "monitoring": "Hemograma antes de cada ciclo y durante según protocolo; neuropatia, hipersensibilidad durante infusión, signos vitales, función hepática y sitio IV. Monitorización cardíaca si aparece trastorno de conduccion significativo.",
+    "administration": "Solo IV por infusión, tras premedicacion para hipersensibilidad. Usar equipo adecuado y filtro en linea con membrana <=0,22 micras. Evitar contacto del concentrado sin diluir con PVC plastificado.",
+    "preparation": "Diluir en NaCl 0,9%, dextrosa 5%, dextrosa 5%/NaCl 0,9% o dextrosa 5% en Ringer a concentración final 0,3-1,2 mg/mL. Usar recipientes/equipos sin PVC plastificado cuando lo indique el PI.",
+    "infusionProtocol": "La duracion depende del esquema: 3 h o 24 h en varios escenarios rotulados. Todos los pacientes deben recibir premedicacion anti-hipersensibilidad; el PI ejemplifica dexametasona + anti-H1 + anti-H2. No trasladar el esquema de premedicacion sin validar disponibilidad/protocolo local.",
+    "pregnancy": "Puede causar dano fetal; indicar evitar embarazo durante terapia y seguir asesoramiento reproductivo del PI.",
+    "lactation": "El PI recomienda suspender la lactancia durante el tratamiento con paclitaxel convencional.",
+    "specialPopulations": "Adultos mayores presentaron mayor frecuencia de mielosupresion/neuropatia o eventos cardiovasculares en algunos estudios. La hepatopatia exige tabla según bilirrubina/transaminasas y duracion de infusión.",
+    "patientEducation": "Comunicar disnea/urticaria durante infusión, fiebre, neuropatia progresiva, dolor/edema en sitio IV o signos de infeccion. Explicar que la formulacion contiene alcohol y vehiculo especifico.",
+    "clinicalPearls": "Paclitaxel convencional y paclitaxel unido a albumina NO son intercambiables. La hepatopatia exige tabla diferente para 3 h versus 24 h.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO: reacción de hipersensibilidad, solvente con polyoxyl/alcohol, neutropenia, neuropatia, error de formulacion. CALCULO PEDIATRICO BLOQUEADO.",
+    "alerts": "Alcance exclusivo paclitaxel convencional 6 mg/mL IV. No usar para formulacion albumin-bound/nab-paclitaxel.",
+    "references": [
+      "DailyMed - Paclitaxel Injection USP - full prescribing information | Effective 11/07/2026 | EUA; paclitaxel convencional 6 mg/mL com polyoxyl 35 castor oil e alcool; nao albumina-bound | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fbd32bd2-9685-41cb-bee2-730a45526b65"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fbd32bd2-9685-41cb-bee2-730a45526b65"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Paclitaxel convencional IV",
+    "es": "Paclitaxel convencional IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "paclitaxel.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "084",
+    "approvedSha256": "0136dd7a2e35a3b2f33b1c49ad78b4f0236e09d123587c029b65a6175baff4a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "1ea00c47340a6516fcb13e6dd134d5fac5f78760ab4141f18cfef4a825692d2b",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_084_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": "084",
+      "review_result": "APROVADO INTEGRALMENTE",
+      "items": [
+        {
+          "id": "capecitabina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "doxorrubicina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "fluorouracila",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "imatinibe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "leuprorrelina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "paclitaxel",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "tamoxifeno",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "trastuzumabe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "vincristina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "alizaprida",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        }
+      ]
+    },
+    "packageRecordMetadata": {
+      "ID": "paclitaxel",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. NEW_ENTRY_NO_LEGACY_BASELINE. Revisao medica: Dra Ariani, 20-09-2026. Resultado: APROVADO INTEGRALMENTE. Excecoes: nenhuma informada. Integracao tecnica/publicacao nao executadas neste pacote; handoff destinado ao Codex."
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

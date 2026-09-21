@@ -1,0 +1,366 @@
+{
+  "id": "nortriptilina_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "nortriptilina_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Nortriptilina cloridrato - comprimido revestido",
+    "class": "Antidepressivo triciclico",
+    "pharmacologicClass": "Inibidor de recaptação de noradrenalina e serotonina com efeitos anticolinergicos variaveis",
+    "mechanism": "Inibe recaptação de monoaminas e interage com receptores muscarinicos, histaminicos e alfa-adrenergicos.",
+    "pharmacodynamics": "Beneficio antidepressivo e gradual; sedacao, anticolinergia, hipotensao e efeitos cardiacos podem ocorrer antes.",
+    "pharmacokinetics": "Metabolizada hepaticamente incluindo CYP2D6; metabolizadores lentos podem ter niveis altos. Monitorizacao plasmatica recomendada >100 mg/dia.",
+    "indications": "Episodios depressivos maiores em adultos.",
+    "commercialNames": "Fonte UK: Nortriptyline 10 mg Film-Coated Tablets; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimido revestido VO.",
+    "presentations": "10 mg na fonte principal; outras forcas existem em produtos especificos.",
+    "dose": "Adultos: usual 25 mg 3-4x/dia; pode iniciar 10 mg 3-4x/dia. Total diario pode ser 1x/dia a noite. >100 mg/dia: monitorar nivel 50-150 ng/mL. >150 mg/dia nao recomendado.",
+    "pediatricDose": "Uso pediatrico automatico bloqueado; indicacao nao estabelecida nesta fonte.",
+    "renalDose": "Sem algoritmo numerico especifico; cautela e monitorizacao.",
+    "hepaticDose": "Metabolismo hepatico; titular cautelosamente; sem algoritmo numerico universal.",
+    "commonAdverseEffects": "Boca seca, constipacao, visao turva, retencao urinaria, sonolencia, tontura e hipotensao ortostatica.",
+    "dangerousAdverseEffects": "Arritmias, bloqueios de conducao, convulsoes, toxicidade grave em overdose e risco suicida.",
+    "adverseEffects": "Sudorese, tremor, ganho de peso, disfuncao sexual e alteracoes cognitivas.",
+    "contraindications": "Hipersensibilidade; IMAO; arritmias/bloqueios relevantes e fase aguda pos-IAM conforme SmPC.",
+    "interactions": "IMAO/serotoninergicos aumentam risco; CYP2D6 pode elevar niveis; alcool aumenta sedacao; farmacos QT aumentam risco.",
+    "monitoring": "Resposta, ideacao suicida, PA/ortostatismo, anticolinergia e ECG em pacientes de risco/doses altas.",
+    "administration": "VO em doses divididas ou dose unica noturna.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Usar apos avaliacao beneficio-risco; exposicao tardia pode causar sintomas neonatais.",
+    "lactation": "Pode passar ao leite; monitorar lactente se usada.",
+    "specialPopulations": "Idosos: fonte sugere 30-50 mg/dia, iniciando 10-20 mg/dia, com cautela cardiaca.",
+    "patientEducation": "Pode causar sedacao/hipotensao; evitar alcool e retirada abrupta; procurar atendimento por sincope, palpitacao, convulsao ou ideacao suicida.",
+    "clinicalPearls": ">100 mg/dia requer monitorizacao plasmatica; 150 mg/dia nao e alvo habitual.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "TCA; TOXICIDADE_OVERDOSE; ANTICOLINERGICO; ARRITMIA; SUICIDALIDADE.",
+    "alerts": "Fonte e de comprimido UK, evitando transposicao de capsulas para este ID.",
+    "references": [
+      "UK eMC - Nortriptyline 10 mg Film-Coated Tablets, SmPC. https://www.medicines.org.uk/emc/product/13516/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/13516/smpc"
+  },
+  "es": {
+    "name": "Nortriptilina clorhidrato - comprimido recubierto",
+    "class": "Antidepresivo triciclico",
+    "pharmacologicClass": "Inhibidor de recaptacion de noradrenalina y serotonina con efectos anticolinergicos variables",
+    "mechanism": "Inhibe recaptacion de monoaminas e interactua con receptores muscarinicos, histaminicos y alfa-adrenergicos.",
+    "pharmacodynamics": "El beneficio antidepresivo es gradual; sedacion, anticolinergia, hipotension y efectos cardiacos pueden aparecer antes.",
+    "pharmacokinetics": "Metabolizada hepaticamente incluyendo CYP2D6; metabolizadores lentos pueden tener niveles altos. Monitorizacion plasmatica recomendada >100 mg/dia.",
+    "indications": "Episodios depresivos mayores en adultos.",
+    "commercialNames": "Fuente UK: Nortriptyline 10 mg Film-Coated Tablets; marcas BR/AR no verificadas.",
+    "presentation": "Comprimido recubierto VO.",
+    "presentations": "10 mg en fuente principal; otras potencias existen en productos especificos.",
+    "dose": "Adultos: usual 25 mg 3-4 veces/dia; puede iniciar 10 mg 3-4 veces/dia. Total diario puede darse 1 vez/dia de noche. >100 mg/dia: monitorizar nivel 50-150 ng/mL. >150 mg/dia no recomendado.",
+    "pediatricDose": "Uso pediatrico automatico bloqueado; indicacion no establecida en esta fuente.",
+    "renalDose": "Sin algoritmo numerico especifico; precaucion y monitorizacion.",
+    "hepaticDose": "Metabolismo hepatico; titular con precaucion; sin algoritmo numerico universal.",
+    "commonAdverseEffects": "Boca seca, estrenimiento, vision borrosa, retencion urinaria, somnolencia, mareo e hipotension ortostatica.",
+    "dangerousAdverseEffects": "Arritmias, bloqueos de conduccion, convulsiones, toxicidad grave en sobredosis y riesgo suicida.",
+    "adverseEffects": "Sudoracion, temblor, aumento de peso, disfuncion sexual y alteraciones cognitivas.",
+    "contraindications": "Hipersensibilidad; IMAO; arritmias/bloqueos relevantes y fase aguda post-IAM segun SmPC.",
+    "interactions": "IMAO/serotoninergicos aumentan riesgo; CYP2D6 puede elevar niveles; alcohol aumenta sedacion; farmacos QT aumentan riesgo.",
+    "monitoring": "Respuesta, ideacion suicida, PA/ortostatismo, anticolinergia y ECG en pacientes de riesgo/dosis altas.",
+    "administration": "VO en dosis divididas o dosis unica nocturna.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Usar tras evaluacion beneficio-riesgo; exposicion tardia puede causar sintomas neonatales.",
+    "lactation": "Puede pasar a leche; monitorizar lactante si se usa.",
+    "specialPopulations": "Mayores: fuente sugiere 30-50 mg/dia, iniciando 10-20 mg/dia, con precaucion cardiaca.",
+    "patientEducation": "Puede causar sedacion/hipotension; evitar alcohol y retirada brusca; consultar por sincope, palpitacion, convulsion o ideacion suicida.",
+    "clinicalPearls": ">100 mg/dia requiere monitorizacion plasmatica; 150 mg/dia no es objetivo habitual.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "TCA; TOXICIDAD_SOBREDOSIS; ANTICOLINERGICO; ARRITMIA; SUICIDALIDAD.",
+    "alerts": "La fuente es de comprimido UK, evitando trasladar capsulas a este ID.",
+    "references": [
+      "UK eMC - Nortriptyline 10 mg Film-Coated Tablets, SmPC. https://www.medicines.org.uk/emc/product/13516/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/13516/smpc"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Nortriptilina cloridrato - comprimido revestido",
+    "es": "Nortriptilina clorhidrato - comprimido recubierto"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "nortriptilina_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "nortriptilina_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "NORTRIPTILINA COMPRIMIDO REVESTIDO VO - UK",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

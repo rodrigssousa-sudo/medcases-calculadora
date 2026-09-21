@@ -1,0 +1,367 @@
+{
+  "id": "amitriptilina_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "amitriptilina_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Amitriptilina cloridrato - comprimido oral",
+    "class": "Antidepressivo triciclico",
+    "pharmacologicClass": "Inibidor de recaptação de noradrenalina e serotonina com efeitos anticolinergicos variaveis",
+    "mechanism": "Inibe recaptação de monoaminas e interage com receptores muscarinicos, histaminicos e alfa-adrenergicos.",
+    "pharmacodynamics": "Beneficio antidepressivo e gradual; sedacao, anticolinergia, hipotensao e efeitos cardiacos podem ocorrer antes.",
+    "pharmacokinetics": "Metabolismo hepatico extenso; exposicao varia com metabolismo e interacoes.",
+    "indications": "Alivio dos sintomas de depressao.",
+    "commercialNames": "Fonte generica EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "10, 25, 50, 75, 100 e 150 mg.",
+    "dose": "Ambulatorio: 75 mg/dia divididos, podendo aumentar ate 150 mg/dia; alternativa 50-100 mg ao deitar, titulado ate 150 mg/dia. Hospitalizados: 100 mg/dia inicialmente, podendo 200 mg/dia; poucos pacientes ate 300 mg/dia sob supervisao.",
+    "pediatricDose": "Nao aprovada para pediatria no rotulo consultado. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Sem algoritmo numerico especifico; iniciar baixo e monitorar.",
+    "hepaticDose": "Metabolismo hepatico; usar cautela e titular lentamente. Sem tabela numerica.",
+    "commonAdverseEffects": "Boca seca, constipacao, visao turva, retencao urinaria, sonolencia, tontura e hipotensao ortostatica.",
+    "dangerousAdverseEffects": "Arritmias, bloqueios de conducao, convulsoes, toxicidade grave em overdose e risco suicida.",
+    "adverseEffects": "Sudorese, tremor, ganho de peso, disfuncao sexual e alteracoes cognitivas.",
+    "contraindications": "Hipersensibilidade; IMAO concomitante/intervalo de seguranca; nao iniciar na fase aguda pos-IAM.",
+    "interactions": "IMAO contraindicado. Alcool e depressores aumentam sedacao; anticolinergicos e farmacos que alteram conducao/QT aumentam risco; CYP2D6 pode elevar niveis.",
+    "monitoring": "Resposta, ideacao suicida, PA/ortostatismo, anticolinergia e ECG em pacientes de risco/doses altas.",
+    "administration": "VO; iniciar baixo e aumentar gradualmente. Doses sedativas maiores podem ser concentradas a noite.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados adequados limitados; usar apos avaliacao beneficio-risco.",
+    "lactation": "Pode passar ao leite; avaliar necessidade materna e lactente.",
+    "specialPopulations": "Idosos toleram doses menores e tem maior risco de anticolinergia, quedas e arritmias.",
+    "patientEducation": "Pode causar sedacao/hipotensao; evitar alcool e retirada abrupta; procurar atendimento por sincope, palpitacao, convulsao ou ideacao suicida.",
+    "clinicalPearls": "Ate 300 mg/dia pertence a pequena minoria de hospitalizados; nao e maximo ambulatorial universal.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "TCA; TOXICIDADE_OVERDOSE; ANTICOLINERGICO; ARRITMIA; SUICIDALIDADE.",
+    "alerts": "Alta toxicidade em overdose; nao automatizar doses hospitalares.",
+    "references": [
+      "DailyMed/NLM EUA - Amitriptyline tablets, atualizado 08-09-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+  },
+  "es": {
+    "name": "Amitriptilina clorhidrato - comprimido oral",
+    "class": "Antidepresivo triciclico",
+    "pharmacologicClass": "Inhibidor de recaptacion de noradrenalina y serotonina con efectos anticolinergicos variables",
+    "mechanism": "Inhibe recaptacion de monoaminas e interactua con receptores muscarinicos, histaminicos y alfa-adrenergicos.",
+    "pharmacodynamics": "El beneficio antidepresivo es gradual; sedacion, anticolinergia, hipotension y efectos cardiacos pueden aparecer antes.",
+    "pharmacokinetics": "Metabolismo hepatico extenso; exposicion varia con metabolismo e interacciones.",
+    "indications": "Alivio de sintomas de depresion.",
+    "commercialNames": "Fuente generica EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "10, 25, 50, 75, 100 y 150 mg.",
+    "dose": "Ambulatorio: 75 mg/dia divididos, pudiendo aumentar hasta 150 mg/dia; alternativa 50-100 mg al acostarse, titulado hasta 150 mg/dia. Hospitalizados: 100 mg/dia inicialmente, pudiendo 200 mg/dia; pocos pacientes hasta 300 mg/dia bajo supervision.",
+    "pediatricDose": "No aprobada para pediatria en el rotulo consultado. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Sin algoritmo numerico especifico; iniciar bajo y monitorizar.",
+    "hepaticDose": "Metabolismo hepatico; usar precaucion y titular lentamente. Sin tabla numerica.",
+    "commonAdverseEffects": "Boca seca, estrenimiento, vision borrosa, retencion urinaria, somnolencia, mareo e hipotension ortostatica.",
+    "dangerousAdverseEffects": "Arritmias, bloqueos de conduccion, convulsiones, toxicidad grave en sobredosis y riesgo suicida.",
+    "adverseEffects": "Sudoracion, temblor, aumento de peso, disfuncion sexual y alteraciones cognitivas.",
+    "contraindications": "Hipersensibilidad; IMAO concomitante/intervalo de seguridad; no iniciar en fase aguda post-IAM.",
+    "interactions": "IMAO contraindicado. Alcohol y depresores aumentan sedacion; anticolinergicos y farmacos que alteran conduccion/QT aumentan riesgo; CYP2D6 puede elevar niveles.",
+    "monitoring": "Respuesta, ideacion suicida, PA/ortostatismo, anticolinergia y ECG en pacientes de riesgo/dosis altas.",
+    "administration": "VO; iniciar bajo y aumentar gradualmente. Dosis sedantes mayores pueden concentrarse de noche.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos adecuados limitados; usar tras evaluacion beneficio-riesgo.",
+    "lactation": "Puede pasar a leche; valorar necesidad materna y lactante.",
+    "specialPopulations": "Mayores toleran dosis menores y tienen mayor riesgo de anticolinergia, caidas y arritmias.",
+    "patientEducation": "Puede causar sedacion/hipotension; evitar alcohol y retirada brusca; consultar por sincope, palpitacion, convulsion o ideacion suicida.",
+    "clinicalPearls": "Hasta 300 mg/dia corresponde a una pequena minoria de hospitalizados; no es maximo ambulatorio universal.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "TCA; TOXICIDAD_SOBREDOSIS; ANTICOLINERGICO; ARRITMIA; SUICIDALIDAD.",
+    "alerts": "Alta toxicidad en sobredosis; no automatizar dosis hospitalarias.",
+    "references": [
+      "DailyMed/NLM EUA - Amitriptyline tablets, atualizado 08-09-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Amitriptilina cloridrato - comprimido oral",
+    "es": "Amitriptilina clorhidrato - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "amitriptilina_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "amitriptilina_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "AMITRIPTILINA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "id": "artemeter_lumefantrina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "artemeter_lumefantrina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Artemeter + lumefantrina 20 mg/120 mg - Coartem comprimido",
+    "class": "Antimalarico combinado",
+    "pharmacologicClass": "Derivado de artemisinina + aril-aminoalcool antimalarico",
+    "mechanism": "Artemeter e seu metabolito DHA produzem atividade rapida contra parasitas; lumefantrina contribui com atividade de eliminacao mais prolongada. O mecanismo completo nao e reduzido a um unico alvo.",
+    "pharmacodynamics": "A combinacao reduz parasitemia de P. falciparum sensivel; lumefantrina pode prolongar QT em exposicoes relevantes.",
+    "pharmacokinetics": "Absorcao de lumefantrina aumenta com alimento/gordura; metabolizacao envolve CYP3A4, tornando indutores fortes clinicamente importantes.",
+    "indications": "Tratamento de malaria aguda nao complicada por P. falciparum em pacientes >=2 meses e >=5 kg.",
+    "commercialNames": "Coartem, EUA. Disponibilidade BR/AR nao verificada.",
+    "presentation": "Comprimido VO de artemeter 20 mg + lumefantrina 120 mg.",
+    "presentations": "20 mg/120 mg por comprimido.",
+    "dose": ">=35 kg: 4 comprimidos dose inicial, 4 comprimidos apos 8 h e depois 4 comprimidos 2x/dia por 2 dias; total 6 doses/24 comprimidos.",
+    "pediatricDose": "5 a <15 kg: 1 comprimido por dose; 15 a <25 kg: 2; 25 a <35 kg: 3; >=35 kg: 4. Para todos: dose inicial, repetir em 8 h, depois 2x/dia por 2 dias; 6 doses totais. Idade minima do rotulo: 2 meses e peso minimo 5 kg.",
+    "renalDose": "Nao e recomendado ajuste para insuficiencia renal leve/moderada; experiencia em grave e limitada. Nao ha excrecao renal significativa dos componentes principais.",
+    "hepaticDose": "Sem ajuste especifico em comprometimento hepatico leve/moderado; dados em grave sao limitados.",
+    "commonAdverseEffects": "Cefaleia, tontura, anorexia, astenia, artralgia/mialgia e sintomas GI podem ocorrer.",
+    "dangerousAdverseEffects": "QT prolongado e arritmias em suscetiveis; falha terapeutica se absorcao for inadequada ou houver resistencia.",
+    "adverseEffects": "Nausea, vomitos, dor abdominal, palpitações e alteracoes ECG podem ocorrer.",
+    "contraindications": "Uso concomitante de indutores fortes CYP3A4 e contraindicado no rotulo; hipersensibilidade ao produto.",
+    "interactions": "Indutores fortes CYP3A4 reduzem exposicao; fármacos que prolongam QT exigem cautela; alimento aumenta absorcao de lumefantrina.",
+    "monitoring": "Resposta clinica/parasitologica, vomitos apos dose, ECG em pacientes de risco e sinais de malaria grave.",
+    "administration": "Administrar com alimento. Se vomitar em 1-2 h, repetir a dose; se vomitar a dose repetida, usar antimalarico alternativo.",
+    "preparation": "Comprimido pronto para uso; qualquer manipulacao para crianca deve seguir instrucoes especificas do produto.",
+    "infusionProtocol": "NAO APLICAVEL a formulacao oral.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Nao indicado para malaria grave/complicada nem para profilaxia. Pacientes com risco de QT exigem cautela adicional.",
+    "patientEducation": "Completar as 6 doses; tomar com alimento; procurar urgencia se piora, sinais de malaria grave ou vomitos persistentes.",
+    "clinicalPearls": "O esquema e por faixa de peso, nao simplesmente mg/kg. O mesmo numero de comprimidos por dose e repetido em um total de 6 doses.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "MALARIA_NAO_COMPLICADA; 6_DOSES_3_DIAS; CYP3A4; QT; ALIMENTO_IMPORTANTE.",
+    "alerts": "Nao usar para malaria grave nem profilaxia. AUTOMACAO exige idade >=2 meses e peso >=5 kg.",
+    "references": [
+      "DailyMed/NLM EUA - COARTEM, atualizado 26-03-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7866ec19-dfac-47d4-a53f-511a12643cbf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7866ec19-dfac-47d4-a53f-511a12643cbf"
+  },
+  "es": {
+    "name": "Artemeter + lumefantrina 20 mg/120 mg - Coartem comprimido",
+    "class": "Antimalarico combinado",
+    "pharmacologicClass": "Derivado de artemisinina + aril-aminoalcohol antimalarico",
+    "mechanism": "Artemeter y su metabolito DHA producen actividad rapida contra parasitos; lumefantrina aporta actividad de eliminacion mas prolongada. El mecanismo completo no se reduce a un unico blanco.",
+    "pharmacodynamics": "La combinacion reduce parasitemia de P. falciparum susceptible; lumefantrina puede prolongar QT con exposiciones relevantes.",
+    "pharmacokinetics": "La absorcion de lumefantrina aumenta con comida/grasa; metabolismo incluye CYP3A4, haciendo clinicamente importantes los inductores potentes.",
+    "indications": "Tratamiento de malaria aguda no complicada por P. falciparum en pacientes >=2 meses y >=5 kg.",
+    "commercialNames": "Coartem, EE.UU. Disponibilidad BR/AR no verificada.",
+    "presentation": "Comprimido VO de artemeter 20 mg + lumefantrina 120 mg.",
+    "presentations": "20 mg/120 mg por comprimido.",
+    "dose": ">=35 kg: 4 comprimidos dosis inicial, 4 comprimidos tras 8 h y luego 4 comprimidos 2 veces/dia por 2 dias; total 6 dosis/24 comprimidos.",
+    "pediatricDose": "5 a <15 kg: 1 comprimido por dosis; 15 a <25 kg: 2; 25 a <35 kg: 3; >=35 kg: 4. Para todos: dosis inicial, repetir a las 8 h, luego 2 veces/dia por 2 dias; 6 dosis totales. Edad minima del rotulo: 2 meses y peso minimo 5 kg.",
+    "renalDose": "No se recomienda ajuste para insuficiencia renal leve/moderada; experiencia en grave limitada. No hay excrecion renal significativa de componentes principales.",
+    "hepaticDose": "Sin ajuste especifico en compromiso hepatico leve/moderado; datos en grave limitados.",
+    "commonAdverseEffects": "Pueden ocurrir cefalea, mareo, anorexia, astenia, artralgia/mialgia y sintomas GI.",
+    "dangerousAdverseEffects": "QT prolongado y arritmias en susceptibles; fracaso terapeutico si absorcion inadecuada o resistencia.",
+    "adverseEffects": "Pueden ocurrir nausea, vomitos, dolor abdominal, palpitaciones y alteraciones ECG.",
+    "contraindications": "Uso concomitante de inductores potentes CYP3A4 esta contraindicado en rotulo; hipersensibilidad al producto.",
+    "interactions": "Inductores potentes CYP3A4 reducen exposicion; farmacos que prolongan QT requieren precaucion; comida aumenta absorcion de lumefantrina.",
+    "monitoring": "Respuesta clinica/parasitologica, vomitos tras dosis, ECG en pacientes de riesgo y signos de malaria grave.",
+    "administration": "Administrar con comida. Si vomita en 1-2 h, repetir la dosis; si vomita la dosis repetida, usar antimalarico alternativo.",
+    "preparation": "Comprimido listo para usar; cualquier manipulacion para niño debe seguir instrucciones especificas del producto.",
+    "infusionProtocol": "NO APLICA a formulacion oral.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "No indicado para malaria grave/complicada ni profilaxis. Pacientes con riesgo de QT requieren precaucion adicional.",
+    "patientEducation": "Completar las 6 dosis; tomar con comida; buscar urgencias si empeora, hay signos de malaria grave o vomitos persistentes.",
+    "clinicalPearls": "La pauta es por banda de peso, no simplemente mg/kg. El mismo numero de comprimidos por dosis se repite en un total de 6 dosis.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "MALARIA_NO_COMPLICADA; 6_DOSIS_3_DIAS; CYP3A4; QT; COMIDA_IMPORTANTE.",
+    "alerts": "No usar para malaria grave ni profilaxis. AUTOMATIZACION exige edad >=2 meses y peso >=5 kg.",
+    "references": [
+      "DailyMed/NLM EUA - COARTEM, atualizado 26-03-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7866ec19-dfac-47d4-a53f-511a12643cbf"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7866ec19-dfac-47d4-a53f-511a12643cbf"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Artemeter + lumefantrina 20 mg/120 mg - Coartem comprimido",
+    "es": "Artemeter + lumefantrina 20 mg/120 mg - Coartem comprimido"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "artemeter_lumefantrina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "100",
+    "approvedSha256": "0570f083fc313d61727d1e5380c90e3280966a497e8006cf58d5d82eec68ef31",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "e0c21a75ecd6485bdc812e20b898fa2ccd11738d322cde54688d8637a852a4d9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_100_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "antimoniato_de_meglumina",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO",
+          "CONCENTRACAO_SB5_DEVE_SER_CONFIRMADA",
+          "ESCOPO_VISCERAL_PKDL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "artemeter_lumefantrina",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "PROFILAXIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "baloxavir_marboxil",
+        "bloqueios_clinicos": [
+          "FORMULACAO_PESO_OBRIGATORIOS",
+          "IDADE_MENOR_5_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "benznidazol",
+        "bloqueios_clinicos": [
+          "DOSE_ADULTO_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA_PESO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "bezlotoxumabe",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_1_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "CHF_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "capreomicina",
+        "bloqueios_clinicos": [
+          "ATIVACAO_CLINICA_BLOQUEADA",
+          "CALCULO_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cicloserina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "TDM_RECOMENDADO_EM_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cidofovir",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "USOS_OFF_LABEL_BLOQUEADOS",
+          "RENAL_LIMIARES_OBRIGATORIOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clofazimina",
+        "bloqueios_clinicos": [
+          "ESCOPO_LEPRA_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA_ATE_TABELA_WHO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cloroquina",
+        "bloqueios_clinicos": [
+          "MALARIA_COMPLICADA_BLOQUEADA",
+          "REGIAO_RESISTENTE_BLOQUEADA",
+          "SAL_BASE_CONVERSAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "artemeter_lumefantrina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "COARTEM 20/120 mg comprimido VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "MALARIA_GRAVE_BLOQUEADA",
+        "PROFILAXIA_BLOQUEADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "100",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "100",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

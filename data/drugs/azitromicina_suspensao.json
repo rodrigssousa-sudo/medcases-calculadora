@@ -1,0 +1,478 @@
+{
+  "id": "azitromicina_suspensao",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "azitromicina_suspensao"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Azitromicina — suspensão oral",
+    "class": "Antibacteriano macrolídeo/azalídeo",
+    "pharmacologicClass": "Inibidor da síntese proteica bacteriana, subunidade 50S",
+    "mechanism": "Liga-se ao rRNA 23S da subunidade ribossomal 50S e inibe síntese de proteínas.",
+    "pharmacodynamics": "Exposição tecidual prolongada permite esquemas curtos; resistência macrolídica varia por patógeno e local.",
+    "pharmacokinetics": "VO, extensa distribuição tecidual e meia-vida terminal prolongada; exposição aumenta em insuficiência renal grave.",
+    "indications": "EUA: múltiplas infecções respiratórias/pele e algumas IST em adultos; em pediatria inclui otite média, pneumonia adquirida na comunidade e faringite/tonsilite em faixas etárias do rótulo.",
+    "commercialNames": "Fonte genérica DailyMed EUA; marcas BR/AR não verificadas.",
+    "presentation": "Pó para suspensão oral reconstituída.",
+    "presentations": "100 mg/5 mL e 200 mg/5 mL após reconstituição.",
+    "dose": "Adultos: regimes variam por indicação; não há dose universal. Esta ficha não libera cálculo adulto automático por não mapear todas as indicações.",
+    "pediatricDose": "Otite média: 30 mg/kg dose única, OU 10 mg/kg/dia por 3 dias conforme esquema do rótulo. Sinusite bacteriana aguda: 10 mg/kg/dia por 3 dias; efetividade de 1 ou 5 dias não estabelecida nessa indicação. Faringite/tonsilite: 12 mg/kg 1x/dia por 5 dias. AUTOMATABLE=NO até selecionar indicação, idade mínima e concentração.",
+    "renalDose": "Rótulo não fornece redução numérica de rotina; exposição aumenta em insuficiência renal grave (GFR <10 mL/min), portanto usar cautela e não automatizar ajuste.",
+    "hepaticDose": "Farmacocinética na insuficiência hepática não está bem estabelecida; hepatotoxicidade é advertência importante.",
+    "commonAdverseEffects": "Diarreia/fezes amolecidas, náusea, dor abdominal e vômitos.",
+    "dangerousAdverseEffects": "Hepatotoxicidade, QT prolongado/torsades, hipersensibilidade grave/SCAR, C. difficile e estenose hipertrófica de piloro em lactentes como sinal de alerta pós-exposição.",
+    "adverseEffects": "Cefaleia, tontura e alterações laboratoriais podem ocorrer.",
+    "contraindications": "Hipersensibilidade a azitromicina/eritromicina/macrolídeos; história de icterícia colestática/disfunção hepática associada à azitromicina.",
+    "interactions": "Cautela com outros fármacos que prolongam QT; interação com varfarina/anticoagulantes, digoxina e alguns antirretrovirais deve ser avaliada conforme rótulo.",
+    "monitoring": "Resposta clínica; sintomas hepáticos, QT em pacientes de risco e diarreia associada a antibiótico.",
+    "administration": "VO; agitar antes de cada uso. Alguns esquemas podem ser administrados com ou sem alimento conforme formulação; seguir rótulo do produto.",
+    "preparation": "Reconstituir com volume de água específico do frasco; agitar bem. Após mistura, conservar 5–30 °C e usar em até 10 dias; descartar após o curso.",
+    "infusionProtocol": "Não aplicável à suspensão oral; IV requer ficha própria.",
+    "pregnancy": "Usar quando clinicamente necessário após avaliação benefício-risco; esta ficha não estabelece ajuste específico.",
+    "lactation": "Azitromicina pode passar para o leite; observar possíveis efeitos GI/sensibilização no lactente e avaliar benefício-risco.",
+    "specialPopulations": "Risco de QT aumentado em idosos e pacientes com bradicardia, distúrbios eletrolíticos ou fármacos concomitantes que prolongam QT.",
+    "patientEducation": "Usar apenas para infecção bacteriana comprovada ou fortemente suspeita e considerar cultura/sensibilidade e resistência local. Medir em mL, agitar e procurar avaliação por icterícia, síncope/palpitacões ou reação alérgica.",
+    "clinicalPearls": "Não misturar os esquemas 30 mg/kg dose única, 10 mg/kg/dia x3 e 12 mg/kg/dia x5; cada um pertence a indicação específica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "QT_TDP; HEPATOTOXICIDADE; PEDIATRIC_INDICATION_SPECIFIC; CONCENTRATION_SPECIFIC_VOLUME.",
+    "alerts": "Fonte EUA; não inferir registro/disponibilidade BR/AR.",
+    "references": [
+      "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+  },
+  "es": {
+    "name": "Azitromicina — suspensión oral",
+    "class": "Antibacteriano macrólido/azálido",
+    "pharmacologicClass": "Inhibidor de síntesis proteica bacteriana, subunidad 50S",
+    "mechanism": "Se une al rRNA 23S de la subunidad ribosomal 50S e inhibe síntesis proteica.",
+    "pharmacodynamics": "Exposición tisular prolongada permite pautas cortas; resistencia a macrólidos varía por patógeno y región.",
+    "pharmacokinetics": "VO, amplia distribución tisular y semivida terminal prolongada; exposición aumenta en insuficiencia renal grave.",
+    "indications": "EE.UU.: múltiples infecciones respiratorias/piel y algunas ITS en adultos; en pediatría incluye otitis media, neumonía adquirida en la comunidad y faringitis/amigdalitis en edades del rótulo.",
+    "commercialNames": "Fuente genérica DailyMed EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Polvo para suspensión oral reconstituida.",
+    "presentations": "100 mg/5 mL y 200 mg/5 mL después de reconstitución.",
+    "dose": "Adultos: los regímenes varían por indicación; no hay dosis universal. Esta ficha no habilita cálculo adulto automático al no mapear todas las indicaciones.",
+    "pediatricDose": "Otitis media: 30 mg/kg dosis única, O 10 mg/kg/día por 3 días según rótulo. Sinusitis bacteriana aguda: 10 mg/kg/día por 3 días; no establecida eficacia de 1 o 5 días en esa indicación. Faringitis/amigdalitis: 12 mg/kg una vez/día por 5 días. AUTOMATABLE=NO hasta seleccionar indicación, edad mínima y concentración.",
+    "renalDose": "El rótulo no aporta reducción numérica rutinaria; la exposición aumenta en insuficiencia renal grave (GFR <10 mL/min), por lo que usar precaución y no automatizar ajuste.",
+    "hepaticDose": "La farmacocinética en insuficiencia hepática no está bien establecida; hepatotoxicidad es una advertencia importante.",
+    "commonAdverseEffects": "Diarrea/heces blandas, náusea, dolor abdominal y vómitos.",
+    "dangerousAdverseEffects": "Hepatotoxicidad, QT prolongado/torsades, hipersensibilidad grave/SCAR, C. difficile y estenosis hipertrófica de píloro en lactantes como señal de alerta.",
+    "adverseEffects": "Pueden ocurrir cefalea, mareo y alteraciones de laboratorio.",
+    "contraindications": "Hipersensibilidad a azitromicina/eritromicina/macrólidos; antecedente de ictericia colestásica/disfunción hepática asociada a azitromicina.",
+    "interactions": "Precaución con otros fármacos que prolongan QT; evaluar interacción con warfarina/anticoagulantes, digoxina y algunos antirretrovirales según rótulo.",
+    "monitoring": "Respuesta clínica; síntomas hepáticos, QT en pacientes de riesgo y diarrea asociada a antibiótico.",
+    "administration": "VO; agitar antes de cada uso. Algunos regímenes pueden administrarse con o sin alimentos según formulación; seguir rótulo del producto.",
+    "preparation": "Reconstituir con volumen de agua específico; agitar bien. Tras mezclar, conservar 5–30 °C y usar dentro de 10 días; desechar al finalizar.",
+    "infusionProtocol": "No aplica a suspensión oral; IV requiere ficha propia.",
+    "pregnancy": "Usar cuando sea clínicamente necesario tras evaluación beneficio-riesgo; esta ficha no establece ajuste específico.",
+    "lactation": "Azitromicina puede pasar a la leche; observar posibles efectos GI/sensibilización y evaluar beneficio-riesgo.",
+    "specialPopulations": "Riesgo de QT aumentado en mayores y pacientes con bradicardia, trastornos electrolíticos o fármacos concomitantes que prolongan QT.",
+    "patientEducation": "Usar solo para infección bacteriana comprobada o fuertemente sospechada, considerando cultivo/sensibilidad y resistencia local. Medir en mL, agitar y consultar por ictericia, síncope/palpitaciones o reacción alérgica.",
+    "clinicalPearls": "No mezclar los esquemas 30 mg/kg dosis única, 10 mg/kg/día x3 y 12 mg/kg/día x5; cada uno corresponde a una indicación específica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "QT_TDP; HEPATOTOXICIDAD; PEDIATRIA_DEPENDIENTE_DE_INDICACION; VOLUMEN_DEPENDE_CONCENTRACION.",
+    "alerts": "Fuente EE.UU.; no inferir registro/disponibilidad BR/AR.",
+    "references": [
+      "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Azitromicina — suspensão oral",
+    "es": "Azitromicina — suspensión oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "azitromicina_suspensao.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "095",
+    "approvedSha256": "3b6d24e739ab60cbbee9ffb05f82b9cf4afca83c843ea68c35a0c6eb32bd8480",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "2373a97fe3e28c3e696c7e9c2438b112a53c196346384467e90de727515f0cd8",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_095_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "desloratadina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "desloratadina_xarope",
+          "nome_recebido": "Desloratadina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Desloratadine Oral Solution, atualizado 23-10-2025, revisado 07/2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41d5e0d4-6188-847b-e063-6294a90a2e2f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "AJUSTE_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxizina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "hidroxizina_xarope",
+          "nome_recebido": "Hidroxizina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Hydroxyzine Hydrochloride Oral Solution 10 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87d4bbff-0498-4c26-86cb-7ce173afa0b6"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_suspensao",
+          "nome_recebido": "Amoxicilina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_LOGICA_INDICACAO_E_CONCENTRACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_clavulanato_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_clavulanato_suspensao",
+          "nome_recebido": "Amoxicilina + clavulanato suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin and Clavulanate Potassium powder for suspension. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d0aa94-5c32-4fb7-8561-8763810d2847"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CONVERSAO_ML_BLOQUEADA_ATE_SELECAO_DA_RAZAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_FORMULACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "azitromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "azitromicina_suspensao",
+          "nome_recebido": "Azitromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cefalexina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "cefalexina_suspensao",
+          "nome_recebido": "Cefalexina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_E_DIVISAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_15_ANOS_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfametoxazol_trimetoprima_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "sulfametoxazol_trimetoprima_suspensao",
+          "nome_recebido": "Sulfametoxazol + trimetoprima suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO",
+          "GESTACAO_LACTACAO_REQUEREM_AVALIACAO_INDIVIDUAL"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "claritromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "claritromicina_suspensao",
+          "nome_recebido": "Claritromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Clarithromycin for Oral Suspension, atualizado/revisado 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fad1e5a3-59f9-4868-9937-d3b061ab8f00"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "INTERACOES_CYP3A4_ALTO_RISCO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ceftriaxona_pediatrica_im",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "ceftriaxona_pediatrica_im",
+          "nome_recebido": "Ceftriaxona pediátrica IM",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "PREPARACAO_AUTOMATICA_BLOQUEADA",
+          "INFUSAO_IV_BLOQUEADA",
+          "NEONATO_REQUER_TRIAGEM_DE_PREMATURIDADE_BILIRRUBINA_CALCIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "penicilina_benzatina_pediatrica",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "penicilina_benzatina_pediatrica",
+          "nome_recebido": "Penicilina benzatina pediátrica",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Bicillin L-A (penicillin G benzathine), atualizado 21-07-2026, revisado 06/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+            "CDC EUA — STI Treatment Guidelines, Congenital Syphilis, consultado 20-09-2026. https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "VIA_IV_PROIBIDA",
+          "CALCULO_SIFILIS_CONGENITA_BLOQUEADO_ATE_SELECAO_DE_CENARIO",
+          "ADMINISTRACAO_PROFISSIONAL_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "azitromicina_suspensao",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques, resultado APROVADO INTEGRALMENTE, sem excecoes informadas. Bloqueios clinicos granulares do candidato permanecem preservados. Integracao tecnica nao iniciada; publicacao bloqueada.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "azitromicina_suspensao",
+        "nome_recebido": "Azitromicina suspensão",
+        "fontes_consultadas": [
+          "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+        ],
+        "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+        "QT_RISK"
+      ],
+      "CAMPOS_VAZIOS_JUSTIFICADOS": {
+        "guidelineRecommendations": "Sem diretriz independente revisada nesta execução."
+      },
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "PENDENTE",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "095",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "095",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

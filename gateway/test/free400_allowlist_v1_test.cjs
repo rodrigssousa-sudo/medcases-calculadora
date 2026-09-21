@@ -40,7 +40,7 @@ const ids = allowlist.ids;
 assert(Array.isArray(ids), 'allowlist ids must be array');
 assert(ids.length === 400, `allowlist count expected 400, got ${ids.length}`);
 assert(new Set(ids).size === 400, 'allowlist ids must be unique');
-assert(catalogIds.size === 838, `catalog count expected 838, got ${catalogIds.size}`);
+assert(catalogIds.size === 1018, `catalog count expected 1018, got ${catalogIds.size}`);
 
 const sorted = [...ids].sort();
 assert(JSON.stringify(ids) === JSON.stringify(sorted), 'allowlist ids must be sorted');
@@ -51,9 +51,9 @@ const expectedSha = 'def935ca0786a3f68e0c18c4ab0f0ded9049bfdc317287ae83a11603132
 
 assert(sha === expectedSha, `ids SHA mismatch: ${sha}`);
 assert(allowlist.idsSha256 === expectedSha, 'allowlist metadata SHA mismatch');
-assert(allowlist.catalogCount === 838, 'catalogCount metadata mismatch');
+assert(allowlist.catalogCount === 1018, 'catalogCount metadata mismatch');
 assert(allowlist.freeCount === 400, 'freeCount metadata mismatch');
-assert(allowlist.premiumOnlyCount === 438, 'premiumOnlyCount metadata mismatch');
+assert(allowlist.premiumOnlyCount === 618, 'premiumOnlyCount metadata mismatch');
 assert(allowlist.indexHtmlCurationAuthority === false, 'index.html must not be curation authority');
 
 for (const id of ids) {
@@ -61,7 +61,7 @@ for (const id of ids) {
 }
 
 const premiumOnly = [...catalogIds].filter((id) => !new Set(ids).has(id));
-assert(premiumOnly.length === 438, `premium-only count expected 438, got ${premiumOnly.length}`);
+assert(premiumOnly.length === 618, `premium-only count expected 618, got ${premiumOnly.length}`);
 
 assert(policy.policyId === 'free400-concept-bucket-uniqueness-v1', 'policy id mismatch');
 assert(policy.status === 'approved', 'policy must be approved');

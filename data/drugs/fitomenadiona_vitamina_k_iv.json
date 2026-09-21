@@ -1,0 +1,335 @@
+{
+  "id": "fitomenadiona_vitamina_k_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "fitomenadiona_vitamina_k_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Fitomenadiona (vitamina K1) injecao - escopo IV quando inevitavel",
+    "class": "Vitamina K hemostatica",
+    "pharmacologicClass": "Cofator para sintese de fatores vitamina K-dependentes",
+    "mechanism": "Permite gama-carboxilacao hepatica de fatores II, VII, IX, X e proteinas C/S.",
+    "pharmacodynamics": "Corrige deficiencia de vitamina K de forma nao imediata; efeito pode iniciar em 1-8 h.",
+    "pharmacokinetics": "Resposta depende de sintese hepatica de novos fatores; nao substitui fator pronto quando reversao imediata e necessaria.",
+    "indications": "Hipoprotrombinemia por anticoagulantes cumarinicos e outras causas de deficiencia/interferencia com vitamina K conforme rotulo.",
+    "commercialNames": "Phytonadione Injection, EUA.",
+    "presentation": "Emulsao injetavel; fonte consultada 1 mg/0,5 mL em seringa de dose unica.",
+    "presentations": "1 mg/0,5 mL no produto consultado; outras apresentacoes existem e devem ser verificadas separadamente.",
+    "dose": "Hipoprotrombinemia por anticoagulante: 2,5-10 mg ou mais SC/IM/IV; dose unica pode chegar a 25-50 mg conforme gravidade/resposta. Reavaliar INR em 6-8 h.",
+    "pediatricDose": "Rotulo inclui profilaxia neonatal 0,5-1 mg apos nascimento e tratamento neonatal 1 mg SC/IM, NAO IV. Seguranca/eficacia 6 meses-17 anos nao estabelecidas para uso geral; CALCULO_IV_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Sem ajuste numerico especifico.",
+    "hepaticDose": "Doenca hepatica grave pode limitar resposta por incapacidade de sintetizar fatores; nao aumentar empiricamente sem avaliar causa.",
+    "commonAdverseEffects": "Dor local e alteracoes de paladar/rubor podem ocorrer.",
+    "dangerousAdverseEffects": "Reacoes graves/fatais de hipersensibilidade ocorreram com IV e IM, inclusive na primeira dose e apesar de diluicao.",
+    "adverseEffects": "Reacao anafilactoide, hipotensao e dispneia podem ocorrer.",
+    "contraindications": "Hipersensibilidade ao produto/componentes.",
+    "interactions": "Antagoniza efeito de VKA; reinicio de anticoagulacao deve considerar duracao do efeito e indicacao clinica.",
+    "monitoring": "INR/protrombina, resposta clinica e hipersensibilidade.",
+    "administration": "Rotulo recomenda SC sempre que factivel. Se IV for inevitavel, administrar muito lentamente, no maximo 1 mg/min.",
+    "preparation": "Pode ser diluida com NaCl 0,9%, D5W ou D5NS e deve ser administrada imediatamente apos diluicao.",
+    "infusionProtocol": "IV: nunca exceder 1 mg/min.",
+    "pregnancy": "Usar quando clinicamente indicado, considerando causa da coagulopatia.",
+    "lactation": "Vitamina K e nutriente fisiologico; usar conforme indicacao materna.",
+    "specialPopulations": "Neonatal: esquema e SC/IM, nao IV. Pacientes com risco anafilatico exigem ambiente monitorado.",
+    "patientEducation": "Efeito nao e imediato; IV tem risco raro mas grave de anafilaxia.",
+    "clinicalPearls": "O ID 'vitamina K IV' deve carregar um aviso: IV nao e rota preferida no rotulo por risco de hipersensibilidade fatal.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BOXED_HIPERSENSIBILIDADE; IV_MAX_1MGMIN; VIA_SC_PREFERIDA; INR; PEDIATRIA_IV_BLOQUEADA.",
+    "alerts": "IV somente quando inevitavel e em velocidade <=1 mg/min. Neonatal IV nao autorizado por esta ficha.",
+    "references": [
+      "DailyMed/NLM EUA - Phytonadione Injection, atualizado 04-02-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3d571642-3d3a-41ae-855e-304ae4fff459"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3d571642-3d3a-41ae-855e-304ae4fff459"
+  },
+  "es": {
+    "name": "Fitomenadiona (vitamina K1) inyeccion - alcance IV cuando inevitable",
+    "class": "Vitamina K hemostatica",
+    "pharmacologicClass": "Cofactor para sintesis de factores dependientes de vitamina K",
+    "mechanism": "Permite gamma-carboxilacion hepatica de factores II, VII, IX, X y proteinas C/S.",
+    "pharmacodynamics": "Corrige deficiencia de vitamina K de forma no inmediata; efecto puede iniciar en 1-8 h.",
+    "pharmacokinetics": "Respuesta depende de sintesis hepatica de nuevos factores; no sustituye factor listo cuando se necesita reversión inmediata.",
+    "indications": "Hipoprotrombinemia por anticoagulantes cumarinicos y otras causas de deficiencia/interferencia con vitamina K segun rotulo.",
+    "commercialNames": "Phytonadione Injection, EE.UU.",
+    "presentation": "Emulsion inyectable; fuente consultada 1 mg/0,5 mL en jeringa de dosis unica.",
+    "presentations": "1 mg/0,5 mL en producto consultado; existen otras presentaciones y deben verificarse por separado.",
+    "dose": "Hipoprotrombinemia por anticoagulante: 2,5-10 mg o mas SC/IM/IV; dosis unica puede llegar a 25-50 mg segun gravedad/respuesta. Reevaluar INR en 6-8 h.",
+    "pediatricDose": "Rotulo incluye profilaxis neonatal 0,5-1 mg tras nacimiento y tratamiento neonatal 1 mg SC/IM, NO IV. Seguridad/eficacia 6 meses-17 anos no establecidas para uso general; CALCULO_IV_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Sin ajuste numerico especifico.",
+    "hepaticDose": "Enfermedad hepatica grave puede limitar respuesta por incapacidad de sintetizar factores; no aumentar empiricamente sin evaluar causa.",
+    "commonAdverseEffects": "Pueden ocurrir dolor local y cambios de sabor/rubor.",
+    "dangerousAdverseEffects": "Reacciones graves/fatales de hipersensibilidad ocurrieron con IV e IM, incluso en primera dosis y pese a dilucion.",
+    "adverseEffects": "Pueden ocurrir reaccion anafilactoide, hipotension y disnea.",
+    "contraindications": "Hipersensibilidad al producto/componentes.",
+    "interactions": "Antagoniza efecto de AVK; reinicio de anticoagulacion debe considerar duracion del efecto e indicacion clinica.",
+    "monitoring": "INR/protrombina, respuesta clinica e hipersensibilidad.",
+    "administration": "Rotulo recomienda SC siempre que sea factible. Si IV es inevitable, administrar muy lentamente, maximo 1 mg/min.",
+    "preparation": "Puede diluirse con NaCl 0,9%, D5W o D5NS y debe administrarse inmediatamente tras dilucion.",
+    "infusionProtocol": "IV: nunca exceder 1 mg/min.",
+    "pregnancy": "Usar cuando clinicamente indicado, considerando causa de coagulopatia.",
+    "lactation": "Vitamina K es nutriente fisiologico; usar segun indicacion materna.",
+    "specialPopulations": "Neonatal: pauta es SC/IM, no IV. Pacientes con riesgo anafilactico requieren ambiente monitorizado.",
+    "patientEducation": "Efecto no es inmediato; IV tiene riesgo raro pero grave de anafilaxia.",
+    "clinicalPearls": "El ID 'vitamina K IV' debe llevar advertencia: IV no es via preferida en rotulo por riesgo de hipersensibilidad fatal.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BOXED_HIPERSENSIBILIDAD; IV_MAX_1MGMIN; VIA_SC_PREFERIDA; INR; PEDIATRIA_IV_BLOQUEADA.",
+    "alerts": "IV solo cuando sea inevitable y a velocidad <=1 mg/min. Neonatal IV no autorizado por esta ficha.",
+    "references": [
+      "DailyMed/NLM EUA - Phytonadione Injection, atualizado 04-02-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3d571642-3d3a-41ae-855e-304ae4fff459"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3d571642-3d3a-41ae-855e-304ae4fff459"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Fitomenadiona (vitamina K1) injecao - escopo IV quando inevitavel",
+    "es": "Fitomenadiona (vitamina K1) inyeccion - alcance IV cuando inevitable"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "fitomenadiona_vitamina_k_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "104",
+    "approvedSha256": "4eea05ef116e59899ee7d0abad7c8dcdba10182b9f0106619d3796d9b0f39f3b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "81b070cfcc2f8079c1c49fb05b5336ee560b9e0c6d3794ed733d0f79e3376a4f",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_104_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "acido_tranexamico_iv",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA",
+          "INDICACOES_FORA_ROTULO_BLOQUEADAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "albumina_humana_20",
+        "bloqueios_clinicos": [
+          "HIPERVOLEMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "complexo_protrombinico",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "ESCOPO_NAO_VKA_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "crioprecipitado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "desmopressina_iv",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_50_CONTRAINDICADO",
+          "HIPONATREMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fibrinogenio_humano",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_IDADE_LABORATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fitomenadiona_vitamina_k_iv",
+        "bloqueios_clinicos": [
+          "VIA_IV_NAO_PREFERIDA",
+          "CALCULO_PEDIATRICO_IV_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "plasma_fresco_congelado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "biperideno_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clorpromazina_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "DOSES_EXCEPCIONAIS_ALTAS_NAO_AUTOMATIZAR"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "fitomenadiona_vitamina_k_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum conteudo clinico foi alterado; bloqueios e reconciliacoes permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Phytonadione injection - escopo IV cauteloso, EUA 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "VIA_IV_NAO_PREFERIDA",
+        "CALCULO_PEDIATRICO_IV_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "104",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "104",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_089_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

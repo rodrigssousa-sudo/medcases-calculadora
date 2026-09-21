@@ -1,0 +1,478 @@
+{
+  "id": "amoxicilina_suspensao",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "amoxicilina_suspensao"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Amoxicilina — pó para suspensão oral",
+    "class": "Antibacteriano beta-lactâmico; aminopenicilina",
+    "pharmacologicClass": "Penicilina semissintética bactericida",
+    "mechanism": "Inibe síntese da parede bacteriana por ligação a proteínas ligadoras de penicilina.",
+    "pharmacodynamics": "Atividade bactericida dependente do tempo em microrganismos suscetíveis.",
+    "pharmacokinetics": "Boa absorção oral; eliminação principalmente renal, justificando ajuste na insuficiência renal grave.",
+    "indications": "EUA: infecções por microrganismos suscetíveis de ouvido/nariz/garganta, trato geniturinário, pele/estruturas e trato respiratório inferior; terapia para H. pylori em adultos em combinações específicas.",
+    "commercialNames": "Fonte genérica DailyMed EUA; marcas BR/AR não verificadas.",
+    "presentation": "Pó para reconstituição de suspensão oral.",
+    "presentations": "Fonte consultada documenta suspensão 200 mg/5 mL e 400 mg/5 mL; outras forças exigem bula própria antes de conversão.",
+    "dose": "Adultos/>40 kg: regimes variam por sítio e gravidade; exemplos do rótulo: 250 mg q8h ou 500 mg q12h em infecções leves/moderadas; 500 mg q8h ou 875 mg q12h em infecções graves/respiratórias. Vincular sempre à indicação.",
+    "pediatricDose": ">=3 meses e <40 kg: ENT/pele/GU leve-moderada 25 mg/kg/dia q12h ou 20 mg/kg/dia q8h; grave e trato respiratório inferior 45 mg/kg/dia q12h ou 40 mg/kg/dia q8h. <=3 meses: limite superior 30 mg/kg/dia dividido q12h. AUTOMATABLE=NO até mapear indicação, idade, peso, concentração e política de máximo.",
+    "renalDose": "GFR 10–30 mL/min: 250 ou 500 mg q12h conforme gravidade; GFR <10: 250 ou 500 mg q24h; hemodiálise: q24h mais dose adicional durante e ao final. Evitar 875 mg quando GFR <30. Estes esquemas do rótulo aplicam-se a adultos e pediátricos >=3 meses com >40 kg; não extrapolar a menores.",
+    "hepaticDose": "Sem algoritmo numérico específico no rótulo consultado; monitorar função hepática em tratamento prolongado ou disfunção preexistente.",
+    "commonAdverseEffects": "Diarreia, náusea/vômitos e erupção cutânea.",
+    "dangerousAdverseEffects": "Anafilaxia/hipersensibilidade grave, SCAR, colite por C. difficile, DIES, alterações hepáticas e eventos hematológicos raros.",
+    "adverseEffects": "Candidíase, alteração de flora e reações cutâneas podem ocorrer.",
+    "contraindications": "Hipersensibilidade grave prévia a amoxicilina/penicilinas ou outros beta-lactâmicos conforme rótulo.",
+    "interactions": "Probenecida aumenta níveis; alopurinol aumenta risco de rash; pode alterar resposta a anticoagulantes orais; considerar antagonismo farmacodinâmico com alguns bacteriostáticos.",
+    "monitoring": "Resposta clínica, alergia, diarreia; função renal em risco/insuficiência e função hepática/hematológica em cursos prolongados.",
+    "administration": "VO; o rótulo consultado orienta administrar no início de uma refeição para reduzir intolerância GI. Agitar suspensão antes de medir.",
+    "preparation": "Reconstituir no momento da dispensação: soltar o pó, adicionar cerca de 1/3 da água total, agitar vigorosamente, completar o restante e agitar novamente. Volumes de água dependem da concentração e tamanho do frasco.",
+    "infusionProtocol": "Não aplicável à suspensão oral; não usar esta ficha para amoxicilina parenteral.",
+    "pregnancy": "O rótulo dos EUA não estabelece ajuste específico; usar quando clinicamente indicado após avaliação de risco/benefício.",
+    "lactation": "Amoxicilina pode estar presente no leite; monitorar lactente para sensibilização/efeitos GI quando pertinente.",
+    "specialPopulations": "Neonatos/lactentes <=3 meses têm esquema distinto; >40 kg usa regime adulto.",
+    "patientEducation": "Usar apenas para infecção bacteriana comprovada ou fortemente suspeita e considerar cultura/sensibilidade e resistência local. Completar o curso indicado e procurar atendimento por reação alérgica ou diarreia intensa/persistente.",
+    "clinicalPearls": "mg/kg/dia deve ser dividido pelo intervalo correto; não confundir 20 vs 25 ou 40 vs 45 mg/kg/dia. Conversão para mL só após confirmar 200 ou 400 mg/5 mL.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BETA_LACTAM_ALLERGY; RENAL_ADJUSTMENT; CALCULO_PEDIATRICO_DEPENDE_INDICACAO_E_CONCENTRACAO.",
+    "alerts": "Fonte EUA; não inferir apresentação/registro BR/AR.",
+    "references": [
+      "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+  },
+  "es": {
+    "name": "Amoxicilina — polvo para suspensión oral",
+    "class": "Antibacteriano beta-lactámico; aminopenicilina",
+    "pharmacologicClass": "Penicilina semisintética bactericida",
+    "mechanism": "Inhibe la síntesis de pared bacteriana al unirse a proteínas fijadoras de penicilina.",
+    "pharmacodynamics": "Actividad bactericida dependiente del tiempo en microorganismos susceptibles.",
+    "pharmacokinetics": "Buena absorción oral; eliminación principalmente renal, lo que justifica ajuste en insuficiencia renal grave.",
+    "indications": "EE.UU.: infecciones por microorganismos susceptibles de oído/nariz/garganta, tracto genitourinario, piel/estructuras y tracto respiratorio inferior; terapia de H. pylori en adultos en combinaciones específicas.",
+    "commercialNames": "Fuente genérica DailyMed EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Polvo para reconstitución de suspensión oral.",
+    "presentations": "La fuente consultada documenta suspensión 200 mg/5 mL y 400 mg/5 mL; otras concentraciones exigen ficha propia antes de conversión.",
+    "dose": "Adultos/>40 kg: los regímenes varían por sitio y gravedad; ejemplos del rótulo: 250 mg c/8h o 500 mg c/12h en infecciones leves/moderadas; 500 mg c/8h o 875 mg c/12h en graves/respiratorias. Vincular siempre a la indicación.",
+    "pediatricDose": ">=3 meses y <40 kg: ORL/piel/GU leve-moderada 25 mg/kg/día c/12h o 20 mg/kg/día c/8h; grave y tracto respiratorio inferior 45 mg/kg/día c/12h o 40 mg/kg/día c/8h. <=3 meses: límite superior 30 mg/kg/día dividido c/12h. AUTOMATABLE=NO hasta mapear indicación, edad, peso, concentración y política de máximo.",
+    "renalDose": "GFR 10–30 mL/min: 250 o 500 mg c/12h según gravedad; GFR <10: 250 o 500 mg c/24h; hemodiálisis: c/24h más dosis adicional durante y al final. Evitar 875 mg con GFR <30. Estos esquemas se aplican a adultos y pediátricos >=3 meses >40 kg; no extrapolar a menores.",
+    "hepaticDose": "Sin algoritmo numérico específico; vigilar función hepática en tratamiento prolongado o disfunción preexistente.",
+    "commonAdverseEffects": "Diarrea, náusea/vómitos y erupción cutánea.",
+    "dangerousAdverseEffects": "Anafilaxia/hipersensibilidad grave, SCAR, colitis por C. difficile, DIES, alteraciones hepáticas y eventos hematológicos raros.",
+    "adverseEffects": "Puede ocurrir candidiasis, alteración de flora y reacciones cutáneas.",
+    "contraindications": "Hipersensibilidad grave previa a amoxicilina/penicilinas u otros beta-lactámicos según rótulo.",
+    "interactions": "Probenecid aumenta niveles; alopurinol aumenta riesgo de rash; puede alterar respuesta a anticoagulantes orales; considerar antagonismo farmacodinámico con algunos bacteriostáticos.",
+    "monitoring": "Respuesta clínica, alergia, diarrea; función renal en riesgo/insuficiencia y función hepática/hematológica en cursos prolongados.",
+    "administration": "VO; el rótulo consultado indica administrar al inicio de una comida para reducir intolerancia GI. Agitar la suspensión antes de medir.",
+    "preparation": "Reconstituir al dispensar: soltar el polvo, añadir aproximadamente 1/3 del agua total, agitar vigorosamente, completar el resto y volver a agitar. Los volúmenes dependen de concentración y tamaño del frasco.",
+    "infusionProtocol": "No aplica a la suspensión oral; no usar esta ficha para amoxicilina parenteral.",
+    "pregnancy": "El rótulo de EE.UU. no establece ajuste específico; usar cuando esté clínicamente indicado tras evaluación riesgo/beneficio.",
+    "lactation": "Amoxicilina puede estar presente en leche; vigilar al lactante por sensibilización/efectos GI cuando corresponda.",
+    "specialPopulations": "Neonatos/lactantes <=3 meses tienen esquema distinto; >40 kg usa régimen adulto.",
+    "patientEducation": "Usar solo para infección bacteriana comprobada o fuertemente sospechada, considerando cultivo/sensibilidad y resistencia local. Completar el curso indicado y consultar por reacción alérgica o diarrea intensa/persistente.",
+    "clinicalPearls": "mg/kg/día debe dividirse según el intervalo correcto; no confundir 20 vs 25 ni 40 vs 45 mg/kg/día. Convertir a mL solo tras confirmar 200 o 400 mg/5 mL.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALERGIA_BETA_LACTAMICOS; AJUSTE_RENAL; CALCULO_PEDIATRICO_DEPENDE_INDICACION_Y_CONCENTRACION.",
+    "alerts": "Fuente EE.UU.; no inferir presentación/registro BR/AR.",
+    "references": [
+      "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Amoxicilina — pó para suspensão oral",
+    "es": "Amoxicilina — polvo para suspensión oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "amoxicilina_suspensao.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "095",
+    "approvedSha256": "3b6d24e739ab60cbbee9ffb05f82b9cf4afca83c843ea68c35a0c6eb32bd8480",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "2373a97fe3e28c3e696c7e9c2438b112a53c196346384467e90de727515f0cd8",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_095_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "desloratadina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "desloratadina_xarope",
+          "nome_recebido": "Desloratadina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Desloratadine Oral Solution, atualizado 23-10-2025, revisado 07/2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41d5e0d4-6188-847b-e063-6294a90a2e2f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "AJUSTE_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxizina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "hidroxizina_xarope",
+          "nome_recebido": "Hidroxizina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Hydroxyzine Hydrochloride Oral Solution 10 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87d4bbff-0498-4c26-86cb-7ce173afa0b6"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_suspensao",
+          "nome_recebido": "Amoxicilina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_LOGICA_INDICACAO_E_CONCENTRACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_clavulanato_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_clavulanato_suspensao",
+          "nome_recebido": "Amoxicilina + clavulanato suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin and Clavulanate Potassium powder for suspension. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d0aa94-5c32-4fb7-8561-8763810d2847"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CONVERSAO_ML_BLOQUEADA_ATE_SELECAO_DA_RAZAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_FORMULACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "azitromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "azitromicina_suspensao",
+          "nome_recebido": "Azitromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cefalexina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "cefalexina_suspensao",
+          "nome_recebido": "Cefalexina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_E_DIVISAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_15_ANOS_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfametoxazol_trimetoprima_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "sulfametoxazol_trimetoprima_suspensao",
+          "nome_recebido": "Sulfametoxazol + trimetoprima suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO",
+          "GESTACAO_LACTACAO_REQUEREM_AVALIACAO_INDIVIDUAL"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "claritromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "claritromicina_suspensao",
+          "nome_recebido": "Claritromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Clarithromycin for Oral Suspension, atualizado/revisado 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fad1e5a3-59f9-4868-9937-d3b061ab8f00"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "INTERACOES_CYP3A4_ALTO_RISCO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ceftriaxona_pediatrica_im",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "ceftriaxona_pediatrica_im",
+          "nome_recebido": "Ceftriaxona pediátrica IM",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "PREPARACAO_AUTOMATICA_BLOQUEADA",
+          "INFUSAO_IV_BLOQUEADA",
+          "NEONATO_REQUER_TRIAGEM_DE_PREMATURIDADE_BILIRRUBINA_CALCIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "penicilina_benzatina_pediatrica",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "penicilina_benzatina_pediatrica",
+          "nome_recebido": "Penicilina benzatina pediátrica",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Bicillin L-A (penicillin G benzathine), atualizado 21-07-2026, revisado 06/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+            "CDC EUA — STI Treatment Guidelines, Congenital Syphilis, consultado 20-09-2026. https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "VIA_IV_PROIBIDA",
+          "CALCULO_SIFILIS_CONGENITA_BLOQUEADO_ATE_SELECAO_DE_CENARIO",
+          "ADMINISTRACAO_PROFISSIONAL_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "amoxicilina_suspensao",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques, resultado APROVADO INTEGRALMENTE, sem excecoes informadas. Bloqueios clinicos granulares do candidato permanecem preservados. Integracao tecnica nao iniciada; publicacao bloqueada.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "amoxicilina_suspensao",
+        "nome_recebido": "Amoxicilina suspensão",
+        "fontes_consultadas": [
+          "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+        ],
+        "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_LOGICA_INDICACAO_E_CONCENTRACAO",
+        "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+      ],
+      "CAMPOS_VAZIOS_JUSTIFICADOS": {
+        "guidelineRecommendations": "Nenhuma diretriz independente revisada nesta execução."
+      },
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "PENDENTE",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "095",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "095",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

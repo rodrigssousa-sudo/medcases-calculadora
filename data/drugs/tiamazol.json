@@ -1,0 +1,367 @@
+{
+  "id": "tiamazol",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "tiamazol"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Tiamazol (metimazol) - comprimido oral",
+    "class": "Antitireoidiano tionamida",
+    "pharmacologicClass": "Inibidor da sintese de hormônios tireoidianos",
+    "mechanism": "Inibe sintese de hormônios tireoidianos; nao inativa T4/T3 ja armazenados ou circulantes.",
+    "pharmacodynamics": "Reduz nova producao hormonal; melhora clinica depende da deplecao do hormonio previamente formado.",
+    "pharmacokinetics": "Rapidamente absorvido, metabolizado no figado e excretado na urina.",
+    "indications": "Graves/hipertireoidismo ou bocio multinodular toxico quando cirurgia/iodo nao apropriados; preparo para tireoidectomia ou iodo radioativo.",
+    "commercialNames": "Fonte EUA usa methimazole; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "5 mg e 10 mg.",
+    "dose": "Adulto: inicial 15 mg/dia leve, 30-40 mg/dia moderadamente grave e 60 mg/dia grave, divididos em 3 doses a cada 8 h. Manutencao 5-15 mg/dia.",
+    "pediatricDose": "Inicial 0,4 mg/kg/dia dividido em 3 doses a cada 8 h; manutencao aproximadamente metade. AUTOMATABLE=NO ate validar idade/peso.",
+    "renalDose": "Sem algoritmo numerico especifico; individualizar por resposta/seguranca.",
+    "hepaticDose": "Hepatotoxicidade grave possivel; sintomas exigem funcao hepatica e suspensao diante de anormalidade significativa, incluindo transaminases >3x LSN conforme rotulo.",
+    "commonAdverseEffects": "Rash, prurido, urticaria, nausea, vomito, desconforto gastrico, artralgia e alteracao de paladar.",
+    "dangerousAdverseEffects": "Agranulocitose potencialmente fatal, anemia aplastica/pancitopenia, hepatotoxicidade grave e vasculite.",
+    "adverseEffects": "Leucopenia, trombocitopenia e reacoes hematologicas raras.",
+    "contraindications": "Hipersensibilidade a metimazol/tiamazol ou excipientes.",
+    "interactions": "Mudanca do estado tireoidiano pode alterar resposta a anticoagulantes, digoxina e beta-bloqueadores; revisar conforme clinica.",
+    "monitoring": "TSH/T4 livre; febre ou dor de garganta exigem avaliacao imediata/hemograma. Sintomas hepaticos exigem provas hepaticas.",
+    "administration": "VO em 3 tomadas aproximadamente a cada 8 h no esquema inicial classico.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Atravessa placenta e pode causar malformacoes, sobretudo no primeiro trimestre. Se necessario, usar menor dose eficaz e avaliar alternativa no primeiro trimestre.",
+    "lactation": "Individualizar conforme dose materna, idade do lactente e monitorizacao; nao extrapolar sem fonte local especifica.",
+    "specialPopulations": "Pediatria exige mg/kg e vigilancia de agranulocitose/hepatotoxicidade; gestacao e alto risco.",
+    "patientEducation": "Febre, dor de garganta, ictericia ou urina escura exigem avaliacao imediata; nao banalizar.",
+    "clinicalPearls": "Nao destroi hormonio ja formado, portanto resposta nao e imediata. Agranulocitose e hepatotoxicidade devem ser destacadas.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "AGRANULOCITOSE; HEPATOTOXICIDADE; TERATOGENICIDADE_PRIMEIRO_TRIMESTRE; PEDIATRIA_MG_KG.",
+    "alerts": "Febre/dor de garganta = risco de agranulocitose ate prova em contrario.",
+    "references": [
+      "DailyMed/NLM EUA - Methimazole tablets, atualizado 09-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f69edfa9-0efb-4fe8-aeab-50f7baeebb6a"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f69edfa9-0efb-4fe8-aeab-50f7baeebb6a"
+  },
+  "es": {
+    "name": "Tiamazol (metimazol) - comprimido oral",
+    "class": "Antitiroideo tionamida",
+    "pharmacologicClass": "Inhibidor de la sintesis de hormonas tiroideas",
+    "mechanism": "Inhibe sintesis de hormonas tiroideas; no inactiva T4/T3 ya almacenadas o circulantes.",
+    "pharmacodynamics": "Reduce nueva produccion hormonal; mejoria clinica depende del agotamiento de hormona previamente formada.",
+    "pharmacokinetics": "Rapidamente absorbido, metabolizado en higado y excretado en orina.",
+    "indications": "Graves/hipertiroidismo o bocio multinodular toxico cuando cirugia/yodo no son apropiados; preparacion para tiroidectomia o yodo radiactivo.",
+    "commercialNames": "Fuente EE.UU. usa methimazole; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "5 mg y 10 mg.",
+    "dose": "Adulto: inicial 15 mg/dia leve, 30-40 mg/dia moderadamente grave y 60 mg/dia grave, divididos en 3 dosis cada 8 h. Mantenimiento 5-15 mg/dia.",
+    "pediatricDose": "Inicial 0,4 mg/kg/dia dividido en 3 dosis cada 8 h; mantenimiento aproximadamente la mitad. AUTOMATABLE=NO hasta validar edad/peso.",
+    "renalDose": "Sin algoritmo numerico especifico; individualizar por respuesta/seguridad.",
+    "hepaticDose": "Hepatotoxicidad grave posible; sintomas exigen funcion hepatica y suspension ante anormalidad significativa, incluidas transaminasas >3x LSN segun rotulo.",
+    "commonAdverseEffects": "Rash, prurito, urticaria, nausea, vomito, malestar gastrico, artralgia y alteracion del gusto.",
+    "dangerousAdverseEffects": "Agranulocitosis potencialmente mortal, anemia aplasica/pancitopenia, hepatotoxicidad grave y vasculitis.",
+    "adverseEffects": "Leucopenia, trombocitopenia y reacciones hematologicas raras.",
+    "contraindications": "Hipersensibilidad a metimazol/tiamazol o excipientes.",
+    "interactions": "Cambio del estado tiroideo puede alterar respuesta a anticoagulantes, digoxina y beta-bloqueantes; revisar segun clinica.",
+    "monitoring": "TSH/T4 libre; fiebre o dolor de garganta exigen evaluacion inmediata/hemograma. Sintomas hepaticos exigen pruebas hepaticas.",
+    "administration": "VO en 3 tomas aproximadamente cada 8 h en la pauta inicial clasica.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Atraviesa placenta y puede causar malformaciones, sobre todo en primer trimestre. Si es necesario, usar menor dosis eficaz y valorar alternativa en primer trimestre.",
+    "lactation": "Individualizar segun dosis materna, edad del lactante y monitorizacion; no extrapolar sin fuente local especifica.",
+    "specialPopulations": "Pediatria exige mg/kg y vigilancia de agranulocitosis/hepatotoxicidad; embarazo es alto riesgo.",
+    "patientEducation": "Fiebre, dolor de garganta, ictericia u orina oscura exigen evaluacion inmediata; no banalizar.",
+    "clinicalPearls": "No destruye hormona ya formada, por lo que respuesta no es inmediata. Agranulocitosis y hepatotoxicidad deben destacarse.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "AGRANULOCITOSIS; HEPATOTOXICIDAD; TERATOGENICIDAD_PRIMER_TRIMESTRE; PEDIATRIA_MG_KG.",
+    "alerts": "Fiebre/dolor de garganta = riesgo de agranulocitosis hasta demostrar lo contrario.",
+    "references": [
+      "DailyMed/NLM EUA - Methimazole tablets, atualizado 09-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f69edfa9-0efb-4fe8-aeab-50f7baeebb6a"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f69edfa9-0efb-4fe8-aeab-50f7baeebb6a"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Tiamazol (metimazol) - comprimido oral",
+    "es": "Tiamazol (metimazol) - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "tiamazol.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "tiamazol",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "TIAMAZOL/METIMAZOL COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+        "GESTACAO_ALTO_RISCO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

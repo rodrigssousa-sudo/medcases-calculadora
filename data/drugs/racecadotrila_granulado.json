@@ -1,0 +1,383 @@
+{
+  "id": "racecadotrila_granulado",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "racecadotrila_granulado"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Racecadotrila - granulado para suspensão oral",
+    "class": "Antidiarreico antissecretor",
+    "pharmacologicClass": "Pró-fármaco inibidor de encefalinase; ATC A07XA04",
+    "mechanism": "É hidrolisado a tiorfano, que inibe encefalinase no intestino delgado, prolongando ação de encefalinas e reduzindo hipersecreção de água/eletrólitos.",
+    "pharmacodynamics": "Antissecretor intestinal sem reduzir a secreção basal e sem prolongar significativamente o trânsito intestinal.",
+    "pharmacokinetics": "Atividade inibitória da encefalinase atinge pico em torno de 2 h; metabólito ativo tem alta ligação proteica; duração funcional aproximada de 3 h.",
+    "indications": "Espanha: tratamento sintomático complementar da diarreia aguda em lactentes >3 meses e crianças, junto com reidratação oral e medidas de suporte quando insuficientes isoladamente.",
+    "commercialNames": "Tiorfan Lactantes 10 mg; Tiorfan Niños 30 mg (Espanha).",
+    "presentation": "Granulado em sachê para suspensão oral.",
+    "presentations": "10 mg/sachê para crianças <13 kg; 30 mg/sachê para crianças >=13 kg.",
+    "dose": "Esta ficha pediátrica não define esquema adulto; não extrapolar.",
+    "pediatricDose": ">3 meses: 1,5 mg/kg por dose, 3x/dia. <9 kg: 10 mg TID; 9-13 kg: 20 mg TID; 13-27 kg: 30 mg TID; >27 kg: 60 mg TID. Manter até 2 evacuações normais; máximo 7 dias. AUTOMATABLE=YES somente após mapear peso para a apresentação 10/30 mg correta.",
+    "renalDose": "Crianças com insuficiência renal: não administrar, devido à falta de informação na ficha técnica.",
+    "hepaticDose": "Crianças com insuficiência hepática: não administrar, devido à falta de informação na ficha técnica.",
+    "commonAdverseEffects": "Erupção e eritema são pouco frequentes; tonsilite foi relatada pouco frequentemente.",
+    "dangerousAdverseEffects": "Angioedema, choque anafilático e reações cutâneas graves, incluindo DRESS.",
+    "adverseEffects": "Urticária, prurido, edema de face/lábios/língua e eritema multiforme têm frequência desconhecida.",
+    "contraindications": "Hipersensibilidade; intolerância hereditária à frutose/má absorção glicose-galactose/deficiência sacarase-isomaltase devido à sacarose.",
+    "interactions": "Cautela com fármacos associados a angioedema mediado por bradicinina, incluindo inibidores da ECA; revisar tratamento concomitante.",
+    "monitoring": "Estado de hidratação, frequência das evacuações, vômitos, febre/sangue/pus nas fezes, sinais de reação cutânea/angioedema.",
+    "administration": "VO junto com reidratação oral. Granulado pode ser adicionado a alimento, água ou mamadeira, misturado e administrado imediatamente.",
+    "preparation": "Misturar imediatamente antes da administração; não guardar a suspensão reconstituída.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "A ficha pediátrica informa ausência de estudos clínicos específicos e não recomenda uso na gestação.",
+    "lactation": "Não recomendado durante lactação por ausência de dados de excreção no leite.",
+    "specialPopulations": "<3 meses: não estudado. Doença renal/hepática pediátrica: não administrar na ficha espanhola. Diabetes: considerar a sacarose do sachê.",
+    "patientEducation": "Não substitui reidratação. Interromper e procurar atendimento em angioedema, erupção grave, febre com sangue/pus, vômitos persistentes ou sinais de desidratação.",
+    "clinicalPearls": "A dose em mg/kg é convertida em sachês discretos por faixas de peso; não arredondar livremente nem usar apresentação errada.",
+    "guidelineRecommendations": "A terapia é complementar; reidratação oral permanece central no manejo da diarreia aguda.",
+    "safetyFlags": "REIDRATACAO_OBRIGATORIA; >3_MESES; RENAL/HEPATICO_NAO_USAR_NA_FICHA; DRESS/ANGIOEDEMA; MAX_7_DIAS.",
+    "alerts": "Fonte AEMPS/Espanha; não inferir disponibilidade ou registro BR/AR.",
+    "references": [
+      "AEMPS/CIMA - Tiorfan Lactantes 10 mg, ficha técnica. https://cima.aemps.es/cima/dochtml/ft/64816/FichaTecnica_64816.html",
+      "AEMPS/CIMA - Tiorfan Niños 30 mg, ficha técnica revisada 14-11-2024. https://cima.aemps.es/cima/dochtml/ft/64809/FT_64809.html"
+    ],
+    "ref": "https://cima.aemps.es/cima/dochtml/ft/64809/FT_64809.html"
+  },
+  "es": {
+    "name": "Racecadotrilo - granulado para suspensión oral",
+    "class": "Antidiarreico antisecretor",
+    "pharmacologicClass": "Profármaco inhibidor de encefalinasa; ATC A07XA04",
+    "mechanism": "Se hidroliza a tiorfano, que inhibe encefalinasa en intestino delgado, prolongando acción de encefalinas y reduciendo hipersecreción de agua/electrolitos.",
+    "pharmacodynamics": "Antisecretor intestinal sin reducir secreción basal ni prolongar significativamente el tránsito intestinal.",
+    "pharmacokinetics": "La actividad inhibidora de encefalinasa alcanza pico alrededor de 2 h; metabolito activo con alta unión proteica; duración funcional aproximada de 3 h.",
+    "indications": "España: tratamiento sintomático complementario de diarrea aguda en lactantes >3 meses y niños, junto con rehidratación oral y medidas de soporte cuando sean insuficientes por sí solas.",
+    "commercialNames": "Tiorfan Lactantes 10 mg; Tiorfan Niños 30 mg (España).",
+    "presentation": "Granulado en sobre para suspensión oral.",
+    "presentations": "10 mg/sobre para niños <13 kg; 30 mg/sobre para niños >=13 kg.",
+    "dose": "Esta ficha pediátrica no define esquema adulto; no extrapolar.",
+    "pediatricDose": ">3 meses: 1,5 mg/kg por dosis, 3 veces/día. <9 kg: 10 mg TID; 9-13 kg: 20 mg TID; 13-27 kg: 30 mg TID; >27 kg: 60 mg TID. Mantener hasta 2 deposiciones normales; máximo 7 días. AUTOMATABLE=YES solo tras mapear peso a presentación correcta 10/30 mg.",
+    "renalDose": "Niños con insuficiencia renal: no administrar por falta de información en la ficha técnica.",
+    "hepaticDose": "Niños con insuficiencia hepática: no administrar por falta de información en la ficha técnica.",
+    "commonAdverseEffects": "Erupción y eritema son poco frecuentes; se notificó amigdalitis con poca frecuencia.",
+    "dangerousAdverseEffects": "Angioedema, shock anafiláctico y reacciones cutáneas graves, incluido DRESS.",
+    "adverseEffects": "Urticaria, prurito, edema de cara/labios/lengua y eritema multiforme tienen frecuencia desconocida.",
+    "contraindications": "Hipersensibilidad; intolerancia hereditaria a fructosa/malabsorción glucosa-galactosa/deficiencia sacarasa-isomaltasa por contenido de sacarosa.",
+    "interactions": "Precaución con fármacos asociados a angioedema mediado por bradicinina, incluidos inhibidores ECA; revisar tratamiento concomitante.",
+    "monitoring": "Estado de hidratación, frecuencia de deposiciones, vómitos, fiebre/sangre/pus en heces, signos de reacción cutánea/angioedema.",
+    "administration": "VO junto con rehidratación oral. El granulado puede añadirse a alimento, agua o biberón, mezclar y administrar inmediatamente.",
+    "preparation": "Mezclar inmediatamente antes de administrar; no guardar la suspensión reconstituida.",
+    "infusionProtocol": "No aplica.",
+    "pregnancy": "La ficha pediátrica informa ausencia de estudios clínicos específicos y no recomienda uso en embarazo.",
+    "lactation": "No recomendado durante lactancia por ausencia de datos de excreción en leche.",
+    "specialPopulations": "<3 meses: no estudiado. Enfermedad renal/hepática pediátrica: no administrar según ficha española. Diabetes: considerar sacarosa del sobre.",
+    "patientEducation": "No sustituye rehidratación. Suspender y consultar por angioedema, erupción grave, fiebre con sangre/pus, vómitos persistentes o signos de deshidratación.",
+    "clinicalPearls": "La dosis mg/kg se convierte en sobres discretos por rangos de peso; no redondear libremente ni usar presentación incorrecta.",
+    "guidelineRecommendations": "La terapia es complementaria; la rehidratación oral sigue siendo central en el manejo de la diarrea aguda.",
+    "safetyFlags": "REHIDRATACION_OBLIGATORIA; >3_MESES; RENAL/HEPATICO_NO_USAR_EN_FICHA; DRESS/ANGIOEDEMA; MAX_7_DIAS.",
+    "alerts": "Fuente AEMPS/España; no inferir disponibilidad o registro BR/AR.",
+    "references": [
+      "AEMPS/CIMA - Tiorfan Lactantes 10 mg, ficha técnica. https://cima.aemps.es/cima/dochtml/ft/64816/FichaTecnica_64816.html",
+      "AEMPS/CIMA - Tiorfan Niños 30 mg, ficha técnica revisada 14-11-2024. https://cima.aemps.es/cima/dochtml/ft/64809/FT_64809.html"
+    ],
+    "ref": "https://cima.aemps.es/cima/dochtml/ft/64809/FT_64809.html"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Racecadotrila - granulado para suspensão oral",
+    "es": "Racecadotrilo - granulado para suspensión oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "racecadotrila_granulado.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "094",
+    "approvedSha256": "3da6ff849b7b2ebe0cd1e631ab92a30692ab207108f99b19ac32cc3bdb9494ce",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "77ce8b5dd5c6dfe5d2fd5feac41818614cca1df731023dd4c839c1fe8059629d",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_094_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": 94,
+      "medicamentos": [
+        {
+          "id": "fluticasona_spray_nasal",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "ondansetrona_solucao_oral",
+          "bloqueios_clinicos": [
+            "USO_PEDIATRICO_FORA_DA_QUIMIOTERAPIA_MODERADA_NAO_AUTOMATIZAR",
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "bromoprida_gotas",
+          "bloqueios_clinicos": [
+            "CALCULO_PEDIATRICO_BLOQUEADO",
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "simeticona_emulsao",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "racecadotrila_granulado",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "sais_para_reidratacao_oral",
+          "bloqueios_clinicos": [
+            "PREPARACAO_AUTOMATICA_BLOQUEADA_SEM_PRODUTO",
+            "CALCULO_VOLUME_BLOQUEADO_SEM_AVALIACAO_CLINICA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "zinco_solucao_oral",
+          "bloqueios_clinicos": [
+            "CONVERSAO_ML_BLOQUEADA",
+            "CONCENTRACAO_AUTOMATICA_BLOQUEADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_0_4MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_gotas",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "loratadina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_1MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        }
+      ],
+      "reconciliacao_canonica": [
+        {
+          "nome_recebido": "cloreto_de_sodio_3_porcento",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Via/formulacao ausente: 3% pode representar solução para inalação, solução nasal 30 mg/mL ou outras soluções.",
+          "dado_faltante": "via + forma farmacêutica + produto/apresentação",
+          "impacto": "Não é seguro pesquisar/atribuir dose, preparo ou administração sob um ID único sem definir escopo."
+        },
+        {
+          "nome_recebido": "dimeticona_gotas",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Documentação brasileira consultada usa a denominação histórica dimeticona para produto cujo princípio ativo declarado é simeticona 75 mg/mL; sobreposição canônica com simeticona_emulsao.",
+          "dado_faltante": "decisão canônica: alias versus registro independente; produto/força específicos",
+          "impacto": "Risco de duplicar o mesmo princípio ativo e manter dois esquemas em gotas incompatíveis."
+        }
+      ],
+      "nota": "Aprovação clínica não transforma pendências/restrições granulares em autorização de cálculo ou publicação."
+    },
+    "packageRecordMetadata": {
+      "ID": "racecadotrila_granulado",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques. Aprovação integral, sem exceções informadas. Preservar bloqueios clínicos granulares e restrições documentadas. Integração técnica e publicação continuam separadas.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "racecadotrila_granulado",
+        "nome_recebido": "Racecadotrila - granulado para suspensão oral",
+        "fontes_consultadas": [
+          "AEMPS/CIMA - Tiorfan Lactantes 10 mg, ficha técnica. https://cima.aemps.es/cima/dochtml/ft/64816/FichaTecnica_64816.html",
+          "AEMPS/CIMA - Tiorfan Niños 30 mg, ficha técnica revisada 14-11-2024. https://cima.aemps.es/cima/dochtml/ft/64809/FT_64809.html"
+        ],
+        "hashes_artefatos": "ver GOLD33_NOVA_LISTA_LOTE_094_PROVENIENCIA.json (sidecar externo; evita hash autorreferencial)"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "HOMOLOGADA",
+        "homologacao_dados": "SIM",
+        "integracao_tecnica": "NAO_INICIADA",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO_MEDICA": {
+        "medico_revisor": "Dra Eugenia Marques",
+        "data_revisao": "20-09-2026",
+        "resultado": "APROVADO INTEGRALMENTE",
+        "arquivo_revisado": "094",
+        "excecoes_informadas": 0,
+        "alteracoes_clinicas_pos_parecer": 0,
+        "sha256_candidato_json_revisado": "8ff753377c9d7d30b5adbdfcba23fa290816f3eae9d311320abcb7a3ad76c0ad",
+        "sha256_pdf_revisado": "cf8d1b9142c5a10ce5dedcf349bad841410940be6f65b34fa8c865cdd56ab001"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

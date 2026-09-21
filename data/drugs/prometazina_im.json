@@ -1,0 +1,350 @@
+{
+  "id": "prometazina_im",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "prometazina_im"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Prometazina cloridrato 25 mg/mL - injecao; escopo IM profunda",
+    "class": "Antihistaminico H1 sedativo/antiemetico",
+    "pharmacologicClass": "Fenotiazina antihistaminica com efeitos anticolinergicos",
+    "mechanism": "Antagonista competitivo H1 com efeitos sedativos e anticolinergicos.",
+    "pharmacodynamics": "Sedacao e efeito antiemetico/antialergico; pode deprimir respiracao e causar lesao tecidual grave.",
+    "pharmacokinetics": "Uso parenteral com inicio rapido; o rotulo permite IM/IV, mas IM profunda e preferida por seguranca.",
+    "indications": "Condicoes alergicas, sedacao, nausea/vomito e usos perioperatorios conforme rotulo.",
+    "commercialNames": "Promethazine HCl Injection, EUA.",
+    "presentation": "Solucao injetavel.",
+    "presentations": "25 mg/mL em vial 1 mL.",
+    "dose": "Adulto alergia: 25 mg IM; pode repetir em 2 h se necessario. Nausea/vomito: 12,5-25 mg, nao mais frequente que q4h. Sedacao: 25-50 mg. Este ID prioriza IM profunda.",
+    "pediatricDose": "<2 anos: CONTRAINDICADA. >=2 anos: usar menor dose eficaz; nao exceder metade da dose adulta sugerida. Premedicacao: 1,1 mg/kg em combinacao apropriada. AUTOMATIZACAO depende de indicacao.",
+    "renalDose": "Sem ajuste numerico especifico.",
+    "hepaticDose": "Usar cautela; metabolismo hepatico.",
+    "commonAdverseEffects": "Sonolencia, sedacao, visao turva, tontura e efeitos anticolinergicos.",
+    "dangerousAdverseEffects": "Depressao respiratoria fatal em criancas pequenas; necrose/gangrena e amputacao por lesao tecidual; convulsoes e hipotensao.",
+    "adverseEffects": "Distonia/extrapiramidal, confusao e reacoes paradoxais.",
+    "contraindications": "<2 anos, coma/depressao SNC e hipersensibilidade; via SC e intra-arterial sao contraindicadas.",
+    "interactions": "Opioides, sedativos e outros depressores SNC aumentam depressao respiratoria; anticolinergicos somam efeitos.",
+    "monitoring": "Respiracao, sedacao, PA e local de injecao.",
+    "administration": "Via preferida: IM profunda. Nao administrar SC ou intra-arterial. Embora o rotulo permita IV com precaucoes, esta ficha IM nao habilita IV.",
+    "preparation": "Solucao 25 mg/mL pronta para IM profunda.",
+    "infusionProtocol": "NAO APLICAVEL nesta ficha IM.",
+    "pregnancy": "Usar apos avaliacao beneficio-risco.",
+    "lactation": "Dados limitados; avaliar sedacao do lactente.",
+    "specialPopulations": "Doenca respiratoria, apneia do sono e uso de opioides aumentam risco; idosos sao mais sensiveis a sedacao/anticolinergia.",
+    "patientEducation": "Pode causar sedacao; evitar alcool/conducao. Dor intensa no local exige avaliacao imediata.",
+    "clinicalPearls": "Prometazina parenteral tem risco incomum de lesao tecidual grave; IM profunda e a rota preferida e esta ficha nao libera IV.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "IM_PROFUNDA; LESAO_TECIDUAL_GRAVE; <2_ANOS_CONTRAINDICADA; DEPRESSAO_RESPIRATORIA.",
+    "alerts": "SC e intra-arterial proibidas. Via IV bloqueada nesta ficha de ID IM.",
+    "references": [
+      "DailyMed/NLM EUA - Promethazine Hydrochloride Injection 25 mg/mL, current label 2024/2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b0d5abba-6fae-4f3c-b990-dd9c83c7b5a9"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b0d5abba-6fae-4f3c-b990-dd9c83c7b5a9"
+  },
+  "es": {
+    "name": "Prometazina clorhidrato 25 mg/mL - inyeccion; alcance IM profunda",
+    "class": "Antihistaminico H1 sedante/antiemetico",
+    "pharmacologicClass": "Fenotiazina antihistaminica con efectos anticolinergicos",
+    "mechanism": "Antagonista competitivo H1 con efectos sedantes y anticolinergicos.",
+    "pharmacodynamics": "Sedacion y efecto antiemetico/antialergico; puede deprimir respiracion y causar lesion tisular grave.",
+    "pharmacokinetics": "Uso parenteral con inicio rapido; rotulo permite IM/IV, pero IM profunda es preferida por seguridad.",
+    "indications": "Condiciones alergicas, sedacion, nausea/vomito y usos perioperatorios segun rotulo.",
+    "commercialNames": "Promethazine HCl Injection, EE.UU.",
+    "presentation": "Solucion inyectable.",
+    "presentations": "25 mg/mL en vial 1 mL.",
+    "dose": "Adulto alergia: 25 mg IM; puede repetirse en 2 h si es necesario. Nausea/vomito: 12,5-25 mg, no mas frecuente que q4h. Sedacion: 25-50 mg. Este ID prioriza IM profunda.",
+    "pediatricDose": "<2 anos: CONTRAINDICADA. >=2 anos: usar menor dosis eficaz; no exceder mitad de dosis adulta sugerida. Premedicacion: 1,1 mg/kg en combinacion apropiada. AUTOMATIZACION depende de indicacion.",
+    "renalDose": "Sin ajuste numerico especifico.",
+    "hepaticDose": "Usar precaucion; metabolismo hepatico.",
+    "commonAdverseEffects": "Somnolencia, sedacion, vision borrosa, mareo y efectos anticolinergicos.",
+    "dangerousAdverseEffects": "Depresion respiratoria fatal en niños pequenos; necrosis/gangrena y amputacion por lesion tisular; convulsiones e hipotension.",
+    "adverseEffects": "Distonia/extrapiramidal, confusion y reacciones paradojicas.",
+    "contraindications": "<2 anos, coma/depresion SNC e hipersensibilidad; via SC e intraarterial estan contraindicadas.",
+    "interactions": "Opioides, sedantes y otros depresores SNC aumentan depresion respiratoria; anticolinergicos suman efectos.",
+    "monitoring": "Respiracion, sedacion, PA y sitio de inyeccion.",
+    "administration": "Via preferida: IM profunda. No administrar SC ni intraarterial. Aunque rotulo permite IV con precauciones, esta ficha IM no habilita IV.",
+    "preparation": "Solucion 25 mg/mL lista para IM profunda.",
+    "infusionProtocol": "NO APLICA en esta ficha IM.",
+    "pregnancy": "Usar tras evaluacion beneficio-riesgo.",
+    "lactation": "Datos limitados; valorar sedacion del lactante.",
+    "specialPopulations": "Enfermedad respiratoria, apnea del sueño y uso de opioides aumentan riesgo; mayores son mas sensibles a sedacion/anticolinergia.",
+    "patientEducation": "Puede causar sedacion; evitar alcohol/conduccion. Dolor intenso local exige evaluacion inmediata.",
+    "clinicalPearls": "Prometazina parenteral tiene riesgo inusual de lesion tisular grave; IM profunda es via preferida y esta ficha no habilita IV.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "IM_PROFUNDA; LESION_TISULAR_GRAVE; <2_ANOS_CONTRAINDICADA; DEPRESION_RESPIRATORIA.",
+    "alerts": "SC e intraarterial prohibidas. Via IV bloqueada en esta ficha de ID IM.",
+    "references": [
+      "DailyMed/NLM EUA - Promethazine Hydrochloride Injection 25 mg/mL, current label 2024/2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b0d5abba-6fae-4f3c-b990-dd9c83c7b5a9"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b0d5abba-6fae-4f3c-b990-dd9c83c7b5a9"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Prometazina cloridrato 25 mg/mL - injecao; escopo IM profunda",
+    "es": "Prometazina clorhidrato 25 mg/mL - inyeccion; alcance IM profunda"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "prometazina_im.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "103",
+    "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "adrenalina_autoinjetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PRODUTO_ESPECIFICO_AUVIQ",
+          "PESO_MENOR_7_5_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "aminofilina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TDM_OBRIGATORIO",
+          "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "betametasona_injetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA",
+          "INDICACAO_ROTA_OBRIGATORIAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "brometo_de_ipratropio_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIA_NAO_INALATORIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "dexametasona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AUTOMACAO_EXIGE_INDICACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenoterol_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "DOSE_ATUAL_NAO_VERIFICADA",
+          "VIA_AUTOMATICA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "BULA_PRIMARIA_ATUAL_PENDENTE"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidrocortisona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metilprednisolona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "prometazina_im",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "IDADE_MENOR_2_CONTRAINDICADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "salbutamol_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+          "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "prometazina_im",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Prometazina 25 mg/mL - IM profunda, EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "VIA_IV_BLOQUEADA_NESTA_FICHA",
+        "IDADE_MENOR_2_CONTRAINDICADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "103",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "103",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

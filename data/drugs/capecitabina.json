@@ -1,0 +1,169 @@
+{
+  "id": "capecitabina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "capecitabina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Capecitabina",
+    "class": "Antineoplasico antimetabolito; fluoropirimidina oral, pro-fármaco do fluorouracil.",
+    "pharmacologicClass": "Pro-fármaco de 5-fluorouracil, ativado em etapas enzimaticas ate fluorouracil.",
+    "mechanism": "A capecitabina e convertida a fluorouracil; os metabolitos FdUMP e FUTP inibem a timidilato sintase e interferem na sintese/processamento de RNA e DNA.",
+    "pharmacodynamics": "Analises populacionais do rotulo mostraram associacao positiva entre a AUC de fluorouracil e hiperbilirrubinemia grau 3-4. O efeito antitumoral decorre da exposição aos metabolitos fluoropirimidinicos.",
+    "pharmacokinetics": "VO: Tmax mediano aproximado 1,5 h para capecitabina e 2 h para fluorouracil apos 1.255 mg/m2. Alimento reduz Cmax/AUC da capecitabina e retarda Tmax; por isso o rotulo orienta administração apos refeicao. Conversao metabolica culmina em 5-FU e subsequente catabolismo por DPD.",
+    "indications": "Rotulo EUA 2026: câncer colorretal, câncer de mama, câncer gástrico/esofagico/da juncao gastroesofagica e câncer pancreático, em esquemas e cenarios definidos no rotulo.",
+    "commercialNames": "O rotulo consultado e generico (capecitabine tablets, USP). Marcas e disponibilidade atuais no Brasil/Argentina não foram validadas neste lote.",
+    "presentation": "Comprimido revestido para uso oral.",
+    "presentations": "Produto DailyMed consultado: comprimido 500 mg. Outras forcas/produtos exigem fonte propria antes de uso no motor.",
+    "dose": "Dose depende da indicação. Exemplos rotulados: colorretal em monoterapia 1.250 mg/m2 VO 2x/dia nos dias 1-14 de ciclo de 21 dias; combinação com oxaliplatina 1.000 mg/m2 VO 2x/dia dias 1-14 a cada 21 dias. Cancer de mama: 1.000 ou 1.250 mg/m2 VO 2x/dia dias 1-14 a cada 21 dias conforme esquema. Retal com quimiorradiacao: 825 mg/m2 VO 2x/dia. Os demais esquemas devem permanecer vinculados a indicação e combinação especificas do rotulo.",
+    "pediatricDose": "Seguranca e eficacia em pacientes pediátricos não foram estabelecidas no rotulo consultado. Não ha regime pediátrico rotulado seguro para automatizacao.",
+    "renalDose": "ClCr 30-50 mL/min: reduzir a dose inicial recomendada em 25% (administrar 75% da dose inicial). Para ClCr <30 mL/min, a posologia não esta estabelecida no rotulo consultado.",
+    "hepaticDose": "Insuficiencia hepática leve a moderada aumenta a exposição; o rotulo não fornece algoritmo numerico de ajuste e orienta monitorização mais frequente. Efeito da insuficiência hepática grave não conhecido.",
+    "commonAdverseEffects": "Reações frequentes dependem do esquema; incluem sindrome mao-pe, diarreia, nausea, vomitos, fadiga e alterações hematologicas/hepaticas.",
+    "dangerousAdverseEffects": "Toxicidade grave ou fatal na deficiencia completa de DPD; cardiotoxicidade; diarreia/desidratacao e toxicidade renal; reações cutaneas graves; mielossupressao; hiperbilirrubinemia; hemorragia grave com antagonistas da vitamina K.",
+    "adverseEffects": "Podem ocorrer mucosite/estomatite, dor abdominal, anorexia, dermatite, parestesias, alterações de bilirrubina e citopenias; frequência varia conforme tumor e combinação.",
+    "contraindications": "Historia de reação de hipersensibilidade grave a capecitabina ou fluorouracil.",
+    "interactions": "Antagonistas da vitamina K: risco de aumento de INR/hemorragia, com monitorização frequente. Evitar alopurinol segundo rotulo. Leucovorina pode aumentar toxicidade; monitorar substratos CYP2C9 como fenitoina e exposicoes concomitantes nefrotoxicas.",
+    "monitoring": "Antes de iniciar, testar variantes DPYD salvo necessidade de tratamento imediato; acompanhar hemograma, função renal, hidratacao, diarreia/mucosite, sindrome mao-pe, bilirrubina e sinais de cardiotoxicidade. Se usar antagonista da vitamina K, monitorar INR/protrombina.",
+    "administration": "Administrar VO com agua, aproximadamente 12/12 h, dentro de 30 minutos apos refeicao. Engolir inteiro; não mastigar, cortar ou triturar. Se houver vomito ou dose omitida, não repetir a dose; seguir o horario programado.",
+    "preparation": "Comprimido pronto para uso; manipulacao deve seguir precaucoes para medicamento perigoso. Não foi validada preparação de suspensao/manipulada neste lote.",
+    "infusionProtocol": "NÃO APLICAVEL COMPROVADO ao produto oral consultado; não existe protocolo IV nesta ficha.",
+    "pregnancy": "Pode causar dano fetal. Verificar estado gestacional antes do tratamento; orientar contracepcao eficaz conforme rotulo durante o tratamento e pelo período pos-tratamento especificado no PI.",
+    "lactation": "O rotulo recomenda não amamentar durante o tratamento; o período pos-ultima dose deve seguir o PI do produto.",
+    "specialPopulations": "Idosos e pacientes com doenca coronariana previa podem apresentar maior vulnerabilidade a toxicidades especificas; insuficiência renal exige ajuste conforme ClCr.",
+    "patientEducation": "Tomar apos refeicao, não compensar dose esquecida/vomitada e comunicar imediatamente diarreia intensa, desidratacao, dor toracica, febre, mucosite importante ou dor/vermelhidao de maos e pes.",
+    "clinicalPearls": "A dose não e unica: varia por tumor e combinação. DPD/DPYD e função renal sao pontos de seguranca centrais. Não transferir doses de fluorouracil IV para capecitabina por equivalencia empirica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO ONCOLOGICO: deficiencia de DPD; erro de mg/m2/indicação; toxicidade GI/renal/cardíaca; interação com anticoagulantes. CALCULO PEDIATRICO BLOQUEADO.",
+    "alerts": "Escopo: comprimido oral EUA 500 mg. Não assumir marcas, concentracoes ou registro BR/AR. Revisao medica obrigatoria antes de qualquer calculo automatizado.",
+    "references": [
+      "DailyMed - Capecitabine tablets, USP - full prescribing information | Revised 06/2026 | EUA; comprimido oral 500 mg; rotulo regulatorio do produto consultado | Consultado 2026-09-20 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d23f023a-ea62-4ac0-f615-d5d26d59526d"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d23f023a-ea62-4ac0-f615-d5d26d59526d"
+  },
+  "es": {
+    "name": "Capecitabina",
+    "class": "Antineoplasico antimetabolito; fluoropirimidina oral, profarmaco de fluorouracilo.",
+    "pharmacologicClass": "Profarmaco de 5-fluorouracilo, activado en pasos enzimaticos hasta fluorouracilo.",
+    "mechanism": "La capecitabina se convierte en fluorouracilo; los metabolitos FdUMP y FUTP inhiben la timidilato sintasa e interfieren con la sintesis/procesamiento de ARN y ADN.",
+    "pharmacodynamics": "Los analisis poblacionales del prospecto mostraron asociacion positiva entre el AUC de fluorouracilo e hiperbilirrubinemia grado 3-4. El efecto antitumoral deriva de la exposición a metabolitos fluoropirimidinicos.",
+    "pharmacokinetics": "VO: Tmax mediano aproximado 1,5 h para capecitabina y 2 h para fluorouracilo tras 1.255 mg/m2. Los alimentos reducen Cmax/AUC de capecitabina y retrasan Tmax; por ello el prospecto indica administración después de las comidas. La conversion metabolica culmina en 5-FU y su catabolismo posterior por DPD.",
+    "indications": "Prospecto EE. UU. 2026: cáncer colorrectal, cáncer de mama, cáncer gástrico/esofagico/de la union gastroesofagica y cáncer pancreático, en esquemas y escenarios definidos en el prospecto.",
+    "commercialNames": "El prospecto consultado es generico (capecitabine tablets, USP). No se validaron marcas ni disponibilidad actual en Argentina/Brasil en este lote.",
+    "presentation": "Comprimido recubierto para uso oral.",
+    "presentations": "Producto DailyMed consultado: comprimido 500 mg. Otras concentraciones/productos requieren fuente propia antes de usarse en el motor.",
+    "dose": "La dosis depende de la indicacion. Ejemplos rotulados: colorrectal en monoterapia 1.250 mg/m2 VO 2 veces/día en días 1-14 de ciclo de 21 días; combinación con oxaliplatino 1.000 mg/m2 VO 2 veces/día días 1-14 cada 21 días. Cancer de mama: 1.000 o 1.250 mg/m2 VO 2 veces/día días 1-14 cada 21 días según esquema. Rectal con quimiorradiacion: 825 mg/m2 VO 2 veces/día. Los demas esquemas deben permanecer vinculados a indicacion y combinación especificas del prospecto.",
+    "pediatricDose": "La seguridad y eficacia en pacientes pediátricos no han sido establecidas en el prospecto consultado. No existe un regimen pediátrico rotulado seguro para automatizacion.",
+    "renalDose": "ClCr 30-50 mL/min: reducir la dosis inicial recomendada en 25% (administrar 75% de la dosis inicial). Para ClCr <30 mL/min, la posologia no está establecida en el prospecto consultado.",
+    "hepaticDose": "La insuficiencia hepática leve a moderada aumenta la exposición; el prospecto no proporciona algoritmo numerico de ajuste y recomienda monitorización más frecuente. Se desconoce el efecto de la insuficiencia hepática grave.",
+    "commonAdverseEffects": "Las reacciones frecuentes dependen del esquema; incluyen sindrome mano-pie, diarrea, nauseas, vomitos, fatiga y alteraciones hematologicas/hepaticas.",
+    "dangerousAdverseEffects": "Toxicidad grave o fatal en deficiencia completa de DPD; cardiotoxicidad; diarrea/deshidratacion y toxicidad renal; reacciones cutaneas graves; mielosupresion; hiperbilirrubinemia; hemorragia grave con antagonistas de vitamina K.",
+    "adverseEffects": "Pueden presentarse mucositis/estomatitis, dolor abdominal, anorexia, dermatitis, parestesias, alteraciones de bilirrubina y citopenias; la frecuencia varia según tumor y combinación.",
+    "contraindications": "Antecedente de reacción de hipersensibilidad grave a capecitabina o fluorouracilo.",
+    "interactions": "Antagonistas de vitamina K: riesgo de aumento de INR/hemorragia, con monitorización frecuente. Evitar alopurinol según prospecto. Leucovorina puede aumentar toxicidad; vigilar sustratos CYP2C9 como fenitoina y exposiciones nefrotoxicas concomitantes.",
+    "monitoring": "Antes de iniciar, evaluar variantes DPYD salvo necesidad de tratamiento inmediato; controlar hemograma, función renal, hidratacion, diarrea/mucositis, sindrome mano-pie, bilirrubina y signos de cardiotoxicidad. Si se usa antagonista de vitamina K, monitorizar INR/protrombina.",
+    "administration": "Administrar VO con agua, aproximadamente cada 12 h, dentro de los 30 minutos posteriores a la comida. Tragar entero; no masticar, cortar ni triturar. Si hay vomito u omision, no repetir la dosis; continuar el horario previsto.",
+    "preparation": "Comprimido listo para uso; la manipulacion debe seguir precauciones para medicamento peligroso. No se valido preparación de suspension magistral en este lote.",
+    "infusionProtocol": "NO APLICA COMPROBADO al producto oral consultado; no existe protocolo IV en está ficha.",
+    "pregnancy": "Puede causar dano fetal. Verificar embarazo antes del tratamiento; indicar anticoncepcion eficaz según prospecto durante el tratamiento y durante el período posterior especificado en el PI.",
+    "lactation": "El prospecto recomienda no amamantar durante el tratamiento; el período posterior a la ultima dosis debe seguir el PI del producto.",
+    "specialPopulations": "Adultos mayores y pacientes con enfermedad coronaria previa pueden ser más vulnerables a toxicidades especificas; la insuficiencia renal requiere ajuste según ClCr.",
+    "patientEducation": "Tomar después de las comidas, no compensar dosis olvidada/vomitada y comunicar de inmediato diarrea intensa, deshidratacion, dolor toracico, fiebre, mucositis importante o dolor/enrojecimiento de manos y pies.",
+    "clinicalPearls": "La dosis no es unica: varia por tumor y combinación. DPD/DPYD y función renal son puntos centrales de seguridad. No transferir dosis de fluorouracilo IV a capecitabina por equivalencia empirica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO ONCOLOGICO: deficiencia de DPD; error de mg/m2/indicacion; toxicidad GI/renal/cardíaca; interacción con anticoagulantes. CALCULO PEDIATRICO BLOQUEADO.",
+    "alerts": "Alcance: comprimido oral EE. UU. 500 mg. No asumir marcas, concentraciones ni registro AR/BR. Revision medica obligatoria antes de cualquier calculo automatizado.",
+    "references": [
+      "DailyMed - Capecitabine tablets, USP - full prescribing information | Revised 06/2026 | EUA; comprimido oral 500 mg; rotulo regulatorio do produto consultado | Consultado 2026-09-20 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d23f023a-ea62-4ac0-f615-d5d26d59526d"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d23f023a-ea62-4ac0-f615-d5d26d59526d"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Capecitabina",
+    "es": "Capecitabina"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "capecitabina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "084",
+    "approvedSha256": "0136dd7a2e35a3b2f33b1c49ad78b4f0236e09d123587c029b65a6175baff4a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "1ea00c47340a6516fcb13e6dd134d5fac5f78760ab4141f18cfef4a825692d2b",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_084_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": "084",
+      "review_result": "APROVADO INTEGRALMENTE",
+      "items": [
+        {
+          "id": "capecitabina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "doxorrubicina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "fluorouracila",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "imatinibe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "leuprorrelina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "paclitaxel",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "tamoxifeno",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "trastuzumabe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "vincristina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "alizaprida",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        }
+      ]
+    },
+    "packageRecordMetadata": {
+      "ID": "capecitabina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. NEW_ENTRY_NO_LEGACY_BASELINE. Revisao medica: Dra Ariani, 20-09-2026. Resultado: APROVADO INTEGRALMENTE. Excecoes: nenhuma informada. Integracao tecnica/publicacao nao executadas neste pacote; handoff destinado ao Codex."
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

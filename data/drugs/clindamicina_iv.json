@@ -1,0 +1,300 @@
+{
+  "id": "clindamicina_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "clindamicina_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Clindamicina IV",
+    "class": "Lincosamida antibacteriana",
+    "pharmacologicClass": "Inibidor da síntese proteica 50S",
+    "mechanism": "Liga-se à subunidade 50S e inibe síntese proteica.",
+    "pharmacodynamics": "Liga-se à subunidade 50S e inibe síntese proteica.",
+    "pharmacokinetics": "Farmacocinética específica conforme a fonte primária do produto; quando não quantificada no prospecto consultado, não extrapolar de outra formulação.",
+    "indications": "Infecções graves por microrganismos suscetíveis, especialmente gram-positivos e anaeróbios, conforme bula.",
+    "commercialNames": "Nome comercial local AR/BR não foi tratado como requisito de liberação; usar apenas produto/fonte documentada.",
+    "presentation": "Clindamicina fosfato 150 mg/mL; apresentações 300 mg/2 mL, 600 mg/4 mL, 900 mg/6 mL e premisturas IV.",
+    "presentations": "Clindamicina fosfato 150 mg/mL; apresentações 300 mg/2 mL, 600 mg/4 mL, 900 mg/6 mL e premisturas IV.",
+    "dose": "Adultos IV: 600–1200 mg/dia em 2–4 doses; mais graves 1200–2700 mg/dia; doses maiores foram usadas em situações com risco de vida, sob supervisão.",
+    "pediatricDose": "A bula contém posologia parenteral pediátrica por idade/peso, mas requer validação da formulação e presença de álcool benzílico antes de automação.",
+    "renalDose": "Sem ajuste renal numérico rotineiro definido na bula; diálise não remove clindamicina de forma eficaz.",
+    "hepaticDose": "Usar cautela e monitorar em doença hepática grave; não há tabela simples universal.",
+    "commonAdverseEffects": "Diarreia, náusea, rash, dor/flebite no local.",
+    "dangerousAdverseEffects": "CDAD/colite potencialmente fatal, DRESS, anafilaxia; hipotensão/parada cardiopulmonar com IV rápida.",
+    "adverseEffects": "Diarreia, náusea, rash, dor/flebite no local. CDAD/colite potencialmente fatal, DRESS, anafilaxia; hipotensão/parada cardiopulmonar com IV rápida.",
+    "contraindications": "Hipersensibilidade à clindamicina/lincomicina.",
+    "interactions": "Incompatível fisicamente com ampicilina, fenitoína, barbitúricos, aminofilina, gluconato de cálcio e sulfato de magnésio em mistura.",
+    "monitoring": "Diarreia/CDAD, função hepática/renal e hemograma em terapia prolongada.",
+    "administration": "IV deve ser diluída; não administrar IV sem diluição nem em push rápido.",
+    "preparation": "Concentração de infusão não deve exceder 18 mg/mL.",
+    "infusionProtocol": "Taxa não deve exceder 30 mg/min: 300 mg/50 mL/10 min; 600 mg/50 mL/20 min; 900 mg/50–100 mL/30 min; 1200 mg/100 mL/40 min.",
+    "pregnancy": "Usar quando claramente indicado e conforme risco/benefício.",
+    "lactation": "Avaliar risco/benefício e exposição do lactente.",
+    "specialPopulations": "Formulações com álcool benzílico exigem atenção em neonatos; pacientes com doença GI prévia têm risco aumentado de complicações por CDAD.",
+    "patientEducation": "Orientar uso apenas na via/formulação documentada; procurar assistência em reação alérgica grave ou evento adverso importante.",
+    "clinicalPearls": "O risco de administração IV rápida é evitável e deve estar explícito no motor.",
+    "guidelineRecommendations": "Nenhuma recomendação independente adicional foi usada para substituir a rotulagem regulatória nesta ficha.",
+    "safetyFlags": "BOXED WARNING para CDAD; nunca IV push rápido.",
+    "alerts": "Automação pediátrica bloqueada até reconciliar formulação/álcool benzílico.",
+    "references": [
+      "1. DailyMed — CLEOCIN PHOSPHATE clindamycin phosphate injection, updated 2026-07-29. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d"
+  },
+  "es": {
+    "name": "Clindamicina IV",
+    "class": "Lincosamida antibacteriana",
+    "pharmacologicClass": "Inhibidor de síntesis proteica 50S",
+    "mechanism": "Se une a subunidad 50S e inhibe síntesis proteica.",
+    "pharmacodynamics": "Se une a subunidad 50S e inhibe síntesis proteica.",
+    "pharmacokinetics": "Farmacocinética específica según la fuente primaria del producto; cuando no está cuantificada en la ficha consultada, no extrapolar de otra formulación.",
+    "indications": "Infecciones graves por microorganismos susceptibles, especialmente grampositivos y anaerobios, según ficha.",
+    "commercialNames": "La marca local AR/BR no se trató como requisito de liberación; usar sólo producto/fuente documentada.",
+    "presentation": "Clindamicina fosfato 150 mg/mL; presentaciones 300 mg/2 mL, 600 mg/4 mL, 900 mg/6 mL y premezclas IV.",
+    "presentations": "Clindamicina fosfato 150 mg/mL; presentaciones 300 mg/2 mL, 600 mg/4 mL, 900 mg/6 mL y premezclas IV.",
+    "dose": "Adultos IV: 600–1200 mg/día en 2–4 dosis; más graves 1200–2700 mg/día; dosis mayores se usaron en situaciones de riesgo vital, bajo supervisión.",
+    "pediatricDose": "La ficha contiene posología parenteral pediátrica por edad/peso, pero requiere validar formulación y alcohol bencílico antes de automatizar.",
+    "renalDose": "Sin ajuste renal numérico rutinario definido; diálisis no elimina clindamicina eficazmente.",
+    "hepaticDose": "Usar precaución y monitorizar en hepatopatía grave; no hay tabla simple universal.",
+    "commonAdverseEffects": "Diarrea, náusea, rash, dolor/flebitis local.",
+    "dangerousAdverseEffects": "CDAD/colitis potencialmente fatal, DRESS, anafilaxia; hipotensión/parada cardiopulmonar con IV rápida.",
+    "adverseEffects": "Diarrea, náusea, rash, dolor/flebitis local. CDAD/colitis potencialmente fatal, DRESS, anafilaxia; hipotensión/parada cardiopulmonar con IV rápida.",
+    "contraindications": "Hipersensibilidad a clindamicina/lincomicina.",
+    "interactions": "Incompatible físicamente con ampicilina, fenitoína, barbitúricos, aminofilina, gluconato de calcio y sulfato de magnesio en mezcla.",
+    "monitoring": "Diarrea/CDAD, función hepática/renal y hemograma en terapia prolongada.",
+    "administration": "IV debe diluirse; no administrar IV sin diluir ni en push rápido.",
+    "preparation": "Concentración de infusión no debe exceder 18 mg/mL.",
+    "infusionProtocol": "Tasa no debe exceder 30 mg/min: 300 mg/50 mL/10 min; 600 mg/50 mL/20 min; 900 mg/50–100 mL/30 min; 1200 mg/100 mL/40 min.",
+    "pregnancy": "Usar cuando esté claramente indicado y según riesgo/beneficio.",
+    "lactation": "Valorar riesgo/beneficio y exposición del lactante.",
+    "specialPopulations": "Formulaciones con alcohol bencílico requieren atención en neonatos; enfermedad GI previa aumenta riesgo de CDAD.",
+    "patientEducation": "Orientar uso sólo por la vía/formulación documentada; consultar ante reacción alérgica grave o evento adverso importante.",
+    "clinicalPearls": "El riesgo de administración IV rápida es evitable y debe quedar explícito en el motor.",
+    "guidelineRecommendations": "No se utilizó una recomendación independiente adicional para sustituir el etiquetado regulatorio en esta ficha.",
+    "safetyFlags": "BOXED WARNING para CDAD; nunca IV push rápido.",
+    "alerts": "Automatización pediátrica bloqueada hasta reconciliar formulación/alcohol bencílico.",
+    "references": [
+      "1. DailyMed — CLEOCIN PHOSPHATE clindamycin phosphate injection, updated 2026-07-29. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05a75685-0af5-407c-ac57-e380c882b49d"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Clindamicina IV",
+    "es": "Clindamicina IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "clindamicina_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "091",
+    "approvedSha256": "eb375949c4f6b6b3b39f072e7e67dcbf507b11a1958f48fcc444b43d492e39e3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "a927f82c013255dee8a2df4a856fd2edf998d142aa6285f5ffc4f37ffb25a4bb",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_091_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "proximetacaina_colirio",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_SEM_ALGORITMO_ESPECIFICO",
+          "AUTOMEDICACAO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação AR/BR não confirmada individualmente."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "sulfadiazina_de_prata",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_AUTOMATIZADA_BLOQUEADA",
+          "USO_NEONATAL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "tropicamida_colirio",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIA_INJETAVEL_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "azitromicina_iv",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_IV_BLOQUEADA",
+          "BOLUS_IV_BLOQUEADO",
+          "VIA_IM_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "cefalotina",
+        "bloqueios_clinicos_reais": [
+          "PREPARO_IV_AUTOMATICO_BLOQUEADO_SEM_PRODUTO_ESPECIFICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Prospecto clínico é de 2021; confirmar versão regulatória argentina vigente antes de publicação."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ceftriaxona_im",
+        "bloqueios_clinicos_reais": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "NEONATOS_COM_CALCIO_IV_BLOQUEADOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Bula DailyMed consultada tem atualização histórica; doses de gonorreia exigem guideline atual separado."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ceftriaxona_iv",
+        "bloqueios_clinicos_reais": [
+          "VIA_IM_BLOQUEADA_NESTA_FICHA",
+          "LIDOCAINA_IV_BLOQUEADA",
+          "NEONATOS_COM_CALCIO_IV_BLOQUEADOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Bula consultada é oficial, porém com histórico antigo; manter revisão regulatória local antes de publicação."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ciprofloxacino_iv",
+        "bloqueios_clinicos_reais": [
+          "BOLUS_IV_BLOQUEADO",
+          "PEDIATRIA_FORA_DAS_INDICACOES_DOCUMENTADAS_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar apresentação/rotulagem local AR/BR."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "clindamicina_iv",
+        "bloqueios_clinicos_reais": [
+          "IV_PUSH_BLOQUEADO",
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA_ATE_VALIDAR_FORMULACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "fluconazol_iv",
+        "bloqueios_clinicos_reais": [
+          "INTERACOES_CYP_QT_EXIGEM_RECONCILIACAO_NO_MOTOR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "clindamicina_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; aprovado integralmente, sem excecoes. Bloqueios granulares e pendencias documentadas permanecem preservados. Integracao tecnica/publicacao nao executadas.",
+      "PROVENIENCIA": {
+        "baseline_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "nome_recebido": "clindamicina_iv",
+        "data": "20-09-2026"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

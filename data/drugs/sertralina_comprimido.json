@@ -1,0 +1,367 @@
+{
+  "id": "sertralina_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "sertralina_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Sertralina cloridrato - comprimido oral",
+    "class": "Antidepressivo ISRS",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "mechanism": "Inibe recaptação neuronal de serotonina, aumentando neurotransmissao serotoninergica.",
+    "pharmacodynamics": "Efeito antidepressivo/ansiolitico e gradual e nao coincide com pico plasmatico.",
+    "pharmacokinetics": "Metabolizada extensamente; insuficiencia renal nao exige ajuste; hepatopatia aumenta exposicao.",
+    "indications": "MDD, TOC, panico, TEPT, ansiedade social e PMDD; pediatria aprovada apenas para TOC.",
+    "commercialNames": "Fonte generica EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "25, 50 e 100 mg.",
+    "dose": "MDD/TOC adulto: 50 mg/dia inicial; panico/TEPT/SAD: 25 mg/dia inicial; titular 25-50 mg semanalmente ate maximo 200 mg/dia. PMDD tem limites especificos por regime.",
+    "pediatricDose": "TOC 6-12 anos: 25 mg/dia inicial; 13-17 anos: 50 mg/dia; titular semanalmente 25-50 mg ate maximo 200 mg/dia. Outras indicacoes pediatricas nao estabelecidas.",
+    "renalDose": "Sem ajuste em insuficiencia renal leve a grave.",
+    "hepaticDose": "Child-Pugh 5-6: metade da dose inicial e maxima. Moderado/grave: nao recomendado.",
+    "commonAdverseEffects": "Nausea, alteracoes GI, insonia ou sonolencia, sudorese e disfuncao sexual.",
+    "dangerousAdverseEffects": "Sindrome serotoninergica, ideacao/comportamento suicida, hiponatremia/SIADH, sangramento e mania/hipomania.",
+    "adverseEffects": "Tremor, cefaleia, ansiedade inicial, alteracao de apetite/peso e sintomas de descontinuacao.",
+    "contraindications": "IMAO dentro de 14 dias, pimozida e hipersensibilidade.",
+    "interactions": "Serotoninergicos; AINE/aspirina/anticoagulantes; substratos CYP2D6 e farmacos altamente ligados podem exigir monitorizacao.",
+    "monitoring": "Resposta, suicidabilidade no inicio/ajustes, mania, sodio em risco, sangramento e efeitos sexuais.",
+    "administration": "VO 1x/dia, com ou sem alimento; titulacao nao mais frequente que semanal para varias indicacoes.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Exposicao tardia pode associar-se a complicacoes neonatais/PPHN; avaliar beneficio-risco.",
+    "lactation": "Passa em pequenas quantidades ao leite; considerar beneficio materno e risco do lactente.",
+    "specialPopulations": "Idosos: maior risco de hiponatremia. Hepatopatia exige reducao/evitar conforme gravidade.",
+    "patientEducation": "Beneficio pode levar semanas; nao interromper abruptamente; procurar atendimento por ideacao suicida, agitacao intensa, sindrome serotoninergica ou sangramento.",
+    "clinicalPearls": "Pediatria aprovada apenas para TOC; teto de 200 mg/dia nao autoriza outras indicacoes pediatricas.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ISRS; SUICIDALIDADE; SINDROME_SEROTONINERGICA; SANGRAMENTO; HIPONATREMIA.",
+    "alerts": "Hepatopatia moderada/grave: nao recomendada.",
+    "references": [
+      "DailyMed/NLM EUA - Sertraline tablets, atualizado 15-07-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6346a11-88b9-4425-b08d-a22f19c4ceb4"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6346a11-88b9-4425-b08d-a22f19c4ceb4"
+  },
+  "es": {
+    "name": "Sertralina clorhidrato - comprimido oral",
+    "class": "Antidepresivo ISRS",
+    "pharmacologicClass": "Inhibidor selectivo de la recaptacion de serotonina",
+    "mechanism": "Inhibe recaptacion neuronal de serotonina, aumentando neurotransmision serotoninergica.",
+    "pharmacodynamics": "Efecto antidepresivo/ansiolitico es gradual y no coincide con pico plasmatico.",
+    "pharmacokinetics": "Metabolizada extensamente; insuficiencia renal no exige ajuste; hepatopatia aumenta exposicion.",
+    "indications": "MDD, TOC, panico, TEPT, ansiedad social y PMDD; pediatria aprobada solo para TOC.",
+    "commercialNames": "Fuente generica EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "25, 50 y 100 mg.",
+    "dose": "MDD/TOC adulto: 50 mg/dia inicial; panico/TEPT/SAD: 25 mg/dia inicial; titular 25-50 mg semanalmente hasta maximo 200 mg/dia. PMDD tiene limites especificos por regimen.",
+    "pediatricDose": "TOC 6-12 anos: 25 mg/dia inicial; 13-17 anos: 50 mg/dia; titular semanalmente 25-50 mg hasta maximo 200 mg/dia. Otras indicaciones pediatricas no establecidas.",
+    "renalDose": "Sin ajuste en insuficiencia renal leve a grave.",
+    "hepaticDose": "Child-Pugh 5-6: mitad de dosis inicial y maxima. Moderado/grave: no recomendado.",
+    "commonAdverseEffects": "Nausea, alteraciones GI, insomnio o somnolencia, sudoracion y disfuncion sexual.",
+    "dangerousAdverseEffects": "Sindrome serotoninergico, ideacion/conducta suicida, hiponatremia/SIADH, sangrado y mania/hipomania.",
+    "adverseEffects": "Temblor, cefalea, ansiedad inicial, cambio de apetito/peso y sintomas de discontinuacion.",
+    "contraindications": "IMAO dentro de 14 dias, pimozida e hipersensibilidad.",
+    "interactions": "Serotoninergicos; AINE/aspirina/anticoagulantes; sustratos CYP2D6 y farmacos muy unidos pueden requerir monitorizacion.",
+    "monitoring": "Respuesta, suicidabilidad al inicio/ajustes, mania, sodio en riesgo, sangrado y efectos sexuales.",
+    "administration": "VO 1 vez/dia, con o sin alimentos; titulacion no mas frecuente que semanal para varias indicaciones.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Exposicion tardia puede asociarse a complicaciones neonatales/PPHN; valorar beneficio-riesgo.",
+    "lactation": "Pasa en pequenas cantidades a leche; considerar beneficio materno y riesgo del lactante.",
+    "specialPopulations": "Mayores: mayor riesgo de hiponatremia. Hepatopatia exige reduccion/evitar segun gravedad.",
+    "patientEducation": "Beneficio puede tardar semanas; no suspender bruscamente; consultar por ideacion suicida, agitacion intensa, sindrome serotoninergico o sangrado.",
+    "clinicalPearls": "Pediatria aprobada solo para TOC; techo de 200 mg/dia no autoriza otras indicaciones pediatricas.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ISRS; SUICIDALIDAD; SINDROME_SEROTONINERGICO; SANGRADO; HIPONATREMIA.",
+    "alerts": "Hepatopatia moderada/grave: no recomendada.",
+    "references": [
+      "DailyMed/NLM EUA - Sertraline tablets, atualizado 15-07-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6346a11-88b9-4425-b08d-a22f19c4ceb4"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6346a11-88b9-4425-b08d-a22f19c4ceb4"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Sertralina cloridrato - comprimido oral",
+    "es": "Sertralina clorhidrato - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "sertralina_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "sertralina_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "SERTRALINA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+        "PEDIATRIA_FORA_TOC_BLOQUEADA",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

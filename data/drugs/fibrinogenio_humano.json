@@ -1,0 +1,334 @@
+{
+  "id": "fibrinogenio_humano",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "fibrinogenio_humano"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Fibrinogenio humano - FIBRYGA",
+    "class": "Concentrado de fibrinogenio humano",
+    "pharmacologicClass": "Fator I plasmatico derivado de plasma humano",
+    "mechanism": "Reposicao de fibrinogenio permite formacao de fibrina e estabilizacao do coagulo.",
+    "pharmacodynamics": "Eleva fibrinogenio funcional; excesso pode aumentar risco trombotico.",
+    "pharmacokinetics": "Recuperacao incremental difere entre adultos/adolescentes e menores de 12 anos no algoritmo do rotulo.",
+    "indications": "Deficiencia congenita de fibrinogenio com sangramento e deficiencia adquirida de fibrinogenio em cenarios rotulados.",
+    "commercialNames": "FIBRYGA, EUA.",
+    "presentation": "Po liofilizado para solucao IV.",
+    "presentations": "1 g/50 mL ou 2 g/100 mL apos reconstituicao = 20 mg/mL.",
+    "dose": "Deficiencia adquirida adulto: 4 g IV inicialmente; dose adicional se fibrinogenio <=200 mg/dL ou FIBTEM A10 <=10 mm. Congenita >=12 anos: dose mg/kg = (alvo - medido em mg/dL)/1,8; alvo 100 mg/dL para sangramento menor e 150 mg/dL para maior.",
+    "pediatricDose": "Adquirida: >=12 anos 50 mg/kg; <12 anos 70 mg/kg. Congenita <12 anos: (alvo - medido)/1,4 mg/kg; se fibrinogenio basal desconhecido, 70 mg/kg.",
+    "renalDose": "Sem algoritmo numerico especifico.",
+    "hepaticDose": "Sem algoritmo numerico especifico; deficiencia adquirida pode ocorrer em sangramento/coagulopatia complexa e exige monitorizacao.",
+    "commonAdverseEffects": "Febre, cefaleia, nausea e reacoes infusional podem ocorrer.",
+    "dangerousAdverseEffects": "Trombose e hipersensibilidade/anafilaxia; produto derivado de plasma possui risco infeccioso residual.",
+    "adverseEffects": "Reacoes cutaneas e calafrios podem ocorrer.",
+    "contraindications": "Hipersensibilidade grave ao produto/componentes. Nao indicado para disfibrinogenemia se fora do rotulo.",
+    "interactions": "Outros procoagulantes podem aumentar risco trombotico; coordenar terapia hemostatica.",
+    "monitoring": "Fibrinogenio funcional ou FIBTEM A10, sangramento clinico e sinais de trombose.",
+    "administration": "Somente IV apos reconstituicao.",
+    "preparation": "Reconstituir para 20 mg/mL conforme kit e tecnica aseptica.",
+    "infusionProtocol": "Deficiencia adquirida: taxa ate 20 mL/min. Congenita: ate 5 mL/min.",
+    "pregnancy": "Usar quando clinicamente indicado em sangramento/coagulopatia apos avaliacao especializada.",
+    "lactation": "Dados especificos limitados; proteina humana, decisao conforme indicacao.",
+    "specialPopulations": "Pediatria tem recuperacao/dose propria; nao copiar formula adulta para <12 anos.",
+    "patientEducation": "Produto plasmatico IV; relatar dor/inchaco de membro, dispneia ou reacao alergica.",
+    "clinicalPearls": "FIBRYGA tem formulas diferentes por idade e por deficiencia adquirida vs congenita; indicacao deve ser selecionada antes do calculo.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "FIBRINOGENIO; PRODUTO_PLASMATICO; TROMBOSE; PEDIATRIA_FORMULA_DIFERENTE; IV.",
+    "alerts": "AUTOMACAO exige indicacao adquirida/congenita, idade, fibrinogenio/FIBTEM e peso.",
+    "references": [
+      "DailyMed/NLM EUA - FIBRYGA, current 2025/2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e3422d2a-2cb6-6f49-0be7-cb960b3d5bd5"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e3422d2a-2cb6-6f49-0be7-cb960b3d5bd5"
+  },
+  "es": {
+    "name": "Fibrinogeno humano - FIBRYGA",
+    "class": "Concentrado de fibrinogeno humano",
+    "pharmacologicClass": "Factor I plasmatico derivado de plasma humano",
+    "mechanism": "Reposicion de fibrinogeno permite formacion de fibrina y estabilizacion del coagulo.",
+    "pharmacodynamics": "Eleva fibrinogeno funcional; exceso puede aumentar riesgo trombotico.",
+    "pharmacokinetics": "Recuperacion incremental difiere entre adultos/adolescentes y menores de 12 anos en algoritmo del rotulo.",
+    "indications": "Deficiencia congenita de fibrinogeno con sangrado y deficiencia adquirida de fibrinogeno en escenarios rotulados.",
+    "commercialNames": "FIBRYGA, EE.UU.",
+    "presentation": "Polvo liofilizado para solucion IV.",
+    "presentations": "1 g/50 mL o 2 g/100 mL tras reconstitucion = 20 mg/mL.",
+    "dose": "Deficiencia adquirida adulto: 4 g IV inicialmente; dosis adicional si fibrinogeno <=200 mg/dL o FIBTEM A10 <=10 mm. Congenita >=12 anos: dosis mg/kg = (objetivo - medido en mg/dL)/1,8; objetivo 100 mg/dL para sangrado menor y 150 mg/dL para mayor.",
+    "pediatricDose": "Adquirida: >=12 anos 50 mg/kg; <12 anos 70 mg/kg. Congenita <12 anos: (objetivo - medido)/1,4 mg/kg; si fibrinogeno basal desconocido, 70 mg/kg.",
+    "renalDose": "Sin algoritmo numerico especifico.",
+    "hepaticDose": "Sin algoritmo numerico especifico; deficiencia adquirida puede ocurrir en sangrado/coagulopatia compleja y exige monitorizacion.",
+    "commonAdverseEffects": "Pueden ocurrir fiebre, cefalea, nausea y reacciones de infusion.",
+    "dangerousAdverseEffects": "Trombosis e hipersensibilidad/anafilaxia; producto derivado de plasma posee riesgo infeccioso residual.",
+    "adverseEffects": "Pueden ocurrir reacciones cutaneas y escalofrios.",
+    "contraindications": "Hipersensibilidad grave al producto/componentes. No indicado para disfibrinogenemia si esta fuera de rotulo.",
+    "interactions": "Otros procoagulantes pueden aumentar riesgo trombotico; coordinar terapia hemostatica.",
+    "monitoring": "Fibrinogeno funcional o FIBTEM A10, sangrado clinico y signos de trombosis.",
+    "administration": "Solo IV tras reconstitucion.",
+    "preparation": "Reconstituir a 20 mg/mL segun kit y tecnica aseptica.",
+    "infusionProtocol": "Deficiencia adquirida: tasa hasta 20 mL/min. Congenita: hasta 5 mL/min.",
+    "pregnancy": "Usar cuando clinicamente indicado en sangrado/coagulopatia tras evaluacion especializada.",
+    "lactation": "Datos especificos limitados; proteina humana, decision segun indicacion.",
+    "specialPopulations": "Pediatria tiene recuperacion/dosis propia; no copiar formula adulta a <12 anos.",
+    "patientEducation": "Producto plasmatico IV; comunicar dolor/hinchazon de miembro, disnea o reaccion alergica.",
+    "clinicalPearls": "FIBRYGA tiene formulas distintas por edad y por deficiencia adquirida vs congenita; indicacion debe seleccionarse antes del calculo.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "FIBRINOGENO; PRODUCTO_PLASMATICO; TROMBOSIS; PEDIATRIA_FORMULA_DISTINTA; IV.",
+    "alerts": "AUTOMATIZACION exige indicacion adquirida/congenita, edad, fibrinogeno/FIBTEM y peso.",
+    "references": [
+      "DailyMed/NLM EUA - FIBRYGA, current 2025/2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e3422d2a-2cb6-6f49-0be7-cb960b3d5bd5"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e3422d2a-2cb6-6f49-0be7-cb960b3d5bd5"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Fibrinogenio humano - FIBRYGA",
+    "es": "Fibrinogeno humano - FIBRYGA"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "fibrinogenio_humano.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "104",
+    "approvedSha256": "4eea05ef116e59899ee7d0abad7c8dcdba10182b9f0106619d3796d9b0f39f3b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "81b070cfcc2f8079c1c49fb05b5336ee560b9e0c6d3794ed733d0f79e3376a4f",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_104_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "acido_tranexamico_iv",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA",
+          "INDICACOES_FORA_ROTULO_BLOQUEADAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "albumina_humana_20",
+        "bloqueios_clinicos": [
+          "HIPERVOLEMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "complexo_protrombinico",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "ESCOPO_NAO_VKA_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "crioprecipitado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "desmopressina_iv",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_50_CONTRAINDICADO",
+          "HIPONATREMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fibrinogenio_humano",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_IDADE_LABORATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fitomenadiona_vitamina_k_iv",
+        "bloqueios_clinicos": [
+          "VIA_IV_NAO_PREFERIDA",
+          "CALCULO_PEDIATRICO_IV_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "plasma_fresco_congelado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "biperideno_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clorpromazina_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "DOSES_EXCEPCIONAIS_ALTAS_NAO_AUTOMATIZAR"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "fibrinogenio_humano",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum conteudo clinico foi alterado; bloqueios e reconciliacoes permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "FIBRYGA fibrinogen human IV - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_EXIGE_INDICACAO_IDADE_LABORATORIO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "104",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "104",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_089_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "id": "atenolol_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "atenolol_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Atenolol comprimido",
+    "class": "Betabloqueador cardioseletivo; anti-hipertensivo/antianginoso",
+    "pharmacologicClass": "Antagonista beta-1 adrenérgico preferencial",
+    "mechanism": "Bloqueia receptores beta-1 cardíacos, reduzindo frequência, contratilidade e liberação de renina; seletividade beta-1 diminui em doses maiores.",
+    "pharmacodynamics": "Reduz frequência cardíaca, pressão arterial e demanda miocárdica de oxigênio.",
+    "pharmacokinetics": "VO; composto hidrofílico com eliminação predominantemente renal. Acúmulo significativo ocorre quando ClCr cai abaixo de ~35 mL/min/1,73 m².",
+    "indications": "Rótulo EUA: hipertensão, angina pectoris e manejo de pacientes hemodinamicamente estáveis com IAM definido/suspeito em protocolo específico.",
+    "commercialNames": "Fonte: atenolol tablets genérico EUA; marcas BR/AR não verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "25 mg; 50 mg; 100 mg.",
+    "dose": "Hipertensão: 50 mg VO 1x/dia inicialmente; se resposta insuficiente, aumentar para 100 mg 1x/dia. Doses >100 mg/dia são improváveis de trazer benefício adicional para hipertensão segundo rótulo.",
+    "pediatricDose": "Segurança e eficácia pediátricas não estabelecidas no rótulo. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "ClCr 15–35 mL/min/1,73 m²: máximo 50 mg/dia; ClCr <15: máximo 25 mg/dia. Alguns idosos/renais podem requerer início em 25 mg/dia.",
+    "hepaticDose": "Não há ajuste hepático numérico específico no rótulo; eliminação é predominantemente renal.",
+    "commonAdverseEffects": "Bradicardia, fadiga, tontura, extremidades frias e sintomas gastrointestinais.",
+    "dangerousAdverseEffects": "Bradicardia grave, bloqueio AV, insuficiência cardíaca, broncoespasmo em suscetíveis e agravamento de angina/IAM após retirada abrupta.",
+    "adverseEffects": "Pode mascarar taquicardia da hipoglicemia ou tireotoxicose; alterações de humor/sono podem ocorrer.",
+    "contraindications": "Bradicardia sinusal, bloqueio cardíaco >1º grau sem marcapasso adequado, choque cardiogênico e insuficiência cardíaca manifesta não controlada conforme rótulo.",
+    "interactions": "Verapamil/diltiazem e outros cronotrópicos negativos aumentam risco de bradicardia/bloqueio; clonidina exige planejamento de retirada; hipoglicemiantes podem ter sintomas mascarados.",
+    "monitoring": "PA, frequência cardíaca, sinais de insuficiência cardíaca; função renal para ajuste; glicemia em diabéticos quando apropriado.",
+    "administration": "VO, geralmente 1x/dia para hipertensão.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NÃO APLICÁVEL ao comprimido. O rótulo descreve atenolol IV em IAM, mas essa formulação/protocolo exige ficha própria.",
+    "pregnancy": "Atenolol atravessa a placenta e pode afetar crescimento fetal e frequência cardíaca; uso requer indicação estrita e monitorização obstétrica.",
+    "lactation": "Atenolol é excretado no leite e pode se acumular no lactente, especialmente recém-nascidos; monitorar bradicardia/hipoglicemia ou considerar alternativa.",
+    "specialPopulations": "Idosos e insuficiência renal exigem doses menores; doença broncoespástica exige cautela e menor dose possível quando não houver alternativa.",
+    "patientEducation": "Não interromper abruptamente, especialmente em doença coronária; reconhecer bradicardia, dispneia e piora de angina.",
+    "clinicalPearls": "Para hipertensão, o rótulo afirma que aumentar além de 100 mg/dia provavelmente não acrescenta benefício; para angina há esquemas diferentes, portanto não usar um máximo universal entre indicações.",
+    "guidelineRecommendations": "Betabloqueadores não são intercambiáveis com todas as classes e a escolha deve considerar indicação concomitante (angina, pós-IAM, arritmia etc.) e diretriz atual.",
+    "safetyFlags": "BRADICARDIA; BLOQUEIO_AV; RETIRADA_ABRUPTA; AJUSTE_RENAL; BRONCOESPASMO.",
+    "alerts": "Não importar o protocolo IV de IAM para esta ficha de comprimido.",
+    "references": [
+      "DailyMed/NLM EUA — Atenolol tablets, updated 11-09-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8104a825-a0f1-4383-acbd-83670caee197",
+      "ESC — 2024 Guidelines. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8104a825-a0f1-4383-acbd-83670caee197"
+  },
+  "es": {
+    "name": "Atenolol comprimido",
+    "class": "Betabloqueante cardioselectivo; antihipertensivo/antianginoso",
+    "pharmacologicClass": "Antagonista beta-1 adrenérgico preferencial",
+    "mechanism": "Bloquea receptores beta-1 cardiacos, reduciendo frecuencia, contractilidad y liberación de renina; la selectividad beta-1 disminuye a dosis mayores.",
+    "pharmacodynamics": "Reduce frecuencia cardiaca, presión arterial y demanda miocárdica de oxígeno.",
+    "pharmacokinetics": "VO; compuesto hidrofílico con eliminación predominantemente renal. Ocurre acumulación significativa cuando CrCl cae por debajo de ~35 mL/min/1,73 m².",
+    "indications": "Rótulo EE.UU.: hipertensión, angina de pecho y manejo de pacientes hemodinámicamente estables con IAM definido/sospechado en protocolo específico.",
+    "commercialNames": "Fuente: atenolol tablets genérico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "25 mg; 50 mg; 100 mg.",
+    "dose": "Hipertensión: 50 mg VO una vez/día inicialmente; si respuesta insuficiente, aumentar a 100 mg una vez/día. Dosis >100 mg/día son poco probables de aportar beneficio adicional en hipertensión según rótulo.",
+    "pediatricDose": "Seguridad y eficacia pediátricas no establecidas en el rótulo. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "CrCl 15–35 mL/min/1,73 m²: máximo 50 mg/día; CrCl <15: máximo 25 mg/día. Algunos mayores/renales pueden requerir inicio con 25 mg/día.",
+    "hepaticDose": "No hay ajuste hepático numérico específico en el rótulo; la eliminación es predominantemente renal.",
+    "commonAdverseEffects": "Bradicardia, fatiga, mareo, extremidades frías y síntomas gastrointestinales.",
+    "dangerousAdverseEffects": "Bradicardia grave, bloqueo AV, insuficiencia cardiaca, broncoespasmo en susceptibles y empeoramiento de angina/IAM tras retirada brusca.",
+    "adverseEffects": "Puede enmascarar taquicardia de hipoglucemia o tirotoxicosis; pueden ocurrir cambios del ánimo/sueño.",
+    "contraindications": "Bradicardia sinusal, bloqueo cardiaco >1er grado sin marcapasos adecuado, shock cardiogénico e insuficiencia cardiaca manifiesta no controlada según rótulo.",
+    "interactions": "Verapamilo/diltiazem y otros cronotrópicos negativos aumentan riesgo de bradicardia/bloqueo; clonidina exige planificación de retirada; hipoglucemiantes pueden tener síntomas enmascarados.",
+    "monitoring": "PA, frecuencia cardiaca, signos de insuficiencia cardiaca; función renal para ajuste; glucemia en diabéticos cuando corresponda.",
+    "administration": "VO, generalmente una vez/día para hipertensión.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA al comprimido. El rótulo describe atenolol IV en IAM, pero esa formulación/protocolo requiere ficha propia.",
+    "pregnancy": "Atenolol atraviesa la placenta y puede afectar crecimiento fetal y frecuencia cardiaca; uso requiere indicación estricta y vigilancia obstétrica.",
+    "lactation": "Atenolol se excreta en leche y puede acumularse en el lactante, especialmente recién nacidos; vigilar bradicardia/hipoglucemia o considerar alternativa.",
+    "specialPopulations": "Mayores e insuficiencia renal requieren dosis menores; enfermedad broncoespástica exige precaución y la menor dosis posible cuando no haya alternativa.",
+    "patientEducation": "No suspender bruscamente, especialmente en enfermedad coronaria; reconocer bradicardia, disnea y empeoramiento de angina.",
+    "clinicalPearls": "Para hipertensión, el rótulo indica que aumentar por encima de 100 mg/día probablemente no aporta beneficio; en angina hay pautas distintas, por lo que no usar un máximo universal entre indicaciones.",
+    "guidelineRecommendations": "Los betabloqueantes no son intercambiables con todas las clases y la elección debe considerar indicación concomitante (angina, post-IAM, arritmia, etc.) y guía actual.",
+    "safetyFlags": "BRADICARDIA; BLOQUEO_AV; RETIRADA_BRUSCA; AJUSTE_RENAL; BRONCOESPASMO.",
+    "alerts": "No importar el protocolo IV de IAM a esta ficha de comprimido.",
+    "references": [
+      "DailyMed/NLM EUA — Atenolol tablets, updated 11-09-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8104a825-a0f1-4383-acbd-83670caee197",
+      "ESC — 2024 Guidelines. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8104a825-a0f1-4383-acbd-83670caee197"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Atenolol comprimido",
+    "es": "Atenolol comprimido"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "atenolol_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "096",
+    "approvedSha256": "1b2e49b951778cdba13c6bcb9d2dd30f3fb6f3f05735ada3e9bad3d5a7a8ed59",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "71a860690e5d5fc81d91b6cbc6094f9dec5c294e9f50c9d58175ff7d930772f9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_096_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "diazepam_retal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "midazolam_intranasal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_12_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenobarbital_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CONVERSAO_GOTAS_BLOQUEADA",
+          "APRESENTACAO_LOCAL_GOTAS_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar bula/produto local que realmente use conta-gotas antes de qualquer cálculo de volume ou gotas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril_sublingual",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "enalapril_maleato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroclorotiazida_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_COMPRIMIDO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "losartana_potassica",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "anlodipino_besilato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "atenolol_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "FORMULACAO_IV_FORA_DO_ESCOPO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "atenolol_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado. Bloqueios e restricoes granulares permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "FORMULACAO_IV_FORA_DO_ESCOPO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "096",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "096",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

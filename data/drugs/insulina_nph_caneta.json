@@ -1,0 +1,367 @@
+{
+  "id": "insulina_nph_caneta",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "insulina_nph_caneta"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Insulina humana NPH U-100 - HUMULIN N KwikPen",
+    "class": "Insulina humana de acao intermediaria",
+    "pharmacologicClass": "Insulina isofana humana em suspensao",
+    "mechanism": "Reduz glicemia por acao da insulina; a protamina retarda absorcao subcutanea.",
+    "pharmacodynamics": "Perfil intermediario com variabilidade interindividual; nao tratar a curva de acao como fixa.",
+    "pharmacokinetics": "Absorcao prolongada pela suspensao isofana; efeito depende de sitio, dose, perfusao e atividade.",
+    "indications": "Melhora do controle glicemico em adultos e pacientes pediatricos com diabetes mellitus.",
+    "commercialNames": "HUMULIN N KwikPen nos EUA; marcas/disponibilidade BR/AR nao verificadas.",
+    "presentation": "Caneta pre-cheia descartavel, suspensao injetavel SC.",
+    "presentations": "KwikPen 3 mL U-100, 300 unidades por caneta; seletor em incrementos de 1 unidade, 1-60 unidades por injecao.",
+    "dose": "Nao existe dose universal; individualizar por necessidade metabolica, glicemia e regime total de insulina.",
+    "pediatricDose": "Indicada em pediatria, sem formula universal por kg no rotulo. AUTOMATABLE=NO sem protocolo individualizado.",
+    "renalDose": "Comprometimento renal pode alterar necessidade; intensificar monitorizacao e ajustar individualmente.",
+    "hepaticDose": "Comprometimento hepatico pode alterar necessidade; intensificar monitorizacao e ajustar individualmente.",
+    "commonAdverseEffects": "Hipoglicemia, reacoes locais, lipodistrofia, ganho de peso e edema.",
+    "dangerousAdverseEffects": "Hipoglicemia grave, hipocalemia, hipersensibilidade sistemica e erros de produto/concentracao.",
+    "adverseEffects": "Prurido, rash e alteracoes locais com repeticao no mesmo sitio.",
+    "contraindications": "Episodios de hipoglicemia e hipersensibilidade a HUMULIN N ou excipientes.",
+    "interactions": "Medicamentos que alteram glicose mudam necessidade de insulina; beta-bloqueadores podem mascarar hipoglicemia. Nao misturar dentro da caneta.",
+    "monitoring": "Glicemia, hipoglicemia, sitios de injecao e mudancas de necessidade com dieta, exercicio e doenca.",
+    "administration": "Somente SC; rotacionar sitios. Ressuspender conforme instrucoes antes da aplicacao. Nao administrar IV.",
+    "preparation": "Caneta pronta para uso apos ressuspensao. Nao transferir para seringa e nao compartilhar, mesmo trocando agulha.",
+    "infusionProtocol": "NAO APLICAVEL. Formulação somente SC.",
+    "pregnancy": "Necessidades de insulina variam na gestacao; controle e ajuste individual sao essenciais.",
+    "lactation": "Pode ser utilizada quando indicada; ajustar necessidades no pos-parto.",
+    "specialPopulations": "Deficiencia visual pode exigir ajuda treinada para uso do dispositivo; renal/hepatica exigem maior monitorizacao.",
+    "patientEducation": "Treinar ressuspensao, selecao de dose, troca de agulha, rotacao de sitios e hipoglicemia. Nunca compartilhar a caneta.",
+    "clinicalPearls": "60 unidades e limite fisico por injecao do dispositivo, nao dose maxima clinica; acima disso sao necessarias mais injecoes.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO_RISCO; HIPOGLICEMIA; SC_SOMENTE; RESSUSPENDER; LIMITE_DISPOSITIVO_60_U.",
+    "alerts": "Nao interpretar 60 unidades como maximo diario. Via IV bloqueada.",
+    "references": [
+      "DailyMed/NLM EUA - HUMULIN N KwikPen, revisao 19-12-2025. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921"
+  },
+  "es": {
+    "name": "Insulina humana NPH U-100 - HUMULIN N KwikPen",
+    "class": "Insulina humana de accion intermedia",
+    "pharmacologicClass": "Insulina isofana humana en suspension",
+    "mechanism": "Reduce glucemia por accion de insulina; la protamina retrasa absorcion subcutanea.",
+    "pharmacodynamics": "Perfil intermedio con variabilidad interindividual; no tratar la curva de accion como fija.",
+    "pharmacokinetics": "Absorcion prolongada por suspension isofana; efecto depende de sitio, dosis, perfusion y actividad.",
+    "indications": "Mejora del control glucemico en adultos y pacientes pediatricos con diabetes mellitus.",
+    "commercialNames": "HUMULIN N KwikPen en EE.UU.; marcas/disponibilidad BR/AR no verificadas.",
+    "presentation": "Pluma precargada desechable, suspension inyectable SC.",
+    "presentations": "KwikPen 3 mL U-100, 300 unidades por pluma; selector en incrementos de 1 unidad, 1-60 unidades por inyeccion.",
+    "dose": "No existe dosis universal; individualizar por necesidad metabolica, glucemia y regimen total de insulina.",
+    "pediatricDose": "Indicada en pediatria, sin formula universal por kg en el rotulo. AUTOMATABLE=NO sin protocolo individualizado.",
+    "renalDose": "Compromiso renal puede cambiar requerimientos; intensificar monitorizacion y ajustar individualmente.",
+    "hepaticDose": "Compromiso hepatico puede cambiar requerimientos; intensificar monitorizacion y ajustar individualmente.",
+    "commonAdverseEffects": "Hipoglucemia, reacciones locales, lipodistrofia, aumento de peso y edema.",
+    "dangerousAdverseEffects": "Hipoglucemia grave, hipopotasemia, hipersensibilidad sistemica y errores de producto/concentracion.",
+    "adverseEffects": "Prurito, rash y alteraciones locales con repeticion en el mismo sitio.",
+    "contraindications": "Episodios de hipoglucemia e hipersensibilidad a HUMULIN N o excipientes.",
+    "interactions": "Medicamentos que alteran glucosa cambian requerimientos de insulina; beta-bloqueantes pueden enmascarar hipoglucemia. No mezclar dentro de la pluma.",
+    "monitoring": "Glucemia, hipoglucemia, sitios de inyeccion y cambios de requerimiento con dieta, ejercicio y enfermedad.",
+    "administration": "Solo SC; rotar sitios. Resuspender segun instrucciones antes de aplicar. No administrar IV.",
+    "preparation": "Pluma lista para usar tras resuspension. No transferir a jeringa ni compartir, aunque se cambie la aguja.",
+    "infusionProtocol": "NO APLICA. Formulacion solo SC.",
+    "pregnancy": "Los requerimientos de insulina varian en embarazo; control y ajuste individual son esenciales.",
+    "lactation": "Puede utilizarse cuando esta indicada; ajustar requerimientos posparto.",
+    "specialPopulations": "Deficit visual puede requerir ayuda entrenada para uso del dispositivo; renal/hepatica exigen mayor monitorizacion.",
+    "patientEducation": "Entrenar resuspension, seleccion de dosis, cambio de aguja, rotacion de sitios e hipoglucemia. Nunca compartir la pluma.",
+    "clinicalPearls": "60 unidades es limite fisico por inyeccion del dispositivo, no dosis maxima clinica; por encima se requieren mas inyecciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO_RIESGO; HIPOGLUCEMIA; SOLO_SC; RESUSPENDER; LIMITE_DISPOSITIVO_60_U.",
+    "alerts": "No interpretar 60 unidades como maximo diario. Via IV bloqueada.",
+    "references": [
+      "DailyMed/NLM EUA - HUMULIN N KwikPen, revisao 19-12-2025. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f6edd793-440b-40c2-96b5-c16133b7a921"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Insulina humana NPH U-100 - HUMULIN N KwikPen",
+    "es": "Insulina humana NPH U-100 - HUMULIN N KwikPen"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "insulina_nph_caneta.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "insulina_nph_caneta",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "HUMULIN N KWIKPEN U-100 SC - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+        "VIA_IV_BLOQUEADA",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

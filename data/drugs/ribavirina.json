@@ -1,0 +1,354 @@
+{
+  "id": "ribavirina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "ribavirina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Ribavirina 200 mg - comprimido oral",
+    "class": "Antiviral analogo nucleosidico",
+    "pharmacologicClass": "Analogo de guanosina antiviral",
+    "mechanism": "Multiplo: interfere com sintese de nucleotideos e replicacao viral; em HCV atua apenas como componente de combinacao.",
+    "pharmacodynamics": "Nao deve ser usada como monoterapia para hepatite C; eficacia do rotulo e com PEGASYS.",
+    "pharmacokinetics": "Acumula em eritrocitos e tem eliminacao prolongada; insuficiencia renal aumenta exposicao.",
+    "indications": "Com PEGASYS para hepatite C cronica em adultos e pacientes pediatricos >=5 anos com doenca hepatica compensada e criterios do rotulo.",
+    "commercialNames": "Ribavirin tablets, EUA.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "200 mg.",
+    "dose": "Genotipo 1/4 adulto: <75 kg 1000 mg/dia, >=75 kg 1200 mg/dia, em 2 doses por 48 semanas. Genotipo 2/3: 800 mg/dia em 2 doses por 24 semanas. HCV/HIV: 800 mg/dia por 48 semanas. Sempre com PEGASYS conforme rotulo.",
+    "pediatricDose": ">=5 anos, aproximadamente 15 mg/kg/dia por faixas: 23-33 kg 400 mg/dia; 34-46 kg 600; 47-59 kg 800; 60-74 kg 1000; >=75 kg 1200, em 2 doses, com PEGASYS.",
+    "renalDose": "CrCl <=50 mL/min requer reducao de dose. O rotulo inclui regimes reduzidos/modelados; AUTOMATIZACAO_RENAL=BLOQUEADA ate implementar tabela especifica e monitorizacao.",
+    "hepaticDose": "Rotulo e para doenca hepatica compensada; descompensacao exige outra estrategia.",
+    "commonAdverseEffects": "Anemia hemolitica, fadiga, cefaleia, nausea e sintomas sistemicos da combinacao.",
+    "dangerousAdverseEffects": "Anemia hemolitica pode piorar cardiopatia e precipitar IAM fatal; toxicidade embriofetal/teratogenicidade e risco central.",
+    "adverseEffects": "Citopenias, rash e sintomas psiquiatricos podem ocorrer no esquema combinado.",
+    "contraindications": "Gravidez e parceiros de gestantes conforme boxed warning; consultar rotulo completo da combinacao e hemoglobinopatias/renal.",
+    "interactions": "Azatioprina, antirretrovirais e outros podem interagir; revisar esquema HCV/HIV completo.",
+    "monitoring": "Hemograma/Hb, funcao renal, teste de gravidez repetido e resposta virologica conforme protocolo.",
+    "administration": "VO com alimento, em 2 doses por dia conforme peso/genotipo.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Contraindicada; requer medidas contraceptivas rigorosas durante e apos tratamento conforme rotulo.",
+    "lactation": "",
+    "specialPopulations": "Cardiopatia, anemia, disfuncao renal e coinfeccao HIV exigem monitorizacao adicional.",
+    "patientEducation": "Nunca usar isoladamente para HCV; tomar com alimento; cumprir contracepcao/testes de gravidez e relatar dispneia, dor toracica ou fadiga intensa.",
+    "clinicalPearls": "Ribavirina oral para HCV e ribavirina inalada para RSV sao produtos/indicacoes distintos. Este candidato e apenas oral.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ANEMIA_HEMOLITICA; EMBRIOFETAL; COMBINACAO_PEGASYS; RENAL; ROTA_ORAL.",
+    "alerts": "Monoterapia HCV bloqueada. Rota inalada bloqueada neste ID. Renal exige tabela especifica.",
+    "references": [
+      "DailyMed/NLM EUA - Ribavirin tablets, atual. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee304d0-c2ea-44f4-97d9-92a414d31b6c"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee304d0-c2ea-44f4-97d9-92a414d31b6c"
+  },
+  "es": {
+    "name": "Ribavirina 200 mg - comprimido oral",
+    "class": "Antiviral analogo nucleosidico",
+    "pharmacologicClass": "Analogo de guanosina antiviral",
+    "mechanism": "Multiple: interfiere con sintesis de nucleotidos y replicacion viral; en HCV actua solo como componente de combinacion.",
+    "pharmacodynamics": "No debe usarse como monoterapia para hepatitis C; eficacia del rotulo es con PEGASYS.",
+    "pharmacokinetics": "Se acumula en eritrocitos y tiene eliminacion prolongada; insuficiencia renal aumenta exposicion.",
+    "indications": "Con PEGASYS para hepatitis C cronica en adultos y pacientes pediatricos >=5 anos con enfermedad hepatica compensada y criterios del rotulo.",
+    "commercialNames": "Ribavirin tablets, EE.UU.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "200 mg.",
+    "dose": "Genotipo 1/4 adulto: <75 kg 1000 mg/dia, >=75 kg 1200 mg/dia, en 2 dosis durante 48 semanas. Genotipo 2/3: 800 mg/dia en 2 dosis durante 24 semanas. HCV/HIV: 800 mg/dia durante 48 semanas. Siempre con PEGASYS segun rotulo.",
+    "pediatricDose": " >=5 anos, aproximadamente 15 mg/kg/dia por bandas: 23-33 kg 400 mg/dia; 34-46 kg 600; 47-59 kg 800; 60-74 kg 1000; >=75 kg 1200, en 2 dosis, con PEGASYS.",
+    "renalDose": "CrCl <=50 mL/min requiere reduccion de dosis. Rotulo incluye regimenes reducidos/modelados; AUTOMATIZACION_RENAL=BLOQUEADA hasta implementar tabla especifica y monitorizacion.",
+    "hepaticDose": "Rotulo es para enfermedad hepatica compensada; descompensacion exige otra estrategia.",
+    "commonAdverseEffects": "Anemia hemolitica, fatiga, cefalea, nausea y sintomas sistemicos de combinacion.",
+    "dangerousAdverseEffects": "Anemia hemolitica puede empeorar cardiopatia y precipitar IAM fatal; toxicidad embriofetal/teratogenicidad es riesgo central.",
+    "adverseEffects": "Citopenias, rash y sintomas psiquiatricos pueden ocurrir en regimen combinado.",
+    "contraindications": "Embarazo y parejas de embarazadas segun boxed warning; consultar rotulo completo de combinacion y hemoglobinopatias/renal.",
+    "interactions": "Azatioprina, antirretrovirales y otros pueden interactuar; revisar regimen HCV/HIV completo.",
+    "monitoring": "Hemograma/Hb, funcion renal, prueba de embarazo repetida y respuesta virologica segun protocolo.",
+    "administration": "VO con comida, en 2 dosis al dia segun peso/genotipo.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Contraindicada; requiere medidas anticonceptivas rigurosas durante y despues de tratamiento segun rotulo.",
+    "lactation": "",
+    "specialPopulations": "Cardiopatia, anemia, disfuncion renal y coinfeccion HIV requieren monitorizacion adicional.",
+    "patientEducation": "Nunca usar sola para HCV; tomar con comida; cumplir anticoncepcion/pruebas de embarazo y comunicar disnea, dolor toracico o fatiga intensa.",
+    "clinicalPearls": "Ribavirina oral para HCV y ribavirina inhalada para RSV son productos/indicaciones distintos. Este candidato es solo oral.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ANEMIA_HEMOLITICA; EMBRIOFETAL; COMBINACION_PEGASYS; RENAL; VIA_ORAL.",
+    "alerts": "Monoterapia HCV bloqueada. Via inhalada bloqueada en este ID. Renal exige tabla especifica.",
+    "references": [
+      "DailyMed/NLM EUA - Ribavirin tablets, atual. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee304d0-c2ea-44f4-97d9-92a414d31b6c"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee304d0-c2ea-44f4-97d9-92a414d31b6c"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Ribavirina 200 mg - comprimido oral",
+    "es": "Ribavirina 200 mg - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "ribavirina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "ribavirina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Ribavirina oral 200 mg - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "MONOTERAPIA_HCV_BLOQUEADA",
+        "ROTA_INALADA_BLOQUEADA",
+        "CALCULO_RENAL_EXIGE_TABELA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

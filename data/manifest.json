@@ -1,12 +1,12 @@
 {
-  "version": "clinical-data-v1-750031a7bf922def",
-  "contentSha256": "750031a7bf922defdb092c6fd958af62e3db0dc50a2c50ff2d76792ddb67012e",
+  "version": "clinical-data-v1-b2437901deb78b1e",
+  "contentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
   "identitySchema": "clinical-source-content-v1",
-  "identityFileCount": 35,
-  "databaseFileCount": 34,
+  "identityFileCount": 37,
+  "databaseFileCount": 36,
   "generatedBy": "scripts/export-clinical-data.js",
-  "drugCount": 838,
-  "sourceRecordCount": 881,
+  "drugCount": 1018,
+  "sourceRecordCount": 1061,
   "collisionCount": 43,
   "contextVariantCount": 43,
   "interactionCount": 1593,
@@ -185,6 +185,18 @@
       "count": 9,
       "errors": 0,
       "status": "ok"
+    },
+    {
+      "module": "Gold33 Nova Lista",
+      "count": 173,
+      "errors": 0,
+      "status": "reference_only"
+    },
+    {
+      "module": "Gold33 Novo 093",
+      "count": 7,
+      "errors": 0,
+      "status": "reference_only"
     }
   ],
   "collisionPolicy": {
@@ -291,5 +303,31 @@
       "clinicalCollision",
       "clinicalContextVariants"
     ]
+  },
+  "gold33NovaLista": {
+    "selectedRecords": 182,
+    "newRecords": 173,
+    "blockedLots": [
+      "093"
+    ],
+    "publication": "PENDING"
+  },
+  "gold33Novo093": {
+    "integrated": [
+      "diclofenaco_gotas",
+      "diclofenaco_supositorio",
+      "cetoprofeno_gotas",
+      "salbutamol_spray",
+      "prednisolona_solucao_oral",
+      "dexametasona_elixir",
+      "budesonida_suspensao_inalatoria"
+    ],
+    "deferredAliases": [
+      "salbutamol_solucao_inalatoria",
+      "fenoterol_solucao_inalatoria",
+      "ipratropio_solucao_inalatoria"
+    ],
+    "zipSha256": "e29687c1f949e39a4eeb2ce764d444bf840900034fe78da29de2a8770755e98f",
+    "calculationAuthorized": false
   }
 }

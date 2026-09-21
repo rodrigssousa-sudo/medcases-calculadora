@@ -1,0 +1,478 @@
+{
+  "id": "cefalexina_suspensao",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "cefalexina_suspensao"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Cefalexina — suspensão oral",
+    "class": "Cefalosporina de primeira geração",
+    "pharmacologicClass": "Antibacteriano beta-lactâmico bactericida",
+    "mechanism": "Inibe síntese da parede celular bacteriana.",
+    "pharmacodynamics": "Atividade bactericida dependente do tempo em organismos suscetíveis.",
+    "pharmacokinetics": "VO com boa absorção; eliminação predominantemente renal.",
+    "indications": "EUA: infecções respiratórias, otite média, pele/estruturas, ossos e trato geniturinário por organismos suscetíveis.",
+    "commercialNames": "Fonte genérica DailyMed EUA; marcas BR/AR não verificadas.",
+    "presentation": "Pó para suspensão oral.",
+    "presentations": "125 mg/5 mL e 250 mg/5 mL.",
+    "dose": ">=15 anos: 250 mg q6h ou 500 mg q12h por 7–14 dias; infecções graves podem requerer doses maiores até 4 g/dia em 2–4 tomadas, conforme rótulo.",
+    "pediatricDose": "Pediatria: 25–50 mg/kg/dia em doses divididas por 7–14 dias; infecções graves 50–100 mg/kg/dia; otite média 75–100 mg/kg/dia. Infecção estreptocócica beta-hemolítica: pelo menos 10 dias. AUTOMATABLE=NO por faixas de dose e necessidade de selecionar indicação/gravidade/frequência.",
+    "renalDose": "Rótulo fornece tabela para pacientes >=15 anos: CrCl 30–59 sem ajuste, mas máximo 1 g/dia; CrCl 15–29: 250 mg q8–12h; níveis menores exigem intervalos maiores. Não extrapolar essa tabela para <15 anos.",
+    "hepaticDose": "Não há ajuste hepático numérico específico no rótulo consultado.",
+    "commonAdverseEffects": "Diarreia, náusea, vômitos, dispepsia e dor abdominal.",
+    "dangerousAdverseEffects": "Anafilaxia/SCAR, C. difficile, convulsões sobretudo com insuficiência renal/dose inadequada, anemia hemolítica e alterações de coagulação.",
+    "adverseEffects": "Rash, urticária, candidíase e alterações laboratoriais podem ocorrer.",
+    "contraindications": "Hipersensibilidade à cefalexina ou outras cefalosporinas.",
+    "interactions": "Probenecida aumenta exposição; metformina pode ter níveis aumentados.",
+    "monitoring": "Resposta; alergia e diarreia; função renal para ajuste; coagulação em pacientes de risco.",
+    "administration": "VO; agitar suspensão antes de cada dose; medir com dispositivo graduado.",
+    "preparation": "Reconstituir adicionando a água indicada em duas porções, agitando bem após cada adição. Refrigerar após mistura; rótulo documenta estabilidade de 14 dias.",
+    "infusionProtocol": "Não aplicável à suspensão oral.",
+    "pregnancy": "Dados disponíveis não estabelecem ajuste específico; usar conforme indicação clínica.",
+    "lactation": "Cefalexina está presente no leite em baixas quantidades; observar lactente para efeitos GI/sensibilização quando pertinente.",
+    "specialPopulations": "A tabela de ajuste renal do rótulo é para >=15 anos; cálculo renal pediátrico <15 permanece bloqueado.",
+    "patientEducation": "Usar apenas para infecção bacteriana comprovada ou fortemente suspeita e considerar cultura/sensibilidade e resistência local. Agitar, medir em mL e completar duração prescrita.",
+    "clinicalPearls": "Não transformar a faixa 25–50 mg/kg/dia em dose única; deve ser dividida. Otite usa faixa distinta 75–100 mg/kg/dia.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "RENAL_ADJUSTMENT_AGE_LIMITED; PEDIATRIC_RANGE_REQUIRES_INDICATION; BETA_LACTAM_ALLERGY.",
+    "alerts": "Fonte EUA revisada 2026; disponibilidade local BR/AR não confirmada.",
+    "references": [
+      "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+  },
+  "es": {
+    "name": "Cefalexina — suspensión oral",
+    "class": "Cefalosporina de primera generación",
+    "pharmacologicClass": "Antibacteriano beta-lactámico bactericida",
+    "mechanism": "Inhibe síntesis de la pared celular bacteriana.",
+    "pharmacodynamics": "Actividad bactericida dependiente del tiempo en microorganismos susceptibles.",
+    "pharmacokinetics": "VO con buena absorción; eliminación predominantemente renal.",
+    "indications": "EE.UU.: infecciones respiratorias, otitis media, piel/estructuras, hueso y tracto genitourinario por organismos susceptibles.",
+    "commercialNames": "Fuente genérica DailyMed EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Polvo para suspensión oral.",
+    "presentations": "125 mg/5 mL y 250 mg/5 mL.",
+    "dose": ">=15 años: 250 mg c/6h o 500 mg c/12h por 7–14 días; infecciones graves pueden requerir dosis mayores hasta 4 g/día en 2–4 tomas, según rótulo.",
+    "pediatricDose": "Pediatría: 25–50 mg/kg/día en dosis divididas por 7–14 días; infecciones graves 50–100 mg/kg/día; otitis media 75–100 mg/kg/día. Infección estreptocócica beta-hemolítica: al menos 10 días. AUTOMATABLE=NO por rangos y necesidad de elegir indicación/gravedad/frecuencia.",
+    "renalDose": "El rótulo aporta tabla para >=15 años: CrCl 30–59 sin ajuste, máximo 1 g/día; CrCl 15–29: 250 mg c/8–12h; niveles menores requieren intervalos mayores. No extrapolar a <15 años.",
+    "hepaticDose": "No hay ajuste hepático numérico específico en el rótulo consultado.",
+    "commonAdverseEffects": "Diarrea, náusea, vómitos, dispepsia y dolor abdominal.",
+    "dangerousAdverseEffects": "Anafilaxia/SCAR, C. difficile, convulsiones sobre todo con insuficiencia renal/dosis inadecuada, anemia hemolítica y alteraciones de coagulación.",
+    "adverseEffects": "Pueden ocurrir rash, urticaria, candidiasis y alteraciones de laboratorio.",
+    "contraindications": "Hipersensibilidad a cefalexina u otras cefalosporinas.",
+    "interactions": "Probenecid aumenta exposición; metformina puede presentar niveles aumentados.",
+    "monitoring": "Respuesta; alergia y diarrea; función renal para ajuste; coagulación en pacientes de riesgo.",
+    "administration": "VO; agitar suspensión antes de cada dosis; medir con dispositivo graduado.",
+    "preparation": "Reconstituir añadiendo el agua indicada en dos porciones, agitando tras cada adición. Refrigerar después de mezclar; el rótulo documenta estabilidad de 14 días.",
+    "infusionProtocol": "No aplica a la suspensión oral.",
+    "pregnancy": "Los datos disponibles no establecen ajuste específico; usar según indicación clínica.",
+    "lactation": "Cefalexina está presente en leche en bajas cantidades; observar al lactante por efectos GI/sensibilización cuando corresponda.",
+    "specialPopulations": "La tabla de ajuste renal del rótulo es para >=15 años; cálculo renal pediátrico <15 queda bloqueado.",
+    "patientEducation": "Usar solo para infección bacteriana comprobada o fuertemente sospechada, considerando cultivo/sensibilidad y resistencia local. Agitar, medir en mL y completar duración indicada.",
+    "clinicalPearls": "No convertir el rango 25–50 mg/kg/día en dosis única; debe dividirse. Otitis usa rango distinto 75–100 mg/kg/día.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "AJUSTE_RENAL_LIMITADO_POR_EDAD; RANGO_PEDIATRICO_REQUIERE_INDICACION; ALERGIA_BETA_LACTAMICOS.",
+    "alerts": "Fuente EE.UU. revisada 2026; disponibilidad local BR/AR no confirmada.",
+    "references": [
+      "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Cefalexina — suspensão oral",
+    "es": "Cefalexina — suspensión oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "cefalexina_suspensao.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "095",
+    "approvedSha256": "3b6d24e739ab60cbbee9ffb05f82b9cf4afca83c843ea68c35a0c6eb32bd8480",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "2373a97fe3e28c3e696c7e9c2438b112a53c196346384467e90de727515f0cd8",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_095_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "desloratadina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "desloratadina_xarope",
+          "nome_recebido": "Desloratadina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Desloratadine Oral Solution, atualizado 23-10-2025, revisado 07/2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41d5e0d4-6188-847b-e063-6294a90a2e2f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "AJUSTE_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxizina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "hidroxizina_xarope",
+          "nome_recebido": "Hidroxizina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Hydroxyzine Hydrochloride Oral Solution 10 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87d4bbff-0498-4c26-86cb-7ce173afa0b6"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_suspensao",
+          "nome_recebido": "Amoxicilina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_LOGICA_INDICACAO_E_CONCENTRACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_clavulanato_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_clavulanato_suspensao",
+          "nome_recebido": "Amoxicilina + clavulanato suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin and Clavulanate Potassium powder for suspension. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d0aa94-5c32-4fb7-8561-8763810d2847"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CONVERSAO_ML_BLOQUEADA_ATE_SELECAO_DA_RAZAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_FORMULACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "azitromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "azitromicina_suspensao",
+          "nome_recebido": "Azitromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cefalexina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "cefalexina_suspensao",
+          "nome_recebido": "Cefalexina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_E_DIVISAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_15_ANOS_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfametoxazol_trimetoprima_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "sulfametoxazol_trimetoprima_suspensao",
+          "nome_recebido": "Sulfametoxazol + trimetoprima suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO",
+          "GESTACAO_LACTACAO_REQUEREM_AVALIACAO_INDIVIDUAL"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "claritromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "claritromicina_suspensao",
+          "nome_recebido": "Claritromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Clarithromycin for Oral Suspension, atualizado/revisado 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fad1e5a3-59f9-4868-9937-d3b061ab8f00"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "INTERACOES_CYP3A4_ALTO_RISCO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ceftriaxona_pediatrica_im",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "ceftriaxona_pediatrica_im",
+          "nome_recebido": "Ceftriaxona pediátrica IM",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "PREPARACAO_AUTOMATICA_BLOQUEADA",
+          "INFUSAO_IV_BLOQUEADA",
+          "NEONATO_REQUER_TRIAGEM_DE_PREMATURIDADE_BILIRRUBINA_CALCIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "penicilina_benzatina_pediatrica",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "penicilina_benzatina_pediatrica",
+          "nome_recebido": "Penicilina benzatina pediátrica",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Bicillin L-A (penicillin G benzathine), atualizado 21-07-2026, revisado 06/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+            "CDC EUA — STI Treatment Guidelines, Congenital Syphilis, consultado 20-09-2026. https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "VIA_IV_PROIBIDA",
+          "CALCULO_SIFILIS_CONGENITA_BLOQUEADO_ATE_SELECAO_DE_CENARIO",
+          "ADMINISTRACAO_PROFISSIONAL_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "cefalexina_suspensao",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques, resultado APROVADO INTEGRALMENTE, sem excecoes informadas. Bloqueios clinicos granulares do candidato permanecem preservados. Integracao tecnica nao iniciada; publicacao bloqueada.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "cefalexina_suspensao",
+        "nome_recebido": "Cefalexina suspensão",
+        "fontes_consultadas": [
+          "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+        ],
+        "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_E_DIVISAO",
+        "AJUSTE_RENAL_PEDIATRICO_MENOR_15_ANOS_BLOQUEADO"
+      ],
+      "CAMPOS_VAZIOS_JUSTIFICADOS": {
+        "guidelineRecommendations": "Sem diretriz independente revisada nesta execução."
+      },
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "PENDENTE",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "095",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "095",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

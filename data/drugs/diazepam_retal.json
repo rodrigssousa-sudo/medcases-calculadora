@@ -1,0 +1,354 @@
+{
+  "id": "diazepam_retal",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "diazepam_retal"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Diazepam gel retal",
+    "class": "Benzodiazepínico anticonvulsivante de resgate",
+    "pharmacologicClass": "Modulador alostérico positivo do receptor GABA-A",
+    "mechanism": "Potencializa a ação inibitória do GABA no receptor GABA-A, aumentando a frequência de abertura do canal de cloreto.",
+    "pharmacodynamics": "Produz efeito anticonvulsivante, sedativo, ansiolítico e relaxante muscular; depressão respiratória aumenta com opioides e outros depressores do SNC.",
+    "pharmacokinetics": "A via retal permite absorção sistêmica; diazepam é altamente ligado a proteínas, metabolizado hepaticamente e possui metabólitos ativos de longa duração.",
+    "indications": "EUA: tratamento agudo de episódios intermitentes e estereotipados de atividade convulsiva frequente (clusters) distintos do padrão habitual em pacientes com epilepsia a partir de 2 anos.",
+    "commercialNames": "Fonte consultada: diazepam rectal gel genérico dos EUA; marcas e disponibilidade BR/AR não verificadas.",
+    "presentation": "Gel retal em seringa de dose unitária.",
+    "presentations": "Doses unitárias 2,5; 5; 7,5; 10; 12,5; 15; 17,5 e 20 mg conforme produto dos EUA.",
+    "dose": "Pacientes >=12 anos: dose recomendada 0,2 mg/kg, convertida para a próxima dose unitária disponível conforme tabela do rótulo. Uma segunda dose pode ser prescrita 4–12 h após a primeira.",
+    "pediatricDose": "2–5 anos: 0,5 mg/kg; 6–11 anos: 0,3 mg/kg; >=12 anos: 0,2 mg/kg. O rótulo usa tabela de peso e arredondamento para doses unitárias. AUTOMATABLE=NO até implementar exatamente a tabela de faixas e o arredondamento validado.",
+    "renalDose": "O rótulo não fornece algoritmo numérico de ajuste por ClCr/eGFR para o gel retal; usar cautela clínica e não automatizar ajuste renal.",
+    "hepaticDose": "Doença hepática pode prolongar eliminação do diazepam; não há tabela numérica específica para esta formulação. Ajuste automático bloqueado.",
+    "commonAdverseEffects": "Sonolência, tontura, ataxia e fadiga podem ocorrer.",
+    "dangerousAdverseEffects": "Depressão respiratória, sedação profunda, coma, especialmente com opioides/álcool; reações paradoxais e dependência/abstinência com uso frequente.",
+    "adverseEffects": "Alterações de coordenação, confusão, fala arrastada e reações locais podem ocorrer.",
+    "contraindications": "Hipersensibilidade a diazepam; glaucoma agudo de ângulo fechado. O rótulo permite uso em glaucoma de ângulo aberto adequadamente tratado.",
+    "interactions": "Opioides e outros depressores do SNC aumentam risco de sedação/depressão respiratória; inibidores/indutores metabólicos podem modificar exposição.",
+    "monitoring": "Após administração, monitorar respiração, cor, nível de consciência, resposta ao cluster e necessidade de atendimento de emergência; cuidador deve permanecer com o paciente.",
+    "administration": "Somente via retal. A aplicação deve ser feita por cuidador treinado capaz de reconhecer o cluster e os sinais que exigem avaliação profissional imediata.",
+    "preparation": "Seringa de dose unitária pronta para uso; confirmar dose prescrita, peso atual e integridade do dispositivo antes da administração.",
+    "infusionProtocol": "NÃO APLICÁVEL à formulação retal; nenhuma via IV/IM é autorizada por esta ficha.",
+    "pregnancy": "Benzodiazepínicos atravessam a placenta; exposição tardia pode causar sedação/abstinência neonatal. Usar somente após avaliação individual de benefício-risco.",
+    "lactation": "Diazepam e metabólitos podem passar ao leite; avaliar risco de sedação/acúmulo no lactente e necessidade clínica materna.",
+    "specialPopulations": "Idosos e pacientes com comprometimento respiratório, hepático ou uso concomitante de depressores do SNC exigem maior cautela.",
+    "patientEducation": "Ensinar cuidador a identificar o cluster, administrar corretamente, observar respiração e procurar emergência quando convulsões persistem, há dificuldade respiratória ou sedação excessiva.",
+    "clinicalPearls": "A dose não é um simples mg/kg contínuo: o rótulo exige faixas etárias e arredondamento para doses unitárias específicas.",
+    "guidelineRecommendations": "Nesta execução foi usada a bula regulatória como fonte operacional; nenhuma diretriz independente foi adicionada para alterar dose ou frequência.",
+    "safetyFlags": "BENZODIAZEPINICO_RESCATE; DEPRESSAO_RESPIRATORIA; OPIOIDES_ALTO_RISCO; TABELA_PESO_IDADE_OBRIGATORIA.",
+    "alerts": "Não usar como benzodiazepínico crônico por esta ficha. Segunda dose e frequência de episódios devem seguir a prescrição específica.",
+    "references": [
+      "DailyMed/NLM EUA — Diazepam Rectal Gel. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5b17a28-2cab-4c0d-8f9d-7b224e4d0989"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5b17a28-2cab-4c0d-8f9d-7b224e4d0989"
+  },
+  "es": {
+    "name": "Diazepam gel rectal",
+    "class": "Benzodiacepina anticonvulsivante de rescate",
+    "pharmacologicClass": "Modulador alostérico positivo del receptor GABA-A",
+    "mechanism": "Potencia la acción inhibitoria de GABA en el receptor GABA-A, aumentando la frecuencia de apertura del canal de cloro.",
+    "pharmacodynamics": "Produce efecto anticonvulsivante, sedante, ansiolítico y miorrelajante; la depresión respiratoria aumenta con opioides y otros depresores del SNC.",
+    "pharmacokinetics": "La vía rectal permite absorción sistémica; diazepam tiene alta unión a proteínas, metabolismo hepático y metabolitos activos de larga duración.",
+    "indications": "EE.UU.: tratamiento agudo de episodios intermitentes y estereotipados de actividad convulsiva frecuente (clusters) distintos del patrón habitual en pacientes con epilepsia desde 2 años.",
+    "commercialNames": "Fuente consultada: diazepam rectal gel genérico de EE.UU.; marcas y disponibilidad BR/AR no verificadas.",
+    "presentation": "Gel rectal en jeringa de dosis unitaria.",
+    "presentations": "Dosis unitarias 2,5; 5; 7,5; 10; 12,5; 15; 17,5 y 20 mg según producto de EE.UU.",
+    "dose": "Pacientes >=12 años: dosis recomendada 0,2 mg/kg, convertida a la siguiente dosis unitaria disponible según tabla del rótulo. Puede prescribirse una segunda dosis 4–12 h después de la primera.",
+    "pediatricDose": "2–5 años: 0,5 mg/kg; 6–11 años: 0,3 mg/kg; >=12 años: 0,2 mg/kg. El rótulo usa tabla de peso y redondeo a dosis unitarias. AUTOMATABLE=NO hasta implementar exactamente las bandas y el redondeo validado.",
+    "renalDose": "El rótulo no aporta algoritmo numérico por CrCl/eGFR para el gel rectal; usar precaución clínica y no automatizar ajuste renal.",
+    "hepaticDose": "La enfermedad hepática puede prolongar la eliminación de diazepam; no hay tabla numérica específica para esta formulación. Ajuste automático bloqueado.",
+    "commonAdverseEffects": "Pueden ocurrir somnolencia, mareo, ataxia y fatiga.",
+    "dangerousAdverseEffects": "Depresión respiratoria, sedación profunda y coma, especialmente con opioides/alcohol; reacciones paradójicas y dependencia/abstinencia con uso frecuente.",
+    "adverseEffects": "Pueden ocurrir alteraciones de coordinación, confusión, habla pastosa y reacciones locales.",
+    "contraindications": "Hipersensibilidad a diazepam; glaucoma agudo de ángulo cerrado. El rótulo permite uso en glaucoma de ángulo abierto adecuadamente tratado.",
+    "interactions": "Opioides y otros depresores del SNC aumentan el riesgo de sedación/depresión respiratoria; inhibidores/inductores metabólicos pueden modificar la exposición.",
+    "monitoring": "Tras la administración, vigilar respiración, color, nivel de conciencia, respuesta al cluster y necesidad de atención de urgencia; el cuidador debe permanecer con el paciente.",
+    "administration": "Solo vía rectal. Debe administrarlo un cuidador entrenado capaz de reconocer el cluster y los signos que requieren evaluación profesional inmediata.",
+    "preparation": "Jeringa de dosis unitaria lista para usar; confirmar dosis prescrita, peso actual e integridad del dispositivo antes de administrar.",
+    "infusionProtocol": "NO APLICA a la formulación rectal; esta ficha no autoriza vía IV/IM.",
+    "pregnancy": "Las benzodiacepinas atraviesan la placenta; la exposición tardía puede causar sedación/abstinencia neonatal. Usar solo tras evaluación individual beneficio-riesgo.",
+    "lactation": "Diazepam y metabolitos pueden pasar a la leche; valorar riesgo de sedación/acumulación en el lactante y necesidad clínica materna.",
+    "specialPopulations": "Mayores y pacientes con compromiso respiratorio, hepático o uso concomitante de depresores del SNC requieren mayor precaución.",
+    "patientEducation": "Enseñar al cuidador a identificar el cluster, administrar correctamente, vigilar respiración y buscar urgencias si persisten convulsiones, hay dificultad respiratoria o sedación excesiva.",
+    "clinicalPearls": "La dosis no es un simple mg/kg continuo: el rótulo exige franjas de edad y redondeo a dosis unitarias específicas.",
+    "guidelineRecommendations": "En esta ejecución se usó la ficha regulatoria como fuente operativa; no se añadió una guía independiente para modificar dosis o frecuencia.",
+    "safetyFlags": "BENZODIACEPINA_RESCATE; DEPRESION_RESPIRATORIA; OPIOIDES_ALTO_RIESGO; TABLA_PESO_EDAD_OBLIGATORIA.",
+    "alerts": "No usar como benzodiacepina crónica con esta ficha. Segunda dosis y frecuencia de episodios deben seguir la prescripción específica.",
+    "references": [
+      "DailyMed/NLM EUA — Diazepam Rectal Gel. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5b17a28-2cab-4c0d-8f9d-7b224e4d0989"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b5b17a28-2cab-4c0d-8f9d-7b224e4d0989"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Diazepam gel retal",
+    "es": "Diazepam gel rectal"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "diazepam_retal.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "096",
+    "approvedSha256": "1b2e49b951778cdba13c6bcb9d2dd30f3fb6f3f05735ada3e9bad3d5a7a8ed59",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "71a860690e5d5fc81d91b6cbc6094f9dec5c294e9f50c9d58175ff7d930772f9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_096_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "diazepam_retal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "midazolam_intranasal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_12_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenobarbital_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CONVERSAO_GOTAS_BLOQUEADA",
+          "APRESENTACAO_LOCAL_GOTAS_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar bula/produto local que realmente use conta-gotas antes de qualquer cálculo de volume ou gotas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril_sublingual",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "enalapril_maleato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroclorotiazida_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_COMPRIMIDO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "losartana_potassica",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "anlodipino_besilato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "atenolol_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "FORMULACAO_IV_FORA_DO_ESCOPO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "diazepam_retal",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado. Bloqueios e restricoes granulares permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "096",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "096",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

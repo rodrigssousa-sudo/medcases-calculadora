@@ -1,0 +1,3029 @@
+{
+  "schema": "medcases.gold33.new-review-candidate.v1",
+  "lot": "093",
+  "status": "PENDENTE_REVISAO_MEDICA",
+  "historicalApprovalApplies": false,
+  "purpose": "Completar um novo candidato com proveniência explícita, sem reconstruir o original ausente.",
+  "medications": [
+    {
+      "ID": "diclofenaco_gotas",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Diclofenaco resinato — gotas 15 mg/mL",
+          "es": "Diclofenaco resinato — gotas 15 mg/mL"
+        },
+        "class": {
+          "pt": "AINE",
+          "es": "AINE"
+        },
+        "pharmacologicClass": {
+          "pt": "Inibição de COX e síntese de prostaglandinas",
+          "es": "Inhibición de COX y síntesis de prostaglandinas"
+        },
+        "pharmacodynamics": {
+          "pt": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+          "es": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización."
+        },
+        "commonAdverseEffects": {
+          "pt": "Dispepsia, náusea, dor abdominal, edema e cefaleia.",
+          "es": "Dispepsia, náusea, dolor abdominal, edema y cefalea."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia.",
+          "es": "Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia."
+        },
+        "adverseEffects": {
+          "pt": "Dispepsia, náusea, dor abdominal, edema e cefaleia. Graves: Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia.",
+          "es": "Dispepsia, náusea, dolor abdominal, edema y cefalea. Graves: Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia."
+        },
+        "contraindications": {
+          "pt": "Alergia a AINE/asma por aspirina, perioperatório de CABG, sangramento GI ativo; outras por produto.",
+          "es": "Alergia a AINE/asma por aspirina, perioperatorio de CABG, sangrado GI activo; otras por producto."
+        },
+        "interactions": {
+          "pt": "Anticoagulantes/antiagregantes, outros AINE, lítio, metotrexato, IECA/ARA2/diuréticos e CYP2C9.",
+          "es": "Anticoagulantes/antiagregantes, otros AINE, litio, metotrexato, IECA/ARA2/diuréticos y CYP2C9."
+        },
+        "monitoring": {
+          "pt": "Dor, PA, edema, GI/sangramento, hemograma, rim, potássio e fígado.",
+          "es": "Dolor, PA, edema, GI/sangrado, hemograma, riñón, potasio e hígado."
+        },
+        "pregnancy": {
+          "pt": "Evitar a partir de 20 semanas se possível e contraindicado no 3º trimestre conforme alerta regulatório.",
+          "es": "Evitar desde 20 semanas si es posible y contraindicado en tercer trimestre según alerta regulatoria."
+        },
+        "lactation": {
+          "pt": "A bula desaconselha durante amamentação.",
+          "es": "El prospecto desaconseja durante lactancia."
+        },
+        "specialPopulations": {
+          "pt": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+          "es": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia."
+        },
+        "patientEducation": {
+          "pt": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+          "es": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración."
+        },
+        "alerts": {
+          "pt": "Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia. Dose bloqueada sem indicação, formulação, risco CV/GI/renal/hepático, gestação e total diário de todos os AINE.",
+          "es": "Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia. Dose bloqueada sem indicação, formulação, risco CV/GI/renal/hepático, gestação e total diário de todos os AINE."
+        },
+        "mechanism": {
+          "pt": "Inibição de COX e síntese de prostaglandinas. O efeito deve ser interpretado por indicação, formulação e exposição.",
+          "es": "Inhibición de COX y síntesis de prostaglandinas. El efecto debe interpretarse por indicación, formulación y exposición."
+        },
+        "pharmacokinetics": {
+          "pt": "Metabolismo hepático CYP2C9; alta ligação proteica e eliminação renal/biliar de metabólitos.",
+          "es": "Metabolismo hepático CYP2C9; alta unión proteica y eliminación renal/biliar de metabolitos."
+        },
+        "indications": {
+          "pt": "Artrite juvenil crônica; adultos: dor/inflamação aguda. Febre isolada não é indicação.",
+          "es": "Artritis juvenil crónica; adultos: dolor/inflamación aguda. Fiebre aislada no es indicación."
+        },
+        "presentation": {
+          "pt": "Suspensão oral; frasco 20 mL.",
+          "es": "Suspensión oral; frasco 20 mL."
+        },
+        "dose": {
+          "pt": "Adultos: inicialmente 100–150 mg/dia, divididos em 2–3 tomadas.",
+          "es": "Adultos: inicialmente 100–150 mg/día, divididos en 2–3 tomas."
+        },
+        "pediatricDose": {
+          "pt": "≥1 ano: 0,5–2 mg/kg/dia em 2–3 tomadas; artrite juvenil até 3 mg/kg/dia. Máximo 150 mg/dia.",
+          "es": "≥1 año: 0,5–2 mg/kg/día en 2–3 tomas; artritis juvenil hasta 3 mg/kg/día. Máximo 150 mg/día."
+        },
+        "renalDose": {
+          "pt": "Evitar em doença renal avançada; monitorar creatinina, volume e potássio.",
+          "es": "Evitar en enfermedad renal avanzada; controlar creatinina, volumen y potasio."
+        },
+        "hepaticDose": {
+          "pt": "Contraindicado em insuficiência hepática grave em vários rótulos; monitorar transaminases, especialmente 4–8 semanas.",
+          "es": "Contraindicado en insuficiencia hepática grave en varias fichas; controlar transaminasas, especialmente 4–8 semanas."
+        },
+        "administration": {
+          "pt": "Via oral, preferencialmente nas refeições; contar em colher.",
+          "es": "Vía oral, preferentemente con comidas; contar en cuchara."
+        },
+        "preparation": {
+          "pt": "Agitar por 1 minuto; suspensão não solúvel em água/leite/suco.",
+          "es": "Agitar 1 minuto; suspensión no soluble en agua/leche/jugo."
+        },
+        "infusionProtocol": {
+          "pt": "Não aplicável à apresentação oral.",
+          "es": "No aplicable a la presentación oral."
+        },
+        "clinicalPearls": {
+          "pt": "Não intercambiar sais, concentrações ou conta-gotas.",
+          "es": "No intercambiar sales, concentraciones ni goteros."
+        },
+        "references": [
+          "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diclofenac",
+          "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid",
+          "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Medico.pdf",
+          "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Paciente.pdf"
+        ],
+        "commercialNames": {
+          "pt": "Cataflam; bula brasileira consultada.",
+          "es": "Cataflam; prospecto brasileño consultado."
+        },
+        "presentations": {
+          "pt": "15 mg/mL; aproximadamente 0,5 mg/gota, expressos como diclofenaco potássico.",
+          "es": "15 mg/mL; aproximadamente 0,5 mg/gota, expresados como diclofenaco potásico."
+        },
+        "ref": {
+          "pt": "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Medico.pdf",
+          "es": "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Medico.pdf"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/diclofenaco.json",
+        "templateSha256": "0c9f069bb319d807954cdffdffb0941600c7b4bf48c9b04c5a1474ae1f6a7f02",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Medico.pdf",
+          "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Paciente.pdf"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "indications",
+          "dose",
+          "pediatricDose",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "lactation",
+          "clinicalPearls"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "pharmacodynamics",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "pregnancy",
+          "specialPopulations",
+          "patientEducation",
+          "alerts",
+          "mechanism",
+          "pharmacokinetics",
+          "renalDose",
+          "hepaticDose"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/analgesicos.js",
+          "sourceField": "diclofenaco.mcGoldClinicalV1",
+          "lote": "025",
+          "requiredFields": 33,
+          "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+          "calculationAuthorized": false,
+          "publicationAuthorized": true,
+          "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+          "ownerPublicationAuthorization": "mission10-owner-confirmed"
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    },
+    {
+      "ID": "diclofenaco_supositorio",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Diclofenaco sódico — supositório",
+          "es": "Diclofenaco sódico — supositorio"
+        },
+        "class": {
+          "pt": "AINE",
+          "es": "AINE"
+        },
+        "pharmacologicClass": {
+          "pt": "Inibição de COX e síntese de prostaglandinas",
+          "es": "Inhibición de COX y síntesis de prostaglandinas"
+        },
+        "pharmacodynamics": {
+          "pt": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+          "es": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización."
+        },
+        "commonAdverseEffects": {
+          "pt": "Dispepsia, náusea, dor abdominal, edema e cefaleia.",
+          "es": "Dispepsia, náusea, dolor abdominal, edema y cefalea."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia.",
+          "es": "Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia."
+        },
+        "adverseEffects": {
+          "pt": "Dispepsia, náusea, dor abdominal, edema e cefaleia. Graves: Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia.",
+          "es": "Dispepsia, náusea, dolor abdominal, edema y cefalea. Graves: Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia."
+        },
+        "contraindications": {
+          "pt": "Proctite; úlcera/hemorragia GI; falência renal/hepática; doença cardiovascular estabelecida; alergia a AINE; terceiro trimestre.",
+          "es": "Proctitis; úlcera/hemorragia GI; falla renal/hepática; enfermedad cardiovascular establecida; alergia a AINE; tercer trimestre."
+        },
+        "interactions": {
+          "pt": "Anticoagulantes/antiagregantes, outros AINE, lítio, metotrexato, IECA/ARA2/diuréticos e CYP2C9.",
+          "es": "Anticoagulantes/antiagregantes, otros AINE, litio, metotrexato, IECA/ARA2/diuréticos y CYP2C9."
+        },
+        "monitoring": {
+          "pt": "Dor, PA, edema, GI/sangramento, hemograma, rim, potássio e fígado.",
+          "es": "Dolor, PA, edema, GI/sangrado, hemograma, riñón, potasio e hígado."
+        },
+        "pregnancy": {
+          "pt": "Evitar a partir de 20 semanas se possível e contraindicado no 3º trimestre conforme alerta regulatório.",
+          "es": "Evitar desde 20 semanas si es posible y contraindicado en tercer trimestre según alerta regulatoria."
+        },
+        "lactation": {
+          "pt": "Baixa passagem; preferir menor dose/tempo e evitar tópico no mamilo.",
+          "es": "Bajo paso; preferir mínima dosis/tiempo y evitar tópico en pezón."
+        },
+        "specialPopulations": {
+          "pt": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+          "es": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia."
+        },
+        "patientEducation": {
+          "pt": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+          "es": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración."
+        },
+        "alerts": {
+          "pt": "Infarto/AVC, sangramento/perfuração GI, lesão renal/hepática, SCAR e anafilaxia. Dose bloqueada sem indicação, formulação, risco CV/GI/renal/hepático, gestação e total diário de todos os AINE.",
+          "es": "Infarto/ACV, sangrado/perforación GI, lesión renal/hepática, SCAR y anafilaxia. Dose bloqueada sem indicação, formulação, risco CV/GI/renal/hepático, gestação e total diário de todos os AINE."
+        },
+        "mechanism": {
+          "pt": "Inibição de COX e síntese de prostaglandinas. O efeito deve ser interpretado por indicação, formulação e exposição.",
+          "es": "Inhibición de COX y síntesis de prostaglandinas. El efecto debe interpretarse por indicación, formulación y exposición."
+        },
+        "pharmacokinetics": {
+          "pt": "Metabolismo hepático CYP2C9; alta ligação proteica e eliminação renal/biliar de metabólitos.",
+          "es": "Metabolismo hepático CYP2C9; alta unión proteica y eliminación renal/biliar de metabolitos."
+        },
+        "indications": {
+          "pt": "Dor/inflamação; pediatria: artrite juvenil e dor pós-operatória nas idades autorizadas.",
+          "es": "Dolor/inflamación; pediatría: artritis juvenil y dolor posoperatorio en edades autorizadas."
+        },
+        "presentation": {
+          "pt": "Supositório retal.",
+          "es": "Supositorio rectal."
+        },
+        "dose": {
+          "pt": "Adultos: 75–150 mg/dia fracionados; máximo total 150 mg/dia.",
+          "es": "Adultos: 75–150 mg/día divididos; máximo total 150 mg/día."
+        },
+        "pediatricDose": {
+          "pt": "1–12 anos, artrite: 1–3 mg/kg/dia em 2–3 doses. 6–12 anos, pós-operatório: 1–2 mg/kg/dia, até 4 dias; somente 12,5/25 mg.",
+          "es": "1–12 años, artritis: 1–3 mg/kg/día en 2–3 dosis. 6–12 años, posoperatorio: 1–2 mg/kg/día, hasta 4 días; solo 12,5/25 mg."
+        },
+        "renalDose": {
+          "pt": "Evitar em doença renal avançada; monitorar creatinina, volume e potássio.",
+          "es": "Evitar en enfermedad renal avanzada; controlar creatinina, volumen y potasio."
+        },
+        "hepaticDose": {
+          "pt": "Contraindicado em insuficiência hepática grave em vários rótulos; monitorar transaminases, especialmente 4–8 semanas.",
+          "es": "Contraindicado en insuficiencia hepática grave en varias fichas; controlar transaminasas, especialmente 4–8 semanas."
+        },
+        "administration": {
+          "pt": "Via retal após evacuação; não ingerir.",
+          "es": "Vía rectal tras evacuar; no ingerir."
+        },
+        "preparation": {
+          "pt": "Supositório pronto para administração retal.",
+          "es": "Supositorio listo para administración rectal."
+        },
+        "infusionProtocol": {
+          "pt": "Não aplicável.",
+          "es": "No aplicable."
+        },
+        "clinicalPearls": {
+          "pt": "50/100 mg não indicados para crianças.",
+          "es": "50/100 mg no indicados para niños."
+        },
+        "references": [
+          "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=diclofenac",
+          "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/drug-safety-and-availability/fda-recommends-avoiding-use-nsaid-pregnancy-20-weeks-or-later-because-they-can-result-low-amniotic-fluid",
+          "https://www.medicines.org.uk/emc/product/1044/smpc"
+        ],
+        "commercialNames": {
+          "pt": "Voltarol; Reino Unido.",
+          "es": "Voltarol; Reino Unido."
+        },
+        "presentations": {
+          "pt": "12,5; 25; 50; 100 mg.",
+          "es": "12,5; 25; 50; 100 mg."
+        },
+        "ref": {
+          "pt": "https://www.medicines.org.uk/emc/product/1044/smpc",
+          "es": "https://www.medicines.org.uk/emc/product/1044/smpc"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/diclofenaco.json",
+        "templateSha256": "0c9f069bb319d807954cdffdffb0941600c7b4bf48c9b04c5a1474ae1f6a7f02",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://www.medicines.org.uk/emc/product/1044/smpc"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "indications",
+          "dose",
+          "pediatricDose",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "contraindications",
+          "clinicalPearls"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "pharmacodynamics",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "interactions",
+          "monitoring",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "alerts",
+          "mechanism",
+          "pharmacokinetics",
+          "renalDose",
+          "hepaticDose"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/analgesicos.js",
+          "sourceField": "diclofenaco.mcGoldClinicalV1",
+          "lote": "025",
+          "requiredFields": 33,
+          "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+          "calculationAuthorized": false,
+          "publicationAuthorized": true,
+          "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+          "ownerPublicationAuthorization": "mission10-owner-confirmed"
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    },
+    {
+      "ID": "cetoprofeno_gotas",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Cetoprofeno — gotas 20 mg/mL",
+          "es": "Ketoprofeno — gotas 20 mg/mL"
+        },
+        "class": {
+          "pt": "AINE derivado do ácido propiônico",
+          "es": "AINE derivado del ácido propiónico"
+        },
+        "pharmacologicClass": {
+          "pt": "Inibição não seletiva de COX",
+          "es": "Inhibición no selectiva de COX"
+        },
+        "commercialNames": {
+          "pt": "Genérico Eurofarma, Brasil.",
+          "es": "Genérico Eurofarma, Brasil."
+        },
+        "presentation": {
+          "pt": "Solução oral em gotas.",
+          "es": "Solución oral en gotas."
+        },
+        "presentations": {
+          "pt": "20 mg/mL; 20 gotas/mL; 1 mg/gota.",
+          "es": "20 mg/mL; 20 gotas/mL; 1 mg/gota."
+        },
+        "mechanism": {
+          "pt": "Inibição não seletiva de COX. O efeito deve ser interpretado por indicação, formulação e exposição.",
+          "es": "Inhibición no selectiva de COX. El efecto debe interpretarse por indicación, formulación y exposición."
+        },
+        "pharmacodynamics": {
+          "pt": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+          "es": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización."
+        },
+        "pharmacokinetics": {
+          "pt": "Alta ligação proteica; metabolismo hepático; eliminação renal de conjugados.",
+          "es": "Alta unión proteica; metabolismo hepático; eliminación renal de conjugados."
+        },
+        "indications": {
+          "pt": "Dor e inflamação musculoesquelética; indicações e apresentações variam regionalmente.",
+          "es": "Dolor e inflamación musculoesquelética; indicaciones y presentaciones varían regionalmente."
+        },
+        "dose": {
+          "pt": "Adultos: 50 gotas a cada 6–8 h; máximo 300 mg/dia.",
+          "es": "Adultos: 50 gotas cada 6–8 h; máximo 300 mg/día."
+        },
+        "pediatricDose": {
+          "pt": ">1 ano: 1 gota/kg a cada 6–8 h. 7–11 anos: 25 gotas a cada 6–8 h. Não extrapolar para <1 ano.",
+          "es": ">1 año: 1 gota/kg cada 6–8 h. 7–11 años: 25 gotas cada 6–8 h. No extrapolar a <1 año."
+        },
+        "renalDose": {
+          "pt": "Reduzir dose inicial; manter mínima eficaz. Insuficiência grave: contraindicado.",
+          "es": "Reducir dosis inicial; mantener mínima eficaz. Insuficiencia grave: contraindicado."
+        },
+        "hepaticDose": {
+          "pt": "Monitorar; menor dose eficaz. Insuficiência grave: contraindicado.",
+          "es": "Monitorizar; menor dosis eficaz. Insuficiencia grave: contraindicado."
+        },
+        "commonAdverseEffects": {
+          "pt": "Dispepsia, náusea, dor abdominal, edema e tontura.",
+          "es": "Dispepsia, náusea, dolor abdominal, edema y mareo."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "IAM/AVC, sangramento/perfuração GI, lesão renal, hepatotoxicidade, broncoespasmo e SCAR.",
+          "es": "IAM/ACV, sangrado/perforación GI, lesión renal, hepatotoxicidad, broncoespasmo y SCAR."
+        },
+        "adverseEffects": {
+          "pt": "Dispepsia, náusea, dor abdominal, edema e tontura. Graves: IAM/AVC, sangramento/perfuração GI, lesão renal, hepatotoxicidade, broncoespasmo e SCAR.",
+          "es": "Dispepsia, náusea, dolor abdominal, edema y mareo. Graves: IAM/ACV, sangrado/perforación GI, lesión renal, hepatotoxicidad, broncoespasmo y SCAR."
+        },
+        "contraindications": {
+          "pt": "Alergia a AINE/AAS, CABG, sangramento GI ativo e insuficiência renal grave.",
+          "es": "Alergia a AINE/AAS, CABG, sangrado GI activo e insuficiencia renal grave."
+        },
+        "interactions": {
+          "pt": "Anticoagulantes, AAS/outros AINE, IECA/BRA/diuréticos, lítio e metotrexato.",
+          "es": "Anticoagulantes, AAS/otros AINE, IECA/ARA-II/diuréticos, litio y metotrexato."
+        },
+        "monitoring": {
+          "pt": "Dor, PA, GI, rim, fígado, edema e risco CV.",
+          "es": "Dolor, PA, GI, riñón, hígado, edema y riesgo CV."
+        },
+        "administration": {
+          "pt": "Somente via oral.",
+          "es": "Solo vía oral."
+        },
+        "preparation": {
+          "pt": "Usar conta-gotas do produto; 1 gota=1 mg.",
+          "es": "Usar gotero del producto; 1 gota=1 mg."
+        },
+        "infusionProtocol": {
+          "pt": "Não aplicável à formulação oral.",
+          "es": "No aplicable a formulación oral."
+        },
+        "pregnancy": {
+          "pt": "Evitar uso sem avaliação obstétrica; contraindicado no terceiro trimestre.",
+          "es": "Evitar uso sin evaluación obstétrica; contraindicado en tercer trimestre."
+        },
+        "lactation": {
+          "pt": "Cautela; preferir alternativas com melhor documentação.",
+          "es": "Precaución; preferir alternativas mejor documentadas."
+        },
+        "specialPopulations": {
+          "pt": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+          "es": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia."
+        },
+        "patientEducation": {
+          "pt": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+          "es": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación."
+        },
+        "clinicalPearls": {
+          "pt": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+          "es": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración."
+        },
+        "alerts": {
+          "pt": "IAM/AVC, sangramento/perfuração GI, lesão renal, hepatotoxicidade, broncoespasmo e SCAR. Uso bloqueado sem produto/formulação, indicação, risco GI/CV, rim/fígado, gestação e anticoagulantes.",
+          "es": "IAM/ACV, sangrado/perforación GI, lesión renal, hepatotoxicidad, broncoespasmo y SCAR. Uso bloqueado sem produto/formulação, indicação, risco GI/CV, rim/fígado, gestação e anticoagulantes."
+        },
+        "references": [
+          "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=ketoprofen",
+          "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/non-steroidal-anti-inflammatory-drugs-nsaids",
+          "https://eurofarma.com.br/produtos/bulas/view/healthcare/pt/bula-cetoprofeno-solucao-oral-gotas.html",
+          "https://eurofarma.com.br/produtos/bulas/view/patient/pt/bula-cetoprofeno-solucao-oral-gotas.html"
+        ],
+        "ref": {
+          "pt": "https://eurofarma.com.br/produtos/bulas/view/healthcare/pt/bula-cetoprofeno-solucao-oral-gotas.html",
+          "es": "https://eurofarma.com.br/produtos/bulas/view/healthcare/pt/bula-cetoprofeno-solucao-oral-gotas.html"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/cetoprofeno.json",
+        "templateSha256": "92e70a001d201e6a9b143907d4f6eef1e4c778615b42500884f6c502b82ec6bb",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://eurofarma.com.br/produtos/bulas/view/healthcare/pt/bula-cetoprofeno-solucao-oral-gotas.html",
+          "https://eurofarma.com.br/produtos/bulas/view/patient/pt/bula-cetoprofeno-solucao-oral-gotas.html"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "dose",
+          "pediatricDose",
+          "renalDose",
+          "hepaticDose",
+          "administration",
+          "preparation",
+          "pregnancy",
+          "infusionProtocol"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "indications",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "clinicalPearls",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/analgesicos.js",
+          "sourceField": "cetoprofeno.mcGoldClinicalV1",
+          "lote": "017",
+          "requiredFields": 33,
+          "approvedSha256": "253c17c2327715b3e25ab80e7138de200e935b80e7d849c1c6088a69116420a3",
+          "calculationAuthorized": false,
+          "publicationAuthorized": true,
+          "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+          "ownerPublicationAuthorization": "mission10-owner-confirmed"
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    },
+    {
+      "ID": "salbutamol_spray",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Salbutamol — aerossol 100 microgramas/acionamento",
+          "es": "Salbutamol — aerosol 100 microgramos/actuación"
+        },
+        "class": {
+          "pt": "Broncodilatador beta2-agonista de curta acao",
+          "es": "Broncodilatador agonista beta2 de corta accion"
+        },
+        "pharmacologicClass": {
+          "pt": "Agonista beta2-adrenergico SABA",
+          "es": "Agonista beta2-adrenergico SABA"
+        },
+        "mechanism": {
+          "pt": "Estimula beta2 em musculo liso bronquico, aumentando cAMP e promovendo broncodilatacao.",
+          "es": "Estimula beta2 en musculo liso bronquial, aumentando cAMP y produciendo broncodilatacion."
+        },
+        "pharmacodynamics": {
+          "pt": "Broncodilatacao rapida; doses excessivas podem causar taquicardia e hipocalemia.",
+          "es": "Broncodilatacion rapida; dosis excesivas pueden causar taquicardia e hipopotasemia."
+        },
+        "pharmacokinetics": {
+          "pt": "10–20% da dose inalada alcança vias inferiores; eliminação principalmente urinária.",
+          "es": "10–20% de dosis inhalada alcanza vías inferiores; eliminación principalmente urinaria."
+        },
+        "indications": {
+          "pt": "Alívio/prevenção do broncoespasmo; adultos e crianças ≥4 anos no escopo escolhido.",
+          "es": "Alivio/prevención del broncoespasmo; adultos y niños ≥4 años en el alcance elegido."
+        },
+        "commercialNames": {
+          "pt": "Ventolin Evohaler, Reino Unido.",
+          "es": "Ventolin Evohaler, Reino Unido."
+        },
+        "presentation": {
+          "pt": "Inalador pressurizado dosimetrado.",
+          "es": "Inhalador presurizado dosificado."
+        },
+        "presentations": {
+          "pt": "100 microgramas/acionamento; 200 acionamentos.",
+          "es": "100 microgramos/actuación; 200 actuaciones."
+        },
+        "dose": {
+          "pt": "Alívio adulto: 1–2 jatos. Demanda: máximo 8 jatos/24 h; necessidade crescente exige reavaliação.",
+          "es": "Alivio adulto: 1–2 inhalaciones. Demanda: máximo 8/24 h; necesidad creciente exige reevaluación."
+        },
+        "pediatricDose": {
+          "pt": "4–11 anos: 1 jato; até 2 se necessário. ≥12 anos: dose adulta. <4 anos: revisão específica.",
+          "es": "4–11 años: 1 inhalación; hasta 2 si precisa. ≥12 años: dosis adulta. <4 años: revisión específica."
+        },
+        "renalDose": {
+          "pt": "Sem ajuste numerico especifico.",
+          "es": "Sin ajuste numerico especifico."
+        },
+        "hepaticDose": {
+          "pt": "Sem ajuste numerico especifico.",
+          "es": "Sin ajuste numerico especifico."
+        },
+        "commonAdverseEffects": {
+          "pt": "Tremor, nervosismo, taquicardia, cefaleia e palpitações.",
+          "es": "Temblor, nerviosismo, taquicardia, cefalea y palpitaciones."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Broncoespasmo paradoxal, taquiarritmias, hipocalemia e acidose lactica em uso excessivo/intenso.",
+          "es": "Broncoespasmo paradojico, taquiarritmias, hipopotasemia y acidosis lactica con uso excesivo/intenso."
+        },
+        "adverseEffects": {
+          "pt": "Tosse, irritacao de garganta e nausea podem ocorrer.",
+          "es": "Pueden ocurrir tos, irritacion de garganta y nausea."
+        },
+        "contraindications": {
+          "pt": "Hipersensibilidade ao albuterol/salbutamol ou componentes.",
+          "es": "Hipersensibilidad a albuterol/salbutamol o componentes."
+        },
+        "interactions": {
+          "pt": "Beta-bloqueadores antagonizam; diureticos, xantinas e outros simpaticomimeticos podem aumentar efeitos/hipocalemia; MAOI/TCA exigem cautela.",
+          "es": "Beta-bloqueantes antagonizan; diureticos, xantinas y otros simpaticomimeticos pueden aumentar efectos/hipopotasemia; IMAO/TCA requieren precaucion."
+        },
+        "monitoring": {
+          "pt": "Resposta, FC, tremor e potassio em uso intensivo; aumento da necessidade de resgate exige reavaliacao.",
+          "es": "Respuesta, FC, temblor y potasio en uso intensivo; aumento de necesidad de rescate exige reevaluacion."
+        },
+        "administration": {
+          "pt": "Inalação oral; coordenar acionamento/inspiração. Espaçador quando necessário.",
+          "es": "Inhalación oral; coordinar actuación/inspiración. Espaciador cuando necesario."
+        },
+        "preparation": {
+          "pt": "Dispositivo pronto; não diluir nem nebulizar.",
+          "es": "Dispositivo listo; no diluir ni nebulizar."
+        },
+        "infusionProtocol": {
+          "pt": "Não aplicável; não injetar.",
+          "es": "No aplicable; no inyectar."
+        },
+        "pregnancy": {
+          "pt": "Usar conforme beneficio-risco; asma descontrolada tambem traz risco.",
+          "es": "Usar segun beneficio-riesgo; asma no controlada tambien implica riesgo."
+        },
+        "lactation": {
+          "pt": "Dados limitados; uso inalatorio tende a menor exposicao sistemica.",
+          "es": "Datos limitados; uso inhalado tiende a menor exposicion sistemica."
+        },
+        "specialPopulations": {
+          "pt": "Doenca cardiaca, hipertiroidismo e risco de hipocalemia exigem cautela.",
+          "es": "Enfermedad cardiaca, hipertiroidismo y riesgo de hipopotasemia requieren precaucion."
+        },
+        "patientEducation": {
+          "pt": "Se a dose habitual deixar de aliviar, procurar avaliacao urgente; nao aumentar frequencia por conta propria.",
+          "es": "Si dosis habitual deja de aliviar, buscar evaluacion urgente; no aumentar frecuencia por cuenta propia."
+        },
+        "clinicalPearls": {
+          "pt": "Na asma, SABA não deve ser tratamento único; associar terapia anti-inflamatória.",
+          "es": "En asma, SABA no debe ser tratamiento único; asociar terapia antiinflamatoria."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. AEROSSOL_DOSIMETRADO; SEM_CONVERSAO_DE_NEBULIZACAO; BETA2; HIPOCALEMIA.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. AEROSOL_DOSIFICADO; SIN_CONVERSION_DE_NEBULIZACION; BETA2; HIPOPOTASEMIA."
+        },
+        "alerts": {
+          "pt": "Não transferir volumes, doses ou cortes de peso da solução nebulizada para o aerossol.",
+          "es": "No transferir volúmenes, dosis ni límites de peso de solución nebulizada al aerosol."
+        },
+        "references": [
+          "DailyMed/NLM EUA - Albuterol Sulfate Inhalation Solution 0.083% 2.5 mg/3 mL, active 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d",
+          "https://www.medicines.org.uk/emc/product/850/smpc",
+          "https://www.medicines.org.uk/emc/files/pil.850.pdf"
+        ],
+        "ref": {
+          "pt": "https://www.medicines.org.uk/emc/product/850/smpc",
+          "es": "https://www.medicines.org.uk/emc/product/850/smpc"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/salbutamol_nebulizacao.json",
+        "templateSha256": "11760e3f8bd9271bc9c7e4c851a2ad9799abd3ce7cc2faa78a73bd3753833e21",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://www.medicines.org.uk/emc/product/850/smpc",
+          "https://www.medicines.org.uk/emc/files/pil.850.pdf"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "indications",
+          "pharmacokinetics",
+          "dose",
+          "pediatricDose",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "clinicalPearls",
+          "safetyFlags",
+          "alerts"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "renalDose",
+          "hepaticDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/gold33_nova_lista.js",
+          "sourceField": "salbutamol_nebulizacao.mcGoldClinicalV1",
+          "requiredFields": 33,
+          "lote": "103",
+          "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+          "calculationAuthorized": false,
+          "publicationAuthorized": false,
+          "clinicalPackagePublicationState": "BLOQUEADA",
+          "list": "NOVA_LISTA_GOLD33_V1",
+          "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+          "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+          "packageRestrictions": [
+            {
+              "id": "adrenalina_autoinjetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "PRODUTO_ESPECIFICO_AUVIQ",
+                "PESO_MENOR_7_5_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "aminofilina_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "TDM_OBRIGATORIO",
+                "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "betametasona_injetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA",
+                "INDICACAO_ROTA_OBRIGATORIAS"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "brometo_de_ipratropio_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "VIA_NAO_INALATORIA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "dexametasona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "AUTOMACAO_EXIGE_INDICACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "fenoterol_gotas",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "DOSE_ATUAL_NAO_VERIFICADA",
+                "VIA_AUTOMATICA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [
+                "BULA_PRIMARIA_ATUAL_PENDENTE"
+              ],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "hidrocortisona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "CALCULO_PEDIATRICO_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "metilprednisolona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "prometazina_im",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                "IDADE_MENOR_2_CONTRAINDICADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "salbutamol_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            }
+          ],
+          "packageRecordMetadata": {
+            "ID": "salbutamol_nebulizacao",
+            "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+            "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "ESCOPO_VALIDADO": "Salbutamol/albuterol 0,083% 2,5 mg/3 mL nebulizacao - EUA",
+            "BLOQUEIOS_CLINICOS": [
+              "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+              "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+            ],
+            "PENDENCIAS_NAO_BLOQUEANTES": [],
+            "HOMOLOGACAO": {
+              "LISTA": "NOVA_LISTA_GOLD33_V1",
+              "LOTE": "103",
+              "MEDICO_REVISOR": "Dra Eugenia Marques",
+              "DATA_REVISAO": "20-09-2026",
+              "RESULTADO": "Aprovado integralmente",
+              "ARQUIVO_REVISADO": "103",
+              "EXCECOES_INFORMADAS": 0,
+              "REVISAO_CLINICA": "HOMOLOGADA",
+              "HOMOLOGACAO_DADOS": "SIM",
+              "INTEGRACAO_TECNICA": "NAO_INICIADA",
+              "PUBLICACAO": "BLOQUEADA",
+              "CLINICAL_CONTENT_FROZEN": true
+            }
+          },
+          "supersededPackages": [
+            "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+          ],
+          "referenceOnly": true
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    },
+    {
+      "ID": "salbutamol_solucao_inalatoria",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Salbutamol (albuterol) 0,083% - 2,5 mg/3 mL nebulizacao",
+          "es": "Salbutamol (albuterol) 0,083% - 2,5 mg/3 mL nebulizacion"
+        },
+        "class": {
+          "pt": "Broncodilatador beta2-agonista de curta acao",
+          "es": "Broncodilatador agonista beta2 de corta accion"
+        },
+        "pharmacologicClass": {
+          "pt": "Agonista beta2-adrenergico SABA",
+          "es": "Agonista beta2-adrenergico SABA"
+        },
+        "mechanism": {
+          "pt": "Estimula beta2 em musculo liso bronquico, aumentando cAMP e promovendo broncodilatacao.",
+          "es": "Estimula beta2 en musculo liso bronquial, aumentando cAMP y produciendo broncodilatacion."
+        },
+        "pharmacodynamics": {
+          "pt": "Broncodilatacao rapida; doses excessivas podem causar taquicardia e hipocalemia.",
+          "es": "Broncodilatacion rapida; dosis excesivas pueden causar taquicardia e hipopotasemia."
+        },
+        "pharmacokinetics": {
+          "pt": "Efeito predominantemente pulmonar por nebulizacao; parte e deglutida/absorvida sistemicamente.",
+          "es": "Efecto predominantemente pulmonar por nebulizacion; parte se deglute/absorbe sistemicamente."
+        },
+        "indications": {
+          "pt": "Prevencao/alivio de broncoespasmo em adultos e criancas 2-12 anos conforme rotulo 0,083%.",
+          "es": "Prevencion/alivio de broncoespasmo en adultos y niños 2-12 anos segun rotulo 0,083%."
+        },
+        "commercialNames": {
+          "pt": "Albuterol Sulfate Inhalation Solution, EUA; equivalente farmacologico de salbutamol.",
+          "es": "Albuterol Sulfate Inhalation Solution, EE.UU.; equivalente farmacologico de salbutamol."
+        },
+        "presentation": {
+          "pt": "Vial dose unitaria para nebulizacao.",
+          "es": "Vial dosis unitaria para nebulizacion."
+        },
+        "presentations": {
+          "pt": "0,083% = 2,5 mg/3 mL.",
+          "es": "0,083% = 2,5 mg/3 mL."
+        },
+        "dose": {
+          "pt": "Adultos e criancas 2-12 anos com >=15 kg: 2,5 mg = 1 vial por nebulizacao, 3-4x/dia. Doses mais frequentes/altas nao recomendadas no rotulo.",
+          "es": "Adultos y niños 2-12 anos con >=15 kg: 2,5 mg = 1 vial por nebulizacion, 3-4 veces/dia. Dosis mas frecuentes/altas no recomendadas en rotulo."
+        },
+        "pediatricDose": {
+          "pt": "2-12 anos e >=15 kg: 2,5 mg 3-4x/dia. <15 kg que necessite <2,5 mg/dose: usar solucao 0,5% em vez de fracionar vial 0,083%. <2 anos nao coberto por este rotulo.",
+          "es": "2-12 anos y >=15 kg: 2,5 mg 3-4 veces/dia. <15 kg que requiera <2,5 mg/dosis: usar solucion 0,5% en vez de fraccionar vial 0,083%. <2 anos no cubierto por este rotulo."
+        },
+        "renalDose": {
+          "pt": "Sem ajuste numerico especifico.",
+          "es": "Sin ajuste numerico especifico."
+        },
+        "hepaticDose": {
+          "pt": "Sem ajuste numerico especifico.",
+          "es": "Sin ajuste numerico especifico."
+        },
+        "commonAdverseEffects": {
+          "pt": "Tremor, nervosismo, taquicardia, cefaleia e palpitações.",
+          "es": "Temblor, nerviosismo, taquicardia, cefalea y palpitaciones."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Broncoespasmo paradoxal, taquiarritmias, hipocalemia e acidose lactica em uso excessivo/intenso.",
+          "es": "Broncoespasmo paradojico, taquiarritmias, hipopotasemia y acidosis lactica con uso excesivo/intenso."
+        },
+        "adverseEffects": {
+          "pt": "Tosse, irritacao de garganta e nausea podem ocorrer.",
+          "es": "Pueden ocurrir tos, irritacion de garganta y nausea."
+        },
+        "contraindications": {
+          "pt": "Hipersensibilidade ao albuterol/salbutamol ou componentes.",
+          "es": "Hipersensibilidad a albuterol/salbutamol o componentes."
+        },
+        "interactions": {
+          "pt": "Beta-bloqueadores antagonizam; diureticos, xantinas e outros simpaticomimeticos podem aumentar efeitos/hipocalemia; MAOI/TCA exigem cautela.",
+          "es": "Beta-bloqueantes antagonizan; diureticos, xantinas y otros simpaticomimeticos pueden aumentar efectos/hipopotasemia; IMAO/TCA requieren precaucion."
+        },
+        "monitoring": {
+          "pt": "Resposta, FC, tremor e potassio em uso intensivo; aumento da necessidade de resgate exige reavaliacao.",
+          "es": "Respuesta, FC, temblor y potasio en uso intensivo; aumento de necesidad de rescate exige reevaluacion."
+        },
+        "administration": {
+          "pt": "Somente por nebulizador; administrar vial completo no produto 0,083%.",
+          "es": "Solo por nebulizador; administrar vial completo en producto 0,083%."
+        },
+        "preparation": {
+          "pt": "Vial unitario 3 mL pronto para nebulizacao.",
+          "es": "Vial unitario 3 mL listo para nebulizacion."
+        },
+        "infusionProtocol": {
+          "pt": "NAO APLICAVEL.",
+          "es": "NO APLICA."
+        },
+        "pregnancy": {
+          "pt": "Usar conforme beneficio-risco; asma descontrolada tambem traz risco.",
+          "es": "Usar segun beneficio-riesgo; asma no controlada tambien implica riesgo."
+        },
+        "lactation": {
+          "pt": "Dados limitados; uso inalatorio tende a menor exposicao sistemica.",
+          "es": "Datos limitados; uso inhalado tiende a menor exposicion sistemica."
+        },
+        "specialPopulations": {
+          "pt": "Doenca cardiaca, hipertiroidismo e risco de hipocalemia exigem cautela.",
+          "es": "Enfermedad cardiaca, hipertiroidismo y riesgo de hipopotasemia requieren precaucion."
+        },
+        "patientEducation": {
+          "pt": "Se a dose habitual deixar de aliviar, procurar avaliacao urgente; nao aumentar frequencia por conta propria.",
+          "es": "Si dosis habitual deja de aliviar, buscar evaluacion urgente; no aumentar frecuencia por cuenta propia."
+        },
+        "clinicalPearls": {
+          "pt": "A apresentacao 0,083% nao serve para doses <2,5 mg. Para criancas <15 kg que necessitam <2,5 mg, o rotulo orienta a solucao 0,5%.",
+          "es": "La presentacion 0,083% no sirve para dosis <2,5 mg. Para niños <15 kg que requieren <2,5 mg, rotulo indica solucion 0,5%."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. NEBULIZACAO; 2_5MG_3ML; PESO_15KG; BETA2; HIPOCALemia.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. NEBULIZACION; 2_5MG_3ML; PESO_15KG; BETA2; HIPOPOTASEMIA."
+        },
+        "alerts": {
+          "pt": "Crianca <15 kg que precise <2,5 mg: nao usar fracao do vial 0,083%; selecionar solucao 0,5% conforme rotulo.",
+          "es": "Niño <15 kg que necesite <2,5 mg: no usar fraccion de vial 0,083%; seleccionar solucion 0,5% segun rotulo."
+        },
+        "references": [
+          "DailyMed/NLM EUA - Albuterol Sulfate Inhalation Solution 0.083% 2.5 mg/3 mL, active 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d",
+          "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d"
+        ],
+        "ref": {
+          "pt": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d",
+          "es": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/salbutamol_nebulizacao.json",
+        "templateSha256": "11760e3f8bd9271bc9c7e4c851a2ad9799abd3ce7cc2faa78a73bd3753833e21",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d"
+        ],
+        "newProductSpecificFields": [],
+        "inheritedFieldsRequiringReview": [
+          "name",
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "indications",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "dose",
+          "pediatricDose",
+          "renalDose",
+          "hepaticDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "clinicalPearls",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/gold33_nova_lista.js",
+          "sourceField": "salbutamol_nebulizacao.mcGoldClinicalV1",
+          "requiredFields": 33,
+          "lote": "103",
+          "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+          "calculationAuthorized": false,
+          "publicationAuthorized": false,
+          "clinicalPackagePublicationState": "BLOQUEADA",
+          "list": "NOVA_LISTA_GOLD33_V1",
+          "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+          "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+          "packageRestrictions": [
+            {
+              "id": "adrenalina_autoinjetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "PRODUTO_ESPECIFICO_AUVIQ",
+                "PESO_MENOR_7_5_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "aminofilina_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "TDM_OBRIGATORIO",
+                "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "betametasona_injetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA",
+                "INDICACAO_ROTA_OBRIGATORIAS"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "brometo_de_ipratropio_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "VIA_NAO_INALATORIA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "dexametasona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "AUTOMACAO_EXIGE_INDICACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "fenoterol_gotas",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "DOSE_ATUAL_NAO_VERIFICADA",
+                "VIA_AUTOMATICA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [
+                "BULA_PRIMARIA_ATUAL_PENDENTE"
+              ],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "hidrocortisona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "CALCULO_PEDIATRICO_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "metilprednisolona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "prometazina_im",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                "IDADE_MENOR_2_CONTRAINDICADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "salbutamol_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            }
+          ],
+          "packageRecordMetadata": {
+            "ID": "salbutamol_nebulizacao",
+            "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+            "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "ESCOPO_VALIDADO": "Salbutamol/albuterol 0,083% 2,5 mg/3 mL nebulizacao - EUA",
+            "BLOQUEIOS_CLINICOS": [
+              "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+              "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+            ],
+            "PENDENCIAS_NAO_BLOQUEANTES": [],
+            "HOMOLOGACAO": {
+              "LISTA": "NOVA_LISTA_GOLD33_V1",
+              "LOTE": "103",
+              "MEDICO_REVISOR": "Dra Eugenia Marques",
+              "DATA_REVISAO": "20-09-2026",
+              "RESULTADO": "Aprovado integralmente",
+              "ARQUIVO_REVISADO": "103",
+              "EXCECOES_INFORMADAS": 0,
+              "REVISAO_CLINICA": "HOMOLOGADA",
+              "HOMOLOGACAO_DADOS": "SIM",
+              "INTEGRACAO_TECNICA": "NAO_INICIADA",
+              "PUBLICACAO": "BLOQUEADA",
+              "CLINICAL_CONTENT_FROZEN": true
+            }
+          },
+          "supersededPackages": [
+            "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+          ],
+          "referenceOnly": true
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false,
+      "RECONCILIACAO_CANONICA": {
+        "candidateAliasOf": "salbutamol_nebulizacao",
+        "status": "PENDENTE_REVISAO_DE_ESCOPO",
+        "action": "Não adicionar um segundo registro ativo para o mesmo produto."
+      }
+    },
+    {
+      "ID": "fenoterol_solucao_inalatoria",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Bromidrato de fenoterol 5 mg/mL gotas - Brasil",
+          "es": "Bromhidrato de fenoterol 5 mg/mL gotas - Brasil"
+        },
+        "class": {
+          "pt": "Broncodilatador beta2-agonista de curta acao",
+          "es": "Broncodilatador agonista beta2 de corta accion"
+        },
+        "pharmacologicClass": {
+          "pt": "Agonista beta2-adrenergico",
+          "es": "Agonista beta2-adrenergico"
+        },
+        "mechanism": {
+          "pt": "Agonismo beta2 relaxa musculo liso bronquico. Esta descricao e consistente com a bula profissional historica do produto.",
+          "es": "Agonismo beta2 relaja musculo liso bronquial. Esta descripcion es consistente con ficha profesional historica del producto."
+        },
+        "pharmacodynamics": {
+          "pt": "Broncodilatacao rapida; pode causar taquicardia, tremor e hipocalemia.",
+          "es": "Broncodilatacion rapida; puede causar taquicardia, temblor e hipopotasemia."
+        },
+        "pharmacokinetics": {
+          "pt": "",
+          "es": ""
+        },
+        "indications": {
+          "pt": "Produto 5 mg/mL aparece em listagem regulatoria/precos Anvisa vigente em 2026 para solucao em gotas. Indicacoes e posologia atuais nao foram confirmadas em bula primaria atual nesta execucao.",
+          "es": "Producto 5 mg/mL aparece en listado regulatorio/precios Anvisa vigente en 2026 como solucion en gotas. Indicaciones y posologia actuales no fueron confirmadas en ficha primaria actual en esta ejecucion."
+        },
+        "commercialNames": {
+          "pt": "BEROTEC aparece em listagens publicas brasileiras; marcas genericas tambem existem.",
+          "es": "BEROTEC aparece en listados publicos brasileños; tambien existen marcas genericas."
+        },
+        "presentation": {
+          "pt": "Solucao 5 mg/mL em frasco conta-gotas 20 mL conforme listagens brasileiras.",
+          "es": "Solucion 5 mg/mL en frasco gotero 20 mL segun listados brasileños."
+        },
+        "presentations": {
+          "pt": "5 mg/mL, 20 mL.",
+          "es": "5 mg/mL, 20 mL."
+        },
+        "dose": {
+          "pt": "",
+          "es": ""
+        },
+        "pediatricDose": {
+          "pt": "",
+          "es": ""
+        },
+        "renalDose": {
+          "pt": "",
+          "es": ""
+        },
+        "hepaticDose": {
+          "pt": "",
+          "es": ""
+        },
+        "commonAdverseEffects": {
+          "pt": "Tremor, taquicardia, palpitações, cefaleia e nervosismo sao descritos para beta2-agonistas/fenoterol.",
+          "es": "Temblor, taquicardia, palpitaciones, cefalea y nerviosismo se describen para agonistas beta2/fenoterol."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Hipocalemia, taquiarritmia, broncoespasmo paradoxal e eventos cardiovasculares podem ocorrer.",
+          "es": "Hipopotasemia, taquiarritmia, broncoespasmo paradojico y eventos cardiovasculares pueden ocurrir."
+        },
+        "adverseEffects": {
+          "pt": "Tosse, irritacao e nausea podem ocorrer.",
+          "es": "Pueden ocurrir tos, irritacion y nausea."
+        },
+        "contraindications": {
+          "pt": "",
+          "es": ""
+        },
+        "interactions": {
+          "pt": "Xantinas, corticosteroides e diureticos podem aumentar hipocalemia; beta-bloqueadores antagonizam broncodilatacao. Baseado em bula profissional historica, pendente de confirmacao primaria atual.",
+          "es": "Xantinas, corticoides y diureticos pueden aumentar hipopotasemia; beta-bloqueantes antagonizan broncodilatacion. Basado en ficha profesional historica, pendiente de confirmacion primaria actual."
+        },
+        "monitoring": {
+          "pt": "Resposta broncodilatadora, FC/ritmo e potassio em uso intensivo/alto risco.",
+          "es": "Respuesta broncodilatadora, FC/ritmo y potasio en uso intensivo/alto riesgo."
+        },
+        "administration": {
+          "pt": "O produto brasileiro e solucao em gotas para uso oral/inalatorio historicamente; neste candidato, nenhuma via/dose automatica e liberada sem bula primaria atual.",
+          "es": "Producto brasileño es solucion en gotas para uso oral/inhalatorio historicamente; en este candidato, ninguna via/dosis automatica se habilita sin ficha primaria actual."
+        },
+        "preparation": {
+          "pt": "",
+          "es": ""
+        },
+        "infusionProtocol": {
+          "pt": "NAO APLICAVEL.",
+          "es": "NO APLICA."
+        },
+        "pregnancy": {
+          "pt": "",
+          "es": ""
+        },
+        "lactation": {
+          "pt": "",
+          "es": ""
+        },
+        "specialPopulations": {
+          "pt": "Doenca cardiaca e risco de hipocalemia exigem cautela.",
+          "es": "Enfermedad cardiaca y riesgo de hipopotasemia requieren precaucion."
+        },
+        "patientEducation": {
+          "pt": "Nao aumentar numero de gotas por conta propria; procurar avaliacao se necessidade de resgate aumenta ou surgem palpitações intensas.",
+          "es": "No aumentar numero de gotas por cuenta propia; buscar evaluacion si aumenta necesidad de rescate o aparecen palpitaciones intensas."
+        },
+        "clinicalPearls": {
+          "pt": "A concentracao 5 mg/mL esta confirmada em listagens brasileiras atuais; a posologia atual nao foi promovida sem bula primaria verificavel.",
+          "es": "Concentracion 5 mg/mL confirmada en listados brasileños actuales; posologia actual no se promovio sin ficha primaria verificable."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. BETA2_AGONISTA; DOSE_BLOQUEADA; VIA_BLOQUEADA; HIPOCALemia; TAQUIARRITMIA.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. BETA2_AGONISTA; DOSIS_BLOQUEADA; VIA_BLOQUEADA; HIPOPOTASEMIA; TAQUIARRITMIA."
+        },
+        "alerts": {
+          "pt": "DOSE/PEDIATRIA/PREPARO permanecem BLOQUEADOS ate confirmar bula primaria atual do produto 5 mg/mL.",
+          "es": "DOSIS/PEDIATRIA/PREPARACION permanecen BLOQUEADOS hasta confirmar ficha primaria actual del producto 5 mg/mL."
+        },
+        "references": [
+          "ANVISA/CMED - listagem de precos 2026 contendo bromidrato de fenoterol 5 mg/mL gotas/BEROTEC. https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/anos-anteriores/arquivos/5333json-file-1/%40%40download/file",
+          "Bula profissional historica do bromidrato de fenoterol, hospedada por consorcio publico; usada apenas para sinais farmacologicos/interacoes, nao para liberar dose atual. https://www.conims.pr.gov.br/arquivo_usu/documentoanexo/conims-20200828-140719.pdf",
+          "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/anos-anteriores/arquivos/5333json-file-1/%40%40download/file"
+        ],
+        "ref": {
+          "pt": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/anos-anteriores/arquivos/5333json-file-1/%40%40download/file",
+          "es": "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/anos-anteriores/arquivos/5333json-file-1/%40%40download/file"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/fenoterol_gotas.json",
+        "templateSha256": "75acfdff650220647f3251f2d6f9139d43b22db06064b3677009172ad0216990",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/anos-anteriores/arquivos/5333json-file-1/%40%40download/file"
+        ],
+        "newProductSpecificFields": [],
+        "inheritedFieldsRequiringReview": [
+          "name",
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "indications",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "dose",
+          "pediatricDose",
+          "renalDose",
+          "hepaticDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "clinicalPearls",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/gold33_nova_lista.js",
+          "sourceField": "fenoterol_gotas.mcGoldClinicalV1",
+          "requiredFields": 33,
+          "lote": "103",
+          "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+          "calculationAuthorized": false,
+          "publicationAuthorized": false,
+          "clinicalPackagePublicationState": "BLOQUEADA",
+          "list": "NOVA_LISTA_GOLD33_V1",
+          "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+          "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+          "packageRestrictions": [
+            {
+              "id": "adrenalina_autoinjetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "PRODUTO_ESPECIFICO_AUVIQ",
+                "PESO_MENOR_7_5_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "aminofilina_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "TDM_OBRIGATORIO",
+                "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "betametasona_injetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA",
+                "INDICACAO_ROTA_OBRIGATORIAS"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "brometo_de_ipratropio_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "VIA_NAO_INALATORIA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "dexametasona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "AUTOMACAO_EXIGE_INDICACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "fenoterol_gotas",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "DOSE_ATUAL_NAO_VERIFICADA",
+                "VIA_AUTOMATICA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [
+                "BULA_PRIMARIA_ATUAL_PENDENTE"
+              ],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "hidrocortisona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "CALCULO_PEDIATRICO_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "metilprednisolona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "prometazina_im",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                "IDADE_MENOR_2_CONTRAINDICADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "salbutamol_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            }
+          ],
+          "packageRecordMetadata": {
+            "ID": "fenoterol_gotas",
+            "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+            "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "ESCOPO_VALIDADO": "Fenoterol 5 mg/mL gotas - Brasil; dose atual bloqueada",
+            "BLOQUEIOS_CLINICOS": [
+              "DOSE_ATUAL_NAO_VERIFICADA",
+              "VIA_AUTOMATICA_BLOQUEADA"
+            ],
+            "PENDENCIAS_NAO_BLOQUEANTES": [
+              "BULA_PRIMARIA_ATUAL_PENDENTE"
+            ],
+            "HOMOLOGACAO": {
+              "LISTA": "NOVA_LISTA_GOLD33_V1",
+              "LOTE": "103",
+              "MEDICO_REVISOR": "Dra Eugenia Marques",
+              "DATA_REVISAO": "20-09-2026",
+              "RESULTADO": "Aprovado integralmente",
+              "ARQUIVO_REVISADO": "103",
+              "EXCECOES_INFORMADAS": 0,
+              "REVISAO_CLINICA": "HOMOLOGADA",
+              "HOMOLOGACAO_DADOS": "SIM",
+              "INTEGRACAO_TECNICA": "NAO_INICIADA",
+              "PUBLICACAO": "BLOQUEADA",
+              "CLINICAL_CONTENT_FROZEN": true
+            }
+          },
+          "supersededPackages": [
+            "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+          ],
+          "referenceOnly": true
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false,
+      "RECONCILIACAO_CANONICA": {
+        "candidateAliasOf": "fenoterol_gotas",
+        "status": "PENDENTE_REVISAO_DE_ESCOPO",
+        "action": "Não adicionar um segundo registro ativo para o mesmo produto."
+      }
+    },
+    {
+      "ID": "ipratropio_solucao_inalatoria",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Brometo de ipratropio 0,02% solucao para nebulizacao",
+          "es": "Bromuro de ipratropio 0,02% solucion para nebulizacion"
+        },
+        "class": {
+          "pt": "Broncodilatador anticolinergico",
+          "es": "Broncodilatador anticolinergico"
+        },
+        "pharmacologicClass": {
+          "pt": "Antagonista muscarinico de curta acao",
+          "es": "Antagonista muscarinico de corta accion"
+        },
+        "mechanism": {
+          "pt": "Bloqueia receptores muscarinicos em vias aereas e reduz broncoconstricao vagal.",
+          "es": "Bloquea receptores muscarinicos en vias aereas y reduce broncoconstriccion vagal."
+        },
+        "pharmacodynamics": {
+          "pt": "Broncodilatacao principalmente local, com pouca absorcao sistemica.",
+          "es": "Broncodilatacion principalmente local, con poca absorcion sistemica."
+        },
+        "pharmacokinetics": {
+          "pt": "Composto quaternario com absorcao sistêmica baixa por inalacao.",
+          "es": "Compuesto cuaternario con absorcion sistemica baja por inhalacion."
+        },
+        "indications": {
+          "pt": "Broncodilatacao de manutencao em COPD conforme rotulo da solucao 0,02%.",
+          "es": "Broncodilatacion de mantenimiento en EPOC segun rotulo de solucion 0,02%."
+        },
+        "commercialNames": {
+          "pt": "Ipratropium Bromide Inhalation Solution, EUA.",
+          "es": "Ipratropium Bromide Inhalation Solution, EE.UU."
+        },
+        "presentation": {
+          "pt": "Solucao de dose unitaria para nebulizador.",
+          "es": "Solucion de dosis unitaria para nebulizador."
+        },
+        "presentations": {
+          "pt": "500 mcg em 2,5 mL = 0,02%.",
+          "es": "500 mcg en 2,5 mL = 0,02%."
+        },
+        "dose": {
+          "pt": "500 mcg = 1 vial por nebulizacao, 3-4x/dia, com 6-8 h entre doses, conforme rotulo COPD.",
+          "es": "500 mcg = 1 vial por nebulizacion, 3-4 veces/dia, con 6-8 h entre dosis, segun rotulo EPOC."
+        },
+        "pediatricDose": {
+          "pt": "Este rotulo especifico nao estabelece dose pediatrica. AUTOMATIZACAO_PEDIATRICA=BLOQUEADA.",
+          "es": "Este rotulo especifico no establece dosis pediatrica. AUTOMATIZACION_PEDIATRICA=BLOQUEADA."
+        },
+        "renalDose": {
+          "pt": "Sem ajuste numerico especifico.",
+          "es": "Sin ajuste numerico especifico."
+        },
+        "hepaticDose": {
+          "pt": "Sem ajuste numerico especifico.",
+          "es": "Sin ajuste numerico especifico."
+        },
+        "commonAdverseEffects": {
+          "pt": "Boca seca, cefaleia, nausea, tosse e irritacao de garganta.",
+          "es": "Boca seca, cefalea, nausea, tos e irritacion de garganta."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Broncoespasmo paradoxal, retencao urinaria e precipitacao/piora de glaucoma de angulo fechado se atingir os olhos.",
+          "es": "Broncoespasmo paradojico, retencion urinaria y precipitacion/empeoramiento de glaucoma de angulo cerrado si alcanza ojos."
+        },
+        "adverseEffects": {
+          "pt": "Tontura, constipacao e palpitacoes podem ocorrer.",
+          "es": "Pueden ocurrir mareo, estrenimiento y palpitaciones."
+        },
+        "contraindications": {
+          "pt": "Hipersensibilidade a ipratropio/atropinicos conforme rotulo.",
+          "es": "Hipersensibilidad a ipratropio/atropinicos segun rotulo."
+        },
+        "interactions": {
+          "pt": "Outros anticolinergicos podem somar efeitos.",
+          "es": "Otros anticolinergicos pueden sumar efectos."
+        },
+        "monitoring": {
+          "pt": "Resposta broncodilatadora, sintomas anticolinergicos e exposicao ocular acidental.",
+          "es": "Respuesta broncodilatadora, sintomas anticolinergicos y exposicion ocular accidental."
+        },
+        "administration": {
+          "pt": "Somente inalacao por nebulizador; evitar vazamento da mascara para os olhos.",
+          "es": "Solo inhalacion por nebulizador; evitar fuga de mascarilla hacia ojos."
+        },
+        "preparation": {
+          "pt": "Conteudo completo de 1 vial no reservatorio; pode ser misturado com albuterol se usado dentro de 1 h segundo rotulo.",
+          "es": "Contenido completo de 1 vial en reservorio; puede mezclarse con albuterol si se usa dentro de 1 h segun rotulo."
+        },
+        "infusionProtocol": {
+          "pt": "NAO APLICAVEL.",
+          "es": "NO APLICA."
+        },
+        "pregnancy": {
+          "pt": "Usar conforme beneficio-risco.",
+          "es": "Usar segun beneficio-riesgo."
+        },
+        "lactation": {
+          "pt": "Dados sistemicos limitados; absorcao inalatoria e baixa.",
+          "es": "Datos sistemicos limitados; absorcion inhalatoria es baja."
+        },
+        "specialPopulations": {
+          "pt": "Glaucoma de angulo fechado e retencao urinaria/hiperplasia prostatica exigem cautela.",
+          "es": "Glaucoma de angulo cerrado y retencion urinaria/hiperplasia prostatica requieren precaucion."
+        },
+        "patientEducation": {
+          "pt": "Nao ingerir/injetar; proteger os olhos e procurar avaliacao se broncoespasmo piorar.",
+          "es": "No ingerir/inyectar; proteger ojos y buscar evaluacion si broncoespasmo empeora."
+        },
+        "clinicalPearls": {
+          "pt": "A solucao 0,02% rotulada e 500 mcg/2,5 mL; nao confundir com frascos multidose de outras concentracoes.",
+          "es": "La solucion 0,02% rotulada es 500 mcg/2,5 mL; no confundir con frascos multidosis de otras concentraciones."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. NEBULIZACAO; ANTICOLINERGICO; OLHOS_GLAUCOMA; NAO_INJETAR; PEDIATRIA_BLOQUEADA.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. NEBULIZACION; ANTICOLINERGICO; OJOS_GLAUCOMA; NO_INYECTAR; PEDIATRIA_BLOQUEADA."
+        },
+        "alerts": {
+          "pt": "Pediatria nao automatizar com este rotulo. Uso e exclusivamente inalatorio.",
+          "es": "Pediatria no automatizar con este rotulo. Uso exclusivamente inhalatorio."
+        },
+        "references": [
+          "DailyMed/NLM EUA - Ipratropium Bromide Inhalation Solution 0.02%, active 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b",
+          "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+        ],
+        "ref": {
+          "pt": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b",
+          "es": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/brometo_de_ipratropio_nebulizacao.json",
+        "templateSha256": "8d7e3cddc70cbd671654f0a934055d306657bf6412a6f8452a008684da41bafa",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+        ],
+        "newProductSpecificFields": [],
+        "inheritedFieldsRequiringReview": [
+          "name",
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "indications",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "dose",
+          "pediatricDose",
+          "renalDose",
+          "hepaticDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "clinicalPearls",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/gold33_nova_lista.js",
+          "sourceField": "brometo_de_ipratropio_nebulizacao.mcGoldClinicalV1",
+          "requiredFields": 33,
+          "lote": "103",
+          "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+          "calculationAuthorized": false,
+          "publicationAuthorized": false,
+          "clinicalPackagePublicationState": "BLOQUEADA",
+          "list": "NOVA_LISTA_GOLD33_V1",
+          "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+          "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+          "packageRestrictions": [
+            {
+              "id": "adrenalina_autoinjetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "PRODUTO_ESPECIFICO_AUVIQ",
+                "PESO_MENOR_7_5_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "aminofilina_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "TDM_OBRIGATORIO",
+                "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "betametasona_injetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA",
+                "INDICACAO_ROTA_OBRIGATORIAS"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "brometo_de_ipratropio_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "VIA_NAO_INALATORIA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "dexametasona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "AUTOMACAO_EXIGE_INDICACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "fenoterol_gotas",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "DOSE_ATUAL_NAO_VERIFICADA",
+                "VIA_AUTOMATICA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [
+                "BULA_PRIMARIA_ATUAL_PENDENTE"
+              ],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "hidrocortisona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "CALCULO_PEDIATRICO_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "metilprednisolona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "prometazina_im",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                "IDADE_MENOR_2_CONTRAINDICADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "salbutamol_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            }
+          ],
+          "packageRecordMetadata": {
+            "ID": "brometo_de_ipratropio_nebulizacao",
+            "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+            "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "ESCOPO_VALIDADO": "Ipratropium 0,02% 500 mcg/2,5 mL - EUA",
+            "BLOQUEIOS_CLINICOS": [
+              "CALCULO_PEDIATRICO_BLOQUEADO",
+              "VIA_NAO_INALATORIA_BLOQUEADA"
+            ],
+            "PENDENCIAS_NAO_BLOQUEANTES": [],
+            "HOMOLOGACAO": {
+              "LISTA": "NOVA_LISTA_GOLD33_V1",
+              "LOTE": "103",
+              "MEDICO_REVISOR": "Dra Eugenia Marques",
+              "DATA_REVISAO": "20-09-2026",
+              "RESULTADO": "Aprovado integralmente",
+              "ARQUIVO_REVISADO": "103",
+              "EXCECOES_INFORMADAS": 0,
+              "REVISAO_CLINICA": "HOMOLOGADA",
+              "HOMOLOGACAO_DADOS": "SIM",
+              "INTEGRACAO_TECNICA": "NAO_INICIADA",
+              "PUBLICACAO": "BLOQUEADA",
+              "CLINICAL_CONTENT_FROZEN": true
+            }
+          },
+          "supersededPackages": [
+            "GOLD33_NOVA_LISTA_LOTE_087_HOMOLOGADO_CLINICAMENTE.zip"
+          ],
+          "referenceOnly": true
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false,
+      "RECONCILIACAO_CANONICA": {
+        "candidateAliasOf": "brometo_de_ipratropio_nebulizacao",
+        "status": "PENDENTE_REVISAO_DE_ESCOPO",
+        "action": "Não adicionar um segundo registro ativo para o mesmo produto."
+      }
+    },
+    {
+      "ID": "prednisolona_solucao_oral",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Prednisolona fosfato sódico — solução oral 15 mg/5 mL",
+          "es": "Prednisolona fosfato sódico — solución oral 15 mg/5 mL"
+        },
+        "class": {
+          "pt": "Glicocorticoide sistêmico",
+          "es": "Glicocorticoide sistêmico"
+        },
+        "pharmacologicClass": {
+          "pt": "Glicocorticoide sistêmico",
+          "es": "Glicocorticoide sistêmico"
+        },
+        "commercialNames": {
+          "pt": "Produto genérico PAI, EUA.",
+          "es": "Producto genérico PAI, EE.UU."
+        },
+        "presentation": {
+          "pt": "Solução oral.",
+          "es": "Solución oral."
+        },
+        "presentations": {
+          "pt": "15 mg de base/5 mL; não confundir com massa do sal.",
+          "es": "15 mg de base/5 mL; no confundir con masa de sal."
+        },
+        "mechanism": {
+          "pt": "Atividade glicocorticoide: modula inflamação e imunidade.",
+          "es": "Actividad glucocorticoide: modula inflamación e inmunidad."
+        },
+        "pharmacodynamics": {
+          "pt": "Anti-inflamatória; hiperglicemia e supressão adrenal dependem da exposição.",
+          "es": "Antiinflamatoria; hiperglucemia y supresión adrenal dependen de exposición."
+        },
+        "pharmacokinetics": {
+          "pt": "Absorção oral rápida; ligação proteica 70–90%; meia-vida 2–4 h; metabolismo hepático.",
+          "es": "Absorción oral rápida; unión proteica 70–90%; semivida 2–4 h; metabolismo hepático."
+        },
+        "indications": {
+          "pt": "Condições inflamatórias, alérgicas, autoimunes e outras indicações conforme via e protocolo.",
+          "es": "Condições inflamatórias, alérgicas, autoimunes y outras indicações conforme via y protocolo."
+        },
+        "dose": {
+          "pt": "Inicial 5–60 mg/dia, individualizada pela doença/resposta; não é esquema universal.",
+          "es": "Inicial 5–60 mg/día, individualizada por enfermedad/respuesta; no es esquema universal."
+        },
+        "pediatricDose": {
+          "pt": "Faixa inicial geral: 0,14–2 mg/kg/dia em 3–4 doses; escolher protocolo por indicação, não automatizar a faixa.",
+          "es": "Rango inicial general: 0,14–2 mg/kg/día en 3–4 dosis; elegir protocolo por indicación, no automatizar el rango."
+        },
+        "renalDose": {
+          "pt": "Sem tabela numérica; cautela com retenção hidrossalina.",
+          "es": "Sin tabla numérica; precaución por retención hidrosalina."
+        },
+        "hepaticDose": {
+          "pt": "Individualizar; efeitos podem aumentar na cirrose.",
+          "es": "Individualizar; efectos pueden aumentar en cirrosis."
+        },
+        "commonAdverseEffects": {
+          "pt": "Aumento do apetite, dispepsia, insônia, alteração de humor e hiperglicemia.",
+          "es": "Aumento do apetite, dispepsia, insônia, alteração de humor y hiperglicemia."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.",
+          "es": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular."
+        },
+        "adverseEffects": {
+          "pt": "Aumento do apetite, dispepsia, insônia, alteração de humor e hiperglicemia.; Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.",
+          "es": "Aumento do apetite, dispepsia, insônia, alteração de humor y hiperglicemia.; Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular."
+        },
+        "contraindications": {
+          "pt": "Micose sistêmica; hipersensibilidade.",
+          "es": "Micosis sistémica; hipersensibilidad."
+        },
+        "interactions": {
+          "pt": "Indutores/inibidores enzimáticos, anticoagulantes, AINEs, diuréticos e vacinas.",
+          "es": "Inductores/inhibidores enzimáticos, anticoagulantes, AINEs, diuréticos y vacunas."
+        },
+        "monitoring": {
+          "pt": "Crescimento, pressão, glicose, infecção, olhos e supressão adrenal.",
+          "es": "Crecimiento, presión, glucosa, infección, ojos y supresión adrenal."
+        },
+        "administration": {
+          "pt": "Via oral; após tratamento prolongado, retirada gradual.",
+          "es": "Vía oral; tras tratamiento prolongado, retirada gradual."
+        },
+        "preparation": {
+          "pt": "Solução pronta; confirmar 3 mg de base/mL.",
+          "es": "Solución lista; confirmar 3 mg de base/mL."
+        },
+        "infusionProtocol": {
+          "pt": "Não aplicável.",
+          "es": "No aplicable."
+        },
+        "pregnancy": {
+          "pt": "Avaliar benefício/risco fetal.",
+          "es": "Evaluar beneficio/riesgo fetal."
+        },
+        "lactation": {
+          "pt": "Excreção no leite; avaliar risco infantil.",
+          "es": "Excreción en leche; evaluar riesgo infantil."
+        },
+        "specialPopulations": {
+          "pt": "Individualizar por idade, comorbidades e função orgânica.",
+          "es": "Individualizar por idade, comorbidades y función orgânica."
+        },
+        "patientEducation": {
+          "pt": "Orientar adesão, administração correta e sinais de alarme.",
+          "es": "Orientar adesão, administração correta y sinais de alarme."
+        },
+        "clinicalPearls": {
+          "pt": "Formulações e vias não são automaticamente intercambiáveis.",
+          "es": "Formulações y vias no são automaticamente intercambiáveis."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular."
+        },
+        "alerts": {
+          "pt": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose e toxicidade ocular.; revisão clínica obrigatória.",
+          "es": "Infecção grave, supressão adrenal, psicose, sangramento gastrointestinal, osteonecrose y toxicidade ocular.; revisão clínica obrigatória."
+        },
+        "references": [
+          "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=prednisolona",
+          "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files",
+          "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0d74ae0-7b2d-4d36-9211-c76f5063b5a9",
+          "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7262fc84-3db2-4475-8ae4-6bec4477cb81"
+        ],
+        "ref": {
+          "pt": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0d74ae0-7b2d-4d36-9211-c76f5063b5a9",
+          "es": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0d74ae0-7b2d-4d36-9211-c76f5063b5a9"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/prednisolona.json",
+        "templateSha256": "1fd9411f1fb243102af07912d9e9bf1e0684527b96d01b0a8cefd63948a73259",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0d74ae0-7b2d-4d36-9211-c76f5063b5a9",
+          "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7262fc84-3db2-4475-8ae4-6bec4477cb81"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "dose",
+          "pediatricDose",
+          "renalDose",
+          "hepaticDose",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "pregnancy",
+          "lactation"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "indications",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "specialPopulations",
+          "patientEducation",
+          "clinicalPearls",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/imuno_corticoide.js",
+          "sourceField": "prednisolona.mcGoldClinicalV1",
+          "lote": "064",
+          "requiredFields": 33,
+          "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+          "calculationAuthorized": false,
+          "publicationAuthorized": true,
+          "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+          "ownerPublicationAuthorization": "lote002-owner-confirmed"
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    },
+    {
+      "ID": "dexametasona_elixir",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Dexametasona — elixir 0,5 mg/5 mL",
+          "es": "Dexametasona — elixir 0,5 mg/5 mL"
+        },
+        "class": {
+          "pt": "Corticosteroide sistêmico",
+          "es": "Corticosteroide sistémico"
+        },
+        "pharmacologicClass": {
+          "pt": "Agonista glicocorticoide potente",
+          "es": "Agonista glucocorticoide potente"
+        },
+        "commercialNames": {
+          "pt": "Produto Marlex, EUA.",
+          "es": "Producto Marlex, EE.UU."
+        },
+        "presentation": {
+          "pt": "Elixir oral.",
+          "es": "Elixir oral."
+        },
+        "presentations": {
+          "pt": "0,5 mg/5 mL; contém álcool 5%.",
+          "es": "0,5 mg/5 mL; contiene alcohol 5%."
+        },
+        "mechanism": {
+          "pt": "Agonista glicocorticoide potente. O efeito deve ser interpretado por indicação, formulação e exposição.",
+          "es": "Agonista glucocorticoide potente. El efecto debe interpretarse por indicación, formulación y exposición."
+        },
+        "pharmacodynamics": {
+          "pt": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+          "es": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización."
+        },
+        "pharmacokinetics": {
+          "pt": "Longa duração biológica, metabolismo hepático e excreção renal de metabólitos.",
+          "es": "Larga duración biológica, metabolismo hepático y excreción renal de metabolitos."
+        },
+        "indications": {
+          "pt": "Condições inflamatórias, alérgicas, autoimunes, edema cerebral, oncologia e outras indicações específicas.",
+          "es": "Enfermedades inflamatorias, alérgicas, autoinmunes, edema cerebral, oncología y otras indicaciones específicas."
+        },
+        "dose": {
+          "pt": "Inicial 0,75–9 mg/dia conforme doença; titular individualmente.",
+          "es": "Inicial 0,75–9 mg/día según enfermedad; titular individualmente."
+        },
+        "pediatricDose": {
+          "pt": "Sem regime pediátrico universal nesta preparação; não extrapolar faixa adulta.",
+          "es": "Sin régimen pediátrico universal en esta preparación; no extrapolar rango adulto."
+        },
+        "renalDose": {
+          "pt": "Sem ajuste rotineiro, mas retenção, glicemia e infecção exigem monitorização.",
+          "es": "Sin ajuste rutinario, pero retención, glucemia e infección requieren control."
+        },
+        "hepaticDose": {
+          "pt": "Sem tabela fixa; cautela em hepatopatia.",
+          "es": "Sin tabla fija; precaución en hepatopatía."
+        },
+        "commonAdverseEffects": {
+          "pt": "Hiperglicemia, insônia, dispepsia, alterações de humor e retenção.",
+          "es": "Hiperglucemia, insomnio, dispepsia, cambios de ánimo y retención."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Infecção grave, psicose, sangramento GI, osteonecrose, glaucoma e crise adrenal.",
+          "es": "Infección grave, psicosis, sangrado GI, osteonecrosis, glaucoma y crisis suprarrenal."
+        },
+        "adverseEffects": {
+          "pt": "Hiperglicemia, insônia, dispepsia, alterações de humor e retenção. Graves: Infecção grave, psicose, sangramento GI, osteonecrose, glaucoma e crise adrenal.",
+          "es": "Hiperglucemia, insomnio, dispepsia, cambios de ánimo y retención. Graves: Infección grave, psicosis, sangrado GI, osteonecrosis, glaucoma y crisis suprarrenal."
+        },
+        "contraindications": {
+          "pt": "Infecção fúngica sistêmica; vacina viva em dose imunossupressora; hipersensibilidade.",
+          "es": "Infección fúngica sistémica; vacuna viva con dosis inmunosupresora; hipersensibilidad."
+        },
+        "interactions": {
+          "pt": "CYP3A4, AINE, anticoagulantes, antidiabéticos, diuréticos e vacinas.",
+          "es": "CYP3A4, AINE, anticoagulantes, antidiabéticos, diuréticos y vacunas."
+        },
+        "monitoring": {
+          "pt": "Glicemia, PA, eletrólitos, infecção, humor, olho, osso e eixo adrenal.",
+          "es": "Glucemia, PA, electrolitos, infección, ánimo, ojo, hueso y eje suprarrenal."
+        },
+        "administration": {
+          "pt": "Via oral; retirada gradual após uso prolongado.",
+          "es": "Vía oral; retirada gradual tras uso prolongado."
+        },
+        "preparation": {
+          "pt": "Pronto; medir volume correspondente à prescrição.",
+          "es": "Listo; medir volumen correspondiente a prescripción."
+        },
+        "infusionProtocol": {
+          "pt": "Não aplicável; elixir não injetável.",
+          "es": "No aplicable; elixir no inyectable."
+        },
+        "pregnancy": {
+          "pt": "Usar menor dose eficaz; risco fetal/neonatal depende de exposição.",
+          "es": "Usar mínima dosis eficaz; riesgo fetal/neonatal depende de exposición."
+        },
+        "lactation": {
+          "pt": "Passa ao leite; altas doses podem reduzir produção.",
+          "es": "Pasa a leche; dosis altas pueden reducir producción."
+        },
+        "specialPopulations": {
+          "pt": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+          "es": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia."
+        },
+        "patientEducation": {
+          "pt": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+          "es": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación."
+        },
+        "clinicalPearls": {
+          "pt": "Considerar álcool e excipientes; não reutilizar preparo IV.",
+          "es": "Considerar alcohol y excipientes; no reutilizar preparación IV."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración."
+        },
+        "alerts": {
+          "pt": "Infecção grave, psicose, sangramento GI, osteonecrose, glaucoma e crise adrenal. Dose/infusão bloqueadas sem indicação, gravidade, idade/peso, produto, via, infecção, glicemia e plano de desmame.",
+          "es": "Infección grave, psicosis, sangrado GI, osteonecrosis, glaucoma y crisis suprarrenal. Dose/infusão bloqueadas sem indicação, gravidade, idade/peso, produto, via, infecção, glicemia e plano de desmame."
+        },
+        "references": [
+          "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=dexamethasone",
+          "2. Fonte regulatória primária consultada em 2026-09-18: https://www.fda.gov/drugsatfda",
+          "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7b51ffce-ec64-4b49-8870-b9666537c541"
+        ],
+        "ref": {
+          "pt": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7b51ffce-ec64-4b49-8870-b9666537c541",
+          "es": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7b51ffce-ec64-4b49-8870-b9666537c541"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/dexametasona.json",
+        "templateSha256": "176ed420ac1c027d82deb4113fc025c47b8de2fb7886d3e24344c0a4172dcce1",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7b51ffce-ec64-4b49-8870-b9666537c541"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "dose",
+          "pediatricDose",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "clinicalPearls"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "indications",
+          "renalDose",
+          "hepaticDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/imuno_corticoide.js",
+          "sourceField": "dexametasona.mcGoldClinicalV1",
+          "lote": "024",
+          "requiredFields": 33,
+          "approvedSha256": "9721657a393121ed360ce59ff910deb7cbb3b0fc3421608349c6fa584237305a",
+          "calculationAuthorized": false,
+          "publicationAuthorized": true,
+          "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+          "ownerPublicationAuthorization": "mission10-owner-confirmed"
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    },
+    {
+      "ID": "budesonida_suspensao_inalatoria",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "CAMPOS_33": {
+        "name": {
+          "pt": "Budesonida — suspensão para nebulização",
+          "es": "Budesonida — suspensión para nebulización"
+        },
+        "class": {
+          "pt": "Corticosteroide inalatório",
+          "es": "Corticosteroide inhalado"
+        },
+        "pharmacologicClass": {
+          "pt": "Agonista glicocorticoide anti-inflamatório local",
+          "es": "Agonista glucocorticoide antiinflamatorio local"
+        },
+        "commercialNames": {
+          "pt": "Budesonide Inhalation Suspension, EUA.",
+          "es": "Budesonide Inhalation Suspension, EE.UU."
+        },
+        "presentation": {
+          "pt": "Suspensão inalatória em ampolas.",
+          "es": "Suspensión inhalatoria en ampollas."
+        },
+        "presentations": {
+          "pt": "0,25 mg/2 mL; 0,5 mg/2 mL.",
+          "es": "0,25 mg/2 mL; 0,5 mg/2 mL."
+        },
+        "mechanism": {
+          "pt": "Agonista glicocorticoide anti-inflamatório local. O efeito deve ser interpretado por indicação, formulação e exposição.",
+          "es": "Agonista glucocorticoide antiinflamatorio local. El efecto debe interpretarse por indicación, formulación y exposición."
+        },
+        "pharmacodynamics": {
+          "pt": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
+          "es": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización."
+        },
+        "pharmacokinetics": {
+          "pt": "Alta depuração de primeira passagem; CYP3A4; meia-vida ~2-3 h.",
+          "es": "Alto aclaramiento de primer paso; CYP3A4; semivida ~2-3 h."
+        },
+        "indications": {
+          "pt": "Manutenção da asma: 12 meses–8 anos; não trata broncoespasmo agudo.",
+          "es": "Mantenimiento del asma: 12 meses–8 años; no trata broncoespasmo agudo."
+        },
+        "dose": {
+          "pt": "Escopo pediátrico; não importar dose de inalador em pó.",
+          "es": "Alcance pediátrico; no importar dosis de inhalador en polvo."
+        },
+        "pediatricDose": {
+          "pt": "Broncodilatador prévio: 0,25 mg 2x/dia. Corticoide inalatório prévio: 0,25–0,5 mg 2x/dia. Corticoide oral prévio: 0,5 mg 2x/dia.",
+          "es": "Broncodilatador previo: 0,25 mg 2/día. Corticoide inhalado previo: 0,25–0,5 mg 2/día. Corticoide oral previo: 0,5 mg 2/día."
+        },
+        "renalDose": {
+          "pt": "Sem ajuste formal; exposição sistêmica usualmente baixa.",
+          "es": "Sin ajuste formal; exposición sistémica habitualmente baja."
+        },
+        "hepaticDose": {
+          "pt": "Metabolismo hepático; monitorar por possível acúmulo.",
+          "es": "Metabolismo hepático; monitorizar por posible acumulación."
+        },
+        "commonAdverseEffects": {
+          "pt": "Candidíase oral, disfonia, tosse e cefaleia.",
+          "es": "Candidiasis oral, disfonía, tos y cefalea."
+        },
+        "dangerousAdverseEffects": {
+          "pt": "Broncoespasmo paradoxal, supressão adrenal, redução do crescimento, glaucoma/catarata e infecção.",
+          "es": "Broncoespasmo paradójico, supresión suprarrenal, menor crecimiento, glaucoma/catarata e infección."
+        },
+        "adverseEffects": {
+          "pt": "Candidíase oral, disfonia, tosse e cefaleia. Graves: Broncoespasmo paradoxal, supressão adrenal, redução do crescimento, glaucoma/catarata e infecção.",
+          "es": "Candidiasis oral, disfonía, tos y cefalea. Graves: Broncoespasmo paradójico, supresión suprarrenal, menor crecimiento, glaucoma/catarata e infección."
+        },
+        "contraindications": {
+          "pt": "Hipersensibilidade; não usar como tratamento primário de crise/estado de mal asmático.",
+          "es": "Hipersensibilidad; no usar como tratamiento primario de crisis/estado asmático."
+        },
+        "interactions": {
+          "pt": "Inibidores fortes CYP3A4 aumentam exposição sistêmica.",
+          "es": "Inhibidores fuertes CYP3A4 aumentan exposición sistémica."
+        },
+        "monitoring": {
+          "pt": "Controle, resgate, técnica, crescimento infantil, candidíase, olhos e eixo adrenal em altas doses.",
+          "es": "Control, rescate, técnica, crecimiento infantil, candidiasis, ojos y eje suprarrenal con dosis altas."
+        },
+        "administration": {
+          "pt": "Nebulizador a jato; não ultrassônico; enxaguar boca.",
+          "es": "Nebulizador de chorro; no ultrasónico; enjuagar boca."
+        },
+        "preparation": {
+          "pt": "Não presumir compatibilidade para misturas.",
+          "es": "No presumir compatibilidad para mezclas."
+        },
+        "infusionProtocol": {
+          "pt": "Não injetável.",
+          "es": "No inyectable."
+        },
+        "pregnancy": {
+          "pt": "Experiência em asma é ampla; usar menor dose eficaz.",
+          "es": "Experiencia en asma amplia; usar mínima dosis eficaz."
+        },
+        "lactation": {
+          "pt": "Exposição infantil baixa; geralmente compatível.",
+          "es": "Exposición infantil baja; generalmente compatible."
+        },
+        "specialPopulations": {
+          "pt": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
+          "es": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia."
+        },
+        "patientEducation": {
+          "pt": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
+          "es": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación."
+        },
+        "clinicalPearls": {
+          "pt": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
+          "es": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar."
+        },
+        "guidelineRecommendations": {
+          "pt": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+          "es": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías."
+        },
+        "safetyFlags": {
+          "pt": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+          "es": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración."
+        },
+        "alerts": {
+          "pt": "Broncoespasmo paradoxal, supressão adrenal, redução do crescimento, glaucoma/catarata e infecção. Dose bloqueada sem idade, gravidade, terapia prévia, produto/dispositivo e força exatos.",
+          "es": "Broncoespasmo paradójico, supresión suprarrenal, menor crecimiento, glaucoma/catarata e infección. Dose bloqueada sem idade, gravidade, terapia prévia, produto/dispositivo e força exatos."
+        },
+        "references": [
+          "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=54234b7d-3bcc-4809-1881-1d21484856a0",
+          "2. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=budesonide+inhalation+suspension",
+          "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1d139a25-9c17-4b3e-8ffd-b2d562cc00ee"
+        ],
+        "ref": {
+          "pt": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1d139a25-9c17-4b3e-8ffd-b2d562cc00ee",
+          "es": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1d139a25-9c17-4b3e-8ffd-b2d562cc00ee"
+        }
+      },
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/budesonida.json",
+        "templateSha256": "83faa465b16000c39d3c4e9904fab859797107253db21034238feb9f2ea9facd",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1d139a25-9c17-4b3e-8ffd-b2d562cc00ee"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "indications",
+          "dose",
+          "pediatricDose",
+          "hepaticDose",
+          "administration",
+          "preparation",
+          "infusionProtocol"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "pharmacokinetics",
+          "renalDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation",
+          "clinicalPearls",
+          "alerts"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/pneumologia.js",
+          "sourceField": "budesonida.mcGoldClinicalV1",
+          "lote": "012",
+          "requiredFields": 33,
+          "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+          "calculationAuthorized": false,
+          "publicationAuthorized": true,
+          "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+          "ownerPublicationAuthorization": "mission10-owner-confirmed"
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "PENDENTE",
+        "HOMOLOGACAO_DADOS": "NAO",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "id": "isossorbida_mononitrato",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "isossorbida_mononitrato"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Mononitrato de isossorbida - escopo candidato: comprimido de liberacao prolongada",
+    "class": "Nitrato organico antianginoso",
+    "pharmacologicClass": "Doador de oxido nitrico / vasodilatador nitrato",
+    "mechanism": "Gera oxido nitrico e aumenta GMPc no musculo liso vascular, promovendo venodilatacao predominante e reducao da pre-carga.",
+    "pharmacodynamics": "Reduz demanda miocardica de oxigenio por reducao de pre-carga e, em menor grau, pos-carga; uso continuo favorece tolerancia.",
+    "pharmacokinetics": "Mononitrato de isossorbida tem alta biodisponibilidade e nao depende de primeira passagem para ativacao; a formulacao ER prolonga exposicao ao longo do dia.",
+    "indications": "Produto ER dos EUA: prevencao de angina pectoris por doenca coronaria; inicio de acao oral nao e rapido o suficiente para abortar crise aguda.",
+    "commercialNames": "Rotulo generico ER EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimido de liberacao prolongada VO. O ID original nao explicita ER; por isso integracao automatica permanece bloqueada ate reconciliar formulacao.",
+    "presentations": "30, 60 e 120 mg no produto ER consultado.",
+    "dose": "ER: iniciar 30 mg ou 60 mg VO 1x/dia pela manha; apos varios dias pode aumentar a 120 mg 1x/dia; raramente 240 mg/dia pode ser necessario. Engolir inteiro; nao mastigar nem triturar.",
+    "pediatricDose": "Seguranca e eficacia pediatrica nao estabelecidas; calculo pediatrico bloqueado.",
+    "renalDose": "Rotulo ER nao fornece ajuste numerico por eGFR/ClCr; usar cautela clinica em hipotensao/volume. Nao automatizar.",
+    "hepaticDose": "Rotulo nao fornece algoritmo numerico especifico; monitorar tolerancia hemodinamica.",
+    "commonAdverseEffects": "Cefaleia e tontura sao os eventos mais caracteristicos; rubor e hipotensao postural podem ocorrer.",
+    "dangerousAdverseEffects": "Hipotensao grave/sincope, isquemia por queda pressorica excessiva e metemoglobinemia rara; associacao com inibidores PDE5 pode causar hipotensao grave.",
+    "adverseEffects": "Taquicardia reflexa, nauseas e fraqueza podem ocorrer; tolerancia pode reduzir eficacia com exposicao continua.",
+    "contraindications": "Hipersensibilidade/idiossincrasia a nitratos/nitritos. Uso concomitante com inibidores PDE5 e/ou estimuladores de guanilato ciclase e clinicamente incompatível por risco de hipotensao grave.",
+    "interactions": "Sildenafil/tadalafil/vardenafil e riociguat: evitar/contraindicado; alcool e outros vasodilatadores podem potencializar hipotensao.",
+    "monitoring": "PA, sintomas de angina, cefaleia, tontura/sincope e sinais de tolerancia; metemoglobina se houver cianose/hipoxia discordante.",
+    "administration": "ER 1x/dia pela manha ao levantar; engolir com liquido sem mastigar/triturar.",
+    "preparation": "Comprimido ER pronto para uso; nao triturar. Esta ficha nao valida formulacao IR.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados humanos adequados sao limitados; rotulo historico classifica como categoria B com dados animais sem teratogenicidade nas doses estudadas. Uso exige avaliacao individual.",
+    "lactation": "Nao se sabe se e excretado no leite humano; usar cautela.",
+    "specialPopulations": "Deplecao de volume e hipotensao basal aumentam risco de queda pressorica; cardiomiopatia hipertrofica pode piorar angina.",
+    "patientEducation": "Nao usar para abortar crise aguda; levantar-se lentamente; cefaleia e comum; nunca combinar com medicamentos para disfuncao eretil sem orientacao.",
+    "clinicalPearls": "O ID recebido e ambiguo quanto a liberacao. Este candidato usa exclusivamente a formulacao ER 30/60/120 mg e deve ser separado de qualquer formula IR antes da integracao tecnica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NITRATO; PDE5_ALTO_RISCO; RIociguat_ALTO_RISCO; NAO_TRITURAR_ER; NAO_USAR_PARA_CRise_AGUDA.",
+    "alerts": "RECONCILIACAO_CANONICA: ID `isossorbida_mononitrato` nao define IR versus ER; esta ficha candidato e ER e nao autoriza merge com IR.",
+    "references": [
+      "DailyMed/NLM EUA - Isosorbide Mononitrate Extended-Release tablets, atualizado 11-05-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a1e317a-7b05-4d30-9bbc-1d4ccd56ba3c"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a1e317a-7b05-4d30-9bbc-1d4ccd56ba3c"
+  },
+  "es": {
+    "name": "Mononitrato de isosorbida - alcance candidato: comprimido de liberación prolongada",
+    "class": "Nitrato orgánico antianginoso",
+    "pharmacologicClass": "Donador de óxido nítrico / vasodilatador nitrato",
+    "mechanism": "Genera óxido nítrico y aumenta GMPc en músculo liso vascular, produciendo venodilatación predominante y reducción de precarga.",
+    "pharmacodynamics": "Reduce demanda miocárdica de oxígeno por reducción de precarga y, en menor grado, poscarga; el uso continuo favorece tolerancia.",
+    "pharmacokinetics": "Mononitrato de isosorbida tiene alta biodisponibilidad y no depende de primer paso para activación; la formulación ER prolonga exposición durante el día.",
+    "indications": "Producto ER de EE.UU.: prevención de angina de pecho por enfermedad coronaria; el inicio oral no es suficientemente rápido para abortar una crisis aguda.",
+    "commercialNames": "Rótulo genérico ER EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimido de liberación prolongada VO. El ID original no explicita ER; por ello la integración automática permanece bloqueada hasta reconciliar formulación.",
+    "presentations": "30, 60 y 120 mg en el producto ER consultado.",
+    "dose": "ER: iniciar 30 mg o 60 mg VO 1 vez/día por la mañana; tras varios días puede aumentar a 120 mg 1 vez/día; raramente puede requerirse 240 mg/día. Tragar entero; no masticar ni triturar.",
+    "pediatricDose": "Seguridad y eficacia pediátrica no establecidas; cálculo pediátrico bloqueado.",
+    "renalDose": "El rótulo ER no aporta ajuste numérico por eGFR/CrCl; usar precaución clínica con hipotensión/volumen. No automatizar.",
+    "hepaticDose": "El rótulo no aporta algoritmo numérico específico; vigilar tolerancia hemodinámica.",
+    "commonAdverseEffects": "Cefalea y mareo son eventos característicos; pueden ocurrir rubor e hipotensión postural.",
+    "dangerousAdverseEffects": "Hipotensión grave/síncope, isquemia por caída excesiva de presión y metahemoglobinemia rara; asociación con inhibidores PDE5 puede causar hipotensión grave.",
+    "adverseEffects": "Pueden ocurrir taquicardia refleja, náuseas y debilidad; la tolerancia puede reducir eficacia con exposición continua.",
+    "contraindications": "Hipersensibilidad/idiosincrasia a nitratos/nitritos. El uso concomitante con inhibidores PDE5 y/o estimuladores de guanilato ciclasa es clínicamente incompatible por riesgo de hipotensión grave.",
+    "interactions": "Sildenafilo/tadalafilo/vardenafilo y riociguat: evitar/contraindicado; alcohol y otros vasodilatadores pueden potenciar hipotensión.",
+    "monitoring": "PA, síntomas de angina, cefalea, mareo/síncope y signos de tolerancia; metahemoglobina si hay cianosis/hipoxia discordante.",
+    "administration": "ER 1 vez/día por la mañana al levantarse; tragar con líquido sin masticar/triturar.",
+    "preparation": "Comprimido ER listo para usar; no triturar. Esta ficha no valida formulación IR.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos humanos adecuados son limitados; el rótulo histórico clasifica como categoría B con datos animales sin teratogenicidad en dosis estudiadas. Uso requiere evaluación individual.",
+    "lactation": "Se desconoce si se excreta en leche humana; usar precaución.",
+    "specialPopulations": "La depleción de volumen e hipotensión basal aumentan riesgo de caída de presión; la miocardiopatía hipertrófica puede empeorar angina.",
+    "patientEducation": "No usar para abortar crisis aguda; levantarse lentamente; la cefalea es frecuente; nunca combinar con medicamentos para disfunción eréctil sin indicación.",
+    "clinicalPearls": "El ID recibido es ambiguo respecto a liberación. Este candidato usa exclusivamente formulación ER 30/60/120 mg y debe separarse de cualquier forma IR antes de integración técnica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NITRATO; PDE5_ALTO_RIESGO; RIOCIGUAT_ALTO_RIESGO; NO_TRITURAR_ER; NO_USAR_PARA_CRISIS_AGUDA.",
+    "alerts": "RECONCILIACION_CANONICA: el ID `isossorbida_mononitrato` no define IR versus ER; esta ficha candidata es ER y no autoriza merge con IR.",
+    "references": [
+      "DailyMed/NLM EUA - Isosorbide Mononitrate Extended-Release tablets, atualizado 11-05-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a1e317a-7b05-4d30-9bbc-1d4ccd56ba3c"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0a1e317a-7b05-4d30-9bbc-1d4ccd56ba3c"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Mononitrato de isossorbida - escopo candidato: comprimido de liberacao prolongada",
+    "es": "Mononitrato de isosorbida - alcance candidato: comprimido de liberación prolongada"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "isossorbida_mononitrato.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "097",
+    "approvedSha256": "c1899b33421dded00d53d620137d350af8a406d909f14df21e88332fe47934c3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "7a9935df2ca13fb33cbe0f739209b11c5984d12a1c6fde9ff51efc6c8d44c3d6",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_097_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "propranolol_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "carvedilol_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "HEPATOPATIA_GRAVE_CONTRAINDICADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "espironolactona_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "HIPERCALEMIA_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "furosemida_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_FORMULACAO",
+          "INFUSAO_IV_BLOQUEADA_NESTA_FICHA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "isossorbida_mononitrato",
+        "bloqueios_clinicos": [
+          "FORMULACAO_IR_ER_REQUER_RECONCILIACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "PDE5_RIOCIGUAT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "isossorbida_dinitrato",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "PDE5_RIOCIGUAT_CONTRAINDICADOS",
+          "OUTRAS_FORMULACOES_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glibenclamida",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_HEPATICO_NUMERICO_NAO_DOCUMENTADO",
+          "FORMULACAO_MICRONIZADA_NAO_VALIDADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "gliclazida_mr",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "INSUFICIENCIA_RENAL_HEPATICA_GRAVE_CONTRAINDICADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metformina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_IDADE_E_EGFR",
+          "ACIDOSE_LACTICA_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metformina_xr",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "ACIDOSE_LACTICA_ALTO_RISCO",
+          "NAO_TRITURAR_XR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "isossorbida_mononitrato",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios granulares e reconciliacoes do candidato foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "MONONITRATO DE ISOSSORBIDA ER 30/60/120 MG VO - EUA; ID GENERICO AMBIGUO",
+      "BLOQUEIOS_CLINICOS": [
+        "FORMULACAO_IR_ER_REQUER_RECONCILIACAO",
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "PDE5_RIOCIGUAT_ALTO_RISCO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "097",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "097",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

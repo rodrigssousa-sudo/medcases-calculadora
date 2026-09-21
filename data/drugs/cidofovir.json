@@ -1,0 +1,358 @@
+{
+  "id": "cidofovir",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "cidofovir"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Cidofovir - VISTIDE 75 mg/mL IV",
+    "class": "Antiviral nucleotidico",
+    "pharmacologicClass": "Analogo nucleotidico de citosina",
+    "mechanism": "Metabolito difosfato intracelular inibe DNA polimerase viral e interrompe sintese de DNA.",
+    "pharmacodynamics": "Atividade contra CMV; principal toxicidade limitante e nefrotoxicidade proximal tubular.",
+    "pharmacokinetics": "Eliminacao predominantemente renal, incluindo secrecao tubular; probenecida reduz secrecao tubular e nefrotoxicidade.",
+    "indications": "Rotulo VISTIDE: retinite por CMV em pacientes com AIDS. Este candidato nao valida usos off-label para outros virus.",
+    "commercialNames": "VISTIDE, EUA.",
+    "presentation": "Solucao concentrada para infusao IV.",
+    "presentations": "75 mg/mL; frasco 375 mg/5 mL.",
+    "dose": "Inducao: 5 mg/kg IV em 1 h, 1x/semana por 2 semanas, somente se creatinina <=1,5 mg/dL, CrCl >55 mL/min e proteina urinaria <100 mg/dL. Manutencao: 5 mg/kg IV em 1 h a cada 2 semanas.",
+    "pediatricDose": "Seguranca/eficacia pediatrica nao validadas neste candidato; AUTOMATIZACAO_PEDIATRICA=BLOQUEADA.",
+    "renalDose": "Preexistente: contraindicado se creatinina >1,5 mg/dL, CrCl <=55 mL/min ou proteinuria >=100 mg/dL (>=2+). Durante manutencao: aumento creatinina 0,3-0,4 mg/dL acima do basal -> reduzir 5 para 3 mg/kg; aumento >=0,5 mg/dL ou proteinuria >=3+ -> suspender.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Proteinuria, aumento de creatinina, nausea/vomitos relacionados a probenecida e efeitos hematologicos podem ocorrer.",
+    "dangerousAdverseEffects": "Nefrotoxicidade grave e potencialmente irreversivel, incluindo insuficiencia renal; neutropenia e toxicidade ocular podem ocorrer.",
+    "adverseEffects": "Febre, astenia e reacoes relacionadas ao esquema/probenecida podem ocorrer.",
+    "contraindications": "Funcao renal acima dos limiares de exclusao; hipersensibilidade a cidofovir; impossibilidade de usar probenecida quando exigida pelo rotulo; verificar lista completa do produto.",
+    "interactions": "Evitar outros nefrotoxicos proximos ao esquema; probenecida e obrigatoria e possui suas proprias interacoes/contraindicacoes.",
+    "monitoring": "Creatinina e proteinuria antes de CADA dose; CrCl, hemograma/neutrofilos e sinais de toxicidade ocular/renal.",
+    "administration": "Somente IV, apos diluicao, sempre com probenecida e hidratacao salina conforme rotulo.",
+    "preparation": "Diluir dose calculada em 100 mL de NaCl 0,9%. Probenecida: 2 g VO 3 h antes e 1 g VO 2 h e 8 h apos a infusao; total 4 g.",
+    "infusionProtocol": "Infundir em velocidade constante por 1 hora. Hidratar com solucao salina IV conforme protocolo do rotulo para reduzir nefrotoxicidade.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "AIDS com retinite CMV e funcao renal preservada dentro dos criterios do rotulo. Doenca renal e alto risco/contraindicacao.",
+    "patientEducation": "Este tratamento exige probenecida, hidratacao e exames antes de cada dose; relatar reducao de urina, edema e alteracoes visuais.",
+    "clinicalPearls": "Cidofovir sem probenecida/hidratacao nao corresponde ao esquema do rotulo. Os limiares renais sao bloqueios absolutos do candidato.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEFROTOXICIDADE_BOXED_WARNING; PROBENECIDA_OBRIGATORIA; HIDRATACAO; CRCL_55; PROTEINURIA.",
+    "alerts": "Nao administrar sem checar creatinina/proteinuria e sem probenecida/hidratacao. Pediatria e usos off-label bloqueados.",
+    "references": [
+      "DailyMed/NLM EUA - VISTIDE (cidofovir) injection. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90639fc6-0295-4115-98f0-054b783850ce"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90639fc6-0295-4115-98f0-054b783850ce"
+  },
+  "es": {
+    "name": "Cidofovir - VISTIDE 75 mg/mL IV",
+    "class": "Antiviral nucleotidico",
+    "pharmacologicClass": "Analogo nucleotidico de citosina",
+    "mechanism": "Metabolito difosfato intracelular inhibe DNA polimerasa viral e interrumpe sintesis de DNA.",
+    "pharmacodynamics": "Actividad contra CMV; principal toxicidad limitante es nefrotoxicidad tubular proximal.",
+    "pharmacokinetics": "Eliminacion predominantemente renal, incluida secrecion tubular; probenecid reduce secrecion tubular y nefrotoxicidad.",
+    "indications": "Rotulo VISTIDE: retinitis por CMV en pacientes con SIDA. Este candidato no valida usos off-label para otros virus.",
+    "commercialNames": "VISTIDE, EE.UU.",
+    "presentation": "Solucion concentrada para infusion IV.",
+    "presentations": "75 mg/mL; vial 375 mg/5 mL.",
+    "dose": "Induccion: 5 mg/kg IV en 1 h, 1 vez/semana por 2 semanas, solo si creatinina <=1,5 mg/dL, CrCl >55 mL/min y proteina urinaria <100 mg/dL. Mantenimiento: 5 mg/kg IV en 1 h cada 2 semanas.",
+    "pediatricDose": "Seguridad/eficacia pediatrica no validadas en este candidato; AUTOMATIZACION_PEDIATRICA=BLOQUEADA.",
+    "renalDose": "Preexistente: contraindicado si creatinina >1,5 mg/dL, CrCl <=55 mL/min o proteinuria >=100 mg/dL (>=2+). Durante mantenimiento: aumento creatinina 0,3-0,4 mg/dL sobre basal -> reducir 5 a 3 mg/kg; aumento >=0,5 mg/dL o proteinuria >=3+ -> suspender.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Pueden ocurrir proteinuria, aumento de creatinina, nausea/vomitos relacionados con probenecid y efectos hematologicos.",
+    "dangerousAdverseEffects": "Nefrotoxicidad grave y potencialmente irreversible, incluida insuficiencia renal; pueden ocurrir neutropenia y toxicidad ocular.",
+    "adverseEffects": "Pueden ocurrir fiebre, astenia y reacciones relacionadas con regimen/probenecid.",
+    "contraindications": "Funcion renal fuera de los umbrales de inclusion; hipersensibilidad a cidofovir; imposibilidad de usar probenecid cuando lo exige el rotulo; verificar lista completa del producto.",
+    "interactions": "Evitar otros nefrotoxicos alrededor del regimen; probenecid es obligatorio y posee sus propias interacciones/contraindicaciones.",
+    "monitoring": "Creatinina y proteinuria antes de CADA dosis; CrCl, hemograma/neutrofilos y signos de toxicidad ocular/renal.",
+    "administration": "Solo IV, tras dilucion, siempre con probenecid e hidratacion salina segun rotulo.",
+    "preparation": "Diluir dosis calculada en 100 mL de NaCl 0,9%. Probenecid: 2 g VO 3 h antes y 1 g VO 2 h y 8 h despues de infusion; total 4 g.",
+    "infusionProtocol": "Infundir a velocidad constante durante 1 hora. Hidratar con solucion salina IV segun protocolo del rotulo para reducir nefrotoxicidad.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "SIDA con retinitis CMV y funcion renal conservada dentro de criterios del rotulo. Enfermedad renal es alto riesgo/contraindicacion.",
+    "patientEducation": "Este tratamiento exige probenecid, hidratacion y pruebas antes de cada dosis; comunicar disminucion de orina, edema y cambios visuales.",
+    "clinicalPearls": "Cidofovir sin probenecid/hidratacion no corresponde al regimen del rotulo. Los umbrales renales son bloqueos absolutos del candidato.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEFROTOXICIDAD_BOXED_WARNING; PROBENECID_OBLIGATORIO; HIDRATACION; CRCL_55; PROTEINURIA.",
+    "alerts": "No administrar sin comprobar creatinina/proteinuria ni sin probenecid/hidratacion. Pediatria y usos off-label bloqueados.",
+    "references": [
+      "DailyMed/NLM EUA - VISTIDE (cidofovir) injection. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90639fc6-0295-4115-98f0-054b783850ce"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90639fc6-0295-4115-98f0-054b783850ce"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Cidofovir - VISTIDE 75 mg/mL IV",
+    "es": "Cidofovir - VISTIDE 75 mg/mL IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "cidofovir.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "100",
+    "approvedSha256": "0570f083fc313d61727d1e5380c90e3280966a497e8006cf58d5d82eec68ef31",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "e0c21a75ecd6485bdc812e20b898fa2ccd11738d322cde54688d8637a852a4d9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_100_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "antimoniato_de_meglumina",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO",
+          "CONCENTRACAO_SB5_DEVE_SER_CONFIRMADA",
+          "ESCOPO_VISCERAL_PKDL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "artemeter_lumefantrina",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "PROFILAXIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "baloxavir_marboxil",
+        "bloqueios_clinicos": [
+          "FORMULACAO_PESO_OBRIGATORIOS",
+          "IDADE_MENOR_5_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "benznidazol",
+        "bloqueios_clinicos": [
+          "DOSE_ADULTO_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA_PESO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "bezlotoxumabe",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_1_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "CHF_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "capreomicina",
+        "bloqueios_clinicos": [
+          "ATIVACAO_CLINICA_BLOQUEADA",
+          "CALCULO_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cicloserina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "TDM_RECOMENDADO_EM_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cidofovir",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "USOS_OFF_LABEL_BLOQUEADOS",
+          "RENAL_LIMIARES_OBRIGATORIOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clofazimina",
+        "bloqueios_clinicos": [
+          "ESCOPO_LEPRA_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA_ATE_TABELA_WHO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cloroquina",
+        "bloqueios_clinicos": [
+          "MALARIA_COMPLICADA_BLOQUEADA",
+          "REGIAO_RESISTENTE_BLOQUEADA",
+          "SAL_BASE_CONVERSAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "cidofovir",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "VISTIDE 75 mg/mL IV - retinite CMV em AIDS, EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "PEDIATRIA_BLOQUEADA",
+        "USOS_OFF_LABEL_BLOQUEADOS",
+        "RENAL_LIMIARES_OBRIGATORIOS"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "100",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "100",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

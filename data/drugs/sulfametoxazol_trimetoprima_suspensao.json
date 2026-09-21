@@ -1,0 +1,478 @@
+{
+  "id": "sulfametoxazol_trimetoprima_suspensao",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "sulfametoxazol_trimetoprima_suspensao"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Sulfametoxazol + trimetoprima — suspensão oral 200/40 mg por 5 mL",
+    "class": "Antibacteriano combinado sulfonamida + inibidor de diidrofolato redutase",
+    "pharmacologicClass": "Bloqueio sequencial da síntese bacteriana de folato",
+    "mechanism": "Sulfametoxazol compete com PABA e inibe síntese de ácido di-hidrofólico; trimetoprima inibe diidrofolato redutase, bloqueando etapas consecutivas essenciais.",
+    "pharmacodynamics": "A combinação produz bloqueio sequencial do folato e atividade antibacteriana contra organismos suscetíveis.",
+    "pharmacokinetics": "VO, absorção rápida; pico 1–4 h. Ligação proteica aproximada 70% para SMX e 44% para TMP. Meias-vidas médias ~10 h e 8–10 h. Eliminação renal predominante; ambos atravessam placenta e são excretados no leite.",
+    "indications": "EUA: ITU, otite média aguda pediátrica em situações selecionadas, exacerbação de bronquite crônica em adultos, shigelose, tratamento/profilaxia de P. jirovecii e diarreia do viajante em adultos, conforme suscetibilidade.",
+    "commercialNames": "Produto-fonte genérico ANI Pharmaceuticals; marcas BR/AR não verificadas.",
+    "presentation": "Suspensão oral.",
+    "presentations": "200 mg sulfametoxazol + 40 mg trimetoprima por 5 mL.",
+    "dose": "Adultos, ITU: 20 mL q12h por 10–14 dias; shigelose: mesmo esquema por 5 dias. Outros usos têm regimes próprios.",
+    "pediatricDose": "Contraindicado <2 meses. >=2 meses, ITU ou otite média: 40 mg/kg/dia SMX + 8 mg/kg/dia TMP, divididos q12h por 10 dias; shigelose, mesma dose diária por 5 dias. PJP tratamento: 75–100 mg/kg/dia SMX + 15–20 mg/kg/dia TMP divididos q6h por 14–21 dias. AUTOMATABLE=NO até selecionar indicação e limites/monitorização.",
+    "renalDose": "CrCl >30 mL/min: esquema usual; 15–30: metade do esquema usual; <15: uso não recomendado no rótulo.",
+    "hepaticDose": "Contraindicado em dano hepático marcado; não há algoritmo Child-Pugh numérico no rótulo.",
+    "commonAdverseEffects": "Náusea, vômitos, anorexia e rash/urticária estão entre os eventos comuns.",
+    "dangerousAdverseEffects": "SJS/TEN/DRESS e outras SCAR; agranulocitose/aplasia medular, trombocitopenia imune, necrose hepática, hipercalemia, hemólise em G6PD e lesão renal.",
+    "adverseEffects": "Pode causar distúrbios eletrolíticos, hipoglicemia, cristalúria e alterações hematológicas.",
+    "contraindications": "Hipersensibilidade a sulfonamidas/TMP; trombocitopenia imune prévia relacionada; anemia megaloblástica por deficiência de folato; <2 meses; dano hepático marcado; insuficiência renal grave sem possibilidade de monitorização; uso concomitante de dofetilida.",
+    "interactions": "Dofetilida é contraindicada. Pode aumentar efeito de varfarina, fenitoína e sulfonilureias; risco de hipercalemia aumenta com fármacos que elevam potássio.",
+    "monitoring": "Hemograma, função renal, urinálise e eletrólitos (especialmente potássio) em pacientes de risco, uso prolongado ou doses altas.",
+    "administration": "VO; medir com dispositivo graduado. Garantir hidratação adequada quando clinicamente apropriado.",
+    "preparation": "Suspensão pronta para uso; agitar antes de medir. Não alterar concentração.",
+    "infusionProtocol": "Não aplicável à suspensão oral.",
+    "pregnancy": "Rótulo atual descreve potencial toxicidade embriofetal e associações epidemiológicas com malformações; se usado na gestação, informar risco potencial e avaliar alternativas/benefício-risco.",
+    "lactation": "Ambos os componentes são excretados no leite. Evitar decisões automáticas; risco é maior em lactentes prematuros, ictéricos, doentes ou muito jovens.",
+    "specialPopulations": "G6PD: risco de hemólise. Idosos e insuficiência renal têm maior risco de hipercalemia, reações graves e acúmulo.",
+    "patientEducation": "Usar apenas para infecção bacteriana comprovada ou fortemente suspeita e considerar cultura/sensibilidade e resistência local. Interromper e procurar avaliação imediata ao primeiro sinal de rash importante, bolhas, febre com lesões cutâneas ou reação sistêmica.",
+    "clinicalPearls": "A dose pediátrica deve ser expressa explicitamente nos dois componentes; não abreviar como “8 mg/kg” sem dizer que se refere a TMP.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SCAR_FATAL; HEMATOLOGIC_TOXICITY; HYPERKALEMIA; RENAL_ADJUSTMENT; AGE_LT2M_CONTRAINDICATED.",
+    "alerts": "Fonte atual DailyMed 2026; registro/disponibilidade BR/AR não confirmados.",
+    "references": [
+      "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+  },
+  "es": {
+    "name": "Sulfametoxazol + trimetoprima — suspensión oral 200/40 mg por 5 mL",
+    "class": "Antibacteriano combinado sulfonamida + inhibidor de dihidrofolato reductasa",
+    "pharmacologicClass": "Bloqueo secuencial de síntesis bacteriana de folato",
+    "mechanism": "Sulfametoxazol compite con PABA e inhibe síntesis de ácido dihidrofólico; trimetoprima inhibe dihidrofolato reductasa, bloqueando pasos consecutivos esenciales.",
+    "pharmacodynamics": "La combinación produce bloqueo secuencial del folato y actividad antibacteriana contra organismos susceptibles.",
+    "pharmacokinetics": "VO, absorción rápida; pico 1–4 h. Unión proteica aproximada 70% SMX y 44% TMP. Semividas medias ~10 h y 8–10 h. Eliminación renal predominante; ambos atraviesan placenta y se excretan en leche.",
+    "indications": "EE.UU.: ITU, otitis media aguda pediátrica en situaciones seleccionadas, exacerbación de bronquitis crónica en adultos, shigelosis, tratamiento/profilaxis de P. jirovecii y diarrea del viajero en adultos, según susceptibilidad.",
+    "commercialNames": "Producto fuente genérico ANI Pharmaceuticals; marcas BR/AR no verificadas.",
+    "presentation": "Suspensión oral.",
+    "presentations": "200 mg sulfametoxazol + 40 mg trimetoprima por 5 mL.",
+    "dose": "Adultos, ITU: 20 mL c/12h por 10–14 días; shigelosis: mismo esquema por 5 días. Otros usos tienen regímenes propios.",
+    "pediatricDose": "Contraindicado <2 meses. >=2 meses, ITU u otitis media: 40 mg/kg/día SMX + 8 mg/kg/día TMP, divididos c/12h por 10 días; shigelosis, misma dosis diaria por 5 días. PJP tratamiento: 75–100 mg/kg/día SMX + 15–20 mg/kg/día TMP divididos c/6h por 14–21 días. AUTOMATABLE=NO hasta seleccionar indicación y límites/monitorización.",
+    "renalDose": "CrCl >30 mL/min: régimen usual; 15–30: mitad del régimen usual; <15: uso no recomendado en el rótulo.",
+    "hepaticDose": "Contraindicado en daño hepático marcado; no hay algoritmo Child-Pugh numérico.",
+    "commonAdverseEffects": "Náusea, vómitos, anorexia y rash/urticaria están entre los eventos comunes.",
+    "dangerousAdverseEffects": "SJS/TEN/DRESS y otras SCAR; agranulocitosis/aplasia medular, trombocitopenia inmune, necrosis hepática, hiperpotasemia, hemólisis en G6PD y lesión renal.",
+    "adverseEffects": "Puede causar trastornos electrolíticos, hipoglucemia, cristaluria y alteraciones hematológicas.",
+    "contraindications": "Hipersensibilidad a sulfonamidas/TMP; trombocitopenia inmune previa relacionada; anemia megaloblástica por déficit de folato; <2 meses; daño hepático marcado; insuficiencia renal grave sin monitorización posible; uso concomitante de dofetilida.",
+    "interactions": "Dofetilida está contraindicada. Puede aumentar efecto de warfarina, fenitoína y sulfonilureas; riesgo de hiperpotasemia aumenta con fármacos que elevan potasio.",
+    "monitoring": "Hemograma, función renal, urianálisis y electrolitos (especialmente potasio) en pacientes de riesgo, uso prolongado o dosis altas.",
+    "administration": "VO; medir con dispositivo graduado. Asegurar hidratación adecuada cuando sea clínicamente apropiado.",
+    "preparation": "Suspensión lista para usar; agitar antes de medir. No alterar concentración.",
+    "infusionProtocol": "No aplica a la suspensión oral.",
+    "pregnancy": "El rótulo actual describe potencial toxicidad embriofetal y asociaciones epidemiológicas con malformaciones; si se usa en embarazo, informar riesgo potencial y valorar alternativas/beneficio-riesgo.",
+    "lactation": "Ambos componentes se excretan en leche. Evitar decisiones automáticas; el riesgo es mayor en lactantes prematuros, ictéricos, enfermos o muy pequeños.",
+    "specialPopulations": "G6PD: riesgo de hemólisis. Mayores e insuficiencia renal tienen más riesgo de hiperpotasemia, reacciones graves y acumulación.",
+    "patientEducation": "Usar solo para infección bacteriana comprobada o fuertemente sospechada, considerando cultivo/sensibilidad y resistencia local. Suspender y consultar de inmediato ante rash importante, ampollas, fiebre con lesiones cutáneas o reacción sistémica.",
+    "clinicalPearls": "La dosis pediátrica debe expresarse explícitamente para ambos componentes; no abreviar “8 mg/kg” sin indicar que corresponde a TMP.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SCAR_FATAL; TOXICIDAD_HEMATOLOGICA; HIPERPOTASEMIA; AJUSTE_RENAL; EDAD_MENOR_2M_CONTRAINDICADA.",
+    "alerts": "Fuente actual DailyMed 2026; registro/disponibilidad BR/AR no confirmados.",
+    "references": [
+      "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Sulfametoxazol + trimetoprima — suspensão oral 200/40 mg por 5 mL",
+    "es": "Sulfametoxazol + trimetoprima — suspensión oral 200/40 mg por 5 mL"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "sulfametoxazol_trimetoprima_suspensao.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "095",
+    "approvedSha256": "3b6d24e739ab60cbbee9ffb05f82b9cf4afca83c843ea68c35a0c6eb32bd8480",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "2373a97fe3e28c3e696c7e9c2438b112a53c196346384467e90de727515f0cd8",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_095_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "desloratadina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "desloratadina_xarope",
+          "nome_recebido": "Desloratadina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Desloratadine Oral Solution, atualizado 23-10-2025, revisado 07/2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41d5e0d4-6188-847b-e063-6294a90a2e2f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "AJUSTE_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxizina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "hidroxizina_xarope",
+          "nome_recebido": "Hidroxizina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Hydroxyzine Hydrochloride Oral Solution 10 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87d4bbff-0498-4c26-86cb-7ce173afa0b6"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_suspensao",
+          "nome_recebido": "Amoxicilina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_LOGICA_INDICACAO_E_CONCENTRACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_clavulanato_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_clavulanato_suspensao",
+          "nome_recebido": "Amoxicilina + clavulanato suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin and Clavulanate Potassium powder for suspension. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d0aa94-5c32-4fb7-8561-8763810d2847"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CONVERSAO_ML_BLOQUEADA_ATE_SELECAO_DA_RAZAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_FORMULACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "azitromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "azitromicina_suspensao",
+          "nome_recebido": "Azitromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cefalexina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "cefalexina_suspensao",
+          "nome_recebido": "Cefalexina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_E_DIVISAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_15_ANOS_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfametoxazol_trimetoprima_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "sulfametoxazol_trimetoprima_suspensao",
+          "nome_recebido": "Sulfametoxazol + trimetoprima suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO",
+          "GESTACAO_LACTACAO_REQUEREM_AVALIACAO_INDIVIDUAL"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "claritromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "claritromicina_suspensao",
+          "nome_recebido": "Claritromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Clarithromycin for Oral Suspension, atualizado/revisado 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fad1e5a3-59f9-4868-9937-d3b061ab8f00"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "INTERACOES_CYP3A4_ALTO_RISCO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ceftriaxona_pediatrica_im",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "ceftriaxona_pediatrica_im",
+          "nome_recebido": "Ceftriaxona pediátrica IM",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "PREPARACAO_AUTOMATICA_BLOQUEADA",
+          "INFUSAO_IV_BLOQUEADA",
+          "NEONATO_REQUER_TRIAGEM_DE_PREMATURIDADE_BILIRRUBINA_CALCIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "penicilina_benzatina_pediatrica",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "penicilina_benzatina_pediatrica",
+          "nome_recebido": "Penicilina benzatina pediátrica",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Bicillin L-A (penicillin G benzathine), atualizado 21-07-2026, revisado 06/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+            "CDC EUA — STI Treatment Guidelines, Congenital Syphilis, consultado 20-09-2026. https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "VIA_IV_PROIBIDA",
+          "CALCULO_SIFILIS_CONGENITA_BLOQUEADO_ATE_SELECAO_DE_CENARIO",
+          "ADMINISTRACAO_PROFISSIONAL_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "sulfametoxazol_trimetoprima_suspensao",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques, resultado APROVADO INTEGRALMENTE, sem excecoes informadas. Bloqueios clinicos granulares do candidato permanecem preservados. Integracao tecnica nao iniciada; publicacao bloqueada.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "sulfametoxazol_trimetoprima_suspensao",
+        "nome_recebido": "Sulfametoxazol + trimetoprima suspensão",
+        "fontes_consultadas": [
+          "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+        ],
+        "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO",
+        "GESTACAO_LACTACAO_REQUEREM_AVALIACAO_INDIVIDUAL"
+      ],
+      "CAMPOS_VAZIOS_JUSTIFICADOS": {
+        "guidelineRecommendations": "Sem diretriz independente revisada nesta execução."
+      },
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "PENDENTE",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "095",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "095",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

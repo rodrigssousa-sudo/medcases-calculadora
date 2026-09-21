@@ -4,7 +4,7 @@ const exporter=fs.readFileSync(path.join(root,'scripts/export-clinical-data.js')
 const modules=vm.runInNewContext(exporter.match(/const DB_MODULES = (\[[\s\S]*?\n\]);/)[1]);
 const html=fs.readFileSync(path.join(root,'public/index.html'),'utf8');
 const dynamic=[...html.matchAll(/_loadScript\('database\/([^?'\/]+\.js)/g)].map(x=>x[1]);
-const order=[...dynamic,...[...html.matchAll(/<script[^>]*src="database\/([^?"/]+\.js)/g)].map(x=>x[1])];
+const order=[...dynamic,...[...html.matchAll(/<script[^>]*src="database\/([^?"/]+\.js)/g)].map(x=>x[1]),...modules.filter(m=>m.privateReferenceOnly).map(m=>m.file)];
 const s={console:{log(){},warn(){},error(){}}};for(const m of modules)Object.assign(s,m.preseed||{});s.window=s;s.self=s;s.globalThis=s;const ctx=vm.createContext(s);let total=0,errors=[],verified=0;
 for(const file of order.filter(f=>modules.some(m=>m.file===f))){try{vm.runInContext(fs.readFileSync(path.join(root,'database',file),'utf8'),ctx,{timeout:3000});total++;}catch(e){errors.push([file,e.message]);}}
 const norm=v=>String(v).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9_-]/g,'_').replace(/__+/g,'_').replace(/^_|_$/g,'');

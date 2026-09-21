@@ -11192,89 +11192,368 @@ function _mcNeurologiaT(lang, pt, es) {
 ;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["entacapona"])throw new Error("GOLD33_MISSING_CANONICAL:entacapona");db["entacapona"].mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "029",
     "requiredFieldCount": 33,
-    "approvedSha256": "5d547791a4727e50809145d534af14205bfcad60ce3a97b2e32cec7f8f441bff",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "entacapona",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "ENTACAPONA 200 MG COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "MONOTERAPIA_BLOQUEADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/neurologia.js",
+      "sourceField": "entacapona.mcGoldClinicalV1",
+      "lote": "029",
+      "requiredFields": 33,
+      "approvedSha256": "5d547791a4727e50809145d534af14205bfcad60ce3a97b2e32cec7f8f441bff",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   },
   "pt": {
-    "name": "Entacapona",
-    "class": "Inibidor periférico da COMT",
-    "pharmacologicClass": "Prolonga efeito da levodopa ao inibir seu metabolismo periférico",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Comprimidos 200 mg; combinações fixas.",
-    "presentations": "Comprimidos 200 mg; combinações fixas.",
-    "mechanism": "Prolonga efeito da levodopa ao inibir seu metabolismo periférico. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Metabolismo por conjugação; meia-vida ~0,4–0,7 h.",
-    "indications": "Adjuvante a levodopa/carbidopa em doença de Parkinson com desgaste de fim de dose.",
-    "dose": "200 mg com cada dose de levodopa/carbidopa, máximo 8 vezes/dia (1600 mg/dia). Pode exigir redução da levodopa.",
-    "pediatricDose": "Não estabelecido. AUTOMATABLE=NO.",
-    "renalDose": "Sem ajuste usual.",
-    "hepaticDose": "Cautela em hepatopatia/obstrução biliar; exposição aumenta.",
-    "commonAdverseEffects": "Discinesia, náusea, urina alaranjada, diarreia e hipotensão.",
-    "dangerousAdverseEffects": "Rabdomiólise/síndrome hiperpirética na retirada, sono súbito, alucinações e diarreia grave.",
-    "adverseEffects": "Discinesia, náusea, urina alaranjada, diarreia e hipotensão. Graves: Rabdomiólise/síndrome hiperpirética na retirada, sono súbito, alucinações e diarreia grave.",
-    "contraindications": "Uso concomitante com IMAO não seletivo; hipersensibilidade.",
-    "interactions": "Levodopa, IMAO, catecolaminas e fármacos metabolizados por COMT; varfarina.",
-    "monitoring": "Discinesia, wearing-off, PA, sono súbito, alucinação, diarreia e INR se varfarina.",
-    "administration": "Tomar junto de cada dose de levodopa/carbidopa; não usar isoladamente.",
-    "preparation": "Confirmar produto, força e apresentação; seguir rótulo oficial.",
-    "infusionProtocol": "Não aplicável salvo apresentação parenteral; seguir protocolo do produto.",
-    "pregnancy": "Usar somente após avaliação individual de benefício-risco e rotulagem específica.",
-    "lactation": "Avaliar exposição do lactente, benefício materno e alternativas.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
-    "alerts": "Rabdomiólise/síndrome hiperpirética na retirada, sono súbito, alucinações e diarreia grave. Dose bloqueada sem esquema exato de levodopa, wearing-off, discinesia, PA, sono/alucinação, fígado e interações.",
+    "name": "Entacapona 200 mg - comprimido oral",
+    "class": "Antiparkinsoniano adjuvante",
+    "pharmacologicClass": "Inibidor periferico da catecol-O-metiltransferase (COMT)",
+    "mechanism": "Inibe COMT periferica, reduzindo metabolismo de levodopa e aumentando/prolongando exposicao a levodopa quando usada com carbidopa/levodopa.",
+    "pharmacodynamics": "Nao possui efeito antiparkinsoniano proprio significativo sem levodopa; aumenta tempo ON e pode intensificar efeitos dopaminergicos, inclusive discinesia.",
+    "pharmacokinetics": "Alta ligacao proteica e meia-vida curta. Apenas cerca de 10% e excretado na urina; funcao renal nao mostrou efeito importante. Hepatopatia duplicou aproximadamente AUC e Cmax.",
+    "indications": "Adjuvante a levodopa/carbidopa em pacientes com doenca de Parkinson que apresentam deterioracao de fim de dose ('wearing-off').",
+    "commercialNames": "Produto generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimido revestido VO.",
+    "presentations": "200 mg.",
+    "dose": "200 mg com cada dose de levodopa/carbidopa, maximo 8 vezes/dia = 1600 mg/dia. Muitos pacientes, especialmente com levodopa >=800 mg/dia ou discinesia moderada-grave, necessitam reduzir levodopa; em estudos a reducao media foi ~25% entre os que precisaram de ajuste.",
+    "pediatricDose": "Seguranca e eficacia pediatrica nao estabelecidas; CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Estudo de insuficiencia renal nao mostrou efeitos importantes da funcao renal na farmacocinetica; nao ha ajuste numerico rotineiro documentado.",
+    "hepaticDose": "AUC e Cmax aproximadamente dobraram em hepatopatia documentada; usar com cautela. Nao ha tabela numerica de reducao.",
+    "commonAdverseEffects": "Discinesia, coloracao da urina, diarreia, nausea, hipercinesia, dor abdominal, vomitos e boca seca.",
+    "dangerousAdverseEffects": "Sonolencia subita, hipotensao/sincope, alucinacoes, comportamentos compulsivos, diarreia/colite graves, rabdomiolise e hipertermia/confusao na retirada abrupta.",
+    "adverseEffects": "Pode intensificar efeitos adversos de levodopa, especialmente discinesia e nauseas.",
+    "contraindications": "Hipersensibilidade ao produto; verificar restricoes especificas do produto e terapia dopaminergica concomitante.",
+    "interactions": "Cautela com farmacos de estrutura catecol (p.ex. epinefrina, norepinefrina, dopamina, dobutamina) e com outras terapias dopaminergicas; ajuste de levodopa frequentemente necessario.",
+    "monitoring": "Discinesia, PA ortostatica, sonolencia, alucinacoes/impulsividade, diarreia persistente, sintomas de rabdomiolise e resposta a levodopa.",
+    "administration": "Administrar junto com cada dose de levodopa/carbidopa, com ou sem alimento; nunca usar como monoterapia antiparkinsoniana.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados humanos adequados sao limitados; usar somente apos avaliacao beneficio-risco especializada.",
+    "lactation": "Dados humanos sao insuficientes; avaliar risco-beneficio e alternativas.",
+    "specialPopulations": "Hepatopatia exige cautela; idosos podem ter maior susceptibilidade a hipotensao, alucinacoes e sonolencia.",
+    "patientEducation": "Urina pode ficar marrom/alaranjada; relatar diarreia persistente, sono subido, alucinacoes, impulsividade e dor muscular intensa.",
+    "clinicalPearls": "Entacapona deve sempre acompanhar levodopa/carbidopa; o maximo de 1600 mg/dia deriva de 200 mg ate 8x/dia.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "COMT; SEM_MONOTERAPIA; DISCINESIA; SONOLENCIA_SUBITA; DIARREIA_COLITE; HEPATOPATIA.",
+    "alerts": "Nao iniciar entacapona sem plano de ajuste/monitorizacao da levodopa em pacientes com alta dose ou discinesia.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020796s021lbl.pdf"
+      "DailyMed/NLM EUA - Entacapone tablets 200 mg, atualizado 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56327e32-3b06-4144-91a0-bb1908842e33"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56327e32-3b06-4144-91a0-bb1908842e33"
   },
   "es": {
-    "name": "Entacapona",
-    "class": "Inhibidor periférico de COMT",
-    "pharmacologicClass": "Prolonga efecto de levodopa al inhibir su metabolismo periférico",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Comprimidos 200 mg; combinaciones fijas.",
-    "presentations": "Comprimidos 200 mg; combinaciones fijas.",
-    "mechanism": "Prolonga efecto de levodopa al inhibir su metabolismo periférico. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Metabolismo por conjugación; semivida ~0,4–0,7 h.",
-    "indications": "Adyuvante de levodopa/carbidopa en Parkinson con desgaste de fin de dosis.",
-    "dose": "200 mg con cada dosis de levodopa/carbidopa, máximo 8 veces/día (1600 mg/día). Puede requerir reducir levodopa.",
-    "pediatricDose": "No establecido. AUTOMATABLE=NO.",
-    "renalDose": "Sin ajuste habitual.",
-    "hepaticDose": "Precaución en hepatopatía/obstrucción biliar; exposición aumenta.",
-    "commonAdverseEffects": "Discinesia, náusea, orina naranja, diarrea e hipotensión.",
-    "dangerousAdverseEffects": "Rabdomiólisis/síndrome hiperpirético al retirar, sueño súbito, alucinaciones y diarrea grave.",
-    "adverseEffects": "Discinesia, náusea, orina naranja, diarrea e hipotensión. Graves: Rabdomiólisis/síndrome hiperpirético al retirar, sueño súbito, alucinaciones y diarrea grave.",
-    "contraindications": "Uso concomitante con IMAO no selectivo; hipersensibilidad.",
-    "interactions": "Levodopa, IMAO, catecolaminas y fármacos metabolizados por COMT; warfarina.",
-    "monitoring": "Discinesia, wearing-off, PA, sueño súbito, alucinación, diarrea e INR si warfarina.",
-    "administration": "Tomar con cada dosis de levodopa/carbidopa; no usar sola.",
-    "preparation": "Confirmar producto, dosis y presentación; seguir ficha oficial.",
-    "infusionProtocol": "No aplicable salvo presentación parenteral; seguir protocolo del producto.",
-    "pregnancy": "Usar solo tras evaluación individual de beneficio-riesgo y ficha específica.",
-    "lactation": "Evaluar exposición del lactante, beneficio materno y alternativas.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
-    "alerts": "Rabdomiólisis/síndrome hiperpirético al retirar, sueño súbito, alucinaciones y diarrea grave. Dose bloqueada sem esquema exato de levodopa, wearing-off, discinesia, PA, sono/alucinação, fígado e interações.",
+    "name": "Entacapona 200 mg - comprimido oral",
+    "class": "Antiparkinsoniano adyuvante",
+    "pharmacologicClass": "Inhibidor periferico de catecol-O-metiltransferasa (COMT)",
+    "mechanism": "Inhibe COMT periferica, reduciendo metabolismo de levodopa y aumentando/prolongando exposicion a levodopa cuando se usa con carbidopa/levodopa.",
+    "pharmacodynamics": "No posee efecto antiparkinsoniano propio significativo sin levodopa; aumenta tiempo ON y puede intensificar efectos dopaminergicos, incluida discinesia.",
+    "pharmacokinetics": "Alta union proteica y semivida corta. Solo cerca de 10% se excreta en orina; funcion renal no mostro efecto importante. Hepatopatia duplico aproximadamente AUC y Cmax.",
+    "indications": "Adyuvante a levodopa/carbidopa en pacientes con enfermedad de Parkinson con deterioro de fin de dosis ('wearing-off').",
+    "commercialNames": "Producto generico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimido recubierto VO.",
+    "presentations": "200 mg.",
+    "dose": "200 mg con cada dosis de levodopa/carbidopa, maximo 8 veces/dia = 1600 mg/dia. Muchos pacientes, especialmente con levodopa >=800 mg/dia o discinesia moderada-grave, necesitan reducir levodopa; en estudios la reduccion media fue ~25% entre quienes necesitaron ajuste.",
+    "pediatricDose": "Seguridad y eficacia pediatrica no establecidas; CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Estudio de insuficiencia renal no mostro efectos importantes de funcion renal en farmacocinetica; no hay ajuste numerico rutinario documentado.",
+    "hepaticDose": "AUC y Cmax aproximadamente se duplicaron en hepatopatia documentada; usar con precaucion. No hay tabla numerica de reduccion.",
+    "commonAdverseEffects": "Discinesia, coloracion de orina, diarrea, nausea, hipercinesia, dolor abdominal, vomitos y boca seca.",
+    "dangerousAdverseEffects": "Somnolencia subita, hipotension/sincope, alucinaciones, conductas compulsivas, diarrea/colitis graves, rabdomiolisis e hipertermia/confusion con retirada brusca.",
+    "adverseEffects": "Puede intensificar efectos adversos de levodopa, especialmente discinesia y nauseas.",
+    "contraindications": "Hipersensibilidad al producto; verificar restricciones especificas del producto y terapia dopaminergica concomitante.",
+    "interactions": "Precaucion con farmacos de estructura catecol (p.ej. epinefrina, norepinefrina, dopamina, dobutamina) y con otras terapias dopaminergicas; ajuste de levodopa a menudo necesario.",
+    "monitoring": "Discinesia, PA ortostatica, somnolencia, alucinaciones/impulsividad, diarrea persistente, sintomas de rabdomiolisis y respuesta a levodopa.",
+    "administration": "Administrar junto con cada dosis de levodopa/carbidopa, con o sin comida; nunca usar como monoterapia antiparkinsoniana.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos humanos adecuados limitados; usar solo tras evaluacion beneficio-riesgo especializada.",
+    "lactation": "Datos humanos insuficientes; valorar riesgo-beneficio y alternativas.",
+    "specialPopulations": "Hepatopatia exige precaucion; mayores pueden tener mayor susceptibilidad a hipotension, alucinaciones y somnolencia.",
+    "patientEducation": "La orina puede volverse marron/naranja; comunicar diarrea persistente, sueño subito, alucinaciones, impulsividad y dolor muscular intenso.",
+    "clinicalPearls": "Entacapona siempre debe acompanar levodopa/carbidopa; el maximo de 1600 mg/dia deriva de 200 mg hasta 8 veces/dia.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "COMT; SIN_MONOTERAPIA; DISCINESIA; SOMNOLENCIA_SUBITA; DIARREA_COLITIS; HEPATOPATIA.",
+    "alerts": "No iniciar entacapona sin plan de ajuste/monitorizacion de levodopa en pacientes con dosis alta o discinesia.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2013/020796s021lbl.pdf"
+      "DailyMed/NLM EUA - Entacapone tablets 200 mg, atualizado 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56327e32-3b06-4144-91a0-bb1908842e33"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=entacapone"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=56327e32-3b06-4144-91a0-bb1908842e33"
   }
 };})();
 /* GOLD33_SELECTIVE:entacapona:END */
@@ -12452,89 +12731,368 @@ function _mcNeurologiaT(lang, pt, es) {
 ;(function(){var db=window.NEUROLOGIA_DRUGS_DB;if(!db||!db["galantamina"])throw new Error("GOLD33_MISSING_CANONICAL:galantamina");db["galantamina"].mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "038",
     "requiredFieldCount": 33,
-    "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "galantamina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "GALANTAMINA ER CAPSULA VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/neurologia.js",
+      "sourceField": "galantamina.mcGoldClinicalV1",
+      "lote": "038",
+      "requiredFields": 33,
+      "approvedSha256": "ad9a95080c0e044c8ec533188195d104f46324587195ff6f80e28911f7c2dc5f",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   },
   "pt": {
-    "name": "Galantamina",
-    "class": "Inibidor da acetilcolinesterase",
-    "pharmacologicClass": "Inibe acetilcolinesterase e modula receptores nicotínicos",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Comprimidos 4/8/12 mg, solução 4 mg/mL e cápsulas ER 8/16/24 mg.",
-    "presentations": "Comprimidos 4/8/12 mg, solução 4 mg/mL e cápsulas ER 8/16/24 mg.",
-    "mechanism": "Inibe acetilcolinesterase e modula receptores nicotínicos. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Metabolismo CYP2D6/3A4 e excreção renal; meia-vida ~7 h.",
-    "indications": "Demência leve a moderada do tipo Alzheimer.",
-    "dose": "IR: 4 mg 2x/dia por ≥4 semanas, depois 8 mg 2x/dia; máximo 12 mg 2x/dia. ER: 8 mg 1x/dia, titular a 16-24 mg/dia.",
-    "pediatricDose": "Não indicada em pediatria. AUTOMATABLE=NO.",
-    "renalDose": "CrCl 9-59: máximo 16 mg/dia; evitar CrCl <9.",
-    "hepaticDose": "Child-Pugh B: máximo 16 mg/dia; evitar Child-Pugh C.",
-    "commonAdverseEffects": "Náusea, vômito, diarreia, anorexia, perda de peso e tontura.",
-    "dangerousAdverseEffects": "Bradicardia/bloqueio, síncope, sangramento GI, convulsão e reação cutânea grave.",
-    "adverseEffects": "Náusea, vômito, diarreia, anorexia, perda de peso e tontura. Graves: Bradicardia/bloqueio, síncope, sangramento GI, convulsão e reação cutânea grave.",
-    "contraindications": "Hipersensibilidade.",
-    "interactions": "Anticolinérgicos, outros colinomiméticos, bradicardizantes e CYP3A4/2D6 fortes.",
-    "monitoring": "Cognição/função, peso, GI, FC/síncope, rim/fígado e sangramento GI.",
-    "administration": "Com alimentos e líquidos; ER pela manhã e engolir inteira. Reiniciar baixo após interrupção ≥3 dias.",
-    "preparation": "Solução medida; não triturar ER.",
-    "infusionProtocol": "Não aplicável.",
-    "pregnancy": "Não aplicável habitualmente; dados insuficientes.",
-    "lactation": "Dados insuficientes.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
-    "alerts": "Bradicardia/bloqueio, síncope, sangramento GI, convulsão e reação cutânea grave. Início/titulação bloqueados sem diagnóstico, peso, FC/ECG, CrCl, Child-Pugh, sangramento GI, interações e duração da interrupção.",
+    "name": "Galantamina de liberacao prolongada - capsula oral",
+    "class": "Inibidor da acetilcolinesterase para demencia",
+    "pharmacologicClass": "Colinomimetico; inibidor reversivel da acetilcolinesterase",
+    "mechanism": "Inibe reversivelmente a acetilcolinesterase, aumentando disponibilidade de acetilcolina no SNC.",
+    "pharmacodynamics": "Aumenta atividade colinergica; pode causar bradicardia, sintomas GI e aumento de secrecoes.",
+    "pharmacokinetics": "Formula ER permite dose diaria unica. Metabolismo envolve CYP2D6/CYP3A4; insuficiencia renal/hepatica aumenta exposicao e limita dose.",
+    "indications": "Tratamento de demencia do tipo Alzheimer leve a moderada.",
+    "commercialNames": "Produto generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Capsulas de liberacao prolongada VO.",
+    "presentations": "8 mg, 16 mg e 24 mg.",
+    "dose": "Iniciar 8 mg 1x/dia pela manha. Apos pelo menos 4 semanas, aumentar para 16 mg/dia. Apos pelo menos 4 semanas em 16 mg, pode aumentar para 24 mg/dia conforme beneficio/tolerancia. Faixa eficaz 16-24 mg/dia.",
+    "pediatricDose": "Seguranca e eficacia pediatrica nao estabelecidas; CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "ClCr 9-59 mL/min: maximo 16 mg/dia. ClCr <9 mL/min: uso nao recomendado.",
+    "hepaticDose": "Child-Pugh 7-9: maximo 16 mg/dia. Child-Pugh 10-15: uso nao recomendado.",
+    "commonAdverseEffects": "Nausea, vomitos, tontura, diminuicao do apetite e perda de peso.",
+    "dangerousAdverseEffects": "Bradicardia/bloqueio AV, sangramento GI, reacoes cutaneas graves e crise colinergica em overdose.",
+    "adverseEffects": "Diarreia, dor abdominal, cefaleia e sincope podem ocorrer.",
+    "contraindications": "Hipersensibilidade a galantamina ou excipientes.",
+    "interactions": "Inibidores fortes CYP2D6/CYP3A4 podem aumentar exposicao; anticolinergicos antagonizam efeito; outros colinomimeticos aumentam reacoes; pode potencializar bloqueio neuromuscular tipo succinilcolina.",
+    "monitoring": "FC/conducao, peso, tolerancia GI, sangramento GI em risco, resposta cognitiva e funcao renal/hepatica.",
+    "administration": "1x/dia pela manha, preferencialmente com alimento e com ingestao adequada de liquidos. Se interrompida >3 dias, reiniciar na menor dose e retitular.",
+    "preparation": "Capsula ER pronta para uso; nao converter automaticamente para comprimido IR.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Nao indicada para esta populacao-alvo e dados de gestacao sao limitados; usar somente se houver indicacao excepcional apos avaliacao especializada.",
+    "lactation": "Dados insuficientes; nao ha indicacao pediatrica/neonatal que justifique exposicao sem avaliacao especializada.",
+    "specialPopulations": "Idosos com baixo peso, bradicardia, ulceras, asma/DPOC e disfuncao renal/hepatica exigem maior cautela.",
+    "patientEducation": "Tomar com alimento, hidratar-se, relatar desmaio/bradicardia, vomitos persistentes, fezes escuras e rash.",
+    "clinicalPearls": "Se interrupcao >3 dias, reiniciar na menor dose e retitular; nao retomar diretamente a dose anterior.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BRADICARDIA_AV_BLOCK; GI; PESO; RENAL_HEPATICO_LIMITA_16MG; PEDIATRIA_BLOQUEADA.",
+    "alerts": "ClCr <9 e Child-Pugh 10-15: uso nao recomendado. Interrupcao >3 dias exige retitulacao.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=galantamine",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021615s022lbl.pdf"
+      "DailyMed/NLM EUA - Galantamine extended-release capsules. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d0b75970-8d3d-408b-9e17-9cbad0f776b1"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=galantamine"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d0b75970-8d3d-408b-9e17-9cbad0f776b1"
   },
   "es": {
-    "name": "Galantamina",
-    "class": "Inhibidor de acetilcolinesterasa",
-    "pharmacologicClass": "Inhibe acetilcolinesterasa y modula receptores nicotínicos",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Comprimidos 4/8/12 mg, solución 4 mg/mL y cápsulas ER 8/16/24 mg.",
-    "presentations": "Comprimidos 4/8/12 mg, solución 4 mg/mL y cápsulas ER 8/16/24 mg.",
-    "mechanism": "Inhibe acetilcolinesterasa y modula receptores nicotínicos. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Metabolismo CYP2D6/3A4 y excreción renal; semivida ~7 h.",
-    "indications": "Demencia leve a moderada tipo Alzheimer.",
-    "dose": "IR: 4 mg 2 veces/día por ≥4 semanas, luego 8 mg 2 veces/día; máximo 12 mg 2 veces/día. ER: 8 mg 1 vez/día, titular a 16-24 mg/día.",
-    "pediatricDose": "No indicada en pediatría. AUTOMATABLE=NO.",
-    "renalDose": "CrCl 9-59: máximo 16 mg/día; evitar CrCl <9.",
-    "hepaticDose": "Child-Pugh B: máximo 16 mg/día; evitar Child-Pugh C.",
-    "commonAdverseEffects": "Náusea, vómito, diarrea, anorexia, pérdida de peso y mareo.",
-    "dangerousAdverseEffects": "Bradicardia/bloqueo, síncope, sangrado GI, convulsión y reacción cutánea grave.",
-    "adverseEffects": "Náusea, vómito, diarrea, anorexia, pérdida de peso y mareo. Graves: Bradicardia/bloqueo, síncope, sangrado GI, convulsión y reacción cutánea grave.",
-    "contraindications": "Hipersensibilidad.",
-    "interactions": "Anticolinérgicos, otros colinomiméticos, bradicardizantes y CYP3A4/2D6 potentes.",
-    "monitoring": "Cognición/función, peso, GI, FC/síncope, riñón/hígado y sangrado GI.",
-    "administration": "Con alimentos y líquidos; ER por la mañana y tragar entera. Reiniciar bajo tras interrupción ≥3 días.",
-    "preparation": "Solución medida; no triturar ER.",
-    "infusionProtocol": "No aplicable.",
-    "pregnancy": "No aplicable habitualmente; datos insuficientes.",
-    "lactation": "Datos insuficientes.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
-    "alerts": "Bradicardia/bloqueo, síncope, sangrado GI, convulsión y reacción cutánea grave. Início/titulação bloqueados sem diagnóstico, peso, FC/ECG, CrCl, Child-Pugh, sangramento GI, interações e duração da interrupção.",
+    "name": "Galantamina de liberacion prolongada - capsula oral",
+    "class": "Inhibidor de acetilcolinesterasa para demencia",
+    "pharmacologicClass": "Colinomimetico; inhibidor reversible de acetilcolinesterasa",
+    "mechanism": "Inhibe reversiblemente acetilcolinesterasa, aumentando disponibilidad de acetilcolina en SNC.",
+    "pharmacodynamics": "Aumenta actividad colinergica; puede causar bradicardia, sintomas GI y aumento de secreciones.",
+    "pharmacokinetics": "La forma ER permite dosis unica diaria. Metabolismo incluye CYP2D6/CYP3A4; insuficiencia renal/hepatica aumenta exposicion y limita dosis.",
+    "indications": "Tratamiento de demencia tipo Alzheimer leve a moderada.",
+    "commercialNames": "Producto generico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Capsulas de liberacion prolongada VO.",
+    "presentations": "8 mg, 16 mg y 24 mg.",
+    "dose": "Iniciar 8 mg 1 vez/dia por la manana. Tras al menos 4 semanas, aumentar a 16 mg/dia. Tras al menos 4 semanas con 16 mg, puede aumentar a 24 mg/dia segun beneficio/tolerancia. Rango eficaz 16-24 mg/dia.",
+    "pediatricDose": "Seguridad y eficacia pediatrica no establecidas; CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "CrCl 9-59 mL/min: maximo 16 mg/dia. CrCl <9 mL/min: uso no recomendado.",
+    "hepaticDose": "Child-Pugh 7-9: maximo 16 mg/dia. Child-Pugh 10-15: uso no recomendado.",
+    "commonAdverseEffects": "Nausea, vomitos, mareo, disminucion del apetito y perdida de peso.",
+    "dangerousAdverseEffects": "Bradicardia/bloqueo AV, sangrado GI, reacciones cutaneas graves y crisis colinergica en sobredosis.",
+    "adverseEffects": "Pueden ocurrir diarrea, dolor abdominal, cefalea y sincope.",
+    "contraindications": "Hipersensibilidad a galantamina o excipientes.",
+    "interactions": "Inhibidores potentes CYP2D6/CYP3A4 pueden aumentar exposicion; anticolinergicos antagonizan efecto; otros colinomimeticos aumentan reacciones; puede potenciar bloqueo neuromuscular tipo succinilcolina.",
+    "monitoring": "FC/conduccion, peso, tolerancia GI, sangrado GI en riesgo, respuesta cognitiva y funcion renal/hepatica.",
+    "administration": "1 vez/dia por la manana, preferentemente con comida y adecuada ingesta de liquidos. Si se interrumpe >3 dias, reiniciar en la menor dosis y retitular.",
+    "preparation": "Capsula ER lista para usar; no convertir automaticamente a comprimido IR.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "No indicada para esta poblacion objetivo y datos de embarazo son limitados; usar solo si existe indicacion excepcional tras evaluacion especializada.",
+    "lactation": "Datos insuficientes; no existe indicacion pediatrica/neonatal que justifique exposicion sin evaluacion especializada.",
+    "specialPopulations": "Mayores con bajo peso, bradicardia, ulceras, asma/EPOC y disfuncion renal/hepatica requieren mayor precaucion.",
+    "patientEducation": "Tomar con comida, hidratarse, comunicar desmayo/bradicardia, vomitos persistentes, heces oscuras y rash.",
+    "clinicalPearls": "Si interrupcion >3 dias, reiniciar en la menor dosis y retitular; no retomar directamente la dosis previa.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BRADICARDIA_AV_BLOCK; GI; PESO; RENAL_HEPATICO_LIMITA_16MG; PEDIATRIA_BLOQUEADA.",
+    "alerts": "CrCl <9 y Child-Pugh 10-15: uso no recomendado. Interrupcion >3 dias exige retitulacion.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=galantamine",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/021615s022lbl.pdf"
+      "DailyMed/NLM EUA - Galantamine extended-release capsules. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d0b75970-8d3d-408b-9e17-9cbad0f776b1"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=galantamine"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d0b75970-8d3d-408b-9e17-9cbad0f776b1"
   }
 };})();
 /* GOLD33_SELECTIVE:galantamina:END */

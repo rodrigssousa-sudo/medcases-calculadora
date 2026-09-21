@@ -1,0 +1,309 @@
+{
+  "id": "metronidazol_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "metronidazol_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Metronidazol IV",
+    "class": "Antimicrobiano nitroimidazólico",
+    "pharmacologicClass": "Nitroimidazol ativo contra anaeróbios suscetíveis",
+    "mechanism": "Após redução intracelular em organismos anaeróbios, metabólitos reativos danificam DNA e inibem síntese de ácidos nucleicos.",
+    "pharmacodynamics": "Após redução intracelular em organismos anaeróbios, metabólitos reativos danificam DNA e inibem síntese de ácidos nucleicos.",
+    "pharmacokinetics": "Distribuição ampla; metabolismo hepático relevante; doença hepática grave reduz depuração. A formulação IV 500 mg/100 mL = 5 mg/mL é isotônica e pronta para infusão.",
+    "indications": "Tratamento de infecções bacterianas anaeróbias graves suscetíveis e profilaxia perioperatória de cirurgia colorretal contaminada/potencialmente contaminada conforme bula.",
+    "commercialNames": "Marca local não usada como requisito de liberação; o escopo é definido pela formulação/fonte verificada.",
+    "presentation": "Solução IV 500 mg em 100 mL (5 mg/mL), pronta para uso conforme produto consultado.",
+    "presentations": "Solução IV 500 mg em 100 mL (5 mg/mL), pronta para uso conforme produto consultado.",
+    "dose": "Adultos — anaeróbios: carga 15 mg/kg IV em 1 h; manutenção 7,5 mg/kg IV em 1 h a cada 6 h, iniciando 6 h após a carga; máximo 4 g/24 h. Profilaxia colorretal: 15 mg/kg 30–60 min, terminar ~1 h antes da cirurgia, depois 7,5 mg/kg em 30–60 min às 6 e 12 h.",
+    "pediatricDose": "Intra-abdominal <4 meses: carga 15 mg/kg; manutenção 7,5 mg/kg com intervalo por idade pós-menstrual: 23–<34 sem q12h; 34–40 sem q8h; >40–48 sem q6h; a primeira manutenção é indicada 24 h após início da carga na tabela da bula. Outras indicações <4 meses não estabelecidas.",
+    "renalDose": "A bula não fornece redução de dose geral para insuficiência renal isolada; metabólitos podem acumular em doença renal terminal. Hemodiálise remove quantidade relevante, exigindo consideração do momento da dose conforme rotulagem.",
+    "hepaticDose": "Doença hepática grave: metabolismo lento e acúmulo; usar doses abaixo das usuais com cautela e monitorar níveis/toxicidade. A bula consultada não fornece percentagem universal.",
+    "commonAdverseEffects": "Náusea, cefaleia, desconforto GI e reação local/irritação venosa podem ocorrer.",
+    "dangerousAdverseEffects": "Neurotoxicidade (convulsões, encefalopatia, neuropatia periférica), reações cutâneas graves, discrasias sanguíneas e colite associada a C. difficile; boxed warning histórico de carcinogenicidade animal.",
+    "adverseEffects": "Náusea, cefaleia, desconforto GI e reação local/irritação venosa podem ocorrer. Neurotoxicidade (convulsões, encefalopatia, neuropatia periférica), reações cutâneas graves, discrasias sanguíneas e colite associada a C. difficile; boxed warning histórico de carcinogenicidade animal.",
+    "contraindications": "Hipersensibilidade a metronidazol/nitroimidazóis; associação com dissulfiram recente e consumo de álcool/propilenoglicol em janelas definidas pela bula requer restrição.",
+    "interactions": "Dissulfiram, álcool/propilenoglicol, varfarina/anticoagulantes cumarínicos, lítio, fenitoína/fenobarbital e busulfano exigem atenção.",
+    "monitoring": "Resposta clínica, sinais neurológicos, hemograma em terapia prolongada/repetida, função hepática e contexto renal/dialítico.",
+    "administration": "Infusão IV; evitar conexão em série inadequada e respeitar compatibilidades do produto. Troca para VO pode ser feita quando clinicamente apropriado.",
+    "preparation": "Produto 500 mg/100 mL é pronto para infusão; não adicionar outros fármacos à bolsa sem compatibilidade documentada.",
+    "infusionProtocol": "Tratamento de anaeróbios: carga e manutenção em aproximadamente 1 h. Profilaxia: 30–60 min conforme esquema da bula.",
+    "pregnancy": "Atravessa placenta. Avaliar benefício-risco e indicação; evitar extrapolações entre trimestres sem fonte específica.",
+    "lactation": "Metronidazol passa para o leite; avaliar exposição do lactente e necessidade do tratamento conforme produto/dose.",
+    "specialPopulations": "Neonatos prematuros exigem intervalo por idade pós-menstrual; idosos podem ter farmacocinética alterada; doença hepática grave aumenta exposição.",
+    "patientEducation": "Evitar álcool durante e após o tratamento pelo período indicado na bula; relatar parestesias, convulsões ou confusão.",
+    "clinicalPearls": "Não converter automaticamente mg/kg/dia em mg/kg/dose; o regime IV é explicitamente por dose/intervalo.",
+    "guidelineRecommendations": "Nenhuma diretriz independente foi usada para substituir a rotulagem regulatória nesta ficha.",
+    "safetyFlags": "ALTO RISCO: neurotoxicidade; neonatal por idade pós-menstrual; hepatopatia grave sem algoritmo percentual universal.",
+    "alerts": "Bloquear cálculo neonatal sem idade pós-menstrual e ajuste hepático percentual inventado.",
+    "references": [
+      "1. DailyMed — Metronidazole Injection USP 500 mg/100 mL, updated 2026-06-09. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7187779a-1f4c-4607-af53-4119e324aad5"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7187779a-1f4c-4607-af53-4119e324aad5"
+  },
+  "es": {
+    "name": "Metronidazol IV",
+    "class": "Antimicrobiano nitroimidazólico",
+    "pharmacologicClass": "Nitroimidazol activo frente a anaerobios susceptibles",
+    "mechanism": "Tras reducción intracelular en anaerobios, metabolitos reactivos dañan el ADN e inhiben la síntesis de ácidos nucleicos.",
+    "pharmacodynamics": "Tras reducción intracelular en anaerobios, metabolitos reactivos dañan el ADN e inhiben la síntesis de ácidos nucleicos.",
+    "pharmacokinetics": "Distribución amplia; metabolismo hepático relevante; la hepatopatía grave reduce el aclaramiento. La formulación IV 500 mg/100 mL = 5 mg/mL es isotónica y lista para infusión.",
+    "indications": "Tratamiento de infecciones bacterianas anaerobias graves susceptibles y profilaxis perioperatoria de cirugía colorrectal contaminada/potencialmente contaminada según ficha.",
+    "commercialNames": "La marca local no se usa como requisito de liberación; el alcance se define por la formulación/fuente verificada.",
+    "presentation": "Solución IV 500 mg en 100 mL (5 mg/mL), lista para usar según el producto consultado.",
+    "presentations": "Solución IV 500 mg en 100 mL (5 mg/mL), lista para usar según el producto consultado.",
+    "dose": "Adultos — anaerobios: carga 15 mg/kg IV en 1 h; mantenimiento 7,5 mg/kg IV en 1 h cada 6 h, iniciando 6 h tras la carga; máximo 4 g/24 h. Profilaxis colorrectal: 15 mg/kg en 30–60 min, finalizar ~1 h antes de cirugía, luego 7,5 mg/kg en 30–60 min a las 6 y 12 h.",
+    "pediatricDose": "Intraabdominal <4 meses: carga 15 mg/kg; mantenimiento 7,5 mg/kg con intervalo por edad posmenstrual: 23–<34 sem q12h; 34–40 sem q8h; >40–48 sem q6h; la primera dosis de mantenimiento se indica 24 h tras iniciar la carga en la tabla. Otras indicaciones <4 meses no establecidas.",
+    "renalDose": "La ficha no aporta reducción general de dosis por insuficiencia renal aislada; metabolitos pueden acumularse en enfermedad renal terminal. Hemodiálisis elimina cantidad relevante y debe considerarse el momento de la dosis según etiquetado.",
+    "hepaticDose": "Hepatopatía grave: metabolismo lento y acumulación; usar dosis inferiores con cautela y monitorizar niveles/toxicidad. La ficha consultada no aporta porcentaje universal.",
+    "commonAdverseEffects": "Pueden ocurrir náuseas, cefalea, malestar GI y reacción local/irritación venosa.",
+    "dangerousAdverseEffects": "Neurotoxicidad (convulsiones, encefalopatía, neuropatía periférica), reacciones cutáneas graves, discrasias sanguíneas y colitis asociada a C. difficile; advertencia histórica por carcinogenicidad animal.",
+    "adverseEffects": "Pueden ocurrir náuseas, cefalea, malestar GI y reacción local/irritación venosa. Neurotoxicidad (convulsiones, encefalopatía, neuropatía periférica), reacciones cutáneas graves, discrasias sanguíneas y colitis asociada a C. difficile; advertencia histórica por carcinogenicidad animal.",
+    "contraindications": "Hipersensibilidad a metronidazol/nitroimidazoles; asociación con disulfiram reciente y consumo de alcohol/propilenglicol en ventanas definidas por la ficha requiere restricción.",
+    "interactions": "Disulfiram, alcohol/propilenglicol, warfarina/anticoagulantes cumarínicos, litio, fenitoína/fenobarbital y busulfán requieren atención.",
+    "monitoring": "Respuesta clínica, signos neurológicos, hemograma en terapia prolongada/repetida, función hepática y contexto renal/dialítico.",
+    "administration": "Infusión IV; evitar conexiones en serie inadecuadas y respetar compatibilidades del producto. Puede cambiarse a VO cuando sea clínicamente apropiado.",
+    "preparation": "Producto 500 mg/100 mL listo para infusión; no añadir otros fármacos a la bolsa sin compatibilidad documentada.",
+    "infusionProtocol": "Tratamiento de anaerobios: carga y mantenimiento en aproximadamente 1 h. Profilaxis: 30–60 min según esquema de ficha.",
+    "pregnancy": "Atraviesa placenta. Valorar beneficio-riesgo e indicación; evitar extrapolaciones por trimestre sin fuente específica.",
+    "lactation": "Metronidazol pasa a leche; valorar exposición del lactante y necesidad del tratamiento según producto/dosis.",
+    "specialPopulations": "Prematuros requieren intervalo por edad posmenstrual; mayores pueden presentar farmacocinética alterada; hepatopatía grave aumenta exposición.",
+    "patientEducation": "Evitar alcohol durante y después del tratamiento por el periodo indicado en la ficha; informar parestesias, convulsiones o confusión.",
+    "clinicalPearls": "No convertir automáticamente mg/kg/día en mg/kg/dosis; el régimen IV está expresado por dosis/intervalo.",
+    "guidelineRecommendations": "No se utilizó una guía independiente para sustituir el etiquetado regulatorio en esta ficha.",
+    "safetyFlags": "ALTO RIESGO: neurotoxicidad; neonatal por edad posmenstrual; hepatopatía grave sin algoritmo porcentual universal.",
+    "alerts": "Bloquear cálculo neonatal sin edad posmenstrual y ajuste hepático porcentual inventado.",
+    "references": [
+      "1. DailyMed — Metronidazole Injection USP 500 mg/100 mL, updated 2026-06-09. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7187779a-1f4c-4607-af53-4119e324aad5"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7187779a-1f4c-4607-af53-4119e324aad5"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Metronidazol IV",
+    "es": "Metronidazol IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "metronidazol_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "092",
+    "approvedSha256": "c3460a7e5321a6d521bd62a45a4ee94fd4799d7602c8b3d248f27543733659c7",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "5edb9dfea1d49f62f2503f2d9a557cc555ce231d95016dc42460b67caf14f8c0",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_092_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "fosfomicina_trometamol",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_NAO_AUTOMATIZAVEL",
+          "AJUSTE_RENAL_NUMERICO_NAO_DOCUMENTADO",
+          "NAO_USAR_PARA_PIELONEFRITE_OU_REGIME_REPETIDO_SEM_FONTE"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade/marca local AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "levofloxacino_iv",
+        "bloqueios_clinicos_reais": [
+          "SELECAO_DE_INDICACAO_OBRIGATORIA",
+          "PEDIATRIA_RESTRITA_A_ANTHRAX_PESTE",
+          "AJUSTE_RENAL_DEPENDE_DO_REGIME_BASE",
+          "INFUSAO_RAPIDA_BOLUS_PROIBIDOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação/local AR/BR não confirmada neste dossiê."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "metronidazol_iv",
+        "bloqueios_clinicos_reais": [
+          "NEONATAL_EXIGE_IDADE_POS_MENSTRUAL",
+          "AJUSTE_HEPATICO_NUMERICO_NAO_DOCUMENTADO",
+          "INTERACOES_ALCOOL_DISSULFIRAM_DEVEM_SER_EXPLICITAS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade/local AR/BR específica não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "nitrofurantoina_macrocristais",
+        "bloqueios_clinicos_reais": [
+          "LIMIAR_RENAL_CONFLITANTE_EXIGE_REVISAO_MEDICA",
+          "NEONATO_MENOR_1_MES_CONTRAINDICADO",
+          "NAO_MISTURAR_MACROCRISTAIS_COM_MONOIDRATO_MACROCRISTAIS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade local AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "dipirona_gotas",
+        "bloqueios_clinicos_reais": [
+          "CONVERSAO_GOTAS_EXIGE_PRODUTO_EXATO",
+          "AGRANULOCITOSE_ALERTA_CRITICO",
+          "PEDIATRIA_MENOR_3_MESES_OU_5KG_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Marca/apresentação AR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "dipirona_supositorio",
+        "bloqueios_clinicos_reais": [
+          "IDADE_MENOR_4_ANOS_BLOQUEADA",
+          "NAO_FRACIONAR_SUPOSITORIO",
+          "AGRANULOCITOSE_ALERTA_CRITICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Posologia adulta não documentada para esta apresentação."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "paracetamol_gotas",
+        "bloqueios_clinicos_reais": [
+          "CONVERSAO_GOTAS_VARIAVEL_NAO_AUTOMATIZAR_SEM_DISPOSITIVO",
+          "LIMITE_DIARIO_DEVE_SOMAR_TODAS_AS_FONTES_DE_PARACETAMOL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Formulações líquidas com concentrações diferentes existem; não intercambiar."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "paracetamol_suspensao",
+        "bloqueios_clinicos_reais": [
+          "CONCENTRACAO_OBRIGATORIA_PARA_CALCULO_ML",
+          "LIMITE_DIARIO_CUMULATIVO_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Existem apresentações 32 e 100 mg/mL; o ID genérico não codifica a concentração."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ibuprofeno_gotas",
+        "bloqueios_clinicos_reais": [
+          "CONVERSAO_GOTAS_EXIGE_PRODUTO_EXATO",
+          "IDADE_MENOR_6_MESES_BLOQUEADA",
+          "RISCO_AINE_RENAL_GI_GESTACIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentações de outros fabricantes podem ter equivalência de gotas distinta."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ibuprofeno_suspensao",
+        "bloqueios_clinicos_reais": [
+          "CONCENTRACAO_20MG_ML_OBRIGATORIA",
+          "NAO_MISTURAR_COM_GOTAS_100MG_ML",
+          "DOSE_ADULTA_NUMERICA_NAO_DOCUMENTADA_NESTE_PRODUTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "PT é tradução técnica de fonte Chile/ISP para esta apresentação; não equivale a autorização Anvisa."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "metronidazol_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; aprovado integralmente, sem excecoes. Bloqueios granulares e pendencias documentadas permanecem preservados. Integracao tecnica/publicacao nao executadas.",
+      "PROVENIENCIA": {
+        "baseline_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "nome_recebido": "metronidazol_iv",
+        "data": "20-09-2026"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

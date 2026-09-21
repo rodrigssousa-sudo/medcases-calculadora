@@ -1,0 +1,370 @@
+{
+  "id": "fosfomicina_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "fosfomicina_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Fosfomicina dissodica IV - Fomicyt 40 mg/mL apos preparo",
+    "class": "Antibiotico fosfonato",
+    "pharmacologicClass": "Inibidor da etapa inicial da sintese de peptidoglicano",
+    "mechanism": "Inibe MurA e bloqueia etapa precoce da sintese da parede bacteriana.",
+    "pharmacodynamics": "Atividade tempo/concentracao dependente conforme patogeno; alto conteudo de sodio e hipocalemia sao preocupacoes clinicas.",
+    "pharmacokinetics": "Eliminacao renal; meia-vida aumenta proporcionalmente a insuficiencia renal.",
+    "indications": "IV para infeccoes graves quando antibacterianos usualmente recomendados nao sao apropriados: cUTI, endocardite, osso/articulacao, HAP/VAP, pele/tecido mole complicada, meningite, intra-abdominal complicada e bacteremia associada.",
+    "commercialNames": "Fomicyt, Reino Unido/UE.",
+    "presentation": "Po para solucao para infusao IV.",
+    "presentations": "2 g/50 mL, 4 g/100 mL e 8 g/200 mL apos preparo, todos 40 mg/mL de fosfomicina.",
+    "dose": "Adultos/adolescentes >=12 anos e >=40 kg, CrCl >80: 12-24 g/dia em 2-3 doses para maioria das infeccoes graves; meningite 16-24 g/dia em 3-4 doses. Dose individual nao deve exceder 8 g.",
+    "pediatricDose": "Prematuro idade corrigida <40 sem: 100 mg/kg/dia em 2 doses; neonatos 40-44 sem: 200 mg/kg/dia em 3 doses; 1-12 meses ate 10 kg: 200-300 mg/kg/dia em 3; 1-<12 anos 10-<40 kg: 200-400 mg/kg/dia em 3-4. Dados limitados; AUTOMATIZACAO=NO sem idade/peso/renal/indicacao.",
+    "renalDose": "CrCl <40: 40 mL/min=70% dose; 30=60%; 20=40%; 10=20%. Primeira dose de carga pode ser aumentada 100%, mas nao exceder 8 g. Dialise intermitente q48h: 2 g ao final da sessao.",
+    "hepaticDose": "Sem ajuste necessario segundo SmPC.",
+    "commonAdverseEffects": "Hipocalemia, alteracoes de sodio/volume e reacoes locais/GI podem ocorrer.",
+    "dangerousAdverseEffects": "Sobrecarga de sodio/volume, hipocalemia importante, reacoes hematologicas incluindo agranulocitose e hipersensibilidade grave.",
+    "adverseEffects": "Nausea, rash e elevacoes hepaticas podem ocorrer.",
+    "contraindications": "Hipersensibilidade a fosfomicina/excipientes.",
+    "interactions": "Monitorar INR com anticoagulantes orais; alto sodio deve ser considerado com condicoes sensiveis a volume.",
+    "monitoring": "Na/K, volume, funcao renal, hemograma e resposta microbiologica.",
+    "administration": "Somente IV; nunca intra-arterial. Dose depende da indicacao e funcao renal.",
+    "preparation": "Reconstituir/diluir conforme frasco para concentracao 40 mg/mL final.",
+    "infusionProtocol": "2 g: >=15 min; 4 g: >=30 min; 8 g: >=60 min.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Alto conteudo de sodio exige cautela em IC, cirrose, edema, hiperaldosteronismo e neonatos com restricao de sodio.",
+    "patientEducation": "Uso hospitalar; exames de eletrólitos e rim sao necessarios.",
+    "clinicalPearls": "Fosfomicina IV nao e o mesmo produto/regime de fosfomicina trometamol oral; nao compartilhar dose ou indicacao.",
+    "guidelineRecommendations": "EMA restringe fosfomicina IV a infeccoes graves quando antibacterianos habitualmente recomendados nao sao apropriados.",
+    "safetyFlags": "IV_SOMENTE; SODIO_ALTO; HIPOCALEMIA; RENAL; PEDIATRIA_TABELA_COMPLEXA.",
+    "alerts": "Nao confundir com fosfomicina oral. Pediatria e renal exigem tabela completa antes de automacao.",
+    "references": [
+      "eMC UK - Fomicyt 40 mg/mL SmPC, last updated 16-01-2025. https://www.medicines.org.uk/emc/product/100356/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/100356/smpc"
+  },
+  "es": {
+    "name": "Fosfomicina disodica IV - Fomicyt 40 mg/mL tras preparacion",
+    "class": "Antibiotico fosfonato",
+    "pharmacologicClass": "Inhibidor de etapa inicial de sintesis de peptidoglicano",
+    "mechanism": "Inhibe MurA y bloquea etapa temprana de sintesis de pared bacteriana.",
+    "pharmacodynamics": "Actividad tiempo/concentracion dependiente segun patogeno; alto contenido de sodio e hipopotasemia son preocupaciones clinicas.",
+    "pharmacokinetics": "Eliminacion renal; semivida aumenta proporcionalmente con insuficiencia renal.",
+    "indications": "IV para infecciones graves cuando antibacterianos usualmente recomendados no son apropiados: cUTI, endocarditis, hueso/articulacion, HAP/VAP, piel/tejido blando complicada, meningitis, intraabdominal complicada y bacteriemia asociada.",
+    "commercialNames": "Fomicyt, Reino Unido/UE.",
+    "presentation": "Polvo para solucion para infusion IV.",
+    "presentations": "2 g/50 mL, 4 g/100 mL y 8 g/200 mL tras preparacion, todos 40 mg/mL de fosfomicina.",
+    "dose": "Adultos/adolescentes >=12 anos y >=40 kg, CrCl >80: 12-24 g/dia en 2-3 dosis para la mayoria de infecciones graves; meningitis 16-24 g/dia en 3-4 dosis. Dosis individual no debe exceder 8 g.",
+    "pediatricDose": "Prematuro edad corregida <40 sem: 100 mg/kg/dia en 2 dosis; neonatos 40-44 sem: 200 mg/kg/dia en 3 dosis; 1-12 meses hasta 10 kg: 200-300 mg/kg/dia en 3; 1-<12 anos 10-<40 kg: 200-400 mg/kg/dia en 3-4. Datos limitados; AUTOMATIZACION=NO sin edad/peso/renal/indicacion.",
+    "renalDose": "CrCl <40: 40 mL/min=70% dosis; 30=60%; 20=40%; 10=20%. Primera dosis de carga puede aumentarse 100%, pero no exceder 8 g. Dialisis intermitente q48h: 2 g al final de sesion.",
+    "hepaticDose": "No requiere ajuste segun SmPC.",
+    "commonAdverseEffects": "Pueden ocurrir hipopotasemia, alteraciones de sodio/volumen y reacciones locales/GI.",
+    "dangerousAdverseEffects": "Sobrecarga de sodio/volumen, hipopotasemia importante, reacciones hematologicas incluida agranulocitosis e hipersensibilidad grave.",
+    "adverseEffects": "Pueden ocurrir nausea, rash y elevaciones hepaticas.",
+    "contraindications": "Hipersensibilidad a fosfomicina/excipientes.",
+    "interactions": "Monitorizar INR con anticoagulantes orales; alto sodio debe considerarse en condiciones sensibles a volumen.",
+    "monitoring": "Na/K, volumen, funcion renal, hemograma y respuesta microbiologica.",
+    "administration": "Solo IV; nunca intraarterial. Dosis depende de indicacion y funcion renal.",
+    "preparation": "Reconstituir/diluir segun vial a concentracion final 40 mg/mL.",
+    "infusionProtocol": "2 g: >=15 min; 4 g: >=30 min; 8 g: >=60 min.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Alto contenido de sodio exige precaucion en IC, cirrosis, edema, hiperaldosteronismo y neonatos con restriccion de sodio.",
+    "patientEducation": "Uso hospitalario; se requieren pruebas de electrolitos y rinon.",
+    "clinicalPearls": "Fosfomicina IV no es el mismo producto/regimen que fosfomicina trometamol oral; no compartir dosis ni indicacion.",
+    "guidelineRecommendations": "EMA restringe fosfomicina IV a infecciones graves cuando antibacterianos habitualmente recomendados no son apropiados.",
+    "safetyFlags": "SOLO_IV; SODIO_ALTO; HIPOPOTASEMIA; RENAL; PEDIATRIA_TABLA_COMPLEJA.",
+    "alerts": "No confundir con fosfomicina oral. Pediatria y renal exigen tabla completa antes de automatizacion.",
+    "references": [
+      "eMC UK - Fomicyt 40 mg/mL SmPC, last updated 16-01-2025. https://www.medicines.org.uk/emc/product/100356/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/100356/smpc"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Fosfomicina dissodica IV - Fomicyt 40 mg/mL apos preparo",
+    "es": "Fosfomicina disodica IV - Fomicyt 40 mg/mL tras preparacion"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "fosfomicina_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "fosfomicina_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Fomicyt IV - UK",
+      "BLOQUEIOS_CLINICOS": [
+        "FORMULACAO_ORAL_BLOQUEADA",
+        "CALCULO_PEDIATRICO_EXIGE_TABELA",
+        "CALCULO_RENAL_EXIGE_TABELA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

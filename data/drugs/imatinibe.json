@@ -1,0 +1,169 @@
+{
+  "id": "imatinibe",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "imatinibe"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Imatinibe (mesilato)",
+    "class": "Antineoplasico alvo-molecular; inibidor de tirosina quinase.",
+    "pharmacologicClass": "Inibidor de BCR-ABL, KIT e PDGFR, entre outras tirosina quinases alvo descritas no PI.",
+    "mechanism": "Inibe a tirosina quinase BCR-ABL e tambem KIT/PDGFR em tumores sensiveis, reduzindo fosforilacao de substratos e proliferação celular dependente dessas vias.",
+    "pharmacodynamics": "A resposta depende do alvo molecular e do contexto tumoral; a exposição pode aumentar com insuficiência renal moderada e insuficiência hepática grave.",
+    "pharmacokinetics": "VO, com metabolismo principalmente por CYP3A4; metabolito ativo CGP74588. Insuficiencia renal leve/moderada aumenta AUC normalizada ~1,5-2 vezes; insuficiência hepática grave aumenta exposição.",
+    "indications": "CML Ph+, ALL Ph+, MDS/MPD com rearranjos PDGFR, mastocitose sistemica agressiva em cenarios selecionados, HES/CEL, DFSP e GIST KIT+, incluindo adjuvancia apos resseccao completa, conforme criterios do rotulo.",
+    "commercialNames": "Rotulo consultado e generico. Marcas atuais BR/AR não validadas.",
+    "presentation": "Comprimido revestido de administração oral, com sulco funcional.",
+    "presentations": "100 mg e 400 mg no produto consultado.",
+    "dose": "CML fase cronica adulto: 400 mg/dia; fase acelerada/crise blastica: 600 mg/dia, com aumentos selecionados conforme resposta/tolerancia. Ph+ ALL adulto: 600 mg/dia. MDS/MPD e GIST: 400 mg/dia; DFSP: 800 mg/dia; HES/CEL ou ASM com FIP1L1-PDGFRa podem iniciar 100 mg/dia em subgrupos descritos no PI.",
+    "pediatricDose": "CML Ph+ recem-diagnosticada: 340 mg/m2/dia VO, maximo 600 mg/dia; pode ser 1x/dia ou dividido manha/noite. Ph+ ALL recem-diagnosticada em combinação com quimioterapia: 340 mg/m2/dia, maximo 600 mg/dia, 1x/dia. Não ha experiencia em CML em menores de 1 ano no PI.",
+    "renalDose": "ClCr 20-39 mL/min: reduzir em 50% a dose inicial recomendada e titular conforme tolerancia; >600 mg não recomendado se ClCr 40-59; >400 mg não recomendado se ClCr 20-39. Insuficiencia renal grave: usar com cautela; apenas dois pacientes do PI toleraram 100 mg/dia, insuficiente para algoritmo amplo.",
+    "hepaticDose": "Leve/moderada: sem ajuste inicial. Grave: reduzir em 25% a dose recomendada (ex.: 400 mg para 300 mg), conforme PI.",
+    "commonAdverseEffects": "Edema, nausea, vomitos, cãibras/dor musculoesqueletica, diarreia, rash, fadiga e citopenias sao frequentes; o perfil varia por indicação.",
+    "dangerousAdverseEffects": "Retencao hidrica grave/edema, insuficiência cardíaca, citopenias graves, hepatotoxicidade, hemorragia, perfuracao GI, sindrome de lise tumoral, reações cutaneas graves e lesao renal.",
+    "adverseEffects": "Dor abdominal, cefaleia, tontura, alterações hepaticas, conjuntivite, fotossensibilidade e alterações do apetite podem ocorrer.",
+    "contraindications": "Nenhuma contraindicação formal listada na secao 4 do PI consultado; hipersensibilidade e demais riscos devem ser avaliados clinicamente.",
+    "interactions": "Evitar indutores fortes de CYP3A4; se inevitaveis, o PI orienta considerar aumento da dose de imatinibe em pelo menos 50% com monitorização da resposta. Inibidores CYP3A4 podem aumentar exposição. Imatinibe inibe CYP3A4/CYP2D6. Para anticoagulacao, o PI prefere heparina/HBPM em vez de warfarina.",
+    "monitoring": "Hemograma semanal no primeiro mes, quinzenal no segundo e periodicamente depois; peso/edema, função hepática, função renal e sinais de sangramento/insuficiência cardíaca.",
+    "administration": "VO com refeicao e copo grande de agua. Doses 400/600 mg em geral 1x/dia; 800 mg como 400 mg 2x/dia. Comprimidos podem ser dispersos em agua ou suco de maca (aprox. 50 mL por comprimido de 100 mg; 200 mL por 400 mg) e administrados imediatamente.",
+    "preparation": "Comprimido pronto para uso; se houver dificuldade para engolir, usar a dispersao descrita no PI. Não validar manipulacoes diferentes.",
+    "infusionProtocol": "NÃO APLICAVEL COMPROVADO ao comprimido oral consultado.",
+    "pregnancy": "Pode causar dano fetal; gestação exige avaliação especializada e contracepcao conforme PI.",
+    "lactation": "Não amamentar durante o tratamento e por 1 mes apos a ultima dose, conforme PI.",
+    "specialPopulations": "Monitorar crescimento em criancas/adolescentes em uso prolongado. Insuficiencia renal moderada/grave e hepática grave exigem as modificacoes descritas.",
+    "patientEducation": "Tomar com alimento e bastante agua; comunicar ganho rapido de peso/edema, dispneia, sangramento, ictericia ou febre. Evitar novos fitoterapicos/medicamentos sem revisar interações CYP3A4.",
+    "clinicalPearls": "O mesmo medicamento tem doses muito diferentes por alvo/indicação. Pediatria CML/ALL usa mg/m2 com maximo 600 mg/dia; não extrapolar para GIST/DFSP pediátrico.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO: interações CYP3A4, retencao hidrica, citopenias, hepatotoxicidade. Pediatria automatizavel apenas para CML/ALL dentro dos criterios do PI e apos homologacao.",
+    "alerts": "Escopo: comprimidos 100/400 mg EUA. Não inferir disponibilidade BR/AR ou indicações locais.",
+    "references": [
+      "DailyMed - Imatinib Mesylate tablets - full prescribing information | Revised 09/2026 | EUA; comprimidos 100 mg e 400 mg | Consultado 2026-09-20 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0291eca5-7a1d-4a79-30be-252224d96509"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0291eca5-7a1d-4a79-30be-252224d96509"
+  },
+  "es": {
+    "name": "Imatinib (mesilato)",
+    "class": "Antineoplasico dirigido; inhibidor de tirosina quinasa.",
+    "pharmacologicClass": "Inhibidor de BCR-ABL, KIT y PDGFR, entre otras tirosina quinasas diana descritas en el PI.",
+    "mechanism": "Inhibe la tirosina quinasa BCR-ABL y también KIT/PDGFR en tumores sensibles, reduciendo fosforilacion de sustratos y proliferación celular dependiente de estas vías.",
+    "pharmacodynamics": "La respuesta depende de la diana molecular y del contexto tumoral; la exposición puede aumentar con insuficiencia renal moderada e insuficiencia hepática grave.",
+    "pharmacokinetics": "VO, con metabolismo principalmente por CYP3A4; metabolito activo CGP74588. La insuficiencia renal leve/moderada aumenta AUC normalizada ~1,5-2 veces; insuficiencia hepática grave aumenta la exposición.",
+    "indications": "LMC Ph+, LLA Ph+, SMD/MPD con reordenamientos PDGFR, mastocitosis sistemica agresiva en escenarios seleccionados, HES/CEL, DFSP y GIST KIT+, incluida adyuvancia tras reseccion completa, según criterios del prospecto.",
+    "commercialNames": "El prospecto consultado es generico. Marcas actuales AR/BR no validadas.",
+    "presentation": "Comprimido recubierto de administración oral, con ranura funcional.",
+    "presentations": "100 mg y 400 mg en el producto consultado.",
+    "dose": "LMC fase cronica adulto: 400 mg/día; fase acelerada/crisis blastica: 600 mg/día, con aumentos seleccionados según respuesta/tolerancia. LLA Ph+ adulto: 600 mg/día. SMD/MPD y GIST: 400 mg/día; DFSP: 800 mg/día; HES/CEL o ASM con FIP1L1-PDGFRa pueden iniciar 100 mg/día en subgrupos descritos en el PI.",
+    "pediatricDose": "LMC Ph+ recien diagnosticada: 340 mg/m2/día VO, maximo 600 mg/día; puede darse 1 vez/día o dividido manana/noche. LLA Ph+ recien diagnosticada en combinación con quimioterapia: 340 mg/m2/día, maximo 600 mg/día, 1 vez/día. No hay experiencia en LMC en menores de 1 ano en el PI.",
+    "renalDose": "ClCr 20-39 mL/min: reducir 50% la dosis inicial recomendada y titular según tolerancia; >600 mg no recomendado si ClCr 40-59; >400 mg no recomendado si ClCr 20-39. Insuficiencia renal grave: usar con precaucion; solo dos pacientes del PI toleraron 100 mg/día, insuficiente para un algoritmo amplio.",
+    "hepaticDose": "Leve/moderada: sin ajuste inicial. Grave: reducir 25% la dosis recomendada (p. ej., 400 mg a 300 mg), según PI.",
+    "commonAdverseEffects": "Edema, nauseas, vomitos, calambres/dolor musculoesqueletico, diarrea, rash, fatiga y citopenias son frecuentes; el perfil varia según indicacion.",
+    "dangerousAdverseEffects": "Retencion hidrica grave/edema, insuficiencia cardíaca, citopenias graves, hepatotoxicidad, hemorragia, perforacion GI, sindrome de lisis tumoral, reacciones cutaneas graves y lesion renal.",
+    "adverseEffects": "Pueden ocurrir dolor abdominal, cefalea, mareos, alteraciones hepaticas, conjuntivitis, fotosensibilidad y cambios del apetito.",
+    "contraindications": "Ninguna contraindicacion formal listada en la seccion 4 del PI consultado; hipersensibilidad y otros riesgos deben evaluarse clinicamente.",
+    "interactions": "Evitar inductores potentes de CYP3A4; si son inevitables, el PI indica considerar aumentar la dosis de imatinib al menos 50% con monitorización de respuesta. Inhibidores CYP3A4 pueden aumentar exposición. Imatinib inhibe CYP3A4/CYP2D6. Para anticoagulacion, el PI prefiere heparina/HBPM en vez de warfarina.",
+    "monitoring": "Hemograma semanal el primer mes, quincenal el segundo y periodicamente después; peso/edema, función hepática, función renal y signos de sangrado/insuficiencia cardíaca.",
+    "administration": "VO con comida y un vaso grande de agua. Dosis 400/600 mg generalmente 1 vez/día; 800 mg como 400 mg 2 veces/día. Los comprimidos pueden dispersarse en agua o jugo de manzana (aprox. 50 mL por comprimido de 100 mg; 200 mL por 400 mg) y administrarse de inmediato.",
+    "preparation": "Comprimido listo para uso; si hay dificultad para tragar, usar la dispersion descrita en el PI. No validar manipulaciones diferentes.",
+    "infusionProtocol": "NO APLICA COMPROBADO al comprimido oral consultado.",
+    "pregnancy": "Puede causar dano fetal; el embarazo requiere evaluación especializada y anticoncepcion según PI.",
+    "lactation": "No amamantar durante el tratamiento y durante 1 mes después de la ultima dosis, según PI.",
+    "specialPopulations": "Monitorizar crecimiento en ninos/adolescentes con uso prolongado. Insuficiencia renal moderada/grave y hepática grave exigen las modificaciones descritas.",
+    "patientEducation": "Tomar con comida y abundante agua; comunicar aumento rapido de peso/edema, disnea, sangrado, ictericia o fiebre. Evitar nuevos fitoterapicos/medicamentos sin revisar interacciones CYP3A4.",
+    "clinicalPearls": "El mismo medicamento tiene dosis muy diferentes según diana/indicacion. Pediatria LMC/LLA usa mg/m2 con maximo 600 mg/día; no extrapolar a GIST/DFSP pediátrico.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO: interacciones CYP3A4, retencion hidrica, citopenias, hepatotoxicidad. Pediatria automatizable solo para LMC/LLA dentro de los criterios del PI y tras homologacion.",
+    "alerts": "Alcance: comprimidos 100/400 mg EE. UU. No inferir disponibilidad AR/BR ni indicaciones locales.",
+    "references": [
+      "DailyMed - Imatinib Mesylate tablets - full prescribing information | Revised 09/2026 | EUA; comprimidos 100 mg e 400 mg | Consultado 2026-09-20 | https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0291eca5-7a1d-4a79-30be-252224d96509"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0291eca5-7a1d-4a79-30be-252224d96509"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Imatinibe (mesilato)",
+    "es": "Imatinib (mesilato)"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "imatinibe.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "084",
+    "approvedSha256": "0136dd7a2e35a3b2f33b1c49ad78b4f0236e09d123587c029b65a6175baff4a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "1ea00c47340a6516fcb13e6dd134d5fac5f78760ab4141f18cfef4a825692d2b",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_084_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": "084",
+      "review_result": "APROVADO INTEGRALMENTE",
+      "items": [
+        {
+          "id": "capecitabina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "doxorrubicina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "fluorouracila",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "imatinibe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "leuprorrelina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "paclitaxel",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "tamoxifeno",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "trastuzumabe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "vincristina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "alizaprida",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        }
+      ]
+    },
+    "packageRecordMetadata": {
+      "ID": "imatinibe",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. NEW_ENTRY_NO_LEGACY_BASELINE. Revisao medica: Dra Ariani, 20-09-2026. Resultado: APROVADO INTEGRALMENTE. Excecoes: nenhuma informada. Integracao tecnica/publicacao nao executadas neste pacote; handoff destinado ao Codex."
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

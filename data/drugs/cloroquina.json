@@ -1,0 +1,358 @@
+{
+  "id": "cloroquina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "cloroquina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Cloroquina fosfato 500 mg - comprimido oral",
+    "class": "Antimalarico e amebicida",
+    "pharmacologicClass": "4-aminoquinolina",
+    "mechanism": "Concentra-se em vacuolos acidos do Plasmodium e interfere com polimerizacao do heme; atividade apenas contra especies/cepas suscetiveis.",
+    "pharmacodynamics": "Ativa contra formas eritrocitarias de cepas suscetiveis; nao elimina hipnozoitos de P. vivax/P. ovale. Pode prolongar QT.",
+    "pharmacokinetics": "Rapidamente absorvida VO, ampla distribuicao tecidual e eliminacao lenta; parte importante e excretada na urina.",
+    "indications": "Tratamento de malaria nao complicada por cepas suscetiveis, profilaxia onde nao ha resistencia e tratamento de amebiase extraintestinal.",
+    "commercialNames": "Chloroquine Phosphate Tablets USP, EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimido VO 500 mg de fosfato, equivalente a 300 mg de cloroquina base.",
+    "presentations": "500 mg de fosfato = 300 mg base.",
+    "dose": "Profilaxia malaria sensivel: 500 mg fosfato = 300 mg base 1x/semana, no mesmo dia; iniciar 2 semanas antes e continuar 8 semanas apos sair. Malaria nao complicada sensivel: 1 g sal = 600 mg base inicial; 500 mg = 300 mg base em 6-8 h; depois 500 mg em cada um dos 2 dias seguintes. Amebiase extraintestinal: 1 g/dia por 2 dias, depois 500 mg/dia por pelo menos 2-3 semanas, geralmente com amebicida intestinal.",
+    "pediatricDose": "Profilaxia: 5 mg base/kg 1x/semana, sem exceder adulto. Tratamento malaria: 10 mg base/kg inicial; 5 mg base/kg em 6, 24 e 36 h; total 25 mg base/kg, sem exceder dose adulta.",
+    "renalDose": "Eliminacao renal e relevante; idosos/renais podem ter maior risco de toxicidade. O rotulo atual nao fornece tabela numerica simples para este esquema.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Nausea, vomitos, cefaleia, prurido e alteracoes visuais transitórias podem ocorrer.",
+    "dangerousAdverseEffects": "Cardiomiopatia, arritmias/QT prolongado, hipoglicemia grave, retinopatia irreversivel, neurotoxicidade e overdose potencialmente fatal.",
+    "adverseEffects": "Miopatia/neuropatia, alteracoes hematologicas e exacerbacao de psoriasis/porfiria podem ocorrer.",
+    "contraindications": "Hipersensibilidade a 4-aminoquinolinas. Para indicacoes que nao malaria aguda, alteracoes retinianas/campo visual preexistentes constituem contraindicacao no rotulo.",
+    "interactions": "Fármacos que prolongam QT podem aumentar risco; azitromicina mostrou efeito adicional sobre QT em estudo. Tamoxifeno e disfuncao renal aumentam risco retiniano.",
+    "monitoring": "Confirmar suscetibilidade/regiao antes de malaria; ECG em risco; glicemia; exame oftalmologico basal e seguimento em uso prolongado/fatores de risco.",
+    "administration": "VO; profilaxia sempre no mesmo dia da semana. Para P. vivax/ovale, terapia adicional ativa contra hipnozoitos e necessaria.",
+    "preparation": "Comprimido pronto para uso; todos os calculos devem distinguir sal fosfato de cloroquina base.",
+    "infusionProtocol": "NAO APLICAVEL ao comprimido.",
+    "pregnancy": "Rotulo contem advertencias especificas; o uso em malaria depende de risco da doenca, suscetibilidade e avaliacao clinica. Nenhum esquema adicional foi inferido.",
+    "lactation": "Cloroquina e metabolito passam ao leite; exposicao do lactente nao substitui profilaxia propria quando indicada.",
+    "specialPopulations": "Criancas sao particularmente sensiveis a overdose; manter fora do alcance. Idosos/renais exigem cautela.",
+    "patientEducation": "Confirmar destino/regiao da profilaxia; manter fora do alcance de criancas; procurar atendimento por sincope/palpitacao, hipoglicemia ou alteracao visual.",
+    "clinicalPearls": "Cada 500 mg de fosfato = 300 mg de base. Erros sal-versus-base podem gerar overdose ou subdose. Resistencia a cloroquina e ampla e deve ser checada por regiao.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SAL_VS_BASE; RESISTENCIA_REGIONAL; QT; RETINOPATIA; OVERDOSE_PEDIATRICA; HIPOGLICEMIA.",
+    "alerts": "Nao usar para malaria complicada nem em regioes com resistencia. AUTOMACAO deve armazenar dose em base e equivalente em sal.",
+    "references": [
+      "DailyMed/NLM EUA - Chloroquine Phosphate Tablets 500 mg (=300 mg base), current version Apr 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4ac1556-0522-76e3-e053-2a95a90a5ba8"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4ac1556-0522-76e3-e053-2a95a90a5ba8"
+  },
+  "es": {
+    "name": "Cloroquina fosfato 500 mg - comprimido oral",
+    "class": "Antimalarico y amebicida",
+    "pharmacologicClass": "4-aminoquinolina",
+    "mechanism": "Se concentra en vacuolas acidas de Plasmodium e interfiere con polimerizacion del hemo; actividad solo contra especies/cepas susceptibles.",
+    "pharmacodynamics": "Activa contra formas eritrocitarias de cepas susceptibles; no elimina hipnozoitos de P. vivax/P. ovale. Puede prolongar QT.",
+    "pharmacokinetics": "Rapidamente absorbida VO, amplia distribucion tisular y eliminacion lenta; parte importante se excreta en orina.",
+    "indications": "Tratamiento de malaria no complicada por cepas susceptibles, profilaxis donde no hay resistencia y tratamiento de amebiasis extraintestinal.",
+    "commercialNames": "Chloroquine Phosphate Tablets USP, EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimido VO 500 mg de fosfato, equivalente a 300 mg de cloroquina base.",
+    "presentations": "500 mg de fosfato = 300 mg base.",
+    "dose": "Profilaxis malaria sensible: 500 mg fosfato = 300 mg base 1 vez/semana, mismo dia; iniciar 2 semanas antes y continuar 8 semanas despues de salir. Malaria no complicada sensible: 1 g sal = 600 mg base inicial; 500 mg = 300 mg base a las 6-8 h; luego 500 mg en cada uno de los 2 dias siguientes. Amebiasis extraintestinal: 1 g/dia por 2 dias, luego 500 mg/dia al menos 2-3 semanas, generalmente con amebicida intestinal.",
+    "pediatricDose": "Profilaxis: 5 mg base/kg 1 vez/semana, sin exceder adulto. Tratamiento malaria: 10 mg base/kg inicial; 5 mg base/kg a las 6, 24 y 36 h; total 25 mg base/kg, sin exceder dosis adulta.",
+    "renalDose": "Eliminacion renal es relevante; mayores/renales pueden tener mayor riesgo de toxicidad. El rotulo actual no aporta tabla numerica simple para esta pauta.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Pueden ocurrir nausea, vomitos, cefalea, prurito y cambios visuales transitorios.",
+    "dangerousAdverseEffects": "Cardiomiopatia, arritmias/QT prolongado, hipoglucemia grave, retinopatia irreversible, neurotoxicidad y sobredosis potencialmente mortal.",
+    "adverseEffects": "Pueden ocurrir miopatia/neuropatia, alteraciones hematologicas y exacerbacion de psoriasis/porfiria.",
+    "contraindications": "Hipersensibilidad a 4-aminoquinolinas. Para indicaciones distintas de malaria aguda, alteraciones retinianas/campo visual preexistentes son contraindicacion en rotulo.",
+    "interactions": "Farmacos que prolongan QT pueden aumentar riesgo; azitromicina mostro efecto adicional sobre QT en estudio. Tamoxifeno y disfuncion renal aumentan riesgo retiniano.",
+    "monitoring": "Confirmar susceptibilidad/region antes de malaria; ECG en riesgo; glucemia; examen oftalmologico basal y seguimiento en uso prolongado/factores de riesgo.",
+    "administration": "VO; profilaxis siempre el mismo dia de la semana. Para P. vivax/ovale, se requiere terapia adicional activa contra hipnozoitos.",
+    "preparation": "Comprimido listo para usar; todos los calculos deben distinguir sal fosfato de cloroquina base.",
+    "infusionProtocol": "NO APLICA al comprimido.",
+    "pregnancy": "El rotulo contiene advertencias especificas; uso en malaria depende de riesgo de enfermedad, susceptibilidad y evaluacion clinica. No se infirio pauta adicional.",
+    "lactation": "Cloroquina y metabolito pasan a leche; exposicion del lactante no sustituye profilaxis propia cuando esta indicada.",
+    "specialPopulations": "Ninos son especialmente sensibles a sobredosis; mantener fuera de alcance. Mayores/renales requieren precaucion.",
+    "patientEducation": "Confirmar destino/region de profilaxis; mantener fuera del alcance de ninos; consultar por sincope/palpitacion, hipoglucemia o cambio visual.",
+    "clinicalPearls": "Cada 500 mg de fosfato = 300 mg de base. Errores sal-versus-base pueden causar sobredosis o infradosis. Resistencia a cloroquina es amplia y debe verificarse por region.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SAL_VS_BASE; RESISTENCIA_REGIONAL; QT; RETINOPATIA; SOBREDOSIS_PEDIATRICA; HIPOGLUCEMIA.",
+    "alerts": "No usar para malaria complicada ni en regiones con resistencia. AUTOMATIZACION debe almacenar dosis en base y equivalente en sal.",
+    "references": [
+      "DailyMed/NLM EUA - Chloroquine Phosphate Tablets 500 mg (=300 mg base), current version Apr 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4ac1556-0522-76e3-e053-2a95a90a5ba8"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f4ac1556-0522-76e3-e053-2a95a90a5ba8"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Cloroquina fosfato 500 mg - comprimido oral",
+    "es": "Cloroquina fosfato 500 mg - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "cloroquina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "100",
+    "approvedSha256": "0570f083fc313d61727d1e5380c90e3280966a497e8006cf58d5d82eec68ef31",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "e0c21a75ecd6485bdc812e20b898fa2ccd11738d322cde54688d8637a852a4d9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_100_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "antimoniato_de_meglumina",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO",
+          "CONCENTRACAO_SB5_DEVE_SER_CONFIRMADA",
+          "ESCOPO_VISCERAL_PKDL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "artemeter_lumefantrina",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "PROFILAXIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "baloxavir_marboxil",
+        "bloqueios_clinicos": [
+          "FORMULACAO_PESO_OBRIGATORIOS",
+          "IDADE_MENOR_5_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "benznidazol",
+        "bloqueios_clinicos": [
+          "DOSE_ADULTO_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA_PESO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "bezlotoxumabe",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_1_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "CHF_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "capreomicina",
+        "bloqueios_clinicos": [
+          "ATIVACAO_CLINICA_BLOQUEADA",
+          "CALCULO_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cicloserina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "TDM_RECOMENDADO_EM_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cidofovir",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "USOS_OFF_LABEL_BLOQUEADOS",
+          "RENAL_LIMIARES_OBRIGATORIOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clofazimina",
+        "bloqueios_clinicos": [
+          "ESCOPO_LEPRA_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA_ATE_TABELA_WHO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cloroquina",
+        "bloqueios_clinicos": [
+          "MALARIA_COMPLICADA_BLOQUEADA",
+          "REGIAO_RESISTENTE_BLOQUEADA",
+          "SAL_BASE_CONVERSAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "cloroquina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Cloroquina fosfato 500 mg oral - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "MALARIA_COMPLICADA_BLOQUEADA",
+        "REGIAO_RESISTENTE_BLOQUEADA",
+        "SAL_BASE_CONVERSAO_OBRIGATORIA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "100",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "100",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

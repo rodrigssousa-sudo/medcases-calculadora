@@ -1,0 +1,350 @@
+{
+  "id": "brometo_de_ipratropio_nebulizacao",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "brometo_de_ipratropio_nebulizacao"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Brometo de ipratropio 0,02% solucao para nebulizacao",
+    "class": "Broncodilatador anticolinergico",
+    "pharmacologicClass": "Antagonista muscarinico de curta acao",
+    "mechanism": "Bloqueia receptores muscarinicos em vias aereas e reduz broncoconstricao vagal.",
+    "pharmacodynamics": "Broncodilatacao principalmente local, com pouca absorcao sistemica.",
+    "pharmacokinetics": "Composto quaternario com absorcao sistêmica baixa por inalacao.",
+    "indications": "Broncodilatacao de manutencao em COPD conforme rotulo da solucao 0,02%.",
+    "commercialNames": "Ipratropium Bromide Inhalation Solution, EUA.",
+    "presentation": "Solucao de dose unitaria para nebulizador.",
+    "presentations": "500 mcg em 2,5 mL = 0,02%.",
+    "dose": "500 mcg = 1 vial por nebulizacao, 3-4x/dia, com 6-8 h entre doses, conforme rotulo COPD.",
+    "pediatricDose": "Este rotulo especifico nao estabelece dose pediatrica. AUTOMATIZACAO_PEDIATRICA=BLOQUEADA.",
+    "renalDose": "Sem ajuste numerico especifico.",
+    "hepaticDose": "Sem ajuste numerico especifico.",
+    "commonAdverseEffects": "Boca seca, cefaleia, nausea, tosse e irritacao de garganta.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, retencao urinaria e precipitacao/piora de glaucoma de angulo fechado se atingir os olhos.",
+    "adverseEffects": "Tontura, constipacao e palpitacoes podem ocorrer.",
+    "contraindications": "Hipersensibilidade a ipratropio/atropinicos conforme rotulo.",
+    "interactions": "Outros anticolinergicos podem somar efeitos.",
+    "monitoring": "Resposta broncodilatadora, sintomas anticolinergicos e exposicao ocular acidental.",
+    "administration": "Somente inalacao por nebulizador; evitar vazamento da mascara para os olhos.",
+    "preparation": "Conteudo completo de 1 vial no reservatorio; pode ser misturado com albuterol se usado dentro de 1 h segundo rotulo.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Usar conforme beneficio-risco.",
+    "lactation": "Dados sistemicos limitados; absorcao inalatoria e baixa.",
+    "specialPopulations": "Glaucoma de angulo fechado e retencao urinaria/hiperplasia prostatica exigem cautela.",
+    "patientEducation": "Nao ingerir/injetar; proteger os olhos e procurar avaliacao se broncoespasmo piorar.",
+    "clinicalPearls": "A solucao 0,02% rotulada e 500 mcg/2,5 mL; nao confundir com frascos multidose de outras concentracoes.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEBULIZACAO; ANTICOLINERGICO; OLHOS_GLAUCOMA; NAO_INJETAR; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Pediatria nao automatizar com este rotulo. Uso e exclusivamente inalatorio.",
+    "references": [
+      "DailyMed/NLM EUA - Ipratropium Bromide Inhalation Solution 0.02%, active 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+  },
+  "es": {
+    "name": "Bromuro de ipratropio 0,02% solucion para nebulizacion",
+    "class": "Broncodilatador anticolinergico",
+    "pharmacologicClass": "Antagonista muscarinico de corta accion",
+    "mechanism": "Bloquea receptores muscarinicos en vias aereas y reduce broncoconstriccion vagal.",
+    "pharmacodynamics": "Broncodilatacion principalmente local, con poca absorcion sistemica.",
+    "pharmacokinetics": "Compuesto cuaternario con absorcion sistemica baja por inhalacion.",
+    "indications": "Broncodilatacion de mantenimiento en EPOC segun rotulo de solucion 0,02%.",
+    "commercialNames": "Ipratropium Bromide Inhalation Solution, EE.UU.",
+    "presentation": "Solucion de dosis unitaria para nebulizador.",
+    "presentations": "500 mcg en 2,5 mL = 0,02%.",
+    "dose": "500 mcg = 1 vial por nebulizacion, 3-4 veces/dia, con 6-8 h entre dosis, segun rotulo EPOC.",
+    "pediatricDose": "Este rotulo especifico no establece dosis pediatrica. AUTOMATIZACION_PEDIATRICA=BLOQUEADA.",
+    "renalDose": "Sin ajuste numerico especifico.",
+    "hepaticDose": "Sin ajuste numerico especifico.",
+    "commonAdverseEffects": "Boca seca, cefalea, nausea, tos e irritacion de garganta.",
+    "dangerousAdverseEffects": "Broncoespasmo paradojico, retencion urinaria y precipitacion/empeoramiento de glaucoma de angulo cerrado si alcanza ojos.",
+    "adverseEffects": "Pueden ocurrir mareo, estrenimiento y palpitaciones.",
+    "contraindications": "Hipersensibilidad a ipratropio/atropinicos segun rotulo.",
+    "interactions": "Otros anticolinergicos pueden sumar efectos.",
+    "monitoring": "Respuesta broncodilatadora, sintomas anticolinergicos y exposicion ocular accidental.",
+    "administration": "Solo inhalacion por nebulizador; evitar fuga de mascarilla hacia ojos.",
+    "preparation": "Contenido completo de 1 vial en reservorio; puede mezclarse con albuterol si se usa dentro de 1 h segun rotulo.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Usar segun beneficio-riesgo.",
+    "lactation": "Datos sistemicos limitados; absorcion inhalatoria es baja.",
+    "specialPopulations": "Glaucoma de angulo cerrado y retencion urinaria/hiperplasia prostatica requieren precaucion.",
+    "patientEducation": "No ingerir/inyectar; proteger ojos y buscar evaluacion si broncoespasmo empeora.",
+    "clinicalPearls": "La solucion 0,02% rotulada es 500 mcg/2,5 mL; no confundir con frascos multidosis de otras concentraciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEBULIZACION; ANTICOLINERGICO; OJOS_GLAUCOMA; NO_INYECTAR; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Pediatria no automatizar con este rotulo. Uso exclusivamente inhalatorio.",
+    "references": [
+      "DailyMed/NLM EUA - Ipratropium Bromide Inhalation Solution 0.02%, active 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Brometo de ipratropio 0,02% solucao para nebulizacao",
+    "es": "Bromuro de ipratropio 0,02% solucion para nebulizacion"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "brometo_de_ipratropio_nebulizacao.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "103",
+    "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "adrenalina_autoinjetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PRODUTO_ESPECIFICO_AUVIQ",
+          "PESO_MENOR_7_5_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "aminofilina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TDM_OBRIGATORIO",
+          "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "betametasona_injetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA",
+          "INDICACAO_ROTA_OBRIGATORIAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "brometo_de_ipratropio_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIA_NAO_INALATORIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "dexametasona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AUTOMACAO_EXIGE_INDICACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenoterol_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "DOSE_ATUAL_NAO_VERIFICADA",
+          "VIA_AUTOMATICA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "BULA_PRIMARIA_ATUAL_PENDENTE"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidrocortisona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metilprednisolona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "prometazina_im",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "IDADE_MENOR_2_CONTRAINDICADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "salbutamol_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+          "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "brometo_de_ipratropio_nebulizacao",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Ipratropium 0,02% 500 mcg/2,5 mL - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "VIA_NAO_INALATORIA_BLOQUEADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "103",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "103",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_087_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

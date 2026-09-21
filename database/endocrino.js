@@ -1495,87 +1495,368 @@
 ;(function(){var db=window.ENDOCRINO_DRUGS_DB;if(!db||!db["glucagon"])throw new Error("GOLD33_MISSING_CANONICAL:glucagon");db["glucagon"].mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "039",
     "requiredFieldCount": 33,
-    "approvedSha256": "72a167888bdcc091cdbc40db2f06d309c0b3210c89d1ba428d1e7253777d5c65",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "glucagon",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "GLUCAGON 1 MG KIT SC/IM/IV - EUA 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+        "IV_SOMENTE_PROFISSIONAL"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/endocrino.js",
+      "sourceField": "glucagon.mcGoldClinicalV1",
+      "lote": "039",
+      "requiredFields": 33,
+      "approvedSha256": "72a167888bdcc091cdbc40db2f06d309c0b3210c89d1ba428d1e7253777d5c65",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   },
   "pt": {
-    "name": "Glucagon",
-    "class": "Agente hiperglicemiante",
-    "pharmacologicClass": "Ativa receptores hepáticos de glucagon, mobilizando glicogênio",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Kit injetável 1 mg, autoinjetor e pó nasal 3 mg; apresentações variam.",
-    "presentations": "Kit injetável 1 mg, autoinjetor e pó nasal 3 mg; apresentações variam.",
-    "mechanism": "Ativa receptores hepáticos de glucagon, mobilizando glicogênio. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Meia-vida curta; degradação hepática, renal e plasmática.",
-    "indications": "Hipoglicemia grave; algumas apresentações também são usadas como auxílio diagnóstico.",
-    "dose": "Hipoglicemia grave: 1 mg SC/IM/IV ou 3 mg intranasal conforme produto; fornecer carboidrato oral quando recuperar.",
-    "pediatricDose": "Injetável: <25 kg pode usar 0,5 mg conforme produto; nasal 3 mg em idades aprovadas. AUTOMATABLE=NO.",
-    "renalDose": "Sem ajuste específico.",
-    "hepaticDose": "Sem ajuste específico; resposta pode ser menor com glicogênio reduzido.",
-    "commonAdverseEffects": "Náusea, vômito, cefaleia e irritação nasal.",
-    "dangerousAdverseEffects": "Anafilaxia, hipertensão no feocromocitoma e hipoglicemia no insulinoma.",
-    "adverseEffects": "Náusea, vômito, cefaleia e irritação nasal. Graves: Anafilaxia, hipertensão no feocromocitoma e hipoglicemia no insulinoma.",
-    "contraindications": "Feocromocitoma; insulinoma; hipersensibilidade.",
-    "interactions": "Varfarina, indometacina e insulina; beta-bloqueadores podem aumentar FC/PA.",
-    "monitoring": "Glicemia e resposta clínica; investigar causa e recorrência.",
-    "administration": "Administrar pela via específica; posicionar de lado por vômitos.",
-    "preparation": "Reconstituir kit apenas com diluente fornecido; usar imediatamente.",
-    "infusionProtocol": "IV apenas por profissional e conforme produto.",
-    "pregnancy": "Pode ser usado quando necessário.",
-    "lactation": "Sem risco esperado relevante; avaliar.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
-    "alerts": "Anafilaxia, hipertensão no feocromocitoma e hipoglicemia no insulinoma. Escolha/dose bloqueadas sem idade/peso, glicemia, produto/via, feocromocitoma/insulinoma e plano pós-resgate.",
+    "name": "Glucagon para injecao 1 mg - kit de hipoglicemia",
+    "class": "Agente antihipoglicemiante; hormonio glucagon",
+    "pharmacologicClass": "Agonista do receptor de glucagon",
+    "mechanism": "Ativa receptores hepaticos de glucagon, estimulando glicogenolise e gliconeogenese quando ha reserva de glicogenio.",
+    "pharmacodynamics": "Eleva glicemia e relaxa musculatura lisa GI; resposta pode ser limitada em jejum prolongado, insuficiencia adrenal ou glicogenio hepaticamente esgotado.",
+    "pharmacokinetics": "Efeito ocorre rapidamente por via parenteral; metabolismo proteolitico em figado, rim e plasma.",
+    "indications": "Tratamento de hipoglicemia grave em adultos e pediatria com diabetes; tambem auxiliar diagnostico GI em adultos.",
+    "commercialNames": "Glucagon for Injection, produto EUA atualizado em 2026; marcas BR/AR nao verificadas.",
+    "presentation": "Po liofilizado 1 mg para reconstituicao com diluente; uso SC, IM ou IV.",
+    "presentations": "1 mg por frasco; apos reconstituicao, 1 mg/mL.",
+    "dose": "Hipoglicemia grave: adultos e pediatria >=20 kg: 1 mg = 1 mL SC/IM; profissional pode administrar IV. Se sem resposta apos 15 min, pode repetir 1 mg enquanto aguarda emergencia.",
+    "pediatricDose": "<20 kg: 0,5 mg = 0,5 mL ou 20-30 mcg/kg SC/IM; profissional pode administrar IV. Se sem resposta apos 15 min, pode repetir 0,5 mg. O corte de 20 kg e especifico do produto 2026 consultado.",
+    "renalDose": "Sem algoritmo numerico especifico; tratar hipoglicemia conforme gravidade e resposta.",
+    "hepaticDose": "Sem algoritmo numerico especifico; resposta depende de reserva hepatica de glicogenio.",
+    "commonAdverseEffects": "Nausea, vomitos e reacoes locais podem ocorrer.",
+    "dangerousAdverseEffects": "Hipertensao grave em feocromocitoma, hipoglicemia paradoxal em insulinoma e hipersensibilidade grave.",
+    "adverseEffects": "Taquicardia e elevacao transitoria de PA podem ocorrer.",
+    "contraindications": "Feocromocitoma, insulinoma e hipersensibilidade ao glucagon/excipientes; glucagonoma e contraindicado quando usado como auxiliar diagnostico.",
+    "interactions": "Beta-bloqueadores podem acentuar aumento de PA/pulso; indometacina pode reduzir resposta glicemica; warfarina pode ter efeito anticoagulante aumentado.",
+    "monitoring": "Resposta clinica/glicemica, consciencia e vomitos; apos resposta e capacidade de deglutir, oferecer carboidrato oral para repor glicogenio e evitar recorrencia.",
+    "administration": "SC/IM por cuidador treinado; IV somente por profissional. Chamar emergencia imediatamente apos administrar em hipoglicemia grave.",
+    "preparation": "Reconstituir o po com 1 mL do diluente fornecido/agua esteril conforme kit; agitar suavemente ate solucao limpida, usar imediatamente e descartar sobra.",
+    "infusionProtocol": "NAO e infusao continua; IV quando usada deve ser administrada por profissional conforme rotulo.",
+    "pregnancy": "Glucagon tem uso historico em emergencia; o tratamento de hipoglicemia grave nao deve ser atrasado, mas decisao deve considerar contexto clinico.",
+    "lactation": "Dados especificos limitados; uso de emergencia deve considerar necessidade clinica e baixa plausibilidade de absorcao oral de peptideo pelo lactente.",
+    "specialPopulations": "Jejum prolongado, insuficiencia adrenal ou desnutricao podem reduzir resposta; nesses casos glicose IV pode ser necessaria.",
+    "patientEducation": "Familia/cuidadores devem saber reconstituir, administrar, posicionar paciente para evitar aspiracao de vomito, chamar emergencia e oferecer carboidrato apos recuperar degluticao.",
+    "clinicalPearls": "O corte de peso varia entre produtos historicos. Esta ficha usa o rotulo 2026 com corte de 20 kg; nao aplicar automaticamente o corte de 25 kg de outros kits.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPOGLICEMIA_GRAVE; CORTE_20KG_PRODUTO_ESPECIFICO; FEOCROMOCITOMA; INSULINOMA; IV_PROFISSIONAL.",
+    "alerts": "Nao misturar regras de produtos com corte 20 kg e 25 kg; selecionar rotulo/produto antes de automatizar pediatria.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glucagon"
+      "DailyMed/NLM EUA - Glucagon for Injection, atualizado 06-02-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=34c3c58a-3d17-4a12-b592-971bdd41aeca"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glucagon"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=34c3c58a-3d17-4a12-b592-971bdd41aeca"
   },
   "es": {
-    "name": "Glucagón",
-    "class": "Agente hiperglucemiante",
-    "pharmacologicClass": "Activa receptores hepáticos de glucagón, movilizando glucógeno",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Kit inyectable 1 mg, autoinyector y polvo nasal 3 mg; presentaciones variables.",
-    "presentations": "Kit inyectable 1 mg, autoinyector y polvo nasal 3 mg; presentaciones variables.",
-    "mechanism": "Activa receptores hepáticos de glucagón, movilizando glucógeno. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Semivida corta; degradación hepática, renal y plasmática.",
-    "indications": "Hipoglucemia grave; algunas presentaciones también se usan como ayuda diagnóstica.",
-    "dose": "Hipoglucemia grave: 1 mg SC/IM/IV o 3 mg intranasal según producto; dar carbohidrato oral al recuperarse.",
-    "pediatricDose": "Inyectable: <25 kg puede usar 0,5 mg según producto; nasal 3 mg en edades aprobadas. AUTOMATABLE=NO.",
-    "renalDose": "Sin ajuste específico.",
-    "hepaticDose": "Sin ajuste específico; respuesta puede ser menor con glucógeno reducido.",
-    "commonAdverseEffects": "Náusea, vómito, cefalea e irritación nasal.",
-    "dangerousAdverseEffects": "Anafilaxia, hipertensión en feocromocitoma e hipoglucemia en insulinoma.",
-    "adverseEffects": "Náusea, vómito, cefalea e irritación nasal. Graves: Anafilaxia, hipertensión en feocromocitoma e hipoglucemia en insulinoma.",
-    "contraindications": "Feocromocitoma; insulinoma; hipersensibilidad.",
-    "interactions": "Warfarina, indometacina e insulina; betabloqueantes pueden aumentar FC/PA.",
-    "monitoring": "Glucemia y respuesta clínica; investigar causa y recurrencia.",
-    "administration": "Administrar por vía específica; colocar de lado por vómitos.",
-    "preparation": "Reconstituir kit solo con diluyente provisto; usar inmediatamente.",
-    "infusionProtocol": "IV solo por profesional y según producto.",
-    "pregnancy": "Puede usarse cuando sea necesario.",
-    "lactation": "No se espera riesgo relevante; evaluar.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
-    "alerts": "Anafilaxia, hipertensión en feocromocitoma e hipoglucemia en insulinoma. Escolha/dose bloqueadas sem idade/peso, glicemia, produto/via, feocromocitoma/insulinoma e plano pós-resgate.",
+    "name": "Glucagon para inyeccion 1 mg - kit de hipoglucemia",
+    "class": "Agente antihipoglucemiante; hormona glucagon",
+    "pharmacologicClass": "Agonista del receptor de glucagon",
+    "mechanism": "Activa receptores hepaticos de glucagon, estimulando glucogenolisis y gluconeogenesis cuando existe reserva de glucogeno.",
+    "pharmacodynamics": "Eleva glucemia y relaja musculo liso GI; respuesta puede ser limitada con ayuno prolongado, insuficiencia suprarrenal o glucogeno hepatico agotado.",
+    "pharmacokinetics": "El efecto ocurre rapidamente por via parenteral; metabolismo proteolitico en higado, rinon y plasma.",
+    "indications": "Tratamiento de hipoglucemia grave en adultos y pediatria con diabetes; tambien auxiliar diagnostico GI en adultos.",
+    "commercialNames": "Glucagon for Injection, producto EE.UU. actualizado en 2026; marcas BR/AR no verificadas.",
+    "presentation": "Polvo liofilizado 1 mg para reconstitucion con diluyente; uso SC, IM o IV.",
+    "presentations": "1 mg por vial; tras reconstitucion, 1 mg/mL.",
+    "dose": "Hipoglucemia grave: adultos y pediatria >=20 kg: 1 mg = 1 mL SC/IM; profesional puede administrar IV. Si no responde tras 15 min, puede repetirse 1 mg mientras se espera emergencia.",
+    "pediatricDose": "<20 kg: 0,5 mg = 0,5 mL o 20-30 mcg/kg SC/IM; profesional puede administrar IV. Si no responde tras 15 min, puede repetirse 0,5 mg. El corte de 20 kg es especifico del producto 2026 consultado.",
+    "renalDose": "Sin algoritmo numerico especifico; tratar hipoglucemia segun gravedad y respuesta.",
+    "hepaticDose": "Sin algoritmo numerico especifico; la respuesta depende de reserva hepatica de glucogeno.",
+    "commonAdverseEffects": "Pueden ocurrir nausea, vomitos y reacciones locales.",
+    "dangerousAdverseEffects": "Hipertension grave en feocromocitoma, hipoglucemia paradojica en insulinoma e hipersensibilidad grave.",
+    "adverseEffects": "Pueden ocurrir taquicardia y elevacion transitoria de PA.",
+    "contraindications": "Feocromocitoma, insulinoma e hipersensibilidad a glucagon/excipientes; glucagonoma esta contraindicado cuando se usa como auxiliar diagnostico.",
+    "interactions": "Beta-bloqueantes pueden acentuar aumento de PA/pulso; indometacina puede reducir respuesta glucemica; warfarina puede tener efecto anticoagulante aumentado.",
+    "monitoring": "Respuesta clinica/glucemica, conciencia y vomitos; tras respuesta y capacidad de tragar, ofrecer carbohidrato oral para reponer glucogeno y evitar recurrencia.",
+    "administration": "SC/IM por cuidador entrenado; IV solo por profesional. Llamar a emergencias inmediatamente tras administrar en hipoglucemia grave.",
+    "preparation": "Reconstituir el polvo con 1 mL del diluyente provisto/agua esteril segun kit; agitar suavemente hasta solucion clara, usar inmediatamente y desechar sobrante.",
+    "infusionProtocol": "NO es infusion continua; IV cuando se usa debe administrarla un profesional segun rotulo.",
+    "pregnancy": "Glucagon tiene uso historico en emergencia; el tratamiento de hipoglucemia grave no debe retrasarse, pero la decision debe considerar contexto clinico.",
+    "lactation": "Datos especificos limitados; uso de emergencia debe considerar necesidad clinica y baja plausibilidad de absorcion oral del peptido por lactante.",
+    "specialPopulations": "Ayuno prolongado, insuficiencia suprarrenal o desnutricion pueden reducir respuesta; en esos casos puede requerirse glucosa IV.",
+    "patientEducation": "Familia/cuidadores deben saber reconstituir, administrar, posicionar al paciente para evitar aspiracion de vomito, llamar emergencias y ofrecer carbohidrato tras recuperar deglucion.",
+    "clinicalPearls": "El corte de peso varia entre productos historicos. Esta ficha usa rotulo 2026 con corte de 20 kg; no aplicar automaticamente corte de 25 kg de otros kits.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPOGLUCEMIA_GRAVE; CORTE_20KG_PRODUCTO_ESPECIFICO; FEOCROMOCITOMA; INSULINOMA; IV_PROFESIONAL.",
+    "alerts": "No mezclar reglas de productos con corte 20 kg y 25 kg; seleccionar rotulo/producto antes de automatizar pediatria.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glucagon"
+      "DailyMed/NLM EUA - Glucagon for Injection, atualizado 06-02-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=34c3c58a-3d17-4a12-b592-971bdd41aeca"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=glucagon"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=34c3c58a-3d17-4a12-b592-971bdd41aeca"
   }
 };})();
 /* GOLD33_SELECTIVE:glucagon:END */

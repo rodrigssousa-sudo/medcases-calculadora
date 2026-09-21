@@ -1,0 +1,350 @@
+{
+  "id": "betametasona_injetavel",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "betametasona_injetavel"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Betametasona fosfato sodico + acetato - suspensao injetavel 6 mg/mL",
+    "class": "Corticosteroide sistemico/local",
+    "pharmacologicClass": "Glicocorticoide de acao imediata + deposito",
+    "mechanism": "Ativa receptor glicocorticoide e modula transcricao inflamatoria/imune.",
+    "pharmacodynamics": "Componente fosfato e soluvel/rapido; acetato e pouco soluvel e prolonga efeito local/sistemico.",
+    "pharmacokinetics": "Suspensao combina fracao soluvel e deposito; absorcao varia com via/local.",
+    "indications": "Uso IM sistemico e intra-articular/intralesional/tecidos moles conforme entidade clinica rotulada. NAO e produto IV.",
+    "commercialNames": "Produto American Regent, EUA.",
+    "presentation": "Suspensao injetavel.",
+    "presentations": "6 mg/mL total: 3 mg/mL betametasona fosfato + 3 mg/mL acetato; frasco 5 mL.",
+    "dose": "Dose inicial parenteral pode variar de 0,25 a 9 mg/dia conforme doenca. Doses locais intra-articulares variam por tamanho da articulacao. Nao existe esquema universal.",
+    "pediatricDose": "Dose deve ser individualizada; produto contem benzyl alcohol/preservativo e exige cautela em neonatos. Sem esquema pediatrico universal no rotulo.",
+    "renalDose": "Sem algoritmo numerico especifico.",
+    "hepaticDose": "Sem algoritmo numerico especifico.",
+    "commonAdverseEffects": "Hiperglicemia, retencao hidrossalina, alteracoes de humor, dispepsia e reacoes locais.",
+    "dangerousAdverseEffects": "Infeccoes, supressao adrenal, psicose, sangramento/perfuracao GI, hiperglicemia grave e complicacoes locais de injeção.",
+    "adverseEffects": "Osteoporose, miopatia, catarata/glaucoma e alteracoes cutaneas com uso repetido.",
+    "contraindications": "Hipersensibilidade; infeccoes fungicas sistemicas para corticosteroides sistemicos. Nao usar IV neste produto.",
+    "interactions": "Vacinas vivas em doses imunossupressoras e interacoes metabolicas/eletroliticas de corticosteroides exigem cautela.",
+    "monitoring": "Glicemia, PA, eletrólitos, sinais de infeccao e supressao adrenal conforme dose/duracao.",
+    "administration": "Rotas documentadas: IM, intra-articular, intralesional e tecidos moles. Agitar bem antes de usar.",
+    "preparation": "Suspensao pronta; nao converter para solucao IV.",
+    "infusionProtocol": "NAO APLICAVEL. Via IV nao documentada para esta suspensao.",
+    "pregnancy": "Usar apos avaliacao beneficio-risco; corticosteroides atravessam placenta.",
+    "lactation": "Corticosteroides podem passar ao leite; avaliar dose/duracao e risco.",
+    "specialPopulations": "Neonatos/prematuros: cautela por benzyl alcohol; diabeticos e imunossuprimidos requerem monitorizacao.",
+    "patientEducation": "Informar diabetes, infeccoes e vacinas; relatar febre, alteracao visual ou reacao intensa no local.",
+    "clinicalPearls": "O ID 'betametasona injetavel' e ambiguo; esta ficha e especificamente a suspensao fosfato+acetato 6 mg/mL e NAO IV.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CORTICOIDE; SUSPENSAO; NAO_IV; BENZYL_ALCOHOL; SUPRESSAO_ADRENAL.",
+    "alerts": "VIA_IV_BLOQUEADA. Automacao depende da indicacao e rota local.",
+    "references": [
+      "DailyMed/NLM EUA - Betamethasone Sodium Phosphate + Acetate Injectable Suspension 6 mg/mL, current label 2025/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be3e57df-339a-4b7c-9528-d478af8c7855"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be3e57df-339a-4b7c-9528-d478af8c7855"
+  },
+  "es": {
+    "name": "Betametasona fosfato sodico + acetato - suspension inyectable 6 mg/mL",
+    "class": "Corticosteroide sistemico/local",
+    "pharmacologicClass": "Glucocorticoide de accion inmediata + deposito",
+    "mechanism": "Activa receptor glucocorticoide y modula transcripcion inflamatoria/inmune.",
+    "pharmacodynamics": "Componente fosfato es soluble/rapido; acetato es poco soluble y prolonga efecto local/sistemico.",
+    "pharmacokinetics": "Suspension combina fraccion soluble y deposito; absorcion varia con via/sitio.",
+    "indications": "Uso IM sistemico e intraarticular/intralesional/tejidos blandos segun entidad clinica rotulada. NO es producto IV.",
+    "commercialNames": "Producto American Regent, EE.UU.",
+    "presentation": "Suspension inyectable.",
+    "presentations": "6 mg/mL total: 3 mg/mL betametasona fosfato + 3 mg/mL acetato; vial 5 mL.",
+    "dose": "Dosis inicial parenteral puede variar de 0,25 a 9 mg/dia segun enfermedad. Dosis locales intraarticulares varian por tamaño articular. No existe pauta universal.",
+    "pediatricDose": "Dosis debe individualizarse; producto contiene benzyl alcohol/preservativo y exige precaucion en neonatos. Sin pauta pediatrica universal en rotulo.",
+    "renalDose": "Sin algoritmo numerico especifico.",
+    "hepaticDose": "Sin algoritmo numerico especifico.",
+    "commonAdverseEffects": "Hiperglucemia, retencion hidrosalina, cambios de animo, dispepsia y reacciones locales.",
+    "dangerousAdverseEffects": "Infecciones, supresion adrenal, psicosis, sangrado/perforacion GI, hiperglucemia grave y complicaciones locales de inyeccion.",
+    "adverseEffects": "Osteoporosis, miopatia, catarata/glaucoma y cambios cutaneos con uso repetido.",
+    "contraindications": "Hipersensibilidad; infecciones fungicas sistemicas para corticosteroides sistemicos. No usar IV en este producto.",
+    "interactions": "Vacunas vivas con dosis inmunosupresoras e interacciones metabolicas/electroliticas de corticoides requieren precaucion.",
+    "monitoring": "Glucemia, PA, electrolitos, signos de infeccion y supresion adrenal segun dosis/duracion.",
+    "administration": "Vias documentadas: IM, intraarticular, intralesional y tejidos blandos. Agitar bien antes de usar.",
+    "preparation": "Suspension lista; no convertir a solucion IV.",
+    "infusionProtocol": "NO APLICA. Via IV no documentada para esta suspension.",
+    "pregnancy": "Usar tras evaluacion beneficio-riesgo; corticoides atraviesan placenta.",
+    "lactation": "Corticoides pueden pasar a leche; valorar dosis/duracion y riesgo.",
+    "specialPopulations": "Neonatos/prematuros: precaucion por benzyl alcohol; diabeticos e inmunosuprimidos requieren vigilancia.",
+    "patientEducation": "Informar diabetes, infecciones y vacunas; comunicar fiebre, cambio visual o reaccion intensa local.",
+    "clinicalPearls": "El ID 'betametasona inyectable' es ambiguo; esta ficha es especificamente suspension fosfato+acetato 6 mg/mL y NO IV.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CORTICOIDE; SUSPENSION; NO_IV; BENZYL_ALCOHOL; SUPRESION_SUPRARRENAL.",
+    "alerts": "VIA_IV_BLOQUEADA. Automatizacion depende de indicacion y via local.",
+    "references": [
+      "DailyMed/NLM EUA - Betamethasone Sodium Phosphate + Acetate Injectable Suspension 6 mg/mL, current label 2025/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be3e57df-339a-4b7c-9528-d478af8c7855"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be3e57df-339a-4b7c-9528-d478af8c7855"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Betametasona fosfato sodico + acetato - suspensao injetavel 6 mg/mL",
+    "es": "Betametasona fosfato sodico + acetato - suspension inyectable 6 mg/mL"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "betametasona_injetavel.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "103",
+    "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "adrenalina_autoinjetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PRODUTO_ESPECIFICO_AUVIQ",
+          "PESO_MENOR_7_5_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "aminofilina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TDM_OBRIGATORIO",
+          "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "betametasona_injetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA",
+          "INDICACAO_ROTA_OBRIGATORIAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "brometo_de_ipratropio_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIA_NAO_INALATORIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "dexametasona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AUTOMACAO_EXIGE_INDICACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenoterol_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "DOSE_ATUAL_NAO_VERIFICADA",
+          "VIA_AUTOMATICA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "BULA_PRIMARIA_ATUAL_PENDENTE"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidrocortisona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metilprednisolona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "prometazina_im",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "IDADE_MENOR_2_CONTRAINDICADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "salbutamol_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+          "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "betametasona_injetavel",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Betametasona fosfato+acetato suspensao - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "VIA_IV_BLOQUEADA",
+        "INDICACAO_ROTA_OBRIGATORIAS"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "103",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "103",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_087_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

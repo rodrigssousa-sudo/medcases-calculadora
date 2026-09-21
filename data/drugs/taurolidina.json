@@ -1,0 +1,354 @@
+{
+  "id": "taurolidina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "taurolidina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Taurolidina - ID generico; referencia documentada: DEFENCATH taurolidina + heparina lock",
+    "class": "Solucao antimicrobiana de lock de cateter",
+    "pharmacologicClass": "Taurolidina antimicrobiana + heparina anticoagulante em produto de lock",
+    "mechanism": "Taurolidina reage com estruturas microbianas e reduz colonizacao/biofilme; no DEFENCATH esta associada a heparina para lock de lumen.",
+    "pharmacodynamics": "Acao local no lumen do cateter; nao e tratamento sistemico de infeccao.",
+    "pharmacokinetics": "Exposicao sistemica esperada e minima quando usada corretamente como lock e aspirada antes da proxima sessao.",
+    "indications": "DEFENCATH: reduzir incidencia de infeccao de corrente sanguinea relacionada a cateter em adultos com insuficiencia renal em hemodialise cronica por CVC.",
+    "commercialNames": "DEFENCATH, EUA. Outros produtos de taurolidina tem composicao diferente e nao devem herdar automaticamente estes campos.",
+    "presentation": "Solucao esteril de lock, dose unica.",
+    "presentations": "Taurolidina 13,5 mg/mL + heparina 1000 unidades/mL em frascos de 3 mL e 5 mL.",
+    "dose": "Instilar volume suficiente para preencher cada lumen do CVC ao final de cada sessao de hemodialise. Nao existe dose sistemica mg/kg.",
+    "pediatricDose": "Seguranca e eficacia pediatricas nao estabelecidas para DEFENCATH; bloqueado.",
+    "renalDose": "Nao aplicavel como ajuste sistemico; produto e destinado a pacientes em hemodialise.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Mau funcionamento do cateter, sangramento, nausea, vomitos, tontura e dor toracica foram relatados.",
+    "dangerousAdverseEffects": "Sangramento e trombocitopenia associada a heparina sao riscos do produto combinado.",
+    "adverseEffects": "Trombocitopenia e reacoes locais podem ocorrer.",
+    "contraindications": "Historia de HIT ou hipersensibilidade a taurolidina, heparina, citrato ou produtos suinos conforme rotulo.",
+    "interactions": "Como lock local, interacoes sistemicas sao limitadas, mas o componente heparina deve ser considerado em risco de sangramento/HIT.",
+    "monitoring": "Sinais de sangramento, trombocitopenia/HIT e funcao do cateter.",
+    "administration": "Somente lock de cateter. Nao e para injecao sistemica nem flush. Aspirar e descartar antes da proxima sessao.",
+    "preparation": "Frasco dose unica; usar volume correspondente ao volume de preenchimento de cada lumen e descartar sobra.",
+    "infusionProtocol": "NAO APLICAVEL; nao infundir sistemicamente.",
+    "pregnancy": "Exposicao sistemica nao e esperada com uso correto; dados clinicos especificos sao limitados.",
+    "lactation": "Exposicao sistemica nao e esperada com uso correto; dados clinicos especificos sao limitados.",
+    "specialPopulations": "Escopo restrito a adultos em hemodialise cronica por CVC.",
+    "patientEducation": "Produto e aplicado no cateter pela equipe; nao e antibiotico sistemico nem flush.",
+    "clinicalPearls": "O ID taurolidina e ambiguo: DEFENCATH inclui heparina; outros locks podem incluir citrato ou outras concentracoes. Nao generalizar.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "LOCK_CVC; NAO_SISTEMICO; HEPARINA; HIT; PRODUTO_ESPECIFICO.",
+    "alerts": "PUBLICACAO generica de 'taurolidina' bloqueada sem selecionar produto/composicao. DEFENCATH nao deve ser injetado sistemicamente.",
+    "references": [
+      "DailyMed/NLM EUA - DEFENCATH, taurolidine/heparin catheter lock, atual 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13b3a61e-5a4b-4afb-8fa1-d76ebdb344d6"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13b3a61e-5a4b-4afb-8fa1-d76ebdb344d6"
+  },
+  "es": {
+    "name": "Taurolidina - ID generico; referencia documentada: DEFENCATH taurolidina + heparina lock",
+    "class": "Solucion antimicrobiana de lock de cateter",
+    "pharmacologicClass": "Taurolidina antimicrobiana + heparina anticoagulante en producto de lock",
+    "mechanism": "Taurolidina reacciona con estructuras microbianas y reduce colonizacion/biofilm; en DEFENCATH se asocia a heparina para lock de lumen.",
+    "pharmacodynamics": "Accion local en lumen del cateter; no es tratamiento sistemico de infeccion.",
+    "pharmacokinetics": "Exposicion sistemica esperada es minima cuando se usa correctamente como lock y se aspira antes de siguiente sesion.",
+    "indications": "DEFENCATH: reducir incidencia de infeccion sanguinea relacionada con cateter en adultos con insuficiencia renal en hemodialisis cronica por CVC.",
+    "commercialNames": "DEFENCATH, EE.UU. Otros productos de taurolidina tienen composicion distinta y no deben heredar automaticamente estos campos.",
+    "presentation": "Solucion esteril de lock, dosis unica.",
+    "presentations": "Taurolidina 13,5 mg/mL + heparina 1000 unidades/mL en viales de 3 mL y 5 mL.",
+    "dose": "Instilar volumen suficiente para llenar cada lumen del CVC al final de cada sesion de hemodialisis. No existe dosis sistemica mg/kg.",
+    "pediatricDose": "Seguridad y eficacia pediatricas no establecidas para DEFENCATH; bloqueado.",
+    "renalDose": "No aplica como ajuste sistemico; producto esta destinado a pacientes en hemodialisis.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Se reportaron mal funcionamiento del cateter, sangrado, nausea, vomitos, mareo y dolor toracico.",
+    "dangerousAdverseEffects": "Sangrado y trombocitopenia inducida por heparina son riesgos del producto combinado.",
+    "adverseEffects": "Pueden ocurrir trombocitopenia y reacciones locales.",
+    "contraindications": "Antecedente de HIT o hipersensibilidad a taurolidina, heparina, citrato o productos porcinos segun rotulo.",
+    "interactions": "Como lock local, interacciones sistemicas son limitadas, pero componente heparina debe considerarse en riesgo de sangrado/HIT.",
+    "monitoring": "Signos de sangrado, trombocitopenia/HIT y funcion del cateter.",
+    "administration": "Solo lock de cateter. No es para inyeccion sistemica ni flush. Aspirar y desechar antes de proxima sesion.",
+    "preparation": "Vial dosis unica; usar volumen correspondiente al volumen de llenado de cada lumen y desechar sobrante.",
+    "infusionProtocol": "NO APLICA; no infundir sistemicamente.",
+    "pregnancy": "No se espera exposicion sistemica con uso correcto; datos clinicos especificos limitados.",
+    "lactation": "No se espera exposicion sistemica con uso correcto; datos clinicos especificos limitados.",
+    "specialPopulations": "Alcance restringido a adultos en hemodialisis cronica por CVC.",
+    "patientEducation": "Producto se aplica en cateter por el equipo; no es antibiotico sistemico ni flush.",
+    "clinicalPearls": "El ID taurolidina es ambiguo: DEFENCATH incluye heparina; otros locks pueden incluir citrato u otras concentraciones. No generalizar.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "LOCK_CVC; NO_SISTEMICO; HEPARINA; HIT; PRODUCTO_ESPECIFICO.",
+    "alerts": "PUBLICACION generica de 'taurolidina' bloqueada sin seleccionar producto/composicion. DEFENCATH no debe inyectarse sistemicamente.",
+    "references": [
+      "DailyMed/NLM EUA - DEFENCATH, taurolidine/heparin catheter lock, atual 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13b3a61e-5a4b-4afb-8fa1-d76ebdb344d6"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13b3a61e-5a4b-4afb-8fa1-d76ebdb344d6"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Taurolidina - ID generico; referencia documentada: DEFENCATH taurolidina + heparina lock",
+    "es": "Taurolidina - ID generico; referencia documentada: DEFENCATH taurolidina + heparina lock"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "taurolidina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "taurolidina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Referencia: DEFENCATH catheter lock - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "GENERIC_TAUROLIDINE_BLOQUEADA",
+        "PEDIATRIA_BLOQUEADA",
+        "USO_SISTEMICO_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

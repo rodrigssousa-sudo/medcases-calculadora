@@ -1,0 +1,350 @@
+{
+  "id": "adrenalina_autoinjetavel",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "adrenalina_autoinjetavel"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Epinefrina autoinjetavel AUVI-Q",
+    "class": "Agonista adrenergico de emergencia",
+    "pharmacologicClass": "Agonista alfa e beta-adrenergico nao seletivo",
+    "mechanism": "Estimula receptores alfa e beta adrenergicos, revertendo vasodilatacao, edema, broncoconstricao e hipotensao da anafilaxia.",
+    "pharmacodynamics": "Efeito rapido em anafilaxia; pode causar taquicardia, hipertensao e arritmias.",
+    "pharmacokinetics": "Dispositivo fornece dose fixa para absorcao IM/SC na coxa anterolateral.",
+    "indications": "Tratamento de emergencia de reacoes alergicas tipo I, incluindo anafilaxia, em pacientes >=7,5 kg.",
+    "commercialNames": "AUVI-Q, EUA; outras marcas podem ter faixas/dispositivos diferentes.",
+    "presentation": "Autoinjetor de dose unica.",
+    "presentations": "0,1 mg/0,1 mL; 0,15 mg/0,15 mL; 0,3 mg/0,3 mL.",
+    "dose": ">=30 kg: 0,3 mg IM/SC na coxa anterolateral. Segunda dose com novo autoinjetor pode ser usada a partir de 5 min se nao houver melhora ou houver piora.",
+    "pediatricDose": "15 a <30 kg: 0,15 mg; 7,5 a <15 kg: 0,1 mg. <7,5 kg: este produto nao oferece dose adequada; usar outra forma injetavel se necessario.",
+    "renalDose": "Sem ajuste renal especifico.",
+    "hepaticDose": "Sem ajuste hepatico especifico.",
+    "commonAdverseEffects": "Palpitacoes, tremor, ansiedade, cefaleia, tontura, sudorese e nausea.",
+    "dangerousAdverseEffects": "Arritmias, hipertensao grave, hemorragia cerebral e edema pulmonar podem ocorrer, sobretudo em overdose/IV acidental.",
+    "adverseEffects": "Dor local e lesao por movimento durante autoinjecao podem ocorrer.",
+    "contraindications": "Nenhuma no rotulo AUVI-Q.",
+    "interactions": "Drogas arritmogenicas, bloqueadores adrenergicos e fármacos que potencializam catecolaminas podem alterar resposta.",
+    "monitoring": "Resposta clinica, via aerea, PA, FC/ritmo e necessidade de atendimento de emergencia.",
+    "administration": "Somente na coxa anterolateral; pode atravessar roupa. Nao injetar IV, gluteo, dedos, maos ou pes.",
+    "preparation": "Dispositivo pronto para uso; dose fixa. Manter acesso imediato a 2 dispositivos conforme rotulo.",
+    "infusionProtocol": "NAO APLICAVEL ao autoinjetor.",
+    "pregnancy": "Anafilaxia e emergencia materna; epinefrina nao deve ser retida quando clinicamente indicada.",
+    "lactation": "Uso de emergencia; decisao baseada na necessidade clinica.",
+    "specialPopulations": "Idosos podem ter maior risco cardiovascular; criancas pequenas exigem imobilizar a perna durante a aplicacao.",
+    "patientEducation": "Treinar uso do dispositivo e buscar atendimento de emergencia apos tratar anafilaxia; manter 2 autoinjetores disponiveis.",
+    "clinicalPearls": "As faixas 0,1/0,15/0,3 mg sao especificas do AUVI-Q; nao generalizar para todo autoinjetor.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ANAFILAXIA; DOSE_FIXA_PESO; IM_COXA; NAO_IV; SEGUNDA_DOSE_5MIN.",
+    "alerts": "AUTOMACAO exige marca/dispositivo e peso; <7,5 kg bloqueado para AUVI-Q.",
+    "references": [
+      "DailyMed/NLM EUA - AUVI-Q, label revised 04/2025. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6180fb40-7fca-4602-b3da-ce62b8cd2470"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6180fb40-7fca-4602-b3da-ce62b8cd2470"
+  },
+  "es": {
+    "name": "Epinefrina autoinyectable AUVI-Q",
+    "class": "Agonista adrenergico de emergencia",
+    "pharmacologicClass": "Agonista alfa y beta-adrenergico no selectivo",
+    "mechanism": "Estimula receptores alfa y beta adrenergicos, revirtiendo vasodilatacion, edema, broncoconstriccion e hipotension de anafilaxia.",
+    "pharmacodynamics": "Efecto rapido en anafilaxia; puede causar taquicardia, hipertension y arritmias.",
+    "pharmacokinetics": "El dispositivo entrega dosis fija para absorcion IM/SC en muslo anterolateral.",
+    "indications": "Tratamiento de emergencia de reacciones alergicas tipo I, incluida anafilaxia, en pacientes >=7,5 kg.",
+    "commercialNames": "AUVI-Q, EE.UU.; otras marcas pueden tener bandas/dispositivos distintos.",
+    "presentation": "Autoinyector de dosis unica.",
+    "presentations": "0,1 mg/0,1 mL; 0,15 mg/0,15 mL; 0,3 mg/0,3 mL.",
+    "dose": " >=30 kg: 0,3 mg IM/SC en muslo anterolateral. Segunda dosis con nuevo autoinyector puede usarse desde 5 min si no hay mejoria o hay empeoramiento.",
+    "pediatricDose": "15 a <30 kg: 0,15 mg; 7,5 a <15 kg: 0,1 mg. <7,5 kg: este producto no ofrece dosis adecuada; usar otra forma inyectable si es necesario.",
+    "renalDose": "Sin ajuste renal especifico.",
+    "hepaticDose": "Sin ajuste hepatico especifico.",
+    "commonAdverseEffects": "Palpitaciones, temblor, ansiedad, cefalea, mareo, sudoracion y nausea.",
+    "dangerousAdverseEffects": "Arritmias, hipertension grave, hemorragia cerebral y edema pulmonar pueden ocurrir, sobre todo en sobredosis/IV accidental.",
+    "adverseEffects": "Dolor local y lesion por movimiento durante autoinyeccion pueden ocurrir.",
+    "contraindications": "Ninguna en rotulo AUVI-Q.",
+    "interactions": "Farmacos arritmogenicos, bloqueadores adrenergicos y medicamentos que potencian catecolaminas pueden alterar respuesta.",
+    "monitoring": "Respuesta clinica, via aerea, PA, FC/ritmo y necesidad de atencion de emergencia.",
+    "administration": "Solo en muslo anterolateral; puede atravesar ropa. No inyectar IV, gluteo, dedos, manos o pies.",
+    "preparation": "Dispositivo listo para usar; dosis fija. Mantener acceso inmediato a 2 dispositivos segun rotulo.",
+    "infusionProtocol": "NO APLICA al autoinyector.",
+    "pregnancy": "Anafilaxia es emergencia materna; epinefrina no debe retenerse cuando esta clinicamente indicada.",
+    "lactation": "Uso de emergencia; decision basada en necesidad clinica.",
+    "specialPopulations": "Mayores pueden tener mayor riesgo cardiovascular; niños pequenos requieren sujetar la pierna durante aplicacion.",
+    "patientEducation": "Entrenar uso del dispositivo y buscar atencion de emergencia tras tratar anafilaxia; mantener 2 autoinyectores disponibles.",
+    "clinicalPearls": "Las bandas 0,1/0,15/0,3 mg son especificas de AUVI-Q; no generalizar a todo autoinyector.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ANAFILAXIA; DOSIS_FIJA_PESO; IM_MUSLO; NO_IV; SEGUNDA_DOSIS_5MIN.",
+    "alerts": "AUTOMATIZACION exige marca/dispositivo y peso; <7,5 kg bloqueado para AUVI-Q.",
+    "references": [
+      "DailyMed/NLM EUA - AUVI-Q, label revised 04/2025. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6180fb40-7fca-4602-b3da-ce62b8cd2470"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6180fb40-7fca-4602-b3da-ce62b8cd2470"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Epinefrina autoinjetavel AUVI-Q",
+    "es": "Epinefrina autoinyectable AUVI-Q"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "adrenalina_autoinjetavel.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "103",
+    "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "adrenalina_autoinjetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PRODUTO_ESPECIFICO_AUVIQ",
+          "PESO_MENOR_7_5_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "aminofilina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TDM_OBRIGATORIO",
+          "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "betametasona_injetavel",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA",
+          "INDICACAO_ROTA_OBRIGATORIAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "brometo_de_ipratropio_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIA_NAO_INALATORIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "dexametasona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AUTOMACAO_EXIGE_INDICACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenoterol_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "DOSE_ATUAL_NAO_VERIFICADA",
+          "VIA_AUTOMATICA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "BULA_PRIMARIA_ATUAL_PENDENTE"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidrocortisona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metilprednisolona_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AUTOMACAO_EXIGE_INDICACAO",
+          "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "prometazina_im",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "IDADE_MENOR_2_CONTRAINDICADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "salbutamol_nebulizacao",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+          "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "adrenalina_autoinjetavel",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "AUVI-Q 0,1/0,15/0,3 mg - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "PRODUTO_ESPECIFICO_AUVIQ",
+        "PESO_MENOR_7_5_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "103",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "103",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_087_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

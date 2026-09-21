@@ -1,0 +1,367 @@
+{
+  "id": "levotiroxina_sodica",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "levotiroxina_sodica"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Levotiroxina sodica - comprimido oral",
+    "class": "Hormônio tireoidiano de reposicao",
+    "pharmacologicClass": "T4 sintetica",
+    "mechanism": "T4 e convertida perifericamente em T3 e atua em receptores nucleares regulando transcricao e metabolismo.",
+    "pharmacodynamics": "Restaura estado eutireoideo; excesso causa manifestacoes de hipertireoidismo e risco cardiovascular/osseo.",
+    "pharmacokinetics": "Absorcao oral e sensivel a alimentos/interacoes; efeito maximo de uma dose pode levar 4-6 semanas.",
+    "indications": "Reposicao em hipotireoidismo primario, secundario ou terciario, inclusive congenito; supressao de TSH em cenarios selecionados de cancer diferenciado de tireoide.",
+    "commercialNames": "Fonte: levothyroxine sodium tablets generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "25, 50, 75, 88, 100, 112, 125, 137, 150, 175, 200 e 300 mcg.",
+    "dose": "Adulto sem cardiopatia: reposicao completa aproximada 1,6 mcg/kg/dia; titular 12,5-25 mcg a cada 4-6 semanas. Idosos/cardiopatas: iniciar abaixo da dose plena e titular mais lentamente. >200 mcg/dia raramente necessario; resposta inadequada >300 mcg/dia sugere investigar adesao, absorcao ou interacoes.",
+    "pediatricDose": "0-3 meses 10-15 mcg/kg/dia; 3-6 meses 8-10; 6-12 meses 6-8; 1-5 anos 5-6; 6-12 anos 4-5; >12 anos com crescimento/puberdade incompletos 2-3; completos 1,6 mcg/kg/dia. AUTOMATABLE=NO ate validar idade, peso e etiologia.",
+    "renalDose": "Sem ajuste numerico especifico; titular por estado clinico e TSH/T4 conforme etiologia.",
+    "hepaticDose": "Sem algoritmo numerico especifico; individualizar por resposta clinica e laboratorial.",
+    "commonAdverseEffects": "Palpitacoes, taquicardia, tremor, nervosismo, insonia, intolerancia ao calor, sudorese, perda de peso e diarreia por sobre-reposicao.",
+    "dangerousAdverseEffects": "Arritmias, fibrilacao atrial, angina/IAM em suscetiveis, crise adrenal se insuficiencia adrenal nao corrigida e perda ossea por sobretratamento.",
+    "adverseEffects": "Cefaleia, fraqueza muscular, alteracoes menstruais e rash podem ocorrer com excesso.",
+    "contraindications": "Insuficiencia adrenal nao corrigida.",
+    "interactions": "Ferro, calcio e varios farmacos reduzem absorcao; separar pelo menos 4 h. Soja pode interferir. Pode alterar necessidade de antidiabeticos e efeito de anticoagulantes.",
+    "monitoring": "TSH e/ou T4 livre; pediatria exige monitorizacao frequente de crescimento e exames. Interromper biotina pelo menos 2 dias antes de testes conforme rotulo.",
+    "administration": "1x/dia em jejum, 30-60 minutos antes do cafe da manha; separar pelo menos 4 h de farmacos que reduzem absorcao.",
+    "preparation": "Para crianca que nao engole: triturar e suspender imediatamente em 5-10 mL de agua, administrar e nao armazenar.",
+    "infusionProtocol": "NAO APLICAVEL ao comprimido; coma mixedematoso requer tratamento IV e ficha propria.",
+    "pregnancy": "Necessidade pode aumentar; medir TSH/T4 ao confirmar gestacao e acompanhar regularmente.",
+    "lactation": "Reposicao materna adequada deve ser mantida quando indicada; monitorar clinica/laboratorio.",
+    "specialPopulations": "Idosos e cardiopatas: iniciar abaixo da reposicao plena e titular lentamente.",
+    "patientEducation": "Tomar consistentemente em jejum; separar ferro/calcio; nao usar para emagrecimento; informar biotina e gestacao.",
+    "clinicalPearls": "Indice terapeutico estreito. Nao converter mcg para mg sem cuidado: erro de 1000 vezes e possivel.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "INDICE_TERAPEUTICO_ESTREITO; NAO_EMAGRECIMENTO; MCG_MG_ALTO_RISCO; CARDIOPATIA_TITULAR_LENTO.",
+    "alerts": "Nao usar comprimido oral para coma mixedematoso. Dose maxima nao substitui titulacao por TSH/T4.",
+    "references": [
+      "DailyMed/NLM EUA - Levothyroxine Sodium tablets, PI 02/2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9dff641-ced3-bae3-e053-2a95a90a2e29"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9dff641-ced3-bae3-e053-2a95a90a2e29"
+  },
+  "es": {
+    "name": "Levotiroxina sodica - comprimido oral",
+    "class": "Hormona tiroidea de reemplazo",
+    "pharmacologicClass": "T4 sintetica",
+    "mechanism": "T4 se convierte perifericamente en T3 y actua en receptores nucleares regulando transcripcion y metabolismo.",
+    "pharmacodynamics": "Restaura estado eutiroideo; exceso causa manifestaciones de hipertiroidismo y riesgo cardiovascular/oseo.",
+    "pharmacokinetics": "Absorcion oral es sensible a alimentos/interacciones; efecto maximo de una dosis puede tardar 4-6 semanas.",
+    "indications": "Reemplazo en hipotiroidismo primario, secundario o terciario, incluido congenito; supresion de TSH en escenarios seleccionados de cancer diferenciado de tiroides.",
+    "commercialNames": "Fuente: levothyroxine sodium tablets generico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "25, 50, 75, 88, 100, 112, 125, 137, 150, 175, 200 y 300 mcg.",
+    "dose": "Adulto sin cardiopatia: reemplazo completo aproximado 1,6 mcg/kg/dia; titular 12,5-25 mcg cada 4-6 semanas. Mayores/cardiopatas: iniciar por debajo de dosis plena y titular mas lentamente. >200 mcg/dia rara vez necesario; respuesta inadecuada >300 mcg/dia sugiere investigar adherencia, absorcion o interacciones.",
+    "pediatricDose": "0-3 meses 10-15 mcg/kg/dia; 3-6 meses 8-10; 6-12 meses 6-8; 1-5 anos 5-6; 6-12 anos 4-5; >12 anos con crecimiento/pubertad incompletos 2-3; completos 1,6 mcg/kg/dia. AUTOMATABLE=NO hasta validar edad, peso y etiologia.",
+    "renalDose": "Sin ajuste numerico especifico; titular por estado clinico y TSH/T4 segun etiologia.",
+    "hepaticDose": "Sin algoritmo numerico especifico; individualizar por respuesta clinica y de laboratorio.",
+    "commonAdverseEffects": "Palpitaciones, taquicardia, temblor, nerviosismo, insomnio, intolerancia al calor, sudoracion, perdida de peso y diarrea por sobre-reemplazo.",
+    "dangerousAdverseEffects": "Arritmias, fibrilacion auricular, angina/IAM en susceptibles, crisis suprarrenal si insuficiencia suprarrenal no corregida y perdida osea por sobretratamiento.",
+    "adverseEffects": "Cefalea, debilidad muscular, alteraciones menstruales y rash pueden ocurrir con exceso.",
+    "contraindications": "Insuficiencia suprarrenal no corregida.",
+    "interactions": "Hierro, calcio y varios farmacos reducen absorcion; separar al menos 4 h. Soja puede interferir. Puede cambiar requerimiento de antidiabeticos y efecto de anticoagulantes.",
+    "monitoring": "TSH y/o T4 libre; pediatria exige monitorizacion frecuente de crecimiento y pruebas. Suspender biotina al menos 2 dias antes de pruebas segun rotulo.",
+    "administration": "1 vez/dia en ayunas, 30-60 minutos antes del desayuno; separar al menos 4 h de farmacos que reducen absorcion.",
+    "preparation": "Para nino que no traga: triturar y suspender inmediatamente en 5-10 mL de agua, administrar y no almacenar.",
+    "infusionProtocol": "NO APLICA al comprimido; coma mixedematoso requiere tratamiento IV y ficha propia.",
+    "pregnancy": "El requerimiento puede aumentar; medir TSH/T4 al confirmar gestacion y controlar regularmente.",
+    "lactation": "El reemplazo materno adecuado debe mantenerse cuando esta indicado; monitorizar clinica/laboratorio.",
+    "specialPopulations": "Mayores y cardiopatas: iniciar por debajo del reemplazo pleno y titular lentamente.",
+    "patientEducation": "Tomar consistentemente en ayunas; separar hierro/calcio; no usar para adelgazar; informar biotina y embarazo.",
+    "clinicalPearls": "Indice terapeutico estrecho. No convertir mcg a mg sin cuidado: es posible error de 1000 veces.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "INDICE_TERAPEUTICO_ESTRECHO; NO_ADELGAZAMIENTO; MCG_MG_ALTO_RIESGO; CARDIOPATIA_TITULAR_LENTO.",
+    "alerts": "No usar comprimido oral para coma mixedematoso. Dosis maxima no sustituye titulacion por TSH/T4.",
+    "references": [
+      "DailyMed/NLM EUA - Levothyroxine Sodium tablets, PI 02/2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9dff641-ced3-bae3-e053-2a95a90a2e29"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d9dff641-ced3-bae3-e053-2a95a90a2e29"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Levotiroxina sodica - comprimido oral",
+    "es": "Levotiroxina sodica - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "levotiroxina_sodica.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "levotiroxina_sodica",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "LEVOTIROXINA SODICA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+        "RISCO_ERRO_MCG_MG",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

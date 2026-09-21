@@ -1,0 +1,353 @@
+{
+  "id": "sulfadiazina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "sulfadiazina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Sulfadiazina 500 mg - comprimido oral",
+    "class": "Antibacteriano sulfonamida",
+    "pharmacologicClass": "Sulfonamida bacteriostatica",
+    "mechanism": "Inibe sintese bacteriana de folato por competicao com PABA.",
+    "pharmacodynamics": "Bacteriostatica; risco de cristaluria, reacoes cutaneas graves e discrasias sanguineas.",
+    "pharmacokinetics": "Absorcao oral; eliminacao renal importante. Hidratacao adequada reduz risco de cristaluria.",
+    "indications": "Infeccoes por microrganismos suscetiveis segundo rotulo; uso deve considerar resistencia. Nao e sulfadiazina de prata topica.",
+    "commercialNames": "Sulfadiazine tablets, EUA.",
+    "presentation": "Comprimido VO.",
+    "presentations": "500 mg.",
+    "dose": "Adultos: dose inicial 2-4 g; manutencao 2-4 g/dia divididos em 3-6 doses conforme gravidade/resposta.",
+    "pediatricDose": ">2 meses: dose inicial metade da dose das primeiras 24 h; manutencao 150 mg/kg/dia ou 4 g/m2/dia divididos em 4-6 doses, maximo 6 g/dia. <2 meses: geralmente contraindicada, exceto uso especifico com pirimetamina para toxoplasmose congenita conforme rotulo.",
+    "renalDose": "Funcao renal reduzida aumenta risco de acumulo/cristaluria; o rotulo nao fornece algoritmo numerico simples. Ajuste automatico bloqueado.",
+    "hepaticDose": "Usar cautela em disfuncao hepatica; hepatite/ictericia podem ocorrer.",
+    "commonAdverseEffects": "Nausea, vomitos, rash e cristaluria.",
+    "dangerousAdverseEffects": "SJS/TEN, agranulocitose/aplasia medular, anemia hemolitica, hepatite e lesao renal.",
+    "adverseEffects": "Fotossensibilidade, leucopenia, trombocitopenia e nefrite podem ocorrer.",
+    "contraindications": "Hipersensibilidade a sulfonamidas; lactentes <2 meses salvo excecao rotulada; consultar gestacao/lactacao no produto.",
+    "interactions": "Pode potencializar warfarina, sulfonilureias e outros fármacos ligados a proteinas; revisar antifolatos concomitantes.",
+    "monitoring": "Hemograma, funcao renal, urina/cristaluria, funcao hepatica e rash.",
+    "administration": "VO em doses divididas; manter hidratacao adequada.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Deficiencia G6PD pode aumentar risco de hemolise; renal/hepatica e neonatos exigem cautela.",
+    "patientEducation": "Manter hidratacao; procurar atendimento por rash, febre, dor de garganta, ictericia ou reducao da urina.",
+    "clinicalPearls": "Sulfadiazina oral e sulfadiazina de prata topica sao produtos diferentes e nao devem compartilhar dose/via.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SULFONAMIDA; SJS_TEN; MEDULA; CRISTALURIA; G6PD; NEONATO.",
+    "alerts": "Rota topica/sulfadiazina de prata bloqueada neste ID. Ajuste renal automatico bloqueado.",
+    "references": [
+      "DailyMed/NLM EUA - Sulfadiazine tablets 500 mg, current label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6032d6f7-cbce-4e5d-841c-a1e24b616f91"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6032d6f7-cbce-4e5d-841c-a1e24b616f91"
+  },
+  "es": {
+    "name": "Sulfadiazina 500 mg - comprimido oral",
+    "class": "Antibacteriano sulfonamida",
+    "pharmacologicClass": "Sulfonamida bacteriostatica",
+    "mechanism": "Inhibe sintesis bacteriana de folato por competencia con PABA.",
+    "pharmacodynamics": "Bacteriostatica; riesgo de cristaluria, reacciones cutaneas graves y discrasias sanguineas.",
+    "pharmacokinetics": "Absorcion oral; eliminacion renal importante. Hidratacion adecuada reduce riesgo de cristaluria.",
+    "indications": "Infecciones por microorganismos susceptibles segun rotulo; uso debe considerar resistencia. No es sulfadiazina de plata topica.",
+    "commercialNames": "Sulfadiazine tablets, EE.UU.",
+    "presentation": "Comprimido VO.",
+    "presentations": "500 mg.",
+    "dose": "Adultos: dosis inicial 2-4 g; mantenimiento 2-4 g/dia divididos en 3-6 dosis segun gravedad/respuesta.",
+    "pediatricDose": " >2 meses: dosis inicial mitad de la dosis de primeras 24 h; mantenimiento 150 mg/kg/dia o 4 g/m2/dia divididos en 4-6 dosis, maximo 6 g/dia. <2 meses: generalmente contraindicada, excepto uso especifico con pirimetamina para toxoplasmosis congenita segun rotulo.",
+    "renalDose": "Funcion renal reducida aumenta riesgo de acumulacion/cristaluria; rotulo no aporta algoritmo numerico simple. Ajuste automatico bloqueado.",
+    "hepaticDose": "Usar precaucion en disfuncion hepatica; pueden ocurrir hepatitis/ictericia.",
+    "commonAdverseEffects": "Nausea, vomitos, rash y cristaluria.",
+    "dangerousAdverseEffects": "SJS/TEN, agranulocitosis/aplasia medular, anemia hemolitica, hepatitis y lesion renal.",
+    "adverseEffects": "Pueden ocurrir fotosensibilidad, leucopenia, trombocitopenia y nefritis.",
+    "contraindications": "Hipersensibilidad a sulfonamidas; lactantes <2 meses salvo excepcion rotulada; consultar embarazo/lactancia en producto.",
+    "interactions": "Puede potenciar warfarina, sulfonilureas y otros farmacos unidos a proteinas; revisar antifolatos concomitantes.",
+    "monitoring": "Hemograma, funcion renal, orina/cristaluria, funcion hepatica y rash.",
+    "administration": "VO en dosis divididas; mantener hidratacion adecuada.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Deficiencia G6PD puede aumentar riesgo de hemolisis; renal/hepatica y neonatos requieren precaucion.",
+    "patientEducation": "Mantener hidratacion; consultar por rash, fiebre, dolor de garganta, ictericia o disminucion de orina.",
+    "clinicalPearls": "Sulfadiazina oral y sulfadiazina de plata topica son productos distintos y no deben compartir dosis/via.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SULFONAMIDA; SJS_TEN; MEDULA; CRISTALURIA; G6PD; NEONATO.",
+    "alerts": "Via topica/sulfadiazina de plata bloqueada en este ID. Ajuste renal automatico bloqueado.",
+    "references": [
+      "DailyMed/NLM EUA - Sulfadiazine tablets 500 mg, current label. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6032d6f7-cbce-4e5d-841c-a1e24b616f91"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6032d6f7-cbce-4e5d-841c-a1e24b616f91"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Sulfadiazina 500 mg - comprimido oral",
+    "es": "Sulfadiazina 500 mg - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "sulfadiazina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "sulfadiazina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Sulfadiazina oral 500 mg - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "SULFADIAZINA_PRATA_BLOQUEADA",
+        "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

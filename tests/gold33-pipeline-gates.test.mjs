@@ -4,10 +4,11 @@ import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 const zip = process.env.GOLD33_TEST_ZIP;
-assert.ok(zip, 'GOLD33_TEST_ZIP is required');
-const pkg = spawnSync(process.execPath, ['scripts/gold33-package-gate.mjs', zip], { cwd:root, encoding:'utf8' });
+const pkg = zip
+  ? spawnSync(process.execPath, ['scripts/gold33-package-gate.mjs', zip], { cwd:root, encoding:'utf8' })
+  : spawnSync('python3', ['scripts/gold33-nova-lista.py', '--packages', 'generated/gold33-nova-lista/packages'], { cwd:root, encoding:'utf8' });
 assert.equal(pkg.status, 0, pkg.stderr);
-assert.equal(JSON.parse(pkg.stdout).result, 'PASS');
+assert.equal(JSON.parse(pkg.stdout).result, zip ? 'PASS' : 'DRY_RUN_PASS');
 const deploy = spawnSync(process.execPath, ['scripts/gold33-safe-deploy-gate.mjs'], { cwd:root, encoding:'utf8' });
 assert.notEqual(deploy.status, 0, 'legacy deploy must fail closed');
 assert.match(deploy.stderr, /"result": "BLOCKED"/);

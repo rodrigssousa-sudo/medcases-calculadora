@@ -1,0 +1,479 @@
+{
+  "id": "ceftriaxona_pediatrica_im",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "ceftriaxona_pediatrica_im"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Ceftriaxona — uso pediátrico intramuscular",
+    "class": "Cefalosporina de terceira geração",
+    "pharmacologicClass": "Antibacteriano beta-lactâmico parenteral bactericida",
+    "mechanism": "Inibe síntese da parede celular bacteriana por ligação a PBPs.",
+    "pharmacodynamics": "Atividade bactericida dependente do tempo; espectro depende de suscetibilidade.",
+    "pharmacokinetics": "Após IM é bem absorvida; meia-vida prolongada permite dose diária em várias indicações. Eliminação renal e biliar.",
+    "indications": "EUA: múltiplas infecções por organismos suscetíveis. Nesta ficha IM pediátrica, a indicação automatizável documentada é otite média bacteriana aguda com dose IM única.",
+    "commercialNames": "Fonte genérica DailyMed EUA; marcas BR/AR não verificadas.",
+    "presentation": "Pó estéril para solução injetável; via IM/IV conforme produto, mas esta ficha está restrita à via IM pediátrica.",
+    "presentations": "Frascos-ampola em forças variadas conforme produto; concentração final depende do diluente/volume de reconstituição. Não assumir concentração única.",
+    "dose": "Adultos possuem regimes distintos por indicação; não são escopo da ficha pediátrica IM e não foram liberados para cálculo.",
+    "pediatricDose": "Otite média bacteriana aguda: 50 mg/kg IM em dose única, máximo 1 g. Outras doses pediátricas do rótulo (50–75 mg/kg/dia, meningite até 100 mg/kg/dia) não são automaticamente classificadas como IM nesta ficha sem reconciliação de via. AUTOMATABLE=YES apenas para AOM IM 50 mg/kg, máximo 1 g, após teste de peso e produto.",
+    "renalDose": "Em insuficiência renal isolada, geralmente não requer ajuste nas doses usuais; em disfunção renal e hepática significativas concomitantes, monitorar e não exceder limites do rótulo. Não há algoritmo pediátrico IM por eGFR validado nesta ficha.",
+    "hepaticDose": "Sem ajuste isolado usual; cautela se disfunção hepática e renal significativas coexistirem.",
+    "commonAdverseEffects": "Dor/induração no local IM, diarreia e alterações laboratoriais.",
+    "dangerousAdverseEffects": "Anafilaxia/SCAR, anemia hemolítica grave, C. difficile, precipitados ceftriaxona-cálcio em neonatos, encefalopatia por bilirrubina em hiperbilirrubinêmicos, pseudolitíase biliar/urolitíase e convulsões.",
+    "adverseEffects": "Eosinofilia, trombocitose/leucopenia, elevação de transaminases e candidíase podem ocorrer.",
+    "contraindications": "Hipersensibilidade grave a ceftriaxona/cefalosporinas; prematuros até idade pós-menstrual 41 semanas; neonatos hiperbilirrubinêmicos; neonatos que necessitam soluções IV contendo cálcio.",
+    "interactions": "Ceftriaxona não deve ser administrada simultaneamente com soluções IV contendo cálcio em neonatos. Interações com anticoagulantes e nefrotóxicos exigem avaliação clínica.",
+    "monitoring": "Resposta, alergia, hemograma/hemólise quando indicado, função renal/hepática em cursos prolongados e complicações biliares/urinárias.",
+    "administration": "Somente IM profunda nesta ficha. Técnica, local e volume devem respeitar idade, massa muscular e instruções do produto.",
+    "preparation": "Reconstituir com diluente e volume específicos da força do frasco e da via IM conforme tabela do produto. PREPARACAO_AUTOMATICA=BLOQUEADA: não inferir diluente, lidocaína ou concentração final sem apresentação concreta.",
+    "infusionProtocol": "INFUSAO_IV=BLOQUEADA e fora do escopo desta ficha IM.",
+    "pregnancy": "Não aplicável como população-alvo pediátrica, mas dados do rótulo não definem contraindicação geral na gestação; manter decisão clínica em fichas adultas.",
+    "lactation": "Não aplicável como população-alvo pediátrica; em fichas maternas, ceftriaxona aparece em baixas concentrações no leite.",
+    "specialPopulations": "Neonatos são população de alto risco: prematuridade, hiperbilirrubinemia e necessidade de cálcio IV mudam elegibilidade.",
+    "patientEducation": "Uso profissional/parenteral. Orientar cuidadores sobre sinais de alergia, diarreia grave, icterícia ou piora clínica.",
+    "clinicalPearls": "Para AOM, o rótulo documenta 50 mg/kg IM dose única, máximo 1 g. Não misturar com regimes IV/IM de outras indicações no motor.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "NEONATE_CALCIUM_FATAL_RISK; HYPERBILIRUBINEMIA; PREMATURITY_CONTRAINDICATION; IM_ONLY_THIS_RECORD; IV_INFUSION_BLOCKED.",
+    "alerts": "Fonte EUA; validar produto/diluente local BR/AR antes de preparo ou cálculo de volume.",
+    "references": [
+      "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+  },
+  "es": {
+    "name": "Ceftriaxona — uso pediátrico intramuscular",
+    "class": "Cefalosporina de tercera generación",
+    "pharmacologicClass": "Antibacteriano beta-lactámico parenteral bactericida",
+    "mechanism": "Inhibe síntesis de pared celular bacteriana mediante unión a PBPs.",
+    "pharmacodynamics": "Actividad bactericida dependiente del tiempo; espectro depende de susceptibilidad.",
+    "pharmacokinetics": "Tras IM se absorbe bien; semivida prolongada permite dosis diaria en varias indicaciones. Eliminación renal y biliar.",
+    "indications": "EE.UU.: múltiples infecciones por microorganismos susceptibles. En esta ficha IM pediátrica, la indicación automatizable documentada es otitis media bacteriana aguda con dosis IM única.",
+    "commercialNames": "Fuente genérica DailyMed EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Polvo estéril para solución inyectable; vía IM/IV según producto, pero esta ficha se restringe a vía IM pediátrica.",
+    "presentations": "Viales en distintas potencias según producto; concentración final depende del diluyente/volumen de reconstitución. No asumir concentración única.",
+    "dose": "Adultos tienen regímenes distintos por indicación; quedan fuera del alcance de esta ficha pediátrica IM y no se habilitan para cálculo.",
+    "pediatricDose": "Otitis media bacteriana aguda: 50 mg/kg IM dosis única, máximo 1 g. Otras dosis pediátricas del rótulo (50–75 mg/kg/día, meningitis hasta 100 mg/kg/día) no se clasifican automáticamente como IM en esta ficha sin reconciliar vía. AUTOMATABLE=YES solo para OMA IM 50 mg/kg, máximo 1 g, tras prueba de peso y producto.",
+    "renalDose": "En insuficiencia renal aislada, generalmente no requiere ajuste a dosis usuales; con disfunción renal y hepática significativas concomitantes, monitorizar y respetar límites del rótulo. No hay algoritmo pediátrico IM por eGFR validado en esta ficha.",
+    "hepaticDose": "Sin ajuste aislado usual; precaución si coexisten disfunción hepática y renal significativas.",
+    "commonAdverseEffects": "Dolor/induración en sitio IM, diarrea y alteraciones de laboratorio.",
+    "dangerousAdverseEffects": "Anafilaxia/SCAR, anemia hemolítica grave, C. difficile, precipitados ceftriaxona-calcio en neonatos, encefalopatía por bilirrubina en hiperbilirrubinémicos, pseudolitiasis biliar/urolitiasis y convulsiones.",
+    "adverseEffects": "Pueden ocurrir eosinofilia, trombocitosis/leucopenia, elevación de transaminasas y candidiasis.",
+    "contraindications": "Hipersensibilidad grave a ceftriaxona/cefalosporinas; prematuros hasta edad posmenstrual 41 semanas; neonatos hiperbilirrubinémicos; neonatos que requieren soluciones IV con calcio.",
+    "interactions": "Ceftriaxona no debe administrarse simultáneamente con soluciones IV con calcio en neonatos. Evaluar interacciones con anticoagulantes y nefrotóxicos.",
+    "monitoring": "Respuesta, alergia, hemograma/hemólisis cuando esté indicado, función renal/hepática en cursos prolongados y complicaciones biliares/urinarias.",
+    "administration": "Solo IM profunda en esta ficha. Técnica, sitio y volumen deben respetar edad, masa muscular e instrucciones del producto.",
+    "preparation": "Reconstituir con diluyente y volumen específicos de la potencia del vial y vía IM según tabla del producto. PREPARACION_AUTOMATICA=BLOQUEADA: no inferir diluyente, lidocaína ni concentración final sin presentación concreta.",
+    "infusionProtocol": "INFUSION_IV=BLOQUEADA y fuera del alcance de esta ficha IM.",
+    "pregnancy": "No aplica como población objetivo pediátrica; el rótulo no define contraindicación general en embarazo; mantener decisión clínica en fichas adultas.",
+    "lactation": "No aplica como población objetivo pediátrica; en fichas maternas, ceftriaxona aparece en bajas concentraciones en leche.",
+    "specialPopulations": "Neonatos son población de alto riesgo: prematuridad, hiperbilirrubinemia y necesidad de calcio IV cambian elegibilidad.",
+    "patientEducation": "Uso profesional/parenteral. Orientar cuidadores sobre signos de alergia, diarrea grave, ictericia o empeoramiento clínico.",
+    "clinicalPearls": "Para OMA, el rótulo documenta 50 mg/kg IM dosis única, máximo 1 g. No mezclar con regímenes IV/IM de otras indicaciones en el motor.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "RIESGO_FATAL_CALCIO_NEONATAL; HIPERBILIRRUBINEMIA; CONTRAINDICACION_PREMATURIDAD; SOLO_IM_ESTA_FICHA; INFUSION_IV_BLOQUEADA.",
+    "alerts": "Fuente EE.UU.; validar producto/diluyente local BR/AR antes de preparación o cálculo de volumen.",
+    "references": [
+      "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Ceftriaxona — uso pediátrico intramuscular",
+    "es": "Ceftriaxona — uso pediátrico intramuscular"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "ceftriaxona_pediatrica_im.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "095",
+    "approvedSha256": "3b6d24e739ab60cbbee9ffb05f82b9cf4afca83c843ea68c35a0c6eb32bd8480",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "2373a97fe3e28c3e696c7e9c2438b112a53c196346384467e90de727515f0cd8",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_095_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "desloratadina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "desloratadina_xarope",
+          "nome_recebido": "Desloratadina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Desloratadine Oral Solution, atualizado 23-10-2025, revisado 07/2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=41d5e0d4-6188-847b-e063-6294a90a2e2f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "AJUSTE_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxizina_xarope",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "hidroxizina_xarope",
+          "nome_recebido": "Hidroxizina xarope",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Hydroxyzine Hydrochloride Oral Solution 10 mg/5 mL. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=87d4bbff-0498-4c26-86cb-7ce173afa0b6"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_suspensao",
+          "nome_recebido": "Amoxicilina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=08100595-e6de-4a8a-a177-a94f849bbe9f"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_LOGICA_INDICACAO_E_CONCENTRACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amoxicilina_clavulanato_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "amoxicilina_clavulanato_suspensao",
+          "nome_recebido": "Amoxicilina + clavulanato suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Amoxicillin and Clavulanate Potassium powder for suspension. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d0aa94-5c32-4fb7-8561-8763810d2847"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CONVERSAO_ML_BLOQUEADA_ATE_SELECAO_DA_RAZAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_FORMULACAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_40KG_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "azitromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "azitromicina_suspensao",
+          "nome_recebido": "Azitromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Azithromycin for Oral Suspension. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2c9de2e9-c20c-4660-a272-a22019f9fb02"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cefalexina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "cefalexina_suspensao",
+          "nome_recebido": "Cefalexina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Cephalexin for Oral Suspension, rótulo revisado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=consumer&setid=25ef498a-7a7e-4543-a544-b9d0e99f9cd9"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_E_DIVISAO",
+          "AJUSTE_RENAL_PEDIATRICO_MENOR_15_ANOS_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfametoxazol_trimetoprima_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "sulfametoxazol_trimetoprima_suspensao",
+          "nome_recebido": "Sulfametoxazol + trimetoprima suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Sulfamethoxazole and Trimethoprim Oral Suspension 200/40 mg per 5 mL, ANI Pharmaceuticals, fonte PDF consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/getFile.cfm?setid=5ff03694-787a-409d-a95e-8422aa27499c&type=pdf"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO",
+          "GESTACAO_LACTACAO_REQUEREM_AVALIACAO_INDIVIDUAL"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "claritromicina_suspensao",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "claritromicina_suspensao",
+          "nome_recebido": "Claritromicina suspensão",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Clarithromycin for Oral Suspension, atualizado/revisado 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=fad1e5a3-59f9-4868-9937-d3b061ab8f00"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_CONCENTRACAO",
+          "INTERACOES_CYP3A4_ALTO_RISCO",
+          "QT_RISK"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ceftriaxona_pediatrica_im",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "ceftriaxona_pediatrica_im",
+          "nome_recebido": "Ceftriaxona pediátrica IM",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "PREPARACAO_AUTOMATICA_BLOQUEADA",
+          "INFUSAO_IV_BLOQUEADA",
+          "NEONATO_REQUER_TRIAGEM_DE_PREMATURIDADE_BILIRRUBINA_CALCIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "penicilina_benzatina_pediatrica",
+        "proveniencia": {
+          "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "data": "20-09-2026",
+          "estado_inicial": "VAZIO",
+          "id": "penicilina_benzatina_pediatrica",
+          "nome_recebido": "Penicilina benzatina pediátrica",
+          "fontes_consultadas": [
+            "DailyMed/NLM EUA — Bicillin L-A (penicillin G benzathine), atualizado 21-07-2026, revisado 06/2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=012d46f1-d0a0-4676-a879-cd320297ab16",
+            "CDC EUA — STI Treatment Guidelines, Congenital Syphilis, consultado 20-09-2026. https://www.cdc.gov/std/treatment-guidelines/congenital-syphilis.htm"
+          ],
+          "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+        },
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "VIA_IV_PROIBIDA",
+          "CALCULO_SIFILIS_CONGENITA_BLOQUEADO_ATE_SELECAO_DE_CENARIO",
+          "ADMINISTRACAO_PROFISSIONAL_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "ceftriaxona_pediatrica_im",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques, resultado APROVADO INTEGRALMENTE, sem excecoes informadas. Bloqueios clinicos granulares do candidato permanecem preservados. Integracao tecnica nao iniciada; publicacao bloqueada.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "ceftriaxona_pediatrica_im",
+        "nome_recebido": "Ceftriaxona pediátrica IM",
+        "fontes_consultadas": [
+          "DailyMed/NLM EUA — Ceftriaxone Sodium Injection, powder for solution, fonte atual consultada em 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9c801096-ca61-4b29-a1e1-5f7e7813b191"
+        ],
+        "hashes_artefatos": "ver sidecar de proveniencia do Lote 095"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+        "PREPARACAO_AUTOMATICA_BLOQUEADA",
+        "INFUSAO_IV_BLOQUEADA",
+        "NEONATO_REQUER_TRIAGEM_DE_PREMATURIDADE_BILIRRUBINA_CALCIO"
+      ],
+      "CAMPOS_VAZIOS_JUSTIFICADOS": {
+        "guidelineRecommendations": "Nenhuma diretriz independente adicional foi necessária para liberar somente o regime IM de AOM do rótulo."
+      },
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "PENDENTE",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "095",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "095",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "id": "crioprecipitado",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "crioprecipitado"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Crioprecipitado - hemocomponente",
+    "class": "Hemocomponente rico em fibrinogenio",
+    "pharmacologicClass": "Crioprecipitado de plasma humano",
+    "mechanism": "Fornece fibrinogenio e outros fatores plasmaticos concentrados no crioprecipitado.",
+    "pharmacodynamics": "Eleva fibrinogenio circulante e fornece fatores presentes no componente; resposta depende de volume sanguineo e consumo.",
+    "pharmacokinetics": "NAO APLICAVEL como farmacocinetica de medicamento convencional; persistencia dos fatores depende de meia-vida biologica, sangramento e consumo.",
+    "indications": "Reposicao de fibrinogenio em hipofibrinogenemia/disfibrinogenemia adquirida ou congenita quando concentrado especifico nao esta disponivel/apropriado; outras indicacoes dependem do componente e protocolo transfusional.",
+    "commercialNames": "Hemocomponente de banco de sangue; nao possui marca farmaceutica unica.",
+    "presentation": "Unidade/bag de crioprecipitado descongelado para transfusao.",
+    "presentations": "Cada unidade contem pelo menos 150 mg de fibrinogenio e pelo menos 80 UI de fator VIII; volume tipico ~5-20 mL.",
+    "dose": "Hipofibrinogenemia: aproximadamente 1 bag/unidade por 7-10 kg pode elevar fibrinogenio em ~50-75 mg/dL; dose deve ser guiada por fibrinogenio/clinica.",
+    "pediatricDose": "AABB: 1-2 unidades/10 kg OU 2-3 mL/kg, com aumento esperado de fibrinogenio ~60-100 mg/dL; reavaliar laboratorio/hemorragia.",
+    "renalDose": "Nao aplicavel como ajuste por depuracao; considerar volume e indicacao transfusional.",
+    "hepaticDose": "Doenca hepatica pode ser causa de coagulopatia, mas transfusao deve ser guiada por sangramento/deficiencia e protocolo, nao por algoritmo fixo.",
+    "commonAdverseEffects": "Reacoes febris/alergicas e sobrecarga circulatoria podem ocorrer.",
+    "dangerousAdverseEffects": "Anafilaxia, TACO, TRALI, hemolise por incompatibilidade e transmissao infecciosa residual.",
+    "adverseEffects": "Calafrios, urticaria e febre podem ocorrer.",
+    "contraindications": "Nao usar quando nao ha indicacao de reposicao do componente; contraindicacoes transfusionais sao relativas e dependem do contexto.",
+    "interactions": "Nao se aplica como interacao farmacologica convencional; coordenar com outros hemocomponentes/hemostaticos para evitar sobrecorrecao/trombose.",
+    "monitoring": "Fibrinogenio, sangramento clinico, sinais vitais e reacoes transfusionais.",
+    "administration": "Transfusao IV por equipo apropriado de hemocomponentes, conforme banco de sangue/protocolo local.",
+    "preparation": "Descongelamento e pooling conforme servico transfusional e instrucoes do componente.",
+    "infusionProtocol": "Velocidade deve considerar urgencia clinica, volume e risco de TACO; nao existe taxa universal no Circular.",
+    "pregnancy": "Pode ser usado quando indicado para hemorragia/coagulopatia obstetrica sob protocolo transfusional.",
+    "lactation": "NAO APLICAVEL como exposicao farmacologica oral ao lactente.",
+    "specialPopulations": "Neonatos/criancas usam dose por peso; pacientes com IC/renal tem maior risco de TACO.",
+    "patientEducation": "Hemocomponente humano; explicar riscos transfusionais e necessidade de monitorizacao.",
+    "clinicalPearls": "Quando concentrado de fator/fibrinogenio especifico existe, o Circular prefere produto especifico em algumas deficiencias. Dose depende do conteudo real do componente e objetivo.",
+    "guidelineRecommendations": "Circular AABB junho 2024 reconhecido pela FDA como fonte aceitavel de informacao para uso de hemocomponentes.",
+    "safetyFlags": "HEMOCOMPONENTE; FIBRINOGENIO; TACO; TRALI; REACAO_TRANSFUSIONAL; PEDIATRIA_PESO.",
+    "alerts": "Nao tratar como medicamento de marca ou dose fixa universal; usar conteudo do componente e protocolo transfusional.",
+    "references": [
+      "AABB - Circular of Information for the Use of Human Blood and Blood Components, June 2024. https://www.aabb.org/docs/default-source/default-document-library/resources/circular-of-information-watermark.pdf",
+      "FDA - recognizes June 2024 AABB Circular as acceptable. https://www.fda.gov/regulatory-information/search-fda-guidance-documents/acceptable-circular-information-use-human-blood-and-blood-components"
+    ],
+    "ref": "https://www.aabb.org/docs/default-source/default-document-library/resources/circular-of-information-watermark.pdf"
+  },
+  "es": {
+    "name": "Crioprecipitado - hemocomponente",
+    "class": "Hemocomponente rico en fibrinogeno",
+    "pharmacologicClass": "Crioprecipitado de plasma humano",
+    "mechanism": "Aporta fibrinogeno y otros factores plasmaticos concentrados en crioprecipitado.",
+    "pharmacodynamics": "Eleva fibrinogeno circulante y aporta factores presentes en componente; respuesta depende de volumen sanguineo y consumo.",
+    "pharmacokinetics": "NO APLICA como farmacocinetica de medicamento convencional; persistencia de factores depende de semivida biologica, sangrado y consumo.",
+    "indications": "Reposicion de fibrinogeno en hipofibrinogenemia/disfibrinogenemia adquirida o congenita cuando concentrado especifico no esta disponible/apropiado; otras indicaciones dependen de componente y protocolo transfusional.",
+    "commercialNames": "Hemocomponente de banco de sangre; no posee marca farmaceutica unica.",
+    "presentation": "Unidad/bolsa de crioprecipitado descongelado para transfusion.",
+    "presentations": "Cada unidad contiene al menos 150 mg de fibrinogeno y al menos 80 UI de factor VIII; volumen tipico ~5-20 mL.",
+    "dose": "Hipofibrinogenemia: aproximadamente 1 bolsa/unidad por 7-10 kg puede elevar fibrinogeno ~50-75 mg/dL; dosis debe guiarse por fibrinogeno/clinica.",
+    "pediatricDose": "AABB: 1-2 unidades/10 kg O 2-3 mL/kg, con aumento esperado de fibrinogeno ~60-100 mg/dL; reevaluar laboratorio/hemorragia.",
+    "renalDose": "No aplica como ajuste por depuracion; considerar volumen e indicacion transfusional.",
+    "hepaticDose": "Enfermedad hepatica puede causar coagulopatia, pero transfusion debe guiarse por sangrado/deficiencia y protocolo, no algoritmo fijo.",
+    "commonAdverseEffects": "Pueden ocurrir reacciones febriles/alergicas y sobrecarga circulatoria.",
+    "dangerousAdverseEffects": "Anafilaxia, TACO, TRALI, hemolisis por incompatibilidad y transmision infecciosa residual.",
+    "adverseEffects": "Pueden ocurrir escalofrios, urticaria y fiebre.",
+    "contraindications": "No usar cuando no existe indicacion de reposicion del componente; contraindicaciones transfusionales son relativas y dependen del contexto.",
+    "interactions": "No aplica como interaccion farmacologica convencional; coordinar con otros hemocomponentes/hemostaticos para evitar sobrecorreccion/trombosis.",
+    "monitoring": "Fibrinogeno, sangrado clinico, signos vitales y reacciones transfusionales.",
+    "administration": "Transfusion IV por equipo apropiado de hemocomponentes, segun banco de sangre/protocolo local.",
+    "preparation": "Descongelacion y pooling segun servicio transfusional e instrucciones del componente.",
+    "infusionProtocol": "Velocidad debe considerar urgencia clinica, volumen y riesgo de TACO; no existe tasa universal en Circular.",
+    "pregnancy": "Puede usarse cuando esta indicado para hemorragia/coagulopatia obstetrica bajo protocolo transfusional.",
+    "lactation": "NO APLICA como exposicion farmacologica oral al lactante.",
+    "specialPopulations": "Neonatos/niños usan dosis por peso; pacientes con IC/renal tienen mayor riesgo de TACO.",
+    "patientEducation": "Hemocomponente humano; explicar riesgos transfusionales y necesidad de monitorizacion.",
+    "clinicalPearls": "Cuando existe concentrado de factor/fibrinogeno especifico, Circular prefiere producto especifico en algunas deficiencias. Dosis depende del contenido real del componente y objetivo.",
+    "guidelineRecommendations": "Circular AABB junio 2024 reconocido por FDA como fuente aceptable de informacion para uso de hemocomponentes.",
+    "safetyFlags": "HEMOCOMPONENTE; FIBRINOGENO; TACO; TRALI; REACCION_TRANSFUSIONAL; PEDIATRIA_PESO.",
+    "alerts": "No tratar como medicamento de marca ni dosis fija universal; usar contenido del componente y protocolo transfusional.",
+    "references": [
+      "AABB - Circular of Information for the Use of Human Blood and Blood Components, June 2024. https://www.aabb.org/docs/default-source/default-document-library/resources/circular-of-information-watermark.pdf",
+      "FDA - recognizes June 2024 AABB Circular as acceptable. https://www.fda.gov/regulatory-information/search-fda-guidance-documents/acceptable-circular-information-use-human-blood-and-blood-components"
+    ],
+    "ref": "https://www.aabb.org/docs/default-source/default-document-library/resources/circular-of-information-watermark.pdf"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Crioprecipitado - hemocomponente",
+    "es": "Crioprecipitado - hemocomponente"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "crioprecipitado.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "104",
+    "approvedSha256": "4eea05ef116e59899ee7d0abad7c8dcdba10182b9f0106619d3796d9b0f39f3b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "81b070cfcc2f8079c1c49fb05b5336ee560b9e0c6d3794ed733d0f79e3376a4f",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_104_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "acido_tranexamico_iv",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA",
+          "INDICACOES_FORA_ROTULO_BLOQUEADAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "albumina_humana_20",
+        "bloqueios_clinicos": [
+          "HIPERVOLEMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "complexo_protrombinico",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "ESCOPO_NAO_VKA_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "crioprecipitado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "desmopressina_iv",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_50_CONTRAINDICADO",
+          "HIPONATREMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fibrinogenio_humano",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_IDADE_LABORATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fitomenadiona_vitamina_k_iv",
+        "bloqueios_clinicos": [
+          "VIA_IV_NAO_PREFERIDA",
+          "CALCULO_PEDIATRICO_IV_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "plasma_fresco_congelado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "biperideno_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clorpromazina_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "DOSES_EXCEPCIONAIS_ALTAS_NAO_AUTOMATIZAR"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "crioprecipitado",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum conteudo clinico foi alterado; bloqueios e reconciliacoes permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Crioprecipitado - AABB/FDA June 2024",
+      "BLOQUEIOS_CLINICOS": [
+        "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "104",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "104",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

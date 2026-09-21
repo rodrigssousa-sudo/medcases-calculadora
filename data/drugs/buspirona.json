@@ -5,106 +5,82 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Buspirona",
-    "class": "Ansiolítico não benzodiazepínico",
-    "category": "ansiolitico",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Comprimidos 5/7,5/10/15/30 mg.",
-    "dose": "Iniciar 7,5 mg 2x/dia ou 5 mg 3x/dia; aumentar 5 mg/dia a cada 2-3 dias. Usual 20-30 mg/dia divididos; máximo 60 mg/dia.",
-    "doseKg": {
-      "standard": "Não se utiliza cálculo rotineiro por kg.",
-      "pediatric": "Uso pediátrico especializado e não rotineiro.",
-      "maxDose": "60 mg/dia"
-    },
-    "indications": "Transtorno de ansiedade generalizada e alívio de ansiedade; não serve para abstinência de benzodiazepínicos nem efeito imediato.",
-    "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Agonista parcial 5-HT1A. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "onset": "Não tem efeito imediato; início clínico geralmente em 2–4 semanas.",
-    "halfLife": "Vida média aproximada: 2–3 horas.",
-    "commonAdverseEffects": "Tontura, náusea, cefaleia, nervosismo e sensação de cabeça leve.",
-    "dangerousAdverseEffects": "Síndrome serotoninérgica, acatisia/distonia, síncope e reação alérgica.",
-    "risksByPatient": [],
-    "contraindications": "Uso com IMAO ou dentro de 14 dias; hipersensibilidade.",
-    "interactions": "CYP3A4 fortes alteram exposição; grapefruit aumenta níveis; serotoninérgicos elevam síndrome serotoninérgica; álcool/sedativos aumentam prejuízo.",
-    "alerts": "Síndrome serotoninérgica, acatisia/distonia, síncope e reação alérgica. Titulação bloqueada sem diagnóstico, IMAO/serotoninérgicos, CYP3A4/grapefruit, rim/fígado e esclarecimento de início tardio.",
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buspirone",
-    "pharmacologicClass": "Agonista parcial 5-HT1A",
-    "presentations": "Comprimidos 5/7,5/10/15/30 mg.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Baixa biodisponibilidade por primeira passagem; CYP3A4; metabólito ativo 1-PP; meia-vida ~2-3 h.",
-    "pediatricDose": "Segurança/eficácia não estabelecidas de forma suficiente; não automatizar.",
-    "renalDose": "Evitar em insuficiência renal grave; exposição aumenta.",
-    "hepaticDose": "Evitar em insuficiência hepática grave; exposição aumenta.",
-    "adverseEffects": "Tontura, náusea, cefaleia, nervosismo e sensação de cabeça leve. Graves: Síndrome serotoninérgica, acatisia/distonia, síncope e reação alérgica.",
-    "monitoring": "Ansiedade/funcionalidade, tontura, PA, sintomas serotoninérgicos, rim/fígado e interações.",
-    "administration": "VO de forma consistente sempre com ou sempre sem alimento; efeito pode levar semanas.",
-    "preparation": "Comprimidos sulcados podem permitir fração conforme produto.",
-    "infusionProtocol": "Não aplicável.",
-    "pregnancy": "Dados limitados; usar se benefício justificar.",
-    "lactation": "Dados limitados; monitorar lactente se uso necessário.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "CANDIDATO NÃO HOMOLOGADO. Revisão médica obrigatória antes de integração.",
+    "name": "Buspirona cloridrato - comprimido oral",
+    "class": "Ansiolitico nao benzodiazepinico",
+    "pharmacologicClass": "Azaspirodecanediona; agonista parcial serotoninergico 5-HT1A",
+    "mechanism": "Atua principalmente como agonista parcial 5-HT1A; nao compartilha o mecanismo GABAergico dos benzodiazepinicos.",
+    "pharmacodynamics": "Reduz sintomas de ansiedade sem efeito anticonvulsivante ou miorrelaxante tipico dos benzodiazepinicos; inicio clinico nao e imediato.",
+    "pharmacokinetics": "Metabolizada extensamente no figado, principalmente via CYP3A4, com metabolito ativo 1-PP. Hepatopatia aumentou AUC em cerca de 13x e comprometimento renal em cerca de 4x em estudos do rotulo.",
+    "indications": "Manejo de transtornos de ansiedade ou alivio de curto prazo dos sintomas de ansiedade.",
+    "commercialNames": "Produto generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "Forcas variam por fabricante; produtos EUA incluem 5 mg, 7,5 mg e 10 mg, entre outras apresentacoes.",
+    "dose": "Inicial 15 mg/dia = 7,5 mg 2x/dia. Pode aumentar 5 mg/dia a cada 2-3 dias conforme necessidade. Maximo 60 mg/dia; em ensaios, 20-30 mg/dia divididos foram comuns.",
+    "pediatricDose": "Seguranca/eficacia pediatrica para transtornos de ansiedade nao estao estabelecidas de forma suficiente para automacao; CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Comprometimento renal ClCr 10-70 mL/min/1,73 m2 aumentou AUC em cerca de 4x. Uso em insuficiencia renal grave nao e recomendado pelo rotulo.",
+    "hepaticDose": "Hepatopatia aumentou AUC em cerca de 13x; uso em insuficiencia hepatica grave nao e recomendado.",
+    "commonAdverseEffects": "Tontura, nausea, cefaleia, nervosismo, sensacao de cabeca leve e excitacao.",
+    "dangerousAdverseEffects": "Sindrome serotoninergica pode ocorrer com IMAO/serotoninergicos; hipertensao foi descrita com IMAO.",
+    "adverseEffects": "Insonia, sonolencia, fadiga e sintomas gastrointestinais podem ocorrer.",
+    "contraindications": "Hipersensibilidade; associacao com IMAO destinados ao tratamento de depressao e contraindicada/evitada com intervalo apropriado devido a risco de serotoninergia/hipertensao.",
+    "interactions": "CYP3A4: inibidores aumentam e indutores reduzem exposicao; grapefruit pode aumentar concentracoes. IMAO/linezolida/azul de metileno IV aumentam risco serotoninergico.",
+    "monitoring": "Resposta ansiosa, tontura, sintomas serotoninergicos, PA quando houver interacoes e funcao renal/hepatica em pacientes de risco.",
+    "administration": "Tomar de modo consistente em relacao a alimentos: sempre com ou sempre sem alimento.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados humanos adequados sao limitados; usar somente apos avaliacao beneficio-risco.",
+    "lactation": "Dados sobre excrecao e efeitos no lactente sao limitados; individualizar decisao.",
+    "specialPopulations": "Idosos nao apresentaram diferencas farmacocineticas importantes; insuficiencia renal/hepatica grave nao recomendada.",
+    "patientEducation": "Efeito nao e imediato; tomar consistentemente com/sem alimento; evitar grapefruit excessivo e informar outros serotoninergicos/IMAO.",
+    "clinicalPearls": "Buspirona nao deve ser usada como substituto automatico para prevenir abstinencia de benzodiazepinico; nao possui dependencia cruzada equivalente.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SEROTONINERGICO; CYP3A4; RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Maximo 60 mg/dia; aumento recomendado em passos de 5 mg/dia a cada 2-3 dias, nao em incrementos arbitrarios.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buspirone",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/018731s051lbl.pdf"
-    ]
+      "DailyMed/NLM EUA - Buspirone Hydrochloride tablets, rotulo atual consultado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=801803eb-be17-4064-8813-7ccf52316cde"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=801803eb-be17-4064-8813-7ccf52316cde"
   },
   "es": {
-    "name": "Buspirona",
-    "class": "Ansiolítico no benzodiacepínico",
-    "category": "ansiolitico",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Comprimidos 5/7,5/10/15/30 mg.",
-    "dose": "Iniciar 7,5 mg 2 veces/día o 5 mg 3 veces/día; aumentar 5 mg/día cada 2-3 días. Habitual 20-30 mg/día divididos; máximo 60 mg/día.",
-    "doseKg": {
-      "standard": "No se utiliza cálculo rutinario por kg.",
-      "pediatric": "Uso pediátrico especializado y no rutinario.",
-      "maxDose": "60 mg/día"
-    },
-    "indications": "Trastorno de ansiedad generalizada y alivio de ansiedad; no sirve para abstinencia de benzodiacepinas ni efecto inmediato.",
-    "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Agonista parcial 5-HT1A. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "onset": "No tiene efecto inmediato; inicio clínico generalmente en 2–4 semanas.",
-    "halfLife": "Vida media aproximada: 2–3 horas.",
-    "commonAdverseEffects": "Mareo, náusea, cefalea, nerviosismo y aturdimiento.",
-    "dangerousAdverseEffects": "Síndrome serotoninérgico, acatisia/distonía, síncope y reacción alérgica.",
-    "risksByPatient": [],
-    "contraindications": "Uso con IMAO o dentro de 14 días; hipersensibilidad.",
-    "interactions": "CYP3A4 fuertes alteran exposición; pomelo aumenta niveles; serotoninérgicos elevan síndrome serotoninérgica; alcohol/sedantes aumentan deterioro.",
-    "alerts": "Síndrome serotoninérgico, acatisia/distonía, síncope y reacción alérgica. Titulação bloqueada sem diagnóstico, IMAO/serotoninérgicos, CYP3A4/grapefruit, rim/fígado e esclarecimento de início tardio.",
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buspirone",
-    "pharmacologicClass": "Agonista parcial 5-HT1A",
-    "presentations": "Comprimidos 5/7,5/10/15/30 mg.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Baja biodisponibilidad por primer paso; CYP3A4; metabolito activo 1-PP; semivida ~2-3 h.",
-    "pediatricDose": "Seguridad/eficacia no establecidas suficientemente; no automatizar.",
-    "renalDose": "Evitar en insuficiencia renal grave; aumenta exposición.",
-    "hepaticDose": "Evitar en insuficiencia hepática grave; aumenta exposición.",
-    "adverseEffects": "Mareo, náusea, cefalea, nerviosismo y aturdimiento. Graves: Síndrome serotoninérgico, acatisia/distonía, síncope y reacción alérgica.",
-    "monitoring": "Ansiedad/funcionalidad, mareo, PA, síntomas serotoninérgicos, riñón/hígado e interacciones.",
-    "administration": "VO de forma consistente siempre con o siempre sin alimentos; efecto puede tardar semanas.",
-    "preparation": "Comprimidos ranurados pueden permitir fracción según producto.",
-    "infusionProtocol": "No aplicable.",
-    "pregnancy": "Datos limitados; usar si beneficio justifica.",
-    "lactation": "Datos limitados; vigilar lactante si uso necesario.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "CANDIDATO NO HOMOLOGADO. Revisión médica obligatoria antes de integración.",
+    "name": "Buspirona clorhidrato - comprimido oral",
+    "class": "Ansiolitico no benzodiacepinico",
+    "pharmacologicClass": "Azaspirodecanediona; agonista parcial serotoninergico 5-HT1A",
+    "mechanism": "Actua principalmente como agonista parcial 5-HT1A; no comparte el mecanismo GABAergico de las benzodiacepinas.",
+    "pharmacodynamics": "Reduce sintomas de ansiedad sin efecto anticonvulsivante o miorrelajante tipico de benzodiacepinas; el inicio clinico no es inmediato.",
+    "pharmacokinetics": "Metabolizada extensamente en higado, principalmente via CYP3A4, con metabolito activo 1-PP. Hepatopatia aumento AUC cerca de 13x y compromiso renal cerca de 4x en estudios del rotulo.",
+    "indications": "Manejo de trastornos de ansiedad o alivio a corto plazo de sintomas de ansiedad.",
+    "commercialNames": "Producto generico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "Potencias varian por fabricante; productos EE.UU. incluyen 5 mg, 7,5 mg y 10 mg, entre otras presentaciones.",
+    "dose": "Inicial 15 mg/dia = 7,5 mg 2 veces/dia. Puede aumentar 5 mg/dia cada 2-3 dias segun necesidad. Maximo 60 mg/dia; en ensayos, 20-30 mg/dia divididos fueron comunes.",
+    "pediatricDose": "Seguridad/eficacia pediatrica para trastornos de ansiedad no estan establecidas de forma suficiente para automatizacion; CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Compromiso renal CrCl 10-70 mL/min/1,73 m2 aumento AUC cerca de 4x. Uso en insuficiencia renal grave no recomendado por el rotulo.",
+    "hepaticDose": "Hepatopatia aumento AUC cerca de 13x; uso en insuficiencia hepatica grave no recomendado.",
+    "commonAdverseEffects": "Mareo, nausea, cefalea, nerviosismo, sensacion de cabeza ligera y excitacion.",
+    "dangerousAdverseEffects": "Puede ocurrir sindrome serotoninergico con IMAO/serotoninergicos; se describio hipertension con IMAO.",
+    "adverseEffects": "Pueden ocurrir insomnio, somnolencia, fatiga y sintomas gastrointestinales.",
+    "contraindications": "Hipersensibilidad; asociacion con IMAO destinados a tratar depresion esta contraindicada/evitada con intervalo apropiado por riesgo de serotoninergia/hipertension.",
+    "interactions": "CYP3A4: inhibidores aumentan e inductores reducen exposicion; pomelo puede aumentar concentraciones. IMAO/linezolid/azul de metileno IV aumentan riesgo serotoninergico.",
+    "monitoring": "Respuesta ansiosa, mareo, sintomas serotoninergicos, PA con interacciones y funcion renal/hepatica en pacientes de riesgo.",
+    "administration": "Tomar de forma consistente respecto a alimentos: siempre con o siempre sin comida.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos humanos adecuados limitados; usar solo tras evaluacion beneficio-riesgo.",
+    "lactation": "Datos sobre excrecion y efectos en lactante son limitados; individualizar decision.",
+    "specialPopulations": "Mayores no mostraron diferencias farmacocineticas importantes; insuficiencia renal/hepatica grave no recomendada.",
+    "patientEducation": "El efecto no es inmediato; tomar consistentemente con/sin comida; evitar pomelo excesivo e informar otros serotoninergicos/IMAO.",
+    "clinicalPearls": "Buspirona no debe usarse como sustituto automatico para prevenir abstinencia de benzodiacepina; no posee dependencia cruzada equivalente.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SEROTONINERGICO; CYP3A4; RENAL_HEPATICO_GRAVE_NO_RECOMENDADO; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Maximo 60 mg/dia; aumento recomendado en pasos de 5 mg/dia cada 2-3 dias, no en incrementos arbitrarios.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=buspirone",
-      "2. Fonte regulatória primária consultada em 2026-09-18: https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/018731s051lbl.pdf"
-    ]
+      "DailyMed/NLM EUA - Buspirone Hydrochloride tablets, rotulo atual consultado em 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=801803eb-be17-4064-8813-7ccf52316cde"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=801803eb-be17-4064-8813-7ccf52316cde"
   },
   "name": {
-    "pt": "Buspirona",
-    "es": "Buspirona"
+    "pt": "Buspirona cloridrato - comprimido oral",
+    "es": "Buspirona clorhidrato - comprimido oral"
   },
   "keywords": [
     "buspirona",
@@ -115,8 +91,8 @@
     "buspirona bago",
     "ansiolitico nao benzodiazepinico"
   ],
-  "dataVersion": "clinical-data-v1-750031a7bf922def",
-  "clinicalContentSha256": "750031a7bf922defdb092c6fd958af62e3db0dc50a2c50ff2d76792ddb67012e",
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psiquiatria.js",
@@ -124,12 +100,293 @@
     "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/psiquiatria.js",
     "sourceField": "buspirona.mcGoldClinicalV1",
-    "lote": "012",
     "requiredFields": 33,
-    "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "NAO_AUTORIZADA",
-    "ownerPublicationAuthorization": "mission10-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "buspirona",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "BUSPIRONA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/psiquiatria.js",
+      "sourceField": "buspirona.mcGoldClinicalV1",
+      "lote": "012",
+      "requiredFields": 33,
+      "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+      "ownerPublicationAuthorization": "mission10-owner-confirmed"
+    }
   }
 }

@@ -21,7 +21,9 @@
     "test:gold33-pipeline": "node tests/gold33-reviewed-envelope.test.mjs && node tests/gold33-pipeline-gates.test.mjs && node tests/gold33-runtime-binding.test.cjs",
     "test:gold33-sync": "node tests/gold33-selective-sync.test.mjs",
     "test:gold33-staging": "node tests/gold33-stage-release.test.mjs",
-    "test:gold33-runtime": "node tests/gold33-runtime-binding.test.cjs"
+    "test:gold33-runtime": "node tests/gold33-runtime-binding.test.cjs",
+    "gold33:nova-lista": "python3 scripts/gold33-nova-lista.py",
+    "test:gold33-nova-lista": "python3 tests/gold33-nova-lista.test.py && node tests/gold33-reference-only-ui.test.cjs"
   },
   "engines": {
     "node": ">=18.0.0"

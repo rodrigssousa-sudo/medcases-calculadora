@@ -1,0 +1,383 @@
+{
+  "id": "dexclorfeniramina_xarope",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "dexclorfeniramina_xarope"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Maleato de dexclorfeniramina - solução oral/xarope",
+    "class": "Anti-histamínico sedativo",
+    "pharmacologicClass": "Antagonista/inverso H1 de primeira geração",
+    "mechanism": "Compete com histamina nos receptores H1, reduzindo manifestações alérgicas; possui efeitos anticolinérgicos e sedativos.",
+    "pharmacodynamics": "Reduz prurido, espirros, rinorreia e urticária; sedação decorre de penetração no SNC.",
+    "pharmacokinetics": "",
+    "indications": "Alergia, prurido, rinite alérgica, urticária, picadas de inseto, conjuntivite alérgica, dermatite atópica e eczemas alérgicos conforme produto.",
+    "commercialNames": "Produto-fonte atual: Polaramine Solução (Hypera); concentração também documentada em genéricos 2 mg/5 mL.",
+    "presentation": "Solução oral/xarope.",
+    "presentations": "2 mg/5 mL = 0,4 mg/mL; frasco 120 mL no produto de referência.",
+    "dose": "Adultos e >12 anos: 5 mL (2 mg) 3-4x/dia; máximo 30 mL/dia = 12 mg/dia.",
+    "pediatricDose": "2-6 anos: 1,25 mL (0,5 mg) 3x/dia, máximo 7,5 mL/dia = 3 mg/dia. 6-12 anos: 2,5 mL (1 mg) 3x/dia, máximo 15 mL/dia = 6 mg/dia. <2 anos: contraindicado. AUTOMATABLE=YES somente para 0,4 mg/mL.",
+    "renalDose": "Sem algoritmo numérico de ajuste na fonte utilizada.",
+    "hepaticDose": "Sem algoritmo numérico de ajuste na fonte utilizada; usar cautela em disfunção importante.",
+    "commonAdverseEffects": "Sonolência leve a moderada.",
+    "dangerousAdverseEffects": "Choque anafilático e discrasias sanguíneas graves são raros; sedação pode comprometer direção/operação de máquinas.",
+    "adverseEffects": "Hipotensão, cefaleia, taquicardia/palpitação, boca seca, constipação, náusea, visão borrada e retenção urinária podem ocorrer.",
+    "contraindications": "Hipersensibilidade; prematuros/recém-nascidos; uso com inibidores da monoaminoxidase; apresentações aqui descritas são contraindicadas <2 anos.",
+    "interactions": "Álcool e outros depressores do SNC potencializam sedação; IMAO pode intensificar efeitos anticolinérgicos/anti-histamínicos.",
+    "monitoring": "Sedação, resposta alérgica e efeitos anticolinérgicos; cautela em glaucoma, retenção urinária e doença cardiovascular.",
+    "administration": "VO com copo/seringa dosadora; não usar colher doméstica.",
+    "preparation": "Solução pronta para uso.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Usar somente após avaliação profissional de benefício-risco.",
+    "lactation": "Avaliar risco de sedação/efeitos anticolinérgicos no lactente e possível redução da lactação; decisão individual.",
+    "specialPopulations": "Idosos são mais suscetíveis a sedação, tontura, hipotensão e efeitos anticolinérgicos.",
+    "patientEducation": "Pode causar sonolência; evitar álcool e dirigir até conhecer a resposta. Não combinar com outros anti-histamínicos sedativos sem orientação.",
+    "clinicalPearls": "Xarope/solução e gotas têm concentrações diferentes; nunca converter mL em gotas entre apresentações.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SEDACAO; ANTICOLINERGICO; IMAO; <2_ANOS_CONTRAINDICADO; FORMULACAO_ESPECIFICA.",
+    "alerts": "Concentração 0,4 mg/mL; não confundir com gotas 2,8 mg/mL.",
+    "references": [
+      "Hypera/BR - Polaramine Solução, uso e posologia atuais. https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-solucao",
+      "Cimed/BR - bula profissional de maleato de dexclorfeniramina solução oral 2 mg/5 mL, atualização de bula indicada em 2022 (consulta via Bulário espelhado)."
+    ],
+    "ref": "https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-solucao"
+  },
+  "es": {
+    "name": "Maleato de dexclorfeniramina - solución oral/jarabe",
+    "class": "Antihistamínico sedante",
+    "pharmacologicClass": "Antagonista/inverso H1 de primera generación",
+    "mechanism": "Compite con histamina en receptores H1, reduciendo manifestaciones alérgicas; posee efectos anticolinérgicos y sedantes.",
+    "pharmacodynamics": "Reduce prurito, estornudos, rinorrea y urticaria; la sedación deriva de penetración al SNC.",
+    "pharmacokinetics": "",
+    "indications": "Alergia, prurito, rinitis alérgica, urticaria, picaduras de insecto, conjuntivitis alérgica, dermatitis atópica y eczemas alérgicos según producto.",
+    "commercialNames": "Producto fuente actual: Polaramine Solución (Hypera); concentración también documentada en genéricos 2 mg/5 mL.",
+    "presentation": "Solución oral/jarabe.",
+    "presentations": "2 mg/5 mL = 0,4 mg/mL; frasco 120 mL en producto de referencia.",
+    "dose": "Adultos y >12 años: 5 mL (2 mg) 3-4 veces/día; máximo 30 mL/día = 12 mg/día.",
+    "pediatricDose": "2-6 años: 1,25 mL (0,5 mg) 3 veces/día, máximo 7,5 mL/día = 3 mg/día. 6-12 años: 2,5 mL (1 mg) 3 veces/día, máximo 15 mL/día = 6 mg/día. <2 años: contraindicado. AUTOMATABLE=YES solo para 0,4 mg/mL.",
+    "renalDose": "Sin algoritmo numérico de ajuste en la fuente utilizada.",
+    "hepaticDose": "Sin algoritmo numérico de ajuste en la fuente utilizada; usar precaución en disfunción importante.",
+    "commonAdverseEffects": "Somnolencia leve a moderada.",
+    "dangerousAdverseEffects": "Shock anafiláctico y discrasias sanguíneas graves son raros; la sedación puede comprometer conducción/maquinaria.",
+    "adverseEffects": "Pueden ocurrir hipotensión, cefalea, taquicardia/palpitaciones, boca seca, constipación, náusea, visión borrosa y retención urinaria.",
+    "contraindications": "Hipersensibilidad; prematuros/recién nacidos; uso con inhibidores de monoaminooxidasa; las presentaciones aquí descritas están contraindicadas <2 años.",
+    "interactions": "Alcohol y otros depresores SNC potencian sedación; IMAO puede intensificar efectos anticolinérgicos/antihistamínicos.",
+    "monitoring": "Sedación, respuesta alérgica y efectos anticolinérgicos; precaución en glaucoma, retención urinaria y enfermedad cardiovascular.",
+    "administration": "VO con vaso/jeringa dosificadora; no usar cuchara doméstica.",
+    "preparation": "Solución lista para usar.",
+    "infusionProtocol": "No aplica.",
+    "pregnancy": "Usar solo tras evaluación profesional beneficio-riesgo.",
+    "lactation": "Evaluar riesgo de sedación/efectos anticolinérgicos en lactante y posible reducción de lactancia; decisión individual.",
+    "specialPopulations": "Mayores son más susceptibles a sedación, mareo, hipotensión y efectos anticolinérgicos.",
+    "patientEducation": "Puede causar somnolencia; evitar alcohol y conducir hasta conocer respuesta. No combinar con otros antihistamínicos sedantes sin orientación.",
+    "clinicalPearls": "Jarabe/solución y gotas tienen concentraciones diferentes; nunca convertir mL a gotas entre presentaciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SEDACION; ANTICOLINERGICO; IMAO; <2_ANOS_CONTRAINDICADO; FORMULACION_ESPECIFICA.",
+    "alerts": "Concentración 0,4 mg/mL; no confundir con gotas 2,8 mg/mL.",
+    "references": [
+      "Hypera/BR - Polaramine Solução, uso e posologia atuais. https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-solucao",
+      "Cimed/BR - bula profissional de maleato de dexclorfeniramina solução oral 2 mg/5 mL, atualização de bula indicada em 2022 (consulta via Bulário espelhado)."
+    ],
+    "ref": "https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-solucao"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Maleato de dexclorfeniramina - solução oral/xarope",
+    "es": "Maleato de dexclorfeniramina - solución oral/jarabe"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "dexclorfeniramina_xarope.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "094",
+    "approvedSha256": "3da6ff849b7b2ebe0cd1e631ab92a30692ab207108f99b19ac32cc3bdb9494ce",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "77ce8b5dd5c6dfe5d2fd5feac41818614cca1df731023dd4c839c1fe8059629d",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_094_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": 94,
+      "medicamentos": [
+        {
+          "id": "fluticasona_spray_nasal",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "ondansetrona_solucao_oral",
+          "bloqueios_clinicos": [
+            "USO_PEDIATRICO_FORA_DA_QUIMIOTERAPIA_MODERADA_NAO_AUTOMATIZAR",
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "bromoprida_gotas",
+          "bloqueios_clinicos": [
+            "CALCULO_PEDIATRICO_BLOQUEADO",
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "simeticona_emulsao",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "racecadotrila_granulado",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "sais_para_reidratacao_oral",
+          "bloqueios_clinicos": [
+            "PREPARACAO_AUTOMATICA_BLOQUEADA_SEM_PRODUTO",
+            "CALCULO_VOLUME_BLOQUEADO_SEM_AVALIACAO_CLINICA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "zinco_solucao_oral",
+          "bloqueios_clinicos": [
+            "CONVERSAO_ML_BLOQUEADA",
+            "CONCENTRACAO_AUTOMATICA_BLOQUEADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_0_4MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_gotas",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "loratadina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_1MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        }
+      ],
+      "reconciliacao_canonica": [
+        {
+          "nome_recebido": "cloreto_de_sodio_3_porcento",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Via/formulacao ausente: 3% pode representar solução para inalação, solução nasal 30 mg/mL ou outras soluções.",
+          "dado_faltante": "via + forma farmacêutica + produto/apresentação",
+          "impacto": "Não é seguro pesquisar/atribuir dose, preparo ou administração sob um ID único sem definir escopo."
+        },
+        {
+          "nome_recebido": "dimeticona_gotas",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Documentação brasileira consultada usa a denominação histórica dimeticona para produto cujo princípio ativo declarado é simeticona 75 mg/mL; sobreposição canônica com simeticona_emulsao.",
+          "dado_faltante": "decisão canônica: alias versus registro independente; produto/força específicos",
+          "impacto": "Risco de duplicar o mesmo princípio ativo e manter dois esquemas em gotas incompatíveis."
+        }
+      ],
+      "nota": "Aprovação clínica não transforma pendências/restrições granulares em autorização de cálculo ou publicação."
+    },
+    "packageRecordMetadata": {
+      "ID": "dexclorfeniramina_xarope",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques. Aprovação integral, sem exceções informadas. Preservar bloqueios clínicos granulares e restrições documentadas. Integração técnica e publicação continuam separadas.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "dexclorfeniramina_xarope",
+        "nome_recebido": "Maleato de dexclorfeniramina - solução oral/xarope",
+        "fontes_consultadas": [
+          "Hypera/BR - Polaramine Solução, uso e posologia atuais. https://www.hypera.com.br/produtos/isentos-de-prescricao/polaramine-solucao",
+          "Cimed/BR - bula profissional de maleato de dexclorfeniramina solução oral 2 mg/5 mL, atualização de bula indicada em 2022 (consulta via Bulário espelhado)."
+        ],
+        "hashes_artefatos": "ver GOLD33_NOVA_LISTA_LOTE_094_PROVENIENCIA.json (sidecar externo; evita hash autorreferencial)"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "CONVERSAO_RESTRITA_A_0_4MG_ML"
+      ],
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "HOMOLOGADA",
+        "homologacao_dados": "SIM",
+        "integracao_tecnica": "NAO_INICIADA",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO_MEDICA": {
+        "medico_revisor": "Dra Eugenia Marques",
+        "data_revisao": "20-09-2026",
+        "resultado": "APROVADO INTEGRALMENTE",
+        "arquivo_revisado": "094",
+        "excecoes_informadas": 0,
+        "alteracoes_clinicas_pos_parecer": 0,
+        "sha256_candidato_json_revisado": "8ff753377c9d7d30b5adbdfcba23fa290816f3eae9d311320abcb7a3ad76c0ad",
+        "sha256_pdf_revisado": "cf8d1b9142c5a10ce5dedcf349bad841410940be6f65b34fa8c865cdd56ab001"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

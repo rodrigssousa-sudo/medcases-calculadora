@@ -1,0 +1,169 @@
+{
+  "id": "trastuzumabe",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "trastuzumabe"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Trastuzumabe IV (HERCEPTIN - produto de referencia consultado)",
+    "class": "Antineoplasico biologico; anticorpo monoclonal anti-HER2.",
+    "pharmacologicClass": "Anticorpo monoclonal humanizado IgG1 kappa dirigido ao dominio extracelular de HER2.",
+    "mechanism": "Liga-se com alta afinidade ao dominio extracelular de HER2, inibindo proliferação de celulas que superexpressam HER2 e mediando citotoxicidade celular dependente de anticorpo (ADCC).",
+    "pharmacodynamics": "Relacoes exposição-resposta não sao completamente caracterizadas. No estudo de eletrofisiologia, não houve efeito clinicamente relevante no QTc.",
+    "pharmacokinetics": "PK populacional com eliminação linear e não linear; apos suspensao, simulacoes indicam washout aproximado de 97% em cerca de 7 meses em pelo menos 95% dos pacientes. Insuficiencia renal leve/moderada não mostrou diferenca clinicamente significativa; grave/ESRD e hepática sao desconhecidas.",
+    "indications": "Cancer de mama HER2-positivo adjuvante e metastático e adenocarcinoma gástrico/metastático da juncao gastroesofagica HER2-positivo, nos criterios de selecao do PI.",
+    "commercialNames": "HERCEPTIN e o produto de referencia usado nesta ficha. Biossimilares existem, mas cada produto deve ser mapeado ao PI correspondente antes de transpor preparo/apresentacao.",
+    "presentation": "Po liofilizado para solução para infusão IV.",
+    "presentations": "Frasco de dose unica 150 mg. Reconstituicao com 7,4 mL de agua esteril para injecao gera aproximadamente 21 mg/mL e volume entregavel de 7,15 mL.",
+    "dose": "Mama adjuvante semanal: carga 4 mg/kg IV em 90 min, depois 2 mg/kg semanal em 30 min durante quimioterapia, seguida por 6 mg/kg a cada 3 semanas conforme esquema; alternativa q3 semanas: carga 8 mg/kg, depois 6 mg/kg q3 semanas. Mama metastática: 4 mg/kg carga, depois 2 mg/kg semanal. Gastrico/GEJ metastático: 8 mg/kg carga, depois 6 mg/kg q3 semanas.",
+    "pediatricDose": "Seguranca e eficacia não estabelecidas em pacientes pediátricos no PI.",
+    "renalDose": "Sem diferenca PK clinicamente significativa em insuficiência renal leve (ClCr 60-90) ou moderada (30-60 mL/min). Dados desconhecidos em insuficiência grave, ESRD ou hemodialise; não ha ajuste numerico rotulado para esses grupos.",
+    "hepaticDose": "Farmacocinética em insuficiência hepática e desconhecida no PI; não ha algoritmo numerico de ajuste.",
+    "commonAdverseEffects": "Adjuvancia de mama: cefaleia, diarreia, nausea e calafrios >=5%. Mama metastática: febre, calafrios, cefaleia, infeccao, ICC, insonia, tosse e rash >=10%. Gastrico metastático: neutropenia, diarreia, fadiga, anemia, estomatite, perda de peso, febre, trombocitopenia e disgeusia >=10%.",
+    "dangerousAdverseEffects": "Cardiomiopatia/queda de LVEF e insuficiência cardíaca, reações graves de infusão, toxicidade pulmonar, toxicidade embriofetal e piora de neutropenia induzida por quimioterapia.",
+    "adverseEffects": "Diarreia, nausea, rash, febre/calafrios e sintomas de infusão variam conforme combinação; citopenias sao mais relevantes em terapia combinada.",
+    "contraindications": "Nenhuma contraindicação formal listada na secao 4 do PI consultado.",
+    "interactions": "Evitar, quando possivel, terapia baseada em antraciclina por ate 7 meses apos suspensao devido a washout prolongado e risco cardíaco; se inevitavel, monitorar função cardíaca.",
+    "monitoring": "Confirmar HER2 com teste apropriado antes de uso. Avaliar LVEF antes e regularmente; reter se queda absoluta >=16% do basal ou valor abaixo do limite normal com queda >=10%. Avaliar reação de infusão e sintomas pulmonares.",
+    "administration": "Somente infusão IV. Não administrar IV push/bolus. Não substituir por trastuzumabe-emtansina, trastuzumabe-deruxtecano ou formulacao subcutanea.",
+    "preparation": "Reconstituir frasco 150 mg com 7,4 mL de agua esteril para injecao, girando suavemente sem agitar, para ~21 mg/mL. Diluir a dose em bolsa com NaCl 0,9% conforme PI; não usar dextrose 5% se o PI do produto a proibir.",
+    "infusionProtocol": "Carga 90 min. Doses subsequentes podem ser administradas em 30 min se toleradas, conforme esquema. Observar reações de infusão e reduzir/interromper conforme gravidade.",
+    "pregnancy": "Pode causar dano embriofetal; foram descritos oligohidramnio, hipoplasia pulmonar fetal, alterações esqueleticas e morte neonatal. Verificar gestação antes de iniciar e usar contracepcao durante e por 7 meses apos a ultima dose.",
+    "lactation": "Não ha dados em leite humano. O PI orienta ponderar beneficios da amamentacao e necessidade materna, considerando tambem o washout de 7 meses.",
+    "specialPopulations": "Insuficiencia renal leve/moderada não altera PK de forma clinicamente relevante; dados em grave/ESRD/hepatopatia sao insuficientes. Idade, isoladamente, não mostrou grande impacto PK.",
+    "patientEducation": "Comunicar dispneia, edema, palpitações, febre/calafrios importantes durante infusão ou tosse/dessaturacao. Orientar contracepcao por 7 meses apos ultima dose.",
+    "clinicalPearls": "Risco cardíaco e maior com antraciclinas. O washout de 7 meses influencia planejamento reprodutivo e exposição a antraciclinas. Não intercambiar IV, SC, biossimilar ou conjugados sem mapear o produto.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO: cardiomiopatia, reação de infusão, toxicidade pulmonar e embriofetal; erro de produto/formulacao. CALCULO PEDIATRICO BLOQUEADO.",
+    "alerts": "Escopo exclusivo HERCEPTIN IV 150 mg. Não usar esta ficha para formulacao subcutanea nem anticorpos conjugados.",
+    "references": [
+      "DailyMed - HERCEPTIN (trastuzumab) for injection - full prescribing information | Revised 05/2026 | EUA; trastuzumabe IV 150 mg; nao SC e nao conjugados | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492dbdb2-077e-4064-bff3-372d6af0a7a2"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492dbdb2-077e-4064-bff3-372d6af0a7a2"
+  },
+  "es": {
+    "name": "Trastuzumab IV (HERCEPTIN - producto de referencia consultado)",
+    "class": "Antineoplasico biologico; anticuerpo monoclonal anti-HER2.",
+    "pharmacologicClass": "Anticuerpo monoclonal humanizado IgG1 kappa dirigido al dominio extracelular de HER2.",
+    "mechanism": "Se une con alta afinidad al dominio extracelular de HER2, inhibiendo proliferación de celulas que sobreexpresan HER2 y mediando citotoxicidad celular dependiente de anticuerpo (ADCC).",
+    "pharmacodynamics": "Las relaciones exposición-respuesta no están completamente caracterizadas. En el estudio electrofisiologico no hubo efecto clinicamente relevante sobre QTc.",
+    "pharmacokinetics": "PK poblacional con eliminación lineal y no lineal; tras suspension, simulaciones indican washout aproximado de 97% en unos 7 meses en al menos 95% de pacientes. Insuficiencia renal leve/moderada no mostro diferencia clinicamente significativa; grave/ESRD y hepática son desconocidas.",
+    "indications": "Cancer de mama HER2-positivo adyuvante y metastasico y adenocarcinoma gástrico/metastasico de union gastroesofagica HER2-positivo, según criterios de seleccion del PI.",
+    "commercialNames": "HERCEPTIN es el producto de referencia usado en está ficha. Existen biosimilares, pero cada producto debe mapearse a su PI antes de trasladar preparación/presentacion.",
+    "presentation": "Polvo liofilizado para solución para infusión IV.",
+    "presentations": "Vial de dosis unica 150 mg. Reconstitucion con 7,4 mL de agua esteril para inyeccion produce aproximadamente 21 mg/mL y volumen administrable de 7,15 mL.",
+    "dose": "Mama adyuvante semanal: carga 4 mg/kg IV en 90 min, luego 2 mg/kg semanal en 30 min durante quimioterapia, seguida de 6 mg/kg cada 3 semanas según esquema; alternativa cada 3 semanas: carga 8 mg/kg, luego 6 mg/kg cada 3 semanas. Mama metastasica: 4 mg/kg carga, luego 2 mg/kg semanal. Gastrico/UGE metastasico: 8 mg/kg carga, luego 6 mg/kg cada 3 semanas.",
+    "pediatricDose": "Seguridad y eficacia no establecidas en pacientes pediátricos en el PI.",
+    "renalDose": "Sin diferencia PK clinicamente significativa en insuficiencia renal leve (ClCr 60-90) o moderada (30-60 mL/min). Datos desconocidos en insuficiencia grave, ESRD o hemodialisis; no hay ajuste numerico rotulado para esos grupos.",
+    "hepaticDose": "La farmacocinética en insuficiencia hepática es desconocida en el PI; no existe algoritmo numerico de ajuste.",
+    "commonAdverseEffects": "Adyuvancia de mama: cefalea, diarrea, nauseas y escalofrios >=5%. Mama metastasica: fiebre, escalofrios, cefalea, infeccion, ICC, insomnio, tos y rash >=10%. Gastrico metastasico: neutropenia, diarrea, fatiga, anemia, estomatitis, perdida de peso, fiebre, trombocitopenia y disgeusia >=10%.",
+    "dangerousAdverseEffects": "Cardiomiopatia/disminucion de FEVI e insuficiencia cardíaca, reacciones graves de infusión, toxicidad pulmonar, toxicidad embriofetal y exacerbacion de neutropenia inducida por quimioterapia.",
+    "adverseEffects": "Diarrea, nauseas, rash, fiebre/escalofrios y sintomas de infusión varian según combinación; citopenias son más relevantes en terapia combinada.",
+    "contraindications": "Ninguna contraindicacion formal listada en la seccion 4 del PI consultado.",
+    "interactions": "Evitar, cuando sea posible, terapia basada en antraciclinas hasta 7 meses tras suspension por washout prolongado y riesgo cardíaco; si es inevitable, monitorizar función cardíaca.",
+    "monitoring": "Confirmar HER2 con prueba apropiada antes de uso. Evaluar FEVI antes y regularmente; suspender temporalmente si descenso absoluto >=16% del basal o valor por debajo del limite normal con descenso >=10%. Evaluar reacción de infusión y sintomas pulmonares.",
+    "administration": "Solo infusión IV. No administrar IV push/bolo. No sustituir por trastuzumab-emtansina, trastuzumab-deruxtecan o formulacion subcutanea.",
+    "preparation": "Reconstituir vial 150 mg con 7,4 mL de agua esteril para inyeccion, girando suavemente sin agitar, para ~21 mg/mL. Diluir la dosis en bolsa con NaCl 0,9% según PI; no usar dextrosa 5% si el PI del producto la prohibe.",
+    "infusionProtocol": "Carga 90 min. Las dosis posteriores pueden administrarse en 30 min si se toleran, según esquema. Observar reacciones de infusión y reducir/interrumpir según gravedad.",
+    "pregnancy": "Puede causar dano embriofetal; se describieron oligohidramnios, hipoplasia pulmonar fetal, alteraciones esqueleticas y muerte neonatal. Verificar embarazo antes de iniciar y usar anticoncepcion durante y 7 meses después de la ultima dosis.",
+    "lactation": "No hay datos en leche humana. El PI indica ponderar beneficios de lactancia y necesidad materna, considerando también el washout de 7 meses.",
+    "specialPopulations": "Insuficiencia renal leve/moderada no altera PK de forma clinicamente relevante; datos en grave/ESRD/hepatopatia son insuficientes. La edad, por si sola, no mostro gran impacto PK.",
+    "patientEducation": "Comunicar disnea, edema, palpitaciones, fiebre/escalofrios importantes durante infusión o tos/desaturacion. Indicar anticoncepcion durante 7 meses tras la ultima dosis.",
+    "clinicalPearls": "El riesgo cardíaco es mayor con antraciclinas. El washout de 7 meses influye en planificacion reproductiva y exposición a antraciclinas. No intercambiar IV, SC, biosimilar o conjugados sin mapear el producto.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO: cardiomiopatia, reacción de infusión, toxicidad pulmonar y embriofetal; error de producto/formulacion. CALCULO PEDIATRICO BLOQUEADO.",
+    "alerts": "Alcance exclusivo HERCEPTIN IV 150 mg. No usar está ficha para formulacion subcutanea ni anticuerpos conjugados.",
+    "references": [
+      "DailyMed - HERCEPTIN (trastuzumab) for injection - full prescribing information | Revised 05/2026 | EUA; trastuzumabe IV 150 mg; nao SC e nao conjugados | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492dbdb2-077e-4064-bff3-372d6af0a7a2"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492dbdb2-077e-4064-bff3-372d6af0a7a2"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Trastuzumabe IV (HERCEPTIN - produto de referencia consultado)",
+    "es": "Trastuzumab IV (HERCEPTIN - producto de referencia consultado)"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "trastuzumabe.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "084",
+    "approvedSha256": "0136dd7a2e35a3b2f33b1c49ad78b4f0236e09d123587c029b65a6175baff4a1",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "1ea00c47340a6516fcb13e6dd134d5fac5f78760ab4141f18cfef4a825692d2b",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_084_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": "084",
+      "review_result": "APROVADO INTEGRALMENTE",
+      "items": [
+        {
+          "id": "capecitabina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "doxorrubicina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "fluorouracila",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "imatinibe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "leuprorrelina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "paclitaxel",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "tamoxifeno",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "trastuzumabe",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "vincristina",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        },
+        {
+          "id": "alizaprida",
+          "clinical_blocks_preserved": [],
+          "nonblocking_pendings_preserved": []
+        }
+      ]
+    },
+    "packageRecordMetadata": {
+      "ID": "trastuzumabe",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. NEW_ENTRY_NO_LEGACY_BASELINE. Revisao medica: Dra Ariani, 20-09-2026. Resultado: APROVADO INTEGRALMENTE. Excecoes: nenhuma informada. Integracao tecnica/publicacao nao executadas neste pacote; handoff destinado ao Codex."
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

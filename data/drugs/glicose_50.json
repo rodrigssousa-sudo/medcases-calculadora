@@ -1,0 +1,375 @@
+{
+  "id": "glicose_50",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "glicose_50"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Dextrose (glicose) 50% injecao IV",
+    "class": "Carboidrato hipertonico para hipoglicemia",
+    "pharmacologicClass": "Solucao concentrada de dextrose intravenosa",
+    "mechanism": "Fornece glicose rapidamente ao compartimento intravascular para elevar glicemia.",
+    "pharmacodynamics": "Eleva rapidamente a glicemia; concentracao hiperosmolar pode causar hiperglicemia e irritacao venosa se administrada rapidamente ou em veia inadequada.",
+    "pharmacokinetics": "Dextrose e metabolizada pelas vias fisiologicas da glicose; a seguranca depende principalmente de velocidade, concentracao, acesso vascular e estado metabolico.",
+    "indications": "Tratamento de hipoglicemia induzida por insulina em adultos e pacientes pediatricos >=2 anos.",
+    "commercialNames": "Produto Hospira 50% EUA; disponibilidade BR/AR nao verificada.",
+    "presentation": "Solucao injetavel IV de dose unica.",
+    "presentations": "50% = 25 g/50 mL = 500 mg/mL em seringa ou frasco de dose unica.",
+    "dose": "Adultos e >=12 anos: 10-25 g = 20-50 mL IV uma vez; repetir conforme clinica. Velocidade maxima sem produzir hiperglicemia: 0,5 g/kg/h.",
+    "pediatricDose": "2-11 anos: a dose apropriada depende de idade, peso, condicao clinica/metabolica e terapias concomitantes; o rotulo NAO fornece dose fixa. Administrar por veia central; se nao houver acesso central, considerar dextrose de menor concentracao. AUTOMATABLE=NO.",
+    "renalDose": "Sem algoritmo numerico especifico; monitorar volume, glicemia e eletrólitos com maior cautela em disfuncao renal.",
+    "hepaticDose": "Sem ajuste numerico especifico documentado; usar conforme necessidade metabolica e resposta.",
+    "commonAdverseEffects": "Hiperglicemia, dor/irritacao no sitio, flebite e extravasamento podem ocorrer.",
+    "dangerousAdverseEffects": "Sindrome hiperosmolar, trombose/flebite grave, necrose por extravasamento, disturbios eletroliticos e sobrecarga de volume.",
+    "adverseEffects": "Hiper/hiponatremia e alteracoes de fluidos podem ocorrer com uso excessivo.",
+    "contraindications": "Rotulo atual inclui hemorragia intracraniana/intraespinal, desidratacao grave, abstinencia alcoolica e hipersensibilidade a dextrose.",
+    "interactions": "Nao administrar simultaneamente com sangue pelo mesmo equipo devido a risco de pseudoaglutinacao. Outras terapias que alteram glicose/eletrólitos exigem monitorizacao.",
+    "monitoring": "Glicemia, acesso venoso, eletrólitos, estado volêmico e sinais de hiperosmolaridade/extravasamento.",
+    "administration": "Somente IV. >=12 anos: veia central ou grande periferica; 2-11 anos: veia central. Nao administrar SC ou IM.",
+    "preparation": "Solucao pronta para uso de dose unica; descartar sobra. Nao diluir/inferir concentracoes alternativas sem protocolo especifico.",
+    "infusionProtocol": "Infundir lentamente; velocidade maxima 0,5 g/kg/h. A concentracao 50% tem osmolaridade >900 mOsm/L e exige acesso adequado.",
+    "pregnancy": "Nao ha regime especifico por gestacao no rotulo; hipoglicemia materna e uma emergencia e o tratamento deve ser individualizado conforme necessidade clinica.",
+    "lactation": "Rotulos de dextrose concentrada recomendam cautela durante lactacao; avaliar necessidade clinica.",
+    "specialPopulations": "Criancas 2-11 anos exigem acesso central e dose individualizada; idosos/renais/cardiacos podem ter maior risco de sobrecarga.",
+    "patientEducation": "Uso exclusivamente hospitalar/emergencia IV; relatar dor intensa ou queimacao no acesso.",
+    "clinicalPearls": "O rotulo 2026 nao autoriza dose fixa de D50 em 2-11 anos. Isso deve bloquear calculo pediatrico automatico nessa faixa.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPEROSMOLAR; IV_SOMENTE; PEDIATRIA_2_11_SEM_DOSE_FIXA; EXTRAVASAMENTO; HIPERGLICEMIA.",
+    "alerts": "Nao usar a regra adulta 20-50 mL automaticamente em 2-11 anos; nao administrar SC/IM.",
+    "references": [
+      "DailyMed/NLM EUA - Dextrose Injection 50%, atualizado 13-07-2026. https://dailymed-us-east-1.awsprod.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ed365da-4e62-4329-c1b9-c197ab4fb6e1"
+    ],
+    "ref": "https://dailymed-us-east-1.awsprod.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ed365da-4e62-4329-c1b9-c197ab4fb6e1"
+  },
+  "es": {
+    "name": "Dextrosa (glucosa) 50% inyeccion IV",
+    "class": "Carbohidrato hipertonico para hipoglucemia",
+    "pharmacologicClass": "Solucion concentrada de dextrosa intravenosa",
+    "mechanism": "Aporta glucosa rapidamente al compartimento intravascular para elevar glucemia.",
+    "pharmacodynamics": "Eleva rapidamente la glucemia; la concentracion hiperosmolar puede causar hiperglucemia e irritacion venosa si se administra rapidamente o en vena inadecuada.",
+    "pharmacokinetics": "La dextrosa se metaboliza por vias fisiologicas de glucosa; la seguridad depende principalmente de velocidad, concentracion, acceso vascular y estado metabolico.",
+    "indications": "Tratamiento de hipoglucemia inducida por insulina en adultos y pacientes pediatricos >=2 anos.",
+    "commercialNames": "Producto Hospira 50% EE.UU.; disponibilidad BR/AR no verificada.",
+    "presentation": "Solucion inyectable IV de dosis unica.",
+    "presentations": "50% = 25 g/50 mL = 500 mg/mL en jeringa o vial de dosis unica.",
+    "dose": "Adultos y >=12 anos: 10-25 g = 20-50 mL IV una vez; repetir segun clinica. Velocidad maxima sin producir hiperglucemia: 0,5 g/kg/h.",
+    "pediatricDose": "2-11 anos: la dosis apropiada depende de edad, peso, condicion clinica/metabolica y terapias concomitantes; el rotulo NO aporta dosis fija. Administrar por vena central; si no hay acceso central, considerar dextrosa de menor concentracion. AUTOMATABLE=NO.",
+    "renalDose": "Sin algoritmo numerico especifico; monitorizar volumen, glucemia y electrolitos con mayor precaucion en disfuncion renal.",
+    "hepaticDose": "Sin ajuste numerico especifico documentado; usar segun necesidad metabolica y respuesta.",
+    "commonAdverseEffects": "Pueden ocurrir hiperglucemia, dolor/irritacion local, flebitis y extravasacion.",
+    "dangerousAdverseEffects": "Sindrome hiperosmolar, trombosis/flebitis grave, necrosis por extravasacion, trastornos electroliticos y sobrecarga de volumen.",
+    "adverseEffects": "Pueden ocurrir hiper/hiponatremia y alteraciones de fluidos con uso excesivo.",
+    "contraindications": "El rotulo actual incluye hemorragia intracraneal/intraespinal, deshidratacion grave, abstinencia alcoholica e hipersensibilidad a dextrosa.",
+    "interactions": "No administrar simultaneamente con sangre por el mismo equipo por riesgo de pseudoaglutinacion. Otras terapias que alteran glucosa/electrolitos requieren monitorizacion.",
+    "monitoring": "Glucemia, acceso venoso, electrolitos, estado de volumen y signos de hiperosmolaridad/extravasacion.",
+    "administration": "Solo IV. >=12 anos: vena central o periferica grande; 2-11 anos: vena central. No administrar SC ni IM.",
+    "preparation": "Solucion lista para usar de dosis unica; desechar sobrante. No diluir/inferir concentraciones alternativas sin protocolo especifico.",
+    "infusionProtocol": "Infundir lentamente; velocidad maxima 0,5 g/kg/h. La concentracion 50% tiene osmolaridad >900 mOsm/L y exige acceso adecuado.",
+    "pregnancy": "No hay regimen especifico por embarazo en el rotulo; la hipoglucemia materna es una emergencia y el tratamiento debe individualizarse segun necesidad clinica.",
+    "lactation": "Rotulos de dextrosa concentrada recomiendan precaucion durante lactancia; valorar necesidad clinica.",
+    "specialPopulations": "Ninos 2-11 anos requieren acceso central y dosis individualizada; mayores/renales/cardiacos pueden tener mayor riesgo de sobrecarga.",
+    "patientEducation": "Uso exclusivamente hospitalario/emergencia IV; comunicar dolor intenso o quemazon en el acceso.",
+    "clinicalPearls": "El rotulo 2026 no autoriza dosis fija de D50 en 2-11 anos. Esto debe bloquear calculo pediatrico automatico en ese rango.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPEROSMOLAR; SOLO_IV; PEDIATRIA_2_11_SIN_DOSIS_FIJA; EXTRAVASACION; HIPERGLUCEMIA.",
+    "alerts": "No usar regla adulta 20-50 mL automaticamente en 2-11 anos; no administrar SC/IM.",
+    "references": [
+      "DailyMed/NLM EUA - Dextrose Injection 50%, atualizado 13-07-2026. https://dailymed-us-east-1.awsprod.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ed365da-4e62-4329-c1b9-c197ab4fb6e1"
+    ],
+    "ref": "https://dailymed-us-east-1.awsprod.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ed365da-4e62-4329-c1b9-c197ab4fb6e1"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Dextrose (glicose) 50% injecao IV",
+    "es": "Dextrosa (glucosa) 50% inyeccion IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "glicose_50.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "glicose_50",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "DEXTROSE 50% 25G/50ML IV - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+        "VIA_SC_IM_BLOQUEADA",
+        "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

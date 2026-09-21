@@ -1,0 +1,299 @@
+{
+  "id": "ibuprofeno_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "ibuprofeno_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Ibuprofeno intravenoso - CALDOLOR",
+    "class": "Anti-inflamatorio nao esteroidal (AINE); analgesico e antipiretico.",
+    "pharmacologicClass": "Inibidor nao seletivo de ciclo-oxigenase (COX-1/COX-2).",
+    "mechanism": "Inibe sintese de prostaglandinas por bloqueio de COX, reduzindo mediadores de dor, febre e inflamacao.",
+    "pharmacodynamics": "Efeito analgesico, antipiretico e anti-inflamatorio; a inibicao de prostaglandinas tambem explica riscos gastrointestinal, renal, cardiovascular e hemostatico.",
+    "pharmacokinetics": "Apos IV, exposicao e proporcional a dose; ligacao a proteinas >99%. Meia-vida terminal adulta aproximadamente 2,2-2,4 h; metabolismo predominantemente hepatico e eliminacao principalmente renal como metabolitos.",
+    "indications": "Adultos e pediatria >=3 meses: manejo de dor leve a moderada e de dor moderada a grave como adjuvante a opioides; reducao de febre.",
+    "commercialNames": "CALDOLOR (produto DailyMed consultado). Nao comprova disponibilidade BR/AR.",
+    "presentation": "Solucao injetavel para infusao intravenosa.",
+    "presentations": "Frasco 800 mg/8 mL (100 mg/mL; requer diluicao) e bolsa pronta 800 mg/200 mL (4 mg/mL), conforme rotulo consultado.",
+    "dose": "Dor em adultos: 400-800 mg IV a cada 6 h se necessario, infundir em >=30 min; maximo 3.200 mg/dia. Febre: 400 mg inicialmente, depois 400 mg a cada 4-6 h ou 100-200 mg a cada 4 h; maximo 3.200 mg/dia.",
+    "pediatricDose": "12-17 anos: 400 mg IV a cada 4-6 h, infusao >=10 min; maximo 40 mg/kg/dia ou 2.400 mg/dia, o que for menor. 6 meses-<12 anos: 10 mg/kg/dose (max 400 mg) a cada 4-6 h, >=10 min; max 40 mg/kg/dia ou 2.400 mg/dia. 3-<6 meses: dose unica 10 mg/kg (max 100 mg), >=10 min; seguranca de doses repetidas nao estabelecida no rotulo.",
+    "renalDose": "Nao ha tabela numerica de ajuste. Evitar em doenca renal avancada salvo beneficio superior ao risco; monitorar funcao renal e estado volêmico.",
+    "hepaticDose": "Nao ha algoritmo numerico de ajuste no rotulo; interromper/avaliar se surgirem sinais de lesao hepatica e monitorar conforme risco.",
+    "commonAdverseEffects": "Eventos relatados incluem nauseas, vomitos, cefaleia e reacoes no local/relacionadas a infusao; o perfil e o de AINE sistemico.",
+    "dangerousAdverseEffects": "Sangramento/ulceracao/perfuracao GI, eventos tromboticos cardiovasculares, insuficiencia renal, hepatotoxicidade, anafilaxia/broncoespasmo e reacoes cutaneas graves.",
+    "adverseEffects": "Retencao hidrossalina, hipertensao, anemia por perda GI, alteracoes renais e reacoes de hipersensibilidade podem ocorrer.",
+    "contraindications": "Hipersensibilidade ao ibuprofeno; antecedente de asma/urticaria/reacao alergica por aspirina ou outro AINE; uso no contexto de cirurgia de revascularizacao miocardica (CABG).",
+    "interactions": "Anticoagulantes/antiagregantes/SSRIs-SNRIs aumentam risco de sangramento; outros AINEs/aspirina aumentam toxicidade; ACEI/ARB/diureticos podem agravar funcao renal; pode elevar litemia e exposicao a metotrexato.",
+    "monitoring": "Dor/febre e necessidade de continuar; PA, funcao renal, estado volêmico, sinais de sangramento GI e lesao hepatica; hemograma em uso prolongado ou risco.",
+    "administration": "Somente IV. Nao administrar em bolus. Frasco concentrado deve ser diluido antes da infusao; bolsa 4 mg/mL e pronta conforme produto.",
+    "preparation": "Frasco 100 mg/mL: diluir para concentracao final <=4 mg/mL com NaCl 0,9%, glicose 5% ou Ringer lactato; usar tecnica asseptica e verificar particulas.",
+    "infusionProtocol": "Adultos: cada dose em >=30 min. Pediatria 3 meses-17 anos: >=10 min conforme faixa e regime do rotulo.",
+    "pregnancy": "Evitar a partir de aproximadamente 30 semanas por risco de fechamento prematuro do ducto arterioso. Entre 20-30 semanas, limitar dose/duracao e considerar monitorizacao de liquido amniotico se uso se prolongar.",
+    "lactation": "A decisao deve considerar beneficio da amamentacao e necessidade materna; dados publicados com ibuprofeno oral mostram baixa transferencia para o leite, mas a ficha e de produto IV.",
+    "specialPopulations": "Idosos tem maior risco GI, renal e cardiovascular. Em desidratacao/hipovolemia corrigir estado volêmico antes de iniciar quando possivel.",
+    "patientEducation": "Alertar para dor abdominal/sangramento, falta de ar, edema, reducao de diurese, rash ou dor toracica; evitar automedicacao adicional com AINE.",
+    "clinicalPearls": "Nao confundir 100 mg/mL (frasco que exige diluicao) com 4 mg/mL (bolsa pronta). Pediatria de 3-<6 meses tem somente dose unica documentada.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO: AINE IV; sangramento GI/CV/renal; concentracao e tempo de infusao dependem da apresentacao; idade minima 3 meses.",
+    "alerts": "Escopo DailyMed EUA; nao inferir registro ou apresentacao BR/AR.",
+    "references": [
+      "DailyMed/FDA - CALDOLOR (ibuprofen injection) prescribing information | EUA; IV; label version 16, revisado 02/2025; adultos e pediatria >=3 meses | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684&version=16"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684&version=16"
+  },
+  "es": {
+    "name": "Ibuprofeno intravenoso - CALDOLOR",
+    "class": "Antiinflamatorio no esteroideo (AINE); analgesico y antipiretico.",
+    "pharmacologicClass": "Inhibidor no selectivo de ciclooxigenasa (COX-1/COX-2).",
+    "mechanism": "Inhibe la sintesis de prostaglandinas por bloqueo de COX, reduciendo mediadores de dolor, fiebre e inflamacion.",
+    "pharmacodynamics": "Efecto analgesico, antipiretico y antiinflamatorio; la inhibicion de prostaglandinas tambien explica riesgos gastrointestinales, renales, cardiovasculares y hemostaticos.",
+    "pharmacokinetics": "Tras IV, la exposicion es proporcional a dosis; union a proteinas >99%. Semivida terminal adulta aproximadamente 2,2-2,4 h; metabolismo predominantemente hepatico y eliminacion principalmente renal como metabolitos.",
+    "indications": "Adultos y pediatria >=3 meses: manejo de dolor leve a moderado y dolor moderado a grave como coadyuvante de opioides; reduccion de fiebre.",
+    "commercialNames": "CALDOLOR (producto DailyMed consultado). No demuestra disponibilidad BR/AR.",
+    "presentation": "Solucion inyectable para infusion intravenosa.",
+    "presentations": "Vial 800 mg/8 mL (100 mg/mL; requiere dilucion) y bolsa lista 800 mg/200 mL (4 mg/mL), segun prospecto consultado.",
+    "dose": "Dolor en adultos: 400-800 mg IV cada 6 h si es necesario, infundir en >=30 min; maximo 3.200 mg/dia. Fiebre: 400 mg inicialmente, luego 400 mg cada 4-6 h o 100-200 mg cada 4 h; maximo 3.200 mg/dia.",
+    "pediatricDose": "12-17 anos: 400 mg IV cada 4-6 h, infusion >=10 min; maximo 40 mg/kg/dia o 2.400 mg/dia, lo menor. 6 meses-<12 anos: 10 mg/kg/dosis (max 400 mg) cada 4-6 h, >=10 min; max 40 mg/kg/dia o 2.400 mg/dia. 3-<6 meses: dosis unica 10 mg/kg (max 100 mg), >=10 min; seguridad de dosis repetidas no establecida en el prospecto.",
+    "renalDose": "No hay tabla numerica de ajuste. Evitar en enfermedad renal avanzada salvo beneficio superior al riesgo; monitorizar funcion renal y estado de volumen.",
+    "hepaticDose": "No hay algoritmo numerico de ajuste en el prospecto; suspender/evaluar si aparecen signos de lesion hepatica y monitorizar segun riesgo.",
+    "commonAdverseEffects": "Eventos reportados incluyen nauseas, vomitos, cefalea y reacciones locales/relacionadas con la infusion; el perfil es el de un AINE sistemico.",
+    "dangerousAdverseEffects": "Sangrado/ulceracion/perforacion GI, eventos tromboticos cardiovasculares, insuficiencia renal, hepatotoxicidad, anafilaxia/broncoespasmo y reacciones cutaneas graves.",
+    "adverseEffects": "Pueden ocurrir retencion hidrosalina, hipertension, anemia por perdida GI, alteraciones renales y reacciones de hipersensibilidad.",
+    "contraindications": "Hipersensibilidad al ibuprofeno; antecedente de asma/urticaria/reaccion alergica por aspirina u otro AINE; uso en contexto de cirugia de revascularizacion coronaria (CABG).",
+    "interactions": "Anticoagulantes/antiagregantes/ISRS-IRSN aumentan riesgo de sangrado; otros AINE/aspirina aumentan toxicidad; IECA/ARA-II/diureticos pueden empeorar funcion renal; puede elevar litio y exposicion a metotrexato.",
+    "monitoring": "Dolor/fiebre y necesidad de continuar; PA, funcion renal, estado de volumen, signos de sangrado GI y lesion hepatica; hemograma en uso prolongado o riesgo.",
+    "administration": "Solo IV. No administrar en bolo. El vial concentrado debe diluirse antes de la infusion; la bolsa 4 mg/mL viene lista segun producto.",
+    "preparation": "Vial 100 mg/mL: diluir a concentracion final <=4 mg/mL con NaCl 0,9%, glucosa 5% o Ringer lactato; usar tecnica aseptica y verificar particulas.",
+    "infusionProtocol": "Adultos: cada dosis en >=30 min. Pediatria 3 meses-17 anos: >=10 min segun rango y regimen del prospecto.",
+    "pregnancy": "Evitar desde aproximadamente 30 semanas por riesgo de cierre prematuro del ductus arterioso. Entre 20-30 semanas, limitar dosis/duracion y considerar monitorizacion de liquido amniotico si el uso se prolonga.",
+    "lactation": "La decision debe considerar beneficio de lactancia y necesidad materna; datos publicados con ibuprofeno oral muestran baja transferencia a leche, pero esta ficha corresponde a producto IV.",
+    "specialPopulations": "Adultos mayores tienen mayor riesgo GI, renal y cardiovascular. En deshidratacion/hipovolemia corregir volumen antes de iniciar cuando sea posible.",
+    "patientEducation": "Advertir sobre dolor abdominal/sangrado, disnea, edema, disminucion de diuresis, rash o dolor toracico; evitar automedicacion adicional con AINE.",
+    "clinicalPearls": "No confundir 100 mg/mL (vial que requiere dilucion) con 4 mg/mL (bolsa lista). Pediatria 3-<6 meses tiene solo dosis unica documentada.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO: AINE IV; sangrado GI/CV/renal; concentracion y tiempo de infusion dependen de la presentacion; edad minima 3 meses.",
+    "alerts": "Alcance DailyMed EE. UU.; no inferir registro o presentacion BR/AR.",
+    "references": [
+      "DailyMed/FDA - CALDOLOR (ibuprofen injection) prescribing information | EUA; IV; label version 16, revisado 02/2025; adultos e pediatria >=3 meses | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684&version=16"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1eaa7790-f1a1-4f51-b10a-cbbaf033f684&version=16"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Ibuprofeno intravenoso - CALDOLOR",
+    "es": "Ibuprofeno intravenoso - CALDOLOR"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "ibuprofeno_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "086",
+    "approvedSha256": "cfceba32b5bdc6b3a84d1f9339d21eeae7bc4cf45d8996e6b1e2954d9c5b0007",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "7e3d87db0122de4dcce041fcc4fa4b76358065816c76aad45b706b592f782286",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_086_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "ibuprofeno_iv",
+        "bloqueios_clinicos_reais": [],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "parecoxibe",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: seguranca/eficacia <18 anos nao estabelecidas."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "tenoxicam",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: nao ha posologia estabelecida."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "tramadol_paracetamol",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: seguranca/eficacia nao estabelecidas e existem contraindicacoes etarias."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "agua_para_injecao",
+        "bloqueios_clinicos_reais": [
+          "ADMINISTRACAO_DIRETA_IV_BLOQUEADA: bula proibe infusao isolada por hipotonicidade.",
+          "CALCULO_DE_DOSE_PROPRIA_BLOQUEADO: nao existe dose terapeutica propria; volume depende do medicamento"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_APLICAVEL/NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "aminoacidos_parenterais",
+        "bloqueios_clinicos_reais": [
+          "FORMULACAO_GENERICA_BLOQUEADA: \"aminoacidos parenterais\" nao define composicao/concentracao unica; dados",
+          "CALCULO_PEDIATRICO_BLOQUEADO: rotulo antigo cita 2-3 g/kg/dia em lactentes, mas declara ausencia de estudos",
+          "INFUSAO_DIRETA_DO_PBP_BLOQUEADA: produto e somente para manipulacao de misturas."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_NUTRICAO_PARENTERAL_CONTEMPORANEA_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "cloreto_de_potassio_19_1",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: bula rotula uso pediatrico, mas nao fornece dose universal por kg."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "cloreto_de_sodio_20",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_DE_DOSE_BLOQUEADO: bula nao define esquema universal em mL/mEq.",
+          "INFUSAO_AUTOMATICA_BLOQUEADA: nao ha velocidade universal; exige protocolo por indicacao/alvo.",
+          "CALCULO_PEDIATRICO_BLOQUEADO: uso pediatrico rotulado, sem dose universal por kg."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "emulsao_lipidica_parenteral",
+        "bloqueios_clinicos_reais": [],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_NUTRICAO_PARENTERAL_CONTEMPORANEA_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "glicerina_supositorio",
+        "bloqueios_clinicos_reais": [],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "ibuprofeno_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. Parecer: Dra Eugenia Marques, 20-09-2026, aprovado integralmente, sem excecoes informadas. Arquivo revisado originalmente identificado como 003; renumeracao administrativa atual: Lote 086. Bloqueios granulares documentados no candidato permanecem preservados; integracao/publicacao nao executadas.",
+      "PROVENIENCIA": {
+        "baseline_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "nome_recebido": "ibuprofeno_iv",
+        "data": "2026-09-20",
+        "escopo": "ibuprofeno IV, CALDOLOR EUA; frasco 100 mg/mL e bolsa 4 mg/mL",
+        "arquivo_revisado_original": "003",
+        "lote_administrativo_atual": "086"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

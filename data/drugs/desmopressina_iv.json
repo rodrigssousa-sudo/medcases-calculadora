@@ -1,0 +1,335 @@
+{
+  "id": "desmopressina_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "desmopressina_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Desmopressina acetato 4 mcg/mL injecao IV/SC",
+    "class": "Analogo da vasopressina",
+    "pharmacologicClass": "Agonista seletivo V2/antidiuretico e hemostatico",
+    "mechanism": "Ativa receptores V2 renais e promove liberacao endotelial de fator VIII/vWF.",
+    "pharmacodynamics": "Aumenta concentracao urinaria e, em hemofilia A/vWD tipo 1 responsivos, aumenta FVIII/vWF; principal risco e retencao hidrica/hiponatremia.",
+    "pharmacokinetics": "Eliminacao renal relevante; CrCl <50 mL/min e contraindicado no rotulo consultado.",
+    "indications": "Diabetes insipidus central; hemofilia A e doenca de von Willebrand tipo 1 responsivas em cenarios selecionados.",
+    "commercialNames": "Desmopressin Acetate Injection, EUA.",
+    "presentation": "Solucao injetavel IV/SC.",
+    "presentations": "4 mcg/mL em frascos/ampolas conforme produto.",
+    "dose": "Hemofilia A/vWD tipo 1: 0,3 mcg/kg (maximo 20 mcg) IV diluido em NaCl 0,9% por 15-30 min; preoperatorio 30 min antes. DI central: 2-4 mcg/dia IV ou SC em 1-2 doses individualizadas.",
+    "pediatricDose": "Hemofilia A/vWD: seguranca/eficacia estabelecidas >=3 meses; DI central estabelecida >=12 anos. Menores dessas faixas: bloqueado. Dose hemostatica 0,3 mcg/kg, maximo 20 mcg.",
+    "renalDose": "CrCl <50 mL/min: CONTRAINDICADA.",
+    "hepaticDose": "Sem algoritmo numerico especifico.",
+    "commonAdverseEffects": "Cefaleia, rubor, nausea e reacoes locais.",
+    "dangerousAdverseEffects": "Hiponatremia grave com convulsoes/coma/morte, trombose rara e retencao hidrica.",
+    "adverseEffects": "Hipotensao ou hipertensao transitória podem ocorrer.",
+    "contraindications": "CrCl <50, hiponatremia ou historia de hiponatremia, polidipsia/SIADH e uso concomitante de diuretico de alca ou glicocorticoide sistemico/inalado conforme rotulo.",
+    "interactions": "Diureticos de alca e glicocorticoides sao contraindicados no contexto do rotulo; outros fármacos que causam hiponatremia aumentam risco.",
+    "monitoring": "Sodio antes/durante conforme risco, balanço hidrico, resposta hemostatica com FVIII/vWF e diurese/osmolalidade na DI.",
+    "administration": "Hemostasia: IV infusao 15-30 min; DI: IV ou SC conforme dose individual.",
+    "preparation": "Para hemostasia diluir em NaCl 0,9% conforme rotulo.",
+    "infusionProtocol": "0,3 mcg/kg (max 20 mcg) em 15-30 min para hemofilia A/vWD tipo 1.",
+    "pregnancy": "Usar quando indicado apos avaliacao beneficio-risco e controle de fluidos/sodio.",
+    "lactation": "Dados limitados; avaliar necessidade materna e risco.",
+    "specialPopulations": "Criancas e idosos tem maior vulnerabilidade a hiponatremia; restricao de liquidos e essencial.",
+    "patientEducation": "Restringir liquidos conforme orientacao e procurar urgencia por cefaleia intensa, confusao, convulsao ou ganho rapido de peso.",
+    "clinicalPearls": "Doses repetidas mais frequentes que a cada 48 h podem apresentar taquifilaxia em hemostasia; repetir somente baseado em laboratorio/clinica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPONATREMIA_BOXED; CRCL_50; RESTRICAO_HIDRICA; HEMOSTASIA_0_3MCGKG; TACHYPHYLAXIS.",
+    "alerts": "CrCl <50 e hiponatremia bloqueiam uso. Hemostasia requer indicacao responsiva e monitorizacao.",
+    "references": [
+      "DailyMed/NLM EUA - Desmopressin Acetate Injection, current 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84dbb392-4535-4cbc-af60-75abb494f26e"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84dbb392-4535-4cbc-af60-75abb494f26e"
+  },
+  "es": {
+    "name": "Desmopresina acetato 4 mcg/mL inyeccion IV/SC",
+    "class": "Analogo de vasopresina",
+    "pharmacologicClass": "Agonista selectivo V2/antidiuretico y hemostatico",
+    "mechanism": "Activa receptores V2 renales y promueve liberacion endotelial de factor VIII/vWF.",
+    "pharmacodynamics": "Aumenta concentracion urinaria y, en hemofilia A/vWD tipo 1 respondedores, aumenta FVIII/vWF; principal riesgo es retencion hidrica/hiponatremia.",
+    "pharmacokinetics": "Eliminacion renal relevante; CrCl <50 mL/min esta contraindicado en rotulo consultado.",
+    "indications": "Diabetes insipida central; hemofilia A y enfermedad de von Willebrand tipo 1 respondedores en escenarios seleccionados.",
+    "commercialNames": "Desmopressin Acetate Injection, EE.UU.",
+    "presentation": "Solucion inyectable IV/SC.",
+    "presentations": "4 mcg/mL en viales/ampollas segun producto.",
+    "dose": "Hemofilia A/vWD tipo 1: 0,3 mcg/kg (maximo 20 mcg) IV diluido en NaCl 0,9% durante 15-30 min; preoperatorio 30 min antes. DI central: 2-4 mcg/dia IV o SC en 1-2 dosis individualizadas.",
+    "pediatricDose": "Hemofilia A/vWD: seguridad/eficacia establecidas >=3 meses; DI central establecida >=12 anos. Menores de esas bandas: bloqueado. Dosis hemostatica 0,3 mcg/kg, maximo 20 mcg.",
+    "renalDose": "CrCl <50 mL/min: CONTRAINDICADA.",
+    "hepaticDose": "Sin algoritmo numerico especifico.",
+    "commonAdverseEffects": "Cefalea, rubor, nausea y reacciones locales.",
+    "dangerousAdverseEffects": "Hiponatremia grave con convulsiones/coma/muerte, trombosis rara y retencion hidrica.",
+    "adverseEffects": "Pueden ocurrir hipotension o hipertension transitorias.",
+    "contraindications": "CrCl <50, hiponatremia o antecedente de hiponatremia, polidipsia/SIADH y uso concomitante de diuretico de asa o glucocorticoide sistemico/inhalado segun rotulo.",
+    "interactions": "Diureticos de asa y glucocorticoides estan contraindicados en contexto del rotulo; otros farmacos que causan hiponatremia aumentan riesgo.",
+    "monitoring": "Sodio antes/durante segun riesgo, balance hidrico, respuesta hemostatica con FVIII/vWF y diuresis/osmolalidad en DI.",
+    "administration": "Hemostasia: IV infusion 15-30 min; DI: IV o SC segun dosis individual.",
+    "preparation": "Para hemostasia diluir en NaCl 0,9% segun rotulo.",
+    "infusionProtocol": "0,3 mcg/kg (max 20 mcg) durante 15-30 min para hemofilia A/vWD tipo 1.",
+    "pregnancy": "Usar cuando este indicado tras evaluacion beneficio-riesgo y control de liquidos/sodio.",
+    "lactation": "Datos limitados; valorar necesidad materna y riesgo.",
+    "specialPopulations": "Niños y mayores tienen mayor vulnerabilidad a hiponatremia; restriccion de liquidos es esencial.",
+    "patientEducation": "Restringir liquidos segun indicacion y buscar urgencia por cefalea intensa, confusion, convulsion o aumento rapido de peso.",
+    "clinicalPearls": "Dosis repetidas mas frecuentes que cada 48 h pueden presentar taquifilaxia en hemostasia; repetir solo segun laboratorio/clinica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPONATREMIA_BOXED; CRCL_50; RESTRICCION_HIDRICA; HEMOSTASIA_0_3MCGKG; TAQUIFILAXIA.",
+    "alerts": "CrCl <50 e hiponatremia bloquean uso. Hemostasia requiere indicacion respondedora y monitorizacion.",
+    "references": [
+      "DailyMed/NLM EUA - Desmopressin Acetate Injection, current 2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84dbb392-4535-4cbc-af60-75abb494f26e"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84dbb392-4535-4cbc-af60-75abb494f26e"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Desmopressina acetato 4 mcg/mL injecao IV/SC",
+    "es": "Desmopresina acetato 4 mcg/mL inyeccion IV/SC"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "desmopressina_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "104",
+    "approvedSha256": "4eea05ef116e59899ee7d0abad7c8dcdba10182b9f0106619d3796d9b0f39f3b",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "81b070cfcc2f8079c1c49fb05b5336ee560b9e0c6d3794ed733d0f79e3376a4f",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_104_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "acido_tranexamico_iv",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA",
+          "INDICACOES_FORA_ROTULO_BLOQUEADAS"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "albumina_humana_20",
+        "bloqueios_clinicos": [
+          "HIPERVOLEMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "complexo_protrombinico",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "ESCOPO_NAO_VKA_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "crioprecipitado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "desmopressina_iv",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_50_CONTRAINDICADO",
+          "HIPONATREMIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fibrinogenio_humano",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_IDADE_LABORATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fitomenadiona_vitamina_k_iv",
+        "bloqueios_clinicos": [
+          "VIA_IV_NAO_PREFERIDA",
+          "CALCULO_PEDIATRICO_IV_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "plasma_fresco_congelado",
+        "bloqueios_clinicos": [
+          "PROTOCOLO_TRANSFUSIONAL_OBRIGATORIO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "biperideno_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clorpromazina_im",
+        "bloqueios_clinicos": [
+          "VIA_IV_BLOQUEADA_NESTA_FICHA",
+          "DOSES_EXCEPCIONAIS_ALTAS_NAO_AUTOMATIZAR"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "desmopressina_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum conteudo clinico foi alterado; bloqueios e reconciliacoes permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Desmopressin acetate 4 mcg/mL IV/SC - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CRCL_MENOR_50_CONTRAINDICADO",
+        "HIPONATREMIA_ALTO_RISCO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "104",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "104",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

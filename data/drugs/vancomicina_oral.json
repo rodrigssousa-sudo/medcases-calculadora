@@ -1,0 +1,352 @@
+{
+  "id": "vancomicina_oral",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "vancomicina_oral"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Vancomicina cloridrato - capsulas orais",
+    "class": "Antibiotico glicopeptideo oral para infeccoes intestinais",
+    "pharmacologicClass": "Glicopeptideo inibidor da sintese de parede bacteriana",
+    "mechanism": "Liga-se a precursores D-Ala-D-Ala e inibe sintese da parede bacteriana.",
+    "pharmacodynamics": "Via oral atua localmente no intestino; absorcao sistemica pode aumentar em colite ativa, especialmente com insuficiencia renal.",
+    "pharmacokinetics": "Normalmente baixa absorcao oral, mas niveis sistemicos mensuraveis podem ocorrer em colite e insuficiencia renal.",
+    "indications": "Diarreia associada a C. difficile e enterocolite por S. aureus, incluindo MRSA, em adultos e pediatria.",
+    "commercialNames": "Vancomycin Hydrochloride Capsules, EUA.",
+    "presentation": "Capsulas VO.",
+    "presentations": "125 mg e 250 mg.",
+    "dose": "Adulto CDI: 125 mg VO 4x/dia por 10 dias. Enterocolite por S. aureus: 500 mg-2 g/dia divididos em 3-4 doses por 7-10 dias.",
+    "pediatricDose": "Ambas indicacoes: 40 mg/kg/dia VO divididos em 3-4 doses por 7-10 dias; maximo 2 g/dia.",
+    "renalDose": "Nao ha ajuste oral numerico rotulado; contudo absorcao sistemica pode ocorrer em colite/insuficiencia renal e niveis sericos podem ser apropriados em pacientes de risco.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Nausea, dor abdominal e alteracoes GI podem ocorrer.",
+    "dangerousAdverseEffects": "Nefrotoxicidade, ototoxicidade e reacoes cutaneas graves podem ocorrer se houver absorcao sistemica relevante.",
+    "adverseEffects": "Rash e elevacao de creatinina podem ocorrer.",
+    "contraindications": "Hipersensibilidade a vancomicina.",
+    "interactions": "Aminoglicosideos e outros nefro/ototoxicos aumentam preocupacao se houver absorcao sistemica.",
+    "monitoring": "Resposta GI; funcao renal e niveis sericos em pacientes com colite importante, insuficiencia renal ou fatores que aumentem absorcao/toxicidade.",
+    "administration": "Somente VO para as indicacoes intestinais rotuladas. Vancomicina IV nao trata adequadamente essas infeccoes luminais.",
+    "preparation": "Capsulas prontas para uso; formulacoes extemporaneas exigem protocolo separado.",
+    "infusionProtocol": "NAO APLICAVEL a vancomicina oral.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Colite grave e insuficiencia renal podem aumentar absorcao sistemica e risco toxico.",
+    "patientEducation": "Completar o curso e procurar atendimento por piora da diarreia, reducao de diurese, zumbido ou rash grave.",
+    "clinicalPearls": "Vancomicina oral e IV nao sao intercambiaveis por indicacao: oral e para infeccoes intestinais rotuladas; IV nao deve herdar esse esquema.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ORAL_SOMENTE; CDI; S_AUREUS_ENTEROCOLITE; ABSORCAO_SISTEMICA_POSSIVEL; RENAL_OTOTOX.",
+    "alerts": "Nao importar dose IV para esta ficha nem usar vancomicina IV para as indicacoes luminais deste ID.",
+    "references": [
+      "DailyMed/NLM EUA - Vancomycin Hydrochloride Capsules, active label 17-08-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc737938-ae36-460b-a2a8-609f3fe59156"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc737938-ae36-460b-a2a8-609f3fe59156"
+  },
+  "es": {
+    "name": "Vancomicina clorhidrato - capsulas orales",
+    "class": "Antibiotico glucopéptido oral para infecciones intestinales",
+    "pharmacologicClass": "Glucopéptido inhibidor de sintesis de pared bacteriana",
+    "mechanism": "Se une a precursores D-Ala-D-Ala e inhibe sintesis de pared bacteriana.",
+    "pharmacodynamics": "Via oral actua localmente en intestino; absorcion sistemica puede aumentar en colitis activa, especialmente con insuficiencia renal.",
+    "pharmacokinetics": "Normalmente baja absorcion oral, pero niveles sistemicos medibles pueden ocurrir en colitis e insuficiencia renal.",
+    "indications": "Diarrea asociada a C. difficile y enterocolitis por S. aureus, incluido MRSA, en adultos y pediatria.",
+    "commercialNames": "Vancomycin Hydrochloride Capsules, EE.UU.",
+    "presentation": "Capsulas VO.",
+    "presentations": "125 mg y 250 mg.",
+    "dose": "Adulto CDI: 125 mg VO 4 veces/dia durante 10 dias. Enterocolitis por S. aureus: 500 mg-2 g/dia divididos en 3-4 dosis durante 7-10 dias.",
+    "pediatricDose": "Ambas indicaciones: 40 mg/kg/dia VO divididos en 3-4 dosis durante 7-10 dias; maximo 2 g/dia.",
+    "renalDose": "No hay ajuste oral numerico rotulado; sin embargo puede haber absorcion sistemica en colitis/insuficiencia renal y niveles sericos pueden ser apropiados en pacientes de riesgo.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Pueden ocurrir nausea, dolor abdominal y alteraciones GI.",
+    "dangerousAdverseEffects": "Nefrotoxicidad, ototoxicidad y reacciones cutaneas graves pueden ocurrir si existe absorcion sistemica relevante.",
+    "adverseEffects": "Pueden ocurrir rash y elevacion de creatinina.",
+    "contraindications": "Hipersensibilidad a vancomicina.",
+    "interactions": "Aminoglucosidos y otros nefro/ototoxicos aumentan preocupacion si hay absorcion sistemica.",
+    "monitoring": "Respuesta GI; funcion renal y niveles sericos en pacientes con colitis importante, insuficiencia renal o factores que aumenten absorcion/toxicidad.",
+    "administration": "Solo VO para indicaciones intestinales rotuladas. Vancomicina IV no trata adecuadamente estas infecciones luminales.",
+    "preparation": "Capsulas listas para usar; formulaciones extemporaneas requieren protocolo separado.",
+    "infusionProtocol": "NO APLICA a vancomicina oral.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Colitis grave e insuficiencia renal pueden aumentar absorcion sistemica y riesgo toxico.",
+    "patientEducation": "Completar curso y consultar por empeoramiento de diarrea, disminucion de orina, tinnitus o rash grave.",
+    "clinicalPearls": "Vancomicina oral e IV no son intercambiables por indicacion: oral es para infecciones intestinales rotuladas; IV no debe heredar esta pauta.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SOLO_ORAL; CDI; S_AUREUS_ENTEROCOLITIS; ABSORCION_SISTEMICA_POSIBLE; RENAL_OTOTOX.",
+    "alerts": "No importar dosis IV a esta ficha ni usar vancomicina IV para indicaciones luminales de este ID.",
+    "references": [
+      "DailyMed/NLM EUA - Vancomycin Hydrochloride Capsules, active label 17-08-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc737938-ae36-460b-a2a8-609f3fe59156"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bc737938-ae36-460b-a2a8-609f3fe59156"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Vancomicina cloridrato - capsulas orais",
+    "es": "Vancomicina clorhidrato - capsulas orales"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "vancomicina_oral.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "vancomicina_oral",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Vancomicina oral 125/250 mg - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

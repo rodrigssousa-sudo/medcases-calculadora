@@ -1,0 +1,356 @@
+{
+  "id": "captopril",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "captopril"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Captopril comprimido",
+    "class": "Anti-hipertensivo; inibidor da ECA",
+    "pharmacologicClass": "Inibidor da enzima conversora de angiotensina (IECA)",
+    "mechanism": "Inibe conversão de angiotensina I em II e reduz degradação de bradicinina, diminuindo vasoconstrição e aldosterona.",
+    "pharmacodynamics": "Reduz resistência vascular e pressão arterial; pode elevar potássio e reduzir pressão de filtração glomerular em situações dependentes de angiotensina II.",
+    "pharmacokinetics": "VO; absorção é reduzida por alimento, por isso o rótulo orienta administrar 1 h antes das refeições. Ligação proteica ~25–30%; meia-vida do fármaco inalterado provavelmente <2 h; retenção aumenta na insuficiência renal.",
+    "indications": "Rótulo EUA inclui hipertensão, insuficiência cardíaca, disfunção ventricular esquerda pós-IAM e nefropatia diabética em cenários definidos.",
+    "commercialNames": "Fonte consultada: captopril genérico EUA; marcas BR/AR não verificadas nesta execução.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "12,5 mg; 25 mg; 50 mg; 100 mg no produto consultado.",
+    "dose": "Hipertensão: inicial 25 mg VO 2–3x/dia; pode titular para 50 mg 2–3x/dia. O rótulo descreve doses maiores em casos selecionados, com máximo diário de 450 mg, que NÃO deve ser tratado como alvo ou teto universal para outras indicações.",
+    "pediatricDose": "Segurança e eficácia pediátricas não estão estabelecidas no rótulo; há experiência limitada e recém-nascidos podem ser particularmente suscetíveis à hipotensão/oligúria. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Insuficiência renal significativa: rótulo orienta reduzir dose inicial e usar incrementos menores, titulando lentamente; não fornece tabela numérica única por ClCr. Ajuste automático bloqueado.",
+    "hepaticDose": "Não há algoritmo numérico específico de ajuste hepático no rótulo consultado; monitorização clínica é necessária.",
+    "commonAdverseEffects": "Tosse, rash, alteração do paladar, tontura e hipotensão podem ocorrer.",
+    "dangerousAdverseEffects": "Angioedema, hipercalemia, insuficiência renal, neutropenia/agranulocitose e toxicidade fetal.",
+    "adverseEffects": "Proteinúria, elevação de creatinina/BUN e alterações de enzimas hepáticas foram descritas.",
+    "contraindications": "Hipersensibilidade/angioedema relacionado a IECA; coadministração com aliscireno em pacientes com diabetes é contraindicada no rótulo.",
+    "interactions": "Diuréticos podem aumentar hipotensão inicial; suplementos de potássio/diuréticos poupadores aumentam risco de hipercalemia; AINEs podem reduzir efeito e piorar função renal; aliscireno tem restrições.",
+    "monitoring": "Pressão arterial, creatinina/eGFR, potássio; sinais de angioedema e, em pacientes de risco, hemograma.",
+    "administration": "VO, preferencialmente 1 h antes das refeições conforme rótulo.",
+    "preparation": "Comprimido pronto para uso; não há preparo ou diluição nesta ficha.",
+    "infusionProtocol": "NÃO APLICÁVEL ao comprimido oral.",
+    "pregnancy": "BOXED WARNING: toxicidade fetal. Ao detectar gestação, interromper o IECA o quanto antes e avaliar alternativa clínica apropriada.",
+    "lactation": "Captopril aparece em baixas concentrações no leite; o rótulo orienta decisão individual entre amamentação e tratamento conforme importância materna.",
+    "specialPopulations": "Maior risco de hipotensão em depleção de volume/sódio e de disfunção renal em estenose de artéria renal ou doença renal suscetível.",
+    "patientEducation": "Orientar sobre angioedema, tontura/hipotensão, evitar suplementos de potássio sem orientação e comunicar gestação imediatamente.",
+    "clinicalPearls": "O valor de 450 mg/dia pertence ao rótulo de hipertensão em cenários de titulação específica e não deve ser propagado como 'máximo universal' do captopril.",
+    "guidelineRecommendations": "A escolha e meta pressórica devem seguir diretriz de hipertensão atual e contexto clínico; esta ficha não usa o rótulo para definir preferência universal de classe.",
+    "safetyFlags": "IECA; TOXICIDADE_FETAL; ANGIOEDEMA; HIPERCALEMIA; FUNCAO_RENAL.",
+    "alerts": "Não confundir dose crônica oral com uso sublingual de emergência; esse uso é tratado em ficha separada.",
+    "references": [
+      "DailyMed/NLM EUA — Captopril tablets, updated 14-09-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+      "ESC — 2024 Guidelines for Elevated Blood Pressure and Hypertension. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+  },
+  "es": {
+    "name": "Captopril comprimido",
+    "class": "Antihipertensivo; inhibidor de la ECA",
+    "pharmacologicClass": "Inhibidor de la enzima convertidora de angiotensina (IECA)",
+    "mechanism": "Inhibe la conversión de angiotensina I en II y reduce la degradación de bradicinina, disminuyendo vasoconstricción y aldosterona.",
+    "pharmacodynamics": "Reduce resistencia vascular y presión arterial; puede elevar potasio y reducir presión de filtración glomerular en situaciones dependientes de angiotensina II.",
+    "pharmacokinetics": "VO; la absorción disminuye con alimentos, por lo que el rótulo indica administrarlo 1 h antes de comidas. Unión proteica ~25–30%; semivida del fármaco inalterado probablemente <2 h; aumenta la retención en insuficiencia renal.",
+    "indications": "El rótulo EE.UU. incluye hipertensión, insuficiencia cardiaca, disfunción ventricular izquierda post-IAM y nefropatía diabética en escenarios definidos.",
+    "commercialNames": "Fuente consultada: captopril genérico EE.UU.; marcas BR/AR no verificadas en esta ejecución.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "12,5 mg; 25 mg; 50 mg; 100 mg en el producto consultado.",
+    "dose": "Hipertensión: inicial 25 mg VO 2–3 veces/día; puede titular a 50 mg 2–3 veces/día. El rótulo describe dosis mayores en casos seleccionados, con máximo diario 450 mg, que NO debe tratarse como objetivo o techo universal para otras indicaciones.",
+    "pediatricDose": "Seguridad y eficacia pediátricas no están establecidas en el rótulo; hay experiencia limitada y los recién nacidos pueden ser especialmente susceptibles a hipotensión/oliguria. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "Insuficiencia renal significativa: el rótulo indica reducir dosis inicial y usar incrementos menores, titulando lentamente; no aporta tabla numérica única por CrCl. Ajuste automático bloqueado.",
+    "hepaticDose": "No hay algoritmo numérico específico de ajuste hepático en el rótulo consultado; se requiere vigilancia clínica.",
+    "commonAdverseEffects": "Pueden ocurrir tos, exantema, alteración del gusto, mareo e hipotensión.",
+    "dangerousAdverseEffects": "Angioedema, hiperpotasemia, insuficiencia renal, neutropenia/agranulocitosis y toxicidad fetal.",
+    "adverseEffects": "Se han descrito proteinuria, aumento de creatinina/BUN y alteraciones de enzimas hepáticas.",
+    "contraindications": "Hipersensibilidad/angioedema relacionado con IECA; la coadministración con aliskireno en pacientes con diabetes está contraindicada en el rótulo.",
+    "interactions": "Diuréticos pueden aumentar hipotensión inicial; suplementos de potasio/diuréticos ahorradores aumentan riesgo de hiperpotasemia; AINEs pueden reducir efecto y empeorar función renal; aliskireno tiene restricciones.",
+    "monitoring": "Presión arterial, creatinina/eGFR, potasio; signos de angioedema y, en pacientes de riesgo, hemograma.",
+    "administration": "VO, preferentemente 1 h antes de comidas según rótulo.",
+    "preparation": "Comprimido listo para usar; no hay preparación ni dilución en esta ficha.",
+    "infusionProtocol": "NO APLICA al comprimido oral.",
+    "pregnancy": "BOXED WARNING: toxicidad fetal. Al detectar embarazo, suspender el IECA lo antes posible y valorar alternativa clínica apropiada.",
+    "lactation": "Captopril aparece en bajas concentraciones en leche; el rótulo indica decisión individual entre lactancia y tratamiento según importancia materna.",
+    "specialPopulations": "Mayor riesgo de hipotensión con depleción de volumen/sodio y de disfunción renal en estenosis de arteria renal o enfermedad renal susceptible.",
+    "patientEducation": "Orientar sobre angioedema, mareo/hipotensión, evitar suplementos de potasio sin indicación y comunicar embarazo inmediatamente.",
+    "clinicalPearls": "El valor de 450 mg/día pertenece al rótulo de hipertensión en escenarios de titulación específica y no debe propagarse como 'máximo universal' de captopril.",
+    "guidelineRecommendations": "La elección y objetivo de presión deben seguir guía actual de hipertensión y contexto clínico; esta ficha no usa el rótulo para definir preferencia universal de clase.",
+    "safetyFlags": "IECA; TOXICIDAD_FETAL; ANGIOEDEMA; HIPERPOTASEMIA; FUNCION_RENAL.",
+    "alerts": "No confundir dosis crónica oral con uso sublingual de urgencia; ese uso se trata en ficha separada.",
+    "references": [
+      "DailyMed/NLM EUA — Captopril tablets, updated 14-09-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+      "ESC — 2024 Guidelines for Elevated Blood Pressure and Hypertension. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Captopril comprimido",
+    "es": "Captopril comprimido"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "captopril.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "096",
+    "approvedSha256": "1b2e49b951778cdba13c6bcb9d2dd30f3fb6f3f05735ada3e9bad3d5a7a8ed59",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "71a860690e5d5fc81d91b6cbc6094f9dec5c294e9f50c9d58175ff7d930772f9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_096_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "diazepam_retal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "midazolam_intranasal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_12_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenobarbital_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CONVERSAO_GOTAS_BLOQUEADA",
+          "APRESENTACAO_LOCAL_GOTAS_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar bula/produto local que realmente use conta-gotas antes de qualquer cálculo de volume ou gotas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril_sublingual",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "enalapril_maleato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroclorotiazida_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_COMPRIMIDO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "losartana_potassica",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "anlodipino_besilato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "atenolol_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "FORMULACAO_IV_FORA_DO_ESCOPO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "captopril",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado. Bloqueios e restricoes granulares permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "096",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "096",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

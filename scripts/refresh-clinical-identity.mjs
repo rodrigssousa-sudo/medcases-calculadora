@@ -11,7 +11,7 @@ const policyPath = path.join(root, 'config', 'clinical-collision-policy.proposed
 const databaseFiles = fs.readdirSync(databaseRoot, { withFileTypes: true })
   .filter((entry) => entry.isFile() && entry.name.endsWith('.js'))
   .map((entry) => path.join(databaseRoot, entry.name));
-if (databaseFiles.length !== 34) throw new Error(`CLINICAL_IDENTITY_DATABASE_COUNT_INVALID:${databaseFiles.length}`);
+if (databaseFiles.length !== 36) throw new Error(`CLINICAL_IDENTITY_DATABASE_COUNT_INVALID:${databaseFiles.length}`);
 
 const identityFiles = [...databaseFiles, policyPath].sort((a, b) =>
   Buffer.compare(Buffer.from(path.relative(root, a)), Buffer.from(path.relative(root, b))));

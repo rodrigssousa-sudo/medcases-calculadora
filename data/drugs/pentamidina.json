@@ -1,0 +1,351 @@
+{
+  "id": "pentamidina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "pentamidina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Pentamidina isetionato - injecao IM/IV",
+    "class": "Antiprotozoario",
+    "pharmacologicClass": "Diamidina aromatico antiprotozoario",
+    "mechanism": "Mecanismo completo nao e totalmente definido; interfere com funcao e sintese de macromoleculas do Pneumocystis e outros protozoarios.",
+    "pharmacodynamics": "Atividade contra Pneumocystis; toxicidade hemodinamica, metabolica, pancreatica, renal e cardiaca limita o uso parenteral.",
+    "pharmacokinetics": "Distribuicao tecidual extensa apos IM/IV; eliminacao lenta. Insuficiencia renal/hepatica requer cautela, sem algoritmo alternativo estabelecido no rotulo.",
+    "indications": "Tratamento de pneumonia por Pneumocystis jirovecii no rotulo parenteral consultado.",
+    "commercialNames": "Produto parenteral generico EUA; pentamidina inalada e produto/rota separados.",
+    "presentation": "Po liofilizado 300 mg para injecao IM ou IV.",
+    "presentations": "Frasco 300 mg.",
+    "dose": "Adultos: 4 mg/kg IM ou IV 1x/dia por 14-21 dias.",
+    "pediatricDose": ">4 meses: 4 mg/kg IM ou IV 1x/dia por 14-21 dias. <=4 meses: seguranca/eficacia nao estabelecidas no rotulo consultado.",
+    "renalDose": "Regime alternativo em insuficiencia renal nao estabelecido no rotulo; AUTOMATIZACAO_RENAL=BLOQUEADA.",
+    "hepaticDose": "Regime alternativo em insuficiencia hepatica nao estabelecido no rotulo; AUTOMATIZACAO_HEPATICA=BLOQUEADA.",
+    "commonAdverseEffects": "Hipotensao, hipoglicemia ou hiperglicemia, nausea, alteracoes renais e reacoes no local.",
+    "dangerousAdverseEffects": "Hipotensao grave, pancreatite, hipoglicemia grave seguida de diabetes/hiperglicemia, arritmias/torsades, nefrotoxicidade, citopenias e necrose por extravasamento.",
+    "adverseEffects": "Trombocitopenia, leucopenia, alteracoes hepaticas e eletroliticas podem ocorrer.",
+    "contraindications": "Hipersensibilidade a pentamidina ou componentes.",
+    "interactions": "Outros fármacos nefrotoxicos, pancreatotoxicos ou que prolongam QT podem aumentar risco; revisar medicacao concomitante.",
+    "monitoring": "PA durante/apos infusao, glicemia, BUN/creatinina, CBC/plaquetas, funcao hepatica, calcio e ECG conforme rotulo.",
+    "administration": "IM profunda ou IV lenta. Manter paciente monitorado por risco de hipotensao grave.",
+    "preparation": "IV: reconstituir 300 mg inicialmente com 3-5 mL de agua esteril ou dextrose 5%; NAO usar NaCl na reconstituicao inicial. Depois diluir a dose calculada em 50-250 mL de dextrose 5%. IM: dissolver 300 mg em 3 mL de agua esteril.",
+    "infusionProtocol": "IV em 60-120 minutos.",
+    "pregnancy": "Usar apenas se beneficio potencial justificar risco fetal conforme rotulo.",
+    "lactation": "Excrecao em leite desconhecida; decidir conforme beneficio materno e risco potencial.",
+    "specialPopulations": "Doenca renal/hepatica, diabetes, pancreatite previa e risco de QT exigem vigilancia adicional.",
+    "patientEducation": "Uso parenteral hospitalar; relatar tontura/sincope, dor abdominal intensa, alteracoes de glicose e palpitações.",
+    "clinicalPearls": "A pentamidina inalada nao deve herdar automaticamente dose, preparo ou indicacao da pentamidina IM/IV.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPOTENSAO; HIPO_HIPERGLICEMIA; PANCREATITE; QT; RENAL; ROTA_PARENTERAL.",
+    "alerts": "NAO usar NaCl na reconstituicao inicial IV. Rota inalada e ficha separada.",
+    "references": [
+      "DailyMed/NLM EUA - Pentamidine Isethionate for Injection, atualizado 07-05-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d46aea4f-8f3f-4ce0-93d6-94e147f5a31a"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d46aea4f-8f3f-4ce0-93d6-94e147f5a31a"
+  },
+  "es": {
+    "name": "Pentamidina isetionato - inyeccion IM/IV",
+    "class": "Antiprotozoario",
+    "pharmacologicClass": "Diamidina aromatico antiprotozoario",
+    "mechanism": "El mecanismo completo no esta totalmente definido; interfiere con funcion y sintesis de macromoleculas de Pneumocystis y otros protozoos.",
+    "pharmacodynamics": "Actividad contra Pneumocystis; toxicidad hemodinamica, metabolica, pancreatica, renal y cardiaca limita uso parenteral.",
+    "pharmacokinetics": "Distribucion tisular extensa tras IM/IV; eliminacion lenta. Insuficiencia renal/hepatica requiere precaucion, sin algoritmo alternativo establecido en rotulo.",
+    "indications": "Tratamiento de neumonia por Pneumocystis jirovecii en rotulo parenteral consultado.",
+    "commercialNames": "Producto parenteral generico EE.UU.; pentamidina inhalada es producto/via separados.",
+    "presentation": "Polvo liofilizado 300 mg para inyeccion IM o IV.",
+    "presentations": "Vial 300 mg.",
+    "dose": "Adultos: 4 mg/kg IM o IV 1 vez/dia durante 14-21 dias.",
+    "pediatricDose": " >4 meses: 4 mg/kg IM o IV 1 vez/dia durante 14-21 dias. <=4 meses: seguridad/eficacia no establecidas en rotulo consultado.",
+    "renalDose": "Regimen alternativo en insuficiencia renal no establecido en rotulo; AUTOMATIZACION_RENAL=BLOQUEADA.",
+    "hepaticDose": "Regimen alternativo en insuficiencia hepatica no establecido en rotulo; AUTOMATIZACION_HEPATICA=BLOQUEADA.",
+    "commonAdverseEffects": "Hipotension, hipoglucemia o hiperglucemia, nausea, alteraciones renales y reacciones locales.",
+    "dangerousAdverseEffects": "Hipotension grave, pancreatitis, hipoglucemia grave seguida de diabetes/hiperglucemia, arritmias/torsades, nefrotoxicidad, citopenias y necrosis por extravasacion.",
+    "adverseEffects": "Pueden ocurrir trombocitopenia, leucopenia, alteraciones hepaticas y electroliticas.",
+    "contraindications": "Hipersensibilidad a pentamidina o componentes.",
+    "interactions": "Otros farmacos nefrotoxicos, pancreatotoxicos o que prolongan QT pueden aumentar riesgo; revisar medicacion concomitante.",
+    "monitoring": "PA durante/tras infusion, glucemia, BUN/creatinina, CBC/plaquetas, funcion hepatica, calcio y ECG segun rotulo.",
+    "administration": "IM profunda o IV lenta. Mantener paciente monitorizado por riesgo de hipotension grave.",
+    "preparation": "IV: reconstituir 300 mg inicialmente con 3-5 mL de agua esteril o dextrosa 5%; NO usar NaCl en reconstitucion inicial. Luego diluir dosis calculada en 50-250 mL de dextrosa 5%. IM: disolver 300 mg en 3 mL de agua esteril.",
+    "infusionProtocol": "IV durante 60-120 minutos.",
+    "pregnancy": "Usar solo si beneficio potencial justifica riesgo fetal segun rotulo.",
+    "lactation": "Excrecion en leche desconocida; decidir segun beneficio materno y riesgo potencial.",
+    "specialPopulations": "Enfermedad renal/hepatica, diabetes, pancreatitis previa y riesgo de QT requieren vigilancia adicional.",
+    "patientEducation": "Uso parenteral hospitalario; comunicar mareo/sincope, dolor abdominal intenso, cambios de glucosa y palpitaciones.",
+    "clinicalPearls": "La pentamidina inhalada no debe heredar automaticamente dosis, preparacion ni indicacion de pentamidina IM/IV.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "HIPOTENSION; HIPO_HIPERGLUCEMIA; PANCREATITIS; QT; RENAL; VIA_PARENTERAL.",
+    "alerts": "NO usar NaCl en reconstitucion inicial IV. Via inhalada es ficha separada.",
+    "references": [
+      "DailyMed/NLM EUA - Pentamidine Isethionate for Injection, atualizado 07-05-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d46aea4f-8f3f-4ce0-93d6-94e147f5a31a"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d46aea4f-8f3f-4ce0-93d6-94e147f5a31a"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Pentamidina isetionato - injecao IM/IV",
+    "es": "Pentamidina isetionato - inyeccion IM/IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "pentamidina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "pentamidina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Pentamidina parenteral IM/IV - EUA 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "ROTA_INALADA_BLOQUEADA",
+        "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

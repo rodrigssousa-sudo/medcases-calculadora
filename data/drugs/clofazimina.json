@@ -1,0 +1,359 @@
+{
+  "id": "clofazimina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "clofazimina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Clofazimina - escopo TB resistente WHO",
+    "class": "Antimicobacteriano iminofenazinico",
+    "pharmacologicClass": "Iminofenazina lipofilica antimicobacteriana",
+    "mechanism": "Na TB, interfere com membrana/forca proton-motriz de M. tuberculosis, desestabilizando membrana e producao de ATP.",
+    "pharmacodynamics": "Atividade bactericida/esterilizante em combinacao; QT e toxicidade cutanea/GI limitam uso e podem somar-se a outros fármacos de TB.",
+    "pharmacokinetics": "Muito lipofilica, meia-vida tecidual estimada 25-70 dias; metabolizada no figado e eliminada lentamente sobretudo pela bile/fezes.",
+    "indications": "Escopo deste candidato: componente de determinados regimes WHO de TB resistente. Leprose e outras indicacoes requerem ficha/contexto separado.",
+    "commercialNames": "WHO-PQ possui comprimidos 50/100 mg e capsulas 100 mg para TB; marcas nacionais variam.",
+    "presentation": "Comprimidos ou capsulas VO, conforme produto WHO-PQ.",
+    "presentations": "50 mg e 100 mg em formulacoes WHO para TB.",
+    "dose": "WHO: adulto 100 mg VO 1x/dia; limite superior diario 100 mg para o escopo TB deste handbook.",
+    "pediatricDose": "WHO orienta seguir tabela atual por faixas de peso; este candidato nao transcreve bandas completas sem a tabela vigente. AUTOMATIZACAO_PEDIATRICA=BLOQUEADA ate importar Anexo WHO atual.",
+    "renalDose": "WHO: sem ajuste necessario em insuficiencia renal ou dialise.",
+    "hepaticDose": "WHO: metabolizada parcialmente no figado; usar cautela ou ajustar em comprometimento hepatico grave; sem algoritmo numerico universal.",
+    "commonAdverseEffects": "Pigmentacao cutanea/tecidual, ressecamento cutaneo e sintomas gastrointestinais sao frequentes.",
+    "dangerousAdverseEffects": "QT prolongado/torsades em combinacoes de risco e toxicidade GI grave podem ocorrer; acumulacao e longa.",
+    "adverseEffects": "Alteracao de cor de pele, conjuntiva, suor, urina/fezes e secrecoes pode persistir por longo tempo.",
+    "contraindications": "Hipersensibilidade ao produto; outras restricoes dependem da ficha do produto selecionado.",
+    "interactions": "Outros fármacos que prolongam QT, especialmente bedaquilina/delamanida/fluoroquinolonas, podem somar risco e exigem ECG/gestao do regime.",
+    "monitoring": "ECG/QT conforme regime, tolerancia GI, pele, funcao hepatica e resposta microbiologica da TB.",
+    "administration": "VO; capsulas devem ser engolidas inteiras. Comprimidos WHO podem ser engolidos ou dispersos conforme produto.",
+    "preparation": "WHO: comprimidos podem dissolver lentamente em agua, aproximadamente 5 mL para 50 mg e 10 mL para 100 mg; agitar suspensao antes de administrar.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "WHO TB: dados limitados; pode ser usada quando beneficio supera risco no contexto do regime.",
+    "lactation": "WHO: passa ao leite e lactentes expostos podem apresentar pigmentacao mais intensa.",
+    "specialPopulations": "Gravidez/lactacao, hepatopatia grave e combinacoes que prolongam QT exigem maior cautela.",
+    "patientEducation": "Explicar pigmentacao esperada e potencialmente prolongada; relatar palpitacoes/sincope e dor abdominal persistente.",
+    "clinicalPearls": "Esta ficha e de TB resistente WHO. Nao deve receber automaticamente esquemas de lepra, que tem combinacoes/duracoes diferentes.",
+    "guidelineRecommendations": "WHO 2025 inclui clofazimina em regimes selecionados de TB resistente; dose adulta operacional 100 mg/dia.",
+    "safetyFlags": "TB_REGIME; QT; PIGMENTACAO; MEIA_VIDA_LONGA; PEDIATRIA_EXIGE_TABELA_PESO.",
+    "alerts": "ESCOPO_LEPRA_BLOQUEADO neste candidato. Pediatria nao automatizar sem Anexo WHO vigente.",
+    "references": [
+      "WHO TB Knowledge Sharing - current DR-TB regimen information, clofazimine 100 mg daily. https://tbksp.who.int/pt-br/node/3033",
+      "WHO consolidated TB medicines information sheet - clofazimine. https://iris.who.int/bitstream/handle/10665/365309/9789240065352-eng.pdf",
+      "WHO Prequalification TB362 - Clofazimine 100 mg film-coated tablet. https://extranet.who.int/prequal/WHOPAR/tb362"
+    ],
+    "ref": "https://tbksp.who.int/pt-br/node/3033"
+  },
+  "es": {
+    "name": "Clofazimina - alcance TB resistente WHO",
+    "class": "Antimicobacteriano iminofenazinico",
+    "pharmacologicClass": "Iminofenazina lipofilica antimicobacteriana",
+    "mechanism": "En TB, interfiere con membrana/fuerza proton-motriz de M. tuberculosis, desestabilizando membrana y produccion de ATP.",
+    "pharmacodynamics": "Actividad bactericida/esterilizante en combinacion; QT y toxicidad cutanea/GI limitan uso y pueden sumarse a otros farmacos de TB.",
+    "pharmacokinetics": "Muy lipofilica, semivida tisular estimada 25-70 dias; metabolizada en higado y eliminada lentamente sobre todo por bilis/heces.",
+    "indications": "Alcance de este candidato: componente de determinados regimenes WHO de TB resistente. Lepra y otras indicaciones requieren ficha/contexto separado.",
+    "commercialNames": "WHO-PQ dispone tabletas 50/100 mg y capsulas 100 mg para TB; marcas nacionales varian.",
+    "presentation": "Tabletas o capsulas VO, segun producto WHO-PQ.",
+    "presentations": "50 mg y 100 mg en formulaciones WHO para TB.",
+    "dose": "WHO: adulto 100 mg VO 1 vez/dia; limite superior diario 100 mg para el alcance TB de este handbook.",
+    "pediatricDose": "WHO indica seguir tabla actual por bandas de peso; este candidato no transcribe bandas completas sin tabla vigente. AUTOMATIZACION_PEDIATRICA=BLOQUEADA hasta importar Anexo WHO actual.",
+    "renalDose": "WHO: no requiere ajuste en insuficiencia renal ni dialisis.",
+    "hepaticDose": "WHO: metabolizada parcialmente en higado; usar precaucion o ajustar en compromiso hepatico grave; sin algoritmo numerico universal.",
+    "commonAdverseEffects": "Pigmentacion cutanea/tisular, sequedad cutanea y sintomas gastrointestinales son frecuentes.",
+    "dangerousAdverseEffects": "Pueden ocurrir QT prolongado/torsades en combinaciones de riesgo y toxicidad GI grave; acumulacion es prolongada.",
+    "adverseEffects": "Cambio de color de piel, conjuntiva, sudor, orina/heces y secreciones puede persistir mucho tiempo.",
+    "contraindications": "Hipersensibilidad al producto; otras restricciones dependen de la ficha del producto seleccionado.",
+    "interactions": "Otros farmacos que prolongan QT, especialmente bedaquilina/delamanida/fluoroquinolonas, pueden sumar riesgo y exigen ECG/gestion del regimen.",
+    "monitoring": "ECG/QT segun regimen, tolerancia GI, piel, funcion hepatica y respuesta microbiologica de TB.",
+    "administration": "VO; capsulas deben tragarse enteras. Tabletas WHO pueden tragarse o dispersarse segun producto.",
+    "preparation": "WHO: tabletas pueden disolverse lentamente en agua, aproximadamente 5 mL para 50 mg y 10 mL para 100 mg; agitar suspension antes de administrar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "WHO TB: datos limitados; puede usarse cuando beneficio supera riesgo en contexto del regimen.",
+    "lactation": "WHO: pasa a leche y lactantes expuestos pueden presentar pigmentacion mas intensa.",
+    "specialPopulations": "Embarazo/lactancia, hepatopatia grave y combinaciones que prolongan QT requieren mayor precaucion.",
+    "patientEducation": "Explicar pigmentacion esperada y potencialmente prolongada; comunicar palpitaciones/sincope y dolor abdominal persistente.",
+    "clinicalPearls": "Esta ficha es de TB resistente WHO. No debe recibir automaticamente pautas de lepra, que tienen combinaciones/duraciones distintas.",
+    "guidelineRecommendations": "WHO 2025 incluye clofazimina en regimenes seleccionados de TB resistente; dosis adulta operativa 100 mg/dia.",
+    "safetyFlags": "TB_REGIMEN; QT; PIGMENTACION; SEMIVIDA_LARGA; PEDIATRIA_EXIGE_TABLA_PESO.",
+    "alerts": "ALCANCE_LEPRA_BLOQUEADO en este candidato. Pediatria no automatizar sin Anexo WHO vigente.",
+    "references": [
+      "WHO TB Knowledge Sharing - current DR-TB regimen information, clofazimine 100 mg daily. https://tbksp.who.int/pt-br/node/3033",
+      "WHO consolidated TB medicines information sheet - clofazimine. https://iris.who.int/bitstream/handle/10665/365309/9789240065352-eng.pdf",
+      "WHO Prequalification TB362 - Clofazimine 100 mg film-coated tablet. https://extranet.who.int/prequal/WHOPAR/tb362"
+    ],
+    "ref": "https://tbksp.who.int/pt-br/node/3033"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Clofazimina - escopo TB resistente WHO",
+    "es": "Clofazimina - alcance TB resistente WHO"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "clofazimina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "100",
+    "approvedSha256": "0570f083fc313d61727d1e5380c90e3280966a497e8006cf58d5d82eec68ef31",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "e0c21a75ecd6485bdc812e20b898fa2ccd11738d322cde54688d8637a852a4d9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_100_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "antimoniato_de_meglumina",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO",
+          "CONCENTRACAO_SB5_DEVE_SER_CONFIRMADA",
+          "ESCOPO_VISCERAL_PKDL_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "artemeter_lumefantrina",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "PROFILAXIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "baloxavir_marboxil",
+        "bloqueios_clinicos": [
+          "FORMULACAO_PESO_OBRIGATORIOS",
+          "IDADE_MENOR_5_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "benznidazol",
+        "bloqueios_clinicos": [
+          "DOSE_ADULTO_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA_PESO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "bezlotoxumabe",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_1_BLOQUEADA",
+          "REPETICAO_DOSE_BLOQUEADA",
+          "CHF_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "capreomicina",
+        "bloqueios_clinicos": [
+          "ATIVACAO_CLINICA_BLOQUEADA",
+          "CALCULO_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cicloserina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "TDM_RECOMENDADO_EM_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cidofovir",
+        "bloqueios_clinicos": [
+          "PEDIATRIA_BLOQUEADA",
+          "USOS_OFF_LABEL_BLOQUEADOS",
+          "RENAL_LIMIARES_OBRIGATORIOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clofazimina",
+        "bloqueios_clinicos": [
+          "ESCOPO_LEPRA_BLOQUEADO",
+          "PEDIATRIA_BLOQUEADA_ATE_TABELA_WHO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "cloroquina",
+        "bloqueios_clinicos": [
+          "MALARIA_COMPLICADA_BLOQUEADA",
+          "REGIAO_RESISTENTE_BLOQUEADA",
+          "SAL_BASE_CONVERSAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "clofazimina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Clofazimina em regimes WHO de TB resistente",
+      "BLOQUEIOS_CLINICOS": [
+        "ESCOPO_LEPRA_BLOQUEADO",
+        "PEDIATRIA_BLOQUEADA_ATE_TABELA_WHO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "100",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "100",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

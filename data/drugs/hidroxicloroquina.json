@@ -5,88 +5,88 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Hidroxicloroquina",
-    "class": "Antimalárico/imunomodulador",
-    "pharmacologicClass": "Modula lisossomos e sinalização imune",
-    "mechanism": "Modula lisossomos e sinalização imune. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Grande volume de distribuição e meia-vida terminal longa, cerca de 40-50 dias.",
-    "indications": "Malária sensível, lúpus eritematoso e artrite reumatoide; não indicada para COVID-19.",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "presentations": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "dose": "Lúpus/AR: 200-400 mg/dia VO; usar menor dose eficaz. Dose retiniana deve considerar peso real e exposição cumulativa.",
-    "pediatricDose": "Malária tem regimes por peso; doenças reumatológicas pediátricas exigem especialista. AUTOMATABLE=NO.",
-    "renalDose": "Pode exigir redução em DRC prolongada; monitorar toxicidade.",
-    "hepaticDose": "Cautela e possível redução.",
-    "commonAdverseEffects": "Náusea, diarreia, cefaleia e rash.",
-    "dangerousAdverseEffects": "Retinopatia irreversível, cardiomiopatia/QT, hipoglicemia, miopatia e SCAR.",
-    "adverseEffects": "Náusea, diarreia, cefaleia e rash. Graves: Retinopatia irreversível, cardiomiopatia/QT, hipoglicemia, miopatia e SCAR.",
-    "contraindications": "Hipersensibilidade a 4-aminoquinolinas; contraindicações variam por rótulo.",
-    "interactions": "Fármacos que prolongam QT, digoxina, antidiabéticos, antiepilépticos e antiácidos.",
-    "monitoring": "Exame oftalmológico basal/periódico, hemograma, fígado/rim, glicose, força muscular e ECG se risco.",
-    "administration": "VO com alimento/leite; não confundir sal com base.",
-    "preparation": "Comprimido pronto.",
-    "infusionProtocol": "Não aplicável.",
-    "pregnancy": "Uso pode ser apropriado em doença reumática; individualizar.",
-    "lactation": "Geralmente compatível em indicações reumatológicas.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "HOMOLOGADO CLINICAMENTE por Dr Guilherme em 19-09-2026, aprovação integral sem exceções. Integração técnica liberada com preservação obrigatória das restrições granulares.",
-    "alerts": "Retinopatia irreversível, cardiomiopatia/QT, hipoglicemia, miopatia e SCAR. Dose bloqueada sem indicação, peso real, sal/base, rim/fígado, retina, QT e interações.",
+    "name": "Hidroxicloroquina sulfato - comprimido 200 mg",
+    "class": "Antimalarico e imunomodulador",
+    "pharmacologicClass": "4-aminoquinolina",
+    "mechanism": "Em malaria interfere em processos do parasita no vacuolo digestivo; em doencas autoimunes modula vias lisossomais e sinalizacao imune.",
+    "pharmacodynamics": "Efeito antirreumatico e cumulativo e pode levar semanas-meses; toxicidade retiniana depende de dose diaria, duracao e fatores de risco.",
+    "pharmacokinetics": "Ampla distribuicao tecidual e meia-vida terminal prolongada; eliminacao envolve rim e metabolismo, portanto insuficiencia renal aumenta risco de acumulacao/toxicidade.",
+    "indications": "Malaria sensivel; profilaxia em areas apropriadas; artrite reumatoide adulta; lupus eritematoso sistemico e discoide adultos.",
+    "commercialNames": "Produto generico/PLAQUENIL EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimido revestido VO.",
+    "presentations": "200 mg de sulfato de hidroxicloroquina por comprimido.",
+    "dose": "AR adulto: inicial 400-600 mg/dia; manutencao 200-400 mg/dia. LES/discoide: 200 mg 1x/dia ou 400 mg/dia 1-2 tomadas. Profilaxia malaria adulto: 400 mg 1x/semana, iniciar 2 semanas antes, durante exposicao e 4 semanas depois. Doses diarias >=5 mg/kg de peso real aumentam risco de retinopatia.",
+    "pediatricDose": "Malaria >=31 kg: profilaxia 6,5 mg/kg ate 400 mg 1x/semana. Tratamento: 13 mg/kg ate 800 mg inicial, depois 6,5 mg/kg ate 400 mg em 6 h, 24 h e 48 h; total 31 mg/kg ate 2000 mg. <31 kg: comprimido 200 mg nao recomendado por exceder dose e nao poder ser dividido.",
+    "renalDose": "Nao ha tabela numerica de ajuste no rotulo; insuficiencia renal e fator de risco para retinopatia e pode exigir reducao/monitorizacao individualizada.",
+    "hepaticDose": "Pode ser necessaria reducao em hepatopatia ou uso concomitante de hepatotoxicos; sem algoritmo numerico universal.",
+    "commonAdverseEffects": "Nausea, dor abdominal, diarreia, cefaleia e rash.",
+    "dangerousAdverseEffects": "Retinopatia irreversivel, cardiomiopatia/arrítmias e QT prolongado, hipoglicemia grave, reacoes cutaneas graves, mielossupressao e miopatia/neuropatia.",
+    "adverseEffects": "Alteracoes pigmentares, prurido, alopecia e sintomas neuropsiquiatricos podem ocorrer.",
+    "contraindications": "Hipersensibilidade a compostos 4-aminoquinolinicos ou componentes do produto.",
+    "interactions": "Farmacos que prolongam QT aumentam risco; tamoxifeno aumenta risco retiniano; antidiabeticos podem aumentar hipoglicemia; digoxina e outros substratos/interacoes exigem monitorizacao.",
+    "monitoring": "Exame ocular basal no primeiro ano; anual desde o inicio se alto risco, ou pode adiar ate 5 anos sem fatores relevantes. Monitorar ECG/coracao conforme risco, glicemia, hemograma e forca muscular.",
+    "administration": "VO com alimento ou leite. Nao esmagar nem dividir o comprimido do rotulo consultado.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados observacionais nao demonstram sinal claro de grandes malformacoes, mas o uso deve ser individualizado pela indicacao e risco materno-fetal.",
+    "lactation": "Passa ao leite em pequenas quantidades; considerar indicacao materna, idade do lactente e exposicao cumulativa.",
+    "specialPopulations": "Risco retiniano aumenta com dose >=5 mg/kg real, uso >5 anos, insuficiencia renal, tamoxifeno ou maculopatia.",
+    "patientEducation": "Relatar alteracao visual, palpitacoes/sincope, hipoglicemia, fraqueza muscular ou rash grave; manter rastreio oftalmologico.",
+    "clinicalPearls": "O limite de 5 mg/kg de peso real e marcador de risco de retinopatia, nao uma dose-alvo universal para todas as indicacoes.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "RETINOPATIA; QT_CARDIOMIOPATIA; HIPOGLICEMIA; PESO_REAL_5MGKG_RISCO; PEDIATRIA_MALARIA_31KG.",
+    "alerts": "Nao usar 5 mg/kg como posologia automatica de AR/LES; e limiar de risco retiniano no rotulo.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+      "DailyMed/NLM EUA - Hydroxychloroquine sulfate tablets, atual em 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
   },
   "es": {
-    "name": "Hidroxicloroquina",
-    "class": "Antipalúdico/inmunomodulador",
-    "pharmacologicClass": "Modula lisosomas y señalización inmune",
-    "mechanism": "Modula lisosomas y señalización inmune. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Gran volumen de distribución y semivida terminal larga, ~40-50 días.",
-    "indications": "Malaria sensible, lupus eritematoso y artritis reumatoide; no indicada para COVID-19.",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "presentations": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "dose": "Lupus/AR: 200-400 mg/día VO; usar mínima dosis eficaz. Riesgo retiniano considera peso real y exposición acumulada.",
-    "pediatricDose": "Malaria tiene pautas por peso; enfermedades reumatológicas pediátricas requieren especialista. AUTOMATABLE=NO.",
-    "renalDose": "Puede requerir reducción en ERC prolongada; vigilar toxicidad.",
-    "hepaticDose": "Precaución y posible reducción.",
-    "commonAdverseEffects": "Náusea, diarrea, cefalea y erupción.",
-    "dangerousAdverseEffects": "Retinopatía irreversible, miocardiopatía/QT, hipoglucemia, miopatía y SCAR.",
-    "adverseEffects": "Náusea, diarrea, cefalea y erupción. Graves: Retinopatía irreversible, miocardiopatía/QT, hipoglucemia, miopatía y SCAR.",
-    "contraindications": "Hipersensibilidad a 4-aminoquinolinas; contraindicaciones varían por ficha.",
-    "interactions": "Fármacos que prolongan QT, digoxina, antidiabéticos, antiepilépticos y antiácidos.",
-    "monitoring": "Examen oftalmológico basal/periódico, hemograma, hígado/riñón, glucosa, fuerza muscular y ECG si riesgo.",
-    "administration": "VO con alimento/leche; no confundir sal con base.",
-    "preparation": "Comprimido listo.",
-    "infusionProtocol": "No aplicable.",
-    "pregnancy": "Uso puede ser apropiado en enfermedad reumática; individualizar.",
-    "lactation": "Generalmente compatible en indicaciones reumatológicas.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "HOMOLOGADO CLÍNICAMENTE por Dr Guilherme el 19-09-2026, aprobación integral sin excepciones. Integración técnica habilitada con preservación obligatoria de las restricciones granulares.",
-    "alerts": "Retinopatía irreversible, miocardiopatía/QT, hipoglucemia, miopatía y SCAR. Dose bloqueada sem indicação, peso real, sal/base, rim/fígado, retina, QT e interações.",
+    "name": "Hidroxicloroquina sulfato - comprimido 200 mg",
+    "class": "Antimalarico e inmunomodulador",
+    "pharmacologicClass": "4-aminoquinolina",
+    "mechanism": "En malaria interfiere con procesos del parasito en vacuola digestiva; en autoinmunidad modula vias lisosomales y senalizacion inmune.",
+    "pharmacodynamics": "El efecto antirreumatico es acumulativo y puede tardar semanas-meses; toxicidad retiniana depende de dosis diaria, duracion y factores de riesgo.",
+    "pharmacokinetics": "Amplia distribucion tisular y semivida terminal prolongada; eliminacion incluye rinon y metabolismo, por lo que insuficiencia renal aumenta riesgo de acumulacion/toxicidad.",
+    "indications": "Malaria sensible; profilaxis en areas apropiadas; artritis reumatoide adulta; lupus eritematoso sistemico y discoide adultos.",
+    "commercialNames": "Producto generico/PLAQUENIL EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimido recubierto VO.",
+    "presentations": "200 mg de sulfato de hidroxicloroquina por comprimido.",
+    "dose": "AR adulto: inicial 400-600 mg/dia; mantenimiento 200-400 mg/dia. LES/discoide: 200 mg 1 vez/dia o 400 mg/dia en 1-2 tomas. Profilaxis malaria adulto: 400 mg 1 vez/semana, iniciar 2 semanas antes, durante exposicion y 4 semanas despues. Dosis diarias >=5 mg/kg de peso real aumentan riesgo de retinopatia.",
+    "pediatricDose": "Malaria >=31 kg: profilaxis 6,5 mg/kg hasta 400 mg 1 vez/semana. Tratamiento: 13 mg/kg hasta 800 mg inicial, luego 6,5 mg/kg hasta 400 mg a las 6 h, 24 h y 48 h; total 31 mg/kg hasta 2000 mg. <31 kg: comprimido 200 mg no recomendado porque excede dosis y no puede dividirse.",
+    "renalDose": "No hay tabla numerica de ajuste en rotulo; insuficiencia renal es factor de riesgo de retinopatia y puede requerir reduccion/monitorizacion individual.",
+    "hepaticDose": "Puede requerirse reduccion en hepatopatia o uso concomitante de hepatotoxicos; sin algoritmo numerico universal.",
+    "commonAdverseEffects": "Nausea, dolor abdominal, diarrea, cefalea y rash.",
+    "dangerousAdverseEffects": "Retinopatia irreversible, cardiomiopatia/arritmias y QT prolongado, hipoglucemia grave, reacciones cutaneas graves, mielosupresion y miopatia/neuropatia.",
+    "adverseEffects": "Pueden ocurrir cambios pigmentarios, prurito, alopecia y sintomas neuropsiquiatricos.",
+    "contraindications": "Hipersensibilidad a compuestos 4-aminoquinolinicos o componentes del producto.",
+    "interactions": "Farmacos que prolongan QT aumentan riesgo; tamoxifeno aumenta riesgo retiniano; antidiabeticos pueden aumentar hipoglucemia; digoxina y otros sustratos/interacciones requieren monitorizacion.",
+    "monitoring": "Examen ocular basal en primer ano; anual desde inicio si alto riesgo, o puede diferirse hasta 5 anos sin factores relevantes. Monitorizar ECG/corazon segun riesgo, glucemia, hemograma y fuerza muscular.",
+    "administration": "VO con comida o leche. No triturar ni dividir el comprimido del rotulo consultado.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos observacionales no muestran senal clara de malformaciones mayores, pero uso debe individualizarse segun indicacion y riesgo materno-fetal.",
+    "lactation": "Pasa a leche en pequenas cantidades; considerar indicacion materna, edad del lactante y exposicion acumulativa.",
+    "specialPopulations": "Riesgo retiniano aumenta con dosis >=5 mg/kg real, uso >5 anos, insuficiencia renal, tamoxifeno o maculopatia.",
+    "patientEducation": "Comunicar cambio visual, palpitaciones/sincope, hipoglucemia, debilidad muscular o rash grave; mantener control oftalmologico.",
+    "clinicalPearls": "El limite de 5 mg/kg de peso real es marcador de riesgo de retinopatia, no una dosis objetivo universal para todas las indicaciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "RETINOPATIA; QT_CARDIOMIOPATIA; HIPOGLUCEMIA; PESO_REAL_5MGKG_RIESGO; PEDIATRIA_MALARIA_31KG.",
+    "alerts": "No usar 5 mg/kg como posologia automatica de AR/LES; es umbral de riesgo retiniano del rotulo.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+      "DailyMed/NLM EUA - Hydroxychloroquine sulfate tablets, atual em 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
   },
   "name": {
-    "pt": "Hidroxicloroquina",
-    "es": "Hidroxicloroquina"
+    "pt": "Hidroxicloroquina sulfato - comprimido 200 mg",
+    "es": "Hidroxicloroquina sulfato - comprimido 200 mg"
   },
   "keywords": [
     "hidroxicloroquina"
   ],
-  "dataVersion": "clinical-data-v1-750031a7bf922def",
-  "clinicalContentSha256": "750031a7bf922defdb092c6fd958af62e3db0dc50a2c50ff2d76792ddb67012e",
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
   "source": "medcases-calculadora",
   "schema": "legacy-v1",
   "sourceModule": "analgesicos.js",
@@ -94,12 +94,294 @@
     "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/analgesicos.js",
     "sourceField": "hidroxicloroquina.mcGoldClinicalV1",
-    "lote": "040",
     "requiredFields": 33,
-    "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "hidroxicloroquina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "HIDROXICLOROQUINA SULFATO 200 MG VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+        "QT_ALTO_RISCO",
+        "RETINOPATIA_ALTO_RISCO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/analgesicos.js",
+      "sourceField": "hidroxicloroquina.mcGoldClinicalV1",
+      "lote": "040",
+      "requiredFields": 33,
+      "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   }
 }

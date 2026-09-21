@@ -1,0 +1,369 @@
+{
+  "id": "colistimetato_sodico",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "colistimetato_sodico"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Colistimetato sodico para injecao - dose expressa em atividade de colistina base",
+    "class": "Antibiotico polimixina",
+    "pharmacologicClass": "Pro-farmaco de colistina; polimixina E",
+    "mechanism": "A colistina ativa interage com lipopolissacarideo e membrana externa de bacilos Gram-negativos, aumentando permeabilidade e morte celular.",
+    "pharmacodynamics": "Atividade depende do patogeno e concentracao; nefrotoxicidade e neurotoxicidade limitam o uso.",
+    "pharmacokinetics": "Colistimetato e convertido in vivo a colistina ativa e eliminado principalmente por via renal; insuficiencia renal exige ajuste.",
+    "indications": "Tratamento de infeccoes graves por bacilos Gram-negativos suscetiveis quando apropriado ao contexto microbiologico.",
+    "commercialNames": "Produtos genericos/Coly-Mycin M nos EUA; nao inferir marcas BR/AR.",
+    "presentation": "Po liofilizado para solucao IM ou IV.",
+    "presentations": "Frasco equivalente a 150 mg de atividade de colistina base (CBA).",
+    "dose": "Funcao renal normal: 2,5-5 mg/kg/dia de CBA em 2-4 doses. Em obesidade, usar peso ideal conforme rotulo.",
+    "pediatricDose": "Mesmo intervalo rotulado de 2,5-5 mg/kg/dia de CBA em 2-4 doses para pacientes pediatricos com funcao renal normal; AUTOMATABLE=NO ate validar idade, peso e funcao renal.",
+    "renalDose": "ClCr >=80: 2,5-5 mg/kg/dia em 2-4 doses; 50-79: 2,5-3,8 mg/kg/dia em 2 doses; 30-49: 2,5 mg/kg/dia 1x/dia ou 2 doses; 10-29: 1,5 mg/kg a cada 36 h. Valores em CBA.",
+    "hepaticDose": "Sem algoritmo numerico especifico no rotulo consultado.",
+    "commonAdverseEffects": "Nefrotoxicidade, parestesias e fraqueza podem ocorrer.",
+    "dangerousAdverseEffects": "Insuficiencia renal, neurotoxicidade, bloqueio neuromuscular e depressao respiratoria.",
+    "adverseEffects": "Tontura, fala arrastada e parestesias periorais foram descritas.",
+    "contraindications": "Hipersensibilidade ao colistimetato/colistina; consultar rotulo completo do produto.",
+    "interactions": "Outros nefro/neurotoxicos e bloqueadores neuromusculares podem aumentar risco.",
+    "monitoring": "Creatinina/ClCr, diurese, sinais neurotoxicos e resposta microbiologica.",
+    "administration": "IM ou IV. Para IV intermitente, o rotulo permite metade da dose diaria a cada 12 h, injetada lentamente em 3-5 min, conforme esquema do produto.",
+    "preparation": "Reconstituir frasco de 150 mg CBA com 2 mL de agua esteril; concentracao resultante 75 mg/mL CBA.",
+    "infusionProtocol": "Rotulo tambem descreve infusao continua apos dose inicial; nao automatizar sem protocolo institucional validado.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Obesidade: basear dose em peso ideal; funcao renal e determinante de dose.",
+    "patientEducation": "Uso hospitalar; relatar fraqueza, dificuldade respiratoria, formigamento e reducao de diurese.",
+    "clinicalPearls": "O rotulo expressa dose em atividade de colistina base. Nao converter diretamente para mg de colistimetato sodico sem equivalencia validada.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CBA_OBRIGATORIA; RENAL_AJUSTE; NEFROTOXICIDADE; NEUROTOXICIDADE; BLOQUEIO_NEUROMUSCULAR.",
+    "alerts": "AUTOMACAO deve armazenar unidade CBA e funcao renal; nao aceitar 'mg' ambiguo sem unidade-base.",
+    "references": [
+      "DailyMed/NLM EUA - Colistimethate for Injection, label atualizado 26-03-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5"
+  },
+  "es": {
+    "name": "Colistimetato sodico para inyeccion - dosis expresada en actividad de colistina base",
+    "class": "Antibiotico polimixina",
+    "pharmacologicClass": "Profarmaco de colistina; polimixina E",
+    "mechanism": "La colistina activa interactua con lipopolisacarido y membrana externa de bacilos Gram-negativos, aumentando permeabilidad y muerte celular.",
+    "pharmacodynamics": "Actividad depende del patogeno y concentracion; nefrotoxicidad y neurotoxicidad limitan uso.",
+    "pharmacokinetics": "Colistimetato se convierte in vivo a colistina activa y se elimina principalmente por via renal; insuficiencia renal exige ajuste.",
+    "indications": "Tratamiento de infecciones graves por bacilos Gram-negativos susceptibles cuando corresponde al contexto microbiologico.",
+    "commercialNames": "Productos genericos/Coly-Mycin M en EE.UU.; no inferir marcas BR/AR.",
+    "presentation": "Polvo liofilizado para solucion IM o IV.",
+    "presentations": "Vial equivalente a 150 mg de actividad de colistina base (CBA).",
+    "dose": "Funcion renal normal: 2,5-5 mg/kg/dia de CBA en 2-4 dosis. En obesidad, usar peso ideal segun rotulo.",
+    "pediatricDose": "Mismo intervalo rotulado de 2,5-5 mg/kg/dia de CBA en 2-4 dosis para pacientes pediatricos con funcion renal normal; AUTOMATABLE=NO hasta validar edad, peso y funcion renal.",
+    "renalDose": "CrCl >=80: 2,5-5 mg/kg/dia en 2-4 dosis; 50-79: 2,5-3,8 mg/kg/dia en 2 dosis; 30-49: 2,5 mg/kg/dia 1 vez/dia o 2 dosis; 10-29: 1,5 mg/kg cada 36 h. Valores en CBA.",
+    "hepaticDose": "Sin algoritmo numerico especifico en rotulo consultado.",
+    "commonAdverseEffects": "Pueden ocurrir nefrotoxicidad, parestesias y debilidad.",
+    "dangerousAdverseEffects": "Insuficiencia renal, neurotoxicidad, bloqueo neuromuscular y depresion respiratoria.",
+    "adverseEffects": "Se describieron mareo, habla pastosa y parestesias periorales.",
+    "contraindications": "Hipersensibilidad a colistimetato/colistina; consultar rotulo completo del producto.",
+    "interactions": "Otros nefro/neurotoxicos y bloqueadores neuromusculares pueden aumentar riesgo.",
+    "monitoring": "Creatinina/CrCl, diuresis, signos neurotoxicos y respuesta microbiologica.",
+    "administration": "IM o IV. Para IV intermitente, el rotulo permite mitad de dosis diaria cada 12 h, inyectada lentamente en 3-5 min, segun pauta del producto.",
+    "preparation": "Reconstituir vial de 150 mg CBA con 2 mL de agua esteril; concentracion resultante 75 mg/mL CBA.",
+    "infusionProtocol": "El rotulo tambien describe infusion continua tras dosis inicial; no automatizar sin protocolo institucional validado.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Obesidad: basar dosis en peso ideal; funcion renal determina dosis.",
+    "patientEducation": "Uso hospitalario; comunicar debilidad, dificultad respiratoria, hormigueo y disminucion de diuresis.",
+    "clinicalPearls": "El rotulo expresa dosis en actividad de colistina base. No convertir directamente a mg de colistimetato sodico sin equivalencia validada.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CBA_OBLIGATORIA; AJUSTE_RENAL; NEFROTOXICIDAD; NEUROTOXICIDAD; BLOQUEO_NEUROMUSCULAR.",
+    "alerts": "AUTOMATIZACION debe almacenar unidad CBA y funcion renal; no aceptar 'mg' ambiguo sin unidad-base.",
+    "references": [
+      "DailyMed/NLM EUA - Colistimethate for Injection, label atualizado 26-03-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8ec7dc90-825c-422e-9f4b-c8ace9d93af5"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Colistimetato sodico para injecao - dose expressa em atividade de colistina base",
+    "es": "Colistimetato sodico para inyeccion - dosis expresada en actividad de colistina base"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "colistimetato_sodico.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "colistimetato_sodico",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Colistimetato IM/IV - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "UNIDADE_CBA_OBRIGATORIA",
+        "RENAL_CALCULO_EXIGE_CLCR"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

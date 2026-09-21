@@ -41,7 +41,7 @@ const ids = allowlist.ids;
 assert(Array.isArray(ids), 'allowlist ids must be array');
 assert(ids.length === 60, `allowlist count expected 60, got ${ids.length}`);
 assert(new Set(ids).size === 60, 'allowlist ids must be unique');
-assert(catalogIds.size === 838, `catalog count expected 838, got ${catalogIds.size}`);
+assert(catalogIds.size === 1018, `catalog count expected 1018, got ${catalogIds.size}`);
 
 const sorted = [...ids].sort();
 assert(JSON.stringify(ids) === JSON.stringify(sorted), 'allowlist ids must be sorted');
@@ -117,7 +117,7 @@ for (const id of ids) {
 assert(violations.length === 0, `Free antimicrobial violations: ${violations.join(', ')}`);
 
 const premiumOnly = [...catalogIds].filter((id) => !new Set(ids).has(id));
-assert(premiumOnly.length === 778, `premium-only count expected 778, got ${premiumOnly.length}`);
+assert(premiumOnly.length === 958, `premium-only count expected 958, got ${premiumOnly.length}`);
 
 console.log('FREE60_ALLOWLIST_V2_TEST=PASS');
 console.log(`FREE60_IDS_SHA256=${sha}`);

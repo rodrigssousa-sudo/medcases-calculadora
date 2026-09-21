@@ -1,0 +1,384 @@
+{
+  "id": "zinco_solucao_oral",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "zinco_solucao_oral"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Zinco - solução oral (dose em zinco elementar)",
+    "class": "Suplemento mineral terapêutico",
+    "pharmacologicClass": "Repositor de zinco",
+    "mechanism": "Fornece zinco elementar, cofator de múltiplas enzimas e processos de integridade epitelial/imune.",
+    "pharmacodynamics": "Na diarreia infantil, suplementação adjuvante reduz desfechos de duração/severidade em evidência que sustenta recomendação da OMS; a dose atual foi reduzida em guideline recente.",
+    "pharmacokinetics": "",
+    "indications": "Adjuvante no tratamento de diarreia aquosa aguda ou persistente em crianças até 10 anos conforme guideline OMS.",
+    "commercialNames": "Nenhum produto comercial específico foi fixado; a concentração da solução oral deve ser confirmada no produto dispensado.",
+    "presentation": "Solução oral contendo sal de zinco com dose expressa em zinco elementar.",
+    "presentations": "Concentração não fixada nesta ficha. Documentos de prequalificação WHO citam exemplos como 5 mg/2,5 mL ou 5 mg/5 mL, mas isso não autoriza assumir qualquer uma delas para produto local.",
+    "dose": "A recomendação pesquisada é pediátrica; não há dose adulta universal desta ficha.",
+    "pediatricDose": "OMS 2024/2025: crianças até 10 anos com diarreia aquosa aguda ou persistente: 5 mg de zinco elementar VO 1x/dia por até 14 dias (recomendação condicional para dose, baixa certeza; uso de zinco como adjuvante é recomendação forte). CONVERSAO_ML=BLOQUEADA sem concentração do produto. AUTOMATABLE=NO para mL.",
+    "renalDose": "Sem esquema numérico específico no guideline pesquisado; doença renal exige avaliação individual de suplementação.",
+    "hepaticDose": "Sem esquema numérico específico no guideline pesquisado.",
+    "commonAdverseEffects": "Náusea e vômito podem ocorrer com suplementos orais de zinco.",
+    "dangerousAdverseEffects": "Excesso prolongado de zinco pode interferir no cobre e causar alterações hematológicas/neurológicas; não se aplica ao curso curto recomendado sem exposição adicional importante.",
+    "adverseEffects": "Desconforto gastrointestinal e gosto metálico podem ocorrer.",
+    "contraindications": "Hipersensibilidade aos componentes do produto; avaliar condições que alterem metabolismo de minerais.",
+    "interactions": "Zinco pode quelar/interferir na absorção de tetraciclinas, quinolonas e outros minerais; separar horários conforme o medicamento concomitante.",
+    "monitoring": "Resposta clínica da diarreia, tolerância oral e exposição a outras fontes de zinco.",
+    "administration": "VO; medir com dispositivo graduado. Dose deve ser calculada em mg de zinco elementar.",
+    "preparation": "Solução pronta para uso conforme produto. Não converter para mL sem confirmar concentração e equivalência de zinco elementar.",
+    "infusionProtocol": "Não aplicável.",
+    "pregnancy": "Esta ficha é pediátrica para diarreia; não extrapolar recomendação para suplementação gestacional.",
+    "lactation": "Esta ficha é pediátrica para tratamento da criança; não define suplementação materna.",
+    "specialPopulations": "A recomendação OMS pesquisada abrange crianças até 10 anos; não extrapolar para adolescentes/adultos.",
+    "patientEducation": "Usar a seringa/copo do produto, conferir mg de zinco elementar e completar o curso prescrito; procurar avaliação se houver sinais de desidratação ou piora.",
+    "clinicalPearls": "A OMS atualizou a dose: documentos antigos usavam 10-20 mg/dia; guideline novo sugere 5 mg/dia por até 14 dias. Não misturar recomendações históricas.",
+    "guidelineRecommendations": "OMS: zinco oral adjuvante é recomendado em diarreia aquosa aguda e persistente em crianças até 10 anos; 5 mg/dia por até 14 dias é sugestão condicional de baixa certeza.",
+    "safetyFlags": "DOSE_EM_ZINCO_ELEMENTAR; GUIDELINE_ATUALIZADO_5MG; CONVERSAO_ML_BLOQUEADA.",
+    "alerts": "Concentração do produto não definida. Não gerar volume em mL nem gotas automaticamente.",
+    "references": [
+      "WHO - Guideline on management of pneumonia and diarrhoea in children up to 10 years, publicação 2024/2025. https://www.who.int/publications/i/item/9789240103412",
+      "WHO Prequalification - guidance for zinc oral liquid; exemplos de concentração para 5 mg de zinco elementar. https://extranet.who.int/prequal/key-resources/documents/guidance-submission-applications-prequalification-zinc-tablets-and-zinc"
+    ],
+    "ref": "https://www.who.int/publications/i/item/9789240103412"
+  },
+  "es": {
+    "name": "Zinc - solución oral (dosis en zinc elemental)",
+    "class": "Suplemento mineral terapéutico",
+    "pharmacologicClass": "Repositor de zinc",
+    "mechanism": "Aporta zinc elemental, cofactor de múltiples enzimas y procesos de integridad epitelial/inmune.",
+    "pharmacodynamics": "En diarrea infantil, la suplementación adyuvante reduce desenlaces de duración/severidad en evidencia que sustenta recomendación OMS; la dosis actual fue reducida en guía reciente.",
+    "pharmacokinetics": "",
+    "indications": "Adyuvante en tratamiento de diarrea acuosa aguda o persistente en niños hasta 10 años según guía OMS.",
+    "commercialNames": "No se fijó producto comercial específico; confirmar concentración de la solución oral dispensada.",
+    "presentation": "Solución oral con sal de zinc y dosis expresada como zinc elemental.",
+    "presentations": "Concentración no fijada en esta ficha. Documentos de precalificación OMS citan ejemplos como 5 mg/2,5 mL o 5 mg/5 mL, pero no autorizan asumirlas para un producto local.",
+    "dose": "La recomendación investigada es pediátrica; no hay dosis adulta universal en esta ficha.",
+    "pediatricDose": "OMS 2024/2025: niños hasta 10 años con diarrea acuosa aguda o persistente: 5 mg de zinc elemental VO 1 vez/día hasta 14 días (recomendación condicional para dosis, baja certeza; uso de zinc como adyuvante es recomendación fuerte). CONVERSION_ML=BLOQUEADA sin concentración del producto. AUTOMATABLE=NO para mL.",
+    "renalDose": "Sin esquema numérico específico en la guía investigada; enfermedad renal requiere evaluación individual.",
+    "hepaticDose": "Sin esquema numérico específico en la guía investigada.",
+    "commonAdverseEffects": "Pueden ocurrir náuseas y vómitos con suplementos orales de zinc.",
+    "dangerousAdverseEffects": "Exceso prolongado de zinc puede interferir con cobre y causar alteraciones hematológicas/neurológicas; no se aplica al curso corto recomendado sin exposición adicional importante.",
+    "adverseEffects": "Pueden ocurrir molestias gastrointestinales y sabor metálico.",
+    "contraindications": "Hipersensibilidad a componentes del producto; evaluar condiciones que alteren metabolismo de minerales.",
+    "interactions": "Zinc puede quelar/interferir con absorción de tetraciclinas, quinolonas y otros minerales; separar horarios según el medicamento concomitante.",
+    "monitoring": "Respuesta clínica de diarrea, tolerancia oral y exposición a otras fuentes de zinc.",
+    "administration": "VO; medir con dispositivo graduado. La dosis debe calcularse en mg de zinc elemental.",
+    "preparation": "Solución lista para usar según producto. No convertir a mL sin confirmar concentración y equivalencia de zinc elemental.",
+    "infusionProtocol": "No aplica.",
+    "pregnancy": "Esta ficha es pediátrica para diarrea; no extrapolar recomendación a suplementación gestacional.",
+    "lactation": "Esta ficha es pediátrica para tratar al niño; no define suplementación materna.",
+    "specialPopulations": "La recomendación OMS investigada abarca niños hasta 10 años; no extrapolar a adolescentes/adultos.",
+    "patientEducation": "Usar jeringa/vaso del producto, verificar mg de zinc elemental y completar el curso indicado; consultar por signos de deshidratación o empeoramiento.",
+    "clinicalPearls": "OMS actualizó la dosis: documentos antiguos usaban 10-20 mg/día; la guía nueva sugiere 5 mg/día hasta 14 días. No mezclar recomendaciones históricas.",
+    "guidelineRecommendations": "OMS: zinc oral adyuvante está recomendado en diarrea acuosa aguda y persistente en niños hasta 10 años; 5 mg/día hasta 14 días es sugerencia condicional de baja certeza.",
+    "safetyFlags": "DOSIS_EN_ZINC_ELEMENTAL; GUIA_ACTUALIZADA_5MG; CONVERSION_ML_BLOQUEADA.",
+    "alerts": "Concentración del producto no definida. No generar volumen en mL ni gotas automáticamente.",
+    "references": [
+      "WHO - Guideline on management of pneumonia and diarrhoea in children up to 10 years, publicação 2024/2025. https://www.who.int/publications/i/item/9789240103412",
+      "WHO Prequalification - guidance for zinc oral liquid; exemplos de concentração para 5 mg de zinco elementar. https://extranet.who.int/prequal/key-resources/documents/guidance-submission-applications-prequalification-zinc-tablets-and-zinc"
+    ],
+    "ref": "https://www.who.int/publications/i/item/9789240103412"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Zinco - solução oral (dose em zinco elementar)",
+    "es": "Zinc - solución oral (dosis en zinc elemental)"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "zinco_solucao_oral.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "094",
+    "approvedSha256": "3da6ff849b7b2ebe0cd1e631ab92a30692ab207108f99b19ac32cc3bdb9494ce",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "77ce8b5dd5c6dfe5d2fd5feac41818614cca1df731023dd4c839c1fe8059629d",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_094_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": {
+      "lote": 94,
+      "medicamentos": [
+        {
+          "id": "fluticasona_spray_nasal",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "ondansetrona_solucao_oral",
+          "bloqueios_clinicos": [
+            "USO_PEDIATRICO_FORA_DA_QUIMIOTERAPIA_MODERADA_NAO_AUTOMATIZAR",
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "bromoprida_gotas",
+          "bloqueios_clinicos": [
+            "CALCULO_PEDIATRICO_BLOQUEADO",
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "simeticona_emulsao",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "racecadotrila_granulado",
+          "bloqueios_clinicos": [
+            "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "sais_para_reidratacao_oral",
+          "bloqueios_clinicos": [
+            "PREPARACAO_AUTOMATICA_BLOQUEADA_SEM_PRODUTO",
+            "CALCULO_VOLUME_BLOQUEADO_SEM_AVALIACAO_CLINICA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "zinco_solucao_oral",
+          "bloqueios_clinicos": [
+            "CONVERSAO_ML_BLOQUEADA",
+            "CONCENTRACAO_AUTOMATICA_BLOQUEADA"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_0_4MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "dexclorfeniramina_gotas",
+          "bloqueios_clinicos": [
+            "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        },
+        {
+          "id": "loratadina_xarope",
+          "bloqueios_clinicos": [
+            "CONVERSAO_RESTRITA_A_1MG_ML"
+          ],
+          "states": {
+            "PESQUISA": "CONCLUIDA",
+            "REVISAO_CLINICA": "HOMOLOGADA",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          },
+          "technical_mapping": {
+            "entry_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "repository_owner": "A_DEFINIR_PELO_CODEX_NA_INTEGRACAO",
+            "source_executavel": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "derived_private_json": "A_CRIAR_OU_MAPEAR_PELO_CODEX",
+            "mapping_status": "PASS_NEW_ENTRY_HANDOFF_SEM_INVENTAR_DESTINO"
+          }
+        }
+      ],
+      "reconciliacao_canonica": [
+        {
+          "nome_recebido": "cloreto_de_sodio_3_porcento",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Via/formulacao ausente: 3% pode representar solução para inalação, solução nasal 30 mg/mL ou outras soluções.",
+          "dado_faltante": "via + forma farmacêutica + produto/apresentação",
+          "impacto": "Não é seguro pesquisar/atribuir dose, preparo ou administração sob um ID único sem definir escopo."
+        },
+        {
+          "nome_recebido": "dimeticona_gotas",
+          "status": "FILA_RECONCILIACAO_CANONICA",
+          "motivo": "Documentação brasileira consultada usa a denominação histórica dimeticona para produto cujo princípio ativo declarado é simeticona 75 mg/mL; sobreposição canônica com simeticona_emulsao.",
+          "dado_faltante": "decisão canônica: alias versus registro independente; produto/força específicos",
+          "impacto": "Risco de duplicar o mesmo princípio ativo e manter dois esquemas em gotas incompatíveis."
+        }
+      ],
+      "nota": "Aprovação clínica não transforma pendências/restrições granulares em autorização de cálculo ou publicação."
+    },
+    "packageRecordMetadata": {
+      "ID": "zinco_solucao_oral",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques. Aprovação integral, sem exceções informadas. Preservar bloqueios clínicos granulares e restrições documentadas. Integração técnica e publicação continuam separadas.",
+      "PROVENIENCIA": {
+        "tipo": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "data": "20-09-2026",
+        "estado_inicial": "VAZIO",
+        "id": "zinco_solucao_oral",
+        "nome_recebido": "Zinco - solução oral (dose em zinco elementar)",
+        "fontes_consultadas": [
+          "WHO - Guideline on management of pneumonia and diarrhoea in children up to 10 years, publicação 2024/2025. https://www.who.int/publications/i/item/9789240103412",
+          "WHO Prequalification - guidance for zinc oral liquid; exemplos de concentração para 5 mg de zinco elementar. https://extranet.who.int/prequal/key-resources/documents/guidance-submission-applications-prequalification-zinc-tablets-and-zinc"
+        ],
+        "hashes_artefatos": "ver GOLD33_NOVA_LISTA_LOTE_094_PROVENIENCIA.json (sidecar externo; evita hash autorreferencial)"
+      },
+      "BLOQUEIOS_CLINICOS": [
+        "CONVERSAO_ML_BLOQUEADA",
+        "CONCENTRACAO_AUTOMATICA_BLOQUEADA"
+      ],
+      "STATUS_DOCUMENTAL": {
+        "estrutura": "33/33",
+        "revisao_clinica": "HOMOLOGADA",
+        "homologacao_dados": "SIM",
+        "integracao_tecnica": "NAO_INICIADA",
+        "publicacao": "BLOQUEADA"
+      },
+      "HOMOLOGACAO_MEDICA": {
+        "medico_revisor": "Dra Eugenia Marques",
+        "data_revisao": "20-09-2026",
+        "resultado": "APROVADO INTEGRALMENTE",
+        "arquivo_revisado": "094",
+        "excecoes_informadas": 0,
+        "alteracoes_clinicas_pos_parecer": 0,
+        "sha256_candidato_json_revisado": "8ff753377c9d7d30b5adbdfcba23fa290816f3eae9d311320abcb7a3ad76c0ad",
+        "sha256_pdf_revisado": "cf8d1b9142c5a10ce5dedcf349bad841410940be6f65b34fa8c865cdd56ab001"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

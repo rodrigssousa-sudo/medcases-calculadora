@@ -1,0 +1,301 @@
+{
+  "id": "diazepam_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "diazepam_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Diazepam IV",
+    "class": "Benzodiazepínico",
+    "pharmacologicClass": "Modulador alostérico positivo do receptor GABA-A",
+    "mechanism": "Potencializa ação inibitória do GABA no SNC.",
+    "pharmacodynamics": "Potencializa ação inibitória do GABA no SNC.",
+    "pharmacokinetics": "Alta lipossolubilidade, redistribuição rápida; metabolismo hepático com metabólitos ativos e meia-vida prolongada. A formulação injetável contém propilenoglicol/álcool e benzil álcool.",
+    "indications": "Ansiedade aguda, abstinência alcoólica, espasmo muscular, estado epiléptico e sedação/procedimentos conforme bula.",
+    "commercialNames": "",
+    "presentation": "Solução injetável 5 mg/mL para IV/IM; esta entrada é IV.",
+    "presentations": "Solução injetável 5 mg/mL para IV/IM; esta entrada é IV.",
+    "dose": "Estado epiléptico adulto: 5–10 mg IV, repetir se necessário a cada 10–15 min até máximo de 30 mg. Cardioversão: 5–15 mg IV 5–10 min antes. Outras indicações exigem titulação específica.",
+    "pediatricDose": "Estado epiléptico 3 meses–17 anos na rotulagem atual: primeira dose 0,2 mg/kg (máx. 8 mg) IV lenta em 1 min; se necessário 5 min depois, 0,1 mg/kg (máx. 4 mg) em 1 min. Neonatos <=30 dias: segurança/eficácia parenteral não estabelecidas.",
+    "renalDose": "Não há ajuste numérico simples; insuficiência renal pode alterar eliminação de metabólitos e aumentar sedação, especialmente com uso repetido.",
+    "hepaticDose": "Metabolismo hepático: reduzir/titular com cautela na insuficiência hepática; não há algoritmo universal na bula.",
+    "commonAdverseEffects": "Sonolência, ataxia, fadiga e hipotensão.",
+    "dangerousAdverseEffects": "Depressão/apneia respiratória, parada cardíaca, hipotensão grave, dependência/abstinência e reações paradoxais.",
+    "adverseEffects": "Tontura, amnésia, fraqueza e reações locais/flebite.",
+    "contraindications": "Hipersensibilidade, glaucoma agudo de ângulo fechado; não administrar em choque, coma ou intoxicação alcoólica aguda com depressão de sinais vitais.",
+    "interactions": "Opioides e outros depressores do SNC aumentam risco de sedação profunda, depressão respiratória, coma e morte.",
+    "monitoring": "Monitorização respiratória/cardiovascular, nível de sedação; equipamento de ressuscitação disponível.",
+    "administration": "IV lenta em veia calibrosa; para a maioria das indicações, pelo menos 1 min para cada 5 mg (1 mL); evitar pequenas veias, intra-arterial e extravasamento.",
+    "preparation": "Solução pronta 5 mg/mL; não misturar na mesma seringa com outras premedicações; inspecionar solução.",
+    "infusionProtocol": "Injeção IV lenta, não infusão contínua nesta entrada; seguir velocidade indicada e monitorização contínua.",
+    "pregnancy": "Exposição tardia pode causar sedação e abstinência neonatal; usar somente quando necessário.",
+    "lactation": "Diazepam pode estar no leite; risco de sedação/acúmulo no lactente, especialmente com uso repetido.",
+    "specialPopulations": "Idosos, debilitados e doença pulmonar têm maior risco de apneia; neonatos têm metabolismo imaturo.",
+    "patientEducation": "Não dirigir/usar álcool; informar uso de opioides e outros sedativos; uso deve ocorrer em ambiente monitorado quando IV.",
+    "clinicalPearls": "No estado epiléptico pediátrico, a rotulagem atual usa esquema específico por kg e máximos; não transportar doses de tetano/ansiedade.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BENZODIAZEPÍNICO IV: risco de apneia; opioide + benzodiazepínico pode ser fatal.",
+    "alerts": "Automação pediátrica somente para indicação e faixa etária explicitamente documentadas; outras indicações bloqueadas.",
+    "references": [
+      "DailyMed/FDA — Diazepam Injection, USP 5 mg/mL, Hospira; current DailyMed page, label revised April 2023; IV/IM dosing, status epilepticus, administration and warnings; consulted 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+  },
+  "es": {
+    "name": "Diazepam IV",
+    "class": "Benzodiazepina",
+    "pharmacologicClass": "Modulador alostérico positivo del receptor GABA-A",
+    "mechanism": "Potencia la acción inhibitoria del GABA en el SNC.",
+    "pharmacodynamics": "Potencia la acción inhibitoria del GABA en el SNC.",
+    "pharmacokinetics": "Alta liposolubilidad, redistribución rápida; metabolismo hepático con metabolitos activos y semivida prolongada. La formulación inyectable contiene propilenglicol/alcohol y alcohol bencílico.",
+    "indications": "Ansiedad aguda, abstinencia alcohólica, espasmo muscular, estado epiléptico y sedación/procedimientos según ficha.",
+    "commercialNames": "",
+    "presentation": "Solución inyectable 5 mg/mL para IV/IM; este registro es IV.",
+    "presentations": "Solución inyectable 5 mg/mL para IV/IM; este registro es IV.",
+    "dose": "Estado epiléptico adulto: 5–10 mg IV, repetir si es necesario cada 10–15 min hasta máximo 30 mg. Cardioversión: 5–15 mg IV 5–10 min antes. Otras indicaciones requieren titulación específica.",
+    "pediatricDose": "Estado epiléptico 3 meses–17 años en el etiquetado actual: primera dosis 0,2 mg/kg (máx. 8 mg) IV lenta en 1 min; si es necesario 5 min después, 0,1 mg/kg (máx. 4 mg) en 1 min. Neonatos <=30 días: seguridad/eficacia parenteral no establecidas.",
+    "renalDose": "No hay ajuste numérico simple; insuficiencia renal puede alterar eliminación de metabolitos y aumentar sedación, especialmente con uso repetido.",
+    "hepaticDose": "Metabolismo hepático: reducir/titular con cautela en insuficiencia hepática; no hay algoritmo universal en la ficha.",
+    "commonAdverseEffects": "Somnolencia, ataxia, fatiga e hipotensión.",
+    "dangerousAdverseEffects": "Depresión/apnea respiratoria, paro cardíaco, hipotensión grave, dependencia/abstinencia y reacciones paradójicas.",
+    "adverseEffects": "Mareo, amnesia, debilidad y reacciones locales/flebitis.",
+    "contraindications": "Hipersensibilidad, glaucoma agudo de ángulo cerrado; no administrar en shock, coma o intoxicación alcohólica aguda con depresión de signos vitales.",
+    "interactions": "Opioides y otros depresores del SNC aumentan riesgo de sedación profunda, depresión respiratoria, coma y muerte.",
+    "monitoring": "Monitorización respiratoria/cardiovascular, nivel de sedación; equipo de reanimación disponible.",
+    "administration": "IV lenta en vena de buen calibre; para la mayoría de indicaciones, al menos 1 min por cada 5 mg (1 mL); evitar venas pequeñas, vía intraarterial y extravasación.",
+    "preparation": "Solución lista 5 mg/mL; no mezclar en la misma jeringa con otras premedicaciones; inspeccionar solución.",
+    "infusionProtocol": "Inyección IV lenta, no infusión continua en este registro; seguir velocidad indicada y monitorización continua.",
+    "pregnancy": "La exposición tardía puede causar sedación y abstinencia neonatal; usar solo cuando sea necesario.",
+    "lactation": "Diazepam puede estar en leche; riesgo de sedación/acumulación en lactante, especialmente con uso repetido.",
+    "specialPopulations": "Mayores, debilitados y enfermedad pulmonar tienen mayor riesgo de apnea; neonatos tienen metabolismo inmaduro.",
+    "patientEducation": "No conducir/usar alcohol; informar uso de opioides y otros sedantes; el uso IV debe ocurrir en ambiente monitorizado.",
+    "clinicalPearls": "En estado epiléptico pediátrico, el etiquetado actual usa esquema específico por kg y máximos; no trasladar dosis de tétanos/ansiedad.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BENZODIAZEPINA IV: riesgo de apnea; opioide + benzodiazepina puede ser fatal.",
+    "alerts": "Automatización pediátrica solo para indicación y edad explícitamente documentadas; otras indicaciones bloqueadas.",
+    "references": [
+      "DailyMed/FDA — Diazepam Injection, USP 5 mg/mL, Hospira; current DailyMed page, label revised April 2023; IV/IM dosing, status epilepticus, administration and warnings; consulted 20-09-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Diazepam IV",
+    "es": "Diazepam IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "diazepam_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "089",
+    "approvedSha256": "c18b27fc9ff6c2a1e4a79b2fa74b6ee96d0340c1e045b5c6f1211b1487de7b1f",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "bae00c20452a28726d5013d782f392fefa9d797f7679bc5ab81b0ed505019fba",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_089_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "fibrinogenio_humano",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_AUTOMATICO_CONDICIONAL: bloquear se não houver peso, fibrinogênio basal/alvo e potência real do frasco.",
+          "USO_ADQUIRIDO_NAO_LIBERADO: a bula consultada cobre deficiência congênita, não coagulopatia adquirida."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Disponibilidade/registro local AR/BR não confirmados nesta execução.",
+          "Diretriz independente para hemorragia adquirida não incorporada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "fitomenadiona_vitamina_k_iv",
+        "bloqueios_clinicos_reais": [
+          "VIA_IV_RESTRITA: usar IV somente quando SC não for viável e o risco justificar, por boxed warning de anafilaxia.",
+          "NEONATO_IV_AUTOMATICO_BLOQUEADO: a dose neonatal citada é SC/IM, não deve ser convertida para IV."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Marca/apresentação local AR/BR não confirmada.",
+          "Guideline específico de reversão de VKA não incorporado."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "plasma_fresco_congelado",
+        "bloqueios_clinicos_reais": [
+          "DOSE_ADULTO_AUTOMATICA_BLOQUEADA: não existe regime universal no Circular; depende de indicação e laboratório.",
+          "VELOCIDADE_AUTOMATICA_BLOQUEADA: risco de TACO/TRALI e política transfusional individual."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Protocolos locais de hemoterapia AR/BR não foram incorporados.",
+          "Volume real por unidade deve vir do rótulo do componente."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "biperideno_im",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA: regra mg/kg da bula é atribuída a fonte secundária e convive com limites por idade; exige revisão clínica individual."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Diretriz independente não incorporada.",
+          "Disponibilidade AR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "clorpromazina_im",
+        "bloqueios_clinicos_reais": [
+          "ESCALADA_EXTREMA_AUTOMATICA_BLOQUEADA: o rótulo contém doses excepcionalmente altas históricas; exigir decisão clínica especializada.",
+          "PEDIATRIA_IM_AUTOMATICA_BLOQUEADA: não há regime único validado para agitação IM pediátrica."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Bula local AR/BR não confirmada.",
+          "Guideline moderno de agitação não incorporado."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "diazepam_iv",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_AUTOMATICA_RESTRITA_A_STATUS_EPILEPTICUS_3M_17A: outras indicações pediátricas não usar este algoritmo.",
+          "ADMINISTRACAO_IV_EXIGE_MONITORIZACAO_E_RESSUSCITACAO_DISPONIVEL."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação/registros AR/BR não confirmados."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "haloperidol_im",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_IM_BLOQUEADA: ensaios controlados não estabeleceram segurança/eficácia.",
+          "VIA_IV_BLOQUEADA: formulação/rotulagem desta ficha é IM."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação local AR/BR não confirmada.",
+          "Diretriz independente de agitação não incorporada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "midazolam_im",
+        "bloqueios_clinicos_reais": [
+          "CONVERSAO_ML_BLOQUEADA_SE_CONCENTRACAO_NAO_CONFIRMADA.",
+          "PEDIATRIA_AUTOMATICA_BLOQUEADA_FORA_DE_PREMEDICACAO_PROCEDIMENTAL: faixa ampla depende da profundidade de sedação."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Marca/apresentação AR/BR não confirmada."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "olanzapina_im",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_IM_BLOQUEADA: dose segura/eficaz não estabelecida para esta indicação.",
+          "COADMINISTRACAO_BENZODIAZEPINICO_PARENTERAL_BLOQUEADA: risco cardiorrespiratório/sedação excessiva."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação/registros AR/BR não confirmados."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "ziprasidona_im",
+        "bloqueios_clinicos_reais": [
+          "PEDIATRIA_IM_BLOQUEADA: dose segura/eficaz não estabelecida.",
+          "QT_GATING_OBRIGATORIO: contraindicações cardíacas e interações QT devem ser avaliadas antes de liberar dose.",
+          "VIA_IV_BLOQUEADA."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Apresentação/registros AR/BR não confirmados."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "diazepam_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; aprovado integralmente, sem excecoes. Bloqueios granulares e pendencias documentadas permanecem preservados. Integracao tecnica/publicacao nao executadas."
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

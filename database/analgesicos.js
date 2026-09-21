@@ -6228,87 +6228,369 @@
 ;(function(){var db=window.ANALGESICOS_DRUGS_DB;if(!db||!db["hidroxicloroquina"])throw new Error("GOLD33_MISSING_CANONICAL:hidroxicloroquina");db["hidroxicloroquina"].mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "040",
     "requiredFieldCount": 33,
-    "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
-    "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "hidroxicloroquina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "HIDROXICLOROQUINA SULFATO 200 MG VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+        "QT_ALTO_RISCO",
+        "RETINOPATIA_ALTO_RISCO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/analgesicos.js",
+      "sourceField": "hidroxicloroquina.mcGoldClinicalV1",
+      "lote": "040",
+      "requiredFields": 33,
+      "approvedSha256": "461b5b71a16a2584ab55b1880ab4907b74bc2aba957e3419c18eab849cdac855",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   },
   "pt": {
-    "name": "Hidroxicloroquina",
-    "class": "Antimalárico/imunomodulador",
-    "pharmacologicClass": "Modula lisossomos e sinalização imune",
-    "commercialNames": "Não presumir marca regional; usar somente produto correspondente às fontes regulatórias citadas.",
-    "presentation": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "presentations": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "mechanism": "Modula lisossomos e sinalização imune. O efeito deve ser interpretado por indicação, formulação e exposição.",
-    "pharmacodynamics": "Resposta e toxicidade dependem da exposição e população; consultar dose e monitorização.",
-    "pharmacokinetics": "Grande volume de distribuição e meia-vida terminal longa, cerca de 40-50 dias.",
-    "indications": "Malária sensível, lúpus eritematoso e artrite reumatoide; não indicada para COVID-19.",
-    "dose": "Lúpus/AR: 200-400 mg/dia VO; usar menor dose eficaz. Dose retiniana deve considerar peso real e exposição cumulativa.",
-    "pediatricDose": "Malária tem regimes por peso; doenças reumatológicas pediátricas exigem especialista. AUTOMATABLE=NO.",
-    "renalDose": "Pode exigir redução em DRC prolongada; monitorar toxicidade.",
-    "hepaticDose": "Cautela e possível redução.",
-    "commonAdverseEffects": "Náusea, diarreia, cefaleia e rash.",
-    "dangerousAdverseEffects": "Retinopatia irreversível, cardiomiopatia/QT, hipoglicemia, miopatia e SCAR.",
-    "adverseEffects": "Náusea, diarreia, cefaleia e rash. Graves: Retinopatia irreversível, cardiomiopatia/QT, hipoglicemia, miopatia e SCAR.",
-    "contraindications": "Hipersensibilidade a 4-aminoquinolinas; contraindicações variam por rótulo.",
-    "interactions": "Fármacos que prolongam QT, digoxina, antidiabéticos, antiepilépticos e antiácidos.",
-    "monitoring": "Exame oftalmológico basal/periódico, hemograma, fígado/rim, glicose, força muscular e ECG se risco.",
-    "administration": "VO com alimento/leite; não confundir sal com base.",
-    "preparation": "Comprimido pronto.",
-    "infusionProtocol": "Não aplicável.",
-    "pregnancy": "Uso pode ser apropriado em doença reumática; individualizar.",
-    "lactation": "Geralmente compatível em indicações reumatológicas.",
-    "specialPopulations": "Ver pediatria, função renal/hepática, gestação, lactação e idosos; individualizar fragilidade e polifarmácia.",
-    "patientEducation": "Explicar indicação, administração, adesão e sinais de alarme; não alterar dose sem orientação.",
-    "clinicalPearls": "Confirmar produto, concentração, via, indicação, peso e função orgânica antes de calcular ou administrar.",
-    "guidelineRecommendations": "Conteúdo ancorado em bula regulatória primária; protocolo local e microbiologia podem restringir uso.",
-    "safetyFlags": "HOMOLOGADO CLINICAMENTE por Dr Guilherme em 19-09-2026, aprovação integral sem exceções. Integração técnica liberada com preservação obrigatória das restrições granulares.",
-    "alerts": "Retinopatia irreversível, cardiomiopatia/QT, hipoglicemia, miopatia e SCAR. Dose bloqueada sem indicação, peso real, sal/base, rim/fígado, retina, QT e interações.",
+    "name": "Hidroxicloroquina sulfato - comprimido 200 mg",
+    "class": "Antimalarico e imunomodulador",
+    "pharmacologicClass": "4-aminoquinolina",
+    "mechanism": "Em malaria interfere em processos do parasita no vacuolo digestivo; em doencas autoimunes modula vias lisossomais e sinalizacao imune.",
+    "pharmacodynamics": "Efeito antirreumatico e cumulativo e pode levar semanas-meses; toxicidade retiniana depende de dose diaria, duracao e fatores de risco.",
+    "pharmacokinetics": "Ampla distribuicao tecidual e meia-vida terminal prolongada; eliminacao envolve rim e metabolismo, portanto insuficiencia renal aumenta risco de acumulacao/toxicidade.",
+    "indications": "Malaria sensivel; profilaxia em areas apropriadas; artrite reumatoide adulta; lupus eritematoso sistemico e discoide adultos.",
+    "commercialNames": "Produto generico/PLAQUENIL EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimido revestido VO.",
+    "presentations": "200 mg de sulfato de hidroxicloroquina por comprimido.",
+    "dose": "AR adulto: inicial 400-600 mg/dia; manutencao 200-400 mg/dia. LES/discoide: 200 mg 1x/dia ou 400 mg/dia 1-2 tomadas. Profilaxia malaria adulto: 400 mg 1x/semana, iniciar 2 semanas antes, durante exposicao e 4 semanas depois. Doses diarias >=5 mg/kg de peso real aumentam risco de retinopatia.",
+    "pediatricDose": "Malaria >=31 kg: profilaxia 6,5 mg/kg ate 400 mg 1x/semana. Tratamento: 13 mg/kg ate 800 mg inicial, depois 6,5 mg/kg ate 400 mg em 6 h, 24 h e 48 h; total 31 mg/kg ate 2000 mg. <31 kg: comprimido 200 mg nao recomendado por exceder dose e nao poder ser dividido.",
+    "renalDose": "Nao ha tabela numerica de ajuste no rotulo; insuficiencia renal e fator de risco para retinopatia e pode exigir reducao/monitorizacao individualizada.",
+    "hepaticDose": "Pode ser necessaria reducao em hepatopatia ou uso concomitante de hepatotoxicos; sem algoritmo numerico universal.",
+    "commonAdverseEffects": "Nausea, dor abdominal, diarreia, cefaleia e rash.",
+    "dangerousAdverseEffects": "Retinopatia irreversivel, cardiomiopatia/arrítmias e QT prolongado, hipoglicemia grave, reacoes cutaneas graves, mielossupressao e miopatia/neuropatia.",
+    "adverseEffects": "Alteracoes pigmentares, prurido, alopecia e sintomas neuropsiquiatricos podem ocorrer.",
+    "contraindications": "Hipersensibilidade a compostos 4-aminoquinolinicos ou componentes do produto.",
+    "interactions": "Farmacos que prolongam QT aumentam risco; tamoxifeno aumenta risco retiniano; antidiabeticos podem aumentar hipoglicemia; digoxina e outros substratos/interacoes exigem monitorizacao.",
+    "monitoring": "Exame ocular basal no primeiro ano; anual desde o inicio se alto risco, ou pode adiar ate 5 anos sem fatores relevantes. Monitorar ECG/coracao conforme risco, glicemia, hemograma e forca muscular.",
+    "administration": "VO com alimento ou leite. Nao esmagar nem dividir o comprimido do rotulo consultado.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados observacionais nao demonstram sinal claro de grandes malformacoes, mas o uso deve ser individualizado pela indicacao e risco materno-fetal.",
+    "lactation": "Passa ao leite em pequenas quantidades; considerar indicacao materna, idade do lactente e exposicao cumulativa.",
+    "specialPopulations": "Risco retiniano aumenta com dose >=5 mg/kg real, uso >5 anos, insuficiencia renal, tamoxifeno ou maculopatia.",
+    "patientEducation": "Relatar alteracao visual, palpitacoes/sincope, hipoglicemia, fraqueza muscular ou rash grave; manter rastreio oftalmologico.",
+    "clinicalPearls": "O limite de 5 mg/kg de peso real e marcador de risco de retinopatia, nao uma dose-alvo universal para todas as indicacoes.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "RETINOPATIA; QT_CARDIOMIOPATIA; HIPOGLICEMIA; PESO_REAL_5MGKG_RISCO; PEDIATRIA_MALARIA_31KG.",
+    "alerts": "Nao usar 5 mg/kg como posologia automatica de AR/LES; e limiar de risco retiniano no rotulo.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+      "DailyMed/NLM EUA - Hydroxychloroquine sulfate tablets, atual em 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
   },
   "es": {
-    "name": "Hidroxicloroquina",
-    "class": "Antipalúdico/inmunomodulador",
-    "pharmacologicClass": "Modula lisosomas y señalización inmune",
-    "commercialNames": "No presumir marca regional; usar solo producto correspondiente a fuentes regulatorias citadas.",
-    "presentation": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "presentations": "Comprimidos 200 mg de sulfato, equivalentes a 155 mg base.",
-    "mechanism": "Modula lisosomas y señalización inmune. El efecto debe interpretarse por indicación, formulación y exposición.",
-    "pharmacodynamics": "Respuesta y toxicidad dependen de exposición y población; consultar dosis y monitorización.",
-    "pharmacokinetics": "Gran volumen de distribución y semivida terminal larga, ~40-50 días.",
-    "indications": "Malaria sensible, lupus eritematoso y artritis reumatoide; no indicada para COVID-19.",
-    "dose": "Lupus/AR: 200-400 mg/día VO; usar mínima dosis eficaz. Riesgo retiniano considera peso real y exposición acumulada.",
-    "pediatricDose": "Malaria tiene pautas por peso; enfermedades reumatológicas pediátricas requieren especialista. AUTOMATABLE=NO.",
-    "renalDose": "Puede requerir reducción en ERC prolongada; vigilar toxicidad.",
-    "hepaticDose": "Precaución y posible reducción.",
-    "commonAdverseEffects": "Náusea, diarrea, cefalea y erupción.",
-    "dangerousAdverseEffects": "Retinopatía irreversible, miocardiopatía/QT, hipoglucemia, miopatía y SCAR.",
-    "adverseEffects": "Náusea, diarrea, cefalea y erupción. Graves: Retinopatía irreversible, miocardiopatía/QT, hipoglucemia, miopatía y SCAR.",
-    "contraindications": "Hipersensibilidad a 4-aminoquinolinas; contraindicaciones varían por ficha.",
-    "interactions": "Fármacos que prolongan QT, digoxina, antidiabéticos, antiepilépticos y antiácidos.",
-    "monitoring": "Examen oftalmológico basal/periódico, hemograma, hígado/riñón, glucosa, fuerza muscular y ECG si riesgo.",
-    "administration": "VO con alimento/leche; no confundir sal con base.",
-    "preparation": "Comprimido listo.",
-    "infusionProtocol": "No aplicable.",
-    "pregnancy": "Uso puede ser apropiado en enfermedad reumática; individualizar.",
-    "lactation": "Generalmente compatible en indicaciones reumatológicas.",
-    "specialPopulations": "Ver pediatría, función renal/hepática, embarazo, lactancia y ancianos; individualizar fragilidad y polifarmacia.",
-    "patientEducation": "Explicar indicación, administración, adherencia y signos de alarma; no cambiar dosis sin indicación.",
-    "clinicalPearls": "Confirmar producto, concentración, vía, indicación, peso y función orgánica antes de calcular o administrar.",
-    "guidelineRecommendations": "Contenido basado en ficha regulatoria primaria; protocolo local y microbiología pueden restringir uso.",
-    "safetyFlags": "HOMOLOGADO CLÍNICAMENTE por Dr Guilherme el 19-09-2026, aprobación integral sin excepciones. Integración técnica habilitada con preservación obligatoria de las restricciones granulares.",
-    "alerts": "Retinopatía irreversible, miocardiopatía/QT, hipoglucemia, miopatía y SCAR. Dose bloqueada sem indicação, peso real, sal/base, rim/fígado, retina, QT e interações.",
+    "name": "Hidroxicloroquina sulfato - comprimido 200 mg",
+    "class": "Antimalarico e inmunomodulador",
+    "pharmacologicClass": "4-aminoquinolina",
+    "mechanism": "En malaria interfiere con procesos del parasito en vacuola digestiva; en autoinmunidad modula vias lisosomales y senalizacion inmune.",
+    "pharmacodynamics": "El efecto antirreumatico es acumulativo y puede tardar semanas-meses; toxicidad retiniana depende de dosis diaria, duracion y factores de riesgo.",
+    "pharmacokinetics": "Amplia distribucion tisular y semivida terminal prolongada; eliminacion incluye rinon y metabolismo, por lo que insuficiencia renal aumenta riesgo de acumulacion/toxicidad.",
+    "indications": "Malaria sensible; profilaxis en areas apropiadas; artritis reumatoide adulta; lupus eritematoso sistemico y discoide adultos.",
+    "commercialNames": "Producto generico/PLAQUENIL EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimido recubierto VO.",
+    "presentations": "200 mg de sulfato de hidroxicloroquina por comprimido.",
+    "dose": "AR adulto: inicial 400-600 mg/dia; mantenimiento 200-400 mg/dia. LES/discoide: 200 mg 1 vez/dia o 400 mg/dia en 1-2 tomas. Profilaxis malaria adulto: 400 mg 1 vez/semana, iniciar 2 semanas antes, durante exposicion y 4 semanas despues. Dosis diarias >=5 mg/kg de peso real aumentan riesgo de retinopatia.",
+    "pediatricDose": "Malaria >=31 kg: profilaxis 6,5 mg/kg hasta 400 mg 1 vez/semana. Tratamiento: 13 mg/kg hasta 800 mg inicial, luego 6,5 mg/kg hasta 400 mg a las 6 h, 24 h y 48 h; total 31 mg/kg hasta 2000 mg. <31 kg: comprimido 200 mg no recomendado porque excede dosis y no puede dividirse.",
+    "renalDose": "No hay tabla numerica de ajuste en rotulo; insuficiencia renal es factor de riesgo de retinopatia y puede requerir reduccion/monitorizacion individual.",
+    "hepaticDose": "Puede requerirse reduccion en hepatopatia o uso concomitante de hepatotoxicos; sin algoritmo numerico universal.",
+    "commonAdverseEffects": "Nausea, dolor abdominal, diarrea, cefalea y rash.",
+    "dangerousAdverseEffects": "Retinopatia irreversible, cardiomiopatia/arritmias y QT prolongado, hipoglucemia grave, reacciones cutaneas graves, mielosupresion y miopatia/neuropatia.",
+    "adverseEffects": "Pueden ocurrir cambios pigmentarios, prurito, alopecia y sintomas neuropsiquiatricos.",
+    "contraindications": "Hipersensibilidad a compuestos 4-aminoquinolinicos o componentes del producto.",
+    "interactions": "Farmacos que prolongan QT aumentan riesgo; tamoxifeno aumenta riesgo retiniano; antidiabeticos pueden aumentar hipoglucemia; digoxina y otros sustratos/interacciones requieren monitorizacion.",
+    "monitoring": "Examen ocular basal en primer ano; anual desde inicio si alto riesgo, o puede diferirse hasta 5 anos sin factores relevantes. Monitorizar ECG/corazon segun riesgo, glucemia, hemograma y fuerza muscular.",
+    "administration": "VO con comida o leche. No triturar ni dividir el comprimido del rotulo consultado.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos observacionales no muestran senal clara de malformaciones mayores, pero uso debe individualizarse segun indicacion y riesgo materno-fetal.",
+    "lactation": "Pasa a leche en pequenas cantidades; considerar indicacion materna, edad del lactante y exposicion acumulativa.",
+    "specialPopulations": "Riesgo retiniano aumenta con dosis >=5 mg/kg real, uso >5 anos, insuficiencia renal, tamoxifeno o maculopatia.",
+    "patientEducation": "Comunicar cambio visual, palpitaciones/sincope, hipoglucemia, debilidad muscular o rash grave; mantener control oftalmologico.",
+    "clinicalPearls": "El limite de 5 mg/kg de peso real es marcador de riesgo de retinopatia, no una dosis objetivo universal para todas las indicaciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "RETINOPATIA; QT_CARDIOMIOPATIA; HIPOGLUCEMIA; PESO_REAL_5MGKG_RIESGO; PEDIATRIA_MALARIA_31KG.",
+    "alerts": "No usar 5 mg/kg como posologia automatica de AR/LES; es umbral de riesgo retiniano del rotulo.",
     "references": [
-      "1. Fonte regulatória primária consultada em 2026-09-18: https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+      "DailyMed/NLM EUA - Hydroxychloroquine sulfate tablets, atual em 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?labeltype=human&query=hydroxychloroquine+sulfate"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b00366-96ef-41e1-bac6-5d24acdb9e1d"
   }
 };})();
 /* GOLD33_SELECTIVE:hidroxicloroquina:END */
@@ -6582,87 +6864,369 @@
 ;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="leflunomida";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:leflunomida:"+matches.length);drug=matches[0];}else{drug=db&&db["leflunomida"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:leflunomida");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "045",
     "requiredFieldCount": 33,
-    "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
+    "publicationAuthorized": false,
     "clinicalPackagePublicationState": "BLOQUEADA",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "leflunomida",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "LEFLUNOMIDA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "GESTACAO_CONTRAINDICADA",
+        "HEPATOPATIA_ALTO_RISCO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/analgesicos.js",
+      "sourceField": "leflunomida.mcGoldClinicalV1",
+      "lote": "045",
+      "requiredFields": 33,
+      "approvedSha256": "781a871456c31ff4490148a0c60331863631938e1e5bb371917a96e84ff71b14",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "BLOQUEADA",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   },
   "pt": {
-    "name": "Leflunomida",
+    "name": "Leflunomida - comprimido oral",
     "class": "DMARD imunomodulador",
-    "pharmacologicClass": "DMARD imunomodulador",
-    "commercialNames": "Marcas variam por país; confirmar registro local.",
-    "presentation": "Comprimidos 10/20/100 mg conforme produto.",
-    "presentations": "Comprimidos 10/20/100 mg conforme produto.",
-    "mechanism": "O metabólito teriflunomida inibe diidroorotato desidrogenase e síntese de pirimidinas em linfócitos.",
-    "pharmacodynamics": "O metabólito teriflunomida inibe diidroorotato desidrogenase e síntese de pirimidinas em linfócitos.",
-    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida e eliminação na fonte primária aplicável.",
-    "indications": "Artrite reumatoide ativa em adultos.",
-    "dose": "20 mg VO uma vez ao dia; carga opcional 100 mg/dia por 3 dias pode aumentar eventos e deve ser individualizada.",
-    "pediatricDose": "Uso pediátrico não estabelecido para AR; bloqueado.",
-    "renalDose": "Revisar função renal e tabela específica; não inferir ajuste numérico ausente.",
-    "hepaticDose": "Revisar gravidade hepática e bula; não inferir ajuste numérico ausente.",
-    "commonAdverseEffects": "Diarreia, alopecia, náusea, rash e hipertensão.",
-    "dangerousAdverseEffects": "Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia e doença pulmonar intersticial.",
-    "adverseEffects": "Diarreia, alopecia, náusea, rash e hipertensão.; Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia e doença pulmonar intersticial.",
-    "contraindications": "Hipersensibilidade e contraindicações específicas da formulação/indicação conforme bula.",
-    "interactions": "Evitar hepatotóxicos; interação com varfarina e imunossupressores; teriflunomida concomitante não recomendada.",
-    "monitoring": "ALT/AST, hemograma, pressão arterial, gravidez e infecções; eliminação acelerada quando indicada.",
-    "administration": "Administrar somente pela via e formulação rotuladas, respeitando relação com alimentos e técnica quando aplicável.",
-    "preparation": "Seguir instruções específicas do produto; não inferir diluição, estabilidade ou concentração.",
-    "infusionProtocol": "Quando IV, seguir diluição, filtro e velocidade da bula; caso contrário, não aplicável.",
-    "pregnancy": "Avaliar risco fetal, indicação e bula; não usar automaticamente em gestação.",
-    "lactation": "Avaliar excreção, risco do lactente e necessidade materna.",
-    "specialPopulations": "Individualizar em idosos, disfunção renal/hepática, comorbidades e polifarmácia.",
-    "patientEducation": "Orientar adesão, sinais de alarme, interações e quando procurar atendimento.",
-    "clinicalPearls": "Confirmar indicação, formulação, via, população e jurisdição antes de calcular ou substituir.",
-    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável e dentro do escopo regulatório ou off-label claramente identificado.",
-    "safetyFlags": "Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia e doença pulmonar intersticial.",
-    "alerts": "ALT/AST, hemograma, pressão arterial, gravidez e infecções; eliminação acelerada quando indicada.; Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia e doença pulmonar intersticial.",
+    "pharmacologicClass": "Inibidor de sintese de pirimidina via metabolito ativo teriflunomida",
+    "mechanism": "Metabolito ativo inibe diidroorotato desidrogenase, reduzindo sintese de novo de pirimidinas e proliferacao de linfocitos.",
+    "pharmacodynamics": "Efeito imunomodulador e prolongado devido a meia-vida longa do metabolito ativo; eliminacao natural pode levar ate 2 anos sem procedimento acelerado.",
+    "pharmacokinetics": "Rapidamente convertida em teriflunomida, que sofre recirculacao entero-hepatica e eliminacao lenta.",
+    "indications": "Tratamento de adultos com artrite reumatoide ativa.",
+    "commercialNames": "Produto generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos revestidos VO.",
+    "presentations": "10 mg, 20 mg e 100 mg em produtos utilizados para manutencao/carga conforme rotulo.",
+    "dose": "Dose recomendada 20 mg 1x/dia. Baixo risco hepatico/mielossupressao: pode usar carga 100 mg 1x/dia por 3 dias, depois 20 mg/dia. Alto risco, inclusive metotrexato/imunossupressores: iniciar 20 mg/dia sem carga. Maximo 20 mg/dia; se intolerancia, considerar 10 mg/dia.",
+    "pediatricDose": "Seguranca/eficacia pediatrica nao estabelecidas para AR; uso automatico bloqueado.",
+    "renalDose": "Nao ha estudos dedicados suficientes para algoritmo numerico; usar cautela em insuficiencia renal.",
+    "hepaticDose": "Doenca hepatica significativa e ALT >2x LSN antes do inicio sao situacoes de alto risco/contraindicacao conforme rotulo; monitorar ALT intensamente.",
+    "commonAdverseEffects": "Diarreia, nausea, cefaleia, rash, alopecia e elevacao de transaminases.",
+    "dangerousAdverseEffects": "Hepatotoxicidade grave, mielossupressao, infeccoes graves, reacoes cutaneas graves, neuropatia periferica, doenca pulmonar intersticial e toxicidade embriofetal.",
+    "adverseEffects": "Hipertensao e perda de peso podem ocorrer; alteracoes hematologicas exigem vigilancia.",
+    "contraindications": "Gravidez; doenca hepatica grave/ALT basal elevada conforme rotulo; hipersensibilidade.",
+    "interactions": "Metotrexato e outros hepatotoxicos/imunossupressores aumentam risco; rifampicina aumenta exposicao ao metabolito; interacoes via CYP2C8/OAT3/BCRP/OATP e warfarina exigem revisao.",
+    "monitoring": "Teste de gravidez, ALT/AST, hemograma, PA, sinais de infeccao; rastrear TB antes de iniciar conforme rotulo.",
+    "administration": "VO 1x/dia, com ou sem carga conforme perfil de risco.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Contraindicada. Se ocorrer gestacao ou for necessaria eliminacao rapida, realizar procedimento acelerado. Sem procedimento, teriflunomida pode levar ate 2 anos para cair a niveis baixos.",
+    "lactation": "Devido a risco potencial e falta de dados adequados, evitar amamentacao durante tratamento.",
+    "specialPopulations": "Hepatopatia, imunossupressao, risco infeccioso e idade avancada exigem monitorizacao mais estreita.",
+    "patientEducation": "Evitar gravidez; comunicar sinais de infeccao, ictericia, rash grave, falta de ar ou neuropatia. Procedimento de eliminacao pode ser necessario mesmo apos suspender.",
+    "clinicalPearls": "Eliminacao acelerada: colestiramina 8 g VO 3x/dia por 11 dias OU carvao ativado 50 g VO a cada 12 h por 11 dias; confirmar teriflunomida <0,02 mg/L em 2 testes separados por >=14 dias.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "EMBRIOFETAL; HEPATOTOXICIDADE; MIELOSSUPRESSAO; INFECCAO; ELIMINACAO_ACELERADA; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Nao usar carga 100 mg por 3 dias em pacientes de alto risco hepatico/mielossupressao sem avaliacao; maximo de manutencao 20 mg/dia.",
     "references": [
-      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fc044417-cd9a-42f6-8a3d-a14e7c2f81a2"
+      "DailyMed/NLM EUA - Leflunomide tablets, rotulo profissional atual 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=5d48fded-b43b-461a-8488-ca1da5c41a03"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fc044417-cd9a-42f6-8a3d-a14e7c2f81a2"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=5d48fded-b43b-461a-8488-ca1da5c41a03"
   },
   "es": {
-    "name": "Leflunomida",
-    "class": "DMARD imunomodulador",
-    "pharmacologicClass": "DMARD imunomodulador",
-    "commercialNames": "Marcas variam por país; confirmar registro local.",
-    "presentation": "Comprimidos 10/20/100 mg conforme produto.",
-    "presentations": "Comprimidos 10/20/100 mg conforme produto.",
-    "mechanism": "O metabólito teriflunomida inibe diidroorotato desidrogenase y síntese de pirimidinas em linfócitos.",
-    "pharmacodynamics": "O metabólito teriflunomida inibe diidroorotato desidrogenase y síntese de pirimidinas em linfócitos.",
-    "pharmacokinetics": "Farmacocinética dependente da formulação; revisar absorção, metabolismo, meia-vida y eliminação na fonte primária aplicável.",
-    "indications": "Artrite reumatoide ativa em adultos.",
-    "dose": "20 mg VO una vez al día; carga opcional 100 mg/dia por 3 dias pode aumentar eventos y deve ser individualizada.",
-    "pediatricDose": "Uso pediátrico no estabelecido para AR; bloqueado.",
-    "renalDose": "Revisar función renal y tabela específica; no inferir ajuste numérico ausente.",
-    "hepaticDose": "Revisar gravidade hepática y bula; no inferir ajuste numérico ausente.",
-    "commonAdverseEffects": "Diarreia, alopecia, náusea, rash y hipertensão.",
-    "dangerousAdverseEffects": "Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia y doença pulmonar intersticial.",
-    "adverseEffects": "Diarreia, alopecia, náusea, rash y hipertensão.; Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia y doença pulmonar intersticial.",
-    "contraindications": "Hipersensibilidade y contraindicações específicas da formulação/indicação conforme bula.",
-    "interactions": "Evitar hepatotóxicos; interação con varfarina y imunossupressores; teriflunomida concomitante no recomendada.",
-    "monitoring": "ALT/AST, hemograma, pressão arterial, embarazo y infecções; eliminação acelerada quando indicada.",
-    "administration": "Administrar somente pela via y formulação rotuladas, respeitando relação con alimentos y técnica quando aplicável.",
-    "preparation": "Seguir instruções específicas do produto; no inferir diluição, estabilidade ou concentração.",
-    "infusionProtocol": "Quando IV, seguir diluição, filtro y velocidade da bula; caso contrário, no aplicável.",
-    "pregnancy": "Avaliar riesgo fetal, indicação y bula; no usar automaticamente em gestação.",
-    "lactation": "Avaliar excreção, riesgo do lactente y necessidade materna.",
-    "specialPopulations": "Individualizar em idosos, disfunción renal/hepática, comorbidades y polifarmácia.",
-    "patientEducation": "Orientar adesão, sinais de alarme, interações y quando procurar atendimento.",
-    "clinicalPearls": "Confirmar indicação, formulação, via, população y jurisdição antes de calcular ou substituir.",
-    "guidelineRecommendations": "Usar conforme diretriz oficial aplicável y dentro do escopo regulatório ou off-label claramente identificado.",
-    "safetyFlags": "Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia y doença pulmonar intersticial.",
-    "alerts": "ALT/AST, hemograma, pressão arterial, embarazo y infecções; eliminação acelerada quando indicada.; Hepatotoxicidade, teratogenicidade, pancitopenia, infecção grave, neuropatia y doença pulmonar intersticial.",
+    "name": "Leflunomida - comprimido oral",
+    "class": "DMARD inmunomodulador",
+    "pharmacologicClass": "Inhibidor de sintesis de pirimidina via metabolito activo teriflunomida",
+    "mechanism": "Metabolito activo inhibe dihidroorotato deshidrogenasa, reduciendo sintesis de novo de pirimidinas y proliferacion de linfocitos.",
+    "pharmacodynamics": "Efecto inmunomodulador prolongado por semivida larga del metabolito activo; eliminacion natural puede tardar hasta 2 anos sin procedimiento acelerado.",
+    "pharmacokinetics": "Rapidamente convertida en teriflunomida, que sufre recirculacion enterohepatica y eliminacion lenta.",
+    "indications": "Tratamiento de adultos con artritis reumatoide activa.",
+    "commercialNames": "Producto generico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos recubiertos VO.",
+    "presentations": "10 mg, 20 mg y 100 mg en productos usados para mantenimiento/carga segun rotulo.",
+    "dose": "Dosis recomendada 20 mg 1 vez/dia. Bajo riesgo hepatico/mielosupresion: puede usar carga 100 mg 1 vez/dia por 3 dias, luego 20 mg/dia. Alto riesgo, incluido metotrexato/inmunosupresores: iniciar 20 mg/dia sin carga. Maximo 20 mg/dia; si intolerancia, considerar 10 mg/dia.",
+    "pediatricDose": "Seguridad/eficacia pediatrica no establecidas para AR; uso automatico bloqueado.",
+    "renalDose": "No hay estudios dedicados suficientes para algoritmo numerico; usar precaucion en insuficiencia renal.",
+    "hepaticDose": "Enfermedad hepatica significativa y ALT >2x LSN antes de iniciar son situaciones de alto riesgo/contraindicacion segun rotulo; monitorizar ALT intensamente.",
+    "commonAdverseEffects": "Diarrea, nausea, cefalea, rash, alopecia y elevacion de transaminasas.",
+    "dangerousAdverseEffects": "Hepatotoxicidad grave, mielosupresion, infecciones graves, reacciones cutaneas graves, neuropatia periferica, enfermedad pulmonar intersticial y toxicidad embriofetal.",
+    "adverseEffects": "Pueden ocurrir hipertension y perdida de peso; alteraciones hematologicas requieren vigilancia.",
+    "contraindications": "Embarazo; enfermedad hepatica grave/ALT basal elevada segun rotulo; hipersensibilidad.",
+    "interactions": "Metotrexato y otros hepatotoxicos/inmunosupresores aumentan riesgo; rifampicina aumenta exposicion al metabolito; interacciones via CYP2C8/OAT3/BCRP/OATP y warfarina requieren revision.",
+    "monitoring": "Prueba de embarazo, ALT/AST, hemograma, PA, signos de infeccion; detectar TB antes de iniciar segun rotulo.",
+    "administration": "VO 1 vez/dia, con o sin carga segun perfil de riesgo.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Contraindicada. Si ocurre embarazo o se requiere eliminacion rapida, realizar procedimiento acelerado. Sin procedimiento, teriflunomida puede tardar hasta 2 anos en bajar a niveles bajos.",
+    "lactation": "Por riesgo potencial y falta de datos adecuados, evitar lactancia durante tratamiento.",
+    "specialPopulations": "Hepatopatia, inmunosupresion, riesgo infeccioso y edad avanzada requieren monitorizacion mas estrecha.",
+    "patientEducation": "Evitar embarazo; comunicar signos de infeccion, ictericia, rash grave, falta de aire o neuropatia. El procedimiento de eliminacion puede ser necesario incluso tras suspender.",
+    "clinicalPearls": "Eliminacion acelerada: colestiramina 8 g VO 3 veces/dia por 11 dias O carbon activado 50 g VO cada 12 h por 11 dias; confirmar teriflunomida <0,02 mg/L en 2 pruebas separadas por >=14 dias.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "EMBRIOFETAL; HEPATOTOXICIDAD; MIELOSUPRESION; INFECCION; ELIMINACION_ACELERADA; PEDIATRIA_BLOQUEADA.",
+    "alerts": "No usar carga 100 mg por 3 dias en pacientes de alto riesgo hepatico/mielosupresion sin evaluacion; maximo de mantenimiento 20 mg/dia.",
     "references": [
-      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fc044417-cd9a-42f6-8a3d-a14e7c2f81a2"
+      "DailyMed/NLM EUA - Leflunomide tablets, rotulo profissional atual 2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=5d48fded-b43b-461a-8488-ca1da5c41a03"
     ],
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fc044417-cd9a-42f6-8a3d-a14e7c2f81a2"
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?audience=professional&setid=5d48fded-b43b-461a-8488-ca1da5c41a03"
   }
 };})();
 /* GOLD33_SELECTIVE:leflunomida:END */
@@ -7118,105 +7682,377 @@
 ;(function(){var db=window.ANALGESICOS_DRUGS_DB,drug;if(Array.isArray(db)){var matches=db.filter(function(item){return item&&item.id==="metotrexato";});if(matches.length!==1)throw new Error("GOLD33_CANONICAL_CARDINALITY:metotrexato:"+matches.length);drug=matches[0];}else{drug=db&&db["metotrexato"];if(!drug)throw new Error("GOLD33_MISSING_CANONICAL:metotrexato");}drug.mcGoldClinicalV1={
   "meta": {
     "schema": "mc-gold-clinical-v1",
-    "lote": "051",
     "requiredFieldCount": 33,
-    "approvedSha256": "0e709466ba9a2e3777ca8610ef4d4742c39357027402c9b3c87fa7c4cb10deca",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
+    "publicationAuthorized": false,
     "clinicalPackagePublicationState": "BLOQUEADA",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed",
-    "previousApprovedSha256": "e8a21d5e56a67f4cd6ffebc889de4b4f030ae14b8459ad80ac2ba035cf141544",
-    "clinicalUpdate": {
-      "path": "docs/clinical-updates/metotrexato-2026-09-20.json",
-      "reviewer": "Dra Eugenia Marques",
-      "reviewDate": "2026-09-20",
-      "source": "user-provided medical review",
-      "calculationAuthorized": false
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "metotrexato",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "METOTREXATO COMPRIMIDO VO - ESCOPO PRINCIPAL NAO NEOPLASICO EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+        "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+        "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/analgesicos.js",
+      "sourceField": "metotrexato.mcGoldClinicalV1",
+      "lote": "051",
+      "requiredFields": 33,
+      "approvedSha256": "0e709466ba9a2e3777ca8610ef4d4742c39357027402c9b3c87fa7c4cb10deca",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "BLOQUEADA",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed",
+      "previousApprovedSha256": "e8a21d5e56a67f4cd6ffebc889de4b4f030ae14b8459ad80ac2ba035cf141544",
+      "clinicalUpdate": {
+        "path": "docs/clinical-updates/metotrexato-2026-09-20.json",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-20",
+        "source": "user-provided medical review",
+        "calculationAuthorized": false
+      }
     }
   },
   "pt": {
-    "name": "Metotrexato",
-    "class": "Antimetabólito antagonista do folato e imunomodulador",
-    "pharmacologicClass": "Antimetabólito antagonista do folato e imunomodulador",
-    "commercialNames": "Marcas variam por país.",
-    "presentation": "Comprimidos de 2,5 mg; soluções injetáveis de 25 mg/mL e 100 mg/mL. Via autorizada e presença de conservantes dependem do produto; intratecal somente com formulação especificamente adequada e sem conservantes.",
-    "presentations": "Oral: comprimidos de 2,5 mg. Injetável: 25 mg/mL, frascos de 2 mL (50 mg) ou 20 mL (500 mg); 100 mg/mL, frascos de 10 mL (1 g). Confirmar na bula quais vias IV, IM ou SC são autorizadas para cada produto; não presumir que todas as concentrações admitem todas as vias. Intratecal: somente produto sem conservantes, isento de álcool benzílico, com via intratecal autorizada; apresentação informada de 25 mg/mL, 2 mL (50 mg), a diluir conforme bula e protocolo, com solução fisiológica estéril sem conservantes. A concentração de 25 mg/mL não comprova ausência de conservantes. Não usar a apresentação de 100 mg/mL como substituta intratecal. Marcas citadas na revisão: Miantrex® e Metrexato®; confirmar registro, apresentação e disponibilidade locais.",
-    "mechanism": "Mecanismo específico da classe conforme fonte primária e formulação.",
-    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária e formulação.",
-    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida e eliminação na fonte primária.",
-    "indications": "Neoplasias e doenças inflamatórias, incluindo artrite reumatoide e psoríase grave, com regimes distintos.",
-    "dose": "ARTRITE REUMATOIDE: inicial 7,5–15 mg; manutenção até 25 mg, UMA VEZ POR SEMANA (oral, IM ou SC). Suplementação de ácido fólico conforme prescrição; exemplo aprovado: 5 mg/semana no dia seguinte ao metotrexato.\n\nPSORÍASE GRAVE: 10–25 mg UMA VEZ POR SEMANA (oral, IM ou IV), após dose teste de 2,5–5 mg.\n\nDOENÇA DE CROHN: indução 25 mg; manutenção 15 mg, UMA VEZ POR SEMANA (IM ou SC).\n\nOSTEOSSARCOMA: 12 g/m² por infusão IV de 4 horas em protocolo hospitalar, com hidratação vigorosa, alcalinização urinária e resgate obrigatório com ácido folínico. Ciclos e monitorização conforme protocolo oncológico.\n\nLEUCEMIA LINFOBLÁSTICA AGUDA — MANUTENÇÃO: 20 mg/m² UMA VEZ POR SEMANA (oral ou IM), em conjunto com mercaptopurina diária, conforme protocolo oncológico.\n\nGRAVIDEZ ECTÓPICA NÃO ROTA — DOSE ÚNICA: 50 mg/m² IM no dia 1; avaliar hCG nos dias 4 e 7, com queda esperada ≥15% entre os dias 4 e 7. Queda inadequada exige reavaliação clínica para repetição da dose conforme protocolo; não repetir automaticamente.\nGRAVIDEZ ECTÓPICA NÃO ROTA — DUAS DOSES: 50 mg/m² IM nos dias 1 e 4; avaliar hCG nos dias 4 e 7.\nGRAVIDEZ ECTÓPICA NÃO ROTA — MÚLTIPLAS DOSES: 1 mg/kg IM nos dias 1, 3, 5 e 7, alternado com ácido folínico 0,1 mg/kg IM nos dias 2, 4, 6 e 8, conforme resposta e protocolo especializado. Os esquemas são alternativas, não cumulativos.\n\nNEOPLASIA TROFOBLÁSTICA GESTACIONAL DE BAIXO RISCO — CINCO DIAS: 0,4 mg/kg/dia (máximo 30 mg/dia), IM ou IV, por 5 dias consecutivos. Repetir o ciclo a cada 14 dias, com 9 dias sem medicação, conforme avaliação especializada.\nNEOPLASIA TROFOBLÁSTICA GESTACIONAL DE BAIXO RISCO — OITO DIAS: 1 mg/kg/dia IM nos dias 1, 3, 5 e 7, alternado com ácido folínico 0,1 mg/kg IM nos dias 2, 4, 6 e 8; ciclo a cada 14 dias, conforme protocolo. Não aplicar esses esquemas indistintamente a toda mola hidatiforme.\n\nLEUCEMIAS/LINFOMAS — PROFILAXIA OU TRATAMENTO DO SNC (INTRATECAL): doses por idade, não por peso ou superfície corporal: <1 ano, 6 mg; 1 a <2 anos, 8 mg; 2 a <3 anos, 10 mg; ≥3 anos e adultos, 12 mg. Alguns protocolos estendem a dose adulta a 15 mg; somente quando expressamente previsto no protocolo oncológico. Frequência depende da fase: exemplos informados de duas vezes por semana na indução e aplicações mensais ou trimestrais na manutenção não são um calendário universal. Usar exclusivamente formulação e diluente sem conservantes; preparo, volume e calendário devem ser validados pela equipe especializada.\n\nSEGURANÇA: nos esquemas semanais, NUNCA administrar diariamente. Confirmar indicação, formulação, via e protocolo antes de cada administração. Ácido fólico e ácido folínico têm funções distintas e não são intercambiáveis. Cálculo automático, conversões de volume e extrapolações entre protocolos permanecem bloqueados.",
-    "pediatricDose": "Intratecal, exclusivamente conforme protocolo oncológico e com produto sem conservantes: <1 ano, 6 mg; 1 a <2 anos, 8 mg; 2 a <3 anos, 10 mg; ≥3 anos, 12 mg. Base por idade, não por peso ou superfície corporal. Não extrapolar para outras vias ou indicações pediátricas. Automação pediátrica e conversões de volume permanecem bloqueadas.",
-    "renalDose": "Avaliar função renal e tabela específica; não inferir ajuste.",
-    "hepaticDose": "Avaliar hepatopatia; não inferir ajuste.",
-    "commonAdverseEffects": "Náusea, estomatite, fadiga, elevação de transaminases e alopecia.",
-    "dangerousAdverseEffects": "Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI e morte por erro diário.",
-    "adverseEffects": "Náusea, estomatite, fadiga, elevação de transaminases e alopecia.; Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI e morte por erro diário.",
-    "contraindications": "Hipersensibilidade e contraindicações específicas da bula.",
-    "interactions": "Revisar interações farmacodinâmicas e metabólicas aplicáveis.",
-    "monitoring": "Monitorar eficácia, tolerabilidade, função orgânica e eventos graves.",
-    "administration": "Usar somente via/formulação rotulada; respeitar técnica e alimentos.",
-    "preparation": "Confirmar concentração, diluição, estabilidade e via na bula do produto. Para via intratecal, utilizar exclusivamente metotrexato e diluente estéreis sem conservantes, isentos de álcool benzílico. Concentração final e volume dependem da bula e do protocolo hospitalar validado; não inferir o volume a partir do LCR retirado, nem aplicar uma faixa universal de 3–12 mL. Conferência independente do produto, dose, diluente e via antes da administração. Não inferir conversões automáticas em mL.",
-    "infusionProtocol": "Quando IV, usar bomba/monitorização e protocolo da bula; caso contrário não aplicável.",
-    "pregnancy": "Avaliar risco fetal, indicação e bula.",
-    "lactation": "Avaliar excreção e risco-benefício.",
-    "specialPopulations": "Individualizar em idosos, comorbidades, gestação e disfunção orgânica.",
-    "patientEducation": "Orientar adesão, sinais de alarme e não interromper abruptamente quando aplicável.",
-    "clinicalPearls": "Formulações e combinações não são automaticamente intercambiáveis.",
-    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação e jurisdição.",
-    "safetyFlags": "Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI e morte por erro diário.",
-    "alerts": "Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI e morte por erro diário.; monitorização obrigatória",
+    "name": "Metotrexato - comprimido oral; escopo nao neoplasico principal",
+    "class": "Antimetabolito e DMARD",
+    "pharmacologicClass": "Antagonista do folato; inibidor da diidrofolato redutase",
+    "mechanism": "Inibe metabolismo do folato e sintese de nucleotideos; em doencas inflamatorias modula proliferacao e vias imunologicas.",
+    "pharmacodynamics": "Efeito anti-inflamatorio em AR/pJIA/psoriase ocorre ao longo de semanas; toxicidade aumenta com dose, frequencia inadequada e depuracao reduzida.",
+    "pharmacokinetics": "Eliminacao renal importante e variavel; insuficiencia renal aumenta exposicao e risco. Interacoes que reduzem depuracao podem elevar toxicidade.",
+    "indications": "Rotulo EUA inclui AR adulta, pJIA, psoriase grave e indicacoes neoplasicas. Esta ficha operacional prioriza regimes nao neoplasicos orais; oncologia exige protocolo separado.",
+    "commercialNames": "Produto generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "Forcas variam por fabricante; o produto consultado inclui comprimidos para posologia semanal.",
+    "dose": "AR adulta: iniciar 7,5 mg VO 1x/semana e ajustar. Doses >20 mg 1x/semana aumentam risco de reacoes graves. Psoriase grave: 10-25 mg VO 1x/semana ate resposta adequada. Administrar acido folico ou folinico para reduzir toxicidade conforme rotulo.",
+    "pediatricDose": "pJIA: iniciar 10 mg/m2 VO 1x/semana e ajustar. Doses >30 mg/m2 1x/semana aumentam risco de reacoes graves, incluindo mielossupressao. AUTOMATABLE=NO ate validar superficie corporal, indicacao e protocolo.",
+    "renalDose": "Insuficiencia renal reduz depuracao e eleva toxicidade; o rotulo exige monitorizacao e pode requerer reducao/suspensao, sem tabela universal unica para todas as indicacoes.",
+    "hepaticDose": "Hepatotoxicidade grave e possivel; alcool e hepatopatia aumentam risco. Monitorar enzimas e interromper/ajustar conforme toxicidade.",
+    "commonAdverseEffects": "Nausea, estomatite/mucosite, fadiga e alteracoes laboratoriais hepaticas/hematologicas.",
+    "dangerousAdverseEffects": "Mielossupressao, infeccoes graves, hepatotoxicidade, pneumonite/doenca pulmonar, nefrotoxicidade, toxicidade GI/pele grave e morte por erro de dose diaria.",
+    "adverseEffects": "Alopecia, rash e fotossensibilidade podem ocorrer.",
+    "contraindications": "Gravidez em doencas nao neoplasicas e historia de hipersensibilidade grave ao metotrexato. Outras restricoes dependem da indicacao e comorbidades.",
+    "interactions": "AINEs, penicilinas, trimetoprima-sulfametoxazol, PPIs e outros nefro/hepatotoxicos podem aumentar toxicidade em contextos especificos; revisar toda medicacao concomitante.",
+    "monitoring": "Hemograma, funcao hepatica, creatinina/eGFR e sinais pulmonares/GI/cutâneos. Confirmar gravidez antes de iniciar em pessoas com potencial reprodutivo.",
+    "administration": "Para AR, pJIA e psoriase: dose SEMANAL, nunca diaria. Confirmar dia da semana em toda prescricao/educacao.",
+    "preparation": "Comprimido pronto para uso; mudanca para via SC/IM/IV pode exigir regime alternativo e nao deve ser automatizada por esta ficha.",
+    "infusionProtocol": "NAO APLICAVEL ao comprimido oral.",
+    "pregnancy": "Em doencas nao neoplasicas e contraindicado por toxicidade embriofetal. Contracepcao: mulheres durante tratamento e 6 meses apos; homens com parceiras com potencial reprodutivo durante tratamento e 3 meses apos, conforme rotulo.",
+    "lactation": "Devido ao potencial de reacoes graves no lactente, o rotulo desaconselha amamentacao durante tratamento e por periodo especificado apos ultima dose; seguir produto atual.",
+    "specialPopulations": "Idosos, insuficiencia renal/hepatica, baixa reserva medular e doenca pulmonar exigem cautela e monitorizacao intensiva.",
+    "patientEducation": "Tomar somente 1x/semana nas indicacoes nao neoplasicas; comunicar febre, ulcera oral, sangramento, tosse/dispneia, rash grave e possibilidade de gestacao.",
+    "clinicalPearls": "Erro diario em vez de semanal ja causou mortes e deve ser bloqueio de interface. Nao misturar regimes oncologicos com AR/pJIA/psoriase.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BOXED_WARNING; SEMANAL_NAO_DIARIO; EMBRIOFETAL; MIELOSSUPRESSAO; HEPATO_PULMONAR_RENAL; PEDIATRIA_M2.",
+    "alerts": "FATALIDADE por erro diario em indicacoes semanais. O motor deve bloquear frequencia diaria para AR/pJIA/psoriase.",
     "references": [
-      "PCDT — Ministério da Saúde/Brasil: Artrite Reumatoide. https://www.gov.br/saude/pt-br/assuntos/pcdt/a/artrite-reumatoide/view",
-      "PCDT — Ministério da Saúde/Brasil: Doença de Crohn. https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-de-crohn",
-      "ACOG Practice Bulletin No. 193: Tubal Ectopic Pregnancy. Referência bibliográfica: https://pubmed.ncbi.nlm.nih.gov/29470343/",
-      "NCCN — protocolos oncológicos indicados pela revisão médica; edição específica não informada. A referência bibliográfica de Gestational Trophoblastic Neoplasia, Version 2.2019, está em https://pubmed.ncbi.nlm.nih.gov/31693991/; não representa validação da edição atual.",
-      "Bulas registradas de Miantrex® e Metrexato® citadas pela revisão médica; conferir bula vigente do produto e jurisdição. Não foi fornecida edição específica.",
-      "DailyMed — Methotrexate Injection, Alembic: requisitos de formulação sem conservantes e preparo intratecal. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a63364d5-4dfa-49d7-8a5e-c8959ae1d37a"
+      "DailyMed/NLM EUA - Methotrexate tablets, atualizado 23-07-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22e10810-16fb-4c84-bccf-972405b77ef8"
     ],
-    "ref": "PCDT — Ministério da Saúde/Brasil: Artrite Reumatoide. https://www.gov.br/saude/pt-br/assuntos/pcdt/a/artrite-reumatoide/view | PCDT — Ministério da Saúde/Brasil: Doença de Crohn. https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-de-crohn | ACOG Practice Bulletin No. 193: Tubal Ectopic Pregnancy. Referência bibliográfica: https://pubmed.ncbi.nlm.nih.gov/29470343/ | NCCN — protocolos oncológicos indicados pela revisão médica; edição específica não informada. A referência bibliográfica de Gestational Trophoblastic Neoplasia, Version 2.2019, está em https://pubmed.ncbi.nlm.nih.gov/31693991/; não representa validação da edição atual. | Bulas registradas de Miantrex® e Metrexato® citadas pela revisão médica; conferir bula vigente do produto e jurisdição. Não foi fornecida edição específica. | DailyMed — Methotrexate Injection, Alembic: requisitos de formulação sem conservantes e preparo intratecal. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a63364d5-4dfa-49d7-8a5e-c8959ae1d37a"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22e10810-16fb-4c84-bccf-972405b77ef8"
   },
   "es": {
-    "name": "Metotrexato",
-    "class": "Antimetabólito antagonista do folato y imunomodulador",
-    "pharmacologicClass": "Antimetabólito antagonista do folato y imunomodulador",
-    "commercialNames": "Marcas variam por país.",
-    "presentation": "Comprimidos de 2,5 mg; soluciones inyectables de 25 mg/mL y 100 mg/mL. La vía autorizada y la presencia de conservantes dependen del producto; uso intratecal solo con formulación específicamente adecuada y sin conservantes.",
-    "presentations": "Oral: comprimidos de 2,5 mg. Inyectable: 25 mg/mL, viales de 2 mL (50 mg) o 20 mL (500 mg); 100 mg/mL, viales de 10 mL (1 g). Confirmar en el prospecto qué vías IV, IM o SC están autorizadas para cada producto; no asumir que todas las concentraciones admiten todas las vías. Intratecal: solo producto sin conservantes, libre de alcohol bencílico, con vía intratecal autorizada; presentación informada de 25 mg/mL, 2 mL (50 mg), para diluir según prospecto y protocolo con solución fisiológica estéril sin conservantes. La concentración de 25 mg/mL no demuestra ausencia de conservantes. No usar la presentación de 100 mg/mL como sustituto intratecal. Marcas citadas en la revisión: Miantrex® y Metrexato®; confirmar registro, presentación y disponibilidad locales.",
-    "mechanism": "Mecanismo específico da classe conforme fonte primária y formulação.",
-    "pharmacodynamics": "Mecanismo específico da classe conforme fonte primária y formulação.",
-    "pharmacokinetics": "Revisar absorção, metabolismo, meia-vida y eliminação na fonte primária.",
-    "indications": "Neoplasias y doenças inflamatórias, incluindo artrite reumatoide y psoríase grave, con regimes distintos.",
-    "dose": "ARTRITIS REUMATOIDE: inicio 7,5–15 mg; mantenimiento hasta 25 mg, UNA VEZ POR SEMANA (oral, IM o SC). Suplementación de ácido fólico según prescripción; ejemplo aprobado: 5 mg/semana al día siguiente del metotrexato.\n\nPSORIASIS GRAVE: 10–25 mg UNA VEZ POR SEMANA (oral, IM o IV), después de una dosis de prueba de 2,5–5 mg.\n\nENFERMEDAD DE CROHN: inducción 25 mg; mantenimiento 15 mg, UNA VEZ POR SEMANA (IM o SC).\n\nOSTEOSARCOMA: 12 g/m² mediante infusión IV de 4 horas en un protocolo hospitalario, con hidratación vigorosa, alcalinización urinaria y rescate obligatorio con ácido folínico. Ciclos y monitorización según el protocolo oncológico.\n\nLEUCEMIA LINFOBLÁSTICA AGUDA — MANTENIMIENTO: 20 mg/m² UNA VEZ POR SEMANA (oral o IM), junto con mercaptopurina diaria, según el protocolo oncológico.\n\nEMBARAZO ECTÓPICO NO ROTO — DOSIS ÚNICA: 50 mg/m² IM el día 1; evaluar hCG los días 4 y 7, con descenso esperado ≥15% entre los días 4 y 7. Un descenso inadecuado requiere reevaluación clínica para repetir la dosis según el protocolo; no repetir automáticamente.\nEMBARAZO ECTÓPICO NO ROTO — DOS DOSIS: 50 mg/m² IM los días 1 y 4; evaluar hCG los días 4 y 7.\nEMBARAZO ECTÓPICO NO ROTO — DOSIS MÚLTIPLES: 1 mg/kg IM los días 1, 3, 5 y 7, alternado con ácido folínico 0,1 mg/kg IM los días 2, 4, 6 y 8, según respuesta y protocolo especializado. Los esquemas son alternativas, no acumulativos.\n\nNEOPLASIA TROFOBLÁSTICA GESTACIONAL DE BAJO RIESGO — CINCO DÍAS: 0,4 mg/kg/día (máximo 30 mg/día), IM o IV, durante 5 días consecutivos. Repetir el ciclo cada 14 días, con 9 días sin medicación, según evaluación especializada.\nNEOPLASIA TROFOBLÁSTICA GESTACIONAL DE BAJO RIESGO — OCHO DÍAS: 1 mg/kg/día IM los días 1, 3, 5 y 7, alternado con ácido folínico 0,1 mg/kg IM los días 2, 4, 6 y 8; ciclo cada 14 días, según protocolo. No aplicar estos esquemas indistintamente a toda mola hidatiforme.\n\nLEUCEMIAS/LINFOMAS — PROFILAXIS O TRATAMIENTO DEL SNC (INTRATECAL): dosis por edad, no por peso ni superficie corporal: <1 año, 6 mg; 1 a <2 años, 8 mg; 2 a <3 años, 10 mg; ≥3 años y adultos, 12 mg. Algunos protocolos amplían la dosis adulta a 15 mg; solo cuando lo establece expresamente el protocolo oncológico. La frecuencia depende de la fase: los ejemplos informados de dos veces por semana en inducción y aplicaciones mensuales o trimestrales en mantenimiento no constituyen un calendario universal. Usar exclusivamente formulación y diluyente sin conservantes; preparación, volumen y calendario deben ser validados por el equipo especializado.\n\nSEGURIDAD: en los esquemas semanales, NUNCA administrar diariamente. Confirmar indicación, formulación, vía y protocolo antes de cada administración. El ácido fólico y el ácido folínico cumplen funciones distintas y no son intercambiables. El cálculo automático, las conversiones de volumen y las extrapolaciones entre protocolos permanecen bloqueados.",
-    "pediatricDose": "Intratecal, exclusivamente según protocolo oncológico y con producto sin conservantes: <1 año, 6 mg; 1 a <2 años, 8 mg; 2 a <3 años, 10 mg; ≥3 años, 12 mg. Base por edad, no por peso ni superficie corporal. No extrapolar a otras vías o indicaciones pediátricas. La automatización pediátrica y las conversiones de volumen permanecen bloqueadas.",
-    "renalDose": "Avaliar función renal y tabela específica; no inferir ajuste.",
-    "hepaticDose": "Avaliar hepatopatia; no inferir ajuste.",
-    "commonAdverseEffects": "Náusea, estomatite, fadiga, elevação de transaminases y alopecia.",
-    "dangerousAdverseEffects": "Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI y morte por erro diário.",
-    "adverseEffects": "Náusea, estomatite, fadiga, elevação de transaminases y alopecia.; Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI y morte por erro diário.",
-    "contraindications": "Hipersensibilidade y contraindicações específicas da bula.",
-    "interactions": "Revisar interações farmacodinâmicas y metabólicas aplicáveis.",
-    "monitoring": "Monitorar eficácia, tolerabilidade, función orgânica y eventos graves.",
-    "administration": "Usar somente via/formulação rotulada; respeitar técnica y alimentos.",
-    "preparation": "Confirmar concentración, dilución, estabilidad y vía en el prospecto del producto. Para uso intratecal, utilizar exclusivamente metotrexato y diluyente estériles sin conservantes, libres de alcohol bencílico. La concentración final y el volumen dependen del prospecto y del protocolo hospitalario validado; no inferir el volumen a partir del LCR extraído ni aplicar un rango universal de 3–12 mL. Verificación independiente del producto, dosis, diluyente y vía antes de administrar. No inferir conversiones automáticas a mL.",
-    "infusionProtocol": "Quando IV, usar bomba/monitorização y protocolo da bula; caso contrário no aplicável.",
-    "pregnancy": "Avaliar riesgo fetal, indicação y bula.",
-    "lactation": "Avaliar excreção y riesgo-benefício.",
-    "specialPopulations": "Individualizar em idosos, comorbidades, gestação y disfunción orgânica.",
-    "patientEducation": "Orientar adesão, sinais de alarme y no interromper abruptamente quando aplicável.",
-    "clinicalPearls": "Formulações y combinações no são automaticamente intercambiáveis.",
-    "guidelineRecommendations": "Usar conforme diretriz oficial da indicação y jurisdição.",
-    "safetyFlags": "Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI y morte por erro diário.",
-    "alerts": "Mielossupressão, hepatotoxicidade, pneumonite, nefrotoxicidade, infecção grave, toxicidade GI y morte por erro diário.; monitorização obrigatória",
+    "name": "Metotrexato - comprimido oral; alcance no neoplasico principal",
+    "class": "Antimetabolito y DMARD",
+    "pharmacologicClass": "Antagonista del folato; inhibidor de dihidrofolato reductasa",
+    "mechanism": "Inhibe metabolismo del folato y sintesis de nucleotidos; en enfermedades inflamatorias modula proliferacion y vias inmunologicas.",
+    "pharmacodynamics": "El efecto antiinflamatorio en AR/pJIA/psoriasis ocurre en semanas; toxicidad aumenta con dosis, frecuencia incorrecta y depuracion reducida.",
+    "pharmacokinetics": "Eliminacion renal importante y variable; insuficiencia renal aumenta exposicion y riesgo. Interacciones que reducen depuracion pueden aumentar toxicidad.",
+    "indications": "Rotulo EE.UU. incluye AR adulta, pJIA, psoriasis grave e indicaciones neoplasicas. Esta ficha operativa prioriza regimenes no neoplasicos orales; oncologia exige protocolo separado.",
+    "commercialNames": "Producto generico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "Potencias varian por fabricante; el producto consultado incluye comprimidos para posologia semanal.",
+    "dose": "AR adulta: iniciar 7,5 mg VO 1 vez/semana y ajustar. Dosis >20 mg 1 vez/semana aumentan riesgo de reacciones graves. Psoriasis grave: 10-25 mg VO 1 vez/semana hasta respuesta adecuada. Administrar acido folico o folinico para reducir toxicidad segun rotulo.",
+    "pediatricDose": "pJIA: iniciar 10 mg/m2 VO 1 vez/semana y ajustar. Dosis >30 mg/m2 1 vez/semana aumentan riesgo de reacciones graves, incluida mielosupresion. AUTOMATABLE=NO hasta validar superficie corporal, indicacion y protocolo.",
+    "renalDose": "Insuficiencia renal reduce depuracion y aumenta toxicidad; el rotulo exige monitorizacion y puede requerir reduccion/suspension, sin tabla universal unica para todas las indicaciones.",
+    "hepaticDose": "Hepatotoxicidad grave posible; alcohol y hepatopatia aumentan riesgo. Monitorizar enzimas y suspender/ajustar segun toxicidad.",
+    "commonAdverseEffects": "Nausea, estomatitis/mucositis, fatiga y alteraciones hepaticas/hematologicas de laboratorio.",
+    "dangerousAdverseEffects": "Mielosupresion, infecciones graves, hepatotoxicidad, neumonitis/enfermedad pulmonar, nefrotoxicidad, toxicidad GI/piel grave y muerte por error de dosis diaria.",
+    "adverseEffects": "Pueden ocurrir alopecia, rash y fotosensibilidad.",
+    "contraindications": "Embarazo en enfermedades no neoplasicas e historia de hipersensibilidad grave a metotrexato. Otras restricciones dependen de indicacion y comorbilidades.",
+    "interactions": "AINEs, penicilinas, trimetoprim-sulfametoxazol, IBP y otros nefro/hepatotoxicos pueden aumentar toxicidad en contextos especificos; revisar toda medicacion concomitante.",
+    "monitoring": "Hemograma, funcion hepatica, creatinina/eGFR y signos pulmonares/GI/cutaneos. Confirmar embarazo antes de iniciar en personas con potencial reproductivo.",
+    "administration": "Para AR, pJIA y psoriasis: dosis SEMANAL, nunca diaria. Confirmar dia de la semana en toda prescripcion/educacion.",
+    "preparation": "Comprimido listo para usar; cambio a via SC/IM/IV puede requerir regimen alternativo y no debe automatizarse con esta ficha.",
+    "infusionProtocol": "NO APLICA al comprimido oral.",
+    "pregnancy": "En enfermedades no neoplasicas esta contraindicado por toxicidad embriofetal. Anticoncepcion: mujeres durante tratamiento y 6 meses despues; hombres con parejas con potencial reproductivo durante tratamiento y 3 meses despues, segun rotulo.",
+    "lactation": "Por potencial de reacciones graves en lactante, el rotulo desaconseja lactancia durante tratamiento y por periodo especificado tras ultima dosis; seguir producto actual.",
+    "specialPopulations": "Mayores, insuficiencia renal/hepatica, baja reserva medular y enfermedad pulmonar requieren precaucion y monitorizacion intensiva.",
+    "patientEducation": "Tomar solo 1 vez/semana en indicaciones no neoplasicas; comunicar fiebre, ulcera oral, sangrado, tos/disnea, rash grave y posibilidad de embarazo.",
+    "clinicalPearls": "El error diario en lugar de semanal ha causado muertes y debe ser bloqueo de interfaz. No mezclar regimenes oncologicos con AR/pJIA/psoriasis.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BOXED_WARNING; SEMANAL_NO_DIARIO; EMBRIOFETAL; MIELOSUPRESION; HEPATO_PULMONAR_RENAL; PEDIATRIA_M2.",
+    "alerts": "FATALIDAD por error diario en indicaciones semanales. El motor debe bloquear frecuencia diaria para AR/pJIA/psoriasis.",
     "references": [
-      "PCDT — Ministério da Saúde/Brasil: Artrite Reumatoide. https://www.gov.br/saude/pt-br/assuntos/pcdt/a/artrite-reumatoide/view",
-      "PCDT — Ministério da Saúde/Brasil: Doença de Crohn. https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-de-crohn",
-      "ACOG Practice Bulletin No. 193: Tubal Ectopic Pregnancy. Referência bibliográfica: https://pubmed.ncbi.nlm.nih.gov/29470343/",
-      "NCCN — protocolos oncológicos indicados pela revisão médica; edição específica não informada. A referência bibliográfica de Gestational Trophoblastic Neoplasia, Version 2.2019, está em https://pubmed.ncbi.nlm.nih.gov/31693991/; não representa validação da edição atual.",
-      "Bulas registradas de Miantrex® e Metrexato® citadas pela revisão médica; conferir bula vigente do produto e jurisdição. Não foi fornecida edição específica.",
-      "DailyMed — Methotrexate Injection, Alembic: requisitos de formulação sem conservantes e preparo intratecal. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a63364d5-4dfa-49d7-8a5e-c8959ae1d37a"
+      "DailyMed/NLM EUA - Methotrexate tablets, atualizado 23-07-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22e10810-16fb-4c84-bccf-972405b77ef8"
     ],
-    "ref": "PCDT — Ministério da Saúde/Brasil: Artrite Reumatoide. https://www.gov.br/saude/pt-br/assuntos/pcdt/a/artrite-reumatoide/view | PCDT — Ministério da Saúde/Brasil: Doença de Crohn. https://www.gov.br/saude/pt-br/assuntos/pcdt/d/doenca-de-crohn | ACOG Practice Bulletin No. 193: Tubal Ectopic Pregnancy. Referência bibliográfica: https://pubmed.ncbi.nlm.nih.gov/29470343/ | NCCN — protocolos oncológicos indicados pela revisão médica; edição específica não informada. A referência bibliográfica de Gestational Trophoblastic Neoplasia, Version 2.2019, está em https://pubmed.ncbi.nlm.nih.gov/31693991/; não representa validação da edição atual. | Bulas registradas de Miantrex® e Metrexato® citadas pela revisão médica; conferir bula vigente do produto e jurisdição. Não foi fornecida edição específica. | DailyMed — Methotrexate Injection, Alembic: requisitos de formulação sem conservantes e preparo intratecal. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=a63364d5-4dfa-49d7-8a5e-c8959ae1d37a"
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=22e10810-16fb-4c84-bccf-972405b77ef8"
   }
 };})();
 /* GOLD33_SELECTIVE:metotrexato:END */

@@ -1,0 +1,369 @@
+{
+  "id": "nifurtimox",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "nifurtimox"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Nifurtimox - LAMPIT 30/120 mg",
+    "class": "Antiprotozoario para doenca de Chagas",
+    "pharmacologicClass": "Nitrofurano antitrypanosomal",
+    "mechanism": "Metabolitos reativos contribuem para dano a T. cruzi; mecanismo completo nao e totalmente definido.",
+    "pharmacodynamics": "Atividade contra T. cruzi; perda de peso, neurotoxicidade e toxicidade embriofetal sao riscos importantes.",
+    "pharmacokinetics": "Uso oral com alimento; dose e reajustada se peso cair durante o tratamento.",
+    "indications": "Rotulo EUA: doenca de Chagas em pacientes desde nascimento a <18 anos e peso >=2,5 kg.",
+    "commercialNames": "LAMPIT, EUA.",
+    "presentation": "Comprimidos revestidos VO.",
+    "presentations": "30 mg e 120 mg.",
+    "dose": "Rotulo EUA nao possui indicacao adulta >=18 anos; AUTOMACAO_ADULTO=BLOQUEADA.",
+    "pediatricDose": "Nascimento termo a <18 anos, >=2,5 kg: >=41 kg = 8-10 mg/kg/dia; <41 kg = 10-20 mg/kg/dia. Dividir em 3 doses/dia com alimento por 60 dias. Reajustar se peso cair.",
+    "renalDose": "",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Nausea, vomitos, dor abdominal, perda de apetite/peso e cefaleia.",
+    "dangerousAdverseEffects": "Neurotoxicidade, hipersensibilidade e toxicidade embriofetal.",
+    "adverseEffects": "Parestesias, tremor, tontura e alteracoes de humor podem ocorrer.",
+    "contraindications": "Hipersensibilidade a nifurtimox/excipientes; revisar rotulo para restricoes reprodutivas.",
+    "interactions": "Evitar alcool e revisar medicamentos com potencial neuro/hepatotoxico; dados completos no rotulo.",
+    "monitoring": "Peso, tolerancia GI, sinais neurologicos e adesao; teste de gravidez/contracepcao conforme rotulo.",
+    "administration": "VO 3x/dia com alimento por 60 dias. Dose esquecida: tomar com alimento, exceto se faltarem <3 h para proxima.",
+    "preparation": "Comprimidos 30/120 mg podem ser divididos conforme linhas/instrucoes do produto para atingir dose por peso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Advertencia de toxicidade embriofetal; cumprir teste/contracepcao conforme rotulo.",
+    "lactation": "",
+    "specialPopulations": "Rótulo regulatorio EUA e pediatrico; adulto exige outra fonte/jurisdicao.",
+    "patientEducation": "Completar 60 dias, tomar com alimento, monitorar peso e relatar formigamento, tremor ou efeitos GI persistentes.",
+    "clinicalPearls": "A dose diaria muda no limiar de 41 kg e o rotulo inclui recem-nascido a termo >=2,5 kg.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CHAGAS; PEDIATRIA; 60_DIAS; PESO_41KG; EMBRIOFETAL; NEUROTOXICIDADE.",
+    "alerts": "ADULTO >=18 anos bloqueado pelo rotulo EUA. Calculo exige peso atual e 3 tomadas/dia.",
+    "references": [
+      "DailyMed/NLM EUA - LAMPIT, effective 03-03-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d09714-a8b1-4696-8ada-f99dc54d0721"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d09714-a8b1-4696-8ada-f99dc54d0721"
+  },
+  "es": {
+    "name": "Nifurtimox - LAMPIT 30/120 mg",
+    "class": "Antiprotozoario para enfermedad de Chagas",
+    "pharmacologicClass": "Nitrofurano antitrypanosomal",
+    "mechanism": "Metabolitos reactivos contribuyen a dano de T. cruzi; mecanismo completo no esta totalmente definido.",
+    "pharmacodynamics": "Actividad contra T. cruzi; perdida de peso, neurotoxicidad y toxicidad embriofetal son riesgos importantes.",
+    "pharmacokinetics": "Uso oral con comida; dosis se reajusta si peso disminuye durante tratamiento.",
+    "indications": "Rotulo EE.UU.: enfermedad de Chagas en pacientes desde nacimiento a <18 anos y peso >=2,5 kg.",
+    "commercialNames": "LAMPIT, EE.UU.",
+    "presentation": "Comprimidos recubiertos VO.",
+    "presentations": "30 mg y 120 mg.",
+    "dose": "Rotulo EE.UU. no posee indicacion adulta >=18 anos; AUTOMATIZACION_ADULTO=BLOQUEADA.",
+    "pediatricDose": "Nacimiento a termino a <18 anos, >=2,5 kg: >=41 kg = 8-10 mg/kg/dia; <41 kg = 10-20 mg/kg/dia. Dividir en 3 dosis/dia con comida durante 60 dias. Reajustar si peso disminuye.",
+    "renalDose": "",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Nausea, vomitos, dolor abdominal, perdida de apetito/peso y cefalea.",
+    "dangerousAdverseEffects": "Neurotoxicidad, hipersensibilidad y toxicidad embriofetal.",
+    "adverseEffects": "Pueden ocurrir parestesias, temblor, mareo y cambios del animo.",
+    "contraindications": "Hipersensibilidad a nifurtimox/excipientes; revisar rotulo para restricciones reproductivas.",
+    "interactions": "Evitar alcohol y revisar medicamentos con potencial neuro/hepatotoxico; datos completos en rotulo.",
+    "monitoring": "Peso, tolerancia GI, signos neurologicos y adherencia; prueba de embarazo/anticoncepcion segun rotulo.",
+    "administration": "VO 3 veces/dia con comida durante 60 dias. Dosis olvidada: tomar con comida, salvo si faltan <3 h para siguiente.",
+    "preparation": "Comprimidos 30/120 mg pueden dividirse segun ranuras/instrucciones del producto para alcanzar dosis por peso.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Advertencia de toxicidad embriofetal; cumplir prueba/anticoncepcion segun rotulo.",
+    "lactation": "",
+    "specialPopulations": "Rotulo regulatorio EE.UU. es pediatrico; adulto exige otra fuente/jurisdiccion.",
+    "patientEducation": "Completar 60 dias, tomar con comida, monitorizar peso y comunicar hormigueo, temblor o efectos GI persistentes.",
+    "clinicalPearls": "La dosis diaria cambia en umbral de 41 kg y el rotulo incluye recien nacido a termino >=2,5 kg.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CHAGAS; PEDIATRIA; 60_DIAS; PESO_41KG; EMBRIOFETAL; NEUROTOXICIDAD.",
+    "alerts": "ADULTO >=18 anos bloqueado por rotulo EE.UU. Calculo exige peso actual y 3 tomas/dia.",
+    "references": [
+      "DailyMed/NLM EUA - LAMPIT, effective 03-03-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d09714-a8b1-4696-8ada-f99dc54d0721"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90d09714-a8b1-4696-8ada-f99dc54d0721"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Nifurtimox - LAMPIT 30/120 mg",
+    "es": "Nifurtimox - LAMPIT 30/120 mg"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "nifurtimox.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "nifurtimox",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "LAMPIT pediatrico - EUA 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "ADULTO_BLOQUEADO",
+        "CALCULO_EXIGE_PESO_ATUAL"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

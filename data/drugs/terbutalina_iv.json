@@ -1,0 +1,279 @@
+{
+  "id": "terbutalina_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "terbutalina_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Terbutalina 0,5 mg/mL IV - tocolise curta",
+    "class": "Agonista beta2 / tocolitico",
+    "pharmacologicClass": "Agonista seletivo beta2 de curta acao",
+    "commercialNames": "Bricanyl Injection, Reino Unido.",
+    "presentation": "Solucao para injecao/infusao; escopo deste candidato e obstetrico IV.",
+    "presentations": "0,5 mg/mL.",
+    "mechanism": "Estimula beta2 e relaxa musculo liso uterino.",
+    "pharmacodynamics": "Reduz contracoes; pode causar taquicardia, hipocalemia, hiperglicemia, isquemia e edema pulmonar.",
+    "pharmacokinetics": "Dose titulada pela resposta uterina e tolerancia materno-fetal.",
+    "indications": "Tratamento de curto prazo de parto prematuro nao complicado entre 22 e 37 semanas em ambiente especializado.",
+    "dose": "Iniciar 5 mcg/min por 20 min; aumentar 2,5 mcg/min a cada 20 min. >10 mcg/min raramente necessario; maximo 20 mcg/min. Apos 1 h de controle, reduzir 2,5 mcg/min a cada 20 min. Duracao <=48 h.",
+    "pediatricDose": "NAO APLICAVEL ao escopo materno obstetrico.",
+    "renalDose": "Sem algoritmo numerico; monitorar fluidos/eletrólitos.",
+    "hepaticDose": "Sem algoritmo numerico.",
+    "commonAdverseEffects": "Tremor, cefaleia, taquicardia, palpitacoes e hipocalemia.",
+    "dangerousAdverseEffects": "Arritmias, isquemia miocardica, hipotensao e edema pulmonar.",
+    "adverseEffects": "Hiperglicemia, lactato elevado, nausea e ansiedade.",
+    "contraindications": "Tocolise <22 semanas; cardiopatia isquemica/alto risco; ameaca de aborto no 1o/2o trimestre; eclampsia/pre-eclampsia grave, infeccao intrauterina, placenta previa com sangramento, descolamento, compressao de cordao, morte fetal/anomalia letal; hipertensao pulmonar/obstrucao cardiaca.",
+    "interactions": "Outros simpaticomimeticos e fármacos que favorecem hipocalemia/arrítmias aumentam risco.",
+    "monitoring": "PA, ECG, eletrólitos, glicose/lactato, balanço hidrico, monitorizacao fetal e FC materna <=120 bpm.",
+    "administration": "IV em hospital com equipe obstetrica experiente e monitorizacao materno-fetal continua; <=48 h.",
+    "preparation": "Syringe pump: 0,1 mg/mL = 10 mL produto + 40 mL D5W; 5 mcg/min = 0,05 mL/min. Sem pump: 0,01 mg/mL = 10 mL + 490 mL D5W. Preferir D5W; evitar saline na gestacao pelo risco de edema pulmonar.",
+    "infusionProtocol": "5 mcg/min; +2,5 mcg/min q20min; maximo 20 mcg/min; apos 1 h de controle, -2,5 mcg/min q20min.",
+    "pregnancy": "Uso tocolitico rotulado 22-37 semanas e <=48 h.",
+    "lactation": "Excretada no leite; efeitos no lactente improvaveis em dose terapeutica segundo SmPC.",
+    "specialPopulations": "Cardiopatia, diabetes, hipocalemia e risco de edema pulmonar exigem cautela.",
+    "patientEducation": "Uso hospitalar temporario; comunicar dor toracica, palpitações fortes ou falta de ar.",
+    "clinicalPearls": "Dose e em mcg/min, nao mg/min; objetivo e tocolise por no maximo 48 h.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "TOCOLISE; 22_37_SEMANAS; MAX_48H; FC_MAX_120; EDEMA_PULMONAR; MCG_MIN.",
+    "alerts": "Maximo 20 mcg/min e duracao <=48 h; nao confundir mcg/min com mg/min.",
+    "references": [
+      "eMC UK - Bricanyl Injection 0.5 mg/mL SmPC. https://www.medicines.org.uk/emc/product/867/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/867/smpc"
+  },
+  "es": {
+    "name": "Terbutalina 0,5 mg/mL IV - tocolisis corta",
+    "class": "Agonista beta2 / tocolitico",
+    "pharmacologicClass": "Agonista selectivo beta2 de corta accion",
+    "commercialNames": "Bricanyl Injection, Reino Unido.",
+    "presentation": "Solucion para inyeccion/infusion; alcance de este candidato es obstetrico IV.",
+    "presentations": "0,5 mg/mL.",
+    "mechanism": "Estimula beta2 y relaja musculo liso uterino.",
+    "pharmacodynamics": "Reduce contracciones; puede causar taquicardia, hipopotasemia, hiperglucemia, isquemia y edema pulmonar.",
+    "pharmacokinetics": "Dosis titulada por respuesta uterina y tolerancia materno-fetal.",
+    "indications": "Tratamiento de corto plazo de parto prematuro no complicado entre 22 y 37 semanas en ambiente especializado.",
+    "dose": "Iniciar 5 mcg/min durante 20 min; aumentar 2,5 mcg/min cada 20 min. >10 mcg/min rara vez necesario; maximo 20 mcg/min. Tras 1 h de control, reducir 2,5 mcg/min cada 20 min. Duracion <=48 h.",
+    "pediatricDose": "NO APLICA al alcance materno obstetrico.",
+    "renalDose": "Sin algoritmo numerico; monitorizar liquidos/electrolitos.",
+    "hepaticDose": "Sin algoritmo numerico.",
+    "commonAdverseEffects": "Temblor, cefalea, taquicardia, palpitaciones e hipopotasemia.",
+    "dangerousAdverseEffects": "Arritmias, isquemia miocardica, hipotension y edema pulmonar.",
+    "adverseEffects": "Hiperglucemia, lactato elevado, nausea y ansiedad.",
+    "contraindications": "Tocolisis <22 semanas; cardiopatia isquemica/alto riesgo; amenaza de aborto en 1er/2do trimestre; eclampsia/preeclampsia grave, infeccion intrauterina, placenta previa con sangrado, desprendimiento, compresion de cordon, muerte fetal/anomalia letal; hipertension pulmonar/obstruccion cardiaca.",
+    "interactions": "Otros simpaticomimeticos y farmacos que favorecen hipopotasemia/arritmias aumentan riesgo.",
+    "monitoring": "PA, ECG, electrolitos, glucosa/lactato, balance hidrico, monitorizacion fetal y FC materna <=120 bpm.",
+    "administration": "IV en hospital con equipo obstetrico experimentado y monitorizacion materno-fetal continua; <=48 h.",
+    "preparation": "Syringe pump: 0,1 mg/mL = 10 mL producto + 40 mL D5W; 5 mcg/min = 0,05 mL/min. Sin pump: 0,01 mg/mL = 10 mL + 490 mL D5W. Preferir D5W; evitar saline en embarazo por riesgo de edema pulmonar.",
+    "infusionProtocol": "5 mcg/min; +2,5 mcg/min q20min; maximo 20 mcg/min; tras 1 h de control, -2,5 mcg/min q20min.",
+    "pregnancy": "Uso tocolitico rotulado 22-37 semanas y <=48 h.",
+    "lactation": "Excretada en leche; efectos en lactante improbables a dosis terapeuticas segun SmPC.",
+    "specialPopulations": "Cardiopatia, diabetes, hipopotasemia y riesgo de edema pulmonar requieren precaucion.",
+    "patientEducation": "Uso hospitalario temporal; comunicar dolor toracico, palpitaciones fuertes o falta de aire.",
+    "clinicalPearls": "Dosis es en mcg/min, no mg/min; objetivo es tocolisis por maximo 48 h.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "TOCOLISIS; 22_37_SEMANAS; MAX_48H; FC_MAX_120; EDEMA_PULMONAR; MCG_MIN.",
+    "alerts": "Maximo 20 mcg/min y duracion <=48 h; no confundir mcg/min con mg/min.",
+    "references": [
+      "eMC UK - Bricanyl Injection 0.5 mg/mL SmPC. https://www.medicines.org.uk/emc/product/867/smpc"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/867/smpc"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Terbutalina 0,5 mg/mL IV - tocolise curta",
+    "es": "Terbutalina 0,5 mg/mL IV - tocolisis corta"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "terbutalina_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "106",
+    "approvedSha256": "f056b1573e8668411220b95238ad0efc83c358a6c9c04f8d4a3051ff091c9f33",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "a874c305ce30f1598b118221fbcd5b8aa5c6074b1fee2b83cb756ec371074d23",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_106_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "ocitocina_iv",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "INDUCAO_EXIGE_MONITORIZACAO_CONTINUA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "sulfato_de_magnesio_obstetricia",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "TOCOLISE_PROLONGADA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "terbutalina_iv",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DURACAO_MAIOR_48H_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "colagenase",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "fluoresceina_colirio",
+        "bloqueios_clinicos": [
+          "FORMULACAO_MONOCOMPONENTE_COLIRIO_NAO_CONFIRMADA",
+          "DOSE_CONCENTRACAO_PREPARO_BLOQUEADOS"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LOCALIZAR_BULA_PRIMARIA_ATUAL_DE_COLIRIO_MONOCOMPONENTE"
+        ],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "lidocaina_gel",
+        "bloqueios_clinicos": [
+          "ESCOPO_DERMATOLOGICO_BLOQUEADO",
+          "VIA_PARENTERAL_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "nitrato_de_prata",
+        "bloqueios_clinicos": [
+          "STATUS_UNAPPROVED_DRUG_OTHER",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "proximetacaina_colirio",
+        "bloqueios_clinicos": [
+          "USO_DOMICILIAR_REPETIDO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "sulfadiazina_de_prata",
+        "bloqueios_clinicos": [
+          "PREMATURO_E_MENOR_2_MESES_CONTRAINDICADO",
+          "GESTACAO_PROXIMA_TERMO_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "tropicamida_colirio",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "terbutalina_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios e reconciliacoes preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Bricanyl IV tocolysis - UK",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "DURACAO_MAIOR_48H_BLOQUEADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "106",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "106",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [
+      "GOLD33_NOVA_LISTA_LOTE_090_HOMOLOGADO_CLINICAMENTE.zip"
+    ],
+    "referenceOnly": true
+  }
+}

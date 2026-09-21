@@ -1,0 +1,369 @@
+{
+  "id": "letermovir",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "letermovir"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Letermovir - PREVYMIS oral/IV",
+    "class": "Antiviral anti-CMV",
+    "pharmacologicClass": "Inibidor do complexo terminase de CMV",
+    "mechanism": "Inibe complexo terminase de CMV, interferindo com clivagem/empacotamento do DNA viral.",
+    "pharmacodynamics": "Previne reativacao/doenca CMV em transplantados dentro das populacoes rotuladas; nao e esquema de tratamento de CMV ativo.",
+    "pharmacokinetics": "Substrato/inibidor de transportadores e CYP relevantes; ciclosporina aumenta exposicao e exige reducao de dose.",
+    "indications": "Profilaxia CMV em HSCT CMV-seropositivo, incluindo pediatria a partir de 6 meses/6 kg conforme rotulo 2026; profilaxia CMV em transplante renal D+/R- em >=12 anos e >=40 kg.",
+    "commercialNames": "PREVYMIS, EUA.",
+    "presentation": "Comprimidos 240/480 mg, pellets orais 20/120 mg e injecao 20 mg/mL.",
+    "presentations": "240 mg; 480 mg; pellets 20/120 mg; injecao 240 mg/12 mL e 480 mg/24 mL.",
+    "dose": "HSCT >=12 anos e >=30 kg: 480 mg 1x/dia VO/IV ate dia 100, podendo ir ate dia 200 se risco tardio. Transplante renal >=12 anos e >=40 kg D+/R-: 480 mg 1x/dia ate dia 200. Com ciclosporina: 240 mg 1x/dia nessas populacoes.",
+    "pediatricDose": "HSCT 6 meses-<12 anos ou >=12 anos <30 kg: oral sem ciclosporina: >=30 kg 480 mg; 15-<30 kg 240 mg; 7,5-<15 kg 120 mg; 6-<7,5 kg 80 mg. IV sem ciclosporina: >=30 kg 480 mg; 15-<30 kg 120 mg; 7,5-<15 kg 60 mg; 6-<7,5 kg 40 mg. Ciclosporina modifica tabela. AUTOMATIZACAO exige via/peso/ciclosporina.",
+    "renalDose": "IV contem hydroxypropyl betadex; monitorar creatinina de perto se ClCr <50 mL/min. Preferir oral quando possivel; IV idealmente nao >4 semanas.",
+    "hepaticDose": "Nao recomendado em comprometimento hepatica grave Child-Pugh C.",
+    "commonAdverseEffects": "Nausea, diarreia, vomitos e edema periferico em adultos; perfil pediatrico semelhante com variacoes por estudo.",
+    "dangerousAdverseEffects": "Interacoes medicamentosas podem causar toxicidade grave ou perda de eficacia; formulacao IV pode acumular excipiente em renal.",
+    "adverseEffects": "Cefaleia e eventos GI podem ocorrer.",
+    "contraindications": "Pimozida; alcaloides do ergot. Com ciclosporina: pitavastatina e sinvastatina.",
+    "interactions": "Interacoes extensas via CYP3A e OATP1B1/3; revisar pimozida, ergot, estatinas, imunossupressores e outros medicamentos antes/durante.",
+    "monitoring": "CMV apos profilaxia em HSCT; medicamentos concomitantes/interacoes; funcao renal se IV e hepatica conforme risco.",
+    "administration": "VO 1x/dia ou IV em 1 h. IV apenas se incapaz de usar oral e trocar para oral assim que possivel.",
+    "preparation": "Pellets e injecao possuem instrucoes especificas do produto; nao trocar forma sem tabela de dose.",
+    "infusionProtocol": "IV em 1 hora; idealmente limitar IV a <=4 semanas quando possivel por excipiente.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "HSCT pediatrico exige peso/via/ciclosporina; transplante renal pediatrico rotulado apenas >=12 anos e >=40 kg.",
+    "patientEducation": "Nao iniciar/suspender outros medicamentos sem revisar interacoes; completar periodo de profilaxia.",
+    "clinicalPearls": "A mesma crianca pode ter dose diferente VO vs IV em certas faixas de peso; ciclosporina muda dose.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CMV_PROFILAXIA; CICLOSPORINA_AJUSTE; INTERACOES; IV_BETADEX; PESO_VIA.",
+    "alerts": "AUTOMACAO exige indicacao (HSCT vs renal), idade, peso, via e uso de ciclosporina.",
+    "references": [
+      "DailyMed/NLM EUA - PREVYMIS, updated 14-01-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b"
+  },
+  "es": {
+    "name": "Letermovir - PREVYMIS oral/IV",
+    "class": "Antiviral anti-CMV",
+    "pharmacologicClass": "Inhibidor del complejo terminasa de CMV",
+    "mechanism": "Inhibe complejo terminasa de CMV, interfiriendo con corte/empaquetamiento de DNA viral.",
+    "pharmacodynamics": "Previene reactivacion/enfermedad CMV en trasplantados dentro de poblaciones rotuladas; no es pauta de tratamiento de CMV activo.",
+    "pharmacokinetics": "Sustrato/inhibidor de transportadores y CYP relevantes; ciclosporina aumenta exposicion y exige reduccion de dosis.",
+    "indications": "Profilaxis CMV en HSCT CMV-seropositivo, incluida pediatria desde 6 meses/6 kg segun rotulo 2026; profilaxis CMV en trasplante renal D+/R- en >=12 anos y >=40 kg.",
+    "commercialNames": "PREVYMIS, EE.UU.",
+    "presentation": "Tabletas 240/480 mg, pellets orales 20/120 mg e inyeccion 20 mg/mL.",
+    "presentations": "240 mg; 480 mg; pellets 20/120 mg; inyeccion 240 mg/12 mL y 480 mg/24 mL.",
+    "dose": "HSCT >=12 anos y >=30 kg: 480 mg 1 vez/dia VO/IV hasta dia 100, pudiendo llegar a dia 200 si riesgo tardio. Trasplante renal >=12 anos y >=40 kg D+/R-: 480 mg 1 vez/dia hasta dia 200. Con ciclosporina: 240 mg 1 vez/dia en estas poblaciones.",
+    "pediatricDose": "HSCT 6 meses-<12 anos o >=12 anos <30 kg: oral sin ciclosporina: >=30 kg 480 mg; 15-<30 kg 240 mg; 7,5-<15 kg 120 mg; 6-<7,5 kg 80 mg. IV sin ciclosporina: >=30 kg 480 mg; 15-<30 kg 120 mg; 7,5-<15 kg 60 mg; 6-<7,5 kg 40 mg. Ciclosporina modifica tabla. AUTOMATIZACION exige via/peso/ciclosporina.",
+    "renalDose": "IV contiene hydroxypropyl betadex; monitorizar creatinina estrechamente si CrCl <50 mL/min. Preferir oral cuando sea posible; IV idealmente no >4 semanas.",
+    "hepaticDose": "No recomendado en compromiso hepatico grave Child-Pugh C.",
+    "commonAdverseEffects": "Nausea, diarrea, vomitos y edema periferico en adultos; perfil pediatrico similar con variaciones por estudio.",
+    "dangerousAdverseEffects": "Interacciones medicamentosas pueden causar toxicidad grave o perdida de eficacia; formulacion IV puede acumular excipiente en renal.",
+    "adverseEffects": "Pueden ocurrir cefalea y eventos GI.",
+    "contraindications": "Pimozida; alcaloides del ergot. Con ciclosporina: pitavastatina y simvastatina.",
+    "interactions": "Interacciones extensas via CYP3A y OATP1B1/3; revisar pimozida, ergot, estatinas, inmunosupresores y otros medicamentos antes/durante.",
+    "monitoring": "CMV tras profilaxis en HSCT; medicamentos concomitantes/interacciones; funcion renal si IV y hepatica segun riesgo.",
+    "administration": "VO 1 vez/dia o IV en 1 h. IV solo si incapaz de usar oral y cambiar a oral en cuanto sea posible.",
+    "preparation": "Pellets e inyeccion tienen instrucciones especificas del producto; no cambiar forma sin tabla de dosis.",
+    "infusionProtocol": "IV en 1 hora; idealmente limitar IV a <=4 semanas cuando sea posible por excipiente.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "HSCT pediatrico exige peso/via/ciclosporina; trasplante renal pediatrico rotulado solo >=12 anos y >=40 kg.",
+    "patientEducation": "No iniciar/suspender otros medicamentos sin revisar interacciones; completar periodo de profilaxis.",
+    "clinicalPearls": "El mismo niño puede tener dosis distinta VO vs IV en ciertas bandas de peso; ciclosporina cambia dosis.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "CMV_PROFILAXIS; CICLOSPORINA_AJUSTE; INTERACCIONES; IV_BETADEX; PESO_VIA.",
+    "alerts": "AUTOMATIZACION exige indicacion (HSCT vs renal), edad, peso, via y uso de ciclosporina.",
+    "references": [
+      "DailyMed/NLM EUA - PREVYMIS, updated 14-01-2026. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1b49df80-be4f-47e0-a0b7-123f3e69395b"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Letermovir - PREVYMIS oral/IV",
+    "es": "Letermovir - PREVYMIS oral/IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "letermovir.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "letermovir",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "PREVYMIS oral/IV - EUA 2026",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+        "CHILD_PUGH_C_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

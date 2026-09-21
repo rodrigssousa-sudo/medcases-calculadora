@@ -1,0 +1,352 @@
+{
+  "id": "sulbactam_iv",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "sulbactam_iv"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Sulbactam Bago 1 g - IM/IV",
+    "class": "Inibidor de beta-lactamase com atividade propria contra Acinetobacter suscetivel",
+    "pharmacologicClass": "Inibidor irreversivel de beta-lactamases",
+    "mechanism": "Inibe beta-lactamases e pode restaurar atividade do beta-lactamico associado; possui atividade intrinseca contra Acinetobacter suscetivel.",
+    "pharmacodynamics": "Uso habitual e em combinacao com beta-lactamico; doses altas para Acinetobacter descritas no prospecto como literatura nao equivalem ao maximo usual do produto.",
+    "pharmacokinetics": "Eliminacao renal importante; hemodialise remove sulbactam.",
+    "indications": "Produto argentino: uso IM/IV, habitualmente associado a beta-lactamico em infeccoes por microrganismos produtores de beta-lactamase; prospecto discute Acinetobacter suscetivel.",
+    "commercialNames": "Sulbactam Bago, Argentina.",
+    "presentation": "Frasco-ampola de 1 g para IM/IV.",
+    "presentations": "1 g.",
+    "dose": "Adultos: 0,5-1 g a cada 6, 8 ou 12 h; maximo usual 4 g/dia. Profilaxia perioperatoria: 0,5-1 g com beta-lactamico escolhido no inicio da anestesia, repetindo conforme beta-lactamico.",
+    "pediatricDose": "Usual 50 mg/kg/dia divididos a cada 6, 8 ou 12 h; maximo 80 mg/kg/dia conforme prospecto.",
+    "renalDose": "CrCl 15-30 mL/min: maximo 2 g/dia; CrCl <15: maximo 1 g/dia, divididos ao longo do dia. Hemodialise remove sulbactam; administrar apos dialise e depois a cada 48 h ate a proxima sessao conforme prospecto.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Diarreia, nausea, rash e reacoes no local podem ocorrer.",
+    "dangerousAdverseEffects": "Hipersensibilidade/anafilaxia, colite associada a antibioticos e eventos hematologicos/hepaticos raros.",
+    "adverseEffects": "Elevacoes de transaminases e citopenias podem ocorrer.",
+    "contraindications": "Hipersensibilidade a beta-lactamicos ou sulbactam sodico.",
+    "interactions": "Incompatibilidade fisica com aminoglicosideos, metronidazol, tetraciclinas injetaveis e varios outros listados no prospecto; administrar separadamente.",
+    "monitoring": "Funcao renal, resposta clinica/microbiologica e sinais de hipersensibilidade/diarreia grave.",
+    "administration": "IM profunda ou IV. Uso habitual imediatamente antes/associado ao beta-lactamico selecionado.",
+    "preparation": "Reconstituir 1 g com 4 mL de agua esteril ou solucao isotonica. Para infusao, adicionar a 50-100 mL de solucao compativel.",
+    "infusionProtocol": "IV direta em 3-5 min OU infusao em 15-30 min.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Literatura citada no prospecto descreve 6-12 g/dia em Acinetobacter nosocomial grave; isso excede o maximo usual 4 g/dia e NAO foi automatizado.",
+    "patientEducation": "Uso hospitalar; informar alergia a penicilinas/cefalosporinas e relatar diarreia grave ou rash.",
+    "clinicalPearls": "Doses altas 6-12 g/dia aparecem como literatura no prospecto para Acinetobacter grave, nao como maximo usual do produto. Nao liberar automaticamente.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ARGENTINA_PRODUTO_ESPECIFICO; BETA_LACTAMICO_ASSOCIADO; RENAL; ALTO_DOSAGEM_ACINETOBACTER_NAO_AUTOMATIZAR.",
+    "alerts": "Nao automatizar 6-12 g/dia. Verificar compatibilidade fisica antes de misturar com outros injetaveis.",
+    "references": [
+      "Laboratorios Bago / ANMAT Argentina - Sulbactam Bago 1 g IM/IV, prospecto Disp. 1077/11. https://www.bago.com.ar/wp-content/uploads/2025/12/Sulbactam-Bago-Prospecto-Disp.-1077-11.pdf"
+    ],
+    "ref": "https://www.bago.com.ar/wp-content/uploads/2025/12/Sulbactam-Bago-Prospecto-Disp.-1077-11.pdf"
+  },
+  "es": {
+    "name": "Sulbactam Bago 1 g - IM/IV",
+    "class": "Inhibidor de beta-lactamasa con actividad propia contra Acinetobacter susceptible",
+    "pharmacologicClass": "Inhibidor irreversible de beta-lactamasas",
+    "mechanism": "Inhibe beta-lactamasas y puede restaurar actividad del beta-lactamico asociado; posee actividad intrinseca contra Acinetobacter susceptible.",
+    "pharmacodynamics": "Uso habitual es en combinacion con beta-lactamico; dosis altas para Acinetobacter descritas en prospecto como literatura no equivalen al maximo usual del producto.",
+    "pharmacokinetics": "Eliminacion renal importante; hemodialisis elimina sulbactam.",
+    "indications": "Producto argentino: uso IM/IV, habitualmente asociado a beta-lactamico en infecciones por microorganismos productores de beta-lactamasa; prospecto discute Acinetobacter susceptible.",
+    "commercialNames": "Sulbactam Bago, Argentina.",
+    "presentation": "Vial de 1 g para IM/IV.",
+    "presentations": "1 g.",
+    "dose": "Adultos: 0,5-1 g cada 6, 8 o 12 h; maximo usual 4 g/dia. Profilaxis perioperatoria: 0,5-1 g con beta-lactamico elegido al inicio de anestesia, repitiendo segun beta-lactamico.",
+    "pediatricDose": "Usual 50 mg/kg/dia divididos cada 6, 8 o 12 h; maximo 80 mg/kg/dia segun prospecto.",
+    "renalDose": "CrCl 15-30 mL/min: maximo 2 g/dia; CrCl <15: maximo 1 g/dia, dividido durante el dia. Hemodialisis elimina sulbactam; administrar tras dialisis y luego cada 48 h hasta proxima sesion segun prospecto.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Pueden ocurrir diarrea, nausea, rash y reacciones locales.",
+    "dangerousAdverseEffects": "Hipersensibilidad/anafilaxia, colitis asociada a antibioticos y eventos hematologicos/hepaticos raros.",
+    "adverseEffects": "Pueden ocurrir elevaciones de transaminasas y citopenias.",
+    "contraindications": "Hipersensibilidad a beta-lactamicos o sulbactam sodico.",
+    "interactions": "Incompatibilidad fisica con aminoglucosidos, metronidazol, tetraciclinas inyectables y varios otros listados en prospecto; administrar por separado.",
+    "monitoring": "Funcion renal, respuesta clinica/microbiologica y signos de hipersensibilidad/diarrea grave.",
+    "administration": "IM profunda o IV. Uso habitual inmediatamente antes/asociado al beta-lactamico seleccionado.",
+    "preparation": "Reconstituir 1 g con 4 mL de agua esteril o solucion isotonica. Para infusion, agregar a 50-100 mL de solucion compatible.",
+    "infusionProtocol": "IV directa en 3-5 min O infusion en 15-30 min.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Literatura citada en prospecto describe 6-12 g/dia en Acinetobacter nosocomial grave; esto supera maximo usual 4 g/dia y NO se automatizo.",
+    "patientEducation": "Uso hospitalario; informar alergia a penicilinas/cefalosporinas y comunicar diarrea grave o rash.",
+    "clinicalPearls": "Dosis altas 6-12 g/dia aparecen como literatura en prospecto para Acinetobacter grave, no como maximo usual del producto. No habilitar automaticamente.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ARGENTINA_PRODUCTO_ESPECIFICO; BETA_LACTAMICO_ASOCIADO; RENAL; DOSIS_ALTAS_ACINETOBACTER_NO_AUTOMATIZAR.",
+    "alerts": "No automatizar 6-12 g/dia. Verificar compatibilidad fisica antes de mezclar con otros inyectables.",
+    "references": [
+      "Laboratorios Bago / ANMAT Argentina - Sulbactam Bago 1 g IM/IV, prospecto Disp. 1077/11. https://www.bago.com.ar/wp-content/uploads/2025/12/Sulbactam-Bago-Prospecto-Disp.-1077-11.pdf"
+    ],
+    "ref": "https://www.bago.com.ar/wp-content/uploads/2025/12/Sulbactam-Bago-Prospecto-Disp.-1077-11.pdf"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Sulbactam Bago 1 g - IM/IV",
+    "es": "Sulbactam Bago 1 g - IM/IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "sulbactam_iv.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "sulbactam_iv",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "Sulbactam Bago 1 g IM/IV - Argentina",
+      "BLOQUEIOS_CLINICOS": [
+        "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

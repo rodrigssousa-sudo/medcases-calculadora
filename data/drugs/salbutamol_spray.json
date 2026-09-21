@@ -1,0 +1,2236 @@
+{
+  "id": "salbutamol_spray",
+  "name": {
+    "pt": "Salbutamol — aerossol 100 microgramas/acionamento",
+    "es": "Salbutamol — aerosol 100 microgramos/actuación"
+  },
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "salbutamol_spray"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_novo_093.js",
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "pt": {
+    "name": "Salbutamol — aerossol 100 microgramas/acionamento",
+    "class": "Broncodilatador beta2-agonista de curta acao",
+    "pharmacologicClass": "Agonista beta2-adrenergico SABA",
+    "commercialNames": "Ventolin Evohaler, Reino Unido.",
+    "presentation": "Inalador pressurizado dosimetrado.",
+    "presentations": "100 microgramas/acionamento; 200 acionamentos.",
+    "mechanism": "Estimula beta2 em musculo liso bronquico, aumentando cAMP e promovendo broncodilatacao.",
+    "pharmacodynamics": "Broncodilatacao rapida; doses excessivas podem causar taquicardia e hipocalemia.",
+    "pharmacokinetics": "10–20% da dose inalada alcança vias inferiores; eliminação principalmente urinária.",
+    "indications": "Alívio/prevenção do broncoespasmo; adultos e crianças ≥4 anos no escopo escolhido.",
+    "dose": "Alívio adulto: 1–2 jatos. Demanda: máximo 8 jatos/24 h; necessidade crescente exige reavaliação.",
+    "pediatricDose": "4–11 anos: 1 jato; até 2 se necessário. ≥12 anos: dose adulta. <4 anos: revisão específica.",
+    "renalDose": "Sem ajuste numerico especifico.",
+    "hepaticDose": "Sem ajuste numerico especifico.",
+    "commonAdverseEffects": "Tremor, nervosismo, taquicardia, cefaleia e palpitações.",
+    "dangerousAdverseEffects": "Broncoespasmo paradoxal, taquiarritmias, hipocalemia e acidose lactica em uso excessivo/intenso.",
+    "adverseEffects": "Tosse, irritacao de garganta e nausea podem ocorrer.",
+    "contraindications": "Hipersensibilidade ao albuterol/salbutamol ou componentes.",
+    "interactions": "Beta-bloqueadores antagonizam; diureticos, xantinas e outros simpaticomimeticos podem aumentar efeitos/hipocalemia; MAOI/TCA exigem cautela.",
+    "monitoring": "Resposta, FC, tremor e potassio em uso intensivo; aumento da necessidade de resgate exige reavaliacao.",
+    "administration": "Inalação oral; coordenar acionamento/inspiração. Espaçador quando necessário.",
+    "preparation": "Dispositivo pronto; não diluir nem nebulizar.",
+    "infusionProtocol": "Não aplicável; não injetar.",
+    "pregnancy": "Usar conforme beneficio-risco; asma descontrolada tambem traz risco.",
+    "lactation": "Dados limitados; uso inalatorio tende a menor exposicao sistemica.",
+    "specialPopulations": "Doenca cardiaca, hipertiroidismo e risco de hipocalemia exigem cautela.",
+    "patientEducation": "Se a dose habitual deixar de aliviar, procurar avaliacao urgente; nao aumentar frequencia por conta propria.",
+    "clinicalPearls": "Na asma, SABA não deve ser tratamento único; associar terapia anti-inflamatória.",
+    "guidelineRecommendations": "Esta preparação usa bulas e texto de referência preexistente; não foi feita validação independente de diretrizes.",
+    "safetyFlags": "CANDIDATO NOVO: revisão médica pendente; cálculos e publicação bloqueados. AEROSSOL_DOSIMETRADO; SEM_CONVERSAO_DE_NEBULIZACAO; BETA2; HIPOCALEMIA.",
+    "alerts": "Não transferir volumes, doses ou cortes de peso da solução nebulizada para o aerossol.",
+    "references": [
+      "DailyMed/NLM EUA - Albuterol Sulfate Inhalation Solution 0.083% 2.5 mg/3 mL, active 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d",
+      "https://www.medicines.org.uk/emc/product/850/smpc",
+      "https://www.medicines.org.uk/emc/files/pil.850.pdf"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/850/smpc"
+  },
+  "es": {
+    "name": "Salbutamol — aerosol 100 microgramos/actuación",
+    "class": "Broncodilatador agonista beta2 de corta accion",
+    "pharmacologicClass": "Agonista beta2-adrenergico SABA",
+    "commercialNames": "Ventolin Evohaler, Reino Unido.",
+    "presentation": "Inhalador presurizado dosificado.",
+    "presentations": "100 microgramos/actuación; 200 actuaciones.",
+    "mechanism": "Estimula beta2 en musculo liso bronquial, aumentando cAMP y produciendo broncodilatacion.",
+    "pharmacodynamics": "Broncodilatacion rapida; dosis excesivas pueden causar taquicardia e hipopotasemia.",
+    "pharmacokinetics": "10–20% de dosis inhalada alcanza vías inferiores; eliminación principalmente urinaria.",
+    "indications": "Alivio/prevención del broncoespasmo; adultos y niños ≥4 años en el alcance elegido.",
+    "dose": "Alivio adulto: 1–2 inhalaciones. Demanda: máximo 8/24 h; necesidad creciente exige reevaluación.",
+    "pediatricDose": "4–11 años: 1 inhalación; hasta 2 si precisa. ≥12 años: dosis adulta. <4 años: revisión específica.",
+    "renalDose": "Sin ajuste numerico especifico.",
+    "hepaticDose": "Sin ajuste numerico especifico.",
+    "commonAdverseEffects": "Temblor, nerviosismo, taquicardia, cefalea y palpitaciones.",
+    "dangerousAdverseEffects": "Broncoespasmo paradojico, taquiarritmias, hipopotasemia y acidosis lactica con uso excesivo/intenso.",
+    "adverseEffects": "Pueden ocurrir tos, irritacion de garganta y nausea.",
+    "contraindications": "Hipersensibilidad a albuterol/salbutamol o componentes.",
+    "interactions": "Beta-bloqueantes antagonizan; diureticos, xantinas y otros simpaticomimeticos pueden aumentar efectos/hipopotasemia; IMAO/TCA requieren precaucion.",
+    "monitoring": "Respuesta, FC, temblor y potasio en uso intensivo; aumento de necesidad de rescate exige reevaluacion.",
+    "administration": "Inhalación oral; coordinar actuación/inspiración. Espaciador cuando necesario.",
+    "preparation": "Dispositivo listo; no diluir ni nebulizar.",
+    "infusionProtocol": "No aplicable; no inyectar.",
+    "pregnancy": "Usar segun beneficio-riesgo; asma no controlada tambien implica riesgo.",
+    "lactation": "Datos limitados; uso inhalado tiende a menor exposicion sistemica.",
+    "specialPopulations": "Enfermedad cardiaca, hipertiroidismo y riesgo de hipopotasemia requieren precaucion.",
+    "patientEducation": "Si dosis habitual deja de aliviar, buscar evaluacion urgente; no aumentar frecuencia por cuenta propia.",
+    "clinicalPearls": "En asma, SABA no debe ser tratamiento único; asociar terapia antiinflamatoria.",
+    "guidelineRecommendations": "Esta preparación usa prospectos y texto de referencia preexistente; no se realizó validación independiente de guías.",
+    "safetyFlags": "CANDIDATO NUEVO: revisión médica pendiente; cálculos y publicación bloqueados. AEROSOL_DOSIFICADO; SIN_CONVERSION_DE_NEBULIZACION; BETA2; HIPOPOTASEMIA.",
+    "alerts": "No transferir volúmenes, dosis ni límites de peso de solución nebulizada al aerosol.",
+    "references": [
+      "DailyMed/NLM EUA - Albuterol Sulfate Inhalation Solution 0.083% 2.5 mg/3 mL, active 2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d",
+      "https://www.medicines.org.uk/emc/product/850/smpc",
+      "https://www.medicines.org.uk/emc/files/pil.850.pdf"
+    ],
+    "ref": "https://www.medicines.org.uk/emc/product/850/smpc"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_novo_093.js",
+    "sourceField": "salbutamol_spray.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "093_NOVO_CANDIDATO",
+    "approvedSha256": "720dc1dc273c189f6552d451208b031b9cdbca8319a7dc175d4419ac39e13fbc",
+    "zipSha256": "e29687c1f949e39a4eeb2ce764d444bf840900034fe78da29de2a8770755e98f",
+    "referenceOnly": true,
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "historicalApprovalApplies": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "releaseAuthorization": {
+      "source": "USER_EXPLICIT_DEPLOY_AUTHORIZATION_2026_09_21",
+      "referencePublicationAuthorized": true,
+      "calculationAuthorized": false
+    },
+    "packageRecordMetadata": {
+      "ID": "salbutamol_spray",
+      "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+      "PROVENIENCIA": {
+        "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+        "templatePath": "data/drugs/salbutamol_nebulizacao.json",
+        "templateSha256": "11760e3f8bd9271bc9c7e4c851a2ad9799abd3ce7cc2faa78a73bd3753833e21",
+        "sourcesConsulted": "2026-09-21",
+        "primarySources": [
+          "https://www.medicines.org.uk/emc/product/850/smpc",
+          "https://www.medicines.org.uk/emc/files/pil.850.pdf"
+        ],
+        "newProductSpecificFields": [
+          "name",
+          "commercialNames",
+          "presentation",
+          "presentations",
+          "indications",
+          "pharmacokinetics",
+          "dose",
+          "pediatricDose",
+          "administration",
+          "preparation",
+          "infusionProtocol",
+          "clinicalPearls",
+          "safetyFlags",
+          "alerts"
+        ],
+        "inheritedFieldsRequiringReview": [
+          "class",
+          "pharmacologicClass",
+          "mechanism",
+          "pharmacodynamics",
+          "renalDose",
+          "hepaticDose",
+          "commonAdverseEffects",
+          "dangerousAdverseEffects",
+          "adverseEffects",
+          "contraindications",
+          "interactions",
+          "monitoring",
+          "pregnancy",
+          "lactation",
+          "specialPopulations",
+          "patientEducation"
+        ],
+        "templateClinicalMetadata": {
+          "status": "PASS_CLINICAL_HOMOLOGATION",
+          "sourceOwner": "database/gold33_nova_lista.js",
+          "sourceField": "salbutamol_nebulizacao.mcGoldClinicalV1",
+          "requiredFields": 33,
+          "lote": "103",
+          "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+          "calculationAuthorized": false,
+          "publicationAuthorized": false,
+          "clinicalPackagePublicationState": "BLOQUEADA",
+          "list": "NOVA_LISTA_GOLD33_V1",
+          "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+          "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+          "packageRestrictions": [
+            {
+              "id": "adrenalina_autoinjetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "PRODUTO_ESPECIFICO_AUVIQ",
+                "PESO_MENOR_7_5_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "aminofilina_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "TDM_OBRIGATORIO",
+                "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "betametasona_injetavel",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA",
+                "INDICACAO_ROTA_OBRIGATORIAS"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "brometo_de_ipratropio_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "VIA_NAO_INALATORIA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "dexametasona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "CALCULO_PEDIATRICO_BLOQUEADO",
+                "AUTOMACAO_EXIGE_INDICACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "fenoterol_gotas",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "DOSE_ATUAL_NAO_VERIFICADA",
+                "VIA_AUTOMATICA_BLOQUEADA"
+              ],
+              "pendencias_nao_bloqueantes": [
+                "BULA_PRIMARIA_ATUAL_PENDENTE"
+              ],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "hidrocortisona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "CALCULO_PEDIATRICO_BLOQUEADO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "metilprednisolona_iv",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "AUTOMACAO_EXIGE_INDICACAO",
+                "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "prometazina_im",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                "IDADE_MENOR_2_CONTRAINDICADA"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            },
+            {
+              "id": "salbutamol_nebulizacao",
+              "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+              "bloqueios_clinicos": [
+                "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+              ],
+              "pendencias_nao_bloqueantes": [],
+              "states": {
+                "PESQUISA": "CONCLUIDA",
+                "REVISAO_CLINICA": "HOMOLOGADA",
+                "HOMOLOGACAO_DADOS": "SIM",
+                "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                "PUBLICACAO": "BLOQUEADA"
+              },
+              "technical_mapping": {
+                "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+              }
+            }
+          ],
+          "packageRecordMetadata": {
+            "ID": "salbutamol_nebulizacao",
+            "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+            "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+            "ESCOPO_VALIDADO": "Salbutamol/albuterol 0,083% 2,5 mg/3 mL nebulizacao - EUA",
+            "BLOQUEIOS_CLINICOS": [
+              "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+              "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+            ],
+            "PENDENCIAS_NAO_BLOQUEANTES": [],
+            "HOMOLOGACAO": {
+              "LISTA": "NOVA_LISTA_GOLD33_V1",
+              "LOTE": "103",
+              "MEDICO_REVISOR": "Dra Eugenia Marques",
+              "DATA_REVISAO": "20-09-2026",
+              "RESULTADO": "Aprovado integralmente",
+              "ARQUIVO_REVISADO": "103",
+              "EXCECOES_INFORMADAS": 0,
+              "REVISAO_CLINICA": "HOMOLOGADA",
+              "HOMOLOGACAO_DADOS": "SIM",
+              "INTEGRACAO_TECNICA": "NAO_INICIADA",
+              "PUBLICACAO": "BLOQUEADA",
+              "CLINICAL_CONTENT_FROZEN": true
+            }
+          },
+          "supersededPackages": [
+            "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+          ],
+          "referenceOnly": true
+        }
+      },
+      "STATES": {
+        "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+        "INTEGRACAO_RUNTIME": "NAO",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA"
+      },
+      "calculationAuthorized": false,
+      "publicationAuthorized": false,
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "093_NOVO_CANDIDATO",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "01_NOVO_CANDIDATO_093.json",
+        "EXCECOES_INFORMADAS": 0,
+        "historicalApprovalApplies": false,
+        "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+        "calculationAuthorized": false,
+        "publicationAuthorized": false,
+        "INTEGRACAO_RUNTIME": "NAO",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "nota": "O parecer se aplica exclusivamente ao novo candidato 093 submetido nesta conversa. Nenhuma homologacao historica do Lote 093 original se transfere para este conteudo.",
+        "CLINICAL_CONTENT_FROZEN": true,
+        "reviewedCandidateSha256": "d37488285baa1b0343e2232153a4554cdb1bc88ae828d2c0550331644ba0d84b",
+        "approvalBinding": "USER_CONFIRMED_LOCAL_CANDIDATE",
+        "approvalPackageSha256": "fa131a03c1c81ae4244b520a055113617ec7f1d617f7078722437521f403aebf"
+      }
+    },
+    "packageRestrictions": {
+      "historicalApprovalApplies": false,
+      "items": [
+        {
+          "id": "diclofenaco_gotas",
+          "originalRecordMetadata": {
+            "ID": "diclofenaco_gotas",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/diclofenaco.json",
+              "templateSha256": "0c9f069bb319d807954cdffdffb0941600c7b4bf48c9b04c5a1474ae1f6a7f02",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Medico.pdf",
+                "https://portal.novartis.com.br/medicamentos/wp-content/uploads/2021/10/Bula-CATAFLAM-Suspensao-Gotas-Paciente.pdf"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "indications",
+                "dose",
+                "pediatricDose",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "lactation",
+                "clinicalPearls"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "pharmacodynamics",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "pregnancy",
+                "specialPopulations",
+                "patientEducation",
+                "alerts",
+                "mechanism",
+                "pharmacokinetics",
+                "renalDose",
+                "hepaticDose"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/analgesicos.js",
+                "sourceField": "diclofenaco.mcGoldClinicalV1",
+                "lote": "025",
+                "requiredFields": 33,
+                "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+                "calculationAuthorized": false,
+                "publicationAuthorized": true,
+                "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+                "ownerPublicationAuthorization": "mission10-owner-confirmed"
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "diclofenaco_supositorio",
+          "originalRecordMetadata": {
+            "ID": "diclofenaco_supositorio",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/diclofenaco.json",
+              "templateSha256": "0c9f069bb319d807954cdffdffb0941600c7b4bf48c9b04c5a1474ae1f6a7f02",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://www.medicines.org.uk/emc/product/1044/smpc"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "indications",
+                "dose",
+                "pediatricDose",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "contraindications",
+                "clinicalPearls"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "pharmacodynamics",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "interactions",
+                "monitoring",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "alerts",
+                "mechanism",
+                "pharmacokinetics",
+                "renalDose",
+                "hepaticDose"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/analgesicos.js",
+                "sourceField": "diclofenaco.mcGoldClinicalV1",
+                "lote": "025",
+                "requiredFields": 33,
+                "approvedSha256": "f490066cbf88c2c1fc49fde254c0e52699a8a5320bd3cfb2ee1a9d3050dd9c7f",
+                "calculationAuthorized": false,
+                "publicationAuthorized": true,
+                "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+                "ownerPublicationAuthorization": "mission10-owner-confirmed"
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "cetoprofeno_gotas",
+          "originalRecordMetadata": {
+            "ID": "cetoprofeno_gotas",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/cetoprofeno.json",
+              "templateSha256": "92e70a001d201e6a9b143907d4f6eef1e4c778615b42500884f6c502b82ec6bb",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://eurofarma.com.br/produtos/bulas/view/healthcare/pt/bula-cetoprofeno-solucao-oral-gotas.html",
+                "https://eurofarma.com.br/produtos/bulas/view/patient/pt/bula-cetoprofeno-solucao-oral-gotas.html"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "dose",
+                "pediatricDose",
+                "renalDose",
+                "hepaticDose",
+                "administration",
+                "preparation",
+                "pregnancy",
+                "infusionProtocol"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "indications",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "clinicalPearls",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/analgesicos.js",
+                "sourceField": "cetoprofeno.mcGoldClinicalV1",
+                "lote": "017",
+                "requiredFields": 33,
+                "approvedSha256": "253c17c2327715b3e25ab80e7138de200e935b80e7d849c1c6088a69116420a3",
+                "calculationAuthorized": false,
+                "publicationAuthorized": true,
+                "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+                "ownerPublicationAuthorization": "mission10-owner-confirmed"
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "salbutamol_spray",
+          "originalRecordMetadata": {
+            "ID": "salbutamol_spray",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/salbutamol_nebulizacao.json",
+              "templateSha256": "11760e3f8bd9271bc9c7e4c851a2ad9799abd3ce7cc2faa78a73bd3753833e21",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://www.medicines.org.uk/emc/product/850/smpc",
+                "https://www.medicines.org.uk/emc/files/pil.850.pdf"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "indications",
+                "pharmacokinetics",
+                "dose",
+                "pediatricDose",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "clinicalPearls",
+                "safetyFlags",
+                "alerts"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "renalDose",
+                "hepaticDose",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/gold33_nova_lista.js",
+                "sourceField": "salbutamol_nebulizacao.mcGoldClinicalV1",
+                "requiredFields": 33,
+                "lote": "103",
+                "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+                "calculationAuthorized": false,
+                "publicationAuthorized": false,
+                "clinicalPackagePublicationState": "BLOQUEADA",
+                "list": "NOVA_LISTA_GOLD33_V1",
+                "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+                "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+                "packageRestrictions": [
+                  {
+                    "id": "adrenalina_autoinjetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "PRODUTO_ESPECIFICO_AUVIQ",
+                      "PESO_MENOR_7_5_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "aminofilina_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "TDM_OBRIGATORIO",
+                      "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "betametasona_injetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA",
+                      "INDICACAO_ROTA_OBRIGATORIAS"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "brometo_de_ipratropio_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "VIA_NAO_INALATORIA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "dexametasona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "AUTOMACAO_EXIGE_INDICACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "fenoterol_gotas",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "DOSE_ATUAL_NAO_VERIFICADA",
+                      "VIA_AUTOMATICA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [
+                      "BULA_PRIMARIA_ATUAL_PENDENTE"
+                    ],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "hidrocortisona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "CALCULO_PEDIATRICO_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "metilprednisolona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "prometazina_im",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                      "IDADE_MENOR_2_CONTRAINDICADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "salbutamol_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                      "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  }
+                ],
+                "packageRecordMetadata": {
+                  "ID": "salbutamol_nebulizacao",
+                  "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+                  "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                  "ESCOPO_VALIDADO": "Salbutamol/albuterol 0,083% 2,5 mg/3 mL nebulizacao - EUA",
+                  "BLOQUEIOS_CLINICOS": [
+                    "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                    "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+                  ],
+                  "PENDENCIAS_NAO_BLOQUEANTES": [],
+                  "HOMOLOGACAO": {
+                    "LISTA": "NOVA_LISTA_GOLD33_V1",
+                    "LOTE": "103",
+                    "MEDICO_REVISOR": "Dra Eugenia Marques",
+                    "DATA_REVISAO": "20-09-2026",
+                    "RESULTADO": "Aprovado integralmente",
+                    "ARQUIVO_REVISADO": "103",
+                    "EXCECOES_INFORMADAS": 0,
+                    "REVISAO_CLINICA": "HOMOLOGADA",
+                    "HOMOLOGACAO_DADOS": "SIM",
+                    "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                    "PUBLICACAO": "BLOQUEADA",
+                    "CLINICAL_CONTENT_FROZEN": true
+                  }
+                },
+                "supersededPackages": [
+                  "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+                ],
+                "referenceOnly": true
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "salbutamol_solucao_inalatoria",
+          "originalRecordMetadata": {
+            "ID": "salbutamol_solucao_inalatoria",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/salbutamol_nebulizacao.json",
+              "templateSha256": "11760e3f8bd9271bc9c7e4c851a2ad9799abd3ce7cc2faa78a73bd3753833e21",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b72742df-1a6b-4483-aff3-3e79db5e015d"
+              ],
+              "newProductSpecificFields": [],
+              "inheritedFieldsRequiringReview": [
+                "name",
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "indications",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "dose",
+                "pediatricDose",
+                "renalDose",
+                "hepaticDose",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "clinicalPearls",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/gold33_nova_lista.js",
+                "sourceField": "salbutamol_nebulizacao.mcGoldClinicalV1",
+                "requiredFields": 33,
+                "lote": "103",
+                "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+                "calculationAuthorized": false,
+                "publicationAuthorized": false,
+                "clinicalPackagePublicationState": "BLOQUEADA",
+                "list": "NOVA_LISTA_GOLD33_V1",
+                "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+                "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+                "packageRestrictions": [
+                  {
+                    "id": "adrenalina_autoinjetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "PRODUTO_ESPECIFICO_AUVIQ",
+                      "PESO_MENOR_7_5_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "aminofilina_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "TDM_OBRIGATORIO",
+                      "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "betametasona_injetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA",
+                      "INDICACAO_ROTA_OBRIGATORIAS"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "brometo_de_ipratropio_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "VIA_NAO_INALATORIA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "dexametasona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "AUTOMACAO_EXIGE_INDICACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "fenoterol_gotas",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "DOSE_ATUAL_NAO_VERIFICADA",
+                      "VIA_AUTOMATICA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [
+                      "BULA_PRIMARIA_ATUAL_PENDENTE"
+                    ],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "hidrocortisona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "CALCULO_PEDIATRICO_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "metilprednisolona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "prometazina_im",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                      "IDADE_MENOR_2_CONTRAINDICADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "salbutamol_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                      "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  }
+                ],
+                "packageRecordMetadata": {
+                  "ID": "salbutamol_nebulizacao",
+                  "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+                  "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                  "ESCOPO_VALIDADO": "Salbutamol/albuterol 0,083% 2,5 mg/3 mL nebulizacao - EUA",
+                  "BLOQUEIOS_CLINICOS": [
+                    "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                    "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+                  ],
+                  "PENDENCIAS_NAO_BLOQUEANTES": [],
+                  "HOMOLOGACAO": {
+                    "LISTA": "NOVA_LISTA_GOLD33_V1",
+                    "LOTE": "103",
+                    "MEDICO_REVISOR": "Dra Eugenia Marques",
+                    "DATA_REVISAO": "20-09-2026",
+                    "RESULTADO": "Aprovado integralmente",
+                    "ARQUIVO_REVISADO": "103",
+                    "EXCECOES_INFORMADAS": 0,
+                    "REVISAO_CLINICA": "HOMOLOGADA",
+                    "HOMOLOGACAO_DADOS": "SIM",
+                    "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                    "PUBLICACAO": "BLOQUEADA",
+                    "CLINICAL_CONTENT_FROZEN": true
+                  }
+                },
+                "supersededPackages": [
+                  "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+                ],
+                "referenceOnly": true
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false,
+            "RECONCILIACAO_CANONICA": {
+              "candidateAliasOf": "salbutamol_nebulizacao",
+              "status": "PENDENTE_REVISAO_DE_ESCOPO",
+              "action": "Não adicionar um segundo registro ativo para o mesmo produto."
+            }
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "fenoterol_solucao_inalatoria",
+          "originalRecordMetadata": {
+            "ID": "fenoterol_solucao_inalatoria",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/fenoterol_gotas.json",
+              "templateSha256": "75acfdff650220647f3251f2d6f9139d43b22db06064b3677009172ad0216990",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://www.gov.br/anvisa/pt-br/assuntos/medicamentos/cmed/precos/anos-anteriores/arquivos/5333json-file-1/%40%40download/file"
+              ],
+              "newProductSpecificFields": [],
+              "inheritedFieldsRequiringReview": [
+                "name",
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "indications",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "dose",
+                "pediatricDose",
+                "renalDose",
+                "hepaticDose",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "clinicalPearls",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/gold33_nova_lista.js",
+                "sourceField": "fenoterol_gotas.mcGoldClinicalV1",
+                "requiredFields": 33,
+                "lote": "103",
+                "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+                "calculationAuthorized": false,
+                "publicationAuthorized": false,
+                "clinicalPackagePublicationState": "BLOQUEADA",
+                "list": "NOVA_LISTA_GOLD33_V1",
+                "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+                "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+                "packageRestrictions": [
+                  {
+                    "id": "adrenalina_autoinjetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "PRODUTO_ESPECIFICO_AUVIQ",
+                      "PESO_MENOR_7_5_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "aminofilina_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "TDM_OBRIGATORIO",
+                      "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "betametasona_injetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA",
+                      "INDICACAO_ROTA_OBRIGATORIAS"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "brometo_de_ipratropio_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "VIA_NAO_INALATORIA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "dexametasona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "AUTOMACAO_EXIGE_INDICACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "fenoterol_gotas",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "DOSE_ATUAL_NAO_VERIFICADA",
+                      "VIA_AUTOMATICA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [
+                      "BULA_PRIMARIA_ATUAL_PENDENTE"
+                    ],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "hidrocortisona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "CALCULO_PEDIATRICO_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "metilprednisolona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "prometazina_im",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                      "IDADE_MENOR_2_CONTRAINDICADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "salbutamol_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                      "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  }
+                ],
+                "packageRecordMetadata": {
+                  "ID": "fenoterol_gotas",
+                  "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+                  "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                  "ESCOPO_VALIDADO": "Fenoterol 5 mg/mL gotas - Brasil; dose atual bloqueada",
+                  "BLOQUEIOS_CLINICOS": [
+                    "DOSE_ATUAL_NAO_VERIFICADA",
+                    "VIA_AUTOMATICA_BLOQUEADA"
+                  ],
+                  "PENDENCIAS_NAO_BLOQUEANTES": [
+                    "BULA_PRIMARIA_ATUAL_PENDENTE"
+                  ],
+                  "HOMOLOGACAO": {
+                    "LISTA": "NOVA_LISTA_GOLD33_V1",
+                    "LOTE": "103",
+                    "MEDICO_REVISOR": "Dra Eugenia Marques",
+                    "DATA_REVISAO": "20-09-2026",
+                    "RESULTADO": "Aprovado integralmente",
+                    "ARQUIVO_REVISADO": "103",
+                    "EXCECOES_INFORMADAS": 0,
+                    "REVISAO_CLINICA": "HOMOLOGADA",
+                    "HOMOLOGACAO_DADOS": "SIM",
+                    "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                    "PUBLICACAO": "BLOQUEADA",
+                    "CLINICAL_CONTENT_FROZEN": true
+                  }
+                },
+                "supersededPackages": [
+                  "GOLD33_NOVA_LISTA_LOTE_088_HOMOLOGADO_CLINICAMENTE.zip"
+                ],
+                "referenceOnly": true
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false,
+            "RECONCILIACAO_CANONICA": {
+              "candidateAliasOf": "fenoterol_gotas",
+              "status": "PENDENTE_REVISAO_DE_ESCOPO",
+              "action": "Não adicionar um segundo registro ativo para o mesmo produto."
+            }
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "ipratropio_solucao_inalatoria",
+          "originalRecordMetadata": {
+            "ID": "ipratropio_solucao_inalatoria",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/brometo_de_ipratropio_nebulizacao.json",
+              "templateSha256": "8d7e3cddc70cbd671654f0a934055d306657bf6412a6f8452a008684da41bafa",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3249aea8-a395-f09f-e063-6294a90a2d8b"
+              ],
+              "newProductSpecificFields": [],
+              "inheritedFieldsRequiringReview": [
+                "name",
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "indications",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "dose",
+                "pediatricDose",
+                "renalDose",
+                "hepaticDose",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "clinicalPearls",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/gold33_nova_lista.js",
+                "sourceField": "brometo_de_ipratropio_nebulizacao.mcGoldClinicalV1",
+                "requiredFields": 33,
+                "lote": "103",
+                "approvedSha256": "3dd8735151ec6ccf6dcd71dd5262642970c55bff5d753c59dcec104bb685a419",
+                "calculationAuthorized": false,
+                "publicationAuthorized": false,
+                "clinicalPackagePublicationState": "BLOQUEADA",
+                "list": "NOVA_LISTA_GOLD33_V1",
+                "zipSha256": "167045215deac33b67a58cf485f504a0a70ac17a45848dd73c59ec6ea4235aac",
+                "packageFile": "GOLD33_NOVA_LISTA_LOTE_103_HOMOLOGADO_CLINICAMENTE.zip",
+                "packageRestrictions": [
+                  {
+                    "id": "adrenalina_autoinjetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "PRODUTO_ESPECIFICO_AUVIQ",
+                      "PESO_MENOR_7_5_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "aminofilina_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "TDM_OBRIGATORIO",
+                      "AUTOMACAO_MANUTENCAO_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "betametasona_injetavel",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA",
+                      "INDICACAO_ROTA_OBRIGATORIAS"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "brometo_de_ipratropio_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "VIA_NAO_INALATORIA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "dexametasona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "CALCULO_PEDIATRICO_BLOQUEADO",
+                      "AUTOMACAO_EXIGE_INDICACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "fenoterol_gotas",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "DOSE_ATUAL_NAO_VERIFICADA",
+                      "VIA_AUTOMATICA_BLOQUEADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [
+                      "BULA_PRIMARIA_ATUAL_PENDENTE"
+                    ],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "hidrocortisona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "CALCULO_PEDIATRICO_BLOQUEADO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "metilprednisolona_iv",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "AUTOMACAO_EXIGE_INDICACAO",
+                      "FORMULACAO_CONSERVANTE_DEVE_SER_CONFIRMADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "prometazina_im",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "VIA_IV_BLOQUEADA_NESTA_FICHA",
+                      "IDADE_MENOR_2_CONTRAINDICADA"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  },
+                  {
+                    "id": "salbutamol_nebulizacao",
+                    "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                    "bloqueios_clinicos": [
+                      "IDADE_MENOR_2_BLOQUEADA_NESTE_ROTULO",
+                      "PESO_MENOR_15_EXIGE_OUTRA_CONCENTRACAO"
+                    ],
+                    "pendencias_nao_bloqueantes": [],
+                    "states": {
+                      "PESQUISA": "CONCLUIDA",
+                      "REVISAO_CLINICA": "HOMOLOGADA",
+                      "HOMOLOGACAO_DADOS": "SIM",
+                      "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+                      "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                      "PUBLICACAO": "BLOQUEADA"
+                    },
+                    "technical_mapping": {
+                      "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                      "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+                    }
+                  }
+                ],
+                "packageRecordMetadata": {
+                  "ID": "brometo_de_ipratropio_nebulizacao",
+                  "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios, lacunas justificadas e reconciliacoes preservados.",
+                  "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+                  "ESCOPO_VALIDADO": "Ipratropium 0,02% 500 mcg/2,5 mL - EUA",
+                  "BLOQUEIOS_CLINICOS": [
+                    "CALCULO_PEDIATRICO_BLOQUEADO",
+                    "VIA_NAO_INALATORIA_BLOQUEADA"
+                  ],
+                  "PENDENCIAS_NAO_BLOQUEANTES": [],
+                  "HOMOLOGACAO": {
+                    "LISTA": "NOVA_LISTA_GOLD33_V1",
+                    "LOTE": "103",
+                    "MEDICO_REVISOR": "Dra Eugenia Marques",
+                    "DATA_REVISAO": "20-09-2026",
+                    "RESULTADO": "Aprovado integralmente",
+                    "ARQUIVO_REVISADO": "103",
+                    "EXCECOES_INFORMADAS": 0,
+                    "REVISAO_CLINICA": "HOMOLOGADA",
+                    "HOMOLOGACAO_DADOS": "SIM",
+                    "INTEGRACAO_TECNICA": "NAO_INICIADA",
+                    "PUBLICACAO": "BLOQUEADA",
+                    "CLINICAL_CONTENT_FROZEN": true
+                  }
+                },
+                "supersededPackages": [
+                  "GOLD33_NOVA_LISTA_LOTE_087_HOMOLOGADO_CLINICAMENTE.zip"
+                ],
+                "referenceOnly": true
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false,
+            "RECONCILIACAO_CANONICA": {
+              "candidateAliasOf": "brometo_de_ipratropio_nebulizacao",
+              "status": "PENDENTE_REVISAO_DE_ESCOPO",
+              "action": "Não adicionar um segundo registro ativo para o mesmo produto."
+            }
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "prednisolona_solucao_oral",
+          "originalRecordMetadata": {
+            "ID": "prednisolona_solucao_oral",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/prednisolona.json",
+              "templateSha256": "1fd9411f1fb243102af07912d9e9bf1e0684527b96d01b0a8cefd63948a73259",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=a0d74ae0-7b2d-4d36-9211-c76f5063b5a9",
+                "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=7262fc84-3db2-4475-8ae4-6bec4477cb81"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "dose",
+                "pediatricDose",
+                "renalDose",
+                "hepaticDose",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "pregnancy",
+                "lactation"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "indications",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "specialPopulations",
+                "patientEducation",
+                "clinicalPearls",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/imuno_corticoide.js",
+                "sourceField": "prednisolona.mcGoldClinicalV1",
+                "lote": "064",
+                "requiredFields": 33,
+                "approvedSha256": "21c1e99276216e72bd2a7201eddd567a0335bd6346374d413459182168e7cdea",
+                "calculationAuthorized": false,
+                "publicationAuthorized": true,
+                "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
+                "ownerPublicationAuthorization": "lote002-owner-confirmed"
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "dexametasona_elixir",
+          "originalRecordMetadata": {
+            "ID": "dexametasona_elixir",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/dexametasona.json",
+              "templateSha256": "176ed420ac1c027d82deb4113fc025c47b8de2fb7886d3e24344c0a4172dcce1",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=7b51ffce-ec64-4b49-8870-b9666537c541"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "dose",
+                "pediatricDose",
+                "administration",
+                "preparation",
+                "infusionProtocol",
+                "clinicalPearls"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "indications",
+                "renalDose",
+                "hepaticDose",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/imuno_corticoide.js",
+                "sourceField": "dexametasona.mcGoldClinicalV1",
+                "lote": "024",
+                "requiredFields": 33,
+                "approvedSha256": "9721657a393121ed360ce59ff910deb7cbb3b0fc3421608349c6fa584237305a",
+                "calculationAuthorized": false,
+                "publicationAuthorized": true,
+                "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+                "ownerPublicationAuthorization": "mission10-owner-confirmed"
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        },
+        {
+          "id": "budesonida_suspensao_inalatoria",
+          "originalRecordMetadata": {
+            "ID": "budesonida_suspensao_inalatoria",
+            "NOTA_REVISAO_CLINICA": "NOVO CANDIDATO. Não corresponde ao payload ausente do lote 093 e não herda sua homologação.",
+            "PROVENIENCIA": {
+              "type": "NEW_RESEARCH_CANDIDATE_NOT_RECOVERED_APPROVAL",
+              "templatePath": "data/drugs/budesonida.json",
+              "templateSha256": "83faa465b16000c39d3c4e9904fab859797107253db21034238feb9f2ea9facd",
+              "sourcesConsulted": "2026-09-21",
+              "primarySources": [
+                "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1d139a25-9c17-4b3e-8ffd-b2d562cc00ee"
+              ],
+              "newProductSpecificFields": [
+                "name",
+                "commercialNames",
+                "presentation",
+                "presentations",
+                "indications",
+                "dose",
+                "pediatricDose",
+                "hepaticDose",
+                "administration",
+                "preparation",
+                "infusionProtocol"
+              ],
+              "inheritedFieldsRequiringReview": [
+                "class",
+                "pharmacologicClass",
+                "mechanism",
+                "pharmacodynamics",
+                "pharmacokinetics",
+                "renalDose",
+                "commonAdverseEffects",
+                "dangerousAdverseEffects",
+                "adverseEffects",
+                "contraindications",
+                "interactions",
+                "monitoring",
+                "pregnancy",
+                "lactation",
+                "specialPopulations",
+                "patientEducation",
+                "clinicalPearls",
+                "alerts"
+              ],
+              "templateClinicalMetadata": {
+                "status": "PASS_CLINICAL_HOMOLOGATION",
+                "sourceOwner": "database/pneumologia.js",
+                "sourceField": "budesonida.mcGoldClinicalV1",
+                "lote": "012",
+                "requiredFields": 33,
+                "approvedSha256": "33a04a022820507c1688fbebb735cd7d879bc3d0ef30a24f4ed7483f5cac16eb",
+                "calculationAuthorized": false,
+                "publicationAuthorized": true,
+                "clinicalPackagePublicationState": "NAO_AUTORIZADA",
+                "ownerPublicationAuthorization": "mission10-owner-confirmed"
+              }
+            },
+            "STATES": {
+              "REVISAO_CLINICA": "PENDENTE",
+              "HOMOLOGACAO_DADOS": "NAO",
+              "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+              "INTEGRACAO_TECNICA": "SOMENTE_CANDIDATO",
+              "PUBLICACAO": "BLOQUEADA"
+            },
+            "calculationAuthorized": false,
+            "publicationAuthorized": false
+          },
+          "states": {
+            "REVISAO_CLINICA": "HOMOLOGADA_NOVO_CANDIDATO",
+            "HOMOLOGACAO_DADOS": "SIM",
+            "AUTORIZACAO_CALCULO": "NAO_AUTORIZADA",
+            "INTEGRACAO_RUNTIME": "NAO",
+            "INTEGRACAO_TECNICA": "NAO_INICIADA",
+            "PUBLICACAO": "BLOQUEADA"
+          }
+        }
+      ]
+    }
+  }
+}

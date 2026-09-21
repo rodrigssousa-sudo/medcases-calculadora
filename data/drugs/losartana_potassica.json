@@ -1,0 +1,355 @@
+{
+  "id": "losartana_potassica",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "losartana_potassica"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Losartana potássica comprimido",
+    "class": "Anti-hipertensivo; bloqueador do receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista seletivo do receptor AT1 (BRA/ARB)",
+    "mechanism": "Bloqueia ações da angiotensina II mediadas por AT1, reduzindo vasoconstrição e secreção de aldosterona.",
+    "pharmacodynamics": "Reduz pressão arterial e efeitos da angiotensina II sem inibir degradação de bradicinina.",
+    "pharmacokinetics": "VO; convertido a metabólito ativo. Exposição aumenta na insuficiência hepática; losartana e metabólito ativo não são removidos por hemodiálise.",
+    "indications": "Rótulo EUA: hipertensão; redução de risco de AVC em hipertensos com hipertrofia ventricular esquerda em população definida; nefropatia em diabetes tipo 2 com hipertensão/proteinúria.",
+    "commercialNames": "Fonte: losartan potassium tablets genérico EUA; marcas BR/AR não verificadas.",
+    "presentation": "Comprimidos revestidos VO.",
+    "presentations": "25 mg; 50 mg; 100 mg.",
+    "dose": "Hipertensão adulta: 50 mg VO 1x/dia; pode aumentar a 100 mg 1x/dia. Em possível depleção intravascular, rótulo recomenda iniciar 25 mg.",
+    "pediatricDose": "6–16 anos: inicial 0,7 mg/kg 1x/dia, até 50 mg. Doses >1,4 mg/kg ou >100 mg/dia não estudadas. Não recomendado <6 anos ou com GFR <30 mL/min/1,73 m². AUTOMATABLE=NO até validar idade/peso/GFR.",
+    "renalDose": "Não exige ajuste de rotina na insuficiência renal, exceto considerar depleção de volume; monitorar função renal e potássio. Não é removido por hemodiálise.",
+    "hepaticDose": "Comprometimento hepático leve a moderado: iniciar 25 mg 1x/dia. Não estudado em insuficiência hepática grave.",
+    "commonAdverseEffects": "Tontura, infecção respiratória alta e congestão nasal foram eventos relatados; perfil depende da indicação.",
+    "dangerousAdverseEffects": "Toxicidade fetal, hipercalemia, hipotensão e deterioração da função renal.",
+    "adverseEffects": "Angioedema é raro; alterações de creatinina e potássio podem ocorrer.",
+    "contraindications": "Hipersensibilidade; coadministração com aliscireno em pacientes com diabetes.",
+    "interactions": "Potássio/poupadores: hipercalemia; AINEs podem reduzir efeito e piorar função renal; lítio pode acumular; dupla inibição do SRAA aumenta risco.",
+    "monitoring": "PA, creatinina/eGFR, potássio e estado volêmico.",
+    "administration": "VO, 1x/dia conforme esquema; comprimido ou suspensão extemporânea em populações específicas.",
+    "preparation": "Esta ficha é do comprimido. O rótulo descreve suspensão extemporânea 2,5 mg/mL, mas preparo automático permanece fora do escopo.",
+    "infusionProtocol": "NÃO APLICÁVEL ao comprimido.",
+    "pregnancy": "BOXED WARNING: toxicidade fetal; interromper ao detectar gestação.",
+    "lactation": "Dados humanos são limitados; considerar necessidade materna e alternativas, especialmente em recém-nascidos.",
+    "specialPopulations": "Depleção de volume aumenta risco de hipotensão; insuficiência hepática exige dose inicial menor.",
+    "patientEducation": "Evitar suplementos de potássio sem orientação; comunicar gestação; reconhecer tontura/hipotensão e sinais de angioedema.",
+    "clinicalPearls": "Pediatria documentada é 6–16 anos e exige filtro de GFR; não extrapolar para <6 anos.",
+    "guidelineRecommendations": "BRA é opção de terapia anti-hipertensiva conforme diretrizes; a escolha depende de comorbidades, tolerância e risco.",
+    "safetyFlags": "ARB; TOXICIDADE_FETAL; HIPERCALEMIA; FUNCAO_RENAL; PEDIATRIA_6_16.",
+    "alerts": "Não usar a suspensão extemporânea descrita na bula para inferir disponibilidade comercial local.",
+    "references": [
+      "DailyMed/NLM EUA — Losartan Potassium tablets, updated 24-06-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393",
+      "ESC — 2024 Guidelines. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393"
+  },
+  "es": {
+    "name": "Losartán potásico comprimido",
+    "class": "Antihipertensivo; bloqueador del receptor de angiotensina II",
+    "pharmacologicClass": "Antagonista selectivo del receptor AT1 (ARA-II/ARB)",
+    "mechanism": "Bloquea acciones de angiotensina II mediadas por AT1, reduciendo vasoconstricción y secreción de aldosterona.",
+    "pharmacodynamics": "Reduce presión arterial y efectos de angiotensina II sin inhibir degradación de bradicinina.",
+    "pharmacokinetics": "VO; se convierte a metabolito activo. La exposición aumenta en insuficiencia hepática; losartán y metabolito activo no se eliminan por hemodiálisis.",
+    "indications": "Rótulo EE.UU.: hipertensión; reducción del riesgo de ACV en hipertensos con hipertrofia ventricular izquierda en población definida; nefropatía en diabetes tipo 2 con hipertensión/proteinuria.",
+    "commercialNames": "Fuente: losartan potassium tablets genérico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos recubiertos VO.",
+    "presentations": "25 mg; 50 mg; 100 mg.",
+    "dose": "Hipertensión adulta: 50 mg VO una vez/día; puede aumentar a 100 mg una vez/día. Con posible depleción intravascular, el rótulo recomienda iniciar 25 mg.",
+    "pediatricDose": "6–16 años: inicial 0,7 mg/kg una vez/día, hasta 50 mg. Dosis >1,4 mg/kg o >100 mg/día no estudiadas. No recomendado <6 años ni con GFR <30 mL/min/1,73 m². AUTOMATABLE=NO hasta validar edad/peso/GFR.",
+    "renalDose": "No requiere ajuste rutinario en insuficiencia renal, salvo considerar depleción de volumen; vigilar función renal y potasio. No se elimina por hemodiálisis.",
+    "hepaticDose": "Compromiso hepático leve a moderado: iniciar 25 mg una vez/día. No estudiado en insuficiencia hepática grave.",
+    "commonAdverseEffects": "Mareo, infección respiratoria alta y congestión nasal fueron eventos comunicados; el perfil depende de la indicación.",
+    "dangerousAdverseEffects": "Toxicidad fetal, hiperpotasemia, hipotensión y deterioro de función renal.",
+    "adverseEffects": "Angioedema es raro; pueden ocurrir cambios de creatinina y potasio.",
+    "contraindications": "Hipersensibilidad; coadministración con aliskireno en pacientes con diabetes.",
+    "interactions": "Potasio/ahorradores: hiperpotasemia; AINEs pueden reducir efecto y empeorar función renal; litio puede acumular; doble bloqueo del SRAA aumenta riesgo.",
+    "monitoring": "PA, creatinina/eGFR, potasio y estado de volumen.",
+    "administration": "VO, una vez/día según pauta; comprimido o suspensión extemporánea en poblaciones específicas.",
+    "preparation": "Esta ficha es de comprimido. El rótulo describe suspensión extemporánea 2,5 mg/mL, pero la preparación automática queda fuera de alcance.",
+    "infusionProtocol": "NO APLICA al comprimido.",
+    "pregnancy": "BOXED WARNING: toxicidad fetal; suspender al detectar embarazo.",
+    "lactation": "Datos humanos limitados; considerar necesidad materna y alternativas, especialmente en recién nacidos.",
+    "specialPopulations": "La depleción de volumen aumenta riesgo de hipotensión; insuficiencia hepática requiere dosis inicial menor.",
+    "patientEducation": "Evitar suplementos de potasio sin indicación; comunicar embarazo; reconocer mareo/hipotensión y signos de angioedema.",
+    "clinicalPearls": "La pediatría documentada es 6–16 años y exige filtro de GFR; no extrapolar a <6 años.",
+    "guidelineRecommendations": "ARA-II es opción antihipertensiva según guías; la elección depende de comorbilidades, tolerancia y riesgo.",
+    "safetyFlags": "ARA-II; TOXICIDAD_FETAL; HIPERPOTASEMIA; FUNCION_RENAL; PEDIATRIA_6_16.",
+    "alerts": "No usar la suspensión extemporánea descrita en ficha para inferir disponibilidad comercial local.",
+    "references": [
+      "DailyMed/NLM EUA — Losartan Potassium tablets, updated 24-06-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393",
+      "ESC — 2024 Guidelines. https://www.escardio.org/guidelines/clinical-practice-guidelines/all-esc-practice-guidelines/elevated-blood-pressure-and-hypertension/"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e7f6b25b-ec4c-4c3a-a541-617d2d9ab393"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Losartana potássica comprimido",
+    "es": "Losartán potásico comprimido"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "losartana_potassica.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "096",
+    "approvedSha256": "1b2e49b951778cdba13c6bcb9d2dd30f3fb6f3f05735ada3e9bad3d5a7a8ed59",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "71a860690e5d5fc81d91b6cbc6094f9dec5c294e9f50c9d58175ff7d930772f9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_096_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "diazepam_retal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "midazolam_intranasal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_12_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenobarbital_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CONVERSAO_GOTAS_BLOQUEADA",
+          "APRESENTACAO_LOCAL_GOTAS_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar bula/produto local que realmente use conta-gotas antes de qualquer cálculo de volume ou gotas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril_sublingual",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "enalapril_maleato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroclorotiazida_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_COMPRIMIDO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "losartana_potassica",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "anlodipino_besilato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "atenolol_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "FORMULACAO_IV_FORA_DO_ESCOPO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "losartana_potassica",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado. Bloqueios e restricoes granulares permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "096",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "096",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

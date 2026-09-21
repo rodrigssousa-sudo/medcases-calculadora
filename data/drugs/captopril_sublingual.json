@@ -1,0 +1,360 @@
+{
+  "id": "captopril_sublingual",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "captopril_sublingual"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Captopril sublingual — uso não aprovado em bula",
+    "class": "IECA; uso agudo sublingual off-label histórico",
+    "pharmacologicClass": "Inibidor da ECA",
+    "mechanism": "Mesmo mecanismo do captopril oral: inibição da formação de angiotensina II e redução de aldosterona.",
+    "pharmacodynamics": "Pode reduzir pressão arterial, mas a magnitude e velocidade podem ser imprevisíveis em contexto agudo; não substitui protocolo monitorado de emergência hipertensiva.",
+    "pharmacokinetics": "A bula regulatória consultada é para comprimidos VO e não caracteriza farmacocinética sublingual validada. Estudos antigos avaliaram administração sublingual de comprimidos.",
+    "indications": "NÃO há indicação sublingual aprovada na bula DailyMed consultada. Estudos antigos avaliaram crises/urgências hipertensivas; a prática atual diferencia emergência com dano agudo de órgão-alvo de elevação assintomática.",
+    "commercialNames": "Não há produto sublingual específico validado nesta ficha; estudos usaram captopril em comprimidos.",
+    "presentation": "Comprimido oral utilizado de forma off-label por via sublingual em estudos; não é apresentação sublingual regulatória.",
+    "presentations": "Estudos citados avaliaram 25 mg; isso não valida todas as forças nem produtos para uso sublingual.",
+    "dose": "EVIDÊNCIA HISTÓRICA: estudos avaliaram 25 mg SL; em um estudo de urgência, uma segunda dose de 25 mg foi dada aos não respondedores após 60 min. Isto NÃO é recomendação regulatória nem esquema automático atual.",
+    "pediatricDose": "Nenhum esquema sublingual pediátrico validado. BLOQUEADO.",
+    "renalDose": "As limitações renais do captopril permanecem, mas não há algoritmo validado específico para uso sublingual agudo. BLOQUEADO.",
+    "hepaticDose": "Sem algoritmo específico para via sublingual.",
+    "commonAdverseEffects": "Hipotensão, tontura, tosse e alteração do paladar podem ocorrer, além dos efeitos da classe.",
+    "dangerousAdverseEffects": "Queda excessiva da pressão, angioedema, hipercalemia, lesão renal aguda e toxicidade fetal.",
+    "adverseEffects": "O perfil de segurança deriva principalmente do captopril oral; a via sublingual não possui bula própria validada.",
+    "contraindications": "Aplicam-se contraindicações do captopril/IECA; a ausência de uma bula sublingual impede criar lista distinta de contraindicações para a rota.",
+    "interactions": "Mesmas interações relevantes do captopril oral: potássio, AINEs, diuréticos, aliscireno e outros anti-hipertensivos.",
+    "monitoring": "Se usado em contexto agudo, requer monitorização seriada de PA e avaliação de dano de órgão-alvo, função renal e potássio conforme contexto.",
+    "administration": "VIA SUBLINGUAL NÃO APROVADA na bula consultada. Não implementar no motor como rota de rotina.",
+    "preparation": "Não há preparação sublingual padronizada validada; não triturar/dissolver automaticamente por esta ficha.",
+    "infusionProtocol": "NÃO APLICÁVEL.",
+    "pregnancy": "Contra o uso na gestação por toxicidade fetal dos fármacos do sistema renina-angiotensina; interrupção quando gravidez é detectada.",
+    "lactation": "Seguir a informação de captopril oral; não há dados específicos para exposição sublingual.",
+    "specialPopulations": "Depleção de volume, doença renal e idosos podem ter resposta hipotensora mais intensa; uso agudo exige cautela.",
+    "patientEducation": "Não orientar automedicação sublingual para números altos de pressão. Elevação assintomática e emergência hipertensiva têm abordagens distintas.",
+    "clinicalPearls": "A evidência de 25 mg SL vem de estudos antigos; uma declaração AHA de 2024 destaca que emergência hipertensiva com dano agudo costuma requerer terapia IV monitorada e que tratar elevação assintomática em ambiente agudo geralmente deve ser exceção.",
+    "guidelineRecommendations": "AHA 2024: diferenciar emergência hipertensiva de PA elevada assintomática; emergência envolve dano agudo de órgão-alvo e costuma exigir tratamento IV monitorado. O documento não estabelece captopril SL como padrão.",
+    "safetyFlags": "OFF_LABEL_ROUTE; CRISE_HIPERTENSIVA_REQUER_CLASSIFICACAO; QUEDA_RAPIDA_PA; IECA_TOXICIDADE_FETAL.",
+    "alerts": "AUTOMACAO_SUBLINGUAL=BLOQUEADA. Não apresentar 25 mg SL como recomendação universal de urgência hipertensiva.",
+    "references": [
+      "DailyMed/NLM EUA — Captopril tablets (rota aprovada VO, não SL). https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+      "PubMed — Angeli et al. Sublingual captopril vs nifedipine, 1991. https://pubmed.ncbi.nlm.nih.gov/2012448/",
+      "PubMed — Clinical efficacy of sublingual captopril in hypertensive urgency. https://pubmed.ncbi.nlm.nih.gov/19421685/",
+      "AHA Scientific Statement 2024 — Management of Elevated BP in Acute Care. https://www.ahajournals.org/doi/epdf/10.1161/HYP.0000000000000238"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+  },
+  "es": {
+    "name": "Captopril sublingual — uso no aprobado en ficha",
+    "class": "IECA; uso agudo sublingual off-label histórico",
+    "pharmacologicClass": "Inhibidor de la ECA",
+    "mechanism": "Mismo mecanismo que captopril oral: inhibición de formación de angiotensina II y reducción de aldosterona.",
+    "pharmacodynamics": "Puede reducir presión arterial, pero la magnitud y velocidad pueden ser impredecibles en contexto agudo; no sustituye un protocolo monitorizado de emergencia hipertensiva.",
+    "pharmacokinetics": "La ficha regulatoria consultada es para comprimidos VO y no caracteriza farmacocinética sublingual validada. Estudios antiguos evaluaron administración sublingual de comprimidos.",
+    "indications": "NO hay indicación sublingual aprobada en la ficha DailyMed consultada. Estudios antiguos evaluaron crisis/urgencias hipertensivas; la práctica actual distingue emergencia con daño agudo de órgano diana de elevación asintomática.",
+    "commercialNames": "No hay producto sublingual específico validado en esta ficha; los estudios usaron captopril en comprimidos.",
+    "presentation": "Comprimido oral utilizado off-label por vía sublingual en estudios; no es presentación sublingual regulatoria.",
+    "presentations": "Los estudios citados evaluaron 25 mg; esto no valida todas las potencias ni productos para uso sublingual.",
+    "dose": "EVIDENCIA HISTÓRICA: estudios evaluaron 25 mg SL; en un estudio de urgencia, se dio una segunda dosis de 25 mg a no respondedores tras 60 min. Esto NO es recomendación regulatoria ni pauta automática actual.",
+    "pediatricDose": "No hay pauta sublingual pediátrica validada. BLOQUEADO.",
+    "renalDose": "Persisten las limitaciones renales de captopril, pero no hay algoritmo validado específico para uso sublingual agudo. BLOQUEADO.",
+    "hepaticDose": "Sin algoritmo específico para vía sublingual.",
+    "commonAdverseEffects": "Pueden ocurrir hipotensión, mareo, tos y alteración del gusto, además de efectos de clase.",
+    "dangerousAdverseEffects": "Caída excesiva de presión, angioedema, hiperpotasemia, lesión renal aguda y toxicidad fetal.",
+    "adverseEffects": "El perfil de seguridad deriva principalmente de captopril oral; la vía sublingual no tiene ficha propia validada.",
+    "contraindications": "Se aplican contraindicaciones de captopril/IECA; la ausencia de ficha sublingual impide crear una lista distinta por vía.",
+    "interactions": "Mismas interacciones relevantes de captopril oral: potasio, AINEs, diuréticos, aliskireno y otros antihipertensivos.",
+    "monitoring": "Si se usa en contexto agudo, requiere monitorización seriada de PA y evaluación de daño de órgano diana, función renal y potasio según contexto.",
+    "administration": "VÍA SUBLINGUAL NO APROBADA en la ficha consultada. No implementar en el motor como vía rutinaria.",
+    "preparation": "No hay preparación sublingual estandarizada validada; no triturar/disolver automáticamente con esta ficha.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Contra el uso en embarazo por toxicidad fetal de fármacos del sistema renina-angiotensina; suspender al detectar embarazo.",
+    "lactation": "Seguir información de captopril oral; no hay datos específicos de exposición sublingual.",
+    "specialPopulations": "Depleción de volumen, enfermedad renal y mayores pueden tener respuesta hipotensora más intensa; el uso agudo exige precaución.",
+    "patientEducation": "No indicar automedicación sublingual por cifras altas de presión. Elevación asintomática y emergencia hipertensiva tienen abordajes distintos.",
+    "clinicalPearls": "La evidencia de 25 mg SL proviene de estudios antiguos; una declaración AHA de 2024 destaca que la emergencia hipertensiva con daño agudo suele requerir terapia IV monitorizada y que tratar elevación asintomática en agudos generalmente debe ser la excepción.",
+    "guidelineRecommendations": "AHA 2024: diferenciar emergencia hipertensiva de PA elevada asintomática; la emergencia implica daño agudo de órgano diana y suele requerir tratamiento IV monitorizado. El documento no establece captopril SL como estándar.",
+    "safetyFlags": "OFF_LABEL_ROUTE; CRISIS_HIPERTENSIVA_REQUIERE_CLASIFICACION; CAIDA_RAPIDA_PA; IECA_TOXICIDAD_FETAL.",
+    "alerts": "AUTOMATIZACION_SUBLINGUAL=BLOQUEADA. No presentar 25 mg SL como recomendación universal de urgencia hipertensiva.",
+    "references": [
+      "DailyMed/NLM EUA — Captopril tablets (rota aprovada VO, não SL). https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee",
+      "PubMed — Angeli et al. Sublingual captopril vs nifedipine, 1991. https://pubmed.ncbi.nlm.nih.gov/2012448/",
+      "PubMed — Clinical efficacy of sublingual captopril in hypertensive urgency. https://pubmed.ncbi.nlm.nih.gov/19421685/",
+      "AHA Scientific Statement 2024 — Management of Elevated BP in Acute Care. https://www.ahajournals.org/doi/epdf/10.1161/HYP.0000000000000238"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1395ba5b-2fc9-41ff-9c43-e0740d781dee"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Captopril sublingual — uso não aprovado em bula",
+    "es": "Captopril sublingual — uso no aprobado en ficha"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "captopril_sublingual.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "096",
+    "approvedSha256": "1b2e49b951778cdba13c6bcb9d2dd30f3fb6f3f05735ada3e9bad3d5a7a8ed59",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "71a860690e5d5fc81d91b6cbc6094f9dec5c294e9f50c9d58175ff7d930772f9",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_096_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "diazepam_retal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_AUTOMATICO_BLOQUEADO_ATE_TABELA_PESO_IDADE",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "midazolam_intranasal",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "IDADE_MENOR_12_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "DEPRESSAO_RESPIRATORIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fenobarbital_gotas",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CONVERSAO_GOTAS_BLOQUEADA",
+          "APRESENTACAO_LOCAL_GOTAS_NAO_CONFIRMADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "Confirmar bula/produto local que realmente use conta-gotas antes de qualquer cálculo de volume ou gotas."
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "captopril_sublingual",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "enalapril_maleato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR_FORMULACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroclorotiazida_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_COMPRIMIDO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "losartana_potassica",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_GFR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "anlodipino_besilato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "atenolol_comprimido",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA",
+          "FORMULACAO_IV_FORA_DO_ESCOPO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "captopril_sublingual",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado. Bloqueios e restricoes granulares permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "BLOQUEIOS_CLINICOS": [
+        "VIA_SUBLINGUAL_OFF_LABEL_BLOQUEADA_PARA_AUTOMACAO",
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "USO_AGUDO_EXIGE_CLASSIFICACAO_DANO_ORGAO_ALVO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "096",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "096",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "id": "tecovirimat",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "tecovirimat"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Tecovirimat - TPOXX oral/IV",
+    "class": "Antiviral para smallpox",
+    "pharmacologicClass": "Inibidor da proteina viral VP37",
+    "mechanism": "Inibe VP37 de orthopoxvirus, bloqueando formacao/liberacao de virions envelopados.",
+    "pharmacodynamics": "Eficacia para smallpox foi estabelecida principalmente por estudos animais e PK/seguranca humana, nao por eficacia clinica humana direta.",
+    "pharmacokinetics": "Absorcao oral melhora com refeicao moderada/alta em gordura. Formula IV contem hydroxypropyl-beta-cyclodextrin com implicacoes renais.",
+    "indications": "Tratamento de smallpox humano em adultos e pediatria >=3 kg.",
+    "commercialNames": "TPOXX, EUA.",
+    "presentation": "Capsulas orais e injecao IV.",
+    "presentations": "Capsula 200 mg; injecao 200 mg/20 mL = 10 mg/mL.",
+    "dose": "Oral >=13 kg por 14 dias: 13-<25 kg 200 mg q12h; 25-<40 kg 400 mg q12h; 40-<120 kg 600 mg q12h; >=120 kg 600 mg q8h.",
+    "pediatricDose": "IV se incapaz de oral e >=3 kg: 3-<35 kg 6 mg/kg q12h; 35-<120 kg 200 mg q12h; >=120 kg 300 mg q12h, cada dose em 6 h por ate 14 dias. Trocar para oral quando possivel e >=13 kg.",
+    "renalDose": "IV contraindicado se CrCl <30 mL/min. Em comprometimento leve/moderado, monitorar funcao renal pelo excipiente. Via oral nao tem a mesma restricao do excipiente.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Oral: cefaleia, nausea, dor abdominal e vomitos. IV: reacoes no local/infusao e cefaleia.",
+    "dangerousAdverseEffects": "Hipoglicemia pode ocorrer com repaglinida; formulacao IV pode acumular excipiente em renal.",
+    "adverseEffects": "Alteracoes GI e locais de infusao podem ocorrer.",
+    "contraindications": "IV: insuficiencia renal grave CrCl <30 mL/min. Hipersensibilidade conforme produto.",
+    "interactions": "Pode aumentar exposicao a repaglinida e reduzir efeito de midazolam; revisar interacoes CYP/transportadores do rotulo.",
+    "monitoring": "Resposta clinica, funcao renal se IV, glicemia se repaglinida e tolerancia GI/infusao.",
+    "administration": "Oral dentro de 30 min apos refeicao moderada/alta em gordura. IV somente com syringe pump, nunca bolus.",
+    "preparation": "IV: diluir com duas partes iguais de NaCl 0,9% ou D5W conforme rotulo; usar syringe pump.",
+    "infusionProtocol": "Cada dose IV em 6 horas.",
+    "pregnancy": "Dados humanos insuficientes; estudos animais nao mostraram toxicidade embriofetal nas exposicoes avaliadas.",
+    "lactation": "",
+    "specialPopulations": "Criancas <2 anos recebendo IV exigem cautela adicional e monitorizacao renal apos tratamento.",
+    "patientEducation": "Oral deve ser tomado com refeicao adequada; via IV e hospitalar. Completar 14 dias conforme prescricao.",
+    "clinicalPearls": "Via oral e IV tem faixas de peso diferentes e a restricao renal severa e especifica da forma IV/excipiente.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "SMALLPOX; PESO; ORAL_VS_IV; CRCL_30_IV; INFUSAO_6H.",
+    "alerts": "AUTOMACAO exige peso, via e funcao renal. IV nunca em bolus e contraindicada se CrCl <30.",
+    "references": [
+      "DailyMed/FDA EUA - TPOXX current prescribing information. https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fce826ab-4d6a-4139-a2ee-a304a913a253"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fce826ab-4d6a-4139-a2ee-a304a913a253"
+  },
+  "es": {
+    "name": "Tecovirimat - TPOXX oral/IV",
+    "class": "Antiviral para viruela",
+    "pharmacologicClass": "Inhibidor de proteina viral VP37",
+    "mechanism": "Inhibe VP37 de orthopoxvirus, bloqueando formacion/liberacion de viriones envueltos.",
+    "pharmacodynamics": "Eficacia para viruela se establecio principalmente por estudios animales y PK/seguridad humana, no por eficacia clinica humana directa.",
+    "pharmacokinetics": "Absorcion oral mejora con comida moderada/alta en grasa. Formulacion IV contiene hydroxypropyl-beta-cyclodextrin con implicaciones renales.",
+    "indications": "Tratamiento de viruela humana en adultos y pediatria >=3 kg.",
+    "commercialNames": "TPOXX, EE.UU.",
+    "presentation": "Capsulas orales e inyeccion IV.",
+    "presentations": "Capsula 200 mg; inyeccion 200 mg/20 mL = 10 mg/mL.",
+    "dose": "Oral >=13 kg durante 14 dias: 13-<25 kg 200 mg q12h; 25-<40 kg 400 mg q12h; 40-<120 kg 600 mg q12h; >=120 kg 600 mg q8h.",
+    "pediatricDose": "IV si incapaz de oral y >=3 kg: 3-<35 kg 6 mg/kg q12h; 35-<120 kg 200 mg q12h; >=120 kg 300 mg q12h, cada dosis en 6 h por hasta 14 dias. Cambiar a oral cuando sea posible y >=13 kg.",
+    "renalDose": "IV contraindicado si CrCl <30 mL/min. En compromiso leve/moderado, monitorizar funcion renal por excipiente. Via oral no tiene la misma restriccion del excipiente.",
+    "hepaticDose": "",
+    "commonAdverseEffects": "Oral: cefalea, nausea, dolor abdominal y vomitos. IV: reacciones locales/infusion y cefalea.",
+    "dangerousAdverseEffects": "Puede ocurrir hipoglucemia con repaglinida; formulacion IV puede acumular excipiente en renal.",
+    "adverseEffects": "Pueden ocurrir alteraciones GI y locales de infusion.",
+    "contraindications": "IV: insuficiencia renal grave CrCl <30 mL/min. Hipersensibilidad segun producto.",
+    "interactions": "Puede aumentar exposicion a repaglinida y reducir efecto de midazolam; revisar interacciones CYP/transportadores del rotulo.",
+    "monitoring": "Respuesta clinica, funcion renal si IV, glucemia si repaglinida y tolerancia GI/infusion.",
+    "administration": "Oral dentro de 30 min tras comida moderada/alta en grasa. IV solo con syringe pump, nunca bolus.",
+    "preparation": "IV: diluir con dos partes iguales de NaCl 0,9% o D5W segun rotulo; usar syringe pump.",
+    "infusionProtocol": "Cada dosis IV durante 6 horas.",
+    "pregnancy": "Datos humanos insuficientes; estudios animales no mostraron toxicidad embriofetal en exposiciones evaluadas.",
+    "lactation": "",
+    "specialPopulations": "Ninos <2 anos recibiendo IV requieren precaucion adicional y monitorizacion renal tras tratamiento.",
+    "patientEducation": "Oral debe tomarse con comida adecuada; via IV es hospitalaria. Completar 14 dias segun prescripcion.",
+    "clinicalPearls": "Via oral e IV tienen bandas de peso distintas y restriccion renal severa es especifica de forma IV/excipiente.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "VIRUELA; PESO; ORAL_VS_IV; CRCL_30_IV; INFUSION_6H.",
+    "alerts": "AUTOMATIZACION exige peso, via y funcion renal. IV nunca en bolus y contraindicada si CrCl <30.",
+    "references": [
+      "DailyMed/FDA EUA - TPOXX current prescribing information. https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fce826ab-4d6a-4139-a2ee-a304a913a253"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=fce826ab-4d6a-4139-a2ee-a304a913a253"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Tecovirimat - TPOXX oral/IV",
+    "es": "Tecovirimat - TPOXX oral/IV"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "tecovirimat.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "102",
+    "approvedSha256": "243819e644a41ec26e6dc23d38207a9031763cca06aafdf1e1788b1b5a9fc063",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "ab3d2efd034eeb6b0b7767e0ec13b514080652b9e06f5f45f2257bf1c8d06f10",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_102_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "pentamidina",
+        "bloqueios_clinicos": [
+          "ROTA_INALADA_BLOQUEADA",
+          "AJUSTE_RENAL_HEPATICO_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "pirimetamina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "MONOTERAPIA_TOXOPLASMOSE_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "primaquina",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "G6PD_OBRIGATORIO",
+          "GRAVIDEZ_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "quinupristina_dalfopristina",
+        "bloqueios_clinicos": [
+          "STATUS_2026_NAO_CONFIRMADO",
+          "IDADE_MENOR_12_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "ribavirina",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_HCV_BLOQUEADA",
+          "ROTA_INALADA_BLOQUEADA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "LACTACAO_NAO_DOCUMENTADA_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulbactam_iv",
+        "bloqueios_clinicos": [
+          "DOSE_ALTA_ACINETOBACTER_BLOQUEADA_PARA_AUTOMACAO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sulfadiazina",
+        "bloqueios_clinicos": [
+          "SULFADIAZINA_PRATA_BLOQUEADA",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "taurolidina",
+        "bloqueios_clinicos": [
+          "GENERIC_TAUROLIDINE_BLOQUEADA",
+          "PEDIATRIA_BLOQUEADA",
+          "USO_SISTEMICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_NAO_DOCUMENTADO_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tecovirimat",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_PESO_VIA_RENAL",
+          "IV_CRCL_MENOR_30_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "vancomicina_oral",
+        "bloqueios_clinicos": [
+          "VANCOMICINA_IV_BLOQUEADA_NESTA_FICHA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "HEPATICO_GESTACAO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "tecovirimat",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "TPOXX oral/IV - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_EXIGE_PESO_VIA_RENAL",
+        "IV_CRCL_MENOR_30_BLOQUEADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "102",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "102",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

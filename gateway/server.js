@@ -260,6 +260,23 @@ function createGatewayHandler({
       }
     }
 
+    // Private discovery metadata follows the same session/capability boundary as drug records.
+    if (req.method === 'GET' && url.pathname === '/api/drug-catalog') {
+      try {
+        const claims = authenticate(req);
+        requireCapability(claims, CAP.DRUG_CATALOG_FULL);
+        const rows = JSON.parse(fs.readFileSync(path.join(safeRoot, 'data/drugs_index.json'), 'utf8'));
+        const drugs = rows.map(row => ({
+          id: row.id, name: row.name, category: row.category, icon: row.icon,
+          referenceOnly: ['gold33_nova_lista.js', 'gold33_novo_093.js'].includes(row.sourceModule),
+        }));
+        return json(res, 200, { ok: true, drugs });
+      } catch (err) {
+        const status = err.code === 'PREMIUM_REQUIRED' ? 403 : (err.statusCode || 500);
+        return json(res, status, { ok: false, error: status === 500 ? 'CATALOG_UNAVAILABLE' : err.message });
+      }
+    }
+
     const aiCurrent =
       url.pathname === '/api/ai-drug-data/current' ||
       url.pathname === '/api/ai-drug-data/current.json';

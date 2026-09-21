@@ -1,0 +1,299 @@
+{
+  "id": "emulsao_lipidica_parenteral",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "emulsao_lipidica_parenteral"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Emulsao lipidica parenteral - Intralipid 20%",
+    "class": "Emulsao lipidica intravenosa para nutricao parenteral.",
+    "pharmacologicClass": "Fonte parenteral de calorias e acidos graxos essenciais.",
+    "mechanism": "Fornece triglicerideos/acidos graxos para oxidacao energetica, armazenamento e fornecimento de acidos graxos essenciais.",
+    "pharmacodynamics": "Suplementa energia e previne/corrige deficiencia de acidos graxos essenciais quando integrada a PN; excesso ou depuracao prejudicada causa hipertrigliceridemia/fat overload.",
+    "pharmacokinetics": "Particulas lipidicas sao depuradas de modo semelhante a quilomicrons; capacidade de metabolizacao varia com idade, estado critico, triglicerideos e doencas metabolicas.",
+    "indications": "Fonte de calorias e acidos graxos essenciais para adultos e pediatria que requerem PN; fonte de acidos graxos para prevenir deficiencia essencial.",
+    "commercialNames": "Intralipid 20% (Fresenius Kabi).",
+    "presentation": "Emulsao lipidica injetavel IV, via central ou periferica.",
+    "presentations": "20 g/100 mL (0,2 g/mL) em bolsas 100, 250 e 500 mL; 1.000 mL Pharmacy Bulk Package.",
+    "dose": "Adultos: estaveis 1 g/kg/dia; criticamente enfermos <=1 g/kg/dia; nao exceder 2,5 g/kg/dia. No primeiro dia, nao mais de 500 mL. Infusao direta: iniciar 0,2 mL/kg/h por 10-15 min e aumentar; velocidade maxima 0,5 mL/kg/h.",
+    "pediatricDose": "Nascimento-2 anos: iniciar 0,5 g/kg/dia; max 3 g/kg/dia; iniciar 0,1 mL/kg/h por 10-15 min; max 0,75 mL/kg/h. 2-<12 anos: 1-2 g/kg/dia; max 2,5 g/kg/dia; iniciar 0,2-0,4 mL/kg/h; max 0,75 mL/kg/h. 12-17 anos: iniciar 1 g/kg/dia; max 2 g/kg/dia; iniciar 0,2 mL/kg/h; max 0,75 mL/kg/h.",
+    "renalDose": "Nao ha reducao numerica especifica; disfuncao renal aumenta risco de acumulacao de aluminio durante PN prolongada e exige monitorizacao de funcao renal/eletrólitos.",
+    "hepaticDose": "Nao ha algoritmo numerico; PN prolongada pode associar-se a doenca hepatica. Monitorar funcao hepatica e considerar reduzir/interromper se alteracoes clinicamente relevantes.",
+    "commonAdverseEffects": "Adultos: nausea, vomitos e pirexia >=5% em ensaios. Pediatria: anemia, vomitos, GGT aumentada e colestase >=5%.",
+    "dangerousAdverseEffects": "Descompensacao por infusao rapida em neonatos/lactentes, hipersensibilidade, sepse relacionada a cateter, sindrome de sobrecarga de gordura, refeeding syndrome, hipertrigliceridemia/pancreatite e hepatopatia associada a PN.",
+    "adverseEffects": "Hiperglicemia, hipertrigliceridemia, infeccoes, sobrecarga de fluido, alteracoes hepaticas e hematologicas podem ocorrer.",
+    "contraindications": "Hipersensibilidade a ovo, soja, amendoim ou componentes; disturbio grave do metabolismo lipidico com TG >1.000 mg/dL.",
+    "interactions": "Conteudo de vitamina K pode antagonizar varfarina; monitorar coagulacao. Compatibilidade de aditivos/mistura PN deve ser avaliada por farmaceutico.",
+    "monitoring": "TG basal e periodico, acidos graxos essenciais, fluidos/eletrólitos, osmolaridade, glicose, funcao hepatica/renal, hemograma/plaquetas e coagulacao. Em adultos, interromper se TG >400 mg/dL conforme rotulo; pediatria pode ter eventos em niveis menores.",
+    "administration": "Infusao IV em veia central ou periferica. Pode ser administrada separadamente por conector Y ou em mistura PN compatível.",
+    "preparation": "Quando misturada com dextrose e aminoacidos manualmente, sequencia recomendada: dextrose -> aminoacidos -> Intralipid; agitar suavemente e inspecionar por precipitado/separacao. Proteger mistura PN da luz.",
+    "infusionProtocol": "Respeitar velocidades por idade. Adulto max 0,5 mL/kg/h; pediatria max 0,75 mL/kg/h. Neonatos/lactentes: iniciar muito lentamente por 10-15 min e aumentar somente se tolerado.",
+    "pregnancy": "Usar quando clinicamente necessario como componente de suporte nutricional, ponderando beneficio-risco; dados de produto devem ser considerados no contexto da PN.",
+    "lactation": "Rotulo informa que a dose recomendada nao e esperada causar dano ao lactente; nao ha dados diretos robustos de leite. Considerar beneficio da amamentacao e necessidade materna.",
+    "specialPopulations": "Prematuros e pequenos para idade gestacional tem depuracao lipidica reduzida e maior risco com infusao rapida; pacientes renais tem maior risco de aluminio.",
+    "patientEducation": "Em PN domiciliar, nao alterar velocidade/composicao; observar sinais de infeccao, falta de ar, febre, rash ou problemas no cateter.",
+    "clinicalPearls": "A dose deve ser expressa em g/kg/dia e a velocidade em mL/kg/h para a concentracao 20% (0,2 g/mL); separar claramente esses dois limites.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RISCO: neonatos/lactentes e infusao rapida; hipertrigliceridemia, fat overload, sepse e PNALD.",
+    "alerts": "Escopo Intralipid 20% EUA; outras emulsões lipidicas tem composicao e limites diferentes.",
+    "references": [
+      "DailyMed/FDA - INTRALIPID 20% I.V. Fat Emulsion | EUA; emulsao lipidica 20%; revisado 08/2025 | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61e025f1-a38e-4af2-9e18-13ea12977cf5"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61e025f1-a38e-4af2-9e18-13ea12977cf5"
+  },
+  "es": {
+    "name": "Emulsion lipidica parenteral - Intralipid 20%",
+    "class": "Emulsion lipidica intravenosa para nutricion parenteral.",
+    "pharmacologicClass": "Fuente parenteral de calorias y acidos grasos esenciales.",
+    "mechanism": "Aporta trigliceridos/acidos grasos para oxidacion energetica, almacenamiento y suministro de acidos grasos esenciales.",
+    "pharmacodynamics": "Suplementa energia y previene/corrige deficiencia de acidos grasos esenciales dentro de PN; exceso o depuracion alterada causa hipertrigliceridemia/fat overload.",
+    "pharmacokinetics": "Particulas lipidicas se depuran de forma similar a quilomicrones; capacidad de metabolizacion varia con edad, estado critico, trigliceridos y enfermedades metabolicas.",
+    "indications": "Fuente de calorias y acidos grasos esenciales para adultos y pediatria que requieren PN; fuente de acidos grasos para prevenir deficiencia esencial.",
+    "commercialNames": "Intralipid 20% (Fresenius Kabi).",
+    "presentation": "Emulsion lipidica inyectable IV, via central o periferica.",
+    "presentations": "20 g/100 mL (0,2 g/mL) en bolsas 100, 250 y 500 mL; 1.000 mL Pharmacy Bulk Package.",
+    "dose": "Adultos: estables 1 g/kg/dia; criticamente enfermos <=1 g/kg/dia; no exceder 2,5 g/kg/dia. Primer dia, no mas de 500 mL. Infusion directa: iniciar 0,2 mL/kg/h por 10-15 min y aumentar; velocidad maxima 0,5 mL/kg/h.",
+    "pediatricDose": "Nacimiento-2 anos: iniciar 0,5 g/kg/dia; max 3 g/kg/dia; iniciar 0,1 mL/kg/h por 10-15 min; max 0,75 mL/kg/h. 2-<12 anos: 1-2 g/kg/dia; max 2,5 g/kg/dia; iniciar 0,2-0,4 mL/kg/h; max 0,75 mL/kg/h. 12-17 anos: iniciar 1 g/kg/dia; max 2 g/kg/dia; iniciar 0,2 mL/kg/h; max 0,75 mL/kg/h.",
+    "renalDose": "No hay reduccion numerica especifica; disfuncion renal aumenta riesgo de acumulacion de aluminio durante PN prolongada y exige monitorizacion de funcion renal/electrolitos.",
+    "hepaticDose": "No hay algoritmo numerico; PN prolongada puede asociarse a enfermedad hepatica. Monitorizar funcion hepatica y considerar reducir/suspender si alteraciones clinicamente relevantes.",
+    "commonAdverseEffects": "Adultos: nausea, vomitos y pirexia >=5% en ensayos. Pediatria: anemia, vomitos, GGT aumentada y colestasis >=5%.",
+    "dangerousAdverseEffects": "Descompensacion por infusion rapida en neonatos/lactantes, hipersensibilidad, sepsis de cateter, sindrome de sobrecarga grasa, refeeding syndrome, hipertrigliceridemia/pancreatitis y hepatopatia asociada a PN.",
+    "adverseEffects": "Hiperglucemia, hipertrigliceridemia, infecciones, sobrecarga de liquidos, alteraciones hepaticas y hematologicas pueden ocurrir.",
+    "contraindications": "Hipersensibilidad a huevo, soja, mani o componentes; trastorno grave del metabolismo lipidico con TG >1.000 mg/dL.",
+    "interactions": "Contenido de vitamina K puede antagonizar warfarina; monitorizar coagulacion. Compatibilidad de aditivos/mezcla PN debe ser evaluada por farmaceutico.",
+    "monitoring": "TG basal y periodico, acidos grasos esenciales, fluidos/electrolitos, osmolaridad, glucosa, funcion hepatica/renal, hemograma/plaquetas y coagulacion. En adultos, suspender si TG >400 mg/dL segun prospecto; pediatria puede tener eventos a niveles menores.",
+    "administration": "Infusion IV en vena central o periferica. Puede administrarse por separado via conector Y o en mezcla PN compatible.",
+    "preparation": "Al mezclar manualmente con dextrosa y aminoacidos, secuencia recomendada: dextrosa -> aminoacidos -> Intralipid; agitar suavemente e inspeccionar precipitado/separacion. Proteger mezcla PN de la luz.",
+    "infusionProtocol": "Respetar velocidades por edad. Adulto max 0,5 mL/kg/h; pediatria max 0,75 mL/kg/h. Neonatos/lactantes: iniciar muy lento 10-15 min y aumentar solo si tolerado.",
+    "pregnancy": "Usar cuando clinicamente necesario como componente de soporte nutricional, ponderando beneficio-riesgo; datos del producto deben considerarse en contexto de PN.",
+    "lactation": "El prospecto indica que la dosis recomendada no se espera cause dano al lactante; no hay datos directos robustos en leche. Considerar beneficio de lactancia y necesidad materna.",
+    "specialPopulations": "Prematuros y pequenos para edad gestacional tienen menor depuracion lipidica y mayor riesgo con infusion rapida; pacientes renales mayor riesgo de aluminio.",
+    "patientEducation": "En PN domiciliaria, no alterar velocidad/composicion; observar signos de infeccion, disnea, fiebre, rash o problemas del cateter.",
+    "clinicalPearls": "La dosis debe expresarse en g/kg/dia y velocidad en mL/kg/h para 20% (0,2 g/mL); separar claramente ambos limites.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ALTO RIESGO: neonatos/lactantes e infusion rapida; hipertrigliceridemia, fat overload, sepsis y PNALD.",
+    "alerts": "Alcance Intralipid 20% EE. UU.; otras emulsiones lipidicas tienen composicion y limites diferentes.",
+    "references": [
+      "DailyMed/FDA - INTRALIPID 20% I.V. Fat Emulsion | EUA; emulsao lipidica 20%; revisado 08/2025 | Consultado 2026-09-20 | https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61e025f1-a38e-4af2-9e18-13ea12977cf5"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61e025f1-a38e-4af2-9e18-13ea12977cf5"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Emulsao lipidica parenteral - Intralipid 20%",
+    "es": "Emulsion lipidica parenteral - Intralipid 20%"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "emulsao_lipidica_parenteral.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "086",
+    "approvedSha256": "cfceba32b5bdc6b3a84d1f9339d21eeae7bc4cf45d8996e6b1e2954d9c5b0007",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "7e3d87db0122de4dcce041fcc4fa4b76358065816c76aad45b706b592f782286",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_086_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "ibuprofeno_iv",
+        "bloqueios_clinicos_reais": [],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "parecoxibe",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: seguranca/eficacia <18 anos nao estabelecidas."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "tenoxicam",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: nao ha posologia estabelecida."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "tramadol_paracetamol",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: seguranca/eficacia nao estabelecidas e existem contraindicacoes etarias."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "agua_para_injecao",
+        "bloqueios_clinicos_reais": [
+          "ADMINISTRACAO_DIRETA_IV_BLOQUEADA: bula proibe infusao isolada por hipotonicidade.",
+          "CALCULO_DE_DOSE_PROPRIA_BLOQUEADO: nao existe dose terapeutica propria; volume depende do medicamento"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_APLICAVEL/NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "aminoacidos_parenterais",
+        "bloqueios_clinicos_reais": [
+          "FORMULACAO_GENERICA_BLOQUEADA: \"aminoacidos parenterais\" nao define composicao/concentracao unica; dados",
+          "CALCULO_PEDIATRICO_BLOQUEADO: rotulo antigo cita 2-3 g/kg/dia em lactentes, mas declara ausencia de estudos",
+          "INFUSAO_DIRETA_DO_PBP_BLOQUEADA: produto e somente para manipulacao de misturas."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_NUTRICAO_PARENTERAL_CONTEMPORANEA_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "cloreto_de_potassio_19_1",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_PEDIATRICO_BLOQUEADO: bula rotula uso pediatrico, mas nao fornece dose universal por kg."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "cloreto_de_sodio_20",
+        "bloqueios_clinicos_reais": [
+          "CALCULO_DE_DOSE_BLOQUEADO: bula nao define esquema universal em mL/mEq.",
+          "INFUSAO_AUTOMATICA_BLOQUEADA: nao ha velocidade universal; exige protocolo por indicacao/alvo.",
+          "CALCULO_PEDIATRICO_BLOQUEADO: uso pediatrico rotulado, sem dose universal por kg."
+        ],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "emulsao_lipidica_parenteral",
+        "bloqueios_clinicos_reais": [],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_NUTRICAO_PARENTERAL_CONTEMPORANEA_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      },
+      {
+        "id": "glicerina_supositorio",
+        "bloqueios_clinicos_reais": [],
+        "pendencias_nao_bloqueantes": [
+          "DIRETRIZ_INDEPENDENTE_NAO_VALIDADA",
+          "DISPONIBILIDADE_BR_AR_NAO_VALIDADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "emulsao_lipidica_parenteral",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE. Parecer: Dra Eugenia Marques, 20-09-2026, aprovado integralmente, sem excecoes informadas. Arquivo revisado originalmente identificado como 003; renumeracao administrativa atual: Lote 086. Bloqueios granulares documentados no candidato permanecem preservados; integracao/publicacao nao executadas.",
+      "PROVENIENCIA": {
+        "baseline_type": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "nome_recebido": "emulsao_lipidica_parenteral",
+        "data": "2026-09-20",
+        "escopo": "Intralipid 20% EUA, emulsao lipidica IV para PN",
+        "arquivo_revisado_original": "003",
+        "lote_administrativo_atual": "086"
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

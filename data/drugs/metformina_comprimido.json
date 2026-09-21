@@ -1,0 +1,373 @@
+{
+  "id": "metformina_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "metformina_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Metformina cloridrato - comprimido de liberacao imediata",
+    "class": "Antidiabetico oral; biguanida",
+    "pharmacologicClass": "Biguanida antihiperglicemica",
+    "mechanism": "Reduz producao hepatica de glicose, reduz absorcao intestinal e melhora sensibilidade periferica a insulina sem estimular diretamente secrecao de insulina.",
+    "pharmacodynamics": "Reduz glicemia basal e pos-prandial com baixo risco intrinseco de hipoglicemia em monoterapia; pode reduzir vitamina B12 com uso prolongado.",
+    "pharmacokinetics": "Absorcao oral; praticamente nao metabolizada e eliminada inalterada pelos rins por secrecao tubular. Funcao renal e determinante de exposicao e risco de acidose lactica.",
+    "indications": "Adjunto a dieta e exercicio para melhorar controle glicemico em adultos e pacientes pediatricos >=10 anos com diabetes tipo 2.",
+    "commercialNames": "Produto-fonte: metformin hydrochloride tablets generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos revestidos de liberacao imediata VO.",
+    "presentations": "Produto consultado inclui 500, 625, 750, 850 e 1000 mg; nem todas as forcas sao universalmente comercializadas.",
+    "dose": "Adultos: iniciar 500 mg VO 2x/dia ou 850 mg 1x/dia com refeicoes. Aumentar 500 mg semanalmente ou 850 mg a cada 2 semanas conforme controle/tolerancia, ate maximo 2550 mg/dia em doses divididas. Doses >2000 mg podem ser melhor toleradas em 3 tomadas com refeicoes.",
+    "pediatricDose": ">=10 anos: iniciar 500 mg VO 2x/dia com refeicoes; aumentar 500 mg semanalmente; maximo 2000 mg/dia em 2 tomadas. <10 anos: seguranca/eficacia nao estabelecidas. AUTOMATABLE=NO ate validar idade e funcao renal.",
+    "renalDose": "Obter eGFR antes e periodicamente. eGFR <30: contraindicado. Inicio com eGFR 30-45: nao recomendado. Se cair <45 durante uso, reavaliar beneficio-risco; se cair <30, suspender. Para contraste iodado, ha criterios especificos de suspensao e reavaliacao em 48 h.",
+    "hepaticDose": "Comprometimento hepatico e fator de risco para acidose lactica; o rotulo recomenda evitar uso em pacientes com evidencia clinica/laboratorial de doenca hepatica significativa.",
+    "commonAdverseEffects": "Diarreia, nauseas/vomitos, flatulencia, desconforto abdominal e disgeusia; reducao de vitamina B12 pode ocorrer a longo prazo.",
+    "dangerousAdverseEffects": "Acidose lactica associada a metformina pode ser fatal; risco aumenta com insuficiencia renal, hipoxia, contraste iodado, alcool excessivo e disfuncao hepatica.",
+    "adverseEffects": "Pode ocorrer hipoglicemia quando combinada com insulina/secretagogos e reducao de vitamina B12.",
+    "contraindications": "eGFR <30 mL/min/1,73 m2, hipersensibilidade a metformina e acidose metabolica aguda ou cronica, incluindo cetoacidose diabetica.",
+    "interactions": "Inibidores da anidrase carbonica e outros fármacos que predispoem a acidose podem aumentar risco; alcool excessivo aumenta risco de acidose lactica; secretagogos/insulina aumentam hipoglicemia. Contraste iodado exige manejo especifico.",
+    "monitoring": "eGFR, glicemia/HbA1c, sintomas de acidose lactica e vitamina B12 periodicamente em uso prolongado/risco.",
+    "administration": "Tomar com refeicoes para melhorar tolerabilidade GI; dividir conforme dose. Nao confundir com XR.",
+    "preparation": "Comprimido IR pronto para uso; esta ficha nao valida formulacoes liquidas ou XR.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Dados humanos limitados nao demonstram associacao clara com grandes malformacoes/aborto, mas diabetes mal controlado traz risco materno-fetal; tratamento deve ser individualizado.",
+    "lactation": "Metformina esta presente no leite humano em estudos limitados; ha informacao insuficiente sobre efeitos no lactente e sobre producao de leite.",
+    "specialPopulations": "Idade >=65 anos e funcao renal reduzida aumentam risco de acidose lactica; avaliar eGFR com maior frequencia. Doenca hepatica, alcoolismo e estados hipoxicos aumentam risco.",
+    "patientEducation": "Tomar com refeicoes; reconhecer sintomas inespecificos de acidose (mal-estar, mialgias, dispneia, sonolencia, dor abdominal); informar exames com contraste e alcool excessivo.",
+    "clinicalPearls": "IR e XR tem limites e indicacoes pediatricas diferentes no rotulo consultado. Nao copiar o esquema pediatrico da IR para XR.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ACIDOSE_LACTICA_BOXED_WARNING; EGRF_OBRIGATORIO; CONTRASTE_IODADO; B12; PEDIATRIA_MAIOR_IGUAL_10.",
+    "alerts": "Nao transplantar maximo adulto 2550 mg/dia da IR para a formulacao XR.",
+    "references": [
+      "DailyMed/NLM EUA - Metformin Hydrochloride immediate-release tablets, atualizado 21-08-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e4c4ba9-65c6-4273-8f6b-2423ab521dad"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e4c4ba9-65c6-4273-8f6b-2423ab521dad"
+  },
+  "es": {
+    "name": "Metformina clorhidrato - comprimido de liberación inmediata",
+    "class": "Antidiabético oral; biguanida",
+    "pharmacologicClass": "Biguanida antihiperglucemiante",
+    "mechanism": "Reduce producción hepática de glucosa, reduce absorción intestinal y mejora sensibilidad periférica a insulina sin estimular directamente secreción de insulina.",
+    "pharmacodynamics": "Reduce glucemia basal y posprandial con bajo riesgo intrínseco de hipoglucemia en monoterapia; puede reducir vitamina B12 con uso prolongado.",
+    "pharmacokinetics": "Absorción oral; prácticamente no se metaboliza y se elimina inalterada por riñones mediante secreción tubular. La función renal determina exposición y riesgo de acidosis láctica.",
+    "indications": "Adjunto a dieta y ejercicio para mejorar control glucémico en adultos y pacientes pediátricos >=10 años con diabetes tipo 2.",
+    "commercialNames": "Producto-fuente: metformin hydrochloride tablets genérico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos recubiertos de liberación inmediata VO.",
+    "presentations": "El producto consultado incluye 500, 625, 750, 850 y 1000 mg; no todas las potencias se comercializan universalmente.",
+    "dose": "Adultos: iniciar 500 mg VO 2 veces/día o 850 mg 1 vez/día con comidas. Aumentar 500 mg semanalmente o 850 mg cada 2 semanas según control/tolerancia, hasta máximo 2550 mg/día en dosis divididas. Dosis >2000 mg pueden tolerarse mejor en 3 tomas con comidas.",
+    "pediatricDose": " >=10 años: iniciar 500 mg VO 2 veces/día con comidas; aumentar 500 mg semanalmente; máximo 2000 mg/día en 2 tomas. <10 años: seguridad/eficacia no establecidas. AUTOMATABLE=NO hasta validar edad y función renal.",
+    "renalDose": "Obtener eGFR antes y periódicamente. eGFR <30: contraindicado. Inicio con eGFR 30-45: no recomendado. Si cae <45 durante uso, reevaluar beneficio-riesgo; si cae <30, suspender. Para contraste yodado hay criterios específicos de suspensión y reevaluación a 48 h.",
+    "hepaticDose": "El compromiso hepático es factor de riesgo de acidosis láctica; el rótulo recomienda evitar uso en pacientes con evidencia clínica/laboratorial de enfermedad hepática significativa.",
+    "commonAdverseEffects": "Diarrea, náuseas/vómitos, flatulencia, malestar abdominal y disgeusia; puede disminuir vitamina B12 a largo plazo.",
+    "dangerousAdverseEffects": "La acidosis láctica asociada a metformina puede ser mortal; el riesgo aumenta con insuficiencia renal, hipoxia, contraste yodado, alcohol excesivo y disfunción hepática.",
+    "adverseEffects": "Puede ocurrir hipoglucemia al combinarse con insulina/secretagogos y reducción de vitamina B12.",
+    "contraindications": "eGFR <30 mL/min/1,73 m2, hipersensibilidad a metformina y acidosis metabólica aguda o crónica, incluida cetoacidosis diabética.",
+    "interactions": "Inhibidores de anhidrasa carbónica y otros fármacos que predisponen a acidosis pueden aumentar riesgo; alcohol excesivo aumenta riesgo de acidosis láctica; secretagogos/insulina aumentan hipoglucemia. Contraste yodado exige manejo específico.",
+    "monitoring": "eGFR, glucemia/HbA1c, síntomas de acidosis láctica y vitamina B12 periódicamente en uso prolongado/riesgo.",
+    "administration": "Tomar con comidas para mejorar tolerancia GI; dividir según dosis. No confundir con XR.",
+    "preparation": "Comprimido IR listo para usar; esta ficha no valida formulaciones líquidas ni XR.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Datos humanos limitados no muestran asociación clara con malformaciones mayores/aborto, pero diabetes mal controlada implica riesgo materno-fetal; tratamiento individualizado.",
+    "lactation": "Metformina está presente en leche humana en estudios limitados; hay información insuficiente sobre efectos en el lactante y producción de leche.",
+    "specialPopulations": "Edad >=65 años y función renal reducida aumentan riesgo de acidosis láctica; evaluar eGFR con mayor frecuencia. Enfermedad hepática, alcoholismo y estados hipóxicos aumentan riesgo.",
+    "patientEducation": "Tomar con comidas; reconocer síntomas inespecíficos de acidosis (malestar, mialgias, disnea, somnolencia, dolor abdominal); informar estudios con contraste y alcohol excesivo.",
+    "clinicalPearls": "IR y XR tienen límites e indicaciones pediátricas distintas en el rótulo consultado. No copiar la pauta pediátrica IR a XR.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ACIDOSIS_LACTICA_BOXED_WARNING; EGRF_OBLIGATORIO; CONTRASTE_YODADO; B12; PEDIATRIA_MAYOR_IGUAL_10.",
+    "alerts": "No trasladar máximo adulto 2550 mg/día de IR a formulación XR.",
+    "references": [
+      "DailyMed/NLM EUA - Metformin Hydrochloride immediate-release tablets, atualizado 21-08-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e4c4ba9-65c6-4273-8f6b-2423ab521dad"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e4c4ba9-65c6-4273-8f6b-2423ab521dad"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Metformina cloridrato - comprimido de liberacao imediata",
+    "es": "Metformina clorhidrato - comprimido de liberación inmediata"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "metformina_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "097",
+    "approvedSha256": "c1899b33421dded00d53d620137d350af8a406d909f14df21e88332fe47934c3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "7a9935df2ca13fb33cbe0f739209b11c5984d12a1c6fde9ff51efc6c8d44c3d6",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_097_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "propranolol_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "carvedilol_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "HEPATOPATIA_GRAVE_CONTRAINDICADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "espironolactona_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "HIPERCALEMIA_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "furosemida_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_FORMULACAO",
+          "INFUSAO_IV_BLOQUEADA_NESTA_FICHA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "isossorbida_mononitrato",
+        "bloqueios_clinicos": [
+          "FORMULACAO_IR_ER_REQUER_RECONCILIACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "PDE5_RIOCIGUAT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "isossorbida_dinitrato",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "PDE5_RIOCIGUAT_CONTRAINDICADOS",
+          "OUTRAS_FORMULACOES_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glibenclamida",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_HEPATICO_NUMERICO_NAO_DOCUMENTADO",
+          "FORMULACAO_MICRONIZADA_NAO_VALIDADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "gliclazida_mr",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "INSUFICIENCIA_RENAL_HEPATICA_GRAVE_CONTRAINDICADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metformina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_IDADE_E_EGFR",
+          "ACIDOSE_LACTICA_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metformina_xr",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "ACIDOSE_LACTICA_ALTO_RISCO",
+          "NAO_TRITURAR_XR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "metformina_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios granulares e reconciliacoes do candidato foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "METFORMINA HCL COMPRIMIDO IR VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_IDADE_E_EGFR",
+        "ACIDOSE_LACTICA_ALTO_RISCO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "097",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "097",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "id": "flucitosina",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "flucitosina"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Flucitosina - ANCOBON capsulas",
+    "class": "Antifungico antimetabolito",
+    "pharmacologicClass": "Antimetabolito fluorinado",
+    "mechanism": "Dentro do fungo, converte-se em 5-fluorouracil e interfere com sintese de RNA/DNA.",
+    "pharmacodynamics": "Atividade contra Candida/Cryptococcus suscetiveis; resistencia emerge rapidamente em monoterapia.",
+    "pharmacokinetics": "Eliminacao renal predominante e pouca ligacao proteica; insuficiencia renal causa acumulo e toxicidade.",
+    "indications": "Infeccoes graves por Candida e/ou Cryptococcus suscetiveis; combinar com anfotericina B em candidiase sistemica/criptococose devido a resistencia.",
+    "commercialNames": "ANCOBON, EUA.",
+    "presentation": "Capsulas VO.",
+    "presentations": "250 mg e 500 mg.",
+    "dose": "50-150 mg/kg/dia VO divididos a cada 6 h; em disfuncao renal iniciar no limite inferior e ajustar com concentracoes.",
+    "pediatricDose": "O rotulo nao fornece esquema pediatrico separado robusto; usar somente sob especialista e TDM. AUTOMATIZACAO_PEDIATRICA=BLOQUEADA.",
+    "renalDose": "Insuficiencia renal exige ajuste para evitar acumulo; monitorar concentracoes sericas. O rotulo nao fornece tabela simples universal.",
+    "hepaticDose": "Monitorar funcao hepatica frequentemente; sem algoritmo numerico especifico.",
+    "commonAdverseEffects": "Nausea, vomitos, diarreia e rash.",
+    "dangerousAdverseEffects": "Depressao medular potencialmente irreversivel, hepatite/toxicidade hepatica e toxicidade aumentada com insuficiencia renal; DPD completa e contraindicacao.",
+    "adverseEffects": "Leucopenia, trombocitopenia, anemia e alteracoes hepaticas podem ocorrer.",
+    "contraindications": "Hipersensibilidade e deficiencia completa de diidropirimidina desidrogenase (DPD).",
+    "interactions": "Anfotericina B e combinacao indicada em cenarios sistemicos; fármacos mielossupressores podem aumentar toxicidade.",
+    "monitoring": "Concentracoes sericas quando renal/alto risco; hemograma, funcao renal e hepatica frequentes.",
+    "administration": "VO em doses a cada 6 h. Se nausea, pode administrar poucas capsulas de cada vez durante cerca de 15 min.",
+    "preparation": "Capsulas prontas para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Depressao medular previa e insuficiencia renal aumentam risco de toxicidade.",
+    "patientEducation": "Relatar febre, infeccao, sangramento, ictericia ou GI intenso; exames frequentes sao necessarios.",
+    "clinicalPearls": "Monoterapia favorece resistencia em candidiase/criptococose sistemicas; concentracao excessiva aumenta toxicidade hematologica/GI/hepatica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "MEDULA; RENAL_TDM; DPD; HEPATICA; COMBINACAO_ANTIFUNGICA.",
+    "alerts": "AUTOMACAO renal/pediatrica bloqueada sem TDM e protocolo especializado.",
+    "references": [
+      "DailyMed/NLM EUA - ANCOBON, Rev 02/2022. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aea0df00-a88c-4a16-abcf-750f3ff2004e"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aea0df00-a88c-4a16-abcf-750f3ff2004e"
+  },
+  "es": {
+    "name": "Flucitosina - ANCOBON capsulas",
+    "class": "Antifungico antimetabolito",
+    "pharmacologicClass": "Antimetabolito fluorado",
+    "mechanism": "Dentro del hongo, se convierte en 5-fluorouracilo e interfiere con sintesis de RNA/DNA.",
+    "pharmacodynamics": "Actividad contra Candida/Cryptococcus susceptibles; resistencia emerge rapidamente en monoterapia.",
+    "pharmacokinetics": "Eliminacion renal predominante y poca union proteica; insuficiencia renal causa acumulacion y toxicidad.",
+    "indications": "Infecciones graves por Candida y/o Cryptococcus susceptibles; combinar con anfotericina B en candidiasis sistemica/criptococosis por resistencia.",
+    "commercialNames": "ANCOBON, EE.UU.",
+    "presentation": "Capsulas VO.",
+    "presentations": "250 mg y 500 mg.",
+    "dose": "50-150 mg/kg/dia VO divididos cada 6 h; en disfuncion renal iniciar en limite inferior y ajustar con concentraciones.",
+    "pediatricDose": "El rotulo no aporta pauta pediatrica separada robusta; usar solo bajo especialista y TDM. AUTOMATIZACION_PEDIATRICA=BLOQUEADA.",
+    "renalDose": "Insuficiencia renal exige ajuste para evitar acumulacion; monitorizar concentraciones sericas. El rotulo no aporta tabla simple universal.",
+    "hepaticDose": "Monitorizar funcion hepatica con frecuencia; sin algoritmo numerico especifico.",
+    "commonAdverseEffects": "Nausea, vomitos, diarrea y rash.",
+    "dangerousAdverseEffects": "Depresion medular potencialmente irreversible, hepatitis/toxicidad hepatica y toxicidad aumentada con insuficiencia renal; DPD completa es contraindicacion.",
+    "adverseEffects": "Pueden ocurrir leucopenia, trombocitopenia, anemia y alteraciones hepaticas.",
+    "contraindications": "Hipersensibilidad y deficiencia completa de dihidropirimidina deshidrogenasa (DPD).",
+    "interactions": "Anfotericina B es combinacion indicada en escenarios sistemicos; farmacos mielosupresores pueden aumentar toxicidad.",
+    "monitoring": "Concentraciones sericas en renal/alto riesgo; hemograma, funcion renal y hepatica frecuentes.",
+    "administration": "VO en dosis cada 6 h. Si nausea, puede administrar pocas capsulas por vez durante unos 15 min.",
+    "preparation": "Capsulas listas para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "",
+    "lactation": "",
+    "specialPopulations": "Depresion medular previa e insuficiencia renal aumentan riesgo de toxicidad.",
+    "patientEducation": "Comunicar fiebre, infeccion, sangrado, ictericia o GI intenso; se requieren pruebas frecuentes.",
+    "clinicalPearls": "Monoterapia favorece resistencia en candidiasis/criptococosis sistemicas; concentracion excesiva aumenta toxicidad hematologica/GI/hepatica.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "MEDULA; RENAL_TDM; DPD; HEPATICA; COMBINACION_ANTIFUNGICA.",
+    "alerts": "AUTOMATIZACION renal/pediatrica bloqueada sin TDM y protocolo especializado.",
+    "references": [
+      "DailyMed/NLM EUA - ANCOBON, Rev 02/2022. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aea0df00-a88c-4a16-abcf-750f3ff2004e"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aea0df00-a88c-4a16-abcf-750f3ff2004e"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Flucitosina - ANCOBON capsulas",
+    "es": "Flucitosina - ANCOBON capsulas"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "flucitosina.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "101",
+    "approvedSha256": "e81148636c11dc2a1a02ff4701699ee19f87c3ce738ca6520c2e31d8392bdf87",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "789efef513fa34ca4a7e621c96e342ce8d71012d5de83e6578084e923f3fae42",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_101_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "colistimetato_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "UNIDADE_CBA_OBRIGATORIA",
+          "RENAL_CALCULO_EXIGE_CLCR"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "delamanida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "PESO_MENOR_10_BLOQUEADO",
+          "QT_MONITORACAO_OBRIGATORIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "etionamida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MONOTERAPIA_BLOQUEADA",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "flucitosina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "foscarnete_sodico",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "AJUSTE_RENAL_OBRIGATORIO",
+          "CALCULO_PEDIATRICO_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fosfomicina_iv",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FORMULACAO_ORAL_BLOQUEADA",
+          "CALCULO_PEDIATRICO_EXIGE_TABELA",
+          "CALCULO_RENAL_EXIGE_TABELA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "letermovir",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_EXIGE_INDICACAO_PESO_VIA_CICLOSPORINA",
+          "CHILD_PUGH_C_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "mefloquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "MALARIA_GRAVE_BLOQUEADA",
+          "RISCO_NEUROPSIQUIATRICO_ALTO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nifurtimox",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "ADULTO_BLOQUEADO",
+          "CALCULO_EXIGE_PESO_ATUAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "RENAL_HEPATICO_LACTACAO_NAO_DOCUMENTADOS_NESTE_CANDIDATO"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "palivizumabe",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "TRATAMENTO_RSV_BLOQUEADO",
+          "VIA_IV_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "flucitosina",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios, lacunas justificadas e reconciliacoes foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "ANCOBON 250/500 mg VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_RENAL_BLOQUEADO_SEM_TDM",
+        "CALCULO_PEDIATRICO_BLOQUEADO"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GESTACAO_LACTACAO_NAO_DOCUMENTADAS_NESTE_CANDIDATO"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "101",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "101",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

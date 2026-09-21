@@ -1,0 +1,373 @@
+{
+  "id": "furosemida_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "furosemida_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Furosemida - comprimido oral",
+    "class": "Diuretico de alca",
+    "pharmacologicClass": "Inibidor do cotransportador Na-K-2Cl na alca de Henle",
+    "mechanism": "Inibe reabsorcao de sodio e cloreto na porcao ascendente espessa da alca de Henle, produzindo diurese potente.",
+    "pharmacodynamics": "Aumenta excrecao de agua, sodio, cloreto, potassio, calcio e magnesio; resposta depende da dose e da funcao renal/estado de volume.",
+    "pharmacokinetics": "Absorcao oral variavel; alta ligacao proteica; eliminacao renal importante. Hemodialise nao acelera sua eliminacao de forma relevante.",
+    "indications": "Rotulo EUA: edema associado a insuficiencia cardiaca, cirrose, doenca renal/sindrome nefrotica em adultos e pediatria; hipertensao em adultos.",
+    "commercialNames": "Produto-fonte: furosemide tablets generico EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "20, 40 e 80 mg no produto de referencia consultado.",
+    "dose": "Edema adulto: 20-80 mg VO como dose unica; se necessario repetir a mesma dose em 6-8 h ou aumentar em 20-40 mg, nunca antes de 6-8 h, ate resposta desejada; depois, a dose individual pode ser dada 1-2x/dia. Em edema clinicamente grave, o rotulo permite titulacao cuidadosa ate 600 mg/dia. Hipertensao: inicial 80 mg/dia, usualmente 40 mg 2x/dia, ajustando conforme resposta.",
+    "pediatricDose": "Edema: inicial 2 mg/kg VO dose unica; se resposta insuficiente, aumentar 1-2 mg/kg no antes de 6-8 h; doses >6 mg/kg nao recomendadas. Manutencao: menor dose efetiva. AUTOMATABLE=NO ate validar idade, peso e formulacao/forca.",
+    "renalDose": "Nao existe tabela simples de reducao por eGFR; a furosemida e usada inclusive em doenca renal, mas resposta e risco variam. Anuria e contraindicacao. Ajuste deve ser por resposta clinica/volume/eletrolitos.",
+    "hepaticDose": "Cirrose aumenta risco de alteracoes hidroeletroliticas e encefalopatia; iniciar e titular com cautela. Nao ha algoritmo Child-Pugh numerico no rotulo.",
+    "commonAdverseEffects": "Poliuria, desidratacao, hipotensao, hipocalemia, hiponatremia, hipomagnesemia, hiperuricemia e alteracoes glicemicas.",
+    "dangerousAdverseEffects": "Deplecao profunda de volume/eletrolitos, arritmias, ototoxicidade, pancreatite, reacoes cutaneas graves e piora renal.",
+    "adverseEffects": "Pode causar alcalose metabolica, hiperuricemia/gota, fotossensibilidade e alteracoes hematologicas raras.",
+    "contraindications": "Anuria e hipersensibilidade a furosemida.",
+    "interactions": "Aminoglicosideos e outros ototoxicos aumentam risco de ototoxicidade; lítio pode acumular; AINEs podem reduzir efeito e piorar funcao renal; digoxina aumenta risco em hipocalemia.",
+    "monitoring": "Peso, balanço hidrico, PA, Na/K/Mg/Ca, bicarbonato/CO2, creatinina/BUN; considerar ultrassom renal em pediatria cronica por risco de nefrocalcinose.",
+    "administration": "VO; para reduzir nocturia, doses diurnas sao preferiveis quando clinicamente possivel. Individualizar pela resposta.",
+    "preparation": "Comprimido pronto para uso; nao extrapolar regras da formulacao injetavel.",
+    "infusionProtocol": "NAO APLICAVEL ao comprimido oral; formulacao IV requer ficha propria.",
+    "pregnancy": "Nao ha estudos adequados controlados em gestantes; o rotulo recomenda uso somente se beneficio potencial justificar risco fetal, com monitoracao fetal apropriada.",
+    "lactation": "Aparece no leite humano e pode inibir lactacao; usar cautela e individualizar decisao.",
+    "specialPopulations": "Idosos: iniciar na extremidade inferior da faixa. Prematuros e criancas pequenas em uso cronico tem risco de nefrocalcinose/nefromicrolitiase.",
+    "patientEducation": "Reconhecer sede intensa, tontura, caibras, reducao de PA e sinais de desidratacao; manter monitoracao laboratorial conforme orientacao.",
+    "clinicalPearls": "600 mg/dia e um limite descrito para estados edematosos clinicamente graves, nao para hipertensao rotineira. Pediatria usa dose por kg com teto 6 mg/kg por dose conforme rotulo.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "DIURETICO_POTENTE; DEPLECAO_VOLUME_ELETROLITOS; OTOTOXICIDADE; ANURIA_CONTRAINDICADA; PEDIATRIA_COM_LIMITE_MG_KG.",
+    "alerts": "Nao importar velocidade/diluicao IV para esta ficha de comprimido.",
+    "references": [
+      "DailyMed/NLM EUA - Furosemide tablets, atualizado 18-06-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131"
+  },
+  "es": {
+    "name": "Furosemida - comprimido oral",
+    "class": "Diurético de asa",
+    "pharmacologicClass": "Inhibidor del cotransportador Na-K-2Cl en asa de Henle",
+    "mechanism": "Inhibe reabsorción de sodio y cloro en rama ascendente gruesa del asa de Henle, produciendo diuresis potente.",
+    "pharmacodynamics": "Aumenta excreción de agua, sodio, cloro, potasio, calcio y magnesio; la respuesta depende de dosis y función renal/estado de volumen.",
+    "pharmacokinetics": "Absorción oral variable; alta unión proteica; eliminación renal importante. La hemodiálisis no acelera de forma relevante su eliminación.",
+    "indications": "Rótulo EE.UU.: edema asociado a insuficiencia cardiaca, cirrosis, enfermedad renal/síndrome nefrótico en adultos y pediatría; hipertensión en adultos.",
+    "commercialNames": "Producto-fuente: furosemide tablets genérico EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "20, 40 y 80 mg en el producto de referencia consultado.",
+    "dose": "Edema adulto: 20-80 mg VO como dosis única; si es necesario repetir la misma dosis a las 6-8 h o aumentar 20-40 mg, nunca antes de 6-8 h, hasta respuesta deseada; luego la dosis individual puede darse 1-2 veces/día. En edema clínicamente grave, el rótulo permite titulación cuidadosa hasta 600 mg/día. Hipertensión: inicial 80 mg/día, usualmente 40 mg 2 veces/día, ajustando según respuesta.",
+    "pediatricDose": "Edema: inicial 2 mg/kg VO dosis única; si respuesta insuficiente, aumentar 1-2 mg/kg no antes de 6-8 h; dosis >6 mg/kg no recomendadas. Mantenimiento: menor dosis efectiva. AUTOMATABLE=NO hasta validar edad, peso y formulación/potencia.",
+    "renalDose": "No existe tabla simple de reducción por eGFR; furosemida se usa incluso en enfermedad renal, pero respuesta y riesgo varían. La anuria es contraindicación. Ajustar por respuesta clínica/volumen/electrolitos.",
+    "hepaticDose": "La cirrosis aumenta riesgo de alteraciones hidroelectrolíticas y encefalopatía; iniciar y titular con precaución. No hay algoritmo Child-Pugh numérico en el rótulo.",
+    "commonAdverseEffects": "Poliuria, deshidratación, hipotensión, hipopotasemia, hiponatremia, hipomagnesemia, hiperuricemia y alteraciones glucémicas.",
+    "dangerousAdverseEffects": "Depleción profunda de volumen/electrolitos, arritmias, ototoxicidad, pancreatitis, reacciones cutáneas graves y deterioro renal.",
+    "adverseEffects": "Puede causar alcalosis metabólica, hiperuricemia/gota, fotosensibilidad y alteraciones hematológicas raras.",
+    "contraindications": "Anuria e hipersensibilidad a furosemida.",
+    "interactions": "Aminoglucósidos y otros ototóxicos aumentan riesgo de ototoxicidad; litio puede acumular; AINEs pueden reducir efecto y empeorar función renal; digoxina aumenta riesgo con hipopotasemia.",
+    "monitoring": "Peso, balance hídrico, PA, Na/K/Mg/Ca, bicarbonato/CO2, creatinina/BUN; considerar ecografía renal en pediatría crónica por riesgo de nefrocalcinosis.",
+    "administration": "VO; para reducir nicturia, se prefieren dosis diurnas cuando sea clínicamente posible. Individualizar por respuesta.",
+    "preparation": "Comprimido listo para usar; no extrapolar reglas de formulación inyectable.",
+    "infusionProtocol": "NO APLICA al comprimido oral; la formulación IV requiere ficha propia.",
+    "pregnancy": "No hay estudios adecuados controlados en embarazadas; el rótulo recomienda usar solo si el beneficio potencial justifica riesgo fetal, con vigilancia fetal apropiada.",
+    "lactation": "Aparece en leche humana y puede inhibir la lactancia; usar precaución e individualizar decisión.",
+    "specialPopulations": "Mayores: iniciar en extremo inferior del rango. Prematuros y niños pequeños en uso crónico tienen riesgo de nefrocalcinosis/nefrolitiasis.",
+    "patientEducation": "Reconocer sed intensa, mareo, calambres, caída de PA y signos de deshidratación; mantener monitorización de laboratorio según indicación.",
+    "clinicalPearls": "600 mg/día es un límite descrito para estados edematosos clínicamente graves, no para hipertensión rutinaria. Pediatría usa dosis por kg con techo de 6 mg/kg por dosis según rótulo.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "DIURETICO_POTENTE; DEPLECION_VOLUMEN_ELECTROLITOS; OTOTOXICIDAD; ANURIA_CONTRAINDICADA; PEDIATRIA_CON_LIMITE_MG_KG.",
+    "alerts": "No importar velocidad/dilución IV a esta ficha de comprimido.",
+    "references": [
+      "DailyMed/NLM EUA - Furosemide tablets, atualizado 18-06-2026. https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2a5bcf50-6d63-463a-915e-a72ea2e5f131"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Furosemida - comprimido oral",
+    "es": "Furosemida - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "furosemida_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "097",
+    "approvedSha256": "c1899b33421dded00d53d620137d350af8a406d909f14df21e88332fe47934c3",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "7a9935df2ca13fb33cbe0f739209b11c5984d12a1c6fde9ff51efc6c8d44c3d6",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_097_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "propranolol_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_AUTOMATICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "carvedilol_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "HEPATOPATIA_GRAVE_CONTRAINDICADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "espironolactona_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "HIPERCALEMIA_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "furosemida_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_FORMULACAO",
+          "INFUSAO_IV_BLOQUEADA_NESTA_FICHA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "isossorbida_mononitrato",
+        "bloqueios_clinicos": [
+          "FORMULACAO_IR_ER_REQUER_RECONCILIACAO",
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "PDE5_RIOCIGUAT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "isossorbida_dinitrato",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "PDE5_RIOCIGUAT_CONTRAINDICADOS",
+          "OUTRAS_FORMULACOES_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glibenclamida",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "AJUSTE_RENAL_HEPATICO_NUMERICO_NAO_DOCUMENTADO",
+          "FORMULACAO_MICRONIZADA_NAO_VALIDADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "gliclazida_mr",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "INSUFICIENCIA_RENAL_HEPATICA_GRAVE_CONTRAINDICADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metformina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_IDADE_E_EGFR",
+          "ACIDOSE_LACTICA_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metformina_xr",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "ACIDOSE_LACTICA_ALTO_RISCO",
+          "NAO_TRITURAR_XR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "furosemida_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado; bloqueios granulares e reconciliacoes do candidato foram preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "FUROSEMIDA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO_ATE_VALIDAR_FORMULACAO",
+        "INFUSAO_IV_BLOQUEADA_NESTA_FICHA",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "097",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "097",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

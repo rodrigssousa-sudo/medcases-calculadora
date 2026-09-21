@@ -1,0 +1,366 @@
+{
+  "id": "fluoxetina_comprimido",
+  "category": "gold33",
+  "icon": "💊",
+  "color": null,
+  "colorTxt": null,
+  "keywords": [
+    "fluoxetina_comprimido"
+  ],
+  "source": "medcases-calculadora",
+  "schema": "premium-v1",
+  "sourceModule": "gold33_nova_lista.js",
+  "pt": {
+    "name": "Fluoxetina - comprimido oral",
+    "class": "Antidepressivo ISRS",
+    "pharmacologicClass": "Inibidor seletivo da recaptação de serotonina",
+    "mechanism": "Inibe recaptação neuronal de serotonina, aumentando neurotransmissao serotoninergica.",
+    "pharmacodynamics": "Efeito antidepressivo/ansiolitico e gradual e nao coincide com pico plasmatico.",
+    "pharmacokinetics": "Fluoxetina/norfluoxetina tem meia-vida longa e persistem apos suspensao; forte inibicao CYP2D6.",
+    "indications": "MDD adulto e 8-18 anos; TOC adulto e 7-17 anos; bulimia adulto; panico adulto.",
+    "commercialNames": "Fonte generica EUA; marcas BR/AR nao verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "10 mg e 20 mg no produto consultado.",
+    "dose": "MDD adulto 20 mg pela manha; maximo estudado 80 mg/dia. TOC: 20 mg inicial, alvo 20-60 mg/dia. Bulimia: 60 mg pela manha. Panico: 10 mg inicial, alvo 20 mg/dia, maximo estudado 60 mg/dia.",
+    "pediatricDose": "MDD 8-18 anos: iniciar 10-20 mg/dia; produto nao estudado >20 mg/dia nessa indicacao. TOC 7-17 anos: iniciar 10 mg/dia, alvo 10-60 mg/dia.",
+    "renalDose": "Sem ajuste numerico rotineiro no rotulo; individualizar em doenca renal grave/polifarmacia.",
+    "hepaticDose": "Usar dose menor ou menos frequente em insuficiencia hepatica.",
+    "commonAdverseEffects": "Nausea, alteracoes GI, insonia ou sonolencia, sudorese e disfuncao sexual.",
+    "dangerousAdverseEffects": "Sindrome serotoninergica, ideacao/comportamento suicida, hiponatremia/SIADH, sangramento e mania/hipomania.",
+    "adverseEffects": "Tremor, cefaleia, ansiedade inicial, alteracao de apetite/peso e sintomas de descontinuacao.",
+    "contraindications": "IMAO com intervalos apropriados; pimozida; tioridazina. Aguardar 5 semanas apos fluoxetina antes de IMAO/tioridazina.",
+    "interactions": "Serotoninergicos, anticoagulantes/AINEs e substratos CYP2D6; pimozida/tioridazina contraindicadas por risco QT.",
+    "monitoring": "Resposta, suicidabilidade no inicio/ajustes, mania, sodio em risco, sangramento e efeitos sexuais.",
+    "administration": "VO, geralmente pela manha; doses maiores podem ser 1x/dia ou divididas conforme indicacao.",
+    "preparation": "Comprimido pronto para uso.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Avaliar beneficio-risco; exposicao tardia pode causar complicacoes neonatais.",
+    "lactation": "Fluoxetina/norfluoxetina passam ao leite; monitorar lactente.",
+    "specialPopulations": "Idosos, hepatopatia, polifarmacia e risco de QT/hiponatremia exigem maior cautela.",
+    "patientEducation": "Beneficio pode levar semanas; nao interromper abruptamente; procurar atendimento por ideacao suicida, agitacao intensa, sindrome serotoninergica ou sangramento.",
+    "clinicalPearls": "Meia-vida longa exige 5 semanas para algumas interacoes apos suspensao. Maximos variam por indicacao.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ISRS; SUICIDALIDADE; SINDROME_SEROTONINERGICA; SANGRAMENTO; HIPONATREMIA.",
+    "alerts": "80 mg/dia e maximo estudado em MDD adulto, nao alvo universal.",
+    "references": [
+      "DailyMed/NLM EUA - Fluoxetine tablets, atualizado 05-06-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53ac797d-8792-4a8c-9708-d1de3d377e8f"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53ac797d-8792-4a8c-9708-d1de3d377e8f"
+  },
+  "es": {
+    "name": "Fluoxetina - comprimido oral",
+    "class": "Antidepresivo ISRS",
+    "pharmacologicClass": "Inhibidor selectivo de la recaptacion de serotonina",
+    "mechanism": "Inhibe recaptacion neuronal de serotonina, aumentando neurotransmision serotoninergica.",
+    "pharmacodynamics": "Efecto antidepresivo/ansiolitico es gradual y no coincide con pico plasmatico.",
+    "pharmacokinetics": "Fluoxetina/norfluoxetina tienen semivida larga y persisten tras suspension; fuerte inhibicion CYP2D6.",
+    "indications": "MDD adulto y 8-18 anos; TOC adulto y 7-17 anos; bulimia adulto; panico adulto.",
+    "commercialNames": "Fuente generica EE.UU.; marcas BR/AR no verificadas.",
+    "presentation": "Comprimidos VO.",
+    "presentations": "10 mg y 20 mg en el producto consultado.",
+    "dose": "MDD adulto 20 mg por la manana; maximo estudiado 80 mg/dia. TOC: 20 mg inicial, objetivo 20-60 mg/dia. Bulimia: 60 mg por la manana. Panico: 10 mg inicial, objetivo 20 mg/dia, maximo estudiado 60 mg/dia.",
+    "pediatricDose": "MDD 8-18 anos: iniciar 10-20 mg/dia; producto no estudiado >20 mg/dia en esa indicacion. TOC 7-17 anos: iniciar 10 mg/dia, objetivo 10-60 mg/dia.",
+    "renalDose": "Sin ajuste numerico rutinario en rotulo; individualizar en enfermedad renal grave/polifarmacia.",
+    "hepaticDose": "Usar dosis menor o menos frecuente en insuficiencia hepatica.",
+    "commonAdverseEffects": "Nausea, alteraciones GI, insomnio o somnolencia, sudoracion y disfuncion sexual.",
+    "dangerousAdverseEffects": "Sindrome serotoninergico, ideacion/conducta suicida, hiponatremia/SIADH, sangrado y mania/hipomania.",
+    "adverseEffects": "Temblor, cefalea, ansiedad inicial, cambio de apetito/peso y sintomas de discontinuacion.",
+    "contraindications": "IMAO con intervalos apropiados; pimozida; tioridazina. Esperar 5 semanas tras fluoxetina antes de IMAO/tioridazina.",
+    "interactions": "Serotoninergicos, anticoagulantes/AINEs y sustratos CYP2D6; pimozida/tioridazina contraindicadas por riesgo QT.",
+    "monitoring": "Respuesta, suicidabilidad al inicio/ajustes, mania, sodio en riesgo, sangrado y efectos sexuales.",
+    "administration": "VO, generalmente por la manana; dosis mayores pueden ser 1 vez/dia o divididas segun indicacion.",
+    "preparation": "Comprimido listo para usar.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Valorar beneficio-riesgo; exposicion tardia puede causar complicaciones neonatales.",
+    "lactation": "Fluoxetina/norfluoxetina pasan a leche; monitorizar lactante.",
+    "specialPopulations": "Mayores, hepatopatia, polifarmacia y riesgo de QT/hiponatremia requieren mayor precaucion.",
+    "patientEducation": "Beneficio puede tardar semanas; no suspender bruscamente; consultar por ideacion suicida, agitacion intensa, sindrome serotoninergico o sangrado.",
+    "clinicalPearls": "Semivida larga exige 5 semanas para algunas interacciones tras suspension. Maximos varian por indicacion.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "ISRS; SUICIDALIDAD; SINDROME_SEROTONINERGICO; SANGRADO; HIPONATREMIA.",
+    "alerts": "80 mg/dia es maximo estudiado en MDD adulto, no objetivo universal.",
+    "references": [
+      "DailyMed/NLM EUA - Fluoxetine tablets, atualizado 05-06-2026. https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53ac797d-8792-4a8c-9708-d1de3d377e8f"
+    ],
+    "ref": "https://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53ac797d-8792-4a8c-9708-d1de3d377e8f"
+  },
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
+  "name": {
+    "pt": "Fluoxetina - comprimido oral",
+    "es": "Fluoxetina - comprimido oral"
+  },
+  "mc_gold_standard_v1": {
+    "status": "PASS_CLINICAL_HOMOLOGATION",
+    "sourceOwner": "database/gold33_nova_lista.js",
+    "sourceField": "fluoxetina_comprimido.mcGoldClinicalV1",
+    "requiredFields": 33,
+    "lote": "098",
+    "approvedSha256": "1fb457e570b21b2b1c7c38a689855eaff55ce2ce921a82f0e0627854e7833074",
+    "calculationAuthorized": false,
+    "publicationAuthorized": false,
+    "clinicalPackagePublicationState": "BLOQUEADA",
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "8cf68dfc42d5e3e1cd1f612f129d7c43cfcf81ba56f299617a3e169c364eaefa",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_098_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "insulina_regular",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "U500_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "insulina_nph_caneta",
+        "bloqueios_clinicos": [
+          "DOSE_AUTOMATICA_UNIVERSAL_BLOQUEADA",
+          "VIA_IV_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "levotiroxina_sodica",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO_ETIOLOGIA",
+          "RISCO_ERRO_MCG_MG",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "tiamazol",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_IDADE_PESO",
+          "GESTACAO_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "amitriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "DOSE_HOSPITALAR_NAO_AUTOMATIZAR",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "nortriptilina_comprimido",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "fluoxetina_comprimido",
+        "bloqueios_clinicos": [
+          "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "sertralina_comprimido",
+        "bloqueios_clinicos": [
+          "HEPATOPATIA_MODERADA_GRAVE_NAO_RECOMENDADA",
+          "PEDIATRIA_FORA_TOC_BLOQUEADA",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "escitalopram_comprimido",
+        "bloqueios_clinicos": [
+          "CRCL_MENOR_20_AUTOMACAO_BLOQUEADA",
+          "IDADE_PEDIATRICA_DEPENDE_INDICACAO",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clonazepam_gotas",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO_ATE_INDICACAO_IDADE_PESO",
+          "CONVERSAO_GOTAS_RESTRITA_AO_PRODUTO",
+          "OPIOIDES_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "CONFIRMAR_VIGENCIA_REGULATORIA_LOCAL_2026_ANTES_DE_PUBLICAR"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "fluoxetina_comprimido",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; APROVADO INTEGRALMENTE; sem excecoes informadas. Conteudo clinico congelado em relacao ao candidato revisado; bloqueios granulares preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "FLUOXETINA COMPRIMIDO VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "INTERACOES_CYP2D6_QT_ALTO_RISCO",
+        "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "098",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "098",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true
+  }
+}

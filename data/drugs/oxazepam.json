@@ -5,114 +5,90 @@
   "color": null,
   "colorTxt": null,
   "pt": {
-    "name": "Oxazepam",
-    "class": "Benzodiazepínico",
-    "category": "ansiolitico",
-    "commercialNames": "br: Oxazepam; Serax; ar: Oxazepam; Serax",
-    "presentation": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
-    "dose": "adulto: Ansiedade: 10–30 mg VO 3–4x/dia.; abstinencia: Abstinência alcoólica: 15–30 mg VO 3–4x/dia, conforme protocolo.; maxDose: Dose máxima usual: 120 mg/dia.",
-    "doseKg": {
-      "standard": "Não se utiliza cálculo rotineiro por kg.",
-      "pediatric": "Uso pediátrico não rotineiro.",
-      "maxDose": "120 mg/dia"
-    },
-    "indications": "Transtorno de ansiedade generalizada; Crises de ansiedade aguda; Insônia associada à ansiedade; Abstinência alcoólica; Agitação leve a moderada; Ansiedade em idosos quando benzodiazepínico é inevitável; Ansiedade em hepatopatia quando benzodiazepínico é necessário",
-    "renalAdjustment": "Sem ajuste renal habitual.",
-    "hepaticAdjustment": "Sem ajuste hepático habitual.",
-    "mechanism": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação e relaxamento muscular.",
-    "onset": "Início de ação geralmente em 1–2 horas.",
-    "halfLife": "Vida média aproximada: 5–15 horas.",
-    "commonAdverseEffects": "Sonolência; Tontura; Fadiga; Ataxia; Lentificação psicomotora; Déficit de memória",
-    "dangerousAdverseEffects": "Dependência física; Síndrome de abstinência; Depressão respiratória; Quedas e fraturas em idosos; Reação paradoxal com agitação",
-    "risksByPatient": [],
-    "contraindications": "Hipersensibilidade a benzodiazepínicos; Miastenia gravis; Insuficiência respiratória grave; Apneia do sono grave; Intoxicação aguda por álcool ou depressores do SNC",
-    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Anti-histamínicos sedativos",
-    "alerts": "Depressão respiratória, dependência/abstinência, quedas e sedação profunda com opioides.; revisão clínica obrigatória.",
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam",
-    "pharmacologicClass": "Benzodiazepínico",
-    "presentations": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
-    "pharmacodynamics": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação e relaxamento muscular.",
-    "pharmacokinetics": "Vida média aproximada: 5–15 horas.",
-    "pediatricDose": "standard: Não se utiliza cálculo rotineiro por kg.; pediatric: Uso pediátrico não rotineiro.; maxDose: 120 mg/dia",
-    "renalDose": "Sem ajuste renal habitual.",
-    "hepaticDose": "Sem ajuste hepático habitual.",
-    "adverseEffects": "Sonolência, tontura, fraqueza, ataxia e amnésia.; Depressão respiratória, dependência/abstinência, quedas e sedação profunda com opioides.",
-    "monitoring": "Usar pelo menor tempo possível.; Não suspender abruptamente após uso prolongado.; Menor dependência de metabolismo hepático oxidativo.; Evitar associação com álcool e opioides.",
-    "administration": "Usar somente via e formulação documentadas; respeitar técnica específica.",
-    "preparation": "Confirmar concentração, reconstituição, diluição e estabilidade; não inferir.",
-    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
-    "pregnancy": "Avaliar risco fetal e bula aplicável; não usar linguagem categórica sem fonte.",
-    "lactation": "Avaliar excreção e risco-benefício conforme fonte.",
-    "specialPopulations": "Individualizar por idade, comorbidades e função orgânica.",
-    "patientEducation": "Orientar adesão, administração correta e sinais de alarme.",
-    "clinicalPearls": "Formulações e vias não são automaticamente intercambiáveis.",
-    "guidelineRecommendations": "Aplicar diretriz oficial da indicação e jurisdição.",
-    "safetyFlags": "Depressão respiratória, dependência/abstinência, quedas e sedação profunda com opioides.",
+    "name": "Oxazepam - capsula oral",
+    "class": "Benzodiazepinico ansiolitico",
+    "pharmacologicClass": "Modulador alosterico positivo do receptor GABA-A",
+    "mechanism": "Potencializa neurotransmissao inibitoria mediada por GABA-A no SNC.",
+    "pharmacodynamics": "Produz efeitos ansiolitico, sedativo e miorrelaxante; depressao respiratoria aumenta com opioides e outros depressores do SNC.",
+    "pharmacokinetics": "VO: pico plasmatico aproximadamente em 3 h; meia-vida media cerca de 8,2 h; metabolizado principalmente por conjugacao a glucuronideo inativo e eliminado sobretudo na urina.",
+    "indications": "Manejo de transtornos de ansiedade ou alivio de sintomas de ansiedade; tambem usado em sintomas de abstinencia alcoolica conforme rotulo EUA.",
+    "commercialNames": "Produto generico EUA; marcas BR/AR nao verificadas nesta execucao.",
+    "presentation": "Capsulas VO.",
+    "presentations": "10 mg, 15 mg e 30 mg.",
+    "dose": "Ansiedade leve-moderada: 10-15 mg VO 3-4x/dia. Ansiedade grave/agitação ou ansiedade associada a depressao: 15-30 mg 3-4x/dia. Idosos: iniciar 10 mg 3x/dia; se necessario 15 mg 3-4x/dia. Abstinencia alcoolica: 15-30 mg 3-4x/dia.",
+    "pediatricDose": "Menores de 6 anos: nao indicado. Entre 6 e 12 anos: dose absoluta nao estabelecida no rotulo. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "O rotulo nao fornece algoritmo numerico por ClCr/eGFR. Em comprometimento renal, usar cautela clinica e evitar automacao de ajuste.",
+    "hepaticDose": "O rotulo nao fornece algoritmo numerico por gravidade hepatica; usar a menor dose eficaz e monitorar sedacao.",
+    "commonAdverseEffects": "Sonolencia, tontura, letargia, vertigem e ataxia podem ocorrer.",
+    "dangerousAdverseEffects": "Sedacao profunda, depressao respiratoria, coma e morte com opioides; abuso, dependencia e abstinencia potencialmente grave.",
+    "adverseEffects": "Reacoes paradoxais, confusao, alteracoes cognitivas e quedas podem ocorrer, especialmente em idosos.",
+    "contraindications": "Hipersensibilidade ao oxazepam ou componentes; demais restricoes devem seguir o rotulo do produto especifico.",
+    "interactions": "Opioides e outros depressores do SNC aumentam sedacao/depressao respiratoria; alcool deve ser evitado.",
+    "monitoring": "Sedacao, frequencia respiratoria, equilibrio/quedas, resposta clinica e sinais de abuso/dependencia.",
+    "administration": "VO em doses divididas conforme indicacao; ao suspender apos uso continuado, reduzir gradualmente para diminuir abstinencia.",
+    "preparation": "Capsula pronta para uso; esta ficha nao valida solucao oral ou formulacoes parenterais.",
+    "infusionProtocol": "NAO APLICAVEL.",
+    "pregnancy": "Benzodiazepinicos podem causar sedacao e sintomas de abstinencia neonatal com exposicao tardia; uso requer avaliacao beneficio-risco.",
+    "lactation": "Oxazepam pode ser excretado no leite; avaliar risco de sedacao no lactente e necessidade materna.",
+    "specialPopulations": "Idosos devem iniciar com doses menores. Historico de abuso de substancias, doenca respiratoria e fragilidade aumentam risco.",
+    "patientEducation": "Evitar alcool e opioides sem supervisao; nao dirigir ate conhecer o efeito; nao interromper abruptamente apos uso continuado.",
+    "clinicalPearls": "Oxazepam tem rotulo com doses por gravidade da ansiedade e idade; nao existe uma dose maxima universal explicitada para todas as indicacoes.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BENZODIAZEPINICO; OPIOIDES_ALTO_RISCO; DEPENDENCIA_ABSTINENCIA; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Menores de 6 anos nao indicados e 6-12 anos sem dose absoluta estabelecida; nao automatizar pediatria.",
     "references": [
-      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam",
-      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
-    ]
+      "DailyMed/NLM EUA - Oxazepam capsules, atualizado 11-07-2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
   },
   "es": {
-    "name": "Oxazepam",
-    "class": "Benzodiazepínico",
-    "category": "ansiolitico",
-    "commercialNames": "br: Oxazepam; Serax; ar: Oxazepam; Serax",
-    "presentation": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
-    "dose": "adulto: Ansiedade: 10–30 mg VO 3–4x/dia.; abstinencia: Abstinência alcoólica: 15–30 mg VO 3–4x/dia, conforme protocolo.; maxDose: Dose máxima usual: 120 mg/dia.",
-    "doseKg": {
-      "standard": "No se utiliza cálculo rutinario por kg.",
-      "pediatric": "Uso pediátrico no rutinario.",
-      "maxDose": "120 mg/día"
-    },
-    "indications": "Transtorno de ansiedade generalizada; Crises de ansiedade aguda; Insônia associada à ansiedade; Abstinência alcoólica; Agitação leve a moderada; Ansiedade em idosos quando benzodiazepínico é inevitável; Ansiedade em hepatopatia quando benzodiazepínico é necessário",
-    "renalAdjustment": "Sin ajuste renal habitual.",
-    "hepaticAdjustment": "Sin ajuste hepático habitual.",
-    "mechanism": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação y relaxamento muscular.",
-    "onset": "Inicio de acción generalmente en 1–2 horas.",
-    "halfLife": "Vida media aproximada: 5–15 horas.",
-    "commonAdverseEffects": "Sonolência; Tontura; Fadiga; Ataxia; Lentificação psicomotora; Déficit de memória",
-    "dangerousAdverseEffects": "Dependência física; Síndrome de abstinência; Depressão respiratória; Quedas y fraturas em idosos; Reação paradoxal con agitação",
-    "risksByPatient": [],
-    "contraindications": "Hipersensibilidade a benzodiazepínicos; Miastenia gravis; Insuficiência respiratória grave; Apneia do sono grave; Intoxicação aguda por álcool ou depressores do SNC",
-    "interactions": "Álcool; Opioides; Barbitúricos; Antipsicóticos sedativos; Anti-histamínicos sedativos",
-    "alerts": "Depressão respiratória, dependência/abstinência, quedas y sedação profunda con opioides.; revisão clínica obrigatória.",
-    "ref": "https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam",
-    "pharmacologicClass": "Benzodiazepínico",
-    "presentations": "Comprimido 10 mg; Comprimido 15 mg; Comprimido 30 mg",
-    "pharmacodynamics": "Potencializa a ação do GABA no receptor GABA-A, promovendo ansiólise, sedação y relaxamento muscular.",
-    "pharmacokinetics": "Vida média aproximada: 5–15 horas.",
-    "pediatricDose": "standard: No se utiliza cálculo rotineiro por kg.; pediatric: Uso pediátrico no rotineiro.; maxDose: 120 mg/dia",
-    "renalDose": "Sem ajuste renal habitual.",
-    "hepaticDose": "Sem ajuste hepático habitual.",
-    "adverseEffects": "Sonolência, tontura, fraqueza, ataxia y amnésia.; Depressão respiratória, dependência/abstinência, quedas y sedação profunda con opioides.",
-    "monitoring": "Usar pelo menor tempo possível.; No suspender abruptamente após uso prolongado.; Menor dependência de metabolismo hepático oxidativo.; Evitar associação con álcool y opioides.",
-    "administration": "Usar somente via y formulação documentadas; respeitar técnica específica.",
-    "preparation": "Confirmar concentração, reconstituição, diluição y estabilidade; no inferir.",
-    "infusionProtocol": "Aplicável somente às apresentações parenterais documentadas; manter bloqueado sem protocolo completo.",
-    "pregnancy": "Avaliar risco fetal y bula aplicável; no usar linguagem categórica sem fonte.",
-    "lactation": "Avaliar excreção y risco-benefício conforme fonte.",
-    "specialPopulations": "Individualizar por idade, comorbidades y función orgânica.",
-    "patientEducation": "Orientar adesão, administração correta y sinais de alarme.",
-    "clinicalPearls": "Formulações y vias no são automaticamente intercambiáveis.",
-    "guidelineRecommendations": "Aplicar diretriz oficial da indicação y jurisdição.",
-    "safetyFlags": "Depressão respiratória, dependência/abstinência, quedas y sedação profunda con opioides.",
+    "name": "Oxazepam - capsula oral",
+    "class": "Benzodiacepina ansiolitica",
+    "pharmacologicClass": "Modulador alosterico positivo del receptor GABA-A",
+    "mechanism": "Potencia neurotransmision inhibitoria mediada por GABA-A en SNC.",
+    "pharmacodynamics": "Produce efectos ansiolitico, sedante y miorrelajante; la depresion respiratoria aumenta con opioides y otros depresores del SNC.",
+    "pharmacokinetics": "VO: pico plasmatico aproximadamente a las 3 h; semivida media cerca de 8,2 h; metabolizado principalmente por conjugacion a glucuronido inactivo y eliminado sobre todo por orina.",
+    "indications": "Manejo de trastornos de ansiedad o alivio de sintomas de ansiedad; tambien usado en sintomas de abstinencia alcoholica segun rotulo EE.UU.",
+    "commercialNames": "Producto generico EE.UU.; marcas BR/AR no verificadas en esta ejecucion.",
+    "presentation": "Capsulas VO.",
+    "presentations": "10 mg, 15 mg y 30 mg.",
+    "dose": "Ansiedad leve-moderada: 10-15 mg VO 3-4 veces/dia. Ansiedad grave/agitación o ansiedad asociada a depresion: 15-30 mg 3-4 veces/dia. Mayores: iniciar 10 mg 3 veces/dia; si es necesario 15 mg 3-4 veces/dia. Abstinencia alcoholica: 15-30 mg 3-4 veces/dia.",
+    "pediatricDose": "Menores de 6 anos: no indicado. Entre 6 y 12 anos: dosis absoluta no establecida en el rotulo. CALCULO_PEDIATRICO=BLOQUEADO.",
+    "renalDose": "El rotulo no aporta algoritmo numerico por CrCl/eGFR. En compromiso renal, usar precaucion clinica y evitar automatizacion de ajuste.",
+    "hepaticDose": "El rotulo no aporta algoritmo numerico por gravedad hepatica; usar la menor dosis eficaz y vigilar sedacion.",
+    "commonAdverseEffects": "Pueden ocurrir somnolencia, mareo, letargia, vertigo y ataxia.",
+    "dangerousAdverseEffects": "Sedacion profunda, depresion respiratoria, coma y muerte con opioides; abuso, dependencia y abstinencia potencialmente grave.",
+    "adverseEffects": "Pueden ocurrir reacciones paradojicas, confusion, alteraciones cognitivas y caidas, especialmente en mayores.",
+    "contraindications": "Hipersensibilidad a oxazepam o componentes; demas restricciones deben seguir el rotulo del producto especifico.",
+    "interactions": "Opioides y otros depresores del SNC aumentan sedacion/depresion respiratoria; debe evitarse alcohol.",
+    "monitoring": "Sedacion, frecuencia respiratoria, equilibrio/caidas, respuesta clinica y signos de abuso/dependencia.",
+    "administration": "VO en dosis divididas segun indicacion; al suspender tras uso continuado, reducir gradualmente para disminuir abstinencia.",
+    "preparation": "Capsula lista para usar; esta ficha no valida solucion oral ni formulaciones parenterales.",
+    "infusionProtocol": "NO APLICA.",
+    "pregnancy": "Las benzodiacepinas pueden causar sedacion y sintomas de abstinencia neonatal con exposicion tardia; uso requiere evaluacion beneficio-riesgo.",
+    "lactation": "Oxazepam puede excretarse en leche; valorar riesgo de sedacion en lactante y necesidad materna.",
+    "specialPopulations": "Mayores deben iniciar con dosis menores. Antecedentes de abuso de sustancias, enfermedad respiratoria y fragilidad aumentan riesgo.",
+    "patientEducation": "Evitar alcohol y opioides sin supervision; no conducir hasta conocer el efecto; no suspender bruscamente tras uso continuado.",
+    "clinicalPearls": "Oxazepam tiene rotulo con dosis segun gravedad de ansiedad y edad; no existe una dosis maxima universal explicitada para todas las indicaciones.",
+    "guidelineRecommendations": "",
+    "safetyFlags": "BENZODIACEPINA; OPIOIDES_ALTO_RIESGO; DEPENDENCIA_ABSTINENCIA; PEDIATRIA_BLOQUEADA.",
+    "alerts": "Menores de 6 anos no indicados y 6-12 anos sin dosis absoluta establecida; no automatizar pediatria.",
     "references": [
-      "Fonte primária/oficial - https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=oxazepam",
-      "Fonte primária/oficial - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files"
-    ]
+      "DailyMed/NLM EUA - Oxazepam capsules, atualizado 11-07-2025. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
+    ],
+    "ref": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
   },
   "name": {
-    "pt": "Oxazepam",
-    "es": "Oxazepam"
+    "pt": "Oxazepam - capsula oral",
+    "es": "Oxazepam - capsula oral"
   },
   "keywords": [
     "oxazepam",
     "serax",
     "benzodiazepinico de acao intermediaria"
   ],
-  "dataVersion": "clinical-data-v1-750031a7bf922def",
-  "clinicalContentSha256": "750031a7bf922defdb092c6fd958af62e3db0dc50a2c50ff2d76792ddb67012e",
+  "dataVersion": "clinical-data-v1-b2437901deb78b1e",
+  "clinicalContentSha256": "b2437901deb78b1eeb3119ee415221916ce300d3c825122141897d5b793b513d",
   "source": "medcases-calculadora",
   "schema": "premium-v1",
   "sourceModule": "psiquiatria.js",
@@ -120,12 +96,294 @@
     "status": "PASS_CLINICAL_HOMOLOGATION",
     "sourceOwner": "database/psiquiatria.js",
     "sourceField": "oxazepam.mcGoldClinicalV1",
-    "lote": "058",
     "requiredFields": 33,
-    "approvedSha256": "6e58c284fb1c35a866278fa4a287e2b803d49457886bb22f4efbdb5f2ee41410",
+    "lote": "099",
+    "approvedSha256": "30a14997ba28ab5e6aeac180c2b55f72a7e926f339375d436ac86bcdcedae427",
     "calculationAuthorized": false,
-    "publicationAuthorized": true,
+    "publicationAuthorized": false,
     "clinicalPackagePublicationState": "BLOQUEADA",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "list": "NOVA_LISTA_GOLD33_V1",
+    "zipSha256": "784bc5e2ffa247145ae09953ce8bd6aa52ab904d916a4509304fa35a451af725",
+    "packageFile": "GOLD33_NOVA_LISTA_LOTE_099_HOMOLOGADO_CLINICAMENTE.zip",
+    "packageRestrictions": [
+      {
+        "id": "oxazepam",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "OPIOIDES_ALTO_RISCO",
+          "DEPENDENCIA_ABSTINENCIA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "buspirona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "galantamina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "RENAL_HEPATICO_GRAVE_NAO_RECOMENDADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "entacapona",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "MONOTERAPIA_BLOQUEADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "clotiapina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "VIAS_PARENTERAIS_BLOQUEADAS",
+          "JURISDICAO_BR_AR_NAO_CONFIRMADA"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glicose_50",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_2_11_BLOQUEADO",
+          "VIA_SC_IM_BLOQUEADA",
+          "ACESSO_PERIFERICO_2_11_BLOQUEADO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "glucagon",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_DEPENDE_DO_PRODUTO",
+          "IV_SOMENTE_PROFISSIONAL"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "hidroxicloroquina",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_RESTRITO_A_MALARIA_E_PESO",
+          "QT_ALTO_RISCO",
+          "RETINOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "metotrexato",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "FREQUENCIA_DIARIA_BLOQUEADA_PARA_AR_PJIA_PSORIASE",
+          "CALCULO_PJIA_BLOQUEADO_ATE_SC",
+          "ONCOLOGIA_FORA_ESCOPO_AUTOMATICO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      },
+      {
+        "id": "leflunomida",
+        "proveniencia": "NEW_ENTRY_NO_LEGACY_BASELINE",
+        "bloqueios_clinicos": [
+          "CALCULO_PEDIATRICO_BLOQUEADO",
+          "GESTACAO_CONTRAINDICADA",
+          "HEPATOPATIA_ALTO_RISCO"
+        ],
+        "pendencias_nao_bloqueantes": [
+          "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+        ],
+        "states": {
+          "PESQUISA": "CONCLUIDA",
+          "REVISAO_CLINICA": "HOMOLOGADA",
+          "HOMOLOGACAO_DADOS": "SIM",
+          "AUTORIZACAO_CALCULO": "CONFORME_BLOQUEIOS_GRANULARES",
+          "INTEGRACAO_TECNICA": "NAO_INICIADA",
+          "PUBLICACAO": "BLOQUEADA"
+        },
+        "technical_mapping": {
+          "mode": "NEW_ENTRY_NO_LEGACY_BASELINE",
+          "repository_destination": "NAO_INVENTADO_NESTE_PACOTE"
+        }
+      }
+    ],
+    "packageRecordMetadata": {
+      "ID": "oxazepam",
+      "NOTA_REVISAO_CLINICA": "HOMOLOGADO CLINICAMENTE em 20-09-2026 por Dra Eugenia Marques; resultado APROVADO INTEGRALMENTE; sem excecoes informadas. Nenhum campo clinico foi alterado; bloqueios e reconciliacoes do candidato permanecem preservados.",
+      "PROVENIENCIA": "NEW_ENTRY_NO_LEGACY_BASELINE",
+      "ESCOPO_VALIDADO": "OXAZEPAM CAPSULA VO - EUA",
+      "BLOQUEIOS_CLINICOS": [
+        "CALCULO_PEDIATRICO_BLOQUEADO",
+        "OPIOIDES_ALTO_RISCO",
+        "DEPENDENCIA_ABSTINENCIA"
+      ],
+      "PENDENCIAS_NAO_BLOQUEANTES": [
+        "GUIDELINE_INDEPENDENTE_NAO_ADICIONADA"
+      ],
+      "HOMOLOGACAO": {
+        "LISTA": "NOVA_LISTA_GOLD33_V1",
+        "LOTE": "099",
+        "MEDICO_REVISOR": "Dra Eugenia Marques",
+        "DATA_REVISAO": "20-09-2026",
+        "RESULTADO": "Aprovado integralmente",
+        "ARQUIVO_REVISADO": "099",
+        "EXCECOES_INFORMADAS": 0,
+        "REVISAO_CLINICA": "HOMOLOGADA",
+        "HOMOLOGACAO_DADOS": "SIM",
+        "INTEGRACAO_TECNICA": "NAO_INICIADA",
+        "PUBLICACAO": "BLOQUEADA",
+        "CLINICAL_CONTENT_FROZEN": true
+      }
+    },
+    "supersededPackages": [],
+    "referenceOnly": true,
+    "previousClinicalMetadata": {
+      "status": "PASS_CLINICAL_HOMOLOGATION",
+      "sourceOwner": "database/psiquiatria.js",
+      "sourceField": "oxazepam.mcGoldClinicalV1",
+      "lote": "058",
+      "requiredFields": 33,
+      "approvedSha256": "6e58c284fb1c35a866278fa4a287e2b803d49457886bb22f4efbdb5f2ee41410",
+      "calculationAuthorized": false,
+      "publicationAuthorized": true,
+      "clinicalPackagePublicationState": "BLOQUEADA",
+      "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    }
   }
 }
