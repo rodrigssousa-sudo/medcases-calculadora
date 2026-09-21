@@ -3483,8 +3483,8 @@ html body:has(> #mc-drug-detail-page-v21[data-open="true"]) #calculator-overlay-
 
   body.calc-overlay-open #page-home .hub-card.mc-overlay-projected-card {
     bottom: auto !important;
-    height: calc(var(--mc-visual-viewport-height, 100dvh) - 56px) !important;
-    max-height: calc(var(--mc-visual-viewport-height, 100dvh) - 56px) !important;
+    height: calc(var(--mc-visual-viewport-height, 100dvh) + var(--mc-visual-viewport-top, 0px) - var(--mc-overlay-projection-top, 56px)) !important;
+    max-height: calc(var(--mc-visual-viewport-height, 100dvh) + var(--mc-visual-viewport-top, 0px) - var(--mc-overlay-projection-top, 56px)) !important;
     scroll-padding-top: 20px !important;
     scroll-padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
   }

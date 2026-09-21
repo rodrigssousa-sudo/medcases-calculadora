@@ -330,6 +330,12 @@
 
       document.body.appendChild(ov);
 
+      // Native header suppression can arrive after the module has opened.
+      if (window.ResizeObserver) {
+        var headerObserver = new ResizeObserver(scheduleMeasure);
+        headerObserver.observe(byId('calculator-overlay-header'));
+      }
+
       var close = byId('calculator-overlay-close');
       if (close) {
         close.addEventListener('pointerup', function (e) {
@@ -362,10 +368,14 @@
 
     if (!c || !ov || !ov.classList.contains('is-active')) return;
 
-    var bottom = 56;
+    // The native app can hide this header in favour of its own top bar.
+    // A hidden header must not leave the browser's 56px placeholder behind.
+    var bottom = 0;
     if (h) {
       var rect = h.getBoundingClientRect();
-      if (rect && Number(rect.bottom) > 0) {
+      var style = window.getComputedStyle(h);
+      if (rect.height > 0 && style.display !== 'none' &&
+          style.visibility !== 'hidden' && style.opacity !== '0') {
         bottom = Math.ceil(Number(rect.bottom));
       }
     }
