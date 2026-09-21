@@ -9,8 +9,8 @@
   "scripts": {
     "export:clinical": "node -e \"throw Error('UNSAFE_GLOBAL_EXPORT_DISABLED_R30')\"",
     "manifest:offline": "node scripts/generate-offline-manifest.js",
-    "export:data": "node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
-    "build": "node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
+    "export:data": "node scripts/generate-catalog-summary.cjs && node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
+    "build": "node scripts/generate-catalog-summary.cjs && node scripts/generate-offline-manifest.js && node scripts/verify-public-boundary.cjs",
     "predeploy": "node scripts/verify-public-boundary.cjs",
     "export:ai": "node -e \"throw Error('PUBLIC_AI_EXPORT_DISABLED_R30')\"",
     "gold33:package-gate": "node scripts/gold33-package-gate.mjs",

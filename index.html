@@ -2,6 +2,7 @@
 <!-- MedCases Pro — build 2026-06-19e -->
 <html lang="pt-BR">
 <head>
+<script src="js/catalog-summary.js"></script>
 <!-- MEDCASES_PREMIUM_R8_5_EARLY_CAPTURE_NATIVE_PAYWALL_FINAL_V1_B_R0:start -->
 <script id="mc-r8-5-early-premium-paywall-capture">
 (function () {
@@ -16608,35 +16609,22 @@ function filterPrescriptions(v) { renderPrescriptions(v); }
 ========================================================= */
 
 /* ── Atualiza TODOS os contadores de fármacos na UI ── */
-function _fdUpdateCount() {
-  /* BUILD 392 — usa o máximo entre as três fontes de contagem disponíveis
-     para que chamadas precoces (antes do lazy-load completar) não congelem
-     o contador em um valor parcial.
-     _getMasterDB() → window.DRUG_DB (fonte canônica, cresce com lazy-load)
-     window.DRUG_DB.length → mesma fonte, acesso direto
-     Object.keys(ALL_DRUGS_DB).length → merge BUILD 390, cobre race conditions */
-  const total = Math.max(
-    (typeof _getMasterDB === 'function' && Array.isArray(_getMasterDB())) ? _getMasterDB().length : 0,
-    (Array.isArray(window.DRUG_DB))    ? window.DRUG_DB.length                  : 0,
-    (window.ALL_DRUGS_DB)              ? Object.keys(window.ALL_DRUGS_DB).length : 0
-  );
-  const isES  = (typeof currentLang !== 'undefined' && currentLang === 'es');
-  const countStr = total > 0 ? `${total} fármacos` : '—';
-
-  /* Subtítulo do card Fármacos na Central de Calculadoras */
+function _fdUpdateCount(foundCount) {
+  // Total comes from the canonical repository index, never lazy-loaded rows or aliases.
+  const total = window.MC_CATALOG_SUMMARY?.total;
+  const valid = Number.isInteger(total) && total >= 0;
+  const isES = (typeof currentLang !== 'undefined' && currentLang === 'es');
+  const formatted = valid ? total.toLocaleString(isES ? 'es-AR' : 'pt-BR') : '—';
+  const catalogText = valid
+    ? `${formatted} fármacos ${isES ? 'en el catálogo' : 'no catálogo'}` : '—';
   const descEl = document.getElementById('farmacos-total-count');
-  if (descEl) {
-    if (total > 0) {
-      descEl.textContent = isES
-        ? `Búsqueda inteligente · ${total} fármacos`
-        : `Busca inteligente · ${total} fármacos`;
-    }
-    /* se total === 0 mantém o texto do data-i18n já renderizado */
-  }
-
-  /* Counter da Home Mobile (card de busca) */
+  if (descEl) descEl.textContent = catalogText;
   const hmEl = document.getElementById('hm-drug-count');
-  if (hmEl) hmEl.textContent = countStr;
+  if (hmEl) {
+    hmEl.textContent = Number.isInteger(foundCount)
+      ? `${foundCount} ${foundCount === 1 ? 'encontrado' : 'encontrados'} · ${catalogText}` : catalogText;
+    if (valid) hmEl.dataset.catalogTotal = String(total);
+  }
 }
 /* BUILD 392 — exposição explícita no window para que o lazy-loader IIFE
    e qualquer módulo externo chamem window._fdUpdateCount() com segurança */
@@ -25282,18 +25270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         _fdResolveName(a).localeCompare(_fdResolveName(b), currentLang || 'pt', { sensitivity:'base' }))
       .slice(0, 40); /* Limite de performance */
 
-    /* FIX BUILD 248: atualiza SEMPRE o contador com a contagem REAL da
-       busca (nunca com o total da base) — antes o contador ficava
-       preso em "339 fármacos" mesmo com resultados filtrados, pois
-       nenhum dos dois ramos abaixo chamava a atualização do contador
-       com o número de `results`. */
-    const isESCount = (typeof currentLang !== 'undefined' && currentLang === 'es');
-    const countEl = document.getElementById('hm-drug-count');
-    if (countEl) {
-      countEl.textContent = results.length === 1
-        ? (isESCount ? '1 fármaco encontrado' : '1 fármaco encontrado')
-        : (isESCount ? `${results.length} fármacos encontrados` : `${results.length} fármacos encontrados`);
-    }
+    _fdUpdateCount(results.length);
 
     if (!results.length) {
       listEl.innerHTML = `
@@ -29845,8 +29822,7 @@ body:not(.light-mode):not(.theme-light):not([data-theme="light"]):not([data-curr
     host.setAttribute("data-mc-farm-canonical-az-signature",signature);
     host.setAttribute("data-mc-farm-canonical-az-count",String(rows.length));
 
-    var count=document.getElementById("hm-drug-count");
-    if (count) count.textContent=rows.length+" fármacos";
+    window._fdUpdateCount?.();
 
     setCanonicalAzPhase(shell,elements,false);
     return true;

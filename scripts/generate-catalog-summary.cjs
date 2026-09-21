@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..');
+const raw=fs.readFileSync(path.join(root,'data/drugs_index.json'));
+const rows=JSON.parse(raw),ids=rows.map(r=>r.id);
+const files=fs.readdirSync(path.join(root,'data/drugs')).filter(n=>n.endsWith('.json')).map(n=>n.slice(0,-5));
+if(new Set(ids).size!==ids.length||files.length!==ids.length||files.some(id=>!ids.includes(id)))throw Error('CATALOG_INDEX_FILE_PARITY');
+const summary={schema:'medcases.catalog-summary.v1',total:ids.length,indexSha256:crypto.createHash('sha256').update(raw).digest('hex')};
+const script='/* Generated from the canonical private index. Counts only; no drug data. */\nwindow.MC_CATALOG_SUMMARY = Object.freeze('+JSON.stringify(summary)+');\n';
+for(const dir of ['js','public/js'])fs.writeFileSync(path.join(root,dir,'catalog-summary.js'),script);
+console.log('CATALOG_SUMMARY='+ids.length);
