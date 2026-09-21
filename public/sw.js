@@ -40,7 +40,7 @@ self.addEventListener('activate', (event) => {
    └─────────────────────────────────┴───────────────────────────────┘
 ============================================================ */
 
-const CACHE_VERSION   = 'medcases-r69-infusion-reviewed-r1-20260920';
+const CACHE_VERSION   = 'medcases-r70-native-header-gap-r1-20260921';
 const CACHE_NAME      = `medcases-calc-${CACHE_VERSION}`;
 const MIGRATION_POLL_MS = 750;
 const LEGACY_MIGRATION_FALLBACK_MS = 20000;
@@ -149,14 +149,14 @@ const ASSETS_TO_CACHE = [
   /* ── CSS (BUILD 484-CSS-CONSOLIDATION: 14 arquivos → 1 fonte unificada) ── */
   './css/medcases-core-legacy.css?v=484',
 
-  './css/medcases-webview-home-v1.css?v=661-controlled-cache-migration-r15',
+  './css/medcases-webview-home-v1.css?v=670-native-header-gap-r1',
   './css/medcases-home-premium-r2.css?v=661-controlled-cache-migration-r15',
   /* ── JS (10 arquivos — stack completa BUILD 477) ── */
   './js/medcases-ux-v2.js?v=667-pull-refresh-40pct-r1',
   './js/hub-accordion.js?v=484',
   './js/medcases-router.js?v=484',
   './js/build240b-accordion-fix.js?v=484',
-  './js/calculator-overlay.js?v=661-controlled-cache-migration-r15',
+  './js/calculator-overlay.js?v=670-native-header-gap-r1',
   './js/category-pills.js?v=484',
   './js/elec-calc.js?v=484',
   './js/deeplink-router.js?v=484',
