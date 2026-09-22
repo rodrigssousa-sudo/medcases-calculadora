@@ -1,0 +1,1873 @@
+{
+  "schemaVersion": "medcases.medical.approval.1",
+  "reviewerName": "Dra Eugenia Marques",
+  "reviewDate": "2026-09-21",
+  "reviewResult": "APPROVED_IN_FULL",
+  "reviewScope": "PATCH3S_16_INFUSION_BINDINGS",
+  "approvedBindingCount": 16,
+  "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+  "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+  "reviewManifest": "MEDCASES_PATCH3S_16_INFUSOES_REVIEW_MANIFEST_V1.json",
+  "reviewManifestSha256": "2ebcb09c506e1b902a42b25b046a365e2a0c1e79d091524ab6d2bbc0722cb93e",
+  "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+  "canonicalIndexSha256": "dcf6df3306a10cdb5fb96b6e13c3416981cbccb8fcb0ca6ce7b2184c8cbb1378",
+  "attestation": "Explicit user approval in this conversation; no signature, CRM or time supplied",
+  "publicationAuthorized": false,
+  "bindings": [
+    {
+      "presetId": "prep_0",
+      "drugName": "Noradrenalina",
+      "canonicalDrugId": "noradrenalina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_0",
+        "canonicalDrugId": "noradrenalina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[0].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[0].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[0].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[0].currentFields.originalReview",
+        "bindings[0].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_0",
+        "canonicalDrugId": "noradrenalina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_1",
+      "drugName": "Adrenalina",
+      "canonicalDrugId": "adrenalina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_1",
+        "canonicalDrugId": "adrenalina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[1].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[1].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[1].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[1].currentFields.originalReview",
+        "bindings[1].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_1",
+        "canonicalDrugId": "adrenalina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_2",
+      "drugName": "Dobutamina",
+      "canonicalDrugId": "dobutamina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_2",
+        "canonicalDrugId": "dobutamina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[2].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[2].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[2].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[2].currentFields.originalReview",
+        "bindings[2].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_2",
+        "canonicalDrugId": "dobutamina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_3",
+      "drugName": "Dopamina",
+      "canonicalDrugId": "dopamina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_3",
+        "canonicalDrugId": "dopamina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[3].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[3].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[3].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[3].currentFields.originalReview",
+        "bindings[3].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_3",
+        "canonicalDrugId": "dopamina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_4",
+      "drugName": "Milrinona",
+      "canonicalDrugId": null,
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_4",
+        "canonicalDrugId": null,
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_BLOCKED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[4].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[4].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[4].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[4].currentFields.originalReview",
+        "bindings[4].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_4",
+        "canonicalDrugId": null,
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": "CANONICAL_ID_MISSING"
+    },
+    {
+      "presetId": "prep_5",
+      "drugName": "Vasopressina",
+      "canonicalDrugId": "vasopressina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_5",
+        "canonicalDrugId": "vasopressina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[5].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[5].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[5].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[5].currentFields.originalReview",
+        "bindings[5].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_5",
+        "canonicalDrugId": "vasopressina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_6",
+      "drugName": "Nitroprussiato",
+      "canonicalDrugId": null,
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_6",
+        "canonicalDrugId": null,
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_BLOCKED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[6].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[6].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[6].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[6].currentFields.originalReview",
+        "bindings[6].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_6",
+        "canonicalDrugId": null,
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": "CANONICAL_DUPLICATE_RECONCILIATION_REQUIRED"
+    },
+    {
+      "presetId": "prep_7",
+      "drugName": "Nitroglicerina",
+      "canonicalDrugId": "nitroglicerinaiv",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_7",
+        "canonicalDrugId": "nitroglicerinaiv",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[7].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[7].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[7].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[7].currentFields.originalReview",
+        "bindings[7].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_7",
+        "canonicalDrugId": "nitroglicerinaiv",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_8",
+      "drugName": "Amiodarona",
+      "canonicalDrugId": "amiodarona",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_8",
+        "canonicalDrugId": "amiodarona",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[8].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[8].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[8].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[8].currentFields.originalReview",
+        "bindings[8].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_8",
+        "canonicalDrugId": "amiodarona",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_9",
+      "drugName": "Heparina",
+      "canonicalDrugId": "heparina_hnf",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_9",
+        "canonicalDrugId": "heparina_hnf",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[9].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[9].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[9].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[9].currentFields.originalReview",
+        "bindings[9].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_9",
+        "canonicalDrugId": "heparina_hnf",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_10",
+      "drugName": "Propofol",
+      "canonicalDrugId": "propofol",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_10",
+        "canonicalDrugId": "propofol",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[10].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[10].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[10].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[10].currentFields.originalReview",
+        "bindings[10].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_10",
+        "canonicalDrugId": "propofol",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_11",
+      "drugName": "Midazolam",
+      "canonicalDrugId": "midazolam",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_11",
+        "canonicalDrugId": "midazolam",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[11].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[11].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[11].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[11].currentFields.originalReview",
+        "bindings[11].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_11",
+        "canonicalDrugId": "midazolam",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_12",
+      "drugName": "Morfina",
+      "canonicalDrugId": "morfina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_12",
+        "canonicalDrugId": "morfina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[12].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[12].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[12].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[12].currentFields.originalReview",
+        "bindings[12].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_12",
+        "canonicalDrugId": "morfina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": "INSTITUTIONAL_CONCENTRATION_MISSING"
+    },
+    {
+      "presetId": "prep_13",
+      "drugName": "Fentanil",
+      "canonicalDrugId": "fentanil",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_13",
+        "canonicalDrugId": "fentanil",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[13].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[13].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[13].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[13].currentFields.originalReview",
+        "bindings[13].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_13",
+        "canonicalDrugId": "fentanil",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": "INSTITUTIONAL_REGIMEN_MISSING"
+    },
+    {
+      "presetId": "prep_14",
+      "drugName": "Insulina Regular",
+      "canonicalDrugId": "insulina_regular",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_14",
+        "canonicalDrugId": "insulina_regular",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[14].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[14].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[14].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[14].currentFields.originalReview",
+        "bindings[14].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": "PT_ES_EMPTY:guidelineRecommendations",
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_14",
+        "canonicalDrugId": "insulina_regular",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    },
+    {
+      "presetId": "prep_15",
+      "drugName": "Vancomicina",
+      "canonicalDrugId": "vancomicina",
+      "MEDICAL_REVIEW_STATUS": "APPROVED_IN_FULL",
+      "MEDICAL_REVIEWER": "Dra Eugenia Marques",
+      "MEDICAL_REVIEW_DATE": "2026-09-21",
+      "provenance": {
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APPROVED_IN_FULL",
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf",
+        "reviewArtifactSha256": "eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f",
+        "presetId": "prep_15",
+        "canonicalDrugId": "vancomicina",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"
+      },
+      "fieldCapabilities": {
+        "drugIdentityAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "canonicalIdentityEvidence"
+        },
+        "routeAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "formulationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "concentrationAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "doseAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": "bindings[15].currentFields.fallback.doseInicial"
+        },
+        "frequencyAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "dilutionAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[15].currentFields.preparations"
+        },
+        "preparationAuthorized": {
+          "authorized": true,
+          "status": "APPROVED",
+          "sourcePath": "bindings[15].currentFields.preparations"
+        },
+        "infusionRateAuthorized": {
+          "authorized": false,
+          "status": "NOT_PROVIDED",
+          "sourcePath": null
+        },
+        "calculationAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "infusionAuthorized": {
+          "authorized": false,
+          "status": "TECHNICAL_VALIDATION_REQUIRED",
+          "sourcePath": null
+        },
+        "pediatricAuthorized": {
+          "authorized": false,
+          "status": "NOT_APPROVED",
+          "sourcePath": null
+        }
+      },
+      "referenceOnlyPaths": [
+        "bindings[15].currentFields.originalReview",
+        "bindings[15].canonicalFields"
+      ],
+      "fieldPolicy": "NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.",
+      "pediatricAuthority": "NOT_APPROVED",
+      "remoteSchemaIssue": null,
+      "existingOperationalProvenance": {
+        "reviewArtifact": "MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf",
+        "reviewArtifactSha256": "0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7",
+        "reviewer": "Dra Eugenia Marques",
+        "reviewDate": "2026-09-21",
+        "reviewResult": "APROVADO_INTEGRALMENTE",
+        "sourceVersion": "6b5a79cec541362a9dd98ebb8130b7c2657ca7f5",
+        "presetId": "prep_15",
+        "canonicalDrugId": "vancomicina",
+        "authorityArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+        "basis": "Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"
+      },
+      "existingTechnicalBlocker": null
+    }
+  ],
+  "canonicalIdentityEvidence": [
+    {
+      "presetId": "prep_0",
+      "query": "Noradrenalina",
+      "existingNormalizedId": "noradrenalina",
+      "exactCandidates": [
+        "noradrenalina"
+      ],
+      "previouslyProvenCanonicalDrugId": "noradrenalina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_1",
+      "query": "Adrenalina",
+      "existingNormalizedId": "adrenalina",
+      "exactCandidates": [
+        "adrenalina"
+      ],
+      "previouslyProvenCanonicalDrugId": "adrenalina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_2",
+      "query": "Dobutamina",
+      "existingNormalizedId": "dobutamina",
+      "exactCandidates": [
+        "dobutamina"
+      ],
+      "previouslyProvenCanonicalDrugId": "dobutamina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_3",
+      "query": "Dopamina",
+      "existingNormalizedId": "dopamina",
+      "exactCandidates": [
+        "dopamina"
+      ],
+      "previouslyProvenCanonicalDrugId": "dopamina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_4",
+      "query": "Milrinona",
+      "existingNormalizedId": "milrinona",
+      "exactCandidates": [],
+      "previouslyProvenCanonicalDrugId": null,
+      "proof": "UNRESOLVED",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_5",
+      "query": "Vasopressina",
+      "existingNormalizedId": "vasopressina",
+      "exactCandidates": [
+        "vasopressina"
+      ],
+      "previouslyProvenCanonicalDrugId": "vasopressina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_6",
+      "query": "Nitroprussiato",
+      "existingNormalizedId": "nitroprussiato",
+      "exactCandidates": [],
+      "previouslyProvenCanonicalDrugId": null,
+      "proof": "UNRESOLVED",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [
+        "nitroprussiatosodio",
+        "nitroprussiato_sodio"
+      ],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_7",
+      "query": "Nitroglicerina",
+      "existingNormalizedId": "isossorbida",
+      "exactCandidates": [
+        "nitroglicerina"
+      ],
+      "previouslyProvenCanonicalDrugId": "nitroglicerinaiv",
+      "proof": "EXISTING_V2_1_BINDING",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": "isossorbida",
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_8",
+      "query": "Amiodarona",
+      "existingNormalizedId": "amiodarona",
+      "exactCandidates": [
+        "amiodarona"
+      ],
+      "previouslyProvenCanonicalDrugId": "amiodarona",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_9",
+      "query": "Heparina",
+      "existingNormalizedId": "heparina",
+      "exactCandidates": [],
+      "previouslyProvenCanonicalDrugId": "heparina_hnf",
+      "proof": "EXISTING_V2_1_BINDING",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_10",
+      "query": "Propofol",
+      "existingNormalizedId": "propofol",
+      "exactCandidates": [
+        "propofol"
+      ],
+      "previouslyProvenCanonicalDrugId": "propofol",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_11",
+      "query": "Midazolam",
+      "existingNormalizedId": "midazolam",
+      "exactCandidates": [
+        "midazolam"
+      ],
+      "previouslyProvenCanonicalDrugId": "midazolam",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_12",
+      "query": "Morfina",
+      "existingNormalizedId": "morfina",
+      "exactCandidates": [
+        "morfina"
+      ],
+      "previouslyProvenCanonicalDrugId": "morfina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_13",
+      "query": "Fentanil",
+      "existingNormalizedId": "fentanil",
+      "exactCandidates": [
+        "fentanil"
+      ],
+      "previouslyProvenCanonicalDrugId": "fentanil",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_14",
+      "query": "Insulina Regular",
+      "existingNormalizedId": "insulina_regular",
+      "exactCandidates": [
+        "insulina_regular"
+      ],
+      "previouslyProvenCanonicalDrugId": "insulina_regular",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    },
+    {
+      "presetId": "prep_15",
+      "query": "Vancomicina",
+      "existingNormalizedId": "vancomicina",
+      "exactCandidates": [
+        "vancomicina"
+      ],
+      "previouslyProvenCanonicalDrugId": "vancomicina",
+      "proof": "V1_NORMALIZED_EXACT_ID",
+      "provenBindingArtifact": ".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json",
+      "provenBindingArtifactSha256": "29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3",
+      "rejectedAlias": null,
+      "ambiguityCandidates": [],
+      "fuzzy": false,
+      "inferred": false
+    }
+  ]
+}

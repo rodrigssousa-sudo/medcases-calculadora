@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import crypto from 'node:crypto';
 import fs from 'node:fs';
+import tierContract from './clinical-tier-contract.cjs';
 import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -99,6 +100,8 @@ for (const row of data) {
   if (!free.has(id) && fs.existsSync(safe(`public/data/drugs/${id}.json`))) die(`PREMIUM_PUBLIC_EXPOSURE:${id}`);
   touchedIds.add(id);
 }
+
+tierContract.stageTierManifests(root, outputs);
 
 const plan=[...outputs].map(([file,bytes])=>({path:path.relative(root,file),sha256:sha(bytes),changed:!fs.existsSync(file)||!fs.readFileSync(file).equals(bytes)}));
 if (!apply) { console.log(JSON.stringify({result:'DRY_RUN_PASS',ids:[...touchedIds],plan},null,2)); process.exit(0); }

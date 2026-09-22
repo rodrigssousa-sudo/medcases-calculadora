@@ -33,7 +33,7 @@
     "specialPopulations": "Idosos: em indicações exceto demência, iniciar com metade da menor dose adulta; máximo de referência 5 mg/dia na bula AR, com exceções somente após reavaliação individual. Psicoses associadas à demência: mortalidade aumentada; AR tem indicação muito restrita, EUA não aprova. Corpos de Lewy e Parkinson: contraindicações AR. CYP2D6 lento + inibidor CYP3A4 exige cautela.",
     "patientEducation": "Explicar sonolência e risco ao dirigir/operar máquinas; evitar álcool. Informar imediatamente febre com rigidez/confusão, palpitações/síncope ou movimentos involuntários. Se esquecer dose, tomar a próxima normalmente, sem dobrar. Não suspender abruptamente sem orientação.",
     "clinicalPearls": "Alto risco de confusão entre bulas: US comprimidos descreve psicoses pediátricas 3–12 anos e regimes mg/kg/dia, mas bula ANMAT solução AR orienta esquizofrenia 13–17 anos e doses fixas por indicação; não combinar regimes. Diferenciar máximo por indicação, formulação e jurisdição; nunca usar 100 mg/dia como teto universal.",
-    "guidelineRecommendations": "",
+    "guidelineRecommendations": "OMS/mhGAP 2023: antipsicóticos orais, incluindo haloperidol, devem ser oferecidos a adultos com transtornos psicóticos (incluindo esquizofrenia), equilibrando eficácia, efeitos adversos e preferência individual; recomenda-se usar a menor dose eficaz. Esta recomendação é independente/internacional e NÃO valida concentração, dose ou registro do produto HALOPIDOL solução oral 2 mg/mL da Argentina; o regime local continua dependente da bula ANMAT já documentada no dossiê.",
     "safetyFlags": "ALTO RISCO: prolongamento QT/torsades; SNM; discinesia tardia; mortalidade elevada em idosos com demência; dose pediátrica específica por indicação/país; concentração e gotas dependem do produto. NÃO habilitar cálculo automático antes de homologação clínica e testes.",
     "alerts": "CANDIDATO NÃO APROVADO. Escopo: HALOPIDOL solução oral 2 mg/mL ARGENTINA; texto PT é tradução da bula AR, NÃO autorização Anvisa. Registro ANMAT de 2024 cancelou HALOPIDOL comprimido 20 mg; não importar apresentações históricas. Guidelines independentes e apresentação brasileira pendentes. Bloquear publicação e motor de dose até aprovação médica + testes.",
     "references": [
@@ -73,7 +73,7 @@
     "specialPopulations": "Mayores: en indicaciones distintas de demencia, iniciar con mitad de la dosis adulta más baja; máximo de referencia 5 mg/día en AR, con excepciones sólo tras reevaluación individual. Psicosis asociada a demencia: mortalidad aumentada; AR tiene indicación muy restringida, EE. UU. no aprueba. Lewy y Parkinson: contraindicaciones AR. Metabolizador lento CYP2D6 + inhibidor CYP3A4 requiere cautela.",
     "patientEducation": "Explicar somnolencia y riesgo al conducir/operar máquinas; evitar alcohol. Consultar de inmediato por fiebre con rigidez/confusión, palpitaciones/síncope o movimientos involuntarios. Ante olvido, tomar próxima dosis habitual, no duplicar. No suspender bruscamente sin indicación.",
     "clinicalPearls": "Alto riesgo de confusión entre prospectos: comprimidos EE. UU. describen psicosis pediátrica 3–12 años y mg/kg/día, mientras ANMAT solución AR indica esquizofrenia 13–17 años y dosis fijas por indicación; no combinar. Diferenciar máximos por indicación, formulación y jurisdicción; nunca usar 100 mg/día como techo universal.",
-    "guidelineRecommendations": "",
+    "guidelineRecommendations": "OMS/mhGAP 2023: los antipsicóticos orales, incluido haloperidol, deben ofrecerse a adultos con trastornos psicóticos (incluida esquizofrenia), equilibrando eficacia, efectos adversos y preferencia individual; se recomienda usar la dosis eficaz mínima. Esta recomendación es independiente/internacional y NO valida concentración, dosis ni registro del producto HALOPIDOL solución oral 2 mg/mL de Argentina; el régimen local sigue dependiendo del prospecto ANMAT ya documentado en el dossier.",
     "safetyFlags": "ALTO RIESGO: prolongación QT/torsades; SNM; discinesia tardía; mayor mortalidad en adultos mayores con demencia; dosis pediátrica específica por indicación/país; concentración y gotas dependen del producto. NO habilitar cálculo automático antes de homologación clínica y pruebas.",
     "alerts": "CANDIDATO NO APROBADO. Alcance: HALOPIDOL solución oral 2 mg/ml ARGENTINA; el texto PT traduce prospecto AR, NO autorización Anvisa. Registro ANMAT 2024 canceló HALOPIDOL comprimido 20 mg; no importar presentaciones históricas. Guías independientes y presentación brasileña pendientes. Bloquear publicación y motor de dosis hasta aprobación médica + pruebas.",
     "references": [
@@ -334,6 +334,19 @@
     "calculationAuthorized": false,
     "publicationAuthorized": true,
     "clinicalPackagePublicationState": "LIBERADA_COM_RESTRICOES_GRANULARES",
-    "ownerPublicationAuthorization": "lote002-owner-confirmed"
+    "ownerPublicationAuthorization": "lote002-owner-confirmed",
+    "residualClinicalReview": {
+      "reviewer": "Dra Eugenia Marques",
+      "reviewDate": "21-09-2026",
+      "reviewResult": "APROVADO INTEGRALMENTE",
+      "reviewArtifact": "docs/clinical-updates/gold33-evidence/MEDCASES_GOLD33_FINAL_RESIDUAL_HOMOLOGADO_CLINICAMENTE.zip",
+      "packageSha256": "a8b8f1314d073e33875ab9b216f9ba8f6741b08958139e080755a31e07c5dda3",
+      "approvedPatchSha256": "69c50abbaf5b2d827553495b095cd9104c86eb593870194f6dde43580e44db02",
+      "reviewPdfSha256": "e192815fc1edfb99c45188585ce146bf2088b14899832e620322995d8bb062ad",
+      "fields": [
+        "guidelineRecommendations"
+      ],
+      "scope": "residual fields only; no calculation authority change"
+    }
   }
 }

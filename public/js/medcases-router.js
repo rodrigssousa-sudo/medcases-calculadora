@@ -1577,9 +1577,9 @@
 
     /* Dose calculada via calculate(pd, lang) — PASSO 3 garante lang explícito */
     var doseHtml = '';
-    if (drugDb && typeof drugDb.calculate === 'function') {
+    if (drugDb && typeof drugDb.calculate === 'function' && window.__mcClinicalActionAllowed?.('weight')) {
       try {
-        var calc = drugDb.calculate(pd || {}, lang);   /* ← lang passado explicitamente */
+        var calc = window.__mcRunCommercialSurface?.('protocol-patient-dose', () => drugDb.calculate(pd || {}, lang));   /* ← lang passado explicitamente */
         if (calc) {
           var doseText = '';
           if (calc.dose) {
@@ -1588,7 +1588,7 @@
             if (d.adultoGrave)  doseText += '<li><strong>' + DOSE_I18N.calcLblGrav + ':</strong> ' + _esc(d.adultoGrave)  + '</li>';
           }
           if (doseText) {
-            doseHtml = '<div class="csr-dose-block">' +
+            doseHtml = '<div class="csr-dose-block" data-mc-surface="protocol-patient-dose">' +
               '<div class="csr-dose-title">' + DOSE_I18N.calcTitle + '</div>' +
               '<ul class="csr-dose-list">' + doseText + '</ul>' +
               (pd.peso ? '<div class="csr-dose-patient">' + DOSE_I18N.patLabel + ': ' +

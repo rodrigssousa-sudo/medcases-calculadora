@@ -6,6 +6,7 @@ const path=require('path');
 const os=require('os');
 const {execFileSync}=require('child_process');
 
+const tier = require('../scripts/clinical-tier-contract.cjs');
 const REPO=path.resolve(__dirname,'..');
 const GOLD=new Set(['verapamil','procainamida','atenolol','bisoprolol','carvedilol','dapagliflozina','acetazolamida','bumetanida','amilorida','candesartana','disopiramida','angiotensinaii','azilsartana','canagliflozina','clonidina','lidocaina','mexiletina','clopidogrel','prasugrel','ticagrelor','cangrelor','alteplase','tenecteplase','amiodarona','adenosina','metoprolol','nebivolol','enalapril','lisinopril','ramipril','losartana','valsartana','irbesartana','telmisartana','olmesartana','eprosartana','propranolol','esmolol','nadolol','sotalol','labetalol','ivabradina','digoxina','furosemida','torsemida','espironolactona','eplerenona','hidroclorotiazida','clortalidona','indapamida','metolazona','manitol','anlodipino','nifedipina','felodipina','lercanidipina','manidipina','diltiazem','dofetilida','ibutilida','flecainida','propafenona','quinidina','bosentana','ambrisentana','macitentana','riociguate','treprostinil','iloprosta','selexipague']);
 const REQUIRED=[
@@ -32,24 +33,28 @@ for(const id of GOLD){
 }
 
 const sb=fs.mkdtempSync(path.join(os.tmpdir(),'mc-gold-export-test-'));
-for(const d of ['database','config','scripts','data','public']){
+for(const d of ['database','config','scripts','data','public','gateway','docs']){
   copyDir(path.join(REPO,d),path.join(sb,d));
 }
+fs.cpSync(path.join(REPO,'generated/gold33-nova-lista/packages'),path.join(sb,'generated/gold33-nova-lista/packages'),{recursive:true});
 if(fs.existsSync(path.join(REPO,'package.json'))){
   fs.copyFileSync(path.join(REPO,'package.json'),path.join(sb,'package.json'));
 }
 
 run(sb);
+const free = new Set(tier.policy(REPO).ids);
+tier.assertClinicalOutputsConsistentByTier(path.join(sb,'data'),path.join(sb,'public/data'),tier.policy(REPO));
 
 let pass=0;
 for(const id of GOLD){
   const a=before.get(id);
   const p=path.join(sb,'data','drugs',`${id}.json`);
   const q=path.join(sb,'public','data','drugs',`${id}.json`);
-  if(!fs.existsSync(p)||!fs.existsSync(q))die(`missing after ${id}`);
+  if(!fs.existsSync(p))die(`missing private ${id}`);
   const rawP=fs.readFileSync(p);
-  const rawQ=fs.readFileSync(q);
-  if(!rawP.equals(rawQ))die(`root/public mismatch ${id}`);
+  if(free.has(id)) {
+    if(!fs.existsSync(q) || !rawP.equals(fs.readFileSync(q)))die(`Free parity ${id}`);
+  } else if(fs.existsSync(q))die(`Premium leak ${id}`);
 
   const b=JSON.parse(rawP.toString('utf8'));
 
@@ -96,6 +101,6 @@ for(const id of GOLD){
 
 fs.rmSync(sb,{recursive:true,force:true});
 console.log(`GOLD70_EXPORTER_PERSISTENCE=${pass}/70`);
-console.log('GOLD70_ROOT_PUBLIC_PARITY=PASS');
+console.log('GOLD70_TIER_CONSISTENCY=PASS');
 console.log('GOLD70_IDEMPOTENCE=PASS');
 console.log('RESULT=PASS_GOLD70_EXPORTER_PERSISTENCE_TEST');

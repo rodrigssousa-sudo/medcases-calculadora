@@ -66,182 +66,397 @@ function _bicGetActivePreset() {
 let _bicActivePresetId = null;
 
 const INFUSION_FALLBACK_DB = [
-  { nome:'Noradrenalina',   nome_es:'Noradrenalina',   ampolaMg:4,   diluenteMl:250, diluente:'SG 5%',
-    doseInicial:null, unidade:'mcg/kg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Adrenalina',      nome_es:'Adrenalina',      ampolaMg:1,   diluenteMl:250, diluente:'SG 5%',
-    doseInicial:null, unidade:'mcg/kg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Dobutamina',      nome_es:'Dobutamina',      ampolaMg:250, diluenteMl:250, diluente:'SG 5% ou SF 0,9%',
-    doseInicial:null,    unidade:'mcg/kg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Dopamina',        nome_es:'Dopamina',        ampolaMg:200, diluenteMl:250, diluente:'SG 5% ou SF 0,9%',
-    doseInicial:null,    unidade:'mcg/kg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Milrinona',       nome_es:'Milrinona',       ampolaMg:10,  diluenteMl:100, diluente:'SF 0,9%',
-    doseInicial:null, unidade:'mcg/kg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Vasopressina',    nome_es:'Vasopresina',     ampolaMg:20,  diluenteMl:100, diluente:'SG 5%',
-    doseInicial:null, unidade:'UI/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Nitroprussiato',  nome_es:'Nitroprussiato',  ampolaMg:50,  diluenteMl:250, diluente:'SG 5%',
-    doseInicial:null,  unidade:'mcg/kg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Nitroglicerina',  nome_es:'Nitroglicerina',  ampolaMg:50,  diluenteMl:250, diluente:'SG 5%',
-    doseInicial:null,    unidade:'mcg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Amiodarona',      nome_es:'Amiodarona',      ampolaMg:150, diluenteMl:100, diluente:'SG 5%',
-    doseInicial:null,    unidade:'mg/min',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Heparina',        nome_es:'Heparina',        ampolaMg:25000, diluenteMl:250, diluente:'SG 5%',
-    doseInicial:null,   unidade:'UI/kg/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Propofol',        nome_es:'Propofol',        ampolaMg:200, diluenteMl:20,  diluente:'(emulsão pronta)',
-    doseInicial:null,  unidade:'mg/kg/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Midazolam',       nome_es:'Midazolam',       ampolaMg:15,  diluenteMl:100, diluente:'SF 0,9%',
-    doseInicial:null, unidade:'mg/kg/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Morfina',         nome_es:'Morfina',         ampolaMg:10,  diluenteMl:100, diluente:'SF 0,9%',
-    doseInicial:null,    unidade:'mg/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Fentanil',        nome_es:'Fentanil',        ampolaMg:0.5, diluenteMl:100, diluente:'SF 0,9%',
-    doseInicial:null,  unidade:'mcg/kg/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Insulina Regular',nome_es:'Insulina Regular',ampolaMg:100, diluenteMl:100, diluente:'SF 0,9%',
-    doseInicial:null,    unidade:'UI/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
-  { nome:'Vancomicina',     nome_es:'Vancomicina',     ampolaMg:500, diluenteMl:100, diluente:'SF 0,9% ou SG 5%',
-    doseInicial:null,   unidade:'mg/h',
-    obs_pt:'Informe a dose prescrita e confirme o preparo para a apresentação utilizada.',
-    obs_es:'Introduzca la dosis prescrita y confirme la preparación para la presentación utilizada.' },
+  {
+    "nome": "Noradrenalina",
+    "nome_es": "Noradrenalina",
+    "ampolaMg": 4,
+    "diluenteMl": 250,
+    "diluente": "NaCl 0,9% ready-to-use",
+    "doseInicial": null,
+    "unidade": "mcg/kg/min",
+    "obs_pt": "Nao usar 0.01 mcg/kg/min como limite inferior do esquema weight-based sem fonte especifica. Calculation authority permanece false ate\nhomologacao + QA tecnico. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Nao usar 0.01 mcg/kg/min como limite inferior do esquema weight-based sem fonte especifica. Calculation authority permanece false ate\nhomologacao + QA tecnico. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "noradrenalina",
+    "bindingId": "prep_0",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Adrenalina",
+    "nome_es": "Adrenalina",
+    "ampolaMg": 4,
+    "diluenteMl": 250,
+    "diluente": "NaCl 0,9% ready-to-use",
+    "doseInicial": null,
+    "unidade": "mcg/kg/min",
+    "obs_pt": "Nao reutilizar esta bomba para anafilaxia ou PCR. Calculation authority false ate homologacao + QA. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Nao reutilizar esta bomba para anafilaxia ou PCR. Calculation authority false ate homologacao + QA. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "adrenalina",
+    "bindingId": "prep_1",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Dobutamina",
+    "nome_es": "Dobutamina",
+    "ampolaMg": 250,
+    "diluenteMl": 250,
+    "diluente": "SG 5% ou NaCl 0,9%",
+    "doseInicial": null,
+    "unidade": "mcg/kg/min",
+    "obs_pt": "Faixas acima de 20 exigem contexto/monitorizacao; nenhum valor pediatrico liberado. Pediatria: calculo bloqueado; nenhuma dose\nadulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Faixas acima de 20 exigem contexto/monitorizacao; nenhum valor pediatrico liberado. Pediatria: calculo bloqueado; nenhuma dose\nadulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "dobutamina",
+    "bindingId": "prep_2",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Dopamina",
+    "nome_es": "Dopamina",
+    "ampolaMg": 200,
+    "diluenteMl": 250,
+    "diluente": "Solução compatível conforme produto",
+    "doseInicial": null,
+    "unidade": "mcg/kg/min",
+    "obs_pt": "O antigo 20 mcg/kg/min nao deve ser hard max. Pediatria continua bloqueada por contrato do PATCH3S. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: O antigo 20 mcg/kg/min nao deve ser hard max. Pediatria continua bloqueada por contrato do PATCH3S. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "dopamina",
+    "bindingId": "prep_3",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Milrinona",
+    "nome_es": "Milrinona",
+    "ampolaMg": 20,
+    "diluenteMl": 100,
+    "diluente": "Conforme produto; binding bloqueado",
+    "doseInicial": null,
+    "unidade": "mcg/kg/min",
+    "obs_pt": "BLOQUEIO ABSOLUTO DE BINDING: nenhum canonical ID comprovado no pacote local. Nao criar alias/ID. Clinica pode ser revisada,\nmas software permanece fail-closed. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para\ncriancas.",
+    "obs_es": "Parecer original em português: BLOQUEIO ABSOLUTO DE BINDING: nenhum canonical ID comprovado no pacote local. Nao criar alias/ID. Clinica pode ser revisada,\nmas software permanece fail-closed. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para\ncriancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": null,
+    "bindingId": "prep_4",
+    "infusionMode": "continuous",
+    "calculationBlock": "CANONICAL_ID_MISSING"
+  },
+  {
+    "nome": "Vasopressina",
+    "nome_es": "Vasopresina",
+    "ampolaMg": 20,
+    "diluenteMl": 100,
+    "diluente": "Ready-to-use; conforme produto",
+    "doseInicial": null,
+    "unidade": "UI/min",
+    "obs_pt": "Remover hard max universal 0.04 e a regra \"0.06 resgate off-label\" como se fossem regulatórias. Se 0.04 for politica local, rotular como\npolitica local. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Remover hard max universal 0.04 e a regra \"0.06 resgate off-label\" como se fossem regulatórias. Se 0.04 for politica local, rotular como\npolitica local. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "UI",
+    "canonicalDrugId": "vasopressina",
+    "bindingId": "prep_5",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Nitroprussiato",
+    "nome_es": "Nitroprussiato",
+    "ampolaMg": 50,
+    "diluenteMl": 250,
+    "diluente": "SG 5%",
+    "doseInicial": null,
+    "unidade": "mcg/kg/min",
+    "obs_pt": "Corrigir alerta: acima de 2 mcg/kg/min o risco de cianeto ja aumenta; nao condicionar monitorizacao a 48-72 h. Duplicidade de IDs\ncontinua assunto tecnico separado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Corrigir alerta: acima de 2 mcg/kg/min o risco de cianeto ja aumenta; nao condicionar monitorizacao a 48-72 h. Duplicidade de IDs\ncontinua assunto tecnico separado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": null,
+    "bindingId": "prep_6",
+    "infusionMode": "continuous",
+    "calculationBlock": "CANONICAL_DUPLICATE_RECONCILIATION_REQUIRED"
+  },
+  {
+    "nome": "Nitroglicerina",
+    "nome_es": "Nitroglicerina",
+    "ampolaMg": 50,
+    "diluenteMl": 250,
+    "diluente": "SG 5%",
+    "doseInicial": null,
+    "unidade": "mcg/min",
+    "obs_pt": "Remover hard max universal 200 mcg/min. A fonte documenta grande variabilidade de necessidade; limites locais devem ser politicas\nexplicitas. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Remover hard max universal 200 mcg/min. A fonte documenta grande variabilidade de necessidade; limites locais devem ser politicas\nexplicitas. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "nitroglicerinaiv",
+    "bindingId": "prep_7",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Amiodarona",
+    "nome_es": "Amiodarona",
+    "ampolaMg": 150,
+    "diluenteMl": 100,
+    "diluente": "Premix conforme produto",
+    "doseInicial": null,
+    "unidade": "mg/min",
+    "obs_pt": "Nao presumir que 900/500 seja automaticamente equivalente a produto premixado; exige protocolo local se usado. Pediatria: calculo\nbloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Nao presumir que 900/500 seja automaticamente equivalente a produto premixado; exige protocolo local se usado. Pediatria: calculo\nbloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "amiodarona",
+    "bindingId": "prep_8",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Heparina",
+    "nome_es": "Heparina",
+    "ampolaMg": 25000,
+    "diluenteMl": 250,
+    "diluente": "SG 5%",
+    "doseInicial": null,
+    "unidade": "UI/kg/h",
+    "obs_pt": "Binding pode ser homologado; calculadora deve exigir \"indicacao/nomograma\" e dose prescrita. Nada de dose-padrao universal.\nPediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Binding pode ser homologado; calculadora deve exigir \"indicacao/nomograma\" e dose prescrita. Nada de dose-padrao universal.\nPediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "UI",
+    "canonicalDrugId": "heparina_hnf",
+    "bindingId": "prep_9",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Propofol",
+    "nome_es": "Propofol",
+    "ampolaMg": 200,
+    "diluenteMl": 20,
+    "diluente": "Emulsão pronta; não diluir",
+    "doseInicial": null,
+    "unidade": "mg/kg/h",
+    "obs_pt": "Trocar \"tipica 0.3-4\" por \"usual 0.3-3; 4 como limite excepcional\". Linhas/frasco: descarte/troca em 12 h. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Trocar \"tipica 0.3-4\" por \"usual 0.3-3; 4 como limite excepcional\". Linhas/frasco: descarte/troca em 12 h. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "propofol",
+    "bindingId": "prep_10",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Midazolam",
+    "nome_es": "Midazolam",
+    "ampolaMg": 50,
+    "diluenteMl": 100,
+    "diluente": "NaCl 0,9% ou SG 5%",
+    "doseInicial": null,
+    "unidade": "mg/kg/h",
+    "obs_pt": "Substituir 0.15 mg/mL e range ate 0.2 como padrao. Retirar estado de mal epileptico deste preset se nao houver protocolo independente\nvalidado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Substituir 0.15 mg/mL e range ate 0.2 como padrao. Retirar estado de mal epileptico deste preset se nao houver protocolo independente\nvalidado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "midazolam",
+    "bindingId": "prep_11",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Morfina",
+    "nome_es": "Morfina",
+    "ampolaMg": 10,
+    "diluenteMl": 100,
+    "diluente": "Concentração local não autorizada",
+    "doseInicial": null,
+    "unidade": "mg/h",
+    "obs_pt": "CALCULO BLOQUEADO: concentracao final e politica institucional nao validadas. O medico nao precisa preencher nada; basta aceitar o\nbloqueio ou solicitar outro protocolo. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para\ncriancas.",
+    "obs_es": "Parecer original em português: CALCULO BLOQUEADO: concentracao final e politica institucional nao validadas. O medico nao precisa preencher nada; basta aceitar o\nbloqueio ou solicitar outro protocolo. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para\ncriancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "morfina",
+    "bindingId": "prep_12",
+    "infusionMode": "continuous",
+    "calculationBlock": "INSTITUTIONAL_CONCENTRATION_MISSING"
+  },
+  {
+    "nome": "Fentanil",
+    "nome_es": "Fentanil",
+    "ampolaMg": 0.5,
+    "diluenteMl": 100,
+    "diluente": "Preparo contínuo não autorizado",
+    "doseInicial": null,
+    "unidade": "mcg/kg/h",
+    "obs_pt": "CALCULO BLOQUEADO: identidade e stock comprovados, mas regime continuo e diluicao final do preset exigem protocolo institucional\nvalidado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: CALCULO BLOQUEADO: identidade e stock comprovados, mas regime continuo e diluicao final do preset exigem protocolo institucional\nvalidado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "fentanil",
+    "bindingId": "prep_13",
+    "infusionMode": "continuous",
+    "calculationBlock": "INSTITUTIONAL_REGIMEN_MISSING"
+  },
+  {
+    "nome": "Insulina Regular",
+    "nome_es": "Insulina Regular",
+    "ampolaMg": 100,
+    "diluenteMl": 100,
+    "diluente": "NaCl 0,9% ready-to-use",
+    "doseInicial": null,
+    "unidade": "UI/kg/h",
+    "obs_pt": "Adotar limiar K 3.5, nao 3.3. Nao usar este preset para \"pos-operatorio\" sem protocolo separado. Pediatria: calculo bloqueado; nenhuma\ndose adulta pode ser reutilizada ou convertida para criancas.",
+    "obs_es": "Parecer original em português: Adotar limiar K 3.5, nao 3.3. Nao usar este preset para \"pos-operatorio\" sem protocolo separado. Pediatria: calculo bloqueado; nenhuma\ndose adulta pode ser reutilizada ou convertida para criancas.",
+    "amountUnit": "UI",
+    "canonicalDrugId": "insulina_regular",
+    "bindingId": "prep_14",
+    "infusionMode": "continuous",
+    "calculationBlock": null
+  },
+  {
+    "nome": "Vancomicina",
+    "nome_es": "Vancomicina",
+    "ampolaMg": 500,
+    "diluenteMl": 100,
+    "diluente": "SF 0,9% ou SG 5% conforme produto",
+    "doseInicial": null,
+    "unidade": "ml/h",
+    "obs_pt": "INFUSAO CONTINUA BLOQUEADA. O preparo 500/100 e validavel como intermitente, nao como protocolo continuo. Se desejar continua,\ncriar ficha separada com carga, concentracao, alvo e TDM. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou\nconvertida para criancas.",
+    "obs_es": "Parecer original em português: INFUSAO CONTINUA BLOQUEADA. O preparo 500/100 e validavel como intermitente, nao como protocolo continuo. Se desejar continua,\ncriar ficha separada com carga, concentracao, alvo e TDM. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou\nconvertida para criancas.",
+    "amountUnit": "mg",
+    "canonicalDrugId": "vancomicina",
+    "bindingId": "prep_15",
+    "infusionMode": "intermittent",
+    "calculationBlock": null
+  }
 ];
 
 const INFUSION_REVIEW = {
-  "Vasopressina": {
+  "Noradrenalina": {
     "section": 1,
     "range": [
-      0.01,
-      0.04
-    ],
-    "text": "- Indicação e População: Choque vasodilatador/séptico refratário a catecolaminas. Adultos.\n- Preparo: 20 UI em Volume Final de 100 mL. (Concentração: 0,2 UI/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,01 a 0,04 UI/min. Máxima: 0,04 UI/min (0,06 UI/min em resgate off-label). Sem dose de ataque.\n- Ajustes: Não utiliza peso. Sem ajuste para disfunção renal/hepática.\n- Cálculos:\n  - Dose → mL/h: (Dose [UI/min] × 60) / 0,2\n  - mL/h → Dose: (mL/h × 0,2) / 60\n- Alerta: Alta prioridade por utilizar Unidades Internacionais. Extravasamento causa necrose isquêmica severa (preferir acesso central)."
-  },
-  "Heparina": {
-    "section": 2,
-    "range": null,
-    "text": "- Indicação e População: Anticoagulação plena contínua (SCA, TEP, TVP). Adultos.\n- Preparo: 25.000 UI em Volume Final de 250 mL. (Concentração: 100 UI/mL).\n- Doses: Bolus de ataque em linha separada (~80 UI/kg). Infusão inicial: Preenchimento obrigatório (geralmente 18 UI/kg/h). Titulação guiada por TTPA.\n- Ajustes: Utiliza peso atual. Em obesos extremos, limitar dose máxima do bolus e da infusão. Em disfunção renal, exige controle rigoroso de TTPA.\n- Cálculos:\n  - Dose → mL/h: (Dose [UI/kg/h] × Peso) / 100\n  - mL/h → Dose: (mL/h × 100) / Peso\n- Alerta: Alta prioridade. Risco de sangramento e Trombocitopenia Induzida por Heparina (HIT)."
-  },
-  "Insulina Regular": {
-    "section": 3,
-    "range": null,
-    "text": "- Indicação e População: Controle glicêmico no paciente crítico (CAD, EHH, pós-operatório). Adultos.\n- Preparo: 100 UI em Volume Final de 100 mL. (Concentração: 1 UI/mL). Solução 1:1. Purgação do equipo mandatória.\n- Doses: Inicial: Preenchimento obrigatório (ex: 0,1 UI/kg/h, mas inserida como UI/h fixa). Titulação guiada por HGT horário. Sem ataque em CAD convencional.\n- Ajustes: Não utiliza peso no cálculo da bomba. Ajuste rigoroso para insuficiência renal (risco de hipoglicemia prolongada).\n- Cálculos:\n  - Dose → mL/h: Dose [UI/h] / 1 (1 mL/h = 1 UI/h)\n  - mL/h → Dose: mL/h × 1\n- Alerta: Alta prioridade. Bloqueio sistêmico: Exigir potássio sérico (K+) > 3,3 mEq/L antes do início da infusão."
-  },
-  "Amiodarona": {
-    "section": 4,
-    "range": null,
-    "text": "- Indicação e População: Reversão/controle de taquiarritmias supraventriculares e ventriculares. Adultos.\n- Preparo: 150 mg em Volume Final de 100 mL SG5%. (Concentração: 1,5 mg/mL). Evitar diluição em Soro Fisiológico (precipitação).\n- Doses: Inicial: Preenchimento obrigatório.\n- Ajustes: Não utiliza peso. Sem ajuste de dose renal.\n- Cálculos:\n  - Dose → mL/h: (Dose [mg/min] × 60) / 1,5\n  - mL/h → Dose: (mL/h × 1,5) / 60\n- Alerta: Este preparo (150mg/100mL) esgota em ~1-2 horas sob taxa de 1 mg/min. É ideal para Ataque. O sistema deve sugerir um segundo preparo padronizado (ex: 900mg/500mL) para a manutenção de 24h."
-  },
-  "Morfina": {
-    "section": 5,
-    "range": [
-      2,
-      10
-    ],
-    "text": "- Indicação e População: Analgesia de resgate contínua, sedoanalgesia em VM, paliação. Adultos.\n- Preparo: 10 mg em Volume Final de 100 mL. (Concentração: 0,1 mg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Faixa típica: 2 a 10 mg/h.\n- Ajustes: Não utiliza peso no cálculo da bomba. Ajuste renal: Exige redução de dose ou aumento de intervalo em DRC devido ao acúmulo de metabólitos ativos (neurotoxicidade/depressão respiratória).\n- Cálculos:\n  - Dose → mL/h: Dose [mg/h] / 0,1\n  - mL/h → Dose: mL/h × 0,1\n- Alerta: Preparo muito diluído para infusão contínua rotineira (ex: dose de 5 mg/h exige fluxo de 50 mL/h, encharcando o paciente). Avaliar com farmácia criação de preparo 50mg/100mL."
-  },
-  "Fentanil": {
-    "section": 6,
-    "range": [
-      0.5,
-      3
-    ],
-    "text": "- Indicação e População: Analgesia profunda contínua em UTI. Adultos.\n- Preparo: 0,5 mg (500 mcg) em Volume Final de 100 mL. (Concentração: 5 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,5 a 3 mcg/kg/h.\n- Ajustes: Utiliza peso. Sem ajuste renal específico. Em obesos ou uso prolongado, o fármaco acumula (alta lipofilicidade), prolongando o despertar.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/h] × Peso) / 5\n  - mL/h → Dose: (mL/h × 5) / Peso"
-  },
-  "Nitroprussiato": {
-    "section": 7,
-    "range": null,
-    "text": "- Indicação e População: Emergência hipertensiva. Adultos.\n- Preparo: 50 mg em Volume Final de 250 mL SG5%. (Concentração: 200 mcg/mL). Equipo/bolsa obrigatoriamente fotoprotetores.\n- Doses: Inicial: Preenchimento obrigatório (ex: 0,3 a 0,5 mcg/kg/min). Máxima: 10 mcg/kg/min.\n- Ajustes: Utiliza peso. Cautela em disfunção renal/hepática.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 200\n  - mL/h → Dose: (mL/h × 200) / (Peso × 60)\n- Alerta: Duração máxima. Emitir alerta de toxicidade (cianeto/tiocianato) em infusões > 2 mcg/kg/min que ultrapassem 48-72h."
-  },
-  "Vancomicina": {
-    "section": 8,
-    "range": null,
-    "text": "- Indicação e População: Infecções graves por Gram-positivos (SARM). Adultos.\n- Preparo: 500 mg em Volume Final de 100 mL. (Concentração: 5 mg/mL). Concentração máxima permitida em acesso periférico para evitar flebite química.\n- Doses: Para infusão contínua: Dose em mg/dia dividida por 24h = mg/h. Preenchimento obrigatório.\n- Ajustes: Utiliza peso corporal (real) para cálculo da dose total. Ajuste renal obrigatório (fármaco nefrotóxico).\n- Cálculos:\n  - Dose → mL/h: Dose [mg/h] / 5\n  - mL/h → Dose: mL/h × 5\n- Alerta: Como infusão contínua, uma bolsa de 500 mg acaba rápido. Validar se este preparo não pertence ao uso intermitente (onde correr 500mg em 1h significa bomba a 100 mL/h) e exigir protocolo de Vancocinemia."
-  },
-  "Noradrenalina": {
-    "section": 9,
-    "range": [
-      0.01,
+      0.05,
       1.5
     ],
-    "text": "- Indicação e População: Choque com hipotensão severa (vasopressor de 1ª linha). Adultos.\n- Preparo: 4 mg em Volume Final de 250 mL SG5% ou SF. (Concentração: 16 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,01 a 1,5 mcg/kg/min. (Bloqueio rígido do sistema sugerido em > 2,0 a 3,0 mcg/kg/min).\n- Ajustes: Utiliza peso (real ou ideal, a depender da política local). Sem ajuste renal/hepático.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 16\n  - mL/h → Dose: (mL/h × 16) / (Peso × 60)"
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nHipotensao aguda grave/choque apos correcao adequada da hipovolemia; titular a alvo hemodinamico.\n\nProposta V2:\nPadrao verificavel: 4 mg / 250 mL = 16 mcg/mL em NaCl 0,9% ready-to-use. Se SG5% for mantido, exigir\nbula/protocolo especifico do concentrado usado localmente.\n\nDose / titulacao:\nInicio 0.05-0.15 mcg/kg/min; manutencao 0.05-1.5 mcg/kg/min; titular em passos de 0.05-0.1 conforme efeito pressor.\n\nFormula de bomba:\nmL/h = dose (mcg/kg/min) x peso (kg) x 60 / 16.\n\nMonitorizacao critica:\nPA continua/invasiva quando indicado, perfusao, ritmo, sitio de infusao; corrigir hipovolemia.\n\nRenal / organica:\nSem tabela numerica universal no escopo desta revisao; titular a resposta.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nNao usar 0.01 mcg/kg/min como limite inferior do esquema weight-based sem fonte especifica. Calculation authority permanece false ate\nhomologacao + QA tecnico. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] eMC - Noradrenaline 0.16 mg/mL solution for infusion, SmPC (updated 13 May 2026)\nDose weight-based: initial 0.05-0.15 mcg/kg/min; maintenance 0.05-1.5 mcg/kg/min.\nhttps://www.medicines.org.uk/emc/product/102170/smpc\nAcesso: 2026-09-21\n[2] DailyMed - Norepinephrine in Sodium Chloride Injection, 4 mg/250 mL (16 mcg/mL)\nReady-to-use 4 mg/250 mL normal saline concentration.\nhttps://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1f112215-cef7-46a0-b838-ba0542a99d2c\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "noradrenalina",
+    "reviewPage": 3
   },
   "Adrenalina": {
-    "section": 10,
+    "section": 2,
     "range": [
-      0.01,
-      1
+      0.05,
+      2
     ],
-    "text": "- Indicação e População: Choque cardiogênico, anafilaxia, PCR. Adultos.\n- Preparo: 1 mg em Volume Final de 250 mL. (Concentração: 4 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,01 a 1,0 mcg/kg/min.\n- Ajustes: Utiliza peso. Sem ajuste renal/hepático.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 4\n  - mL/h → Dose: (mL/h × 4) / (Peso × 60)"
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nEste binding deve ficar restrito a hipotensao associada a choque septico em adultos. Anafilaxia IM/SC e PCR sao\nfluxos/formulacoes distintos.\n\nProposta V2:\nPadrao regulatorio atual verificavel: 4 mg / 250 mL NaCl 0,9% = 16 mcg/mL, ready-to-use.\n\nDose / titulacao:\n0.05-2 mcg/kg/min, titulada a MAP; ajustes a cada 10-15 min; usar peso ideal (IBW) na rotulagem consultada.\n\nFormula de bomba:\nmL/h = dose (mcg/kg/min) x IBW (kg) x 60 / 16.\n\nMonitorizacao critica:\nPA, FC/ritmo, perfusao, extravasamento, isquemia, edema pulmonar; desmame gradual apos estabilizacao.\n\nRenal / organica:\nMonitorar funcao renal/oliguria; sem tabela numerica de ajuste para este uso.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nNao reutilizar esta bomba para anafilaxia ou PCR. Calculation authority false ate homologacao + QA. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed/FDA - Epinephrine in 0.9% Sodium Chloride Injection, revised 03/2026\nAdult septic shock: 0.05-2 mcg/kg/min; IBW; 4 mg/250 mL = 16 mcg/mL.\nhttps://www.dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=60efd409-3555-4182-a68d-1cd7bc0d1bfc&type=display\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "adrenalina",
+    "reviewPage": 4
   },
   "Dobutamina": {
-    "section": 11,
+    "section": 3,
     "range": [
       2,
       20
     ],
-    "text": "- Indicação e População: Choque cardiogênico, baixo débito cardíaco. Adultos.\n- Preparo: 250 mg em Volume Final de 250 mL. (Concentração: 1.000 mcg/mL ou 1 mg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Faixa de titulação: 2 a 20 mcg/kg/min.\n- Ajustes: Utiliza peso. Sem ajuste renal/hepático estrito.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 1000\n  - mL/h → Dose: (mL/h × 1000) / (Peso × 60)"
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nSuporte inotropico de curto prazo em baixo debito/descompensacao cardiaca.\n\nProposta V2:\n250 mg / 250 mL = 1000 mcg/mL; SG5% ou NaCl 0,9% sao diluentes compativeis na bula consultada; usar em ate 24\nh.\n\nDose / titulacao:\nIniciar 0.5-1 mcg/kg/min; usual 2-20; raramente podem ser necessarias taxas ate 40 mcg/kg/min. Nao transformar 20\nem hard max universal.\n\nFormula de bomba:\nmL/h = dose (mcg/kg/min) x peso x 60 / 1000.\n\nMonitorizacao critica:\nPA, FC/ECG, ectopias, diurese, debito cardiaco quando disponivel, perfusao e sitio de infusao.\n\nRenal / organica:\nSem ajuste fixo; titular por hemodinamica.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nFaixas acima de 20 exigem contexto/monitorizacao; nenhum valor pediatrico liberado. Pediatria: calculo bloqueado; nenhuma dose\nadulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Dobutamine Injection USP\nStart 0.5-1; usual 2-20 mcg/kg/min; rarely up to 40; 1000 mcg/mL table; compatible diluents.\nhttps://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=74ba9408-17d3-48ac-be0b-a4fee9e7a1a5\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "dobutamina",
+    "reviewPage": 5
   },
   "Dopamina": {
-    "section": 12,
-    "range": [
-      2,
-      20
-    ],
-    "text": "- Indicação e População: Hipotensão sintomática, bradicardia refratária. Adultos.\n- Preparo: 200 mg em Volume Final de 250 mL. (Concentração: 800 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Faixa de titulação: 2 a 20 mcg/kg/min.\n- Ajustes: Utiliza peso.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 800\n  - mL/h → Dose: (mL/h × 800) / (Peso × 60)"
+    "section": 4,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nSuporte hemodinamico em choque distributivo ou baixo debito apos corrigir hipovolemia, acidose e hipoxia.\n\nProposta V2:\n200 mg / 250 mL = 800 mcg/mL, diluido em solucao compativel; IV por bomba e veia calibrosa.\n\nDose / titulacao:\nInicio 2-5 mcg/kg/min; titular em incrementos de 5-10 conforme resposta; nao exceder 50 mcg/kg/min.\n\nFormula de bomba:\nmL/h = dose x peso x 60 / 800.\n\nMonitorizacao critica:\nPA/ECG, perfusao, diurese, resposta hemodinamica e extravasamento; nao misturar com bicarbonato/solucoes\nalcalinas.\n\nRenal / organica:\nSem ajuste fixo; titular.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nO antigo 20 mcg/kg/min nao deve ser hard max. Pediatria continua bloqueada por contrato do PATCH3S. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Dopamine Hydrochloride Injection\nStart 2-5 mcg/kg/min; titrate 5-10; max 50; 200 mg/250 mL = 800 mcg/mL example.\nhttps://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=38431050-007e-41b2-e063-6394a90a1d64\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "dopamina",
+    "reviewPage": 6
   },
   "Milrinona": {
-    "section": 13,
+    "section": 5,
     "range": [
       0.375,
       0.75
     ],
-    "text": "- Indicação e População: Insuficiência cardíaca descompensada (inodilatador). Adultos.\n- Preparo: 10 mg em Volume Final de 100 mL. (Concentração: 100 mcg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,375 a 0,75 mcg/kg/min. Ataque (bolus) é opcional e perigoso em hipotensos crônicos.\n- Ajustes: Utiliza peso. Ajuste renal obrigatório (reduzir dose e omitir bolus em ClCr < 50 mL/min).\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/kg/min] × Peso × 60) / 100\n  - mL/h → Dose: (mL/h × 100) / (Peso × 60)"
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nInsuficiencia cardiaca aguda/descompensada com necessidade de suporte inotropico, conforme indicacao do produto.\n\nProposta V2:\nConcentracao de manutencao verificavel: 200 mcg/mL. Ex.: 20 mL de 1 mg/mL + 80 mL diluente = 100 mL; ou 10 mL +\n40 mL = 50 mL.\n\nDose / titulacao:\nManutencao 0.375-0.75 mcg/kg/min (padrao 0.5). Bula inclui carga 50 mcg/kg/10 min, cuja utilizacao deve ser decisao\nclinica especifica.\n\nFormula de bomba:\nCom 200 mcg/mL: mL/h = dose x peso x 60 / 200.\n\nMonitorizacao critica:\nPA, ritmo, resposta hemodinamica, eletrólitos e funcao renal.\n\nRenal / organica:\nAjustar taxa por ClCr: 5->0.20; 10->0.23; 20->0.28; 30->0.33; 40->0.38; 50->0.43 mcg/kg/min (tabela da bula).\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nBLOQUEIO ABSOLUTO DE BINDING: nenhum canonical ID comprovado no pacote local. Nao criar alias/ID. Clinica pode ser revisada,\nmas software permanece fail-closed. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para\ncriancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Milrinone Lactate Injection\nMaintenance 0.375-0.75; recommended dilution 200 mcg/mL; renal-rate table.\nhttps://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=07dddead-22ed-004c-e063-6294a90a76fc\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": null,
+    "reviewPage": 7
   },
-  "Nitroglicerina": {
-    "section": 14,
+  "Vasopressina": {
+    "section": 6,
     "range": null,
-    "text": "- Indicação e População: Edema Agudo de Pulmão (EAP), Síndrome Coronariana Aguda. Adultos.\n- Preparo: 50 mg em Volume Final de 250 mL. (Concentração: 200 mcg/mL). Exige frasco de vidro e equipo de polietileno/sem PVC (fármaco adsorve no plástico comum).\n- Doses: Inicial: Preenchimento obrigatório (ex: 5-10 mcg/min). Máxima: 200 mcg/min. Titular a cada 3-5 minutos.\n- Ajustes: Não utiliza peso. Sem ajuste renal/hepático.\n- Cálculos:\n  - Dose → mL/h: (Dose [mcg/min] × 60) / 200\n  - mL/h → Dose: (mL/h × 200) / 60"
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nAdultos com choque vasodilatador persistente apesar de fluidos e catecolaminas; separar choque septico de\npos-cardiotomia.\n\nProposta V2:\n20 U / 100 mL = 0.2 U/mL e uma apresentacao ready-to-use documentada. Concentrados tambem podem ser diluidos\nem NS ou D5W conforme produto.\n\nDose / titulacao:\nChoque septico: iniciar 0.01 U/min, +0.005 U/min a cada 10-15 min; dados limitados acima de 0.07 U/min.\nPos-cardiotomia: iniciar 0.03; dados limitados acima de 0.1.\n\nFormula de bomba:\nmL/h = dose (U/min) x 60 / 0.2.\n\nMonitorizacao critica:\nPA, perfusao/isquemia, FC/ritmo, debito cardiaco, sodio; titular a menor dose eficaz.\n\nRenal / organica:\nSem tabela numerica de ajuste na fonte principal deste binding.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nRemover hard max universal 0.04 e a regra \"0.06 resgate off-label\" como se fossem regulatórias. Se 0.04 for politica local, rotular como\npolitica local. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - VASOSTRICT (vasopressin) Injection\nSeptic shock start 0.01 U/min, titrate by 0.005 q10-15 min; limited data above 0.07; premix 20 U/100 mL.\nhttps://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1147beb-743e-4c62-8927-91192447f8b8\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "vasopressina",
+    "reviewPage": 8
   },
-  "Propofol": {
-    "section": 15,
+  "Nitroprussiato": {
+    "section": 7,
     "range": [
       0.3,
-      4
+      10
     ],
-    "text": "- Indicação e População: Sedação profunda em VM. Adultos.\n- Preparo: 200 mg em Volume Final de 20 mL. (Concentração: 10 mg/mL). Solução lipídica.\n- Doses: Inicial: Preenchimento obrigatório. Manutenção típica VM: 0,3 a 4,0 mg/kg/h.\n- Ajustes: Utiliza peso. Em obesos, considerar uso do peso ideal (evita sobredosagem).\n- Cálculos:\n  - Dose → mL/h: (Dose [mg/kg/h] × Peso) / 10\n  - mL/h → Dose: (mL/h × 10) / Peso\n- Alerta: Risco da Síndrome de Infusão do Propofol (PRIS). Sistema deve alertar doses sustentadas > 4 mg/kg/h por mais de 48h. Seringas devem ser trocadas a cada 12h devido ao risco de contaminação."
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nReducao imediata de PA em crise hipertensiva; hipotensao controlada cirurgica; IC aguda conforme indicacao da bula.\n\nProposta V2:\n50 mg / 250 mL D5W = 200 mcg/mL; bomba obrigatoria; proteger solucao da luz conforme rotulagem.\n\nDose / titulacao:\nIniciar 0.3 mcg/kg/min; titular a cada poucos minutos; maximo 10 mcg/kg/min e essa taxa nao deve ser mantida >10\nmin.\n\nFormula de bomba:\nmL/h = dose x peso x 60 / 200.\n\nMonitorizacao critica:\nPA continua (preferencialmente invasiva), perfusao, acidose/lactato conforme contexto, funcao renal/hepatica; risco de\ncianeto/tiocianato.\n\nRenal / organica:\nCautela reforcada em disfuncao renal para toxicidade por tiocianato; nao inventar tabela de dose se nao houver no\nproduto.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nCorrigir alerta: acima de 2 mcg/kg/min o risco de cianeto ja aumenta; nao condicionar monitorizacao a 48-72 h. Duplicidade de IDs\ncontinua assunto tecnico separado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Sodium Nitroprusside Injection, concentrate (updated 06/2026)\nStart 0.3 mcg/kg/min; max 10; 50 mg/250 mL = 200 mcg/mL; pump, continuous BP; cyanide risk >2.\nhttps://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2122b9c1-0af4-493b-82cc-63eee02f987f\nAcesso: 2026-09-21\nEvidencia interna adicional de identidade: Gold33 Lote 056 homologado clinicamente contem os IDs nitroprussiato_sodio e nitroglicerinaiv. Essa evidencia nao substitui a bula para\ndose/preparo.\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": null,
+    "reviewPage": 9
+  },
+  "Nitroglicerina": {
+    "section": 8,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nVasodilatacao IV titulada conforme indicacao hemodinamica; nao reutilizar para formulações sublinguais/transdermicas.\n\nProposta V2:\n50 mg / 250 mL D5W = 200 mcg/mL e apresentacao regulatoria documentada. Usar tubing nao adsorptivo e recipiente\ncompativel com o produto; nao impor \"vidro\" a toda formulacao.\n\nDose / titulacao:\nCom tubing nao adsorptivo: iniciar 5 mcg/min; +5 mcg/min a cada 3-5 min; se sem resposta a 20, incrementos de 10-20\npodem ser usados; titular individualmente.\n\nFormula de bomba:\nmL/h = dose (mcg/min) x 60 / 200.\n\nMonitorizacao critica:\nPA e FC continuas; resposta hemodinamica; cefaleia/hipotensao; avaliar necessidade de monitorizacao invasiva.\n\nRenal / organica:\nSem ajuste numerico universal; carga de fluido pode limitar concentracao/volume.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nRemover hard max universal 200 mcg/min. A fonte documenta grande variabilidade de necessidade; limites locais devem ser politicas\nexplicitas. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Nitroglycerin in 5% Dextrose Injection\n50 mg/250 mL = 200 mcg/mL; nonadsorptive tubing; start 5 mcg/min; +5 q3-5 min initially; no universal hard max stated.\nhttps://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=457a026c-ebce-4701-9deb-2d7652759a99\nAcesso: 2026-09-21\nEvidencia interna adicional de identidade: Gold33 Lote 056 homologado clinicamente contem os IDs nitroprussiato_sodio e nitroglicerinaiv. Essa evidencia nao substitui a bula para\ndose/preparo.\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "nitroglicerinaiv",
+    "reviewPage": 10
+  },
+  "Amiodarona": {
+    "section": 9,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nFV recorrente/TV hemodinamicamente instavel refratarias conforme rotulagem IV; outros usos exigem protocolo\nespecifico.\n\nProposta V2:\nRegulatorio: 150 mg/100 mL (1.5 mg/mL) para carga e 360 mg/200 mL (1.8 mg/mL) para fase lenta/manutencao. O\nlocal 900/500 tem a mesma concentracao 1.8, mas precisa fonte institucional de preparo se mantido.\n\nDose / titulacao:\n150 mg em 10 min; depois 1 mg/min por 6 h; depois 0.5 mg/min; apos 24 h manter 0.5 mg/min. Recorrencia: 150 mg\nem 10 min.\n\nFormula de bomba:\nPara 1.5 mg/mL: mL/h = dose (mg/min) x 60 / 1.5. Para 1.8 mg/mL: dividir por 1.8.\n\nMonitorizacao critica:\nECG/QTc, FC/PA, K/Mg, hepatica; hipotensao/bradicardia e sitio de infusao.\n\nRenal / organica:\nSem ajuste renal especifico; monitorar toxicidade/eletrolitos.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nNao presumir que 900/500 seja automaticamente equivalente a produto premixado; exige protocolo local se usado. Pediatria: calculo\nbloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - NEXTERONE (amiodarone) premixed injection\n150 mg/100 mL over 10 min; then 1 mg/min x6 h; 0.5 mg/min thereafter; 1.5 and 1.8 mg/mL premixes.\nhttps://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9108958-b8d7-4fba-87c3-9a32990de551\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "amiodarona",
+    "reviewPage": 11
+  },
+  "Heparina": {
+    "section": 10,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nAnticoagulacao com HNF IV; selecionar indicacao/nomograma antes de sugerir dose. Nao usar um unico esquema\npara SCA, TEP e TVP.\n\nProposta V2:\n25,000 U / 250 mL D5W = 100 U/mL, concentracao regulatoria verificavel.\n\nDose / titulacao:\nA taxa deve vir do nomograma da indicacao. O esquema 80 U/kg bolus + 18 U/kg/h e apropriado apenas quando o\nprotocolo VTE escolhido o define; nao universalizar para SCA.\n\nFormula de bomba:\nCom 100 U/mL: mL/h = dose (U/kg/h) x peso / 100.\n\nMonitorizacao critica:\naPTT ou anti-Xa conforme protocolo, hemograma/plaquetas, sangramento, sinais de HIT e funcao renal conforme\ncontexto.\n\nRenal / organica:\nHNF costuma ser preferida quando eliminacao renal de alternativas preocupa; ajuste deve seguir\nnomograma/monitorizacao, nao uma tabela inventada.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nBinding pode ser homologado; calculadora deve exigir \"indicacao/nomograma\" e dose prescrita. Nada de dose-padrao universal.\nPediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Heparin Sodium in 5% Dextrose Injection\n25,000 U/250 mL = 100 U/mL; IV; bleeding/HIT precautions.\nhttps://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eede8a0c-5ae6-4166-84b3-12081405f08e\nAcesso: 2026-09-21\nEvidencia interna adicional de identidade: Gold33 Lote 040 homologado clinicamente contem heparina_hnf. Essa evidencia nao substitui a bula para dose/preparo.\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "heparina_hnf",
+    "reviewPage": 12
+  },
+  "Propofol": {
+    "section": 11,
+    "range": [
+      0.3,
+      3
+    ],
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nSedacao em UTI de adultos intubados e mecanicamente ventilados.\n\nProposta V2:\nEmulsao pronta 10 mg/mL; nao diluir fora de instrucao especifica. Manter tecnica asseptica estrita.\n\nDose / titulacao:\nIniciar 0.3 mg/kg/h; titular em incrementos de 0.3-0.6 a cada 5-10 min. Usual 0.3-3 mg/kg/h. Nao exceder 4 mg/kg/h\nsalvo beneficio > risco.\n\nFormula de bomba:\nmL/h = dose (mg/kg/h) x peso / 10.\n\nMonitorizacao critica:\nHemodinamica, respiracao, nivel de sedacao, triglicerideos/lipemia em uso prolongado, acidose/rabdomiolise/arrítmias\nquando suspeita PRIS.\n\nRenal / organica:\nSem algoritmo de ajuste no escopo desta ficha; titular clinicamente.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nTrocar \"tipica 0.3-4\" por \"usual 0.3-3; 4 como limite excepcional\". Linhas/frasco: descarte/troca em 12 h. Pediatria: calculo bloqueado;\nnenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Propofol Injectable Emulsion\nICU adult sedation: start 0.3 mg/kg/h; usual 0.3-3; >4 only if benefit outweighs risk; discard/change at 12 h.\nhttps://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa93f173-7858-4d88-860e-76ab97e65c2f\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "propofol",
+    "reviewPage": 13
   },
   "Midazolam": {
-    "section": 16,
+    "section": 12,
     "range": [
       0.02,
-      0.2
+      0.1
     ],
-    "text": "- Indicação e População: Sedação contínua em UTI, controle de estado de mal epiléptico. Adultos.\n- Preparo: 15 mg em Volume Final de 100 mL. (Concentração: 0,15 mg/mL).\n- Doses: Inicial: Preenchimento obrigatório. Manutenção: 0,02 a 0,2 mg/kg/h.\n- Ajustes: Utiliza peso. Exige cautela/redução em idosos e insuficiência hepática/renal severa (acúmulo do metabólito ativo 1-hidroximidazolam prolonga o coma).\n- Cálculos:\n  - Dose → mL/h: (Dose [mg/kg/h] × Peso) / 0,15\n  - mL/h → Dose: (mL/h × 0,15) / Peso\n- Alerta: Concentração do preparo está excessivamente diluída (uma pessoa de 70kg recebendo 0,1 mg/kg/h demandaria fluxo de 46,6 mL/h). Validar com a farmácia se este não é um equívoco de cadastro (o preparo habitual em UTI costuma ser mais concentrado, como 150 mg / 100 mL = 1,5 mg/mL)."
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nSedacao continua em paciente intubado/ventilado. Estado de mal epileptico deve ter protocolo proprio separado.\n\nProposta V2:\nFonte regulatoria recomenda, para infusao continua, diluir formulacao 5 mg/mL para 0.5 mg/mL em NaCl 0,9% ou D5W.\nEx.: 50 mg em volume final 100 mL.\n\nDose / titulacao:\nSe carga necessaria: 0.01-0.05 mg/kg lenta; manutencao usual inicial 0.02-0.1 mg/kg/h, titulada ao efeito. Doses\nmaiores podem ocorrer, mas nao sao range-padrao.\n\nFormula de bomba:\nCom 0.5 mg/mL: mL/h = dose (mg/kg/h) x peso / 0.5.\n\nMonitorizacao critica:\nSedacao, respiracao/ventilacao, PA, FC, interacoes com opioides e inibidores CYP3A4; acumulacao em infusoes\nprolongadas.\n\nRenal / organica:\nTitular e vigiar acumulacao/metabolitos em disfuncao renal/criticos; sem tabela simples universal.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nSubstituir 0.15 mg/mL e range ate 0.2 como padrao. Retirar estado de mal epileptico deste preset se nao houver protocolo independente\nvalidado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Midazolam Injection USP\nContinuous infusion: dilute 5 mg/mL stock to 0.5 mg/mL in NS/D5W; usual 0.02-0.1 mg/kg/h.\nhttps://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=b95415fa-17c2-42ab-a6b0-e628d01c94ed\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "midazolam",
+    "reviewPage": 14
+  },
+  "Morfina": {
+    "section": 13,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nAnalgesia continua/paliacao em adultos conforme contexto e tolerancia opioide.\n\nProposta V2:\nA concentracao 0.1 mg/mL permanece como dado local do preset, mas NAO foi encontrada nesta rodada uma\npadronizacao regulatoria que a transforme em concentracao universal de bomba.\n\nDose / titulacao:\nFonte regulatoria: infusao IV adulta inicial 0.02-0.1 mg/kg/h. Em paciente opioid-naive, taxa total geralmente nao deve\nexceder 10 mg/h; tolerantes podem exigir mais.\n\nFormula de bomba:\nSo autorizar mL/h depois de a instituicao aprovar a concentracao final. Se C mg/mL: mL/h = dose (mg/h) / C.\n\nMonitorizacao critica:\nFR/SpO2/ventilacao, sedacao, PA, dor, funcao renal; disponibilidade de naloxona e vigilancia de depressao\nrespiratoria.\n\nRenal / organica:\nExposicao e metabolitos aumentam na insuficiencia renal; individualizar/considerar alternativa conforme contexto.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nCALCULO BLOQUEADO: concentracao final e politica institucional nao validadas. O medico nao precisa preencher nada; basta aceitar o\nbloqueio ou solicitar outro protocolo. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para\ncriancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Morphine Sulfate Injection\nAdult continuous IV: initial 0.02-0.1 mg/kg/h; opioid-naive total rate generally <=10 mg/h; renal impairment changes exposure.\nhttps://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee8057d1-ed12-4e18-9efa-d83504abf612\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "morfina",
+    "reviewPage": 15
+  },
+  "Fentanil": {
+    "section": 14,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nAnalgesia/sedoanalgesia em ambiente monitorizado. O rotulo de injecao confirma formulacao, mas nao o esquema\ncontinuo local completo.\n\nProposta V2:\nStock regulatorio atual: 50 mcg/mL. O preparo final 5 mcg/mL e o range 0.5-3 mcg/kg/h devem ser ancorados a\nprotocolo institucional de UTI antes de automatizar.\n\nDose / titulacao:\nNenhuma faixa continua de UTI foi promovida a regra automatica nesta V2 por falta de fonte primaria diretamente\naplicavel ao preset completo.\n\nFormula de bomba:\nBLOQUEADA ate validar dose + concentracao final. Formula matematica seria mL/h = dose (mcg/kg/h) x peso / C\n(mcg/mL), mas nao ativa regra clinica.\n\nMonitorizacao critica:\nVentilacao/FR, sedacao, PA, rigidez toracica em doses/administracao rapida, interacoes com outros depressores SNC.\n\nRenal / organica:\nIndividualizar em criticamente enfermos; nao criar ajuste numerico sem fonte do protocolo escolhido.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nCALCULO BLOQUEADO: identidade e stock comprovados, mas regime continuo e diluicao final do preset exigem protocolo institucional\nvalidado. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Fentanyl Citrate Injection\nCurrent injectable formulation; 50 mcg/mL stock. Does not establish the local ICU continuous 0.5-3 mcg/kg/h / 5 mcg/mL preset.\nhttps://www.dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bfa8018a-4cbc-434b-e09e-782872b0340a\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "fentanil",
+    "reviewPage": 16
+  },
+  "Insulina Regular": {
+    "section": 15,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV continua\n\nEscopo / indicacao:\nCrises hiperglicemicas: DKA/HHS conforme criterio diagnostico. Pos-operatorio deve ter protocolo separado.\n\nProposta V2:\n100 U / 100 mL NaCl 0,9% = 1 U/mL e uma apresentacao IV premixada regulatoria verificavel.\n\nDose / titulacao:\nDKA: 0.1 U/kg/h IV. HHS sem cetose/acidoses significativas: 0.05 U/kg/h; HHS misto com DKA: 0.1 U/kg/h. Ajustar\nquando glicose cai conforme consenso.\n\nFormula de bomba:\nDose U/h = U/kg/h x peso. Como 1 U/mL, mL/h = U/h.\n\nMonitorizacao critica:\nGlicemia frequente, potassio, anion gap/beta-hidroxibutirato e estado clinico. Se K <3.5 mmol/L, repor K antes de iniciar\ninsulina.\n\nRenal / organica:\nMaior risco de hipoglicemia em disfuncao renal; titrar pelo protocolo e monitorizacao.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nAdotar limiar K 3.5, nao 3.3. Nao usar este preset para \"pos-operatorio\" sem protocolo separado. Pediatria: calculo bloqueado; nenhuma\ndose adulta pode ser reutilizada ou convertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - MYXREDLIN (insulin human) in sodium chloride injection\n100 U/100 mL = 1 U/mL IV premix; monitor glucose and potassium.\nhttps://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=afca6e80-a802-49fb-a978-5fe28a173001\nAcesso: 2026-09-21\n[2] ADA/EASD/JBDS/AACE/DTS - Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (2024)\nDKA IV insulin 0.1 U/kg/h; selected HHS 0.05; potassium <3.5 mmol/L -> replace potassium before insulin.\nhttps://diabetesjournals.org/care/article/47/8/1257/156808/Hyperglycemic-Crises-in-Adults-With-Diabetes-A\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "insulina_regular",
+    "reviewPage": 17
+  },
+  "Vancomicina": {
+    "section": 16,
+    "range": null,
+    "text": "Parecer aprovado - Dra Eugenia Marques - 21/09/2026\n\nVia:\nIV intermitente para o preparo atual; continua permanece bloqueada\n\nEscopo / indicacao:\nInfecoes graves por Gram-positivos/MRSA conforme indicacao e microbiologia; TDM orientado por AUC em infeccoes\ngraves.\n\nProposta V2:\n500 mg / pelo menos 100 mL = 5 mg/mL e preparo regulatorio para infusao INTERMITENTE; administrar ao longo de\npelo menos 60 min.\n\nDose / titulacao:\nNao converter \"mg/dia/24 = mg/h\" em protocolo continuo universal. Dose deve ser individualizada por peso, funcao\nrenal e TDM; em MRSA grave, alvo AUC/MIC 400-600 conforme guideline.\n\nFormula de bomba:\nPara preparo intermitente atual, velocidade minima de tempo: 500 mg/100 mL em >=60 min -> <=100 mL/h. Nao ativar\nformula continua.\n\nMonitorizacao critica:\nFuncao renal, niveis/AUC quando indicado, resposta clinica, flebite e reacao relacionada a infusao.\n\nRenal / organica:\nAjuste e intervalo dependem de funcao renal/TDM; nao usar tabela fixa sem protocolo completo.\n\nPediatria:\nSEM ESQUEMA PEDIATRICO NESTE PACOTE. CALCULO PEDIATRICO BLOQUEADO por ausencia de um\nconjunto completo e validado de parametros para cada medicamento/indicacao (idade, peso quando aplicavel, via,\ndose e unidade, mg/kg/dose versus mg/kg/dia quando aplicavel, frequencia, maximo por dose/dia,\nformulacao/concentracao, preparo e fonte diretamente aplicavel). E PROIBIDO reutilizar, escalar, adaptar ou inferir a\ndose adulta para pediatria.\n\nRestricao / gate que permanece:\nINFUSAO CONTINUA BLOQUEADA. O preparo 500/100 e validavel como intermitente, nao como protocolo continuo. Se desejar continua,\ncriar ficha separada com carga, concentracao, alvo e TDM. Pediatria: calculo bloqueado; nenhuma dose adulta pode ser reutilizada ou\nconvertida para criancas.\n\nReferencias verificadas para esta pagina:\n[1] DailyMed - Vancomycin Hydrochloride for Injection\n500 mg diluted in at least 100 mL; concentration 5 mg/mL; intermittent infusion at least 60 min.\nhttps://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=033efc76-11d5-4a93-91de-56ed41bab9c3\nAcesso: 2026-09-21\n[2] IDSA/ASHP/PIDS/SIDP - Therapeutic Monitoring of Vancomycin for Serious MRSA Infections\nAUC/MIC target 400-600 for serious MRSA; monitoring and individualized dosing.\nhttps://www.idsociety.org/practice-guideline/vancomycin/\nAcesso: 2026-09-21\n\nPEDIATRIA: o parecer V2.1 aprovado mantém os 16 cálculos bloqueados. Proibido reutilizar, escalar, adaptar ou inferir doses adultas.",
+    "canonicalDrugId": "vancomicina",
+    "reviewPage": 18
   }
 };
 
@@ -259,10 +474,10 @@ INFUSION_FALLBACK_DB.forEach(drug => {
    Estado: _bicSelectedDrug (objeto da droga selecionada ou null)
            _bicDropdownIdx  (índice destacado no dropdown)
 ═══════════════════════════════════════════════════════════════════════ */
-BIC_PRESETS.Amiodarona.push({id:'amio_maintenance_900_500',label:'900 mg / 500 mL · manutenção',
-  totalMg:900,volMl:500,solvent:'SG 5%',amountUnit:'mg',unitDefault:'mg/min',
-  obs_pt:'Preparo alternativo para manutenção. Dose e duração prescritas separadamente; esta bolsa não implica automaticamente 24 horas.',
-  obs_es:'Preparación alternativa de mantenimiento. Dosis y duración prescritas por separado; esta bolsa no implica automáticamente 24 horas.'});
+BIC_PRESETS.Amiodarona.push({id:'amio_maintenance_360_200',label:'360 mg / 200 mL · manutenção',
+  totalMg:360,volMl:200,solvent:'Premix conforme produto',amountUnit:'mg',unitDefault:'mg/min',
+  obs_pt:'Premix 1,8 mg/mL do parecer aprovado. Dose prescrita e fase confirmadas separadamente.',
+  obs_es:'Premix 1,8 mg/mL del dictamen aprobado. Dosis prescrita y fase confirmadas por separado.'});
 
 let _bicSelectedDrug = null;
 let _bicDropdownIdx  = -1;
@@ -372,8 +587,9 @@ function bicSelectDrug(idx) {
 /** Aplica a droga selecionada nos campos */
 function _bicApplyDrug(drug) {
   _bicSelectedDrug   = drug;
-  ['inf-rescue-confirm','inf-vanco-confirm'].forEach(id => { const el=document.getElementById(id); if(el) el.checked=false; });
+  ['inf-scope-confirm','inf-benefit-confirm','inf-adult-confirm'].forEach(id => { const el=document.getElementById(id); if(el) el.checked=false; });
   const duration=document.getElementById('inf-duration-hours'); if(duration) duration.value='';
+  ['inf-indication','inf-ideal-weight','inf-nomogram','inf-intermittent-minutes'].forEach(id => {const el=document.getElementById(id);if(el)el.value='';});
   _bicActivePresetId = null; /* Reset preset ao trocar de droga */
 
   const lang = typeof currentLang !== 'undefined' ? currentLang : 'pt';
@@ -437,7 +653,7 @@ function bicRenderPresets(drug) {
   chipsWrap.innerHTML = presets.map(p => `
     <button class="bic-preset-chip" id="bic-chip-${p.id}"
       onclick="bicApplyPreset('${drug.nome}','${p.id}')"
-      title="${lang === 'es' ? (p.obs_es || p.obs_pt) : p.obs_pt}">
+      title="${String(lang === 'es' ? (p.obs_es || p.obs_pt) : p.obs_pt).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')}">
       <i class="fa-solid ${p.icon || 'fa-flask-vial'}"></i>
       ${p.label}
     </button>
@@ -540,9 +756,9 @@ function bicRenderClinicalContext(drug) {
   const content = document.createElement('div');
   content.className = 'inf-reviewed-text';
   let reviewedText = record.text;
-  if (drug.nome === 'Insulina Regular') reviewedText = reviewedText.replace('> 3,3 mEq/L', '> 3,5 mEq/L');
-  if (drug.nome === 'Amiodarona') reviewedText = reviewedText.replace('~1-2 horas', '2,5 horas');
-  if (drug.nome === 'Nitroprussiato') reviewedText += '\nComplemento de segurança: taxa de 10 mcg/kg/min por no máximo 10 minutos; monitorar toxicidade acima de 2 mcg/kg/min sem aguardar 48 h.';
+
+
+
   content.textContent = reviewedText;
   details.append(summary, content); card.append(details);
 }
@@ -771,17 +987,8 @@ function applyInfusionDrug() {
   /* ── Verifica interações com fármacos em uso ── */
   const infInteractEl = document.getElementById('inf-interaction-alert');
   if (infInteractEl && typeof checkInteractions === 'function') {
-    const drugName = (drug.nome || '').toLowerCase().split(' ')[0];
-    const db = typeof DRUG_DB !== 'undefined' ? DRUG_DB : [];
-    /* BUILD 405 REFAT 2B: d.name pode ser {pt,es} objeto (_adaptExternalDB).
-       Usa String() safe: extrai campo de idioma → force String → toLowerCase */
-    const matched = db.find(d => {
-      const nameRaw = d.name && typeof d.name === 'object'
-        ? (d.name[currentLang || 'pt'] || d.name.pt || '')
-        : (d.name || '');
-      const searchStr = String(nameRaw).toLowerCase();
-      return searchStr.startsWith(drugName);
-    });
+    const db = Array.isArray(window.DRUG_DB) ? window.DRUG_DB : [];
+    const matched = drug.canonicalDrugId ? db.find(d => d.id === drug.canonicalDrugId) : null;
     infInteractEl.innerHTML = matched ? checkInteractions(matched.id) : '';
   }
 
@@ -914,114 +1121,195 @@ function _infAmountUnitChange() {
   _infDirection = 'dose';
   calculateInfusion();
 }
+// Medically reviewed V2.1, user attestation: Dra Eugenia Marques, 2026-09-21.
+// Authorization is scoped to the exact preparation, indication and adult gates.
+// No canonical document/global calculation flag is promoted by this module.
+// Clinical approval: source package. Separate explicit user authorization: AUTORIZO A ATIVAÇAO.
+// Activation is scoped to this local candidate; publication remains unauthorized.
+// No UI/remote feature flag can override this source-level release gate.
+// Patch 3S-R1: immutable user-attested V1 approval; existing V2.1 gates remain independent.
+function _freezeInfusionApproval(value) {
+  if (value && typeof value === 'object') { Object.values(value).forEach(_freezeInfusionApproval); Object.freeze(value); }
+  return value;
+}
+const INFUSION_MEDICAL_APPROVAL_R1 = _freezeInfusionApproval({"schemaVersion":"medcases.medical.approval.1","reviewerName":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewScope":"PATCH3S_16_INFUSION_BINDINGS","approvedBindingCount":16,"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","reviewManifest":"MEDCASES_PATCH3S_16_INFUSOES_REVIEW_MANIFEST_V1.json","reviewManifestSha256":"2ebcb09c506e1b902a42b25b046a365e2a0c1e79d091524ab6d2bbc0722cb93e","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","canonicalIndexSha256":"dcf6df3306a10cdb5fb96b6e13c3416981cbccb8fcb0ca6ce7b2184c8cbb1378","attestation":"Explicit user approval in this conversation; no signature, CRM or time supplied","publicationAuthorized":false,"bindings":[{"presetId":"prep_0","drugName":"Noradrenalina","canonicalDrugId":"noradrenalina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_0","canonicalDrugId":"noradrenalina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[0].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[0].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[0].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[0].currentFields.originalReview","bindings[0].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_0","canonicalDrugId":"noradrenalina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_1","drugName":"Adrenalina","canonicalDrugId":"adrenalina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_1","canonicalDrugId":"adrenalina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[1].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[1].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[1].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[1].currentFields.originalReview","bindings[1].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_1","canonicalDrugId":"adrenalina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_2","drugName":"Dobutamina","canonicalDrugId":"dobutamina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_2","canonicalDrugId":"dobutamina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[2].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[2].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[2].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[2].currentFields.originalReview","bindings[2].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_2","canonicalDrugId":"dobutamina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_3","drugName":"Dopamina","canonicalDrugId":"dopamina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_3","canonicalDrugId":"dopamina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[3].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[3].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[3].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[3].currentFields.originalReview","bindings[3].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_3","canonicalDrugId":"dopamina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_4","drugName":"Milrinona","canonicalDrugId":null,"MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_4","canonicalDrugId":null,"sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":false,"status":"TECHNICAL_BLOCKED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[4].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[4].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[4].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[4].currentFields.originalReview","bindings[4].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_4","canonicalDrugId":null,"authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":"CANONICAL_ID_MISSING"},{"presetId":"prep_5","drugName":"Vasopressina","canonicalDrugId":"vasopressina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_5","canonicalDrugId":"vasopressina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[5].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[5].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[5].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[5].currentFields.originalReview","bindings[5].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_5","canonicalDrugId":"vasopressina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_6","drugName":"Nitroprussiato","canonicalDrugId":null,"MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_6","canonicalDrugId":null,"sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":false,"status":"TECHNICAL_BLOCKED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[6].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[6].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[6].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[6].currentFields.originalReview","bindings[6].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_6","canonicalDrugId":null,"authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":"CANONICAL_DUPLICATE_RECONCILIATION_REQUIRED"},{"presetId":"prep_7","drugName":"Nitroglicerina","canonicalDrugId":"nitroglicerinaiv","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_7","canonicalDrugId":"nitroglicerinaiv","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[7].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[7].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[7].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[7].currentFields.originalReview","bindings[7].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_7","canonicalDrugId":"nitroglicerinaiv","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_8","drugName":"Amiodarona","canonicalDrugId":"amiodarona","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_8","canonicalDrugId":"amiodarona","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[8].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[8].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[8].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[8].currentFields.originalReview","bindings[8].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_8","canonicalDrugId":"amiodarona","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_9","drugName":"Heparina","canonicalDrugId":"heparina_hnf","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_9","canonicalDrugId":"heparina_hnf","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[9].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[9].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[9].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[9].currentFields.originalReview","bindings[9].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_9","canonicalDrugId":"heparina_hnf","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_10","drugName":"Propofol","canonicalDrugId":"propofol","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_10","canonicalDrugId":"propofol","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[10].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[10].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[10].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[10].currentFields.originalReview","bindings[10].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_10","canonicalDrugId":"propofol","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_11","drugName":"Midazolam","canonicalDrugId":"midazolam","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_11","canonicalDrugId":"midazolam","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[11].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[11].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[11].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[11].currentFields.originalReview","bindings[11].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_11","canonicalDrugId":"midazolam","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_12","drugName":"Morfina","canonicalDrugId":"morfina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_12","canonicalDrugId":"morfina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[12].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[12].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[12].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[12].currentFields.originalReview","bindings[12].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_12","canonicalDrugId":"morfina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":"INSTITUTIONAL_CONCENTRATION_MISSING"},{"presetId":"prep_13","drugName":"Fentanil","canonicalDrugId":"fentanil","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_13","canonicalDrugId":"fentanil","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[13].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[13].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[13].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[13].currentFields.originalReview","bindings[13].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_13","canonicalDrugId":"fentanil","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":"INSTITUTIONAL_REGIMEN_MISSING"},{"presetId":"prep_14","drugName":"Insulina Regular","canonicalDrugId":"insulina_regular","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_14","canonicalDrugId":"insulina_regular","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[14].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[14].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[14].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[14].currentFields.originalReview","bindings[14].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":"PT_ES_EMPTY:guidelineRecommendations","existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_14","canonicalDrugId":"insulina_regular","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null},{"presetId":"prep_15","drugName":"Vancomicina","canonicalDrugId":"vancomicina","MEDICAL_REVIEW_STATUS":"APPROVED_IN_FULL","MEDICAL_REVIEWER":"Dra Eugenia Marques","MEDICAL_REVIEW_DATE":"2026-09-21","provenance":{"reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APPROVED_IN_FULL","reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V1.pdf","reviewArtifactSha256":"eabbc36c5df5a897440b0717fb4ffc263a4484186bfdf65b59b89462ae26532f","presetId":"prep_15","canonicalDrugId":"vancomicina","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5"},"fieldCapabilities":{"drugIdentityAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"canonicalIdentityEvidence"},"routeAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"formulationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"concentrationAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"doseAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":"bindings[15].currentFields.fallback.doseInicial"},"frequencyAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"dilutionAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[15].currentFields.preparations"},"preparationAuthorized":{"authorized":true,"status":"APPROVED","sourcePath":"bindings[15].currentFields.preparations"},"infusionRateAuthorized":{"authorized":false,"status":"NOT_PROVIDED","sourcePath":null},"calculationAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"infusionAuthorized":{"authorized":false,"status":"TECHNICAL_VALIDATION_REQUIRED","sourcePath":null},"pediatricAuthorized":{"authorized":false,"status":"NOT_APPROVED","sourcePath":null}},"referenceOnlyPaths":["bindings[15].currentFields.originalReview","bindings[15].canonicalFields"],"fieldPolicy":"NOT_PROVIDED means absent as a structured operational assertion in V1; reference prose remains approved reference, never parsed into an executable regimen.","pediatricAuthority":"NOT_APPROVED","remoteSchemaIssue":null,"existingOperationalProvenance":{"reviewArtifact":"MEDCASES_PATCH3S_16_INFUSOES_REVISAO_CLINICA_V2_1_PREENCHIDO_REFERENCIADO.pdf","reviewArtifactSha256":"0650f35b487f0a625064f881ace9ce684d4f5976d1b94850bd0b75490ca999d7","reviewer":"Dra Eugenia Marques","reviewDate":"2026-09-21","reviewResult":"APROVADO_INTEGRALMENTE","sourceVersion":"6b5a79cec541362a9dd98ebb8130b7c2657ca7f5","presetId":"prep_15","canonicalDrugId":"vancomicina","authorityArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","basis":"Existing separately approved V2.1 and local activation; V1 approval does not authorize V2.1-only fields"},"existingTechnicalBlocker":null}],"canonicalIdentityEvidence":[{"presetId":"prep_0","query":"Noradrenalina","existingNormalizedId":"noradrenalina","exactCandidates":["noradrenalina"],"previouslyProvenCanonicalDrugId":"noradrenalina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_1","query":"Adrenalina","existingNormalizedId":"adrenalina","exactCandidates":["adrenalina"],"previouslyProvenCanonicalDrugId":"adrenalina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_2","query":"Dobutamina","existingNormalizedId":"dobutamina","exactCandidates":["dobutamina"],"previouslyProvenCanonicalDrugId":"dobutamina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_3","query":"Dopamina","existingNormalizedId":"dopamina","exactCandidates":["dopamina"],"previouslyProvenCanonicalDrugId":"dopamina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_4","query":"Milrinona","existingNormalizedId":"milrinona","exactCandidates":[],"previouslyProvenCanonicalDrugId":null,"proof":"UNRESOLVED","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_5","query":"Vasopressina","existingNormalizedId":"vasopressina","exactCandidates":["vasopressina"],"previouslyProvenCanonicalDrugId":"vasopressina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_6","query":"Nitroprussiato","existingNormalizedId":"nitroprussiato","exactCandidates":[],"previouslyProvenCanonicalDrugId":null,"proof":"UNRESOLVED","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":["nitroprussiatosodio","nitroprussiato_sodio"],"fuzzy":false,"inferred":false},{"presetId":"prep_7","query":"Nitroglicerina","existingNormalizedId":"isossorbida","exactCandidates":["nitroglicerina"],"previouslyProvenCanonicalDrugId":"nitroglicerinaiv","proof":"EXISTING_V2_1_BINDING","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":"isossorbida","ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_8","query":"Amiodarona","existingNormalizedId":"amiodarona","exactCandidates":["amiodarona"],"previouslyProvenCanonicalDrugId":"amiodarona","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_9","query":"Heparina","existingNormalizedId":"heparina","exactCandidates":[],"previouslyProvenCanonicalDrugId":"heparina_hnf","proof":"EXISTING_V2_1_BINDING","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_10","query":"Propofol","existingNormalizedId":"propofol","exactCandidates":["propofol"],"previouslyProvenCanonicalDrugId":"propofol","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_11","query":"Midazolam","existingNormalizedId":"midazolam","exactCandidates":["midazolam"],"previouslyProvenCanonicalDrugId":"midazolam","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_12","query":"Morfina","existingNormalizedId":"morfina","exactCandidates":["morfina"],"previouslyProvenCanonicalDrugId":"morfina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_13","query":"Fentanil","existingNormalizedId":"fentanil","exactCandidates":["fentanil"],"previouslyProvenCanonicalDrugId":"fentanil","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_14","query":"Insulina Regular","existingNormalizedId":"insulina_regular","exactCandidates":["insulina_regular"],"previouslyProvenCanonicalDrugId":"insulina_regular","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false},{"presetId":"prep_15","query":"Vancomicina","existingNormalizedId":"vancomicina","exactCandidates":["vancomicina"],"previouslyProvenCanonicalDrugId":"vancomicina","proof":"V1_NORMALIZED_EXACT_ID","provenBindingArtifact":".dart_tool/patch3s_approved_evidence/calculadora/docs/clinical-updates/patch3s-v2_1-approval.json","provenBindingArtifactSha256":"29f5980249cc860f480339a5a8f00677ffb81db3235b6b4fe92d493cb5cf4df3","rejectedAlias":null,"ambiguityCandidates":[],"fuzzy":false,"inferred":false}]});
+const INFUSION_RELEASE_AUTHORITY = Object.freeze({
+  calculationAuthorized:true, infusionAuthority:true, publicationAuthorized:false,
+  technicalIntegrationAuthorized:true, pediatricAuthority:false
+});
 const InfusionReviewSafety = Object.freeze({
-  evaluate({drug, dose, age, adultConfirmed, potassium, hours, rescueConfirmed, vancoConfirmed}) {
-    const errors = [], warnings = [];
-    if (!drug) return {errors,warnings};
+  intermittent(values, minutes) {
+    if (!Number.isFinite(minutes) || minutes < 60) return {error:'duration'};
+    return InfusionMath.calculate({...values, unit:'ml/h', direction:'dose', dose:values.volume * 60 / minutes});
+  },
+  evaluate({drug, canonicalId, canonicalDocument, dose, age, adultConfirmed,
+    potassium, hours, scopeConfirmed, indication, nomogram, idealWeight,
+    benefitConfirmed, amount, volume, unit, amountUnit, preparationId, minutes, weight}) {
+    const errors=[], warnings=[];
+    if (!drug) return {errors,warnings}; // Free dimensional arithmetic, never clinical authority.
+    const record=INFUSION_FALLBACK_DB.find(d=>d.nome===drug);
+    if (!record) return {errors:['binding'],warnings};
+    if (!record.canonicalDrugId || canonicalId !== record.canonicalDrugId ||
+        !canonicalDocument || canonicalDocument.id !== canonicalId ||
+        (canonicalDocument.publicationStatus && canonicalDocument.publicationStatus !== 'PRODUCTION') || canonicalDocument.enabled === false || canonicalDocument.status === 'REVOKED') errors.push('binding');
+    if (record.calculationBlock) errors.push('blocked');
+    if (!(Number.isFinite(dose)&&dose>0)) errors.push('input');
+    // Approved V2.1 explicitly prohibits adult-to-pediatric reuse for every binding.
     if ((Number.isFinite(age) && age < 18) || (!Number.isFinite(age) && !adultConfirmed)) errors.push('adult');
-    const range = INFUSION_REVIEW[drug]?.range;
-    if (range && Number.isFinite(dose) && (dose < range[0] || dose > range[1])) warnings.push('range');
-    if (drug === 'Vasopressina' && (dose > .06 || (dose > .04 && !rescueConfirmed))) errors.push('vasopressin');
-    if (drug === 'Vasopressina' && dose > .04 && dose <= .06 && rescueConfirmed) warnings.push('rescue');
-    if (drug === 'Insulina Regular') {
-      if (!(potassium > 3.5)) errors.push('potassium');
-      // User approved the >3.5 update; original review remains in the handoff.
-      warnings.push('insulin');
-    }
-    if (drug === 'Nitroprussiato') {
-      if (dose > 10) errors.push('nitroMax');
-      if (!(Number.isFinite(hours) && hours > 0)) errors.push('duration');
-      if (dose >= 10 && hours > 1/6) errors.push('nitroTime');
-      if (dose > 2) warnings.push(hours > 48 ? 'cyanideProlonged' : 'cyanide');
+    if (!scopeConfirmed) errors.push('scope');
+    const choices=this.indications[drug] || ['reviewed'];
+    if (!choices.includes(indication)) errors.push('indication');
+    const prep=BIC_PRESETS[drug]?.find(p=>p.id===preparationId);
+    if (!prep || amountUnit !== prep.amountUnit || unit !== prep.unitDefault ||
+        amount !== prep.totalMg || (drug === 'Vancomicina' ? !(Number.isFinite(volume)&&volume>=100) : volume !== prep.volMl)) errors.push('preparationScope');
+    const range=INFUSION_REVIEW[drug]?.range;
+    if(range && Number.isFinite(dose) && (dose<range[0] || dose>range[1])) warnings.push('range');
+    if (drug==='Adrenalina' && !(Number.isFinite(idealWeight)&&idealWeight>0)) errors.push('idealWeight');
+    if (drug==='Dopamina' && dose>50) errors.push('dopamineMax');
+    if (drug==='Vasopressina' && dose>(indication==='post_cardiotomy'?.1:.07)) warnings.push('vasopressinData');
+    if (drug==='Nitroprussiato') {
+      if (dose>10) errors.push('nitroMax');
+      if (!(Number.isFinite(hours)&&hours>0)) errors.push('duration');
+      if (dose>=10&&hours>1/6) errors.push('nitroTime');
+      if (dose>2) warnings.push('cyanide');
       warnings.push('light');
     }
-    if (drug === 'Nitroglicerina' && dose > 200) errors.push('nitroglycerin');
-    if (drug === 'Propofol') {
-      if (!(Number.isFinite(hours) && hours > 0)) errors.push('duration');
-      if (dose > 4 && hours > 48) warnings.push('pris');
+    if (drug==='Heparina' && !(typeof nomogram==='string'&&nomogram.trim())) errors.push('nomogram');
+    if (drug==='Propofol') {
+      if (dose>4&&!benefitConfirmed) errors.push('propofolBenefit');
       warnings.push('propofol');
     }
-    if (drug === 'Vancomicina') {
-      if (!vancoConfirmed) errors.push('vancomycin');
-      warnings.push('vanco');
+    if (drug==='Amiodarona') {
+      const required=indication==='loading'?'prep_8':'amio_maintenance_360_200';
+      if(preparationId!==required) errors.push('amiodaronePhase');
+      const phaseDose=indication==='loading'?15:indication==='slow_6h'?1:.5;
+      if (Math.abs(dose-phaseDose)>1e-9*Math.max(1,phaseDose)) errors.push('amiodaroneDose');
     }
-    if (drug === 'Noradrenalina' && dose > 2) warnings.push('norepinephrine');
-    if (drug === 'Heparina') warnings.push('heparin');
-    if (drug === 'Amiodarona') warnings.push('amiodarone');
-    if (drug === 'Morfina' || drug === 'Midazolam') warnings.push('dilute');
-    return {errors,warnings};
-  }
+    if (drug==='Insulina Regular') {
+      // Retain the existing conservative equality boundary; never lower to 3.3.
+      if (!(Number.isFinite(potassium)&&potassium>3.5)) errors.push('potassium');
+      const initial=indication==='hhs_without_acidosis'?.05:.1;
+      if(Number.isFinite(dose)&&dose!==initial) warnings.push('insulinTitration');
+      warnings.push('insulin');
+    }
+    if (drug==='Vancomicina') {
+      if (!(Number.isFinite(minutes)&&minutes>=60)) errors.push('intermittent');
+      warnings.push('vancoIntermittent');
+    }
+    const medicalApproval=INFUSION_MEDICAL_APPROVAL_R1.bindings.find(b=>b.drugName===drug);
+    if (!medicalApproval || medicalApproval.MEDICAL_REVIEW_STATUS !== 'APPROVED_IN_FULL' || medicalApproval.canonicalDrugId !== record.canonicalDrugId) errors.push('approvalRecord');
+    // Grant authority only after executing the same deterministic engine as the UI.
+    const mathValues={amount,volume,amountUnit,unit,dose,weight:drug==='Adrenalina'?idealWeight:weight};
+    const arithmetic=record.infusionMode==='intermittent'
+      ? this.intermittent(mathValues,minutes) : InfusionMath.calculate(mathValues);
+    if (arithmetic.error || !Number.isFinite(arithmetic.rate) || arithmetic.rate<=0) errors.push('arithmetic');
+    const clinicalScopeValidated=errors.length===0;
+    if (!INFUSION_RELEASE_AUTHORITY.calculationAuthorized || !INFUSION_RELEASE_AUTHORITY.technicalIntegrationAuthorized) errors.push('activation');
+    return {errors:[...new Set(errors)],warnings,clinicalScopeValidated,
+      medicalApproval,
+      medicalReviewStatus:medicalApproval?.MEDICAL_REVIEW_STATUS,
+      fieldCapabilities:medicalApproval?.fieldCapabilities,
+      authorityProvenance:medicalApproval ? {medical:medicalApproval.provenance,operational:medicalApproval.existingOperationalProvenance} : null,
+      canonicalDrugId:record.canonicalDrugId,
+      calculationAuthorized:errors.length===0,
+      infusionAuthority:errors.length===0&&record.infusionMode==='continuous',
+      intermittentCalculationAuthorized:errors.length===0&&record.infusionMode==='intermittent',
+      pediatricAuthority:false};
+  },
+  indications:Object.freeze({
+    'Adrenalina':['septic_shock'], 'Vasopressina':['septic_shock','post_cardiotomy'],
+    'Amiodarona':['loading','slow_6h','maintenance'], 'Heparina':['vte','acs','other_prescribed'],
+    'Propofol':['adult_ventilated_icu'], 'Midazolam':['ventilated_sedation'],
+    'Insulina Regular':['dka','hhs_without_acidosis','mixed_hhs_dka'],
+    'Vancomicina':['intermittent']
+  })
 });
-window.InfusionReviewSafety = InfusionReviewSafety;
+window.InfusionReviewSafety=InfusionReviewSafety;
 const INF_REVIEW_MESSAGES = {
- adult:['Protocolo exclusivo para adultos. Informe idade ≥18 anos na Home ou confirme que o paciente é adulto.','Protocolo exclusivo para adultos. Introduzca edad ≥18 años en Inicio o confirme que es adulto.'],
- range:['Dose fora da faixa de manutenção descrita no parecer. Conferir indicação e prescrição.','Dosis fuera del intervalo de mantenimiento del informe. Revise indicación y prescripción.'],
- vasopressin:['Limite usual: 0,04 UI/min. Resgate exige confirmação explícita e não pode ultrapassar 0,06 UI/min.','Límite habitual: 0,04 UI/min. Rescate requiere confirmación explícita y no puede superar 0,06 UI/min.'],
- rescue:['Resgate off-label confirmado. Monitorização e prescrição específica obrigatórias.','Rescate fuera de indicación confirmado. Requiere monitorización y prescripción específica.'],
- potassium:['Insulina bloqueada: informe potássio atual >3,5 mEq/L.','Insulina bloqueada: introduzca potasio actual >3,5 mEq/L.'],
- insulin:['Purgar equipo e seguir protocolo de HGT e potássio. Insuficiência renal aumenta risco de hipoglicemia.','Purgar el equipo y seguir protocolo de glucemia y potasio. Insuficiencia renal aumenta riesgo de hipoglucemia.'],
- duration:['Informe a duração total planejada, incluindo o tempo já infundido, em horas.','Introduzca duración total prevista, incluido tiempo ya infundido, en horas.'],
- nitroMax:['Nitroprussiato: dose máxima 10 mcg/kg/min.','Nitroprusiato: dosis máxima 10 mcg/kg/min.'],
+ approvalRecord:['Registro de aprovação técnica ausente ou divergente.','Registro de aprobación técnica ausente o diferente.'],
+ arithmetic:['Parâmetros ausentes, inválidos ou incompatíveis com o cálculo determinístico.','Parámetros ausentes, no válidos o incompatibles con el cálculo determinista.'],
+ activation:['Dados homologados; ativação operacional pendente de integração e validação técnica. Cálculo por fármaco bloqueado.','Datos homologados; activación operativa pendiente de integración y validación técnica. Cálculo por fármaco bloqueado.'],
+ input:['Informe dose/taxa prescrita válida e positiva.','Introduzca dosis/caudal prescrito válido y positivo.'],
+ binding:['ID canônico ausente, divergente, indisponível ou revogado. Cálculo bloqueado.','ID canónico ausente, diferente, no disponible o revocado. Cálculo bloqueado.'],
+ blocked:['O parecer mantém este cálculo bloqueado: falta identidade ou protocolo/concentração institucional.','El dictamen mantiene este cálculo bloqueado: falta identidad o protocolo/concentración institucional.'],
+ adult:['Parâmetros pediátricos revisados não fornecidos. Este cálculo exige paciente adulto confirmado.','Parámetros pediátricos revisados no disponibles. Este cálculo exige paciente adulto confirmado.'],
+ scope:['Confirme indicação, via, produto e monitorização do parecer.','Confirme indicación, vía, producto y monitorización del dictamen.'],
+ indication:['Selecione a indicação/fase compatível com o parecer.','Seleccione la indicación/fase compatible con el dictamen.'],
+ preparationScope:['Preparo ou unidade fora do escopo aprovado. Não inferir equivalência.','Preparación o unidad fuera del alcance aprobado. No inferir equivalencia.'],
+ range:['Dose fora da faixa usual de manutenção. Conferir fase e prescrição; faixa usual não é teto universal.','Dosis fuera del rango usual de mantenimiento. Verificar fase y prescripción; rango usual no es máximo universal.'],
+ idealWeight:['Informe peso IDEAL (IBW) prescrito para adrenalina. Não será calculado ou substituído pelo peso atual.','Introduzca peso IDEAL (IBW) prescrito para adrenalina. No se calcula ni sustituye por peso actual.'],
+ dopamineMax:['Dopamina: não exceder 50 mcg/kg/min no parecer aprovado.','Dopamina: no superar 50 mcg/kg/min en el dictamen aprobado.'],
+ vasopressinData:['Dados limitados acima da faixa da indicação. Conferir prescrição e monitorização.','Datos limitados por encima del rango de la indicación. Verificar prescripción y monitorización.'],
+ nitroMax:['Nitroprussiato: máximo 10 mcg/kg/min.','Nitroprusiato: máximo 10 mcg/kg/min.'],
+ duration:['Informe duração total, incluindo tempo já infundido.','Introduzca duración total, incluido tiempo ya infundido.'],
  nitroTime:['Nitroprussiato: 10 mcg/kg/min por mais de 10 minutos bloqueado.','Nitroprusiato: 10 mcg/kg/min durante más de 10 minutos bloqueado.'],
- cyanide:['Acima de 2 mcg/kg/min: risco de toxicidade por cianeto; não aguardar 48 h para monitorizar.','Por encima de 2 mcg/kg/min: riesgo de toxicidad por cianuro; no esperar 48 h para monitorizar.'],
- cyanideProlonged:['Dose >2 mcg/kg/min por >48 h: alerta de toxicidade por cianeto/tiocianato. Revisar imediatamente.','Dosis >2 mcg/kg/min durante >48 h: alerta de toxicidad por cianuro/tiocianato. Revisión inmediata.'],
- light:['Nitroprussiato: fotoproteção e cautela renal/hepática.','Nitroprusiato: fotoprotección y precaución renal/hepática.'],
- nitroglycerin:['Nitroglicerina: limite do parecer de 200 mcg/min excedido.','Nitroglicerina: límite del informe de 200 mcg/min superado.'],
- pris:['Propofol >4 mg/kg/h por >48 h: risco de PRIS. Revisar prescrição imediatamente.','Propofol >4 mg/kg/h durante >48 h: riesgo de PRIS. Revisión inmediata de la prescripción.'],
- propofol:['Propofol: conferir troca da seringa conforme apresentação e protocolo; parecer indica 12 h.','Propofol: verificar cambio de jeringa según presentación y protocolo; el informe indica 12 h.'],
- vancomycin:['Confirme infusão contínua e protocolo de monitorização de vancomicina. Uso intermitente requer prescrição de dose e tempo em fluxo separado.','Confirme infusión continua y protocolo de monitorización de vancomicina. Uso intermitente requiere dosis y tiempo en flujo separado.'],
- vanco:['Vancomicina: inserir mg/h prescritos (mg/dia ÷24), ajustar à função renal e programar reposição da bolsa.','Vancomicina: introducir mg/h prescritos (mg/día ÷24), ajustar a función renal y programar recambio de bolsa.'],
- norepinephrine:['Noradrenalina >2 mcg/kg/min: parecer sugere bloqueio entre 2–3; limiar exato depende da política local e ainda não foi definido.','Noradrenalina >2 mcg/kg/min: informe propone bloqueo entre 2–3; el umbral exacto depende de la política local y no está definido.'],
- heparin:['Ataque separado. Conferir TTPA, plaquetas, sangramento e limites locais para obesidade extrema.','Carga por separado. Verificar TTPA, plaquetas, sangrado y límites locales en obesidad extrema.'],
- amiodarone:['SG 5%. Confirmar duração e volume de manutenção; 150 mg a 1 mg/min duram 2,5 h.','SG 5%. Confirmar duración y volumen de mantenimiento; 150 mg a 1 mg/min duran 2,5 h.'],
- dilute:['Preparo diluído sinalizado no parecer. Conferir carga hídrica com a farmácia; concentração alternativa não foi aplicada automaticamente.','Preparación diluida señalada en el informe. Revisar carga de volumen con farmacia; no se aplicó concentración alternativa automáticamente.']
+ cyanide:['Risco de cianeto acima de 2 mcg/kg/min; não aguardar 48-72 h para monitorizar.','Riesgo de cianuro por encima de 2 mcg/kg/min; no esperar 48-72 h para monitorizar.'],
+ light:['Fotoproteção, bomba e PA contínua; atenção renal/hepática conforme parecer.','Fotoprotección, bomba y PA continua; atención renal/hepática según dictamen.'],
+ nomogram:['Heparina exige nomograma da indicação e dose prescrita; não há dose-padrão universal.','Heparina exige nomograma de la indicación y dosis prescrita; no existe dosis universal.'],
+ propofolBenefit:['Acima de 4 mg/kg/h exige avaliação explícita de benefício superior ao risco.','Por encima de 4 mg/kg/h exige evaluación explícita de beneficio superior al riesgo.'],
+ propofol:['Adulto intubado/ventilado; assepsia, troca em 12 h e monitorização de PRIS conforme parecer.','Adulto intubado/ventilado; asepsia, cambio a las 12 h y vigilancia de PRIS según dictamen.'],
+ amiodaroneDose:['Dose incompatível com a fase homologada: carga 150 mg/10 min; 1 mg/min por 6 h; depois 0,5 mg/min.','Dosis incompatible con la fase homologada: carga 150 mg/10 min; 1 mg/min durante 6 h; después 0,5 mg/min.'],
+ amiodaronePhase:['Confirme preparo de carga 150/100 ou manutenção premix 360/200 e fase prescrita.','Confirme preparación de carga 150/100 o mantenimiento premix 360/200 y fase prescrita.'],
+ potassium:['Insulina bloqueada: K+ ausente, inválido ou ≤3,5. Reavaliar antes de iniciar.','Insulina bloqueada: K+ ausente, no válido o ≤3,5. Reevaluar antes de iniciar.'],
+ insulin:['Dose em UI/kg/h exige peso; conversão UI/h determinística. Monitorizar glicemia e potássio.','Dosis en UI/kg/h exige peso; conversión UI/h determinista. Monitorizar glucemia y potasio.'],
+ insulinTitration:['Dose difere do início descrito para a indicação; confirmar titulação prescrita e protocolo.','Dosis distinta al inicio descrito para la indicación; confirmar titulación prescrita y protocolo.'],
+ intermittent:['Vancomicina: infusão INTERMITENTE em pelo menos 60 minutos. Contínua não autorizada.','Vancomicina: infusión INTERMITENTE durante al menos 60 minutos. Continua no autorizada.'],
+ vancoIntermittent:['Preparo intermitente de 500 mg, volume ≥100 mL. Dose clínica/intervalo exigem prescrição e TDM.','Preparación intermitente de 500 mg, volumen ≥100 mL. Dosis clínica/intervalo requieren prescripción y TDM.']
 };
-function _infClinicalState(mathResult) {
-  const get=id=>document.getElementById(id);
-  const drug=_infusionMode === 'drug' ? _bicSelectedDrug?.nome : null;
-  const show=(id,on)=>{ const el=get(id); if(el) el.style.display=on?'block':'none'; };
-  show('inf-review-controls',!!drug);
-  show('inf-potassium-wrap',drug==='Insulina Regular');
-  show('inf-duration-wrap',['Nitroprussiato','Propofol'].includes(drug));
-  show('inf-rescue-wrap',drug==='Vasopressina');
-  show('inf-vanco-wrap',drug==='Vancomicina');
-  const state=InfusionReviewSafety.evaluate({drug,dose:mathResult.dose,
-    age:InfusionMath.number((window.patientData||{}).age),adultConfirmed:!!get('inf-adult-confirm')?.checked,
-    potassium:_infValue('inf-potassium'),hours:_infValue('inf-duration-hours'),
-    rescueConfirmed:!!get('inf-rescue-confirm')?.checked,vancoConfirmed:!!get('inf-vanco-confirm')?.checked});
-  const box=get('inf-clinical-alerts');
-  if(box) {
-    box.replaceChildren();
-    [...state.errors,...state.warnings].forEach(code=>{const row=document.createElement('p');row.textContent=INF_REVIEW_MESSAGES[code][currentLang==='es'?1:0];box.append(row);});
-    box.style.display=box.childElementCount?'block':'none';
-  }
-  return state;
+const INF_INDICATION_LABELS={reviewed:'Indicação do parecer / Indicación del dictamen',septic_shock:'Choque séptico',post_cardiotomy:'Pós-cardiotomia / Poscardiotomía',loading:'Carga',slow_6h:'Fase lenta 6 h',maintenance:'Manutenção / Mantenimiento',vte:'TEV / VTE',acs:'SCA',other_prescribed:'Outra indicação prescrita / Otra indicación prescrita',adult_ventilated_icu:'UTI adulto intubado e ventilado / UCI adulto intubado y ventilado',ventilated_sedation:'Sedação em ventilação / Sedación en ventilación',dka:'CAD / DKA',hhs_without_acidosis:'HHS sem acidose significativa / HHS sin acidosis significativa',mixed_hhs_dka:'HHS misto com CAD / HHS mixto con DKA',intermittent:'Intermitente'};
+function _infClinicalState(mathResult, values) {
+ const get=id=>document.getElementById(id),show=(id,on)=>{const el=get(id);if(el)el.style.display=on?'block':'none';};
+ const selected=_infusionMode==='drug'?_bicSelectedDrug:null,drug=selected?.nome;
+ show('inf-review-controls',!!drug);show('inf-potassium-wrap',drug==='Insulina Regular');
+ show('inf-duration-wrap',drug==='Nitroprussiato');show('inf-ideal-weight-wrap',drug==='Adrenalina');
+ show('inf-nomogram-wrap',drug==='Heparina');show('inf-benefit-wrap',drug==='Propofol');show('inf-intermittent-wrap',drug==='Vancomicina');
+ ['inf-dose','inf-current-rate'].forEach(id=>{const el=get(id);if(el)el.disabled=selected?.infusionMode==='intermittent';});
+ const choices=InfusionReviewSafety.indications[drug]||['reviewed'],select=get('inf-indication');
+ if(select&&select.dataset.drug!==drug){select.replaceChildren();const blank=document.createElement('option');blank.value='';blank.textContent='Selecione / Seleccione';select.appendChild(blank);choices.forEach(value=>{const option=document.createElement('option');option.value=value;option.textContent=INF_INDICATION_LABELS[value];select.appendChild(option);});select.dataset.drug=drug||'';}
+ const db=Array.isArray(window.DRUG_DB)?window.DRUG_DB:[],canonicalId=selected?.canonicalDrugId;
+ const state=InfusionReviewSafety.evaluate({drug,canonicalId,canonicalDocument:db.find(d=>d.id===canonicalId),dose:mathResult.dose,
+ age:InfusionMath.number((window.patientData||{}).age),adultConfirmed:!!get('inf-adult-confirm')?.checked,
+ potassium:_infValue('inf-potassium'),hours:_infValue('inf-duration-hours'),scopeConfirmed:!!get('inf-scope-confirm')?.checked,
+ indication:select?.value,nomogram:get('inf-nomogram')?.value,idealWeight:_infValue('inf-ideal-weight'),benefitConfirmed:!!get('inf-benefit-confirm')?.checked,
+ amount:values.amount,volume:values.volume,amountUnit:values.amountUnit,unit:values.unit,weight:values.weight,
+ preparationId:_bicGetActivePreset()?.id,minutes:_infValue('inf-intermittent-minutes')});
+ const box=get('inf-clinical-alerts');if(box){box.replaceChildren();[...state.errors,...state.warnings].forEach(code=>{const row=document.createElement('p');row.textContent=INF_REVIEW_MESSAGES[code][currentLang==='es'?1:0];box.append(row);});box.style.display=box.childElementCount?'block':'none';}
+ return state;
 }
+
+// Canonical discovery can arrive after selection. Re-evaluate; never grant from an alias.
+window.addEventListener?.('medcases:catalog-ready', () => {
+  if (_infusionMode === 'drug' && _bicSelectedDrug && document.getElementById('inf-dose')) calculateInfusion();
+});
 
 function calculateInfusion() {
   const get = id => document.getElementById(id);
   const text = (id,value) => { if(get(id)) get(id).textContent = value; };
   const es = typeof currentLang !== 'undefined' && currentLang === 'es';
-  const weight = InfusionMath.number((window.patientData || {}).weight);
+  const weight = _infusionMode === 'drug' && _bicSelectedDrug?.nome === 'Adrenalina' ? _infValue('inf-ideal-weight') : InfusionMath.number((window.patientData || {}).weight);
   const amountUnit = get('inf-amount-unit')?.value || 'mg';
   const unit = get('inf-dose-unit')?.value || 'mcg/kg/min';
   const values = {amount:_infValue('inf-amp-mg'), volume:_infValue('inf-vol-ml'), weight,
     dose:_infValue('inf-dose'), rate:_infValue('inf-current-rate'), unit, amountUnit, direction:_infDirection};
-  _infResult = InfusionMath.calculate(values);
+  _infResult = _infusionMode === 'drug' && _bicSelectedDrug?.infusionMode === 'intermittent'
+    ? InfusionReviewSafety.intermittent(values, _infValue('inf-intermittent-minutes'))
+    : InfusionMath.calculate(values);
   if (_infusionMode === 'drug' && !_bicSelectedDrug) _infResult = {error:'selection'};
-  const clinical = _infClinicalState(_infResult);
+  const clinical = _infClinicalState(_infResult, values);
   if (!_infResult.error && clinical.errors.length) _infResult.error='clinical';
   const valid = !_infResult.error;
   const concentration = _infResult.concentration;
   const concUnit = amountUnit === 'UI' ? 'UI/mL' : 'mcg/mL';
   const conc = concentration * (amountUnit === 'mg' ? 1000 : 1);
   const errors = es ? {
+    duration:'Introduzca un tiempo de infusión de al menos 60 minutos.',
     preparation:'Introduzca la cantidad total y el volumen final, mayores que cero.',
     weight:'Introduzca y confirme el peso utilizado en la prescripción.',
     input:'Introduzca una dosis o un caudal mayor que cero. Se admite coma decimal.',
     selection:'Seleccione un fármaco de la lista.', unit:'Las unidades de preparación y dosis no son compatibles.',
     range:'Valores fuera del rango numérico. Revise los parámetros.'
   } : {
+    duration:'Informe tempo de infusão de pelo menos 60 minutos.',
     preparation:'Informe a quantidade total e o volume final, maiores que zero.',
     weight:'Informe e confirme o peso utilizado na prescrição.',
     input:'Informe uma dose ou vazão maior que zero. Vírgula decimal é aceita.',
@@ -1113,7 +1401,7 @@ function infCopyPrescription() {
   }
 
   /* ── Dados do paciente ── */
-  const peso  = pd.weight || '';
+  const peso = _infusionMode === 'drug' && _bicSelectedDrug?.nome === 'Adrenalina' ? document.getElementById('inf-ideal-weight')?.value || '' : pd.weight || '';
   const idade = pd.age    || '';
 
   /* ── Monta texto da prescrição ── */
@@ -1148,6 +1436,14 @@ function infCopyPrescription() {
   }
 
   if (drugName) lines.push(`${lDrug}: ${drugName}`);
+  if (_infusionMode === 'drug' && _bicSelectedDrug) {
+    lines.push('Parecer: Dra Eugenia Marques - 21/09/2026');
+    lines.push('Canonical ID: ' + _bicSelectedDrug.canonicalDrugId);
+    lines.push('Contexto: ' + (document.getElementById('inf-indication')?.value || ''));
+    if (_bicSelectedDrug.nome === 'Adrenalina') lines.push('Peso utilizado: IDEAL (IBW), informado pelo profissional');
+    if (_bicSelectedDrug.infusionMode === 'intermittent') lines.push('INTERMITENTE - duração (min): ' + document.getElementById('inf-intermittent-minutes').value);
+    if (_bicSelectedDrug.nome === 'Insulina Regular') lines.push('Taxa de insulina (UI/h): ' + _infResult.totalPerHour);
+  }
 
   lines.push('');
   lines.push(`${lConc}: ${ampolaMg} ${amountUnit} ${isES ? 'en' : 'em'} ${volumeMl} mL`);

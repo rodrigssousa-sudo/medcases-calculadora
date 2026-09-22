@@ -4,8 +4,8 @@
  *
  * Executa o export corrigido em cópias isoladas (/tmp) e valida os gates:
  *  baseline dinâmico preservado · hash parity integral · idempotência
- *  root/public parity · invalid enrichment ABORT · wrong drug ABORT
- *  novo drug sem JSON → comportamento normal
+ *  full/Free shared parity · invalid enrichment ABORT · wrong drug ABORT
+ *  snapshot incompleto → fail-closed
  *
  * Não toca no worktree real (usa sandbox temporário).
  */
@@ -16,6 +16,7 @@ const os = require('os');
 const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 
+const tier = require('../scripts/clinical-tier-contract.cjs');
 const REPO = path.resolve(__dirname, '..');
 const results = [];
 function check(name, cond, detail = '') {
@@ -76,24 +77,17 @@ function treeDigest(root) {
 }
 
 function managedParity(sb) {
-  const data = path.join(sb, 'data');
-  const pub = path.join(sb, 'public', 'data');
-
-  return (
-    treeDigest(path.join(data, 'drugs')) ===
-      treeDigest(path.join(pub, 'drugs')) &&
-    fileDigest(path.join(data, 'drugs_index.json')) ===
-      fileDigest(path.join(pub, 'drugs_index.json')) &&
-    fileDigest(path.join(data, 'manifest.json')) ===
-      fileDigest(path.join(pub, 'manifest.json'))
-  );
+  return tier.assertClinicalOutputsConsistentByTier(
+    path.join(sb,'data'), path.join(sb,'public/data'), tier.policy(sb)
+  ) > 0;
 }
 function makeSandbox() {
   const sb = fs.mkdtempSync(path.join(os.tmpdir(), 'mc-preserve-test-'));
-  for (const d of ['database', 'config', 'scripts', 'data', 'public']) {
+  for (const d of ['database', 'config', 'scripts', 'data', 'public', 'gateway', 'docs']) {
     fs.cpSync(path.join(REPO, d), path.join(sb, d), { recursive: true });
   }
-  fs.copyFileSync(path.join(REPO, 'package.json'), path.join(sb, 'package.json'));
+  fs.cpSync(path.join(REPO,'generated/gold33-nova-lista/packages'),path.join(sb,'generated/gold33-nova-lista/packages'),{recursive:true});
+fs.copyFileSync(path.join(REPO, 'package.json'), path.join(sb, 'package.json'));
   return sb;
 }
 function runExport(sb) { return execFileSync('node', ['scripts/export-clinical-data.js'], { cwd: sb, stdio: 'pipe' }).toString(); }
@@ -246,37 +240,36 @@ runExport(sb);
 const idemOut = execFileSync('diff', ['-rq', path.join(sb, 'data_run1'), path.join(sb, 'data')], { stdio: 'pipe' }).toString();
 check('IDEMPOTENCE=RUN2_ZERO_DIFF', idemOut === '', idemOut.slice(0, 200));
 
-// ── TEST 5: exporter-owned root/public parity only ──
+// ── TEST 5: exporter-owned full/Free shared parity only ──
 check(
-  'MANAGED_ROOT_PUBLIC_PARITY=PASS',
+  'MANAGED_TIER_CONSISTENCY=PASS',
   managedParity(sb)
 );
 
-// ── TEST 7: invalid enrichment → ABORT (sandbox fresco, corrompe data+public) ──
+// ── TEST 7: invalid enrichment → ABORT (sandbox fresco, corrompe private) ──
 const sb7 = makeSandbox();
 const vPath7 = path.join(sb7, 'data', 'drugs', 'vancomicina.json');
-const vPub7 = path.join(sb7, 'public', 'data', 'drugs', 'vancomicina.json');
 const vOrig7 = fs.readFileSync(vPath7, 'utf8');
 const vBad7 = JSON.parse(vOrig7);
 vBad7.mc_clinical_enrichment_v1.sections = 'corrupt';
 fs.writeFileSync(vPath7, JSON.stringify(vBad7));
-fs.writeFileSync(vPub7, JSON.stringify(vBad7));
+// Re-sign the synthetic fixture to exercise the enrichment validator itself.
+fs.writeFileSync(path.join(sb7,'data/manifest.json'), JSON.stringify(tier.makeManifest(path.join(sb7,'data'),'private-full',tier.policy(sb7))));
 const abort7 = runExportExpectFail(sb7);
 check('INVALID_ENRICHMENT_BLOCK=PASS', abort7 !== null && /CLINICAL_ENRICHMENT_PRESERVATION_ABORT/.test(abort7), (abort7 || '').slice(-160));
 
 // ── TEST 8: wrong drug → ABORT (sandbox fresco) ──
 const sb8 = makeSandbox();
 const vPath8 = path.join(sb8, 'data', 'drugs', 'vancomicina.json');
-const vPub8 = path.join(sb8, 'public', 'data', 'drugs', 'vancomicina.json');
 const vOrig8 = fs.readFileSync(vPath8, 'utf8');
 const vBad8 = JSON.parse(vOrig8);
 vBad8.id = 'outromedicamento';
 fs.writeFileSync(vPath8, JSON.stringify(vBad8));
-fs.writeFileSync(vPub8, JSON.stringify(vBad8));
-const abort8 = runExportExpectFail(sb8);
-check('WRONG_DRUG_BLOCK=PASS', abort8 !== null && /CLINICAL_ENRICHMENT_PRESERVATION_ABORT/.test(abort8), (abort8 || '').slice(-160));
 
-// ── TEST 9: novo drug sem JSON → normal (sandbox fresco) ──
+const abort8 = runExportExpectFail(sb8);
+check('WRONG_DRUG_BLOCK=PASS', abort8 !== null && /CLINICAL_TIER_IDENTITY_MISMATCH/.test(abort8), (abort8 || '').slice(-160));
+
+// ── TEST 9: documento removido do snapshot → ABORT (sandbox fresco) ──
 const sb9 = makeSandbox();
 const d9 = path.join(sb9, 'data', 'drugs');
 const files9 = fs.readdirSync(d9).filter(f => f.endsWith('.json'));
@@ -289,10 +282,9 @@ const noEnrich = files9.find(f => !pre9.has(f));
 check('FOUND_DRUG_WITHOUT_ENRICHMENT', !!noEnrich, noEnrich);
 if (noEnrich) {
   fs.rmSync(path.join(d9, noEnrich));
-  fs.rmSync(path.join(sb9, 'public', 'data', 'drugs', noEnrich));
-  runExport(sb9);
-  const regen = JSON.parse(fs.readFileSync(path.join(d9, noEnrich), 'utf8'));
-  check('NEW_DRUG_NO_ENRICHMENT=PASS', regen.mc_clinical_enrichment_v1 === undefined);
+  const aborted = runExportExpectFail(sb9);
+  check('INCOMPLETE_SNAPSHOT_BLOCK=PASS', /CLINICAL_TIER_INDEX_DOCUMENT_SET_MISMATCH/.test(aborted || ''));
+
 }
 
 // ── resumo ──

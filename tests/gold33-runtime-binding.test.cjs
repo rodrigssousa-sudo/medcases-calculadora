@@ -1,7 +1,6 @@
 const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('assert');
 const root=path.resolve(__dirname,'..');
-const exporter=fs.readFileSync(path.join(root,'scripts/export-clinical-data.js'),'utf8');
-const modules=vm.runInNewContext(exporter.match(/const DB_MODULES = (\[[\s\S]*?\n\]);/)[1]);
+const { DB_MODULES: modules } = require('../scripts/clinical-source-inventory.cjs');
 const html=fs.readFileSync(path.join(root,'public/index.html'),'utf8');
 const dynamic=[...html.matchAll(/_loadScript\('database\/([^?'\/]+\.js)/g)].map(x=>x[1]);
 const order=[...dynamic,...[...html.matchAll(/<script[^>]*src="database\/([^?"/]+\.js)/g)].map(x=>x[1]),...modules.filter(m=>m.privateReferenceOnly).map(m=>m.file)];

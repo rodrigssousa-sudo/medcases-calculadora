@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 import crypto from 'node:crypto';
 import fs from 'node:fs';
+import tierContract from './clinical-tier-contract.cjs';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
+import inventory from './clinical-source-inventory.cjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const databaseRoot = path.join(root, 'database');
 const policyPath = path.join(root, 'config', 'clinical-collision-policy.proposed.json');
-const databaseFiles = fs.readdirSync(databaseRoot, { withFileTypes: true })
-  .filter((entry) => entry.isFile() && entry.name.endsWith('.js'))
-  .map((entry) => path.join(databaseRoot, entry.name));
-if (databaseFiles.length !== 36) throw new Error(`CLINICAL_IDENTITY_DATABASE_COUNT_INVALID:${databaseFiles.length}`);
+const databaseFiles = inventory.validateCanonicalInventory(databaseRoot);
 
 const identityFiles = [...databaseFiles, policyPath].sort((a, b) =>
   Buffer.compare(Buffer.from(path.relative(root, a)), Buffer.from(path.relative(root, b))));
@@ -52,6 +51,8 @@ for (const target of targets) {
   }
   outputs.set(target, Buffer.from(`${JSON.stringify(document, null, 2)}\n`));
 }
+
+tierContract.stageTierManifests(root, outputs);
 
 const originals = new Map();
 const staged = [];

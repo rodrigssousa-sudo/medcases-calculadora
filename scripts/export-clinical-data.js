@@ -39,6 +39,8 @@ const fs   = require('fs');
 const path = require('path');
 const vm   = require('vm');
 const crypto = require('crypto');
+const tierContract = require('./clinical-tier-contract.cjs');
+const goldContract = require('./gold33-source-contract.cjs');
 
 /* ── Caminhos ── */
 const ROOT        = path.resolve(__dirname, '..');
@@ -827,67 +829,10 @@ function assertClinicalUnmanagedSnapshotPreserved(
   return finalFiles.length;
 }
 
-function assertClinicalOutputsByteIdentical(
-  firstDirectory,
-  secondDirectory
-) {
-  const firstFiles =
-    listClinicalOutputFiles(
-      firstDirectory
-    );
-
-  const secondFiles =
-    listClinicalOutputFiles(
-      secondDirectory
-    );
-
-  if (
-    firstFiles.length !==
-    secondFiles.length
-  ) {
-    throw new Error(
-      `CLINICAL_DUAL_OUTPUT_FILE_COUNT_MISMATCH: ` +
-      `${firstFiles.length} != ${secondFiles.length}`
-    );
-  }
-
-  for (
-    let index = 0;
-    index < firstFiles.length;
-    index++
-  ) {
-    const first =
-      firstFiles[index];
-
-    const second =
-      secondFiles[index];
-
-    if (
-      first.relativePath !==
-      second.relativePath
-    ) {
-      throw new Error(
-        `CLINICAL_DUAL_OUTPUT_PATH_MISMATCH: ` +
-        `${first.relativePath} != ${second.relativePath}`
-      );
-    }
-
-    if (
-      hashClinicalOutputFile(
-        first.absolutePath
-      ) !==
-      hashClinicalOutputFile(
-        second.absolutePath
-      )
-    ) {
-      throw new Error(
-        `CLINICAL_DUAL_OUTPUT_CONTENT_MISMATCH: ` +
-        `${first.relativePath}`
-      );
-    }
-  }
-
-  return firstFiles.length;
+function assertClinicalOutputsConsistentByTier(firstDirectory, secondDirectory) {
+  return tierContract.assertClinicalOutputsConsistentByTier(
+    firstDirectory, secondDirectory, tierContract.policy(ROOT)
+  );
 }
 
 function removeClinicalManagedOutputs(
@@ -979,54 +924,11 @@ function preparePublicStagingOutput() {
     PUBLIC_OUT_DIR
   );
 
-  for (
-    const outputName of
-      CLINICAL_MANAGED_OUTPUT_NAMES
-  ) {
-    const sourcePath = path.join(
-      OUT_DIR,
-      outputName
-    );
-
-    const targetPath = path.join(
-      PUBLIC_OUT_DIR,
-      outputName
-    );
-
-    if (!fs.existsSync(sourcePath)) {
-      throw new Error(
-        `CLINICAL_MANAGED_OUTPUT_MISSING: ${sourcePath}`
-      );
-    }
-
-    const stat = fs.statSync(
-      sourcePath
-    );
-
-    if (stat.isDirectory()) {
-      fs.cpSync(
-        sourcePath,
-        targetPath,
-        {
-          recursive: true,
-          force: false,
-          errorOnExist: true,
-        }
-      );
-    } else if (stat.isFile()) {
-      fs.copyFileSync(
-        sourcePath,
-        targetPath
-      );
-    } else {
-      throw new Error(
-        `CLINICAL_OUTPUT_ENTRY_INVALID: ${sourcePath}`
-      );
-    }
-  }
+  // Public visibility is the declared Free allowlist, never the full catalog.
+  tierContract.projectPublic(OUT_DIR, PUBLIC_OUT_DIR, tierContract.policy(ROOT));
 
   const fileCount =
-    assertClinicalOutputsByteIdentical(
+    assertClinicalOutputsConsistentByTier(
       OUT_DIR,
       PUBLIC_OUT_DIR
     );
@@ -1034,7 +936,7 @@ function preparePublicStagingOutput() {
   console.log(
     `🪞 Staging público validado: ` +
     `${fileCount} arquivos clínicos gerenciados ` +
-    `byte a byte idênticos`
+    `consistentes por tier`
   );
 
   return fileCount;
@@ -1355,6 +1257,10 @@ function rollbackInterruptedPublication(
       'public/data',
   });
 
+  if (journal.hadExistingData || journal.hadExistingPublic) {
+    assertClinicalOutputsConsistentByTier(FINAL_OUT_DIR, PUBLIC_FINAL_OUT_DIR);
+  }
+
   cleanupInterruptedArtifacts(
     journal
   );
@@ -1370,7 +1276,7 @@ function rollbackInterruptedPublication(
 function finalizeInterruptedPublication(
   journal
 ) {
-  assertClinicalOutputsByteIdentical(
+  assertClinicalOutputsConsistentByTier(
     FINAL_OUT_DIR,
     PUBLIC_FINAL_OUT_DIR
   );
@@ -1516,7 +1422,7 @@ function recoverInterruptedPublication() {
   }
 
   if (dataExists && publicExists) {
-    assertClinicalOutputsByteIdentical(
+    assertClinicalOutputsConsistentByTier(
       FINAL_OUT_DIR,
       PUBLIC_FINAL_OUT_DIR
     );
@@ -1538,7 +1444,7 @@ function publishStagedOutput() {
     );
   }
 
-  assertClinicalOutputsByteIdentical(
+  assertClinicalOutputsConsistentByTier(
     OUT_DIR,
     PUBLIC_OUT_DIR
   );
@@ -1686,7 +1592,7 @@ function publishStagedOutput() {
    */
   try {
     const fileCount =
-      assertClinicalOutputsByteIdentical(
+      assertClinicalOutputsConsistentByTier(
         FINAL_OUT_DIR,
         PUBLIC_FINAL_OUT_DIR
       );
@@ -1704,7 +1610,7 @@ function publishStagedOutput() {
 
     console.log(
       `🚀 Publicação dupla concluída: ` +
-      `${fileCount} arquivos clínicos gerenciados idênticos em ` +
+      `${fileCount} arquivos clínicos gerenciados consistentes por tier em ` +
       `data/ e public/data/`
     );
   } catch (error) {
@@ -1759,215 +1665,7 @@ const PACIENTE_RENAL = {
      globalVar → variável que o arquivo injeta em window
      type      → 'object' (chave:drug) | 'array' (lista de drugs)
 ================================================================ */
-const DB_MODULES = [
-  {
-    file: 'gold33_novo_093.js',
-    globalVar: 'GOLD33_NOVO_093_DRUGS_DB',
-    type: 'object',
-    label: 'Gold33 Novo 093',
-    privateReferenceOnly: true,
-  },
-  {
-    file: 'gold33_nova_lista.js',
-    globalVar: 'GOLD33_NOVA_LISTA_DRUGS_DB',
-    type: 'object',
-    label: 'Gold33 Nova Lista',
-    privateReferenceOnly: true,
-  },
-  {
-    file: 'alergia_imunologia.js',
-    globalVar: 'ALERGIA_IMUNOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Alergia e Imunologia',
-  },
-  {
-    file: 'analgesia_opioides.js',
-    globalVar: 'ANALGESIA_OPIOIDES_DRUGS_DB',
-    type: 'object',
-    label: 'Analgesia e Opioides',
-  },
-  {
-    file: 'analgesicos.js',
-    globalVar: 'ANALGESICOS_DRUGS_DB',
-    type: 'object',
-    label: 'Analgésicos',
-  },
-  {
-    file: 'anticoag.js',
-    globalVar: 'ANTICOAG_DRUGS_DB',
-    type: 'object',
-    label: 'Anticoagulação',
-  },
-  {
-    file: 'antimicrobianos.js',
-    globalVar: 'ANTIMICROBIANOS_DRUGS_DB',
-    type: 'object',
-    label: 'Antimicrobianos',
-  },
-  {
-    file: 'cardio.js',
-    globalVar: 'CARDIO_DRUGS_DB',
-    type: 'object',
-    label: 'Cardiovascular',
-  },
-  {
-    file: 'cardiologia.js',
-    globalVar: 'CARDIOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Cardiologia',
-  },
-  {
-    file: 'emergencia.js',
-    globalVar: 'EMERGENCIA_DRUGS_DB',
-    type: 'object',
-    label: 'Emergência',
-  },
-  {
-    file: 'endocrino.js',
-    globalVar: 'ENDOCRINO_DRUGS_DB',
-    type: 'object',
-    label: 'Endocrinologia',
-  },
-  {
-    file: 'endocrino_glp1.js',
-    globalVar: 'ENDOCRINO_GLP1_DRUGS_DB',
-    type: 'array',
-    label: 'Endocrinologia GLP-1',
-  },
-  {
-    file: 'gastro.js',
-    globalVar: 'GASTRO_DRUGS_DB',
-    type: 'array',
-    label: 'Gastroenterologia — Legado',
-  },
-  {
-    file: 'gastro_imuno.js',
-    globalVar: 'GASTRO_IMUNO_DRUGS_DB',
-    type: 'array',
-    label: 'Gastro e Imunologia',
-  },
-  {
-    file: 'gastroenterologia.js',
-    globalVar: 'GASTROENTEROLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Gastroenterologia',
-  },
-  {
-    file: 'ginecologia.js',
-    globalVar: 'GINECOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Ginecologia',
-  },
-  {
-    file: 'hematologia.js',
-    globalVar: 'HEMATOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Hematologia',
-  },
-  {
-    file: 'imuno_corticoide.js',
-    globalVar: 'IMUNO_CORTICOIDE_DRUGS_DB',
-    type: 'array',
-    label: 'Imunologia e Corticoides',
-  },
-  {
-    file: 'infectologia.js',
-    globalVar: 'INFECTOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Infectologia',
-  },
-  {
-    file: 'nefro.js',
-    globalVar: 'NEFRO_DRUGS_DB',
-    type: 'object',
-    label: 'Nefrologia',
-  },
-  {
-    file: 'neurologia.js',
-    globalVar: 'NEUROLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Neurologia',
-    preseed: {
-      NEUROLOGIA_DRUGS_DB: {},
-      NEURO_DRUGS_DB: {},
-
-      /*
-       * Helper bilíngue exigido pelos registros migrados
-       * de psicofarmacos.js para neurologia.js.
-       */
-      t: (lang, pt, es) => lang === 'pt' ? pt : es,
-    },
-  },
-  {
-    file: 'obesidade.js',
-    globalVar: 'OBESIDADE_DRUGS_DB',
-    type: 'object',
-    label: 'Obesidade',
-  },
-  {
-    file: 'oftalmologia.js',
-    globalVar: 'OFTALMOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Oftalmologia',
-  },
-  {
-    file: 'pneumologia.js',
-    globalVar: 'PNEUMOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Pneumologia',
-  },
-  {
-    file: 'pneumologia_otorrino.js',
-    globalVar: 'PNEUMOLOGIA_OTORRINO_DRUGS_DB',
-    type: 'object',
-    label: 'Pneumologia e Otorrinolaringologia',
-  },
-  {
-    file: 'psicofarmacos.js',
-    globalVar: 'PSICOFARMACOS_DRUGS_DB',
-    type: 'object',
-    label: 'Psicofármacos',
-  },
-  {
-    file: 'psiquiatria.js',
-    globalVar: 'PSIQUIATRIA_DRUGS_DB',
-    type: 'object',
-    label: 'Psiquiatria',
-  },
-  {
-    file: 'reumatologia.js',
-    globalVar: 'REUMATOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Reumatologia',
-  },
-  {
-    file: 'sedacao.js',
-    globalVar: 'SEDACAO_DRUGS_DB',
-    type: 'object',
-    label: 'Sedação',
-  },
-  {
-    file: 'toxicologia.js',
-    globalVar: 'TOXICOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Toxicologia',
-  },
-  {
-    file: 'uro_ginecologia.js',
-    globalVar: 'URO_GINECOLOGIA_DRUGS_DB',
-    type: 'object',
-    label: 'Urologia e Ginecologia',
-  },
-];
-
-/* ================================================================
-   MÓDULO DE INTERAÇÕES — tratado separadamente
-================================================================ */
-const INTERACOES_MODULE = {
-  file:      'interacoes.js',
-  globalVar: 'INTERACOES_DB',
-  label:     'Interações',
-};
+const {DB_MODULES, INTERACOES_MODULE, validateCanonicalInventory} = require('./clinical-source-inventory.cjs');
 
 /* ================================================================
    UTIL: carregar um database/*.js em contexto vm isolado
@@ -2505,33 +2203,7 @@ function compareStableText(left, right) {
 }
 
 function computeClinicalIdentity() {
-  const databaseFiles = fs
-    .readdirSync(
-      DB_DIR,
-      {
-        withFileTypes: true,
-      }
-    )
-    .filter(
-      entry =>
-        entry.isFile() &&
-        entry.name.endsWith('.js')
-    )
-    .map(
-      entry =>
-        path.join(
-          DB_DIR,
-          entry.name
-        )
-    );
-
-  if (databaseFiles.length !== 34) {
-    throw new Error(
-      `CLINICAL_IDENTITY_DATABASE_COUNT_INVALID: ` +
-      `esperados 34 arquivos; encontrados ` +
-      `${databaseFiles.length}`
-    );
-  }
+  const databaseFiles = validateCanonicalInventory(DB_DIR);
 
   const identityFiles = [
     ...databaseFiles,
@@ -3451,99 +3123,19 @@ function readExistingEnrichment(safeId) {
     return existing;
   }
 
+  const goldFieldValidator = goldContract.createFieldValidator(ROOT);
+
   function findSourceGoldClinicalV1(preparedEntry) {
-    const seen = new Set();
-    const candidates = new Map();
-
-    function walk(value, depth) {
-      if (
-        value === null ||
-        typeof value !== 'object' ||
-        depth > 10 ||
-        seen.has(value)
-      ) {
-        return;
-      }
-
-      seen.add(value);
-
-      if (
-        Object.prototype.hasOwnProperty.call(
-          value,
-          'mcGoldClinicalV1'
-        )
-      ) {
-        const gold = value.mcGoldClinicalV1;
-
-        if (
-          gold === null ||
-          typeof gold !== 'object' ||
-          Array.isArray(gold)
-        ) {
-          throw new Error(
-            'GOLD_EXPORT_SOURCE_ABORT: mcGoldClinicalV1 nao e objeto'
-          );
-        }
-
-        const signature = JSON.stringify(gold);
-        candidates.set(signature, gold);
-      }
-
-      for (const key of Object.keys(value)) {
-        if (key === 'mcGoldClinicalV1') continue;
-        const child = value[key];
-        if (child && typeof child === 'object') {
-          walk(child, depth + 1);
-        }
-      }
+    const existing = readExistingGoldDocument(preparedEntry.safeId);
+    const result = goldContract.resolveSourceGold(preparedEntry, existing);
+    if (!result.gold && result.audit.candidateCount) {
+      throw new Error(`GOLD_EXPORT_SOURCE_ABORT: ${preparedEntry.safeId}:${result.audit.result}`);
     }
-
-    walk(preparedEntry, 0);
-
-    if (candidates.size > 1) {
-      throw new Error(
-        `GOLD_EXPORT_SOURCE_ABORT: mais de um mcGoldClinicalV1 divergente para ${preparedEntry.safeId}`
-      );
-    }
-
-    if (candidates.size === 0) {
-      return null;
-    }
-
-    return candidates.values().next().value;
+    return result.gold;
   }
 
-  function validateSourceGoldClinicalV1(
-    safeId,
-    gold
-  ) {
-    for (const lang of ['pt', 'es']) {
-      const locale = gold[lang];
-
-      if (
-        locale === null ||
-        typeof locale !== 'object' ||
-        Array.isArray(locale)
-      ) {
-        throw new Error(
-          `GOLD_EXPORT_SOURCE_ABORT: ${safeId}/${lang} ausente ou invalido`
-        );
-      }
-
-      for (const field of MC_GOLD_REQUIRED_FIELDS) {
-        if (
-          !Object.prototype.hasOwnProperty.call(
-            locale,
-            field
-          ) ||
-          !mcGoldMeaningful(locale[field])
-        ) {
-          throw new Error(
-            `GOLD_EXPORT_SOURCE_ABORT: ${safeId}/${lang}/${field} ausente ou vazio`
-          );
-        }
-      }
-    }
+  function validateSourceGoldClinicalV1(safeId, gold) {
+    return goldFieldValidator.validate(safeId, gold);
   }
 
   function applyGoldClinicalProjection(
@@ -3937,7 +3529,7 @@ function readExistingEnrichment(safeId) {
 }
 
 /* ── Executar ── */
-main().catch(err => {
+if (require.main === module) main().catch(err => {
   /*
    * Falha antes da publicação: remove somente staging.
    * Um backup de recuperação nunca é apagado neste ponto.
@@ -3971,3 +3563,6 @@ main().catch(err => {
 
   process.exit(1);
 });
+
+// Exposed for filesystem integration tests; importing never starts an export.
+module.exports = { recoverInterruptedPublication, preparePublicStagingOutput };

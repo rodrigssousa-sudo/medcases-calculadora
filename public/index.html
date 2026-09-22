@@ -2,6 +2,8 @@
 <!-- MedCases Pro — build 2026-06-19e -->
 <html lang="pt-BR">
 <head>
+<script src="js/clinical-commercial-surfaces.js"></script>
+<script src="js/clinical-action-authorization.js"></script>
 <script src="js/catalog-summary.js"></script>
 <!-- MEDCASES_PREMIUM_R8_5_EARLY_CAPTURE_NATIVE_PAYWALL_FINAL_V1_B_R0:start -->
 <script id="mc-r8-5-early-premium-paywall-capture">
@@ -10942,11 +10944,16 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
         </div>
 
         <div id="inf-review-controls" class="infusion-dilution-box" style="display:none">
-          <label><input id="inf-adult-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Paciente adulto confirmado (≥18 anos)</span><span class="lang-es">Paciente adulto confirmado (≥18 años)</span></label>
-          <div id="inf-potassium-wrap" style="display:none"><label for="inf-potassium">K+ (mEq/L)</label><input id="inf-potassium" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()" aria-label="Potássio atual"></div>
-          <div id="inf-duration-wrap" style="display:none"><label for="inf-duration-hours"><span class="lang-pt">Duração total planejada, incluindo tempo já infundido (h)</span><span class="lang-es">Duración total prevista, incluido tiempo ya infundido (h)</span></label><input id="inf-duration-hours" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()" aria-label="Duração total em horas"></div>
-          <div id="inf-rescue-wrap" style="display:none"><label><input id="inf-rescue-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Resgate off-label explicitamente prescrito (até 0,06 UI/min)</span><span class="lang-es">Rescate fuera de indicación explícitamente prescrito (hasta 0,06 UI/min)</span></label></div>
-          <div id="inf-vanco-wrap" style="display:none"><label><input id="inf-vanco-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Infusão contínua e protocolo de monitorização confirmados</span><span class="lang-es">Infusión continua y protocolo de monitorización confirmados</span></label></div>
+          <label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-adult-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Paciente adulto confirmado (≥18 anos)</span><span class="lang-es">Paciente adulto confirmado (≥18 años)</span></label>
+          <div id="inf-potassium-wrap" style="display:none"><label for="inf-potassium">K+ (mEq/L)</label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-potassium" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()" aria-label="Potássio atual"></div>
+          <div id="inf-duration-wrap" style="display:none"><label for="inf-duration-hours"><span class="lang-pt">Duração total planejada, incluindo tempo já infundido (h)</span><span class="lang-es">Duración total prevista, incluido tiempo ya infundido (h)</span></label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-duration-hours" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()" aria-label="Duração total em horas"></div>
+          <label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-scope-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Confirmo indicação, via IV, produto/preparo e monitorização descritos no parecer.</span><span class="lang-es">Confirmo indicación, vía IV, producto/preparación y monitorización del dictamen.</span></label>
+          <label for="inf-indication">Indicação / fase · Indicación / fase</label><select data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-indication" class="infusion-unit-select" onchange="calculateInfusion()"><option value="">Selecione / Seleccione</option></select>
+          <div id="inf-ideal-weight-wrap" style="display:none"><label for="inf-ideal-weight">Peso IDEAL prescrito (IBW, kg)</label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-ideal-weight" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()"></div>
+          <div id="inf-nomogram-wrap" style="display:none"><label for="inf-nomogram">Nomograma / protocolo prescrito</label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-nomogram" class="infusion-input" oninput="calculateInfusion()"></div>
+          <div id="inf-benefit-wrap" style="display:none"><label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-benefit-confirm" type="checkbox" onchange="calculateInfusion()"> <span class="lang-pt">Acima de 4 mg/kg/h: benefício superior ao risco avaliado pelo prescritor.</span><span class="lang-es">Por encima de 4 mg/kg/h: beneficio superior al riesgo evaluado por el prescriptor.</span></label></div>
+          <div id="inf-intermittent-wrap" style="display:none"><label for="inf-intermittent-minutes">INTERMITENTE · duração / duración (min)</label><input data-mc-surface="infusion-confirmation" data-mc-capability="dose_by_weight" id="inf-intermittent-minutes" class="infusion-input" inputmode="decimal" oninput="calculateInfusion()"></div>
+
         </div>
         <div id="inf-clinical-alerts" class="infusion-clinical-alerts" role="status" aria-live="polite" style="display:none"></div>
         <!-- ── Campos de entrada ── -->
@@ -10966,7 +10973,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
           </div>
           <!-- BUILD 407-UX PASSO 1: oninput persiste no estado global + localStorage
                e auto-dismiss o banner quando o peso for confirmado (≥1 kg). -->
-          <input type="text" class="infusion-weight-inline-input" id="inf-weight-inline-input"
+          <input data-mc-surface="infusion-parameters" data-mc-capability="dose_by_weight" type="text" class="infusion-weight-inline-input" id="inf-weight-inline-input"
             inputmode="decimal" pattern="[0-9.,]*" placeholder="Ex: 70"
             autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
             onchange="_infWeightInlineUpdate(this.value)" aria-label="Peso (kg)" />
@@ -10978,10 +10985,10 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
           <i class="fa-solid fa-vial"></i>
           <span id="inf-amount-label" data-i18n="infusion_label_amp">Quantidade total do fármaco</span>
         </div>
-        <select id="inf-amount-unit" class="infusion-unit-select" aria-label="Unidade da quantidade total" onchange="_infAmountUnitChange()">
+        <select data-mc-surface="infusion-preparation" data-mc-capability="dose_by_weight" id="inf-amount-unit" class="infusion-unit-select" aria-label="Unidade da quantidade total" onchange="_infAmountUnitChange()">
           <option value="mg">mg</option><option value="UI">UI</option>
         </select>
-        <input type="text" class="infusion-input" id="inf-amp-mg" aria-label="Quantidade total"
+        <input data-mc-surface="infusion-preparation" data-mc-capability="dose_by_weight" type="text" class="infusion-input" id="inf-amp-mg" aria-label="Quantidade total"
           inputmode="decimal" pattern="[0-9.,]*"
           autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
           placeholder="Ex: 4"
@@ -10991,7 +10998,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
           <i class="fa-solid fa-flask"></i>
           <span data-i18n="infusion_label_vol">Volume final da solução (mL)</span>
         </div>
-        <input type="text" class="infusion-input" id="inf-vol-ml" aria-label="Volume final (mL)"
+        <input data-mc-surface="infusion-preparation" data-mc-capability="dose_by_weight" type="text" class="infusion-input" id="inf-vol-ml" aria-label="Volume final (mL)"
           inputmode="decimal" pattern="[0-9.,]*"
           autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
           placeholder="Ex: 250"
@@ -11006,12 +11013,12 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
 
         <!-- Linha 1: Dose + select de unidade (inalterada internamente) -->
         <div class="infusion-unit-row">
-          <input type="text" class="infusion-input" id="inf-dose" aria-label="Dose prescrita"
+          <input data-mc-surface="infusion-parameters" data-mc-capability="dose_by_weight" type="text" class="infusion-input" id="inf-dose" aria-label="Dose prescrita"
             inputmode="decimal" pattern="[0-9.,]*"
             autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="next"
             placeholder="Ex: 0.1"
             oninput="_infBidir('dose')" />
-          <select class="infusion-unit-select" id="inf-dose-unit"
+          <select data-mc-surface="infusion-parameters" data-mc-capability="dose_by_weight" class="infusion-unit-select" id="inf-dose-unit"
             onchange="_infBidir('unit')" aria-label="Unidade da dose">
             <option value="mcg/kg/min">mcg/kg/min</option>
             <option value="mcg/min">mcg/min</option>
@@ -11033,7 +11040,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
               <span data-i18n="infusion_label_rate_short">Vazão da Bomba</span>
               <span class="infusion-bidir-unit-badge">mL/h</span>
             </div>
-            <input type="text" class="infusion-input" id="inf-current-rate" aria-label="Vazão (mL/h)"
+            <input data-mc-surface="infusion-parameters" data-mc-capability="dose_by_weight" type="text" class="infusion-input" id="inf-current-rate" aria-label="Vazão (mL/h)"
               inputmode="decimal" pattern="[0-9.,]*"
               autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done"
               placeholder="Ex: 12.5"
@@ -11094,7 +11101,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
         </div>
 
         <!-- ── Botão Copiar cálculo ── -->
-        <button class="inf-copy-rx-btn" id="inf-copy-rx-btn"
+        <button data-mc-surface="infusion-copy" data-mc-capability="dose_by_weight" class="inf-copy-rx-btn" id="inf-copy-rx-btn"
           onclick="infCopyPrescription()"
           style="display:none"
           aria-label="Copiar resultado como prescrição">
@@ -11422,7 +11429,7 @@ body > #mc-drug-detail-page-v21 .mcd-body :where(
         <i class="fa-solid fa-clipboard-check" id="fd-btn-copy-icon"></i>
         <span id="fd-btn-copy-text" data-i18n="fd_btn_copy">Copiar Prescrição</span>
       </button>
-      <button class="fd-btn-study" id="fd-btn-calc-label" onclick="_fdCalcDoseFromModal()">
+      <button data-mc-surface="modal-dose" data-mc-capability="dose_by_weight" class="fd-btn-study" id="fd-btn-calc-label" onclick="_fdCalcDoseFromModal()">
         <i class="fa-solid fa-calculator"></i>
         <span data-i18n="fd_btn_calc">Calcular Dose</span>
       </button>
@@ -15916,6 +15923,8 @@ function showToast(msg,dur=2200){
                   heroIsAdjusted, renalOverride }
 ========================================================= */
 function _copyDoseToClipboard(ctx) {
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   /* Suporte ao call legado: _copyDoseToClipboard(drug,result,rich,p,isES) */
   if (ctx && ctx.name !== undefined || (arguments.length >= 4 && typeof arguments[1] === 'object' && arguments[1] !== null && !arguments[1].drug)) {
     const [drug, result, rich, p, isES] = arguments;
@@ -16895,6 +16904,7 @@ function _fdResolveHeroPatient(drug, pd, lang) {
        A3. result.dose (string extraído pelo adaptador = adultoVO)
   ═══════════════════════════════════════════════════════════════ */
   let heroDose = '', heroFreq = '', heroVia = '', calcDoseMgKg = null, _heroKey = null;
+  if (window.__mcClinicalActionAllowed?.('weight')) { // MEDCASES_HERO_OPERATION_GATE_V1
 
   if (isPediatric === true) {
     /* ══ CENÁRIO PEDIÁTRICO ══
@@ -17167,6 +17177,8 @@ function _fdResolveHeroPatient(drug, pd, lang) {
     renalDados = null;
     faixaKey = null;
   }
+
+  } // MEDCASES_HERO_OPERATION_GATE_V1
 
   /* ═══════════════════════════════════════════════════════════════
      PASSO 4 — GATILHOS DE SEXO E GRAVIDEZ
@@ -18859,6 +18871,8 @@ function closeFarmacoDetail() {
 window._fdActiveDrugId = null; /* rastreado por openFarmacoDetail */
 
 function _fdCalcDoseFromModal() {
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   const modal = document.getElementById('fd-modal');
   const drugId =
     window._fdActiveDrugId
@@ -19404,7 +19418,7 @@ function renderDrugList(filter) {
     const catName  = _fdResolveCat(d);
     const safeId   = (d.id || '').replace(/'/g, "\\'");
     html += `
-      <div class="drug-list-row ${isSel}" id="dcard-${d.id}" onclick="selectDrug('${safeId}')">
+      <div data-mc-surface="calculator-drug-selection" data-mc-capability="dose_by_weight" class="drug-list-row ${isSel}" id="dcard-${d.id}" onclick="selectDrug('${safeId}')">
         <div class="drug-card-icon" style="background:${d.color||'rgba(34,200,122,0.15)'};color:${d.colorTxt||'#22C87A'};width:34px;height:34px;border-radius:9px;font-size:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
           ${d.icon || '💊'}
         </div>
@@ -19452,6 +19466,8 @@ function selectDrug(id) {
    Usa o mesmo motor _fdResolveHeroPatient com window.patientData
 ═══════════════════════════════════════════════════════════════════ */
 function calcShowInlineResult(drugId) {
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   /* ── BUILD 306: Node Injection com toggle seguro ── */
 
   /* Toggle: se card já está aberto para este drug, fecha e sai */
@@ -19672,6 +19688,8 @@ function calcCloseInlineResult() {
 }
 
 function calcDrugDose(id) {
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   /* ═══════════════════════════════════════════════════════════════════
      calcDrugDose v3 — Motor unificado com _fdResolveHeroPatient
      MESMO motor da aba Início: Idade→Peso→ClCr→Sexo/Gravidez
@@ -19959,7 +19977,7 @@ function calcDrugDose(id) {
       ${calcRowHtml ? `<div style="margin-top:8px;">${calcRowHtml}</div>` : ''}
 
       <!-- Botão copiar -->
-      <button class="dose-copy-btn" style="margin-top:12px;" onclick="${copyFnName}()">
+      <button class="dose-copy-btn" data-mc-surface="patient-dose-copy" data-mc-capability="dose_by_weight" style="margin-top:12px;" onclick="${copyFnName}()">
         <i class="fa-solid fa-whatsapp"></i>
         ${isES ? 'Copiar para WhatsApp' : 'Copiar para WhatsApp'}
       </button>
@@ -20173,7 +20191,6 @@ function calcDrugDose(id) {
       </div>
 
       ${block1}
-      ${block2}
       ${block3}
       ${block4}
 
@@ -25702,6 +25719,8 @@ document.addEventListener('DOMContentLoaded', () => {
      DUAL-MODE: faixas podem ser string (legado) ou objeto (novo schema).
   ───────────────────────────────────────────────────────────────── */
   window.obterDosePorFiltrado = function(renalDoseObj, valorClCr, isHD) {
+  if (!window.__mcClinicalActionAllowed?.('renal')) return null; // MEDCASES_OPERATION_GATE_V1
+
     if (!renalDoseObj) return null;
 
     const rd  = renalDoseObj;
@@ -26392,6 +26411,8 @@ document.addEventListener('DOMContentLoaded', () => {
    Chamado pelo botão "Copiar para WhatsApp" dentro de calcDrugDose()
 ================================================================= */
 function _copyDoseToClipboard(ctx) {
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   /* Compatibilidade com chamada legada (5 args) e nova (objeto ctx) */
   let drug, result, rich, p, isES, heroDose, heroFreq, heroVia, heroIsAdjusted, renalOverride;
   if (ctx && typeof ctx === 'object' && ctx.drug) {
@@ -26407,7 +26428,8 @@ function _copyDoseToClipboard(ctx) {
   }
 
   /* ── Nome do fármaco ── */
-  const dName = result?._resolvedName || drug?.name || '—';
+  const dName = typeof result?._resolvedName === 'string'
+    ? result._resolvedName : _fdResolveName(drug, isES ? 'es' : 'pt');
 
   /* ── Dados do paciente ── */
   const idade = p?.age   || '';
@@ -26812,7 +26834,7 @@ window.MedCasesBridge = {
 <script src="database/gastro_imuno.js?v=484"></script>
 <script src="database/imuno_corticoide.js?v=562-canonical-r1"></script>
 <script src="database/endocrino_glp1.js?v=484"></script>
-<script src="database/infusoes.js?v=484"></script>
+<script src="database/infusoes.js?v=484&amp;review=patch3s-r1"></script>
 <script src="database/emergencia.js?v=484"></script>
 <!-- CALC-PERF-V1-B-R0 SAFE-DEFER-3-DBS -->
 <script src="database/infectologia.js?v=484" defer></script>
@@ -47900,7 +47922,7 @@ body.calc-overlay-open #fd-modal.open #fd-body :where(.mc-canon-adult-ref,.mc-ca
     var isChild=Number.isFinite(ctx.age) && ctx.age>=0 && ctx.age<18;
     var hasWeight=Number.isFinite(ctx.weight) && ctx.weight>0;
 
-    if(isChild && hasWeight){
+    if(isChild && hasWeight && window.__mcClinicalActionAllowed?.('weight')){ // MEDCASES_PED_OPERATION_GATE_V1
       var initial=ctx.weight*ref.min;
       var maxDose=ctx.weight*ref.max;
       var calc=document.createElement("div");
@@ -49674,6 +49696,7 @@ body.calc-overlay-open #fd-modal.open #fd-body :where(.mc-canon-adult-ref,.mc-ca
   }
 
   function canonicalExactPediatricPatientResult(r,m,ctx){
+    if (!window.__mcClinicalActionAllowed?.('weight')) return false; // MEDCASES_OPERATION_GATE_V1
     if(!r || !m || !ctx)return false;
     if(!(ctx.age>=0 && ctx.age<18 && ctx.weight>0))return false;
 
@@ -49746,6 +49769,7 @@ body.calc-overlay-open #fd-modal.open #fd-body :where(.mc-canon-adult-ref,.mc-ca
   }
 
   function canonicalSuppressDuplicatePediatricPatientRange(r,m,ctx){
+    if (!window.__mcClinicalActionAllowed?.('weight')) return false; // MEDCASES_OPERATION_GATE_V1
     if(!r || !m || !ctx)return false;
     if(!(ctx.age>=0 && ctx.age<18 && ctx.weight>0))return false;
 
@@ -61451,7 +61475,7 @@ page.dataset.mcR6EnalaprilVisual='clean';
   return true;
 };
 
-const makePage=()=>{const p=mk('div');p.id=PAGE_ID;p.dataset.open='false';p.dataset.mcCanonicalSlotCount='16';p.dataset.mcCanonicalStructure='v26-r1-16-point-lock';const top=mk('header','mcd-top'),back=mk('button','mcd-back','‹'),tt=mk('div','mcd-title','Fármaco'),close=mk('button','mcd-close','×');back.type=close.type='button';top.append(back,tt,close);const scroll=mk('main','mcd-scroll'),shell=mk('div','mcd-shell'),ident=mk('section','mcd-id'),eye=mk('div','mcd-eye','Fármaco'),nameRow=mk('div','mcd-name-row'),name=mk('h1','mcd-name','—'),idClose=mk('button','mcd-id-close','×'),klass=mk('div','mcd-class');idClose.type='button';const idCloseLabel=String(document.documentElement.lang||'').toLowerCase().startsWith('es')?'Cerrar fármaco':'Fechar fármaco';idClose.setAttribute('aria-label',idCloseLabel);idClose.title=idCloseLabel;ident.dataset.mcBlock='1';nameRow.append(name,idClose);ident.append(eye,nameRow,klass);const patient=mk('section','mcd-patient');patient.dataset.mcBlock='2';const af=mk('label','mcd-field'),al=mk('span','mcd-lab'),ai=mk('input');ai.type='number';af.append(al,ai);const wf=mk('label','mcd-field'),wl=mk('span','mcd-lab'),wi=mk('input');wi.type='number';wi.step='.1';wf.append(wl,wi);const ca=mk('div','mcd-calc-action'),cb=mk('button','mcd-calc-btn','Calcular dose');cb.type='button';ca.appendChild(cb);const rr=mk('div','mcd-result'),rl=mk('span','mcd-lab'),rt=mk('div','mcd-result-text','—');rr.append(rl,rt);patient.append(af,wf,ca,rr);const loading=mk('div','mcd-loading');loading.hidden=true;const secs=mk('div','mcd-sections');for(const[o,k]of[['3','dose'],['4','renal'],['5','hepatic'],['6','indications'],['7','contraindications'],['8','adverse'],['9','interactions'],['10','monitoring'],['11','admin'],['12','pharmacology'],['13','special'],['14','presentations'],['15','commercialNames'],['16','references']]){const s=mk('section','mcd-sec'),h=mk('h2','mcd-head'),b=mk('div','mcd-body');s.dataset.mcBlock=o;s.dataset.mcCategory=k;s.hidden=true;s.append(h,b);secs.appendChild(s)}shell.append(ident,patient,loading,secs);scroll.appendChild(shell);p.append(top,scroll);const closeFn=()=>{try{window.closeFarmacoDetail?.()}catch{}hide()};back.onclick=close.onclick=idClose.onclick=closeFn;if(!cb.dataset.bound){cb.dataset.bound='1';cb.addEventListener('click',()=>{bridge();const x=underlying();for(const[v,sr]of[[ai,x.age],[wi,x.weight]]){if(!v||!sr)continue;sr.value=v.value;sr.dispatchEvent(new Event('input',{bubbles:true}));sr.dispatchEvent(new Event('change',{bubbles:true}))}setTimeout(()=>result(),0);setTimeout(()=>result(),80);setTimeout(()=>result(),220)})}document.body.appendChild(p);return{page:p,tt,eye,name,klass,al,ai,wl,wi,cb,rl,rt,loading}};
+const makePage=()=>{const p=mk('div');p.id=PAGE_ID;p.dataset.open='false';p.dataset.mcCanonicalSlotCount='16';p.dataset.mcCanonicalStructure='v26-r1-16-point-lock';const top=mk('header','mcd-top'),back=mk('button','mcd-back','‹'),tt=mk('div','mcd-title','Fármaco'),close=mk('button','mcd-close','×');back.type=close.type='button';top.append(back,tt,close);const scroll=mk('main','mcd-scroll'),shell=mk('div','mcd-shell'),ident=mk('section','mcd-id'),eye=mk('div','mcd-eye','Fármaco'),nameRow=mk('div','mcd-name-row'),name=mk('h1','mcd-name','—'),idClose=mk('button','mcd-id-close','×'),klass=mk('div','mcd-class');idClose.type='button';const idCloseLabel=String(document.documentElement.lang||'').toLowerCase().startsWith('es')?'Cerrar fármaco':'Fechar fármaco';idClose.setAttribute('aria-label',idCloseLabel);idClose.title=idCloseLabel;ident.dataset.mcBlock='1';nameRow.append(name,idClose);ident.append(eye,nameRow,klass);const patient=mk('section','mcd-patient');patient.dataset.mcBlock='2';const af=mk('label','mcd-field'),al=mk('span','mcd-lab'),ai=mk('input');ai.type='number';ai.dataset.mcSurface='canonical-dose-input';ai.dataset.mcCapability='dose_by_weight';af.append(al,ai);const wf=mk('label','mcd-field'),wl=mk('span','mcd-lab'),wi=mk('input');wi.type='number';wi.step='.1';wi.dataset.mcSurface='canonical-dose-input';wi.dataset.mcCapability='dose_by_weight';wf.append(wl,wi);const ca=mk('div','mcd-calc-action'),cb=mk('button','mcd-calc-btn','Calcular dose');cb.type='button';cb.dataset.mcSurface='canonical-dose';cb.dataset.mcCapability='dose_by_weight';ca.appendChild(cb);const rr=mk('div','mcd-result'),rl=mk('span','mcd-lab'),rt=mk('div','mcd-result-text','—');rr.append(rl,rt);patient.append(af,wf,ca,rr);const loading=mk('div','mcd-loading');loading.hidden=true;const secs=mk('div','mcd-sections');for(const[o,k]of[['3','dose'],['4','renal'],['5','hepatic'],['6','indications'],['7','contraindications'],['8','adverse'],['9','interactions'],['10','monitoring'],['11','admin'],['12','pharmacology'],['13','special'],['14','presentations'],['15','commercialNames'],['16','references']]){const s=mk('section','mcd-sec'),h=mk('h2','mcd-head'),b=mk('div','mcd-body');s.dataset.mcBlock=o;s.dataset.mcCategory=k;s.hidden=true;s.append(h,b);secs.appendChild(s)}shell.append(ident,patient,loading,secs);scroll.appendChild(shell);p.append(top,scroll);const closeFn=()=>{try{window.closeFarmacoDetail?.()}catch{}hide()};back.onclick=close.onclick=idClose.onclick=closeFn;if(!cb.dataset.bound){cb.dataset.bound='1';cb.addEventListener('click',()=>{bridge();const x=underlying();for(const[v,sr]of[[ai,x.age],[wi,x.weight]]){if(!v||!sr)continue;sr.value=v.value;sr.dispatchEvent(new Event('input',{bubbles:true}));sr.dispatchEvent(new Event('change',{bubbles:true}))}setTimeout(()=>result(),0);setTimeout(()=>result(),80);setTimeout(()=>result(),220)})}document.body.appendChild(p);return{page:p,tt,eye,name,klass,al,ai,wl,wi,cb,rl,rt,loading}};
 const ensure=()=>{let p=document.getElementById(PAGE_ID);if(!p)return S.ui=makePage();if(!S.ui)S.ui={page:p,tt:p.querySelector('.mcd-title'),eye:p.querySelector('.mcd-eye'),name:p.querySelector('.mcd-name'),klass:p.querySelector('.mcd-class'),al:p.querySelector('.mcd-field:nth-child(1) .mcd-lab'),ai:p.querySelector('.mcd-field:nth-child(1) input'),wl:p.querySelector('.mcd-field:nth-child(2) .mcd-lab'),wi:p.querySelector('.mcd-field:nth-child(2) input'),cb:p.querySelector('.mcd-calc-btn'),rl:p.querySelector('.mcd-result .mcd-lab'),rt:p.querySelector('.mcd-result-text'),loading:p.querySelector('.mcd-loading')};return S.ui};
 function show(){const u=ensure();u.page.dataset.open='true';u.page.style.setProperty('display','grid','important');u.page.style.setProperty('visibility','visible','important');u.page.style.setProperty('opacity','1','important');document.documentElement.classList.add('mc-drug-cleanroom-open');document.body.classList.add('mc-drug-cleanroom-open')}
 function hide(){const p=document.getElementById(PAGE_ID);if(p){p.dataset.open='false';p.style.setProperty('display','none','important');p.style.setProperty('visibility','hidden','important');p.style.setProperty('opacity','0','important')}document.documentElement.classList.remove('mc-drug-cleanroom-open');document.body.classList.remove('mc-drug-cleanroom-open')}
@@ -61511,6 +61535,7 @@ const bridge=()=>{
 };
 
 const result=()=>{
+  if (!window.__mcClinicalActionAllowed?.('weight')) return; // MEDCASES_OPERATION_GATE_V1
   const u=ensure(),l=lang();
   if(S.data?.mc_gold_standard_v1?.referenceOnly===true){
     u.rt.textContent=l==='es'?'Consulta de referencia; cálculo automático no autorizado.':'Consulta de referência; cálculo automático não autorizado.';
@@ -63540,6 +63565,7 @@ body > #mc-drug-detail-page-v21 .mcd-result-text .mcd-r6-note{
   };
 
   const absoluteText=(parsed,weight,l)=>{
+    if (!window.__mcClinicalActionAllowed?.('weight')) return ''; // MEDCASES_OPERATION_GATE_V1
     const low=parsed.low*weight;
 
     const high=parsed.high==null
@@ -63608,6 +63634,8 @@ body > #mc-drug-detail-page-v21 .mcd-result-text .mcd-r6-note{
   };
 
   const calculate=async()=>{
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
     const parts=pageParts();
 
     if(!parts)return;
@@ -64519,6 +64547,8 @@ body > #mc-drug-detail-page-v21 .mcd-body ul{
   };
 
   const calculate=async()=>{
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
     const p=parts();
 
     if(!p)return;
@@ -68064,6 +68094,8 @@ const weightFormula=text=>{
 };
 
 const calculated=(sel,weight)=>{
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   if(!sel?.ageSpecific||!(weight>0))return null;
   const rows=flattenRows(sel.value);
   if(rows.length!==1)return null;
@@ -68321,6 +68353,8 @@ const publishVisible=(p,html)=>{
 };
 
 const apply=async(reason)=>{
+  if (!window.__mcClinicalActionAllowed?.('weight')) return null; // MEDCASES_OPERATION_GATE_V1
+
   const p=parts();
   if(!p||p.page.dataset.open!=='true'||!p.out)return false;
 
