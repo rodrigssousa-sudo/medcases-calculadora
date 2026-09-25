@@ -10,8 +10,6 @@
 (function () {
   'use strict';
   const BUILD = 'MEDCASES_PREMIUM_R8_5_EARLY_CAPTURE_NATIVE_PAYWALL_FINAL_V1_B_R0';
-  let lastUpgradeAt = 0;
-  let lastDrugId = '';
 
   function clean(value) {
     return String(value || '').trim().replace(/\.json$/i, '').toLowerCase();
@@ -84,12 +82,16 @@
     const drugId = rowDrugId(row);
     if (!drugId) return;
 
+    // MEDCASES_PRE_REVIEW_FARMACOS_PAYWALL_HOTFIX_V1_R1
+    // Contact starts both taps and scrolls. Block legacy detail handlers, but
+    // preserve the browser's default scroll/click gesture recognition. Only a
+    // completed click is an explicit request; the host owns modal reentrancy.
+    if (event.type !== 'click') {
+      try { event.stopImmediatePropagation(); } catch (_) {}
+      try { event.stopPropagation(); } catch (_) {}
+      return;
+    }
     stopEvent(event);
-
-    const now = Date.now();
-    if (drugId === lastDrugId && now - lastUpgradeAt < 700) return;
-    lastDrugId = drugId;
-    lastUpgradeAt = now;
 
     const lang = currentLang();
     try {
@@ -68631,7 +68633,6 @@ console.info('['+BUILD+'] MOUNTED',{
     manifestPromise: null,
     freeIds: new Set(),
     originalHmOpenDrug: null,
-    lastUpgradeAt: 0,
     observer: null
   };
 
@@ -68735,9 +68736,8 @@ console.info('['+BUILD+'] MOUNTED',{
   }
 
   function requestUpgrade() {
-    const now = Date.now();
-    if (now - S.lastUpgradeAt < 700) return;
-    S.lastUpgradeAt = now;
+    // The Flutter presentation guard owns OPENING/OPEN/CLOSING; do not use
+    // a timer here, since an explicit action after close may reopen immediately.
     const lang = currentLang();
     try {
       if (window.MCUpgrade && typeof window.MCUpgrade.postMessage === 'function') {
@@ -68772,6 +68772,7 @@ console.info('['+BUILD+'] MOUNTED',{
     if (!id || isPremiumTier()) return;
 
     const activateKey = event.type === 'keydown' &&
+      !event.repeat &&
       (event.key === 'Enter' || event.key === ' ' || event.code === 'Space');
 
     if (!S.ready) {
@@ -68807,10 +68808,10 @@ console.info('['+BUILD+'] MOUNTED',{
       event.type === 'touchstart' ||
       event.type === 'mousedown'
     ) {
-      // MEDCASES_PREMIUM_R8_4_R82_CAPTURE_PAYWALL_FIX_V1_B_R0
-      // The capture-down event is the earliest event proven to fire on iOS WKWebView.
-      // Open the native MedCases+ screen here while preserving the existing lock.
-      stopPremiumEvent(event, true);
+      // MEDCASES_PRE_REVIEW_FARMACOS_PAYWALL_HOTFIX_V1_R1
+      // A scroll begins here too. Keep the detail blocked without cancelling
+      // scrolling; click/keyboard above exclusively own explicit activation.
+      stopPremiumEvent(event, false);
     }
   }
 
