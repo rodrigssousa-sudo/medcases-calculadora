@@ -3,7 +3,7 @@ const html=fs.readFileSync(require('node:path').join(__dirname,'../index.html'),
 const source=html.split('<script id="mc-mcc1-protected-drug-fetch-adapter-v1">')[1].split('</script>')[0];
 function harness(bridge,script=source){const events=new EventTarget();let staticCalls=0;const window={location:{href:'https://www.medcasescalcu.com/',origin:'https://www.medcasescalcu.com'},__medcasesMcc1Bridge:bridge,fetch:async()=>{staticCalls++;return new Response('{}',{status:404})},addEventListener:events.addEventListener.bind(events),removeEventListener:events.removeEventListener.bind(events)};const document={documentElement:{dataset:{}}};vm.runInNewContext(script,{window,document,Request,Response,URL,setTimeout:(fn,ms)=>setTimeout(fn,Math.min(ms,40)),clearTimeout});return{window,document,count:()=>staticCalls,ready:b=>{window.__medcasesMcc1Bridge=b;events.dispatchEvent(new Event('medcases:mcc1-ready'))},load:id=>window.fetch('/data/drugs/'+id+'.json')}}
 const bridge=id=>({fetch:async path=>{assert.equal(path,'/api/drugs/'+id);return Response.json({drug:{id,pt:{name:'Fixture'},es:{name:'Fixture'}}})}});
-for(const id of ['metformina','ceftriaxona','acetato_de_calcio'])test('valid MCC1 detail '+id,async()=>{const h=harness(bridge(id));const r=await h.load(id);assert.equal(r.status,200);assert.equal((await r.json()).id,id);assert.equal(h.count(),0)});
+for(const id of ['metformina','ceftriaxona','metoprolol'])test('valid MCC1 detail '+id,async()=>{const h=harness(bridge(id));const r=await h.load(id);assert.equal(r.status,200);assert.equal((await r.json()).id,id);assert.equal(h.count(),0)});
 test('delayed bridge starts protected detail exactly once',async()=>{let n=0;const h=harness();const p=h.load('metoprolol');h.ready({fetch:async()=>{n++;return Response.json({drug:{id:'metoprolol'}})}});assert.equal((await p).status,200);assert.equal(n,1);assert.equal(h.count(),0)});
 test('missing bridge settles without protected static fetch',async()=>{const h=harness();await assert.rejects(h.load('metoprolol'),e=>e.code==='DRUG_WEBVIEW_AUTH_ERROR');assert.equal(h.count(),0)});
 test('expired bridge waits for native renewal and retries once',async()=>{let n=0;const h=harness({fetch:async()=>{n++;throw new Error('MCC1_SESSION_EXPIRED')}});const p=h.load('metoprolol');await new Promise(r=>setImmediate(r));h.ready({fetch:async()=>{n++;return Response.json({drug:{id:'metoprolol'}})}});assert.equal((await p).status,200);assert.equal(n,2);assert.equal(h.count(),0)});
@@ -16,3 +16,10 @@ test('forensic baseline: missing MCC1 takes protected static 404',async()=>{cons
 test('forensic baseline: expired MCC1 rejects directly without renewal retry',async()=>{let n=0;const h=harness({fetch:async()=>{n++;throw new Error('MCC1_SESSION_EXPIRED')}},prior);await assert.rejects(h.load('metoprolol'));assert.equal(n,1);assert.equal(h.count(),0)});
 test('wrong drug payload is rejected',async()=>{const h=harness(bridge('other'));h.window.__medcasesMcc1Bridge={fetch:async()=>Response.json({drug:{id:'other'}})};assert.equal((await h.load('metoprolol')).status,502)});
 test('403 does not trigger refresh retry or downgrade',async()=>{let n=0;const h=harness({fetch:async()=>{n++;return new Response('{}',{status:403})}});assert.equal((await h.load('metoprolol')).status,403);assert.equal(n,1);assert.equal(h.count(),0)});
+
+for(const bridgeState of ['valid','expired','denied']) test('Free60 public loading is independent of '+bridgeState+' MCC1 session',async()=>{
+ let protectedCalls=0;
+ const h=harness({fetch:async()=>{protectedCalls++;if(bridgeState==='expired')throw new Error('MCC1_SESSION_EXPIRED');return new Response('{}',{status:bridgeState==='denied'?403:200})}});
+ for(const id of require('../gateway/data/free60_allowlist.v2.json').ids)await h.load(id);
+ assert.equal(h.count(),60);assert.equal(protectedCalls,0);
+});

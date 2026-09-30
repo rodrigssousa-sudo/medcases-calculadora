@@ -18,3 +18,8 @@ test('failed load disables controls and remains an error on repeated reconciliat
 test('PT localized recoverable message',async()=>{const {c,ui,locale}=renderer(async()=>({ok:false,status:500}));locale('pt');await c.render('a','test',true);assert.match(ui.loading.textContent,/Não foi possível/)});
 test('selection B wins when slower selection A completes late',async()=>{let resolveA;const {c,ui}=renderer(u=>u.includes('a.json')?new Promise(r=>resolveA=r):Promise.resolve({ok:true,json:async()=>({id:'b'})}));const pending=c.render('a','test',true);await c.render('b','test',true);resolveA({ok:true,json:async()=>({id:'a'})});await pending;assert.equal(ui.page.dataset.mcDrugId,'b');assert.equal(c.S.data.id,'b');assert.equal(ui.page.dataset.mcCardReady,'true')});
 test('explicit retry recovers without discarding selected identity',async()=>{let fail=true;const {c,ui}=renderer(async()=>fail?({ok:false,status:500}):({ok:true,json:async()=>({id:'a'})}));await c.render('a','test',true);fail=false;c.state.failed=false;await c.render(c.state.key,'explicit-retry',true);assert.equal(ui.page.dataset.mcDrugId,'a');assert.equal(ui.page.dataset.mcCardReady,'true')});
+
+test('MCC1 renewal cannot restart a failed card outside the bounded fetch adapter',()=>{
+ const lifecycle=html.slice(html.indexOf('const loadState={generation:0'),html.indexOf('const reconcile=(why,force=false)=>')+2500);
+ assert.equal(/addEventListener\('medcases:mcc1-ready'.*loadState\.failed/.test(lifecycle),false);
+});
