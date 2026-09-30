@@ -14914,23 +14914,26 @@ const _fNorm = s => (s || '').toLowerCase()
    pré-computar os dois idiomas ao construir window._searchIndex,
    sem alterar o comportamento de nenhuma chamada existente (que
    continua usando currentLang implicitamente). */
+function _fdListLang(forceLang) {
+  return String(forceLang || window.currentLang || (typeof currentLang !== 'undefined' ? currentLang : 'pt')).toLowerCase().startsWith('es') ? 'es' : 'pt';
+}
 function _fdResolveName(d, forceLang) {
-  if (!d || !d.name) return d?.id || '—';
-  if (typeof d.name === 'object') {
-    const lang = forceLang || (typeof currentLang !== 'undefined' ? currentLang : 'pt');
-    return d.name[lang] || d.name.pt || d.id || '—';
-  }
-  return d.name;
+  if (!d) return '—';
+  const lang = _fdListLang(forceLang);
+  // Adapted entries keep legacy scalar fields; their source retains both locales.
+  const value = d._source?.name || d.name;
+  if (value && typeof value === 'object') return value[lang] || d.id || '—';
+  return value || d.id || '—';
 }
 
-/* Resolve classe bilíngue (BUILD 252: forceLang opcional — ver acima) */
 function _fdResolveClass(d, forceLang) {
-  if (!d || !d.class) return '';
-  if (typeof d.class === 'object') {
-    const lang = forceLang || (typeof currentLang !== 'undefined' ? currentLang : 'pt');
-    return d.class[lang] || d.class.pt || '';
-  }
-  return d.class;
+  if (!d) return '';
+  const lang = _fdListLang(forceLang);
+  const value = d._source?.class || d._source?.pharmacologicClass || d.class;
+  if (value && typeof value === 'object') return value[lang] || '';
+  // A lazily discovered PT scalar is not an ES translation.
+  if (lang === 'es' && d._source && !d._source.class && !d._source.pharmacologicClass) return '';
+  return value || '';
 }
 
 /* Resolve categoria bilíngue (BUILD 252: forceLang opcional — ver acima) */
@@ -25278,7 +25281,7 @@ document.addEventListener('DOMContentLoaded', () => {
       listEl.innerHTML = `
         <div class="hm-drug-empty">
           <i class="fa-solid fa-magnifying-glass" style="font-size:24px;opacity:0.18;margin-bottom:8px;"></i>
-          <p>Nenhum fármaco encontrado para <strong>"${term}"</strong></p>
+          <p>${_fdListLang()==='es'?'Ningún fármaco encontrado para':'Nenhum fármaco encontrado para'} <strong>"${term}"</strong></p>
         </div>`;
       return;
     }
@@ -39387,7 +39390,7 @@ body.light #farmacos-v2-shell .mc-fnav-drug-row:active{
     try{
       if(typeof window._fdResolveClass==='function'){
         var r=window._fdResolveClass(d);
-        if(r&&String(r).trim())return String(r).trim()
+        return String(r||'').trim()
       }
     }catch(_){}
     var l=lang();
@@ -67485,6 +67488,7 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
   const resolveObjectName=(d,lang)=>{
     if(!d || typeof d!=='object') return '';
     const direct=[
+      d._source?.name && typeof d._source.name==='object' ? d._source.name[lang] : '',
       d.name && typeof d.name==='object' ? d.name[lang] : '',
       d[lang] && typeof d[lang]==='object' ? d[lang].name : '',
       lang==='es' ? d.nameEs : d.namePt,
@@ -67503,6 +67507,8 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
   const resolveObjectClass=(d,lang)=>{
     if(!d || typeof d!=='object') return '';
     const direct=[
+      d._source?.class && typeof d._source.class==='object' ? d._source.class[lang] : '',
+      d._source?.pharmacologicClass && typeof d._source.pharmacologicClass==='object' ? d._source.pharmacologicClass[lang] : '',
       d.class && typeof d.class==='object' ? d.class[lang] : '',
       d[lang] && typeof d[lang]==='object' ? d[lang].class : '',
       d.drugClass && typeof d.drugClass==='object' ? d.drugClass[lang] : '',
@@ -67531,7 +67537,7 @@ html body #mc-drug-detail-page-v21[data-mc-detail-theme="light"]
 
   const idFromRow=row=>{
     if(!row) return '';
-    for(const attr of ['data-drug-id','data-id','data-drug','data-drug-key','data-canonical','data-med-id','data-farmaco-id','data-farmacos-drug-id','data-mc-drug-id','data-mc-farm-drug-id','data-key','data-slug']){
+    for(const attr of ['data-mc-fnav-drug-id','data-drug-id','data-id','data-drug','data-drug-key','data-canonical','data-med-id','data-farmaco-id','data-farmacos-drug-id','data-mc-drug-id','data-mc-farm-drug-id','data-key','data-slug']){
       const v=row.getAttribute?.(attr);
       if(v) return v;
     }

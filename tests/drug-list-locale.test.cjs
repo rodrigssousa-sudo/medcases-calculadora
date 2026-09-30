@@ -1,0 +1,13 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');const vm=require('node:vm');
+const html=fs.readFileSync('index.html','utf8');
+function setup(){const c={window:{},console:{log(){}}};vm.createContext(c);vm.runInContext("let currentLang='pt';"+html.slice(html.indexOf('const _fNorm ='),html.indexOf('/* Fonte única de verdade:'))+html.slice(html.indexOf('function _getMasterDB()'),html.indexOf('window._appendSearchIndex = _appendSearchIndex;')),c);return c;}
+const drug={id:'fixture',name:'Ácido de teste',class:'Classe portuguesa',_source:{name:{pt:'Ácido de teste',es:'Ácido de prueba'},class:{pt:'Classe portuguesa',es:'Clase española'}}};
+for(const locale of ['pt','es','PT-BR','ES-AR'])test('adapted list resolves source locale '+locale,()=>{const c=setup();c.window.currentLang=locale;assert.equal(c._fdResolveName(drug),locale.toLowerCase().startsWith('es')?'Ácido de prueba':'Ácido de teste');});
+test('locale switch preserves identity and clinical source',()=>{const c=setup(),before=JSON.stringify(drug);c.window.currentLang='es';assert.equal(c._fdResolveClass(drug),'Clase española');c.window.currentLang='pt';assert.equal(c._fdResolveName(drug),'Ácido de teste');assert.equal(JSON.stringify(drug),before);});
+test('initial and lazy search indexes contain distinct translated names',()=>{const c=setup();c.window.DRUG_DB=[drug];c._buildSearchIndex();assert.equal(c.window._searchIndex[0].es.name,'acido de prueba');assert.equal(c.window._searchIndex[0].pt.name,'acido de teste');const lazy={...drug,id:'lazy'};c._appendSearchIndex([lazy]);assert.equal(c.window._searchIndex[1].es.class,'clase espanola');});
+test('native bilingual and scalar names remain supported',()=>{const c=setup();assert.equal(c._fdResolveName({name:{pt:'PT',es:'ES'}},'es'),'ES');assert.equal(c._fdResolveName({name:'Metformina'},'es'),'Metformina');});
+test('missing translated class never leaks discovered Portuguese',()=>{const c=setup();assert.equal(c._fdResolveClass({class:'Português',_source:{name:{pt:'P',es:'E'}}},'es'),'');});
+test('row localization uses same original bilingual names',()=>{const c=setup();const fragment=html.slice(html.indexOf('  const resolveObjectName=(d,lang)=>'),html.indexOf('  const findDrug=value=>'));vm.runInContext(fragment+';this.resolveObjectName=resolveObjectName;this.resolveObjectClass=resolveObjectClass;',c);assert.equal(c.resolveObjectName(drug,'es'),'Ácido de prueba');assert.equal(c.resolveObjectClass(drug,'es'),'Clase española');});
+test('deployed mirror matches source exactly',()=>assert.equal(fs.readFileSync('public/index.html','utf8'),html));
