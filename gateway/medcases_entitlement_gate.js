@@ -186,7 +186,10 @@ function authorizeDrugId({
       claims,
       CAP.DRUG_CATALOG_FREE,
     ) &&
-    allowlist.has(id)
+    // The existing card route resolves this legacy Free60 identifier to its
+    // exact canonical source. Do not normalize arbitrary IDs or IV variants.
+    (allowlist.has(id) ||
+      (id === 'acido_tranexamico' && allowlist.has('acidotranexamico')))
   ) {
     return Object.freeze({
       allowed: true,
