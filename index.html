@@ -61474,7 +61474,7 @@ const fetchDrugCard=async(file,timeoutMs=15000)=>{
           throw Object.assign(new Error(),{code:'DRUG_WEBVIEW_'+code});
         }
         const data=await r.json();
-        if(!data||typeof data!=='object'||Array.isArray(data))throw Object.assign(new Error(),{code:'DRUG_WEBVIEW_JS_ERROR'});
+        if(!data||typeof data!=='object'||Array.isArray(data)||data.id!==String(file).replace(/\.json$/i,''))throw Object.assign(new Error(),{code:'DRUG_WEBVIEW_JS_ERROR'});
         return data;
       })(),
       new Promise((_,reject)=>{timer=setTimeout(()=>{
@@ -61782,7 +61782,7 @@ const secCommercial=(title,names,l)=>{
   return{k:'commercialNames',source:s.dataset.mcContentSource};
 };
 /* __MC_CLEANROOM_DIRECT_JSON_FIRST_PAINT_RENDER_MODE_V1_B_R0__ */
-const render=async(drug,why,directOnly=false)=>{if((loadState.pending||loadState.failed)&&loadState.key===String(drug))return;const fd=document.getElementById('fd-modal');if((!directOnly&&!fd?.classList.contains('open'))||!drug)return;const generation=++loadState.generation;loadState.key=String(drug);loadState.pending=true;loadState.failed=false;loading();try{const l=lang(),drugText=String(drug),rawFile=/\.json$/i.test(drugText)?drugText:drugText+'.json',aliasBase=drugText.replace(/\.json$/i,''),aliasKey=aliasBase.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,''),aliasMap=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'&&MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null,file=(aliasMap&&aliasMap[aliasKey])||rawFile;let data=S.cache.get(file);if(!data){data=await fetchDrugCard(file);if(generation!==loadState.generation)return;S.cache.set(file,data)}if(generation!==loadState.generation)return;const u=ensure(),p=P(l),lab=L[l],display=first(data,p.name)||drug,klass=first(data,p.klass)||'';u.loading.hidden=true;u.page.dataset.mcCardReady='true';u.page.setAttribute('aria-busy','false');delete u.page.dataset.mcLoadReason;u.page.querySelector('.mcd-patient').removeAttribute('inert');u.ai.disabled=false;u.wi.disabled=false;u.eye.textContent=lab.eye;u.name.textContent=display;u.tt.textContent=display;u.klass.textContent=klass;u.al.textContent=lab.age;u.wl.textContent=lab.weight;u.page.dataset.mcReferenceOnly=String(data.mc_gold_standard_v1?.referenceOnly===true);let referenceNotice=u.page.querySelector('.mcd-reference-notice');if(!referenceNotice){referenceNotice=document.createElement('div');referenceNotice.className='mcd-reference-notice';u.page.querySelector('.mcd-patient').insertAdjacentElement('beforebegin',referenceNotice)}referenceNotice.textContent=l==='es'?'Consulta de referencia; cálculo automático no autorizado.':'Consulta de referência; cálculo automático não autorizado.';u.cb.textContent=lab.calculate;u.cb.disabled=data.mc_gold_standard_v1?.referenceOnly===true;u.cb.title=u.cb.disabled?(l==='es'?'Cálculo automático no autorizado':'Cálculo automático não autorizado'):'';u.rl.textContent=lab.result;const a=[];a.push(sec('dose',lab.dose,first(data,p.dose),(directOnly?undefined:provider('dose')),l));a.push(sec('renal',lab.renal,first(data,p.renal),(directOnly?undefined:provider('renal')),l));a.push(sec('hepatic',lab.hepatic,first(data,p.hepatic),(directOnly?undefined:provider('hepatic')),l));a.push(sec('indications',lab.indications,first(data,p.indications),(directOnly?undefined:provider('indications')),l));a.push(sec('contraindications',lab.contraindications,first(data,p.contraindications),(directOnly?undefined:provider('contraindications')),l));a.push(sec('adverse',lab.adverse,first(data,p.adverse),(directOnly?undefined:provider('adverse')),l));a.push(sec('interactions',lab.interactions,first(data,p.interactions),(directOnly?undefined:provider('interactions')),l));const mon=first(data,p.monitoring),alerts=first(data,p.alerts);a.push(sec('monitoring',lab.monitoring,has(mon)||has(alerts)?{monitoring:mon,alerts}:undefined,(directOnly?undefined:provider('monitoring')),l));const adm=first(data,p.administration),prep=first(data,p.preparation);a.push(sec('admin',lab.admin,has(adm)||has(prep)?{administration:adm,preparation:prep}:undefined,(directOnly?undefined:provider('admin')),l));const mech=first(data,p.mechanism),pk=first(data,p.pk);a.push(sec('pharmacology',lab.pharmacology,has(mech)||has(pk)?{mechanism:mech,pharmacokinetics:pk}:undefined,(directOnly?undefined:provider('pharmacology')),l));a.push(sec('special',lab.special,first(data,p.special),(directOnly?undefined:provider('special')),l));a.push(sec('presentations',lab.presentations,first(data,p.presentations),(directOnly?undefined:provider('presentations')),l));a.push(secCommercial(lab.commercialNames,commercialFor(data,l),l));a.push(sec('references',lab.references,first(data,p.references),(directOnly?undefined:provider('references')),l));u.page.dataset.mcDrugId=drug;u.page.dataset.mcLang=l;u.page.dataset.mcVisibleOrder=ORDER.join(',');u.page.dataset.mcCanonicalStructure='v26-r1-16-point-lock';u.page.dataset.mcEmptySectionPolicy='hidden-empty';S.id=drug;S.lang=l;S.data=data;S.sig=sig();bridge();if(!directOnly||data.mc_gold_standard_v1?.referenceOnly===true){result()}show();polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug);setTimeout(()=>{if(generation!==loadState.generation)return;polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},120);setTimeout(()=>{if(generation!==loadState.generation)return;polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},320);console.log('['+BUILD+'] RENDERED',{why,id:drug,lang:l,displayName:display,parent:u.page.parentElement===document.body?'BODY':'NOT_BODY',visible:[...u.page.querySelectorAll('.mcd-sec')].filter(s=>!s.hidden).map(s=>s.dataset.mcBlock),audit:a})}catch(error){if(generation===loadState.generation){loadState.failed=true;loadFailed(drugLoadCode(error))}}finally{if(generation===loadState.generation)loadState.pending=false}};
+const render=async(drug,why,directOnly=false)=>{if((loadState.pending||loadState.failed)&&loadState.key===String(drug))return;const fd=document.getElementById('fd-modal');if((!directOnly&&!fd?.classList.contains('open'))||!drug)return;const generation=++loadState.generation;loadState.key=String(drug);loadState.pending=true;loadState.failed=false;loading();try{const l=lang(),drugText=String(drug),rawFile=/\.json$/i.test(drugText)?drugText:drugText+'.json',aliasBase=drugText.replace(/\.json$/i,''),aliasKey=aliasBase.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,''),aliasMap=(typeof MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP==='object'&&MC_READY_EVENT_CANONICAL_PT_ES_ALIAS_MAP)||null,file=(aliasMap&&aliasMap[aliasKey])||rawFile;let data=S.cache.get(file);if(!data){data=await fetchDrugCard(file);if(generation!==loadState.generation)return;S.cache.set(file,data)}if(generation!==loadState.generation)return;const u=ensure(),p=P(l),lab=L[l],display=first(data,p.name)||drug,klass=first(data,p.klass)||'';u.loading.hidden=true;u.page.setAttribute('aria-busy','false');delete u.page.dataset.mcLoadReason;u.page.querySelector('.mcd-patient').removeAttribute('inert');u.ai.disabled=false;u.wi.disabled=false;u.eye.textContent=lab.eye;u.name.textContent=display;u.tt.textContent=display;u.klass.textContent=klass;u.al.textContent=lab.age;u.wl.textContent=lab.weight;u.page.dataset.mcReferenceOnly=String(data.mc_gold_standard_v1?.referenceOnly===true);let referenceNotice=u.page.querySelector('.mcd-reference-notice');if(!referenceNotice){referenceNotice=document.createElement('div');referenceNotice.className='mcd-reference-notice';u.page.querySelector('.mcd-patient').insertAdjacentElement('beforebegin',referenceNotice)}referenceNotice.textContent=l==='es'?'Consulta de referencia; cálculo automático no autorizado.':'Consulta de referência; cálculo automático não autorizado.';u.cb.textContent=lab.calculate;u.cb.disabled=data.mc_gold_standard_v1?.referenceOnly===true;u.cb.title=u.cb.disabled?(l==='es'?'Cálculo automático no autorizado':'Cálculo automático não autorizado'):'';u.rl.textContent=lab.result;const a=[];a.push(sec('dose',lab.dose,first(data,p.dose),(directOnly?undefined:provider('dose')),l));a.push(sec('renal',lab.renal,first(data,p.renal),(directOnly?undefined:provider('renal')),l));a.push(sec('hepatic',lab.hepatic,first(data,p.hepatic),(directOnly?undefined:provider('hepatic')),l));a.push(sec('indications',lab.indications,first(data,p.indications),(directOnly?undefined:provider('indications')),l));a.push(sec('contraindications',lab.contraindications,first(data,p.contraindications),(directOnly?undefined:provider('contraindications')),l));a.push(sec('adverse',lab.adverse,first(data,p.adverse),(directOnly?undefined:provider('adverse')),l));a.push(sec('interactions',lab.interactions,first(data,p.interactions),(directOnly?undefined:provider('interactions')),l));const mon=first(data,p.monitoring),alerts=first(data,p.alerts);a.push(sec('monitoring',lab.monitoring,has(mon)||has(alerts)?{monitoring:mon,alerts}:undefined,(directOnly?undefined:provider('monitoring')),l));const adm=first(data,p.administration),prep=first(data,p.preparation);a.push(sec('admin',lab.admin,has(adm)||has(prep)?{administration:adm,preparation:prep}:undefined,(directOnly?undefined:provider('admin')),l));const mech=first(data,p.mechanism),pk=first(data,p.pk);a.push(sec('pharmacology',lab.pharmacology,has(mech)||has(pk)?{mechanism:mech,pharmacokinetics:pk}:undefined,(directOnly?undefined:provider('pharmacology')),l));a.push(sec('special',lab.special,first(data,p.special),(directOnly?undefined:provider('special')),l));a.push(sec('presentations',lab.presentations,first(data,p.presentations),(directOnly?undefined:provider('presentations')),l));a.push(secCommercial(lab.commercialNames,commercialFor(data,l),l));a.push(sec('references',lab.references,first(data,p.references),(directOnly?undefined:provider('references')),l));u.page.dataset.mcDrugId=drug;u.page.dataset.mcLang=l;u.page.dataset.mcVisibleOrder=ORDER.join(',');u.page.dataset.mcCanonicalStructure='v26-r1-16-point-lock';u.page.dataset.mcEmptySectionPolicy='hidden-empty';S.id=drug;S.lang=l;S.data=data;S.sig=sig();bridge();if(!directOnly||data.mc_gold_standard_v1?.referenceOnly===true){result()}show();polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug);u.page.dataset.mcCardReady='true';setTimeout(()=>{if(generation!==loadState.generation)return;polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},120);setTimeout(()=>{if(generation!==loadState.generation)return;polishCanonicalDom(u.page);r5Finalize(u.page,data,l,drug)},320);console.log('['+BUILD+'] RENDERED',{why,id:drug,lang:l,displayName:display,parent:u.page.parentElement===document.body?'BODY':'NOT_BODY',visible:[...u.page.querySelectorAll('.mcd-sec')].filter(s=>!s.hidden).map(s=>s.dataset.mcBlock),audit:a})}catch(error){if(generation===loadState.generation){loadState.failed=true;loadFailed(drugLoadCode(error))}}finally{if(generation===loadState.generation)loadState.pending=false}};
 const reconcile=(why,force=false)=>{const fd=document.getElementById('fd-modal');if(!fd?.classList.contains('open')){hide();S.id=S.lang=S.sig='';return}show();const drug=active();if(!drug){loading();return}bridge();result();const l=lang(),sg=sig();if(force||S.id!==drug||S.lang!==l||S.sig!==sg)render(drug,why)};
 window.addEventListener('medcases:mcc1-ready',()=>{if(loadState.failed&&loadState.key&&ensure().page.dataset.open==='true'){loadState.failed=false;render(loadState.key,'bridge-ready',true)}});
 const schedule=(why,force=false)=>[0,80,220].forEach(ms=>setTimeout(()=>reconcile(why+'@'+ms,force&&ms===0),ms));
@@ -68549,7 +68549,7 @@ console.info('['+BUILD+'] MOUNTED',{
     }
   };
 
-  const unwrapGatewayDrug = async response => {
+  const unwrapGatewayDrug = async (response, expectedId) => {
     if (!response || !response.ok) return response;
     let envelope;
     try {
@@ -68561,7 +68561,7 @@ console.info('['+BUILD+'] MOUNTED',{
       });
     }
     const drug = envelope && envelope.drug;
-    if (!drug || typeof drug !== 'object' || Array.isArray(drug)) {
+    if (!drug || typeof drug !== 'object' || Array.isArray(drug) || drug.id !== expectedId) {
       return new Response(JSON.stringify({ok:false,error:'MCC1_GATEWAY_DRUG_PAYLOAD_INVALID'}), {
         status: 502,
         headers: {'Content-Type':'application/json','Cache-Control':'no-store'}
@@ -68577,26 +68577,49 @@ console.info('['+BUILD+'] MOUNTED',{
     });
   };
 
-  window.fetch = async function medCasesProtectedDrugFetch(input, init) {
-    const parsed = parseDrugRequest(input);
-    if (!parsed) return nativeFetch(input, init);
-
-    const bridge = window.__medcasesMcc1Bridge;
-    if (!bridge || typeof bridge.fetch !== 'function') {
-      return nativeFetch(input, init);
-    }
-
-    const gatewayResponse = await bridge.fetch(
-      '/api/drugs/' + encodeURIComponent(parsed.drugId),
-      { method: 'GET', signal: init?.signal }
-    );
-    return unwrapGatewayDrug(gatewayResponse);
+  // Public detail policy is the existing Free60 manifest, never the catalog.
+  const publicIds = new Set(["acetato_de_calcio", "acetazolamida", "acetilcisteina", "acido_folico", "acidotranexamico", "adapaleno", "adenosina", "adrenalina", "alfacalcidol", "alopurinol", "anlodipino", "apixabana", "atenolol", "atomoxetina", "atracurio", "atropina", "baclofeno", "beclometasona", "bicarbonato_sodio", "bisacodil", "bisoprolol", "brimonidina", "bromazepam", "bromocriptina", "budesonida", "bupropiona", "cabergolina", "calcitriol", "candesartana", "carbetocina", "carbonato_de_calcio", "carboximaltose_ferrica", "carvao_ativado", "carvedilol", "celecoxibe", "cetamina", "cetirizina", "cetoprofeno", "cetorolaco", "ciclobenzaprina", "cimetidina", "citalopram", "citrato_de_potassio", "clobazam", "clobetasol", "clonazepam", "clonidina", "clopidogrel", "clorfeniramina", "clorpromazina", "clortalidona", "colecalciferol", "dapagliflozina", "desloratadina", "desmopressina", "dexametasona", "dextrometorfano", "diclofenaco", "digoxina", "diltiazem"]);
+  const authError = () => Object.assign(new Error('MCC1_SESSION_EXPIRED'), {code:'DRUG_WEBVIEW_AUTH_ERROR'});
+  const getBridge = () => {
+    const b=window.__medcasesMcc1Bridge;
+    return b && typeof b.fetch==='function' ? b : null;
   };
-
-  window.__MC_MCC1_DRUG_FETCH_ADAPTER_V1 = Object.freeze({
-    version: 1,
-    mode: 'MCC1_WHEN_AVAILABLE_STATIC_FALLBACK_WITHOUT_BRIDGE',
-    protectedPath: '/api/drugs/:id'
+  const waitForBridge = (previous, signal) => new Promise((resolve,reject)=>{
+    let timer;
+    const cleanup=()=>{clearTimeout(timer);window.removeEventListener('medcases:mcc1-ready',check);signal?.removeEventListener('abort',cancel)};
+    const cancel=()=>{cleanup();reject(authError())};
+    const check=()=>{const b=getBridge();if(b&&b!==previous){cleanup();resolve(b)}};
+    window.addEventListener('medcases:mcc1-ready',check);
+    signal?.addEventListener('abort',cancel,{once:true});
+    timer=setTimeout(cancel,12000);
+    if(signal?.aborted)cancel();else check();
+  });
+  const state = source => {document.documentElement.dataset.mcDrugDetailSource=source};
+  window.fetch = async function medCasesProtectedDrugFetch(input, init) {
+    const parsed=parseDrugRequest(input);
+    if(!parsed)return nativeFetch(input,init);
+    let bridge=getBridge();
+    if(!bridge && publicIds.has(parsed.drugId)){
+      state('STATIC_PUBLIC');return nativeFetch(input,init);
+    }
+    try {
+      if(!bridge){state('WAITING_FOR_MCC1');bridge=await waitForBridge(null,init?.signal)}
+      const request=()=>bridge.fetch('/api/drugs/'+encodeURIComponent(parsed.drugId),{method:'GET',signal:init?.signal});
+      state('MCC1_GATEWAY');
+      let response;
+      try{response=await request()}catch(error){if(error?.message!=='MCC1_SESSION_EXPIRED')throw error}
+      if(!response || response.status===401){
+        // Native renews the session; only a replacement bridge permits one retry.
+        state('WAITING_FOR_MCC1');bridge=await waitForBridge(bridge,init?.signal);
+        state('MCC1_GATEWAY');response=await request();
+      }
+      if(response.status===401||response.status===403)state('AUTH_ERROR');
+      return unwrapGatewayDrug(response,parsed.drugId);
+    }catch(error){state('AUTH_ERROR');throw error}
+  };
+  window.__MC_MCC1_DRUG_FETCH_ADAPTER_V1=Object.freeze({
+    version:2,mode:'EXPLICIT_PUBLIC_OR_MCC1_NO_PROTECTED_STATIC_FALLBACK',
+    protectedPath:'/api/drugs/:id',reauthRetryMax:1
   });
 })();
 </script>
