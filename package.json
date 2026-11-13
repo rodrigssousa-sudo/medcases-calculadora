@@ -26,7 +26,7 @@
     "test:gold33-nova-lista": "python3 tests/gold33-nova-lista.test.py && node tests/gold33-reference-only-ui.test.cjs"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=18.0.0"
   },
   "devDependencies": {},
   "dependencies": {},
