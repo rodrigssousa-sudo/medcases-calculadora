@@ -261,7 +261,68 @@ function createGatewayHandler({
     }
 
     // Private discovery metadata follows the same session/capability boundary as drug records.
-    if (req.method === 'GET' && url.pathname === '/api/drug-catalog') {
+
+// R13CC: authenticated identity check; never returns the full index.
+if (req.method === 'GET' &&
+    url.pathname === '/api/drug-identity') {
+  res.setHeader('Cache-Control', 'no-store');
+
+  let claims;
+  try {
+    claims = authenticate(req);
+  } catch (_) {
+    return json(res, 401, {error:'unauthenticated'});
+  }
+
+  try {
+    requireCapability(claims, CAP.DRUG_CATALOG_FREE);
+  } catch (_) {
+    return json(res, 403, {error:'permission_denied'});
+  }
+
+  const query = url.searchParams.get('q') || '';
+  if (!query || query.length > 180) {
+    return json(res, 400, {error:'invalid_request'});
+  }
+
+  let decision;
+  try {
+    const rows = JSON.parse(
+      fs.readFileSync(
+        path.join(safeRoot,'data/drugs_index.json'),
+        'utf8'
+      )
+    );
+
+    decision = require('./drug_identity_resolver.cjs')
+      .resolveIdentity({
+        query,
+        rows,
+        tier: claims.tier,
+        freeIds: allowlist
+      });
+  } catch (_) {
+    return json(res, 503, {error:'identity_unavailable'});
+  }
+
+  if (decision.status === 'matched') {
+    return json(res, 200, {ok:true,id:decision.id});
+  }
+
+  const errors = {
+    ambiguous:[409,'drug_identity_ambiguous'],
+    not_authorized:[403,'permission_denied'],
+    no_match:[404,'drug_not_found'],
+    invalid_request:[400,'invalid_request']
+  };
+
+  const mapped = errors[decision.status] ||
+    [503,'identity_unavailable'];
+
+  return json(res,mapped[0],{error:mapped[1]});
+}
+
+if (req.method === 'GET' && url.pathname === '/api/drug-catalog') {
       try {
         const claims = authenticate(req);
         requireCapability(claims, CAP.DRUG_CATALOG_FULL);
