@@ -224,69 +224,6 @@ function createGatewayHandler({
   }
 
   return async function gatewayHandler(req, res) {
-    // Browser origins are allowlisted. MCC1 still controls all private data.
-    const browserOrigin = req.headers?.origin;
-    const allowedBrowserOrigins = new Set([
-      'https://medcasespro.com',
-      'http://localhost:53173',
-      'http://127.0.0.1:53173',
-    ]);
-
-    const privateDrugBrowserRoute = /^\/api\/(?:drug-catalog|drug-identity|drugs\/[a-z0-9_]+|ai-drug-data\/[a-zA-Z0-9_./-]+)$/.test(
-      new URL(req.url || '/', 'http://gateway.local').pathname);
-    if (browserOrigin && privateDrugBrowserRoute) {
-      if (!allowedBrowserOrigins.has(browserOrigin)) {
-        return json(res, 403, {
-          ok: false, error: 'ORIGIN_NOT_ALLOWED',
-        });
-      }
-      res.setHeader('Access-Control-Allow-Origin', browserOrigin);
-      res.setHeader('Vary', 'Origin');
-    }
-
-    if (req.method === 'OPTIONS' && privateDrugBrowserRoute) {
-      const requestedMethod =
-        String(req.headers['access-control-request-method'] || '');
-
-      const requestedHeaders =
-        String(req.headers['access-control-request-headers'] || '');
-
-      const pathname = new URL(
-        req.url || '/', 'http://gateway.local'
-      ).pathname;
-
-      const allowedPath =
-        /^\/api\/(?:drug-catalog|drug-identity|drugs\/[a-z0-9_]+|ai-drug-data\/[a-zA-Z0-9_./-]+)$/.test(pathname);
-
-      const allowedHeaders = requestedHeaders
-        .split(',')
-        .map(x => x.trim().toLowerCase())
-        .filter(Boolean)
-        .every(x =>
-          ['authorization', 'content-type', 'accept'].includes(x)
-        );
-
-      if (
-        !browserOrigin ||
-        !allowedPath ||
-        requestedMethod !== 'GET' ||
-        !allowedHeaders
-      ) {
-        return json(res, 403, {
-          ok: false, error: 'PREFLIGHT_DENIED',
-        });
-      }
-
-      res.writeHead(204, {
-        'Access-Control-Allow-Methods': 'GET, OPTIONS',
-        'Access-Control-Allow-Headers':
-          'Authorization, Content-Type, Accept',
-        'Access-Control-Max-Age': '600',
-        'Cache-Control': 'no-store',
-      });
-
-      return res.end();
-    }
     const url = new URL(
       req.url || '/',
       'http://medcases-calculator.local',
@@ -324,68 +261,7 @@ function createGatewayHandler({
     }
 
     // Private discovery metadata follows the same session/capability boundary as drug records.
-
-// R13CC: authenticated identity check; never returns the full index.
-if (req.method === 'GET' &&
-    url.pathname === '/api/drug-identity') {
-  res.setHeader('Cache-Control', 'no-store');
-
-  let claims;
-  try {
-    claims = authenticate(req);
-  } catch (_) {
-    return json(res, 401, {error:'unauthenticated'});
-  }
-
-  try {
-    requireCapability(claims, CAP.DRUG_CATALOG_FREE);
-  } catch (_) {
-    return json(res, 403, {error:'permission_denied'});
-  }
-
-  const query = url.searchParams.get('q') || '';
-  if (!query || query.length > 180) {
-    return json(res, 400, {error:'invalid_request'});
-  }
-
-  let decision;
-  try {
-    const rows = JSON.parse(
-      fs.readFileSync(
-        path.join(safeRoot,'data/drugs_index.json'),
-        'utf8'
-      )
-    );
-
-    decision = require('./drug_identity_resolver.cjs')
-      .resolveIdentity({
-        query,
-        rows,
-        tier: claims.tier,
-        freeIds: allowlist
-      });
-  } catch (_) {
-    return json(res, 503, {error:'identity_unavailable'});
-  }
-
-  if (decision.status === 'matched') {
-    return json(res, 200, {ok:true,id:decision.id});
-  }
-
-  const errors = {
-    ambiguous:[409,'drug_identity_ambiguous'],
-    not_authorized:[403,'permission_denied'],
-    no_match:[404,'drug_not_found'],
-    invalid_request:[400,'invalid_request']
-  };
-
-  const mapped = errors[decision.status] ||
-    [503,'identity_unavailable'];
-
-  return json(res,mapped[0],{error:mapped[1]});
-}
-
-if (req.method === 'GET' && url.pathname === '/api/drug-catalog') {
+    if (req.method === 'GET' && url.pathname === '/api/drug-catalog') {
       try {
         const claims = authenticate(req);
         requireCapability(claims, CAP.DRUG_CATALOG_FULL);

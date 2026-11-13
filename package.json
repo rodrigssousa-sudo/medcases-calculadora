@@ -1,7 +1,7 @@
 {
   "name": "medcases-calculadora",
   "version": "3.0.0",
-  "description": "MedCases Pro \u2014 Motor de C\u00e1lculo Cl\u00ednico \u00b7 PWA Offline \u00b7 Bil\u00edngue PT/ES",
+  "description": "MedCases Pro — Motor de Cálculo Clínico · PWA Offline · Bilíngue PT/ES",
   "private": true,
   "homepage": "https://medcasescalcu.com",
   "author": "MedCases Pro",
@@ -26,12 +26,12 @@
     "test:gold33-nova-lista": "python3 tests/gold33-nova-lista.test.py && node tests/gold33-reference-only-ui.test.cjs"
   },
   "engines": {
-    "node": "22.x"
+    "node": ">=18.0.0"
   },
   "devDependencies": {},
   "dependencies": {},
   "medcases": {
-    "note": "Projeto est\u00e1tico (HTML/CSS/JS). Sem framework, sem bundler.",
+    "note": "Projeto estático (HTML/CSS/JS). Sem framework, sem bundler.",
     "exportScript": "scripts/export-clinical-data.js",
     "dataOutput": "data/",
     "appEntry": "index.html"
